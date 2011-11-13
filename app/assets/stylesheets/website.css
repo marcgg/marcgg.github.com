@@ -54,15 +54,13 @@ a:hover{
 .teamshack{ color: #4f82b7; }
 .stackoverflow{ color: #F4A83D; }
 
-#photos{
-  .photo{
-    border: 1px solid #333;
-    margin: 10px 0px;
-    line-height: 0px;
-    img{
-      width: 100%;
-    }
-  }
+.photo{
+  border: 1px solid #333;
+  margin: 10px 0px;
+  line-height: 0px;
+}
+.photo img{
+  width: 100%;
 }
 
 footer{
