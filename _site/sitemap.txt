@@ -1,6 +1,6 @@
 
 http://marcgg.com/atom.xml
-http://marcgg.com/blog.html
+http://marcgg.com/blog/index.html
 http://marcgg.com/index.html
 http://marcgg.com/sitemap.txt
 http://marcgg.com/tags.html

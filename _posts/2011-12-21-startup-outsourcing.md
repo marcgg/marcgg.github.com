@@ -2,7 +2,7 @@
 layout: post
 title: "Outsourcing In A Startup"
 description: ""
-category:
+blog: true
 tags: [Startup]
 ---
 

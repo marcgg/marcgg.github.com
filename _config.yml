@@ -6,7 +6,7 @@ exclude: [".rvmrc", "README.md", "Rakefile"]
 auto: true
 pygments: true
 
-title : Marcgg.com
+title : Marcgg#Blog
 tagline: Site Tagline
 author :
   name : Marc G Gauthier

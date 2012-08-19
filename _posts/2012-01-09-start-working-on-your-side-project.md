@@ -2,7 +2,7 @@
 layout: post
 title: "Start Working on Your Side Project Tonight"
 description: ""
-category:
+blog: true
 tags: ["Side Projects"]
 ---
 

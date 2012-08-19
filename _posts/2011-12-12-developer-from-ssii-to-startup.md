@@ -2,7 +2,7 @@
 layout: post
 title: "Developers, Go From SSII To Startup"
 description: ""
-category:
+blog: true
 tags: [Startup]
 ---
 
