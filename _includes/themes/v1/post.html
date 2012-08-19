@@ -1,0 +1,70 @@
+<h1>{{ page.title }}</h1>
+<div class="published">
+  Published on <span>{{ page.date | date_to_long_string }}</span>
+  by <a href="/">marcgg</a>
+  {% unless page.tags == empty %}
+    and tagged
+    {% assign tags_list = page.tags %}
+    {% include JB/tags_list %}
+  {% endunless %}
+
+  <a rel="license"
+    href="http://creativecommons.org/licenses/by-sa/3.0/"><img
+    alt="Creative Commons License" style="border-width:0; float: right" src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a>
+</div>
+
+<div class="post">
+  {{ content }}
+
+  <div id="more">
+    <div class="speech">
+      Hey, glad you read this article. FYI I'm
+      <a href="http://tigerlilyapps.com" class="tigerlily" target="_blank">Tigerlily</a>'s Lead
+      Developer, but everything on this blog only reflect my opinion.
+      Liked this post? Consider following me on Twitter, sharing it to
+      your best social media acquaintances or <a href="/blog.html">read some more</a>.
+      Comments are cool too.
+    </div>
+    <a href="https://twitter.com/marcgg" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @marcgg</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+    <a href="https://twitter.com/share" class="twitter-share-button" data-via="marcgg" data-size="large">Tweet</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+    <div class="fb-like" data-send="true" data-width="470" data-show-faces="false" data-colorscheme="dark" data-font="lucida grande"></div>
+
+  </div>
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = 'marcgg';
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1&appId=388998294487642";
+  fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+

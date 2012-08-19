@@ -1,0 +1,27 @@
+---
+layout: page
+title : Marcgg#Blog - Thoughts on software development, startups and the process of making things happen.
+---
+{% include JB/setup %}
+
+<h1>Marcgg#Blog</h1>
+<p>
+  Thoughts on software development, startups and the process of making
+  things happen.
+</p>
+
+<p>
+  Everything on this blog is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
+</p>
+
+{% for tag in site.tags %} 
+  <h2 id="{{ tag[0] }}-ref">{{ tag[0] }}</h2>
+  <ul>
+    {% assign pages_list = tag[1] %}  
+    {% include JB/pages_list %}
+  </ul>
+{% endfor %}
+
+<p>
+  See posts <a href="/blog.html">ordered by date</a>.
+</p>
