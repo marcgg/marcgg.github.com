@@ -8,10 +8,11 @@ body{
 #container{
   width: 760px;
   margin: 20px auto 60px auto;
-  background: #fff;
+  background: url(../images/header.jpg) no-repeat #fff;
   padding: 20px;
   opacity: 0.95;
   border-radius: 3px;
+  border: 1px solid #eee;
 }
 
 .connect_confirmation_cell{
@@ -22,9 +23,17 @@ h1{
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   font-size: 2.8em;
-  margin: 40px 40px 60px 40px;
+  margin: auto;
+  padding: 40px 40px 40px 40px;
   line-height: 1.4em;
   text-align:center;
+  height: 140px;
+}
+h1 span{
+  background-color: #fff;
+  display: inline-block;
+  opacity: 0.7;
+  padding: 0px 10px 5px 10px;
 }
 
 h2{
