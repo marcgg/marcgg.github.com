@@ -1,5 +1,5 @@
 <h1><span>{{ page.title }}</span></h1>
-<div class="published">
+<p class="published">
   {{ page.date | date_to_long_string }}</span>
   by <a href="/">marcgg</a>
   {% unless page.tags == empty %}
@@ -10,7 +10,7 @@
   {% endunless %}
   &#183;
   <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative commons</a> license
-</div>
+</p>
 
 <div class="post">
   {{ content }}
