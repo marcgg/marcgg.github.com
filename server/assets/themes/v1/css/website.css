@@ -1,0 +1,116 @@
+body{
+  font-size: 16px;
+  background: url("../images/bg.gif");
+  font-family: "Museo100";
+  color: #f0f0f0;
+}
+
+#container{
+  width: 760px;
+  margin: 10px auto;
+}
+
+h1{
+  font-family: "Museo700";
+  font-size: 2em;
+  text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
+  margin: 20px 0px;
+}
+
+h2{
+  font-family: "Museo500";
+  font-size: 1.3em;
+  margin: 20px 0px 10px 0px;
+}
+
+h3{
+  font-family: "Museo500";
+  font-size: 1.1em;
+  margin: 20px 0px 10px 0px;
+  padding-left: 20px;
+}
+
+p{
+  margin: 10px 0px;
+  line-height: 1.3em;
+  text-align: justify;
+}
+
+a{
+  text-decoration: none;
+  color: #a2c3f4;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+#all-posts{
+}
+#all-posts li{
+  line-height: 1.3em;
+}
+
+.post img{
+  margin: 0px 0px 20px 20px;
+  border: 1px solid #dedede;
+  padding: 5px;
+}
+
+.post ul{
+  line-height: 1.3em;
+  list-style: circle;
+  padding-left: 40px;
+}
+.post .sidenote{
+  font-style: italic;
+  font-size: 0.8em;
+}
+
+.published{
+  font-style: italic;
+}
+
+
+#more{
+  margin-top: 20px;
+  border-top: 1px dashed #666;
+  padding: 20px 0px;
+}
+
+#more .speech{
+  padding-bottom: 20px;
+  line-height: 1.3em;
+}
+
+.tigerlily{ color: #FE7D2A; }
+.analog{ color: #4f82b7; }
+.live{ color: #e2383f; }
+.upsud{ color: #92B938; }
+.fiu{ color: #C69B19; }
+.altran{ color:#315CB1; }
+.sagem{ color: #9F0; }
+.ffocused{ color: #70BEFB; }
+.github{ color: #aaa; }
+.rails{ color: #981A21; }
+.couchsurfing{ color: #F88E11; }
+.twitter{ color: #42d0ff; }
+.linkedin{ color: #045A8B; }
+.lol{ color: #aaa; }
+.teamshack{ color: #4f82b7; }
+.stackoverflow{ color: #F4A83D; }
+.wma{ color: #FFD800; }
+
+.photo{
+  border: 1px solid #333;
+  margin: 10px 0px;
+  line-height: 0px;
+}
+.photo img{
+  width: 100%;
+}
+
+footer{
+  display: block;
+  margin: 10px 0px 60px 0px;
+}

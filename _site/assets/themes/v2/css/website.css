@@ -49,6 +49,9 @@ p{
   text-align: justify;
 }
 
+p strong{
+}
+
 a{
   text-decoration: none;
   color: #cb1b1b;

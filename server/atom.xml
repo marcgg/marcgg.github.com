@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Marcgg#Blog</title>
+ <link href="http://marcgg.com/atom.xml" rel="self"/>
+ <link href="http://marcgg.com"/>
+ <updated>2012-09-03T22:15:25+02:00</updated>
+ <id>http://marcgg.com</id>
+ <author>
+   <name>Marc G Gauthier</name>
+   <email>marcg.gauthier@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>The One Thing That Made Me Switch To Vim</title>
+   <link href="http://marcgg.com/2012/09/04/one-reason-to-switch-to-vim-editor"/>
+   <updated>2012-09-04T00:00:00+02:00</updated>
+   <id>http://marcgg.com/2012/09/04/one-reason-to-switch-to-vim-editor</id>
+   <content type="html">
+
+
+I know, I know, this has been done to death, but stay with me for a second. I’m not here to tell you that Vim is the best editor out there, just to tell you the one reason that got me to switch.
+
+Like every developer with some curiosity, I tried a ridiculous amount of text editors and IDEs. I started with Notepad at first, but quickly discovered that some text editors would actually help you. I downloaded SiteAid and enjoyed the gain of productivity. Then I quickly moved on to Scite, Eclipse, Netbeans, Notepad++, Emacs, Text Edit, Rad Rails, Kate, Rubymine, TextMate, Sublime... the list goes on.
+
+At some point I realized that I was wasting my time learning slightly different shortcuts and ways of setting up a project. I began to consider Vim seriously because it stood the test of time and seemed cool for some reason, but really the one thing that convinced me was a problem I had at my job.
+
+One day something went wrong on a server running Debian. The sysadmin was not around and I ended up being the one that had to go on there and fix it. It was linked to some config files that were not properly set up, and the only editor available was Vim. 
+
+Back then I had almost no clue on how to use it.
+
+It resulted in me editing the files as a 70 years old guy that just discovered what a keyboard is. It was painful to watch to say the least. Of course while this was going on, the server was more or less down. Pure joy if you ask me!
+
+Even before this incident, more than a couple of times I had to inject some debug lines on the code deployed on our staging server to figure out a very environment-specific bug, but it wasn’t as stressful as this time.
+
+It felt terrible to be so lost with a task as simple as editing a file.
+
+This is why I decided to use Vim as my primary editor. It already had enough qualities to be a good choice, but the fact that it is set up on most servers was the final selling point for me.
+
+Sometimes you just need to be able to fire up Vim and be very fast using it.
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Start Working on Your Side Project Tonight</title>
+   <link href="http://marcgg.com/2012/01/09/start-working-on-your-side-project"/>
+   <updated>2012-01-09T00:00:00+01:00</updated>
+   <id>http://marcgg.com/2012/01/09/start-working-on-your-side-project</id>
+   <content type="html">&lt;p&gt;To me a side project is taking an idea and building it from scratch. You do not have to complete it, it doesn’t need a business model or turn into a company over time, it doesn’t even need to make sense to other people than you. It is just a way to experiment. If later on it turns out into a successful company, good for you, but it doesn’t have to be your goal.&lt;/p&gt;
+
+&lt;p&gt;If you’re like me, you think that development is a creative process, and should be treated as such. So what better way to be more creative than by removing all the usual constraints of a day job – deadlines, &lt;a href='http://en.wikipedia.org/wiki/Legacy_code'&gt;legacy code&lt;/a&gt;, clients, etc. – and just building something for fun and the sake of building something cool!&lt;/p&gt;
+
+&lt;p&gt;Doing a side project is a great way to experiment with new technologies, try new processes and be able to fail with absolutely no consequences other than maybe a few hours wasted… and even then this time isn’t really lost because you tried and you learned something. It might not be much, but it could turn out to be a key point at your next job interview, or it could give you a better insight at what you do in your day job.&lt;/p&gt;
+&lt;img src='/assets/misc/startupweekend.png' style='float:right; width:250px;' /&gt;
+&lt;p&gt;By know you might notice that this article is more directed towards people with some experience in development, but the concepts and ideas are the same for everyone. Everybody can benefit from having a side project. If you don’t have a technical background you could go to a Startup Weekend with an idea or team up with a developer. You could also &lt;a href='http://codeyear.com/'&gt;learn how to code&lt;/a&gt;, &lt;a href='http://ror.kateray.net/post/1312957018/the-internet-teaches-you-ruby-on-rails'&gt;it won’t be time wasted&lt;/a&gt;!&lt;/p&gt;
+
+&lt;h2 id='great_startups_can_come_out_of_side_projects'&gt;Great startups can come out of side projects&lt;/h2&gt;
+&lt;img src='/assets/misc/basecamp.png' style='float:right; width:200px;' /&gt;
+&lt;p&gt;You’ve probably heard about Gmail starting of as a 20% time project (as in the amount of time a developer there can spend on other projects than the ones they’re assigned). This isn’t the only example.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href='http://craigslist.com/'&gt;Craigslist&lt;/a&gt; was Craig Newmark side project started in 1995 and only turned into a real company in 1999. &lt;a href='http://basecamp.com/'&gt;Basecamp&lt;/a&gt;, a very successful project management software was initially an internal tool of 37signals that answered &lt;a href='http://gettingreal.37signals.com/ch02_Whats_Your_Problem.php'&gt;their own problems as a design firm&lt;/a&gt;. &lt;a href='http://www.instapaper.com/'&gt;Instapaper&lt;/a&gt; was started by Marco Arment &lt;a href='http://bits.blogs.nytimes.com/2010/09/23/instapaper-goes-from-hobby-to-startup/'&gt;while he was CTO at Tumblr&lt;/a&gt;. You can even say that Twitter was a side project of &lt;a href='http://articles.businessinsider.com/2011-04-13/tech/29957143_1_jack-dorsey-twitter-podcasting'&gt;a group of people working at Odeo&lt;/a&gt;.&lt;/p&gt;
+&lt;img src='/assets/misc/hashtagbattle.png' style='float:right; width:150px;' /&gt;
+&lt;p&gt;In France there are also examples such as &lt;a href='http://hashtagbattle.com/'&gt;HashtagBattle&lt;/a&gt; that was a &lt;a href='http://startupweekend.org/'&gt;startup weekend&lt;/a&gt; project and ended up getting a lot of exposure. &lt;a href='http://www.tigerlilyapps.com/'&gt;Tigerlily&lt;/a&gt; was created during a &lt;a href='http://en.wikipedia.org/wiki/Hackathon'&gt;hackaton&lt;/a&gt;, &lt;a href='http://www.super-marmite.com/'&gt;Super Marmitte&lt;/a&gt; was a side project until it got exposure at LeWeb in 2010…&lt;/p&gt;
+
+&lt;p&gt;You can read more about the beginning of some of these projects in &lt;a href='http://books.google.fr/books?id=ktm885vGIXEC&amp;amp;lpg=PA161&amp;amp;ots=vTvMWfQH8g&amp;amp;dq=gmail%20side%20project&amp;amp;pg=PR2#v=onepage&amp;amp;q&amp;amp;f=false'&gt;Founders at Work by Jessica Livingston&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id='you_dont_have_to_be_that_ambitious'&gt;You don’t have to be that ambitious&lt;/h2&gt;
+
+&lt;p&gt;Take my latest side project for example. &lt;a href='https://twitter.com/gflandre'&gt;A friend&lt;/a&gt; and I somehow got ourselves thinking it’d be fun if we could &lt;a href='http://whatsmyairport.com/'&gt;match people’s initials with airport codes&lt;/a&gt;. This coincided with the release of a new version of my favorite framework that I wanted to try out. We decided to use it to create a project and learn about this new technology in the process. It took us a few evenings of work and we learned a lot while having fun.&lt;/p&gt;
+&lt;div style='text-align:center'&gt;&lt;img src='/assets/misc/airport.jpg' style='width:550px;' /&gt;&lt;/div&gt;
+&lt;p&gt;It doesn’t scale, there’s no way to make money out of it… but really there is no need to try to create the next Facebook! Simply do something that you like and that will teach you something, and then maybe you’ll create a new hit startup. First, take it only for what you’ll learn and the experience you’ll gain from it.&lt;/p&gt;
+
+&lt;h2 id='ok_i_get_it_side_projects_are_great_but_i_just_dont_have_the_time'&gt;“Ok I get it, side projects are great, but I just don’t have the time!”&lt;/h2&gt;
+&lt;img src='/assets/misc/love.png' style='float:right; width:150px;' /&gt;
+&lt;p&gt;… is what I hear people say all the time.&lt;/p&gt;
+
+&lt;p&gt;This is not a valid argument; if you really wanted to, you could easily save a couple of evenings to work on your project. A lot of people feel like they won’t be able to get anything done, but unless you have complete A.D.D. you will get something done if you stay in front of a computer a few hours a week.&lt;/p&gt;
+
+&lt;p&gt;It’s just a matter of focusing and being passionate. Find and idea and a technology that feel right. If you like what you do, developing could be as fun as whatever you do on your free time.&lt;/p&gt;
+
+&lt;h2 id='my_point_is_just_get_started'&gt;My point is: Just get started.&lt;/h2&gt;
+
+&lt;p&gt;I’ll add that it’s better if you begin small and scale up later. Nothing is more depressing than getting yourself into a project that will last years with absolutely nothing to show for it. It’s not as fun. Work in small steps, get feedback as you progress, and most of all try anything that goes through your mind because failure is an option, but learning nothing out of the experience isn’t.&lt;/p&gt;
+
+&lt;p&gt;Alright, you know that one idea that you had? The one you told your coworkers about? Yeah the one on a piece of paper or written in your iPhone.&lt;/p&gt;
+
+&lt;p&gt;Start working on it this evening.&lt;/p&gt;
+
+&lt;p&gt;Keep it fun, keep it interesting, do not pressure yourself. Nothing bad can come out of it!&lt;/p&gt;
+&lt;p class='sidenote'&gt;
+  This article was originally published on
+  &lt;a href='http://www.rudebaguette.com/2012/01/09/start-working-side-project/'&gt;The Rude Baguette&lt;/a&gt;.
+  Do what you love poster by &lt;a href='http://shop.ugmonk.com/product/do-what-you-love-print-blue'&gt;Ugmonk&lt;/a&gt;.
+&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Outsourcing In A Startup</title>
+   <link href="http://marcgg.com/2011/12/21/startup-outsourcing"/>
+   <updated>2011-12-21T00:00:00+01:00</updated>
+   <id>http://marcgg.com/2011/12/21/startup-outsourcing</id>
+   <content type="html">&lt;p&gt;So you&amp;#8217;re a startup and want to outsource graphic design, system administration or development? Don’t feel bad, this is very common. Often startups can’t afford to hire many people right away or do not have a team with every skill required to build the perfect product.&lt;/p&gt;
+
+&lt;h2 id='should_i_outsource'&gt;Should I Outsource?&lt;/h2&gt;
+
+&lt;p&gt;Some will tell you that you should not outsource, but this is not what I think. Actually I won’t have enough of one article to tell you all the cases in which you should outsource (lack of time, not the required skills in-house, not enough people in the team…).&lt;/p&gt;
+
+&lt;p&gt;It doesn’t really matter why you want to outsource. What matters is that before doing so you ask yourself «Am I outsourcing what defines my company?» This is especially true for startups that focus around one main product: you do not want to lose control over what makes the core of your business.&lt;/p&gt;
+
+&lt;h2 id='build_up_a_team'&gt;Build Up A Team&lt;/h2&gt;
+
+&lt;p&gt;I suppose you don’t want to be forever dependent on contractors, right? Your goal is to build up a team, because in the end this is what makes a startup. A passionated team can build anything if gathered around the right vision, and outsourcing without thinking can hurt that dynamic.&lt;/p&gt;
+
+&lt;p&gt;While a lot of contractors are very able and talented, the problem is that they are only part of the team very temporarily and will not get involved as much as your teammates. They will lack the long term vision and won’t think “if I do X, what will happen in a year when I need to make it evolve into Y”. The problem given to them will be solved, but later evolutions might be harder.&lt;/p&gt;
+
+&lt;p&gt;Remember that your team members decided to join the adventure for more than a couple of billable months. They will have opinions, ideas and will thrive to build the best product possible if you give them the means to do so. You want developers thinking by themselves and ready to go back and improve what they wrote months ago. You want designers that are creative and in phase with the company’s vision.&lt;/p&gt;
+
+&lt;p&gt;This is why you need to build what’s important internally and outsource only when you can’t do it in house… and even when you do, do it keeping in mind that you will have to integrate what has been created and that your team will have to maintain it. If done correctly, outside help can be a good thing for everyone, as mixing ideas and processes is always interesting and a good experience.&lt;/p&gt;
+
+&lt;h2 id='outsourcing_done_right'&gt;Outsourcing Done Right&lt;/h2&gt;
+
+&lt;p&gt;Like I mentioned before, sometimes you need to call someone to help out. In this case you need to be sure you do not hurt your product or your team in the process. The deliverable should be easy to test, easy to maintain and easy to evolve. If those conditions are not fulfilled, you might deal with frustration in your team. If they are, everyone will be happy about a job well done.&lt;/p&gt;
+
+&lt;h3 id='design'&gt;Design&lt;/h3&gt;
+
+&lt;p&gt;If you’re outsourcing your product’s design, ask to be provided with a full style guide, general guidelines, grid templates… anything that can help future designers can build on top of what you already have without having to start from scratch. Use a lot of constructive criticism and keep in mind the big picture: your product shouldn’t feel patchy, even if you got a lot of people working on it.&lt;/p&gt;
+
+&lt;h3 id='development_of_a_new_feature'&gt;Development of a New Feature&lt;/h3&gt;
+
+&lt;p&gt;If you’re outsourcing development directly inside your main product – like a new feature, you want to make sure the code that is given to you is good and perennial. To achieve that, you should ask from your contractors:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The code should be shipped in a modular fashion, avoiding coupling as much as possible. The new features should not interfere too much with the existing codebase.&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;A lot of pertinent automated tests.&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Documentation, not only on what the features are doing, but also on how they can be maintained and improved.&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Try collaboration with a member of your development team (if you have one), even part time. You want someone able right away to maintain this new feature.&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Enforce your internal best practices as much as possible if you have some. If you don’t, enforce the ones accepted by your technology’s community.&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Always keep in mind that you will have to live with this new code for a while and decide accordingly if outsourcing is the right move or not.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id='one_shot'&gt;One Shot&lt;/h3&gt;
+
+&lt;p&gt;The other possibility is to outsource something that is not directly linked to your core product. This could be a marketing campaign or something similar. In this case it is easier to get it right, and this is the situation where outsourcing works very well for a startup. You will not need to maintain the new code for long, it will not impact the existing code base… the only thing that matters is that the final result if up to your company’s standards.&lt;/p&gt;
+
+&lt;p&gt;A perfect example of that is &lt;a href='http://www.tigerlilyapps.com/'&gt;my company’s new website&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;We launched it recently and gave design control to a &lt;a href='http://www.colorz.fr/'&gt;creative agency&lt;/a&gt; during development. We did this because we knew that they would create a better design than us. While we care and love about building things that look good, this is not our core business. Delegating this part of the job also gave us the possibility to focus more on our platform for social media applications which is what we do best.&lt;/p&gt;
+
+&lt;p&gt;During the whole process someone kept checking to see if we were agreeing on the choices made. The final phase of integration was made in house because we have great front-end developers that should be able to make the website evolve later on.&lt;/p&gt;
+
+&lt;h2 id='keep_control'&gt;Keep Control&lt;/h2&gt;
+
+&lt;p&gt;In any case, try to stay on top of what is going on and make sure everything is moving in the right direction. Remember that as a startup, your product is very important. Do not lose control, do not lose ownership. Build up your team.&lt;/p&gt;
+&lt;div style='text-align:center'&gt;&lt;img src='/assets/misc/machine.jpg' style='width:450px;' /&gt;&lt;/div&gt;
+&lt;p&gt;You don’t want to end up with a Rube Goldberg machine made of a crazy patchwork created by dozens of freelancers. While it might get the job done for a bit, it won’t last.&lt;/p&gt;
+
+&lt;p&gt;This being said, there is no perfect solution. Some contractors become really involved and stay for long, some are so good that they will improve the general quality of your product… and if you found people like this maybe you should offer them a full time job!&lt;/p&gt;
+&lt;p class='sidenote'&gt;
+  This article was originally published on
+  &lt;a href='http://www.rudebaguette.com/2011/12/21/startups-to-outsource-or-not-to-outsource-3/'&gt;The Rude Baguette&lt;/a&gt;.
+&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Developers, Go From SSII To Startup</title>
+   <link href="http://marcgg.com/2011/12/12/developer-from-ssii-to-startup"/>
+   <updated>2011-12-12T00:00:00+01:00</updated>
+   <id>http://marcgg.com/2011/12/12/developer-from-ssii-to-startup</id>
+   <content type="html">&lt;p&gt;In France we have what we call SSII for Société de Service en Ingénierie Informatique. Poorly translated it goes something like «IT Consulting Firm». This is where most young CS graduates will go, mainly because once you get your degree you are spammed by job offers from their recruiters.&lt;/p&gt;
+
+&lt;p&gt;This is fine for some, but other might feel like they are missing out what’s happening in the startup world. The problem is that after a few years in a SSII it can seem complicated to switch career path and start working for a startup. For the most part it’s because the technologies, processes and general mindset are radically different… but believe me, it is possible!&lt;/p&gt;
+
+&lt;p&gt;So how can one move away from a company like this and join a cool startup?&lt;/p&gt;
+
+&lt;h2 id='are_you_sure'&gt;Are You Sure?&lt;/h2&gt;
+
+&lt;p&gt;First take a second to figure out what you love to do. Are you really passionate about development? Could you spend hours &lt;a href='http://stackoverflow.com/questions/144661/python-vs-ruby-for-metaprogramming'&gt;debating if new technology X is better than Y&lt;/a&gt;? Do you try out every new app or service that comes out?&lt;/p&gt;
+
+&lt;p&gt;Keep in mind that the process of becoming a good fit for a startup isn’t easy, but each step should be fun. If it’s a hassle then maybe you shouldn’t quit your current job.&lt;/p&gt;
+
+&lt;h2 id='the_mindset'&gt;The Mindset&lt;/h2&gt;
+&lt;img src='/assets/misc/movefast.jpg' style='float:right; height:350px;' /&gt;
+&lt;p&gt;In a SSII you often get to work on products already sold to a client, usually a large company. All you have to do is dress up, go to the client’s offices and code following the specifications someone gave you. It doesn’t matter if you think the product is good or not, it just matters that you meet the deadline.&lt;/p&gt;
+
+&lt;p&gt;When you join a startup, and especially if it’s an early stage one, this will be radically different. If you’re not passionated about what you’re doing it won’t work. It won’t only be about shipping a given feature anymore, it will be about caring that the product is good and that it follows the right vision.&lt;/p&gt;
+
+&lt;p&gt;In a startup you won’t be yet another code monkey driven by a faceless client’s exigences. Your voice will be heard and just as important as anyone else’s in the team. Your teammates will expect from you that you have ideas on things, not just follow orders. You’ll actually get the opportunity to be part of the creation of something.&lt;/p&gt;
+
+&lt;p&gt;Keep in mind that for a startup at an early stage, nothing is definitive. You could do a major switch in a week, it doesn’t matter as long as everything is moving in the right direction. You have to realize that making the right choices is crucial and can mean life or death for the company, therefore everyone in the team should be involved in the decision, give inputs, discuss, exchange ideas…&lt;/p&gt;
+
+&lt;h2 id='learn_create_code_repeat'&gt;Learn, Create, Code, Repeat&lt;/h2&gt;
+
+&lt;p&gt;Large companies, because of their larger inertia, tend to use older technologies and that’s why a lot of what you know might be of little use. But don’t worry, while the specifics of the technologies you know might be useless, the general experience you gathered is still valid. You simply need find out the technologies used by your dream startup and learn them.&lt;/p&gt;
+&lt;img src='/assets/misc/codecomplete.jpg' style='float:right; height:200px;' /&gt;
+&lt;p&gt;Keep in mind that what matters in a startup is the things you can do and your ability to learn &amp;amp; adapt. No one is going to show your resume to a client in order to get a contract, so it doesn’t matter whether you come from a famous school or not. It’s just a degree and doesn’t mean a lot. No need to buy a fancy suit either, it’s not the best outfit to be in front of a computer most of the day.&lt;/p&gt;
+
+&lt;p&gt;To sum it up, what a good startup wants is a developer that can program. So how to get better at coding you ask me? By coding of course!&lt;/p&gt;
+
+&lt;p&gt;The best way to get started is to find an idea and create it as a side project on nights &amp;amp; weekends. It will give you a goal and a nice bullet point on your resume once it’s completed. While you develop, get feedbacks on what you’re doing from experienced developers and/or the &lt;a href='http://stackoverflow.com/'&gt;internet&lt;/a&gt; and &lt;a href='http://stackoverflow.com/questions/1711/what-is-the-single-most-influential-book-every-programmer-should-read'&gt;read up&lt;/a&gt; on &lt;a href='http://www.amazon.com/dp/0132350882/?tag=stackoverfl08-20'&gt;best practices&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In a SSII you could be fine sticking to old technologies as there will always be clients wanting to use them: obviously no one is going to change overnight the way banking or insurance is done and the &lt;a href='http://en.wikipedia.org/wiki/COBOL'&gt;languages used&lt;/a&gt; to do it… but in a startup, everything moves fast. You have to keep on learning and keep on improving yourself.&lt;/p&gt;
+
+&lt;h2 id='get_connected'&gt;Get Connected&lt;/h2&gt;
+&lt;img src='/assets/misc/startinparis.png' style='float:right; width:200px;' /&gt;
+&lt;p&gt;The startup scene in France is maybe not as large as in the US, but it is active. So stay up to date about what’s going on around you as well as internationally. There are countless blogs, twitter users and events talking about just that, you simply need to find the ones that you like and start reading.&lt;/p&gt;
+
+&lt;p&gt;Start going to events organized in your city around the subjects that interest you. If you’re a developer wanting to geek out with other developers, there are meetups for that. You can also interact with other coders on mailing lists, IRC, Twitter…&lt;/p&gt;
+
+&lt;p&gt;If you do it well, you might even have a job interview scheduled before you start sending resumes!&lt;/p&gt;
+
+&lt;h2 id='alright'&gt;Alright&lt;/h2&gt;
+
+&lt;p&gt;That’s it. Don’t just stand there, go and create something!&lt;/p&gt;
+&lt;p class='sidenote'&gt;
+  This article was originally published on
+  &lt;a href='http://www.rudebaguette.com/2011/12/12/from-consulting-to-startup-developer/'&gt;The Rude Baguette&lt;/a&gt;.
+  Photo by &lt;a href='http://www.flickr.com/photos/mwichary/5455395458/'&gt;Martin Wichary&lt;/a&gt;.
+&lt;/p&gt;</content>
+ </entry>
+ 
+ 
+</feed>

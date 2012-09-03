@@ -4,13 +4,39 @@
  <title>Marcgg#Blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2012-08-26T16:23:19+02:00</updated>
+ <updated>2012-09-03T22:49:28+02:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
    <email>marcg.gauthier@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>The One Thing That Made Me Switch To Vim</title>
+   <link href="http://marcgg.com/2012/09/04/one-reason-to-switch-to-vim-editor"/>
+   <updated>2012-09-04T00:00:00+02:00</updated>
+   <id>http://marcgg.com/2012/09/04/one-reason-to-switch-to-vim-editor</id>
+   <content type="html">&lt;p&gt;I know, I know, this has been done to death, but stay with me for a second. I’m not here to tell you that Vim is the best editor out there, just to tell you the one reason that got me to switch.&lt;/p&gt;
+
+&lt;p&gt;Like every developer with some curiosity, I tried a ridiculous amount of text editors and IDEs. I started with Notepad at first, but quickly discovered that some text editors would actually help you. I downloaded &lt;a href='http://download.cnet.com/Amiasoft-SiteAid/3000-10247_4-10015046.html'&gt;SiteAid&lt;/a&gt; and enjoyed the gain of productivity. Then I quickly moved on to Scite, Eclipse, Netbeans, Notepad++, Emacs, Text Edit, Rad Rails, Kate, Rubymine, TextMate, Sublime&amp;#8230; the list goes on.&lt;/p&gt;
+
+&lt;p&gt;At some point I realized that I was wasting my time learning slightly different shortcuts and ways of setting up a project. I began to consider Vim seriously because it stood the test of time and seemed cool for some reason, but really the one thing that convinced me was a problem I had at my job.&lt;/p&gt;
+
+&lt;p&gt;One day something went wrong on a server running Debian. The sysadmin was not around and I ended up being the one that had to go on there and fix it. It was linked to some config files that were not properly set up, and the only editor available was Vim.&lt;/p&gt;
+
+&lt;p&gt;Back then I had almost &lt;a href='http://vimdoc.sourceforge.net/htmldoc/intro.html'&gt;no clue&lt;/a&gt; on how to use it.&lt;/p&gt;
+
+&lt;p&gt;It resulted in me editing the files as a 70 years old guy that just discovered what a keyboard is. It was painful to watch to say the least. Of course while this was going on, the server was more or less down. Pure joy if you ask me!&lt;/p&gt;
+
+&lt;p&gt;Even before this incident, more than a couple of times I had to inject some debug lines on the code deployed on our staging server to figure out a very environment-specific bug, but it wasn’t as stressful as this time.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;It felt terrible to be so lost with a task as simple as editing a file.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This is why I decided to use Vim as my primary editor. It already had enough qualities to be a good choice, but the fact that it is set up on most servers was the final selling point for me.&lt;/p&gt;
+
+&lt;p&gt;Sometimes you just need to be able to fire up Vim and be very fast using it. You don&amp;#8217;t even have to &lt;a href='http://yehudakatz.com/2010/07/29/everyone-who-tried-to-convince-me-to-use-vim-was-wrong/'&gt;be snob while doing it&lt;/a&gt;.&lt;/p&gt;</content>
+ </entry>
  
  <entry>
    <title>Start Working on Your Side Project Tonight</title>
@@ -206,5 +232,5 @@
 &lt;/p&gt;</content>
  </entry>
  
- 
+
 </feed>
