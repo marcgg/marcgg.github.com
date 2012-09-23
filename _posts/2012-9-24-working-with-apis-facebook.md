@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Should You Work With Another Company's API?"
+title: "The Risks of Working With Another Company's API"
 description: "This post is nothing but my point of view and advices to people wanting to build on top of an existing platform such as Facebook or Twitter."
 blog: true
 tags: [Dev, Product]
