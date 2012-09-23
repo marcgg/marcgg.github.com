@@ -4,7 +4,7 @@
  <title>Marcgg#Blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2012-09-23T20:51:25+02:00</updated>
+ <updated>2012-09-23T20:52:39+02:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -51,7 +51,7 @@
 
 &lt;p&gt;My advice would to have a clear focused vision on where you can provide a real value and keep it realistic. Basing your product on an amazing platform is a great opportunity we’re given, but it should not be seen as the golden hammer of product design.&lt;/p&gt;
 
-&lt;h2 id='stuffs_going_to_change'&gt;Stuff’s Going To Change&lt;/h2&gt;
+&lt;h2 id='things_will_change'&gt;Things Will Change&lt;/h2&gt;
 &lt;img src='/assets/misc/fbml.jpg' style='float:right; width:210px;' /&gt;
 &lt;p&gt;Any third party API you’re going to use is going to change. It’s a good thing. You want it to provide more features, to adapt to follow the best practices and so on. The real question here is not «Is it going to change ?» - because it will, but «Is my system and product flexible enough to handle the changes ?».&lt;/p&gt;
 
@@ -59,7 +59,7 @@
 
 &lt;p&gt;Secondly, your code needs to be separated enough so that a change in the third party API only impacts a minimal part of your system. This is where you really have to follow &lt;a href='http://en.wikipedia.org/wiki/Law_of_Demeter'&gt;Demeter’s law&lt;/a&gt;. Simply put, have a good interface somewhere that allows you to limit the number of places in which you have API handling code.&lt;/p&gt;
 
-&lt;h2 id='stuffs_going_to_break'&gt;Stuff’s Going To Break&lt;/h2&gt;
+&lt;h2 id='things_will_break'&gt;Things Will Break&lt;/h2&gt;
 &lt;img src='/assets/misc/movefast.png' style='float:right; width:210px;' /&gt;
 &lt;p&gt;I’ve reported over 200 bugs on the Facebook platform. Some were fixed, some were impossible to reproduce accurately and other were just disregarded because considered as weird edge cases.&lt;/p&gt;
 

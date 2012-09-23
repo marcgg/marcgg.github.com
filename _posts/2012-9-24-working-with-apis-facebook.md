@@ -45,7 +45,7 @@ Stop thinking that you’ll be able to scrap the entire data on Twitter and prov
 
 My advice would to have a clear focused vision on where you can provide a real value and keep it realistic. Basing your product on an amazing platform is a great opportunity we’re given, but it should not be seen as the golden hammer of product design.
 
-## Stuff’s Going To Change
+## Things Will Change
 
 <img src="/assets/misc/fbml.jpg" style="float:right; width:210px;" />
 
@@ -55,7 +55,7 @@ First, if you base your entire product on one API feature, you are taking huge r
 
 Secondly, your code needs to be separated enough so that a change in the third party API only impacts a minimal part of your system. This is where you really have to follow [Demeter’s law](http://en.wikipedia.org/wiki/Law_of_Demeter). Simply put, have a good interface somewhere that allows you to limit the number of places in which you have API handling code.
 
-## Stuff’s Going To Break
+## Things Will Break
 
 <img src="/assets/misc/movefast.png" style="float:right; width:210px;" />
 
