@@ -10,6 +10,7 @@ title : Marcgg#Blog - Thoughts on software development, startups and the process
   things happen.
 </p>
 
+<div id="all-posts">
 {% for tag in site.tags %} 
   <h2 id="{{ tag[0] }}-ref">{{ tag[0] }}</h2>
   <ul>
@@ -17,6 +18,7 @@ title : Marcgg#Blog - Thoughts on software development, startups and the process
     {% include JB/pages_list %}
   </ul>
 {% endfor %}
+</div>
 
 <p>
   See posts <a href="/blog">ordered by date</a>.

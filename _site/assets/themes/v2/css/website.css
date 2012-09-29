@@ -65,7 +65,7 @@ a:hover{
 }
 
 #all-posts li{
-  line-height: 1.3em;
+  padding-bottom: 8px;
 }
 
 .post img{
@@ -137,4 +137,12 @@ a:hover{
 footer{
   display: block;
   margin: 10px 0px 60px 0px;
+}
+
+blockquote{
+  border-left: 3px solid #ddd;
+}
+
+blockquote p{
+  margin: 5px 20px !important;
 }
