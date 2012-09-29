@@ -64,8 +64,19 @@ a:hover{
   text-decoration: underline;
 }
 
-#all-posts li{
-  padding-bottom: 8px;
+.single-post{
+  margin-bottom: 10px;
+}
+
+.single-post h3{
+  padding: 0px !important;
+}
+
+.single-post h3 span{
+  font-size: 0.7em !important;
+}
+
+.single-post .description{
 }
 
 .post img{

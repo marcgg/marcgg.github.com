@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Outsourcing In A Startup"
-description: ""
+description: "Sometimes you have to outsource, but there are some
+guidelines to follow if you want everything to go well."
 blog: true
 tags: [Startup]
 ---

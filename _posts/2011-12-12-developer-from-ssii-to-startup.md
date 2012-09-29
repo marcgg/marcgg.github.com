@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Developers, Go From SSII To Startup"
-description: ""
+description: "How can one move away from a outdated consulting firm and join a cool startup?"
 blog: true
 tags: [Startup]
 ---

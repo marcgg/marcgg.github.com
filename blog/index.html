@@ -5,16 +5,15 @@ title : Marcgg#Blog - Thoughts on software development, startups and the process
 {% include JB/setup %}
 
 <h1><span>Marcgg#Blog</span></h1>
-<p>
-  Thoughts on software development, startups and the process of making
-  things happen.
-</p>
 
-{% assign posts_collate = site.posts %}
 <div id="all-posts">
-  {% include JB/posts_collate %}
+  {% for post in site.posts %}
+  <div class="single-post">
+    <h3>
+      <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+      <span>({{ post.date | date: "%B %e, %Y" }})</span>
+    </h3>
+    <div class="description">{{ post.description }}</div>
+  </div>
+  {% endfor %}
 </div>
-
-<p>
-  See posts <a href="/tags.html">ordered by tag</a>.
-</p>
