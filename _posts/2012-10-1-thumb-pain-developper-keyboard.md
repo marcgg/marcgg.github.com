@@ -10,7 +10,7 @@ tags: [Dev, Health]
 
 {% include JB/setup %}
 
-Most coders complain about [wrist pain](http://programmers.stackexchange.com/questions/167/how-can-i-avoid-the-carpal-tunnel-syndrome). For some reason I never had major trouble here except when working for hours on a laptop. My main issue seemed more original and was located in [the group of muscles controlling the thumb](http://en.wikipedia.org/wiki/Thenar_eminence). Suddently it would hurt for days, then go away, then come back... good times.
+Most coders complain about wrist pain. For some reason I never had major trouble there except when working for hours on a laptop. My main issue seemed more original and was located in [the group of muscles controlling the thumb](http://en.wikipedia.org/wiki/Thenar_eminence). Suddently it would hurt for days, then go away, then come back... good times.
 
 Eventually I mentioned it to a kinesiotherapist, and the conversation was very similar to the famous joke that goes something like:
 
