@@ -5,7 +5,7 @@ http://marcgg.com/index.html
 http://marcgg.com/sitemap.txt
 http://marcgg.com/tags.html
 
-http://marcgg.com/2012/10/16/dont-accept-brokeness-deal-with-annoyances
+http://marcgg.com/2012/10/15/dont-accept-brokeness-deal-with-annoyances
 http://marcgg.com/2012/10/01/thumb-pain-developer-keyboard
 http://marcgg.com/2012/09/24/working-with-apis-facebook
 http://marcgg.com/2012/09/04/one-reason-to-switch-to-vim-editor
