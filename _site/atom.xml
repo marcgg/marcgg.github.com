@@ -4,7 +4,7 @@
  <title>Marcgg#Blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2012-10-20T16:07:18+02:00</updated>
+ <updated>2012-10-20T16:13:57+02:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -31,7 +31,7 @@
 
 &lt;p&gt;RubyMotion uses &lt;a href='http://www.ruby-lang.org/'&gt;Ruby&lt;/a&gt;. If you are not familiar with it, there are tons of tutorials and books on how to code with this language. I recommend &lt;a href='http://ruby.learncodethehardway.org/'&gt;Learn Ruby The Hard Way&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id='our_objective'&gt;Our objective&lt;/h2&gt;
+&lt;h2 id='our_objective'&gt;Our Objective&lt;/h2&gt;
 
 &lt;p&gt;I’ll try to explain how to customize a UISlider to get the look and feel matching the design of your application. Here’s what’s the demo code will give you:&lt;/p&gt;
 &lt;iframe frameborder='0' height='396' src='http://www.screenr.com/embed/v0y8' width='100%'&gt;Loading&lt;/iframe&gt;

@@ -36,7 +36,7 @@ recommend [Learn Ruby The Hard
 Way](http://ruby.learncodethehardway.org/).
 
 
-## Our objective
+## Our Objective
 
 I’ll try to explain how to customize a UISlider to get the look and
 feel matching the design of your application. Here’s what’s the demo
