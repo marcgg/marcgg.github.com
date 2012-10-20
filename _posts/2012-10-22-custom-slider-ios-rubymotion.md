@@ -19,7 +19,7 @@ find [helpful](https://twitter.com/vacawama) [people](https://twitter.com/julien
 you often end up alone with your code.
 That's why I figured I would contribute my share of blog posts on the subject! Hopefully it’ll help out some people.
 
-Keep in mind that while I’m well versed in Ruby, I’m quite new to Rubymotion so I might make some mistakes... so please comment if I do and I’ll fix the article as soon as possible. The project is also evolving a lot, therefore while this article works perfectly today, it might not be the case in a few months.
+Keep in mind that while I’m well versed in Ruby, I’m quite new to RubyMotion so I might make some mistakes... so please comment if I do and I’ll fix the article as soon as possible. The project is also evolving a lot, therefore while this article works perfectly today, it might not be the case in a few months.
 
 With all that in mind, let's get started shall we?
 
@@ -199,5 +199,5 @@ If you find this avalanche of code snippets not very usuable,
 you can look at the whole project
 on [github](https://github.com/marcgg/rubymotion-custom-slider). It is
 compiling and working as I write this article, but keep in mind that
-rubymotion is a fast moving project and it might not be the case in a
+RubyMotion is a fast moving project and it might not be the case in a
 few months.

@@ -4,7 +4,7 @@
  <title>Marcgg#Blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2012-10-20T16:13:57+02:00</updated>
+ <updated>2012-10-20T16:22:11+02:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -21,7 +21,7 @@
 
 &lt;p&gt;Alas it&amp;#8217;s not perfect. My main grief right now about the project is the terrible lack of documentation. The community is also still small and while you can still find &lt;a href='https://twitter.com/vacawama'&gt;helpful&lt;/a&gt; &lt;a href='https://twitter.com/julienXX'&gt;people&lt;/a&gt;, you often end up alone with your code. That&amp;#8217;s why I figured I would contribute my share of blog posts on the subject! Hopefully it’ll help out some people.&lt;/p&gt;
 
-&lt;p&gt;Keep in mind that while I’m well versed in Ruby, I’m quite new to Rubymotion so I might make some mistakes&amp;#8230; so please comment if I do and I’ll fix the article as soon as possible. The project is also evolving a lot, therefore while this article works perfectly today, it might not be the case in a few months.&lt;/p&gt;
+&lt;p&gt;Keep in mind that while I’m well versed in Ruby, I’m quite new to RubyMotion so I might make some mistakes&amp;#8230; so please comment if I do and I’ll fix the article as soon as possible. The project is also evolving a lot, therefore while this article works perfectly today, it might not be the case in a few months.&lt;/p&gt;
 
 &lt;p&gt;With all that in mind, let&amp;#8217;s get started shall we?&lt;/p&gt;
 
@@ -136,7 +136,7 @@
 
 &lt;p&gt;Obviously these are not the only customizations you can make to a UISlider, but I think it&amp;#8217;s a good start. If people are interested I might make another one on events or visual tricks you can use to make a slider look cooler.&lt;/p&gt;
 
-&lt;p&gt;If you find this avalanche of code snippets not very usuable, you can look at the whole project on &lt;a href='https://github.com/marcgg/rubymotion-custom-slider'&gt;github&lt;/a&gt;. It is compiling and working as I write this article, but keep in mind that rubymotion is a fast moving project and it might not be the case in a few months.&lt;/p&gt;</content>
+&lt;p&gt;If you find this avalanche of code snippets not very usuable, you can look at the whole project on &lt;a href='https://github.com/marcgg/rubymotion-custom-slider'&gt;github&lt;/a&gt;. It is compiling and working as I write this article, but keep in mind that RubyMotion is a fast moving project and it might not be the case in a few months.&lt;/p&gt;</content>
  </entry>
  
  <entry>
