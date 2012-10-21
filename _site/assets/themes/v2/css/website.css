@@ -111,28 +111,23 @@ a:hover{
   line-height: 1.3em;
 }
 
-#about a{
-  text-shadow: 1px 1px #ddd;
-}
-
-
 .tigerlily{ color: #FE7D2A; }
 .analog{ color: #4f82b7; }
 .live{ color: #e2383f; }
-.upsud{ color: #92B938; }
+.upsud{ color: #85ac32; }
 .fiu{ color: #C69B19; }
 .altran{ color:#315CB1; }
 .sagem{ color: #9F0; }
-.ffocused{ color: #70BEFB; }
-.github{ color: #aaa; }
+.ffocused{ color: #64ade7; }
+.github{ color: #888; }
 .rails{ color: #981A21; }
 .couchsurfing{ color: #F88E11; }
-.twitter{ color: #42d0ff; }
+.twitter{ color: #3ab3db; }
 .linkedin{ color: #045A8B; }
 .lol{ color: #aaa; }
 .teamshack{ color: #4f82b7; }
-.stackoverflow{ color: #F4A83D; }
-.wma{ color: #FFD800; }
+.stackoverflow{ color: #de952d; }
+.wma{ color: #d6b604; }
 
 .photo{
   border: 1px solid #333;
