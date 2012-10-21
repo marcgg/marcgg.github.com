@@ -4,7 +4,7 @@
  <title>Marcgg#Blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2012-10-20T16:22:11+02:00</updated>
+ <updated>2012-10-21T17:32:19+02:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -17,27 +17,27 @@
    <link href="http://marcgg.com/2012/10/22/custom-slider-ios-rubymotion"/>
    <updated>2012-10-22T00:00:00+02:00</updated>
    <id>http://marcgg.com/2012/10/22/custom-slider-ios-rubymotion</id>
-   <content type="html">&lt;p&gt;I always liked the idea of developing mobile applications, but also found the Objective C + XCode experience not very enjoyable. I gave alternatives like &lt;a href='http://www.appcelerator.com/platform/titanium-sdk/'&gt;Titanium&lt;/a&gt; a try, but wasn’t fully convinced. Lately I’ve getting into &lt;a href='http://www.rubymotion.com/'&gt;RubyMotion&lt;/a&gt; and so far I’m really impressed by the general feel of it.&lt;/p&gt;
+   <content type="html">&lt;p&gt;I always liked the idea of developing mobile applications, but also found the Objective C + XCode experience not very enjoyable. I gave alternatives like &lt;a href='http://www.appcelerator.com/platform/titanium-sdk/'&gt;Titanium&lt;/a&gt; a try, but wasn’t fully convinced. Lately I’ve been getting into &lt;a href='http://www.rubymotion.com/'&gt;RubyMotion&lt;/a&gt; and so far I’m really impressed by the general feel of it.&lt;/p&gt;
 
 &lt;p&gt;Alas it&amp;#8217;s not perfect. My main grief right now about the project is the terrible lack of documentation. The community is also still small and while you can still find &lt;a href='https://twitter.com/vacawama'&gt;helpful&lt;/a&gt; &lt;a href='https://twitter.com/julienXX'&gt;people&lt;/a&gt;, you often end up alone with your code. That&amp;#8217;s why I figured I would contribute my share of blog posts on the subject! Hopefully it’ll help out some people.&lt;/p&gt;
 
-&lt;p&gt;Keep in mind that while I’m well versed in Ruby, I’m quite new to RubyMotion so I might make some mistakes&amp;#8230; so please comment if I do and I’ll fix the article as soon as possible. The project is also evolving a lot, therefore while this article works perfectly today, it might not be the case in a few months.&lt;/p&gt;
+&lt;p&gt;Keep in mind that while I’m well versed in Ruby, I’m quite new to RubyMotion and might make some mistakes&amp;#8230; so please comment if I do and I’ll fix the article. RubyMotion is also evolving, therefore while this article works perfectly today, it might not be the case in a few months.&lt;/p&gt;
 
 &lt;p&gt;With all that in mind, let&amp;#8217;s get started shall we?&lt;/p&gt;
 
 &lt;h2 id='prerequisites'&gt;Prerequisites&lt;/h2&gt;
 
-&lt;p&gt;I won’t get into the details on how to set up a RubyMotion project and will assume you have basic knowledge of how this works. If you have no clue what’s all that about, please take a look at &lt;a href='http://rubymotion-tutorial.com/1-hello-motion/'&gt;this tutorial&lt;/a&gt; before reading the rest of this article.&lt;/p&gt;
+&lt;p&gt;I won’t get into the details on how to set up a project and will assume you have basic knowledge of how this works. If you never created something with RubyMotion, please take a look at &lt;a href='http://rubymotion-tutorial.com/1-hello-motion/'&gt;this tutorial&lt;/a&gt; before reading the rest of this article.&lt;/p&gt;
 
-&lt;p&gt;RubyMotion uses &lt;a href='http://www.ruby-lang.org/'&gt;Ruby&lt;/a&gt;. If you are not familiar with it, there are tons of tutorials and books on how to code with this language. I recommend &lt;a href='http://ruby.learncodethehardway.org/'&gt;Learn Ruby The Hard Way&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;RubyMotion uses &lt;a href='http://www.ruby-lang.org/'&gt;Ruby&lt;/a&gt;. If you are not familiar with it, there are tons of tutorials and books on how to code with this language. I recommend &lt;a href='http://ruby.learncodethehardway.org/'&gt;Learn Ruby The Hard Way&lt;/a&gt; by &lt;a href='http://zedshaw.com/'&gt;Zed A. Shaw&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id='our_objective'&gt;Our Objective&lt;/h2&gt;
 
-&lt;p&gt;I’ll try to explain how to customize a UISlider to get the look and feel matching the design of your application. Here’s what’s the demo code will give you:&lt;/p&gt;
+&lt;p&gt;I’ll try to explain how to customize a &lt;a href='http://developer.apple.com/library/ios/#documentation/uikit/reference/UISlider_Class/Reference/Reference.html'&gt;UISlider&lt;/a&gt; to get the look and feel matching the design of your application. Here’s what’s the demo code will give you:&lt;/p&gt;
 &lt;iframe frameborder='0' height='396' src='http://www.screenr.com/embed/v0y8' width='100%'&gt;Loading&lt;/iframe&gt;
 &lt;h2 id='setting_up_the_appdelegate'&gt;Setting up the AppDelegate&lt;/h2&gt;
 
-&lt;p&gt;This is pretty basic, we just set up a controller and assign it to be the root.&lt;/p&gt;
+&lt;p&gt;This is pretty basic, we just set up a &lt;a href='http://rubymotion-tutorial.com/3-controllers/'&gt;controller&lt;/a&gt; and assign it to be the root.&lt;/p&gt;
 &lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='ruby'&gt;&lt;span class='k'&gt;class&lt;/span&gt; &lt;span class='nc'&gt;AppDelegate&lt;/span&gt;
   &lt;span class='k'&gt;def&lt;/span&gt; &lt;span class='nf'&gt;application&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;application&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='n'&gt;didFinishLaunchingWithOptions&lt;/span&gt;&lt;span class='ss'&gt;:launchOptions&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;
     &lt;span class='vi'&gt;@window&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='no'&gt;UIWindow&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;alloc&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;initWithFrame&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='no'&gt;UIScreen&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;mainScreen&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;bounds&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;
@@ -54,7 +54,7 @@
 &lt;/div&gt;
 &lt;h2 id='displaying_a_uislider'&gt;Displaying a UISlider&lt;/h2&gt;
 
-&lt;p&gt;Now we need to create the MainController. Put it in app/controllers, with the basic structure as such:&lt;/p&gt;
+&lt;p&gt;Now we need to create the MainController. I like to put it in app/controllers, with the usual basic structure.&lt;/p&gt;
 &lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='ruby'&gt;&lt;span class='k'&gt;class&lt;/span&gt; &lt;span class='nc'&gt;MainController&lt;/span&gt; &lt;span class='o'&gt;&amp;lt;&lt;/span&gt; &lt;span class='no'&gt;UIViewController&lt;/span&gt;
   &lt;span class='k'&gt;def&lt;/span&gt; &lt;span class='nf'&gt;loadView&lt;/span&gt;
     &lt;span class='nb'&gt;self&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;view&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='no'&gt;UIView&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;new&lt;/span&gt;
@@ -75,13 +75,16 @@
 &lt;p&gt;Now you can run the application with rake and it&amp;#8217;ll display a black screen. This means we&amp;#8217;re all set up and it&amp;#8217;s time to actually start coding. Everything we&amp;#8217;re going to write from now on will be after the super the viewDidLoad method.&lt;/p&gt;
 
 &lt;p&gt;First, the slider:&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='ruby'&gt;  &lt;span class='n'&gt;slider&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='no'&gt;UISlider&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;alloc&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;initWithFrame&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='o'&gt;[[&lt;/span&gt;&lt;span class='mi'&gt;0&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='mi'&gt;200&lt;/span&gt;&lt;span class='o'&gt;]&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='o'&gt;[&lt;/span&gt;&lt;span class='mi'&gt;320&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='mi'&gt;40&lt;/span&gt;&lt;span class='o'&gt;]]&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;
-  &lt;span class='n'&gt;view&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;addSubview&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;slider&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='ruby'&gt;&lt;span class='n'&gt;slider&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='no'&gt;UISlider&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;alloc&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;initWithFrame&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='o'&gt;[[&lt;/span&gt;&lt;span class='mi'&gt;0&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='mi'&gt;200&lt;/span&gt;&lt;span class='o'&gt;]&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='o'&gt;[&lt;/span&gt;&lt;span class='mi'&gt;320&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='mi'&gt;40&lt;/span&gt;&lt;span class='o'&gt;]]&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;p&gt;This will create a slider taking the whole width (320) and position it more or less in the center. Then we add it to the view so it&amp;#8217;ll display correctly.&lt;/p&gt;
+&lt;p&gt;This will create a slider taking the whole width of the screen and position it more or less in the center. Once it&amp;#8217;s created, we need add it to the view so it&amp;#8217;ll display correctly.&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='ruby'&gt;&lt;span class='n'&gt;view&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;addSubview&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;slider&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Run rake again, and you should see something like this:&lt;/p&gt;
 &lt;div style='text-align: center'&gt;&lt;img alt='Custom Sliders Demo' src='/assets/misc/slider1.png' /&gt;&lt;/div&gt;
-&lt;p&gt;If you want you can set the maximum and default values as such:&lt;/p&gt;
+&lt;p&gt;If you want, you can set the maximum and default values:&lt;/p&gt;
 &lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='ruby'&gt;&lt;span class='n'&gt;slider&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;maximumValue&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='mi'&gt;100&lt;/span&gt;
 &lt;span class='n'&gt;slider&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;value&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='n'&gt;slider&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;maximumValue&lt;/span&gt;&lt;span class='o'&gt;/&lt;/span&gt;&lt;span class='mi'&gt;2&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
@@ -90,44 +93,46 @@
 
 &lt;p&gt;A UISlider is composed of different elements. The sliding thingy is called the track and the other round thingy you grab to drag is the thumb. On the left of the thumb we have the minimum track, on the right the maximum track. The &lt;a href='http://developer.apple.com/library/ios/#documentation/uikit/reference/UISlider_Class/Reference/Reference.html'&gt;official documentation&lt;/a&gt; explains that with a better display of vocabulary than I do, but you get the idea.&lt;/p&gt;
 
-&lt;p&gt;We can change the track image to display what we want as such:&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='ruby'&gt;  &lt;span class='n'&gt;full_image&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='no'&gt;UIImage&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;imageNamed&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;full&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;
-  &lt;span class='n'&gt;empty_image&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='no'&gt;UIImage&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;imageNamed&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;empty&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;
-  &lt;span class='n'&gt;slider&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;setMinimumTrackImage&lt;/span&gt; &lt;span class='n'&gt;full_image&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='n'&gt;forState&lt;/span&gt;&lt;span class='p'&gt;:&lt;/span&gt; &lt;span class='no'&gt;UIControlStateNormal&lt;/span&gt;
-  &lt;span class='n'&gt;slider&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;setMaximumTrackImage&lt;/span&gt; &lt;span class='n'&gt;empty_image&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='n'&gt;forState&lt;/span&gt;&lt;span class='p'&gt;:&lt;/span&gt; &lt;span class='no'&gt;UIControlStateNormal&lt;/span&gt;
+&lt;p&gt;Let&amp;#8217;s change the track image to display and image.&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='ruby'&gt;&lt;span class='n'&gt;full_image&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='no'&gt;UIImage&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;imageNamed&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;full&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;
+&lt;span class='n'&gt;empty_image&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='no'&gt;UIImage&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;imageNamed&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;empty&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;
+&lt;span class='n'&gt;slider&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;setMinimumTrackImage&lt;/span&gt; &lt;span class='n'&gt;full_image&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='n'&gt;forState&lt;/span&gt;&lt;span class='p'&gt;:&lt;/span&gt; &lt;span class='no'&gt;UIControlStateNormal&lt;/span&gt;
+&lt;span class='n'&gt;slider&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;setMaximumTrackImage&lt;/span&gt; &lt;span class='n'&gt;empty_image&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='n'&gt;forState&lt;/span&gt;&lt;span class='p'&gt;:&lt;/span&gt; &lt;span class='no'&gt;UIControlStateNormal&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;p&gt;You can notice that I use two images &amp;#8220;full&amp;#8221; and &amp;#8220;empty&amp;#8221;. To get them to load correctly, put them in the resources folder of your rubymotion project. If they are PNGs you don&amp;#8217;t need to specify the format.&lt;/p&gt;
 
-&lt;p&gt;Right now the minimum track image is stretching to fit the space given to it. It might be what you want, but that&amp;#8217;s not my case so let&amp;#8217;s add the following code before giving the image to the slider.&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='ruby'&gt;  &lt;span class='n'&gt;full_image&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='n'&gt;full_image&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;resizableImageWithCapInsets&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;
-    &lt;span class='no'&gt;UIEdgeInsetsZero&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='n'&gt;resizingMode&lt;/span&gt;&lt;span class='p'&gt;:&lt;/span&gt; &lt;span class='no'&gt;UIImageResizingModeTile&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;
+&lt;p&gt;Right now the minimum track image is stretching to fit its space. It might be what you want, but that&amp;#8217;s not my case so let&amp;#8217;s add the following code before giving the image to the slider.&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='ruby'&gt;&lt;span class='c1'&gt;# You need an image that is the exact size of the slider&lt;/span&gt;
+&lt;span class='c1'&gt;# or else it might not look good&lt;/span&gt;
+&lt;span class='n'&gt;full_image&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='n'&gt;full_image&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;resizableImageWithCapInsets&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;
+  &lt;span class='no'&gt;UIEdgeInsetsZero&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='n'&gt;resizingMode&lt;/span&gt;&lt;span class='p'&gt;:&lt;/span&gt; &lt;span class='no'&gt;UIImageResizingModeTile&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;p&gt;At this point we have this:&lt;/p&gt;
 &lt;div style='text-align: center'&gt;&lt;img alt='Custom Sliders Demo' src='/assets/misc/slider2.png' /&gt;&lt;/div&gt;
-&lt;p&gt;This is pretty good, but the thumb in the middle doesn&amp;#8217;t look so good. Let&amp;#8217;s fix that.&lt;/p&gt;
+&lt;p&gt;This is pretty good, but the thumb in the middle doesn&amp;#8217;t look like it belongs. Let&amp;#8217;s fix that.&lt;/p&gt;
 
 &lt;h2 id='customizing_the_thumb'&gt;Customizing The Thumb&lt;/h2&gt;
 
 &lt;p&gt;You can pass an image to set the thumb to whatever you want using the same logic as what we did with the tracks. Personnally I prefer removing the thumb entirely, so here&amp;#8217;s how to do that:&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='ruby'&gt;  &lt;span class='n'&gt;slider&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;setThumbImage&lt;/span&gt; &lt;span class='no'&gt;UIImage&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;alloc&lt;/span&gt;&lt;span class='p'&gt;(),&lt;/span&gt; &lt;span class='n'&gt;forState&lt;/span&gt;&lt;span class='p'&gt;:&lt;/span&gt; &lt;span class='no'&gt;UIControlStateNormal&lt;/span&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='ruby'&gt;&lt;span class='n'&gt;slider&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;setThumbImage&lt;/span&gt; &lt;span class='no'&gt;UIImage&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;alloc&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='n'&gt;forState&lt;/span&gt;&lt;span class='p'&gt;:&lt;/span&gt; &lt;span class='no'&gt;UIControlStateNormal&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;p&gt;This gives you:&lt;/p&gt;
 &lt;div style='text-align: center'&gt;&lt;img alt='Custom Sliders Demo' src='/assets/misc/rubymotion_sliders.png' /&gt;&lt;/div&gt;
 &lt;p&gt;Of course you could have done something like:&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='ruby'&gt;  &lt;span class='n'&gt;whatever&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='no'&gt;UIImage&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;imageNamed&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;whatever&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;
-  &lt;span class='n'&gt;slider&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;setThumbImage&lt;/span&gt; &lt;span class='n'&gt;whatever&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='n'&gt;forState&lt;/span&gt;&lt;span class='p'&gt;:&lt;/span&gt; &lt;span class='no'&gt;UIControlStateNormal&lt;/span&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='ruby'&gt;&lt;span class='n'&gt;whatever&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='no'&gt;UIImage&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;imageNamed&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;whatever&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;
+&lt;span class='n'&gt;slider&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;setThumbImage&lt;/span&gt; &lt;span class='n'&gt;whatever&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='n'&gt;forState&lt;/span&gt;&lt;span class='p'&gt;:&lt;/span&gt; &lt;span class='no'&gt;UIControlStateNormal&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;h2 id='making_the_slider_easier_to_slide'&gt;Making The Slider Easier to Slide&lt;/h2&gt;
 
-&lt;p&gt;Right now it&amp;#8217;s looking how we want it, but the problem is that the UISlider is a bit to tall compared to the default one. The thumb is hidden, but you still have to click exactly where it used to be in order to change the slider&amp;#8217;s value.&lt;/p&gt;
+&lt;p&gt;Right now it&amp;#8217;s looking how we want it, but the problem the thumb is hidden, but you still have to click exactly where it used to be in order to change the slider&amp;#8217;s value. Since the UISlider is a taller than the default one, you have have to click right in the middle of your new slider in order to grab it.&lt;/p&gt;
 
-&lt;p&gt;That&amp;#8217;s not good UX, so in order to avoid this, we can enlarge the size of the area that is selectable:&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='ruby'&gt;  &lt;span class='n'&gt;slider&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;trackRectForBounds&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;
-    &lt;span class='no'&gt;CGRect&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;new&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='no'&gt;CGPoint&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;new&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='mi'&gt;200&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt;&lt;span class='mi'&gt;200&lt;/span&gt;&lt;span class='p'&gt;),&lt;/span&gt; &lt;span class='no'&gt;CGSize&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;new&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='mi'&gt;100&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt;&lt;span class='mi'&gt;100&lt;/span&gt;&lt;span class='p'&gt;)))&lt;/span&gt;
+&lt;p&gt;That&amp;#8217;s not good UX. I order to avoid this we can enlarge the size of the area that is selectable:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='ruby'&gt;&lt;span class='n'&gt;slider&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;trackRectForBounds&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;
+  &lt;span class='no'&gt;CGRect&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;new&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='no'&gt;CGPoint&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;new&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='mi'&gt;200&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt;&lt;span class='mi'&gt;200&lt;/span&gt;&lt;span class='p'&gt;),&lt;/span&gt; &lt;span class='no'&gt;CGSize&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;new&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='mi'&gt;100&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt;&lt;span class='mi'&gt;100&lt;/span&gt;&lt;span class='p'&gt;)))&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;p&gt;Depending on the size of your images and the general feeling you want to get, play around with this area you&amp;#8217;re defining.&lt;/p&gt;
