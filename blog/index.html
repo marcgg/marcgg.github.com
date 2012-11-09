@@ -31,9 +31,8 @@ title : Marcgg#Blog - Thoughts on software development, startups and the process
 <script language="javascript">
   $(function(){
     var selected = location.search.replace('?tag=','');
-    if(selected != ""){
-      selectTag(selected)
-    }
+    if(selected != ""){ selectTag(selected) }
+
     $(".tag").click(function(e){
       e.preventDefault()
       var $this = $(this)
@@ -41,17 +40,27 @@ title : Marcgg#Blog - Thoughts on software development, startups and the process
       if(!$this.hasClass("selected")){
         selectTag(tag)
       } else {
-        $(".selected").removeClass("selected")
-        history.pushState({}, null, '?')
+        unSelectedTag()
       }
+    })
+
+    $(document).keyup(function(e) {
+      if (e.keyCode == 27){ unSelectedTag() }
     })
   })
 
   function selectTag(tag){
     $(".selected").removeClass("selected")
+    $(".single-post").addClass("unselected")
     $(".tag-" + tag).addClass("selected")
-    $(".tag-" + tag).parents(".single-post").addClass("selected")
+    $(".tag-" + tag).parents(".single-post").addClass("selected").removeClass("unselected")
     history.pushState({}, null, '?tag=' + tag)
+  }
+
+  function unSelectedTag(){
+    $(".selected").removeClass("selected")
+    $(".unselected").removeClass("unselected")
+    history.pushState({}, null, '?')
   }
 
 </script>

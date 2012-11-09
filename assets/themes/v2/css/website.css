@@ -129,6 +129,10 @@ a:hover{
   font-size: 0.6em !important;
 }
 
+.unselected *{
+  opacity: 0.7;
+}
+
 .single-post .description{
   margin: 10px 0px 5px 0px !important;
   line-height: 23px;
