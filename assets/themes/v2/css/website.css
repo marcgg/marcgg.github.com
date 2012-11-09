@@ -64,6 +64,36 @@ a:hover{
   text-decoration: underline;
 }
 
+#nav{
+  font-size: 0.9em;
+}
+
+/* TAGS */
+.tags{
+  width: 70px;
+  float: left;
+  padding-right: 15px;
+  height: 30px;
+}
+.tags .tag{
+  font-family: "Helvetica";
+  font-size: 10px;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 3px;
+  padding: 2px 4px;
+  margin: 3px 5px 5px 0px;
+  text-align: center;
+}
+.tag-Dev{ border: 1px solid #4232df; background-color: #b3ade6; }
+.tag-RubyMotion{ border: 1px solid #c80505; background-color: #e6adad; }
+.tag-Health{ border: 1px solid #0b7500; background-color: #51c146; }
+.tag-Product{ border: 1px solid #910182; background-color: #d472ca; }
+.tag-Life{ border: 1px solid #e58c00; background-color: #edc380; }
+.tag-Startup{ border: 1px solid #00c783; background-color: #92e1c6; }
+.tag-Projects{ border: 1px solid #f0e30c; background-color: #ebe7af; }
+
+/* POSTS */
 .single-post{
   margin-bottom: 10px;
 }
