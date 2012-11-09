@@ -10,8 +10,9 @@
   {% unless page.tags == empty %}
     &#183;
     Tagged
-    {% assign tags_list = page.tags %}
-    {% include JB/tags_list %}
+    {% for tag in page.tags %}
+      <a href="/blog?tag={{tag}}">{{ tag }}</a>
+    {% endfor %}
   {% endunless %}
   &#183;
   <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative commons</a> license

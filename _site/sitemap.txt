@@ -3,7 +3,6 @@ http://marcgg.com/atom.xml
 http://marcgg.com/blog/index.html
 http://marcgg.com/index.html
 http://marcgg.com/sitemap.txt
-http://marcgg.com/tags.html
 
 http://marcgg.com/2012/10/22/custom-slider-ios-rubymotion
 http://marcgg.com/2012/10/15/dont-accept-brokeness-deal-with-annoyances
