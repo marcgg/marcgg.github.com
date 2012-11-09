@@ -119,7 +119,7 @@ a:hover{
 .altran{ color:#315CB1; }
 .sagem{ color: #9F0; }
 .ffocused{ color: #64ade7; }
-.github{ color: #888; }
+.github{ color: #777; }
 .rails{ color: #981A21; }
 .couchsurfing{ color: #F88E11; }
 .twitter{ color: #3ab3db; }
@@ -128,6 +128,7 @@ a:hover{
 .teamshack{ color: #4f82b7; }
 .stackoverflow{ color: #de952d; }
 .wma{ color: #d6b604; }
+.instagram{ color: #8e5e4b; }
 
 .photo{
   border: 1px solid #333;
