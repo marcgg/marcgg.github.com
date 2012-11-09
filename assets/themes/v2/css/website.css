@@ -84,33 +84,31 @@ a:hover{
   display: inline-block;
   font-family: "Helvetica";
   font-size: 10px;
-  color: #fff;
-  font-weight: bold;
   border-radius: 3px;
-  padding: 1px 4px 1px 5px;
+  padding: 1px 4px 2px 4px;
   margin-right: 5px;
   text-align: center;
 }
-.tag-Dev{ border: 1px solid #4232df; background-color: #b3ade6; }
-.tag-Dev:hover{ color: #4232df; }
+.tag-Dev{ border: 1px dashed #4232df; color: #4232df; }
+.tag-Dev:hover{  }
 
-.tag-RubyMotion{ border: 1px solid #c80505; background-color: #e6adad; }
-.tag-RubyMotion:hover{ color: #c80505; }
+.tag-RubyMotion{ border: 1px dashed #c80505; color: #c80505;}
+.tag-RubyMotion:hover{  }
 
-.tag-Health{ border: 1px solid #0b7500; background-color: #51c146; }
-.tag-Health:hover{ color: #0b7500; }
+.tag-Health{ border: 1px dashed #0b7500; color: #0b7500;}
+.tag-Health:hover{  }
 
-.tag-Product{ border: 1px solid #910182; background-color: #d472ca; }
-.tag-Product:hover{ color: #910182; }
+.tag-Product{ border: 1px dashed #910182; color: #910182;}
+.tag-Product:hover{  }
 
-.tag-Life{ border: 1px solid #e58c00; background-color: #edc380; }
-.tag-Life:hover{ color: #e58c00; }
+.tag-Life{ border: 1px dashed #e58c00; color: #e58c00;}
+.tag-Life:hover{  }
 
-.tag-Startup{ border: 1px solid #00c783; background-color: #79d7b7; }
-.tag-Startup:hover{ color: #00c783; }
+.tag-Startup{ border: 1px dashed #00c783; color: #00c783;}
+.tag-Startup:hover{  }
 
-.tag-Projects{ border: 1px solid #b929d8; background-color: #d399e0; }
-.tag-Projects:hover{ color: #b929d8; }
+.tag-Projects{ border: 1px dashed #b929d8; color: #b929d8;}
+.tag-Projects:hover{  }
 
 /* POSTS */
 .single-post{
