@@ -71,28 +71,46 @@ a:hover{
 
 /* TAGS */
 .tags{
-  width: 70px;
   float: left;
-  padding-right: 15px;
-  height: 30px;
+  margin-right: 10px;
+  padding-top: 2px;
+}
+.tags .tag:hover{
+  text-decoration: none;
+  border-style: dashed;
+  background-color: #fff;
 }
 .tags .tag{
+  display: inline-block;
   font-family: "Helvetica";
   font-size: 10px;
   color: #fff;
   font-weight: bold;
   border-radius: 3px;
-  padding: 2px 4px;
-  margin: 3px 5px 5px 0px;
+  padding: 1px 4px 1px 5px;
+  margin-right: 5px;
   text-align: center;
 }
 .tag-Dev{ border: 1px solid #4232df; background-color: #b3ade6; }
+.tag-Dev:hover{ color: #4232df; }
+
 .tag-RubyMotion{ border: 1px solid #c80505; background-color: #e6adad; }
+.tag-RubyMotion:hover{ color: #c80505; }
+
 .tag-Health{ border: 1px solid #0b7500; background-color: #51c146; }
+.tag-Health:hover{ color: #0b7500; }
+
 .tag-Product{ border: 1px solid #910182; background-color: #d472ca; }
+.tag-Product:hover{ color: #910182; }
+
 .tag-Life{ border: 1px solid #e58c00; background-color: #edc380; }
-.tag-Startup{ border: 1px solid #00c783; background-color: #92e1c6; }
-.tag-Projects{ border: 1px solid #f0e30c; background-color: #ebe7af; }
+.tag-Life:hover{ color: #e58c00; }
+
+.tag-Startup{ border: 1px solid #00c783; background-color: #79d7b7; }
+.tag-Startup:hover{ color: #00c783; }
+
+.tag-Projects{ border: 1px solid #b929d8; background-color: #d399e0; }
+.tag-Projects:hover{ color: #b929d8; }
 
 /* POSTS */
 .single-post{
@@ -104,11 +122,12 @@ a:hover{
 }
 
 .single-post h3 span{
-  font-size: 0.7em !important;
+  font-size: 0.6em !important;
 }
 
 .single-post .description{
   margin: 10px 0px 40px 0px !important;
+  line-height: 23px;
 }
 
 .post img{
