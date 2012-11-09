@@ -89,8 +89,12 @@ a:hover{
   margin-right: 5px;
   text-align: center;
 }
+.tags .tag:hover, .tags .selected{
+  border-style: solid;
+}
+
 .tag-Dev{ border: 1px dashed #4232df; color: #4232df; }
-.tag-Dev:hover{  }
+.tag-Dev:hover{ }
 
 .tag-RubyMotion{ border: 1px dashed #c80505; color: #c80505;}
 .tag-RubyMotion:hover{  }
@@ -113,10 +117,12 @@ a:hover{
 /* POSTS */
 .single-post{
   margin-bottom: 10px;
+  padding: 5px !important;
 }
 
 .single-post h3{
   padding: 0px !important;
+  margin-top: 5px !important;
 }
 
 .single-post h3 span{
@@ -124,8 +130,11 @@ a:hover{
 }
 
 .single-post .description{
-  margin: 10px 0px 40px 0px !important;
+  margin: 10px 0px 5px 0px !important;
   line-height: 23px;
+}
+.single-post.selected{
+  background-color: #fffebe;
 }
 
 .post img{

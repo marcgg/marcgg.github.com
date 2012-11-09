@@ -177,6 +177,34 @@
   
 </div>
 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script language="javascript">
+  $(function(){
+    var selected = location.search.replace('?tag=','');
+    if(selected != ""){
+      selectTag(selected)
+    }
+    $(".tag").click(function(e){
+      e.preventDefault()
+      var $this = $(this)
+      var tag = $this.data("tag")
+      if(!$this.hasClass("selected")){
+        selectTag(tag)
+      } else {
+        $(".selected").removeClass("selected")
+      }
+    })
+  })
+
+  function selectTag(tag){
+    $(".selected").removeClass("selected")
+    $(".tag-" + tag).addClass("selected")
+    $(".tag-" + tag).parents(".single-post").addClass("selected")
+    history.pushState({}, null, '?tag=' + tag);
+  }
+
+</script>
+
 
 
       </div>
