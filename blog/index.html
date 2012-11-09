@@ -42,6 +42,7 @@ title : Marcgg#Blog - Thoughts on software development, startups and the process
         selectTag(tag)
       } else {
         $(".selected").removeClass("selected")
+        history.pushState({}, null, '?')
       }
     })
   })
@@ -50,7 +51,7 @@ title : Marcgg#Blog - Thoughts on software development, startups and the process
     $(".selected").removeClass("selected")
     $(".tag-" + tag).addClass("selected")
     $(".tag-" + tag).parents(".single-post").addClass("selected")
-    history.pushState({}, null, '?tag=' + tag);
+    history.pushState({}, null, '?tag=' + tag)
   }
 
 </script>
