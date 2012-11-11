@@ -1,9 +1,8 @@
 ---
 layout: post
 title: "Web Views & RubyMotion"
-description: "RubyMotion gives you a nice way to write iOS applications
-without having to deal with Objective-C. In this article I'll explain
-how to use UIWebViews to load URLs, local files and to communicate with
+description: "In this article I'll explain
+how to use UIWebViews using RubyMotion. This includes loading URLs, local files and communicating with
 them via Javascript"
 blog: true
 tags: [Dev, RubyMotion]
