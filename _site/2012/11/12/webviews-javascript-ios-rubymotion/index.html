@@ -103,15 +103,22 @@
     <span class='nb'>self</span>
   <span class='k'>end</span>
 
-  <span class='k'>def</span> <span class='nf'>viewDidLoad</span>
+  <span class='k'>def</span> <span class='nf'>loadView</span>
     <span class='nb'>self</span><span class='o'>.</span><span class='n'>view</span> <span class='o'>=</span> <span class='no'>UIWebView</span><span class='o'>.</span><span class='n'>alloc</span><span class='o'>.</span><span class='n'>init</span>
+  <span class='k'>end</span>
+
+  <span class='k'>def</span> <span class='nf'>viewDidLoad</span>
     <span class='nb'>self</span><span class='o'>.</span><span class='n'>view</span><span class='o'>.</span><span class='n'>loadRequest</span><span class='p'>(</span>
       <span class='no'>NSURLRequest</span><span class='o'>.</span><span class='n'>requestWithURL</span><span class='p'>(</span><span class='no'>NSURL</span><span class='o'>.</span><span class='n'>URLWithString</span><span class='p'>(</span><span class='s2'>&quot;http://marcgg.com&quot;</span><span class='p'>))</span>
     <span class='p'>)</span>
   <span class='k'>end</span>
 <span class='k'>end</span>
 </code></pre>
-</div>
+</div><p class='sidenote'>
+EDIT: I moved the UIWebView.alloc.init to loadView
+to avoid creating a UIView just to throw it away. Thanks to
+<a href='https://twitter.com/colinta'>Colin</a> for pointing this out.
+</p>
 <p>If we slow down things a bit, we have this:</p>
 <div class='highlight'><pre><code class='ruby'><span class='c1'># Creating a URL</span>
 <span class='n'>url</span> <span class='o'>=</span> <span class='no'>NSURL</span><span class='o'>.</span><span class='n'>URLWithString</span><span class='p'>(</span><span class='s2'>&quot;http://marcgg.com&quot;</span><span class='p'>)</span>
@@ -133,7 +140,6 @@
 
 <p>Once it&#8217;s done, tweak the controller so that it knows what&#8217;s up.</p>
 <div class='highlight'><pre><code class='ruby'><span class='k'>def</span> <span class='nf'>viewDidLoad</span>
-  <span class='nb'>self</span><span class='o'>.</span><span class='n'>view</span> <span class='o'>=</span> <span class='no'>UIWebView</span><span class='o'>.</span><span class='n'>alloc</span><span class='o'>.</span><span class='n'>init</span>
   <span class='n'>path</span> <span class='o'>=</span> <span class='no'>NSBundle</span><span class='o'>.</span><span class='n'>mainBundle</span><span class='o'>.</span><span class='n'>pathForResource</span><span class='p'>(</span><span class='s1'>&#39;index&#39;</span><span class='p'>,</span> <span class='n'>ofType</span><span class='p'>:</span> <span class='s1'>&#39;html&#39;</span><span class='p'>)</span>
   <span class='n'>url</span> <span class='o'>=</span> <span class='no'>NSURL</span><span class='o'>.</span><span class='n'>fileURLWithPath</span><span class='p'>(</span><span class='n'>path</span><span class='p'>)</span>
   <span class='nb'>self</span><span class='o'>.</span><span class='n'>view</span><span class='o'>.</span><span class='n'>loadRequest</span> <span class='no'>NSURLRequest</span><span class='o'>.</span><span class='n'>requestWithURL</span><span class='p'>(</span><span class='n'>url</span><span class='p'>)</span>

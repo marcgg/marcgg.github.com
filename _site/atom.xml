@@ -4,7 +4,7 @@
  <title>Marcgg#Blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2012-11-12T09:59:48+01:00</updated>
+ <updated>2012-11-12T20:53:13+01:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -70,15 +70,22 @@
     &lt;span class='nb'&gt;self&lt;/span&gt;
   &lt;span class='k'&gt;end&lt;/span&gt;
 
-  &lt;span class='k'&gt;def&lt;/span&gt; &lt;span class='nf'&gt;viewDidLoad&lt;/span&gt;
+  &lt;span class='k'&gt;def&lt;/span&gt; &lt;span class='nf'&gt;loadView&lt;/span&gt;
     &lt;span class='nb'&gt;self&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;view&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='no'&gt;UIWebView&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;alloc&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;init&lt;/span&gt;
+  &lt;span class='k'&gt;end&lt;/span&gt;
+
+  &lt;span class='k'&gt;def&lt;/span&gt; &lt;span class='nf'&gt;viewDidLoad&lt;/span&gt;
     &lt;span class='nb'&gt;self&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;view&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;loadRequest&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;
       &lt;span class='no'&gt;NSURLRequest&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;requestWithURL&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='no'&gt;NSURL&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;URLWithString&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;http://marcgg.com&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;))&lt;/span&gt;
     &lt;span class='p'&gt;)&lt;/span&gt;
   &lt;span class='k'&gt;end&lt;/span&gt;
 &lt;span class='k'&gt;end&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/div&gt;&lt;p class='sidenote'&gt;
+EDIT: I moved the UIWebView.alloc.init to loadView
+to avoid creating a UIView just to throw it away. Thanks to
+&lt;a href='https://twitter.com/colinta'&gt;Colin&lt;/a&gt; for pointing this out.
+&lt;/p&gt;
 &lt;p&gt;If we slow down things a bit, we have this:&lt;/p&gt;
 &lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='ruby'&gt;&lt;span class='c1'&gt;# Creating a URL&lt;/span&gt;
 &lt;span class='n'&gt;url&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='no'&gt;NSURL&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;URLWithString&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;http://marcgg.com&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;
@@ -100,7 +107,6 @@
 
 &lt;p&gt;Once it&amp;#8217;s done, tweak the controller so that it knows what&amp;#8217;s up.&lt;/p&gt;
 &lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='ruby'&gt;&lt;span class='k'&gt;def&lt;/span&gt; &lt;span class='nf'&gt;viewDidLoad&lt;/span&gt;
-  &lt;span class='nb'&gt;self&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;view&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='no'&gt;UIWebView&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;alloc&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;init&lt;/span&gt;
   &lt;span class='n'&gt;path&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='no'&gt;NSBundle&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;mainBundle&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;pathForResource&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s1'&gt;&amp;#39;index&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='n'&gt;ofType&lt;/span&gt;&lt;span class='p'&gt;:&lt;/span&gt; &lt;span class='s1'&gt;&amp;#39;html&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;
   &lt;span class='n'&gt;url&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='no'&gt;NSURL&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;fileURLWithPath&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;path&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;
   &lt;span class='nb'&gt;self&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;view&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;loadRequest&lt;/span&gt; &lt;span class='no'&gt;NSURLRequest&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;requestWithURL&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;url&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;

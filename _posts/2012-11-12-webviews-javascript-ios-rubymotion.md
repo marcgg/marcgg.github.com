@@ -86,14 +86,23 @@ class MainController < UIViewController
     self
   end
 
-  def viewDidLoad
+  def loadView
     self.view = UIWebView.alloc.init
+  end
+
+  def viewDidLoad
     self.view.loadRequest(
       NSURLRequest.requestWithURL(NSURL.URLWithString("http://marcgg.com"))
     )
   end
 end
 {% endhighlight %}
+
+<p class="sidenote">
+EDIT: I moved the UIWebView.alloc.init to loadView
+to avoid creating a UIView just to throw it away. Thanks to
+<a href="https://twitter.com/colinta">Colin</a> for pointing this out.
+</p>
 
 If we slow down things a bit, we have this:
 
@@ -127,7 +136,6 @@ Once it's done, tweak the controller so that it knows what's up.
 
 {% highlight ruby %}
 def viewDidLoad
-  self.view = UIWebView.alloc.init
   path = NSBundle.mainBundle.pathForResource('index', ofType: 'html')
   url = NSURL.fileURLWithPath(path)
   self.view.loadRequest NSURLRequest.requestWithURL(url)
