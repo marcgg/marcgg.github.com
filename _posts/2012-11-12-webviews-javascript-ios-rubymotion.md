@@ -25,7 +25,7 @@ share it in the comments and I'll update the article.
 
 ## Our Objective
 
-Right now the general feeling is that to get the highest level of quality in
+Right now the general feeling is that in order to get the highest level of quality in
 an app, you have to go native. I'm not disputing that, but there are some cases
 where you just need to have some HTML, JS and CSS displaying. To do that,
 the best way is to use the

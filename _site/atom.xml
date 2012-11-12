@@ -4,7 +4,7 @@
  <title>Marcgg#Blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2012-11-11T21:17:36+01:00</updated>
+ <updated>2012-11-12T09:59:48+01:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -23,7 +23,7 @@
 
 &lt;h2 id='our_objective'&gt;Our Objective&lt;/h2&gt;
 
-&lt;p&gt;Right now the general feeling is that to get the highest level of quality in an app, you have to go native. I&amp;#8217;m not disputing that, but there are some cases where you just need to have some HTML, JS and CSS displaying. To do that, the best way is to use the &lt;a href='http://developer.apple.com/library/ios/#documentation/uikit/reference/UIWebView_Class/Reference/Reference.html'&gt;UIWebView&lt;/a&gt; element. It allows you to open html file and display them as if you were in a browser.&lt;/p&gt;
+&lt;p&gt;Right now the general feeling is that in order to get the highest level of quality in an app, you have to go native. I&amp;#8217;m not disputing that, but there are some cases where you just need to have some HTML, JS and CSS displaying. To do that, the best way is to use the &lt;a href='http://developer.apple.com/library/ios/#documentation/uikit/reference/UIWebView_Class/Reference/Reference.html'&gt;UIWebView&lt;/a&gt; element. It allows you to open html file and display them as if you were in a browser.&lt;/p&gt;
 
 &lt;p&gt;In this article I&amp;#8217;ll try to demonstrate how to:&lt;/p&gt;
 
