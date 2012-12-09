@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "How We Made Third Place At AngelHack Paris"
-description: "I participated at a hackathon where with 4 other people we
-build a project to give away objects and track their lives. Here's how it went"
-blog: false
+description: "I participated in a hackathon with 4 other persons where we
+built a project to give away objects and track their lives. Here's how it went."
+blog: true
 tags: [Dev, Hackathon]
 ---
 
@@ -116,13 +116,13 @@ managed to finish our project. It was also a great experience to create
 something from the ground up quickly and get instantly feedbacks on it.
 
 I'm very proud of what we accomplished during this weekend. The team was
-awesome. Everybody had complementary skills and each team member had a major impact on the
-result, leaving me with the feeling that with the right group of people
+awesome as everybody had complementary skills and each team member had a major impact on the
+result. This left me with the feeling that with the right group of people
 and a good mindset you can really create great things.
 
 
 Overall I'd advise anyone that like [starting projects](/2012/01/09/start-working-on-your-side-project/)
-to take part of events like these. Gather a group of people or just find
+to participate in events like these. Gather a group of people or just find
 teammates on the spot, it'll be great.
 
 Exhausting, but great.
