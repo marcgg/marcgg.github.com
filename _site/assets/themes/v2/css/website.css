@@ -165,6 +165,15 @@ a:hover{
 .published span{
   display: inline-block;
 }
+.footnote{
+  margin-top: 40px;
+  text-align: right;
+  font-size: 0.8em;
+  color: #aaa;
+}
+.footnote a{
+  color: #999;
+}
 
 #more{
   margin-top: 20px;
