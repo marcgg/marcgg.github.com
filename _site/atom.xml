@@ -4,7 +4,7 @@
  <title>Marcgg#Blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2012-11-12T20:53:13+01:00</updated>
+ <updated>2012-12-09T14:56:20+01:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -12,12 +12,15 @@
  </author>
 
  
- <entry>
-   <title>Web Views & RubyMotion</title>
-   <link href="http://marcgg.com/2012/11/12/webviews-javascript-ios-rubymotion"/>
-   <updated>2012-11-12T00:00:00+01:00</updated>
-   <id>http://marcgg.com/2012/11/12/webviews-javascript-ios-rubymotion</id>
-   <content type="html">&lt;p&gt;Here we go, another article on &lt;a href='http://www.rubymotion.com/'&gt;RubyMotion&lt;/a&gt;! For those of you that don&amp;#8217;t know what&amp;#8217;s that&amp;#8217;s all about, it&amp;#8217;s a toolchain created by &lt;a href='https://twitter.com/lrz'&gt;Laurent Sansonetti&lt;/a&gt; (of &lt;a href='http://macruby.org/'&gt;MacRuby&lt;/a&gt; fame) allowing you to create native iOS application using &lt;a href='http://www.ruby-lang.org/'&gt;Ruby&lt;/a&gt;.&lt;/p&gt;
+  
+ 
+  
+   <entry>
+     <title>Web Views &amp; RubyMotion</title>
+     <link href="http://marcgg.com/2012/11/12/webviews-javascript-ios-rubymotion"/>
+     <updated>2012-11-12T00:00:00+01:00</updated>
+     <id>http://marcgg.com/2012/11/12/webviews-javascript-ios-rubymotion</id>
+     <content type="html">&lt;p&gt;Here we go, another article on &lt;a href='http://www.rubymotion.com/'&gt;RubyMotion&lt;/a&gt;! For those of you that don&amp;#8217;t know what&amp;#8217;s that&amp;#8217;s all about, it&amp;#8217;s a toolchain created by &lt;a href='https://twitter.com/lrz'&gt;Laurent Sansonetti&lt;/a&gt; (of &lt;a href='http://macruby.org/'&gt;MacRuby&lt;/a&gt; fame) allowing you to create native iOS application using &lt;a href='http://www.ruby-lang.org/'&gt;Ruby&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;I like it a lot, but please keep in mind that while I have a decent knowledge of Ruby, I&amp;#8217;m only using RubyMotion on a side project. I worked hard to get everything here to work, but it still might not be the most efficient way of doing it. If you do know a better solution, please share it in the comments and I&amp;#8217;ll update the article.&lt;/p&gt;
 
@@ -184,14 +187,16 @@ to avoid creating a UIView just to throw it away. Thanks to
 &lt;p&gt;We now have a web view loading a local file and talking to the Ruby part of the application using Javascript. Neat ! Of course there&amp;#8217;s a lot more you can do with this, and you should probably add some kind of cool DSL in front of it if you&amp;#8217;re going to do this frequently.&lt;/p&gt;
 
 &lt;p&gt;As always, you can look up the whole project on &lt;a href='https://github.com/marcgg/rubymotion-uiwebview'&gt;github&lt;/a&gt;. It is compiling and working as I write this article, but keep in mind that RubyMotion is a fast moving project and it might not be the case in a few months.&lt;/p&gt;</content>
- </entry>
+   </entry>
+  
  
- <entry>
-   <title>Create a Custom Slider With RubyMotion</title>
-   <link href="http://marcgg.com/2012/10/22/custom-slider-ios-rubymotion"/>
-   <updated>2012-10-22T00:00:00+02:00</updated>
-   <id>http://marcgg.com/2012/10/22/custom-slider-ios-rubymotion</id>
-   <content type="html">&lt;p&gt;I always liked the idea of developing mobile applications, but also found the Objective C + XCode experience not very enjoyable. I gave alternatives like &lt;a href='http://www.appcelerator.com/platform/titanium-sdk/'&gt;Titanium&lt;/a&gt; a try, but wasn’t fully convinced. Lately I’ve been getting into &lt;a href='http://www.rubymotion.com/'&gt;RubyMotion&lt;/a&gt; and so far I’m really impressed by the general feel of it.&lt;/p&gt;
+  
+   <entry>
+     <title>Create a Custom Slider With RubyMotion</title>
+     <link href="http://marcgg.com/2012/10/22/custom-slider-ios-rubymotion"/>
+     <updated>2012-10-22T00:00:00+02:00</updated>
+     <id>http://marcgg.com/2012/10/22/custom-slider-ios-rubymotion</id>
+     <content type="html">&lt;p&gt;I always liked the idea of developing mobile applications, but also found the Objective C + XCode experience not very enjoyable. I gave alternatives like &lt;a href='http://www.appcelerator.com/platform/titanium-sdk/'&gt;Titanium&lt;/a&gt; a try, but wasn’t fully convinced. Lately I’ve been getting into &lt;a href='http://www.rubymotion.com/'&gt;RubyMotion&lt;/a&gt; and so far I’m really impressed by the general feel of it.&lt;/p&gt;
 
 &lt;p&gt;Alas it&amp;#8217;s not perfect. My main grief right now about the project is the terrible lack of documentation. The community is also still small and while you can still find &lt;a href='https://twitter.com/vacawama'&gt;helpful&lt;/a&gt; &lt;a href='https://twitter.com/julienXX'&gt;people&lt;/a&gt;, you often end up alone with your code. That&amp;#8217;s why I figured I would contribute my share of blog posts on the subject! Hopefully it’ll help out some people.&lt;/p&gt;
 
@@ -316,14 +321,16 @@ to avoid creating a UIView just to throw it away. Thanks to
 &lt;p&gt;Obviously these are not the only customizations you can make to a UISlider, but I think it&amp;#8217;s a good start. If people are interested I might make another one on events or visual tricks you can use to make a slider look cooler.&lt;/p&gt;
 
 &lt;p&gt;If you find this avalanche of code snippets not very usuable, you can look at the whole project on &lt;a href='https://github.com/marcgg/rubymotion-custom-slider'&gt;github&lt;/a&gt;. It is compiling and working as I write this article, but keep in mind that RubyMotion is a fast moving project and it might not be the case in a few months.&lt;/p&gt;</content>
- </entry>
+   </entry>
+  
  
- <entry>
-   <title>Don’t Accept Brokenness</title>
-   <link href="http://marcgg.com/2012/10/15/dont-accept-brokeness-deal-with-annoyances"/>
-   <updated>2012-10-15T00:00:00+02:00</updated>
-   <id>http://marcgg.com/2012/10/15/dont-accept-brokeness-deal-with-annoyances</id>
-   <content type="html">&lt;p&gt;For a while I had a problem with my jaw. Ten years back I got elbowed in the face (don’t ask), and since then I had trouble yawning or just opening my mouth wide open. I could try to do it, but it would result in the whole thing locking and a good deal of pain.&lt;/p&gt;
+  
+   <entry>
+     <title>Don’t Accept Brokenness</title>
+     <link href="http://marcgg.com/2012/10/15/dont-accept-brokeness-deal-with-annoyances"/>
+     <updated>2012-10-15T00:00:00+02:00</updated>
+     <id>http://marcgg.com/2012/10/15/dont-accept-brokeness-deal-with-annoyances</id>
+     <content type="html">&lt;p&gt;For a while I had a problem with my jaw. Ten years back I got elbowed in the face (don’t ask), and since then I had trouble yawning or just opening my mouth wide open. I could try to do it, but it would result in the whole thing locking and a good deal of pain.&lt;/p&gt;
 
 &lt;p&gt;The first months I was annoyed, but as time passed I learned to live with it. After all, it was really nothing important. I could eat, speak and do pretty much anything normally. I accepted this as part of how my body functions. Some can’t do a right split, I can’t open my mouth that wide, who cares? I learned how to avoid doing this, and carried on.&lt;/p&gt;
 
@@ -344,14 +351,16 @@ to avoid creating a UIView just to throw it away. Thanks to
 &lt;p&gt;All these are minor inconveniences, but you deal with them every day. They waste your time, build frustration, and you don’t even see it because it’s always been like that as far as you can remember!&lt;/p&gt;
 
 &lt;p&gt;I’m not saying that everything is fixable, because it’s not true. I’m saying you should take a minute every once in a while to ask yourself if this tiny thing really is unavoidable, if doing something to fix it wouldn’t actually be easier than dealing with it every day.&lt;/p&gt;</content>
- </entry>
+   </entry>
+  
  
- <entry>
-   <title>How I Avoid Thumb Pain From Too Much Coding</title>
-   <link href="http://marcgg.com/2012/10/01/thumb-pain-developer-keyboard"/>
-   <updated>2012-10-01T00:00:00+02:00</updated>
-   <id>http://marcgg.com/2012/10/01/thumb-pain-developer-keyboard</id>
-   <content type="html">&lt;p&gt;Most coders complain about wrist pain. For some reason I never had major trouble there except when working for hours on a laptop. My main issue seemed more original and was located in &lt;a href='http://en.wikipedia.org/wiki/Thenar_eminence'&gt;the group of muscles controlling the thumb&lt;/a&gt;. Suddently it would hurt for days, then go away, then come back&amp;#8230; good times.&lt;/p&gt;
+  
+   <entry>
+     <title>How I Avoid Thumb Pain From Too Much Coding</title>
+     <link href="http://marcgg.com/2012/10/01/thumb-pain-developer-keyboard"/>
+     <updated>2012-10-01T00:00:00+02:00</updated>
+     <id>http://marcgg.com/2012/10/01/thumb-pain-developer-keyboard</id>
+     <content type="html">&lt;p&gt;Most coders complain about wrist pain. For some reason I never had major trouble there except when working for hours on a laptop. My main issue seemed more original and was located in &lt;a href='http://en.wikipedia.org/wiki/Thenar_eminence'&gt;the group of muscles controlling the thumb&lt;/a&gt;. Suddently it would hurt for days, then go away, then come back&amp;#8230; good times.&lt;/p&gt;
 
 &lt;p&gt;Eventually I mentioned it to a kinesiotherapist, and the conversation was very similar to the famous joke that goes something like:&lt;/p&gt;
 
@@ -372,14 +381,16 @@ to avoid creating a UIView just to throw it away. Thanks to
 &lt;p&gt;My first idea was to force myself to use the second cmd button, but I didn’t like it since it would require taking my hand off the mouse for a second. What worked for me was &lt;a href='http://stackoverflow.com/questions/127591/using-caps-lock-as-esc-in-mac-os-x'&gt;changing the mapping of Caps Lock&lt;/a&gt; to Cmd so I could do the gesture with one hand. This allowed me to use my little finger for these action and avoid stressing the thumb muscles.&lt;/p&gt;
 
 &lt;p&gt;I’ve been doing this for a few months now, and I do see a difference. If you encounter the same problem, feel free to try this solution out and let me know if it helped!&lt;/p&gt;</content>
- </entry>
+   </entry>
+  
  
- <entry>
-   <title>The Risks of Working With Another Company's API</title>
-   <link href="http://marcgg.com/2012/09/24/working-with-apis-facebook"/>
-   <updated>2012-09-24T00:00:00+02:00</updated>
-   <id>http://marcgg.com/2012/09/24/working-with-apis-facebook</id>
-   <content type="html">&lt;p&gt;Before we begin let me give you a little background on why I’m writing this article.&lt;/p&gt;
+  
+   <entry>
+     <title>The Risks of Working With Another Company's API</title>
+     <link href="http://marcgg.com/2012/09/24/working-with-apis-facebook"/>
+     <updated>2012-09-24T00:00:00+02:00</updated>
+     <id>http://marcgg.com/2012/09/24/working-with-apis-facebook</id>
+     <content type="html">&lt;p&gt;Before we begin let me give you a little background on why I’m writing this article.&lt;/p&gt;
 
 &lt;p&gt;I’ve been working with the Facebook platform for almost 3 years now. I also wrote code using the APIs provided by Twitter, Instagram, Flickr, Google, Foursquare, Amazon, Youtube, Spotify and others. I’ve participated in building products like the &lt;a href='http://www.tigerlilyapps.com/conversation'&gt;Tigerlily Conversation Suite&lt;/a&gt; or &lt;a href='http://ffocused.com'&gt;ffocused&lt;/a&gt;, both heavily relying on some of those API. In the process I learned a lot on how to handle these services, their evolutions and their problems.&lt;/p&gt;
 
@@ -468,14 +479,16 @@ to avoid creating a UIView just to throw it away. Thanks to
 &lt;p&gt;Finaly I&amp;#8217;ll add that this is a good learning experience for when you get to the point where you need to build your own API&amp;#8230; because everyone wants to build a cool API! You’ve seen how it’s done, the mistakes made, the good ideas, the architecture behind it&amp;#8230;&lt;/p&gt;
 
 &lt;p&gt;I can safely say that &lt;a href='http://www.sethcall.com/blog/2010/09/30/facebook-api-does-not-care/'&gt;it will be infuriating&lt;/a&gt; at times, but within a focused and understanding team, it’s all manageable and the result can be awesome.&lt;/p&gt;</content>
- </entry>
+   </entry>
+  
  
- <entry>
-   <title>The One Thing That Made Me Switch To Vim</title>
-   <link href="http://marcgg.com/2012/09/04/one-reason-to-switch-to-vim-editor"/>
-   <updated>2012-09-04T00:00:00+02:00</updated>
-   <id>http://marcgg.com/2012/09/04/one-reason-to-switch-to-vim-editor</id>
-   <content type="html">&lt;p&gt;I know, I know, this has been done to death, but stay with me for a second. I’m not here to tell you that Vim is the best editor out there, just to tell you the one reason that got me to switch.&lt;/p&gt;
+  
+   <entry>
+     <title>The One Thing That Made Me Switch To Vim</title>
+     <link href="http://marcgg.com/2012/09/04/one-reason-to-switch-to-vim-editor"/>
+     <updated>2012-09-04T00:00:00+02:00</updated>
+     <id>http://marcgg.com/2012/09/04/one-reason-to-switch-to-vim-editor</id>
+     <content type="html">&lt;p&gt;I know, I know, this has been done to death, but stay with me for a second. I’m not here to tell you that Vim is the best editor out there, just to tell you the one reason that got me to switch.&lt;/p&gt;
 
 &lt;p&gt;Like every developer with some curiosity, I tried a ridiculous amount of text editors and IDEs. I started with Notepad at first, but quickly discovered that some text editors would actually help you. I downloaded &lt;a href='http://download.cnet.com/Amiasoft-SiteAid/3000-10247_4-10015046.html'&gt;SiteAid&lt;/a&gt; and enjoyed the gain of productivity. Then I quickly moved on to Scite, Eclipse, Netbeans, Notepad++, Emacs, Text Edit, Rad Rails, Kate, Rubymine, TextMate, Sublime&amp;#8230; the list goes on.&lt;/p&gt;
 
@@ -494,14 +507,16 @@ to avoid creating a UIView just to throw it away. Thanks to
 &lt;p&gt;This is why I decided to use Vim as my primary editor. It already had enough qualities to be a good choice, but the fact that it is set up on most servers was the final selling point for me.&lt;/p&gt;
 
 &lt;p&gt;Sometimes you just need to be able to fire up Vim and be very fast using it. You don&amp;#8217;t even have to &lt;a href='http://yehudakatz.com/2010/07/29/everyone-who-tried-to-convince-me-to-use-vim-was-wrong/'&gt;be snob while doing it&lt;/a&gt;.&lt;/p&gt;</content>
- </entry>
+   </entry>
+  
  
- <entry>
-   <title>Start Working on Your Side Project Tonight</title>
-   <link href="http://marcgg.com/2012/01/09/start-working-on-your-side-project"/>
-   <updated>2012-01-09T00:00:00+01:00</updated>
-   <id>http://marcgg.com/2012/01/09/start-working-on-your-side-project</id>
-   <content type="html">&lt;p&gt;To me a side project is taking an idea and building it from scratch. You do not have to complete it, it doesn’t need a business model or turn into a company over time, it doesn’t even need to make sense to other people than you. It is just a way to experiment. If later on it turns out into a successful company, good for you, but it doesn’t have to be your goal.&lt;/p&gt;
+  
+   <entry>
+     <title>Start Working on Your Side Project Tonight</title>
+     <link href="http://marcgg.com/2012/01/09/start-working-on-your-side-project"/>
+     <updated>2012-01-09T00:00:00+01:00</updated>
+     <id>http://marcgg.com/2012/01/09/start-working-on-your-side-project</id>
+     <content type="html">&lt;p&gt;To me a side project is taking an idea and building it from scratch. You do not have to complete it, it doesn’t need a business model or turn into a company over time, it doesn’t even need to make sense to other people than you. It is just a way to experiment. If later on it turns out into a successful company, good for you, but it doesn’t have to be your goal.&lt;/p&gt;
 
 &lt;p&gt;If you’re like me, you think that development is a creative process, and should be treated as such. So what better way to be more creative than by removing all the usual constraints of a day job – deadlines, &lt;a href='http://en.wikipedia.org/wiki/Legacy_code'&gt;legacy code&lt;/a&gt;, clients, etc. – and just building something for fun and the sake of building something cool!&lt;/p&gt;
 
@@ -547,14 +562,16 @@ to avoid creating a UIView just to throw it away. Thanks to
   &lt;a href='http://www.rudebaguette.com/2012/01/09/start-working-side-project/'&gt;The Rude Baguette&lt;/a&gt;.
   Do what you love poster by &lt;a href='http://shop.ugmonk.com/product/do-what-you-love-print-blue'&gt;Ugmonk&lt;/a&gt;.
 &lt;/p&gt;</content>
- </entry>
+   </entry>
+  
  
- <entry>
-   <title>Outsourcing In A Startup</title>
-   <link href="http://marcgg.com/2011/12/21/startup-outsourcing"/>
-   <updated>2011-12-21T00:00:00+01:00</updated>
-   <id>http://marcgg.com/2011/12/21/startup-outsourcing</id>
-   <content type="html">&lt;p&gt;So you&amp;#8217;re a startup and want to outsource graphic design, system administration or development? Don’t feel bad, this is very common. Often startups can’t afford to hire many people right away or do not have a team with every skill required to build the perfect product.&lt;/p&gt;
+  
+   <entry>
+     <title>Outsourcing In A Startup</title>
+     <link href="http://marcgg.com/2011/12/21/startup-outsourcing"/>
+     <updated>2011-12-21T00:00:00+01:00</updated>
+     <id>http://marcgg.com/2011/12/21/startup-outsourcing</id>
+     <content type="html">&lt;p&gt;So you&amp;#8217;re a startup and want to outsource graphic design, system administration or development? Don’t feel bad, this is very common. Often startups can’t afford to hire many people right away or do not have a team with every skill required to build the perfect product.&lt;/p&gt;
 
 &lt;h2 id='should_i_outsource'&gt;Should I Outsource?&lt;/h2&gt;
 
@@ -631,14 +648,16 @@ to avoid creating a UIView just to throw it away. Thanks to
   This article was originally published on
   &lt;a href='http://www.rudebaguette.com/2011/12/21/startups-to-outsource-or-not-to-outsource-3/'&gt;The Rude Baguette&lt;/a&gt;.
 &lt;/p&gt;</content>
- </entry>
+   </entry>
+  
  
- <entry>
-   <title>Developers, Go From SSII To Startup</title>
-   <link href="http://marcgg.com/2011/12/12/developer-from-ssii-to-startup"/>
-   <updated>2011-12-12T00:00:00+01:00</updated>
-   <id>http://marcgg.com/2011/12/12/developer-from-ssii-to-startup</id>
-   <content type="html">&lt;p&gt;In France we have what we call SSII for Société de Service en Ingénierie Informatique. Poorly translated it goes something like «IT Consulting Firm». This is where most young CS graduates will go, mainly because once you get your degree you are spammed by job offers from their recruiters.&lt;/p&gt;
+  
+   <entry>
+     <title>Developers, Go From SSII To Startup</title>
+     <link href="http://marcgg.com/2011/12/12/developer-from-ssii-to-startup"/>
+     <updated>2011-12-12T00:00:00+01:00</updated>
+     <id>http://marcgg.com/2011/12/12/developer-from-ssii-to-startup</id>
+     <content type="html">&lt;p&gt;In France we have what we call SSII for Société de Service en Ingénierie Informatique. Poorly translated it goes something like «IT Consulting Firm». This is where most young CS graduates will go, mainly because once you get your degree you are spammed by job offers from their recruiters.&lt;/p&gt;
 
 &lt;p&gt;This is fine for some, but other might feel like they are missing out what’s happening in the startup world. The problem is that after a few years in a SSII it can seem complicated to switch career path and start working for a startup. For the most part it’s because the technologies, processes and general mindset are radically different… but believe me, it is possible!&lt;/p&gt;
 
@@ -688,7 +707,8 @@ to avoid creating a UIView just to throw it away. Thanks to
   &lt;a href='http://www.rudebaguette.com/2011/12/12/from-consulting-to-startup-developer/'&gt;The Rude Baguette&lt;/a&gt;.
   Photo by &lt;a href='http://www.flickr.com/photos/mwichary/5455395458/'&gt;Martin Wichary&lt;/a&gt;.
 &lt;/p&gt;</content>
- </entry>
+   </entry>
+  
  
 
 </feed>

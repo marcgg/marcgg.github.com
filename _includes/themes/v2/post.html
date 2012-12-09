@@ -1,34 +1,20 @@
 <div id="nav">
-  <a href="/blog">&lt; Go back to more articles</a>
+  <a href="/blog">&lt; More articles</a>
 </div>
 <h1>
   <span>{{ page.title }}</span>
 </h1>
 <p class="published">
-  {{ page.date | date_to_long_string }}</span>
-  by <a href="/">marcgg</a>
-  {% unless page.tags == empty %}
-    &#183;
-    Tagged
-    {% for tag in page.tags %}
-      <a href="/blog?tag={{tag}}">{{ tag }}</a>
-    {% endfor %}
-  {% endunless %}
-  &#183;
-  <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative commons</a> license
+  ~
+  <span>{{ page.date | date_to_long_string }}</span>
+  by Marc G Gauthier
+  ~
 </p>
 
 <div class="post">
   {{ content }}
 
   <div id="more">
-    <div class="speech">
-      Hey, glad you read this far! If you liked this post, consider following me on <a
-        href="http://twitter.com/marcgg">Twitter</a> or via <a
-        href="http://feeds.feedburner.com/Marcggblog">RSS</a>, sharing it to
-      your best social media acquaintances or <a href="/blog">read some more</a>.
-      Comments are very appreciated too!
-    </div>
     <a href="https://twitter.com/marcgg" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @marcgg</a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 

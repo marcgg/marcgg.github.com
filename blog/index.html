@@ -8,24 +8,25 @@ title : Marcgg#Blog - Thoughts on software development, startups and the process
 
 <div id="all-posts">
   {% for post in site.posts %}
-  <div class="single-post">
-    <h3>
-      <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
-      <span>({{ post.date | date: "%B %e, %Y" }})</span>
-    </h3>
+    {% if post.blog == true %}
+      <div class="single-post">
+        <h3>
+          <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+          <span>({{ post.date | date: "%B %e, %Y" }})</span>
+        </h3>
 
-    <div class="tags">
-      {% for tag in post.tags %}
-      <a class="tag tag-{{tag}}" href="#" data-tag="{{tag}}">{{ tag }}</a>
-      {% endfor %}
-    </div>
-
-    <p class="description">
-      {{ post.description }}
-    </p>
-  </div>
+        <p class="description">
+          {{ post.description }}
+        </p>
+      </div>
+    {% endif %}
   {% endfor %}
 </div>
+
+<p>
+  Everything on this blog is under <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative commons</a> license
+  unless stated otherwise
+</p>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script language="javascript">
