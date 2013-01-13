@@ -10,7 +10,7 @@ tags: [Dev]
 
 {% include JB/setup %}
 
-Okay let's start by saying that I am a developer that does mostly web stuff. This means
+Okay. Let's start by saying that I am a developer that does mostly web stuff. This means
  that a majority of the code I write will end up in a browser. Of course I
 sometimes have to interact with APIs or open one, write background jobs, some
 security, databases and so on... but the point is that, professionnally, I do not write
