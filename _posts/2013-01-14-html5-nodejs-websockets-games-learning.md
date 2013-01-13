@@ -13,7 +13,7 @@ tags: [Dev]
 Okay. Let's start by saying that I'm a developer that does mostly web stuff.
 
 This means that a majority of the code I write will end up displaying something in a browser.
-Of course I do interact with APIs, write background jobs, add some
+Of course I do [interact with APIs](/2012/09/24/working-with-apis-facebook/), write background jobs, add some
 security, optimize databases and so on... the point here is that, professionnally, I do not write
 entire projects that have nothing to do with a web app.
 
