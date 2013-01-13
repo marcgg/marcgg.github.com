@@ -10,14 +10,16 @@ tags: [Dev]
 
 {% include JB/setup %}
 
-Okay. Let's start by saying that I am a developer that does mostly web stuff.
+Okay. Let's start by saying that I'm a developer that does mostly web stuff.
 
-This means that a majority of the code I write will end up in a browser. Of course I
-sometimes have to interact with APIs or open one, write background jobs, some
-security, databases and so on... but the point is that, professionnally, I do not write
+This means that a majority of the code I write will end up displaying something in a browser.
+Of course I do interact with APIs or open one, write background jobs, add some
+security, optimize databases and so on... the point here is that, professionnally, I do not write
 entire projects that have nothing to do with a web app.
 
-My friend [André](http://www.andreberlemont.com/portfolio/) has a different background as he mainly [develops games](http://www.oneliferemains.com/). One evening we started talking about how complex it would be to create an online multiplayer
+My friend [André](http://www.andreberlemont.com/portfolio/) on the other hand
+has a different background as he mainly [develops games](http://www.oneliferemains.com/).
+One evening we started talking about how complex it would be to create an online multiplayer
 game from scratch. Being the web guy, I felt that I should know how all this was supposed to work... after
 all, the multiplayer appens over the internet, right?
 
