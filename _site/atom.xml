@@ -4,7 +4,7 @@
  <title>Marcgg#Blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2013-01-14T00:12:33+01:00</updated>
+ <updated>2013-01-14T00:13:47+01:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -20,7 +20,7 @@
      <id>http://marcgg.com/2013/01/14/html5-nodejs-websockets-games-learning</id>
      <content type="html">&lt;p&gt;Okay. Let&amp;#8217;s start by saying that I&amp;#8217;m a developer that does mostly web stuff.&lt;/p&gt;
 
-&lt;p&gt;This means that a majority of the code I write will end up displaying something in a browser. Of course I do interact with APIs or open one, write background jobs, add some security, optimize databases and so on&amp;#8230; the point here is that, professionnally, I do not write entire projects that have nothing to do with a web app.&lt;/p&gt;
+&lt;p&gt;This means that a majority of the code I write will end up displaying something in a browser. Of course I do interact with APIs, write background jobs, add some security, optimize databases and so on&amp;#8230; the point here is that, professionnally, I do not write entire projects that have nothing to do with a web app.&lt;/p&gt;
 
 &lt;p&gt;My friend &lt;a href='http://www.andreberlemont.com/portfolio/'&gt;André&lt;/a&gt; on the other hand has a different background as he mainly &lt;a href='http://www.oneliferemains.com/'&gt;develops games&lt;/a&gt;. One evening we started talking about how complex it would be to create an online multiplayer game from scratch. Being the web guy, I felt that I should know how all this was supposed to work&amp;#8230; after all, the multiplayer appens over the internet, right?&lt;/p&gt;
 
