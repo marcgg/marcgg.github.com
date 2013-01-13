@@ -150,22 +150,21 @@ after an hour of code, but it wasn't something I'd put in production!
 
 ## Conclusion
 
-In a couple of days I threw away a lot of code because I was constantly
-discovering problems or learning new best practices... but that's ok,
-that's what simple prototypes are for! But how did it turn out?
-
-Well, overall I'm pretty happy with the result. In approximatively 15 hours of work I got
-something running and I gained a better grasp of why game developers
+Overall I'm pretty happy with the results.
+Even with my lack of experience in the subject I still got
+something running and gained a better grasp of why game developers
 tremble when you mention online multiplayer.
 
+Now I think the next step would be to design a game taking the
+constraints discovered into account in order to simplify development. You don't want a
+game where precision and timing is key.
+You could instead create a massively online turn-by-turn game and
+save yourself major headaches while still producing something fun! It all
+depends if you seek a technical challenge or if you just want to create
+a cool project.
 
-I think the next step would be to design a game taking the
-constraints into account to simplify development a bit. You don't want a
-game where precision is key. It's possible to do it, but it seems like a
-huge pain. Taking that into consideration, you could, for instance,
-create a fun massively online turn-by-turn game.
-
-Also I'll need to find a designer because my game looked like shit.
+Also I'll need to find a designer because my game looked like shit, but
+that's another story.
 
 <img src='/assets/blog/screengame.png' alt='the game' style='margin:20px auto; display: block'/>
 
