@@ -4,22 +4,20 @@ title: "2 Days Trying To Create a Multiplayer HTML5 Game"
 description: "I'm not a game developer at all, so in order to see
 the problems linked to creating a multiplayer game I decided to create a
 prototype with NodeJS, Websockets and HTML5."
-blog: false
+blog: true
 tags: [Dev]
 ---
 
 {% include JB/setup %}
 
-Okay. Let's start by saying that I am a developer that does mostly web stuff. This means
- that a majority of the code I write will end up in a browser. Of course I
+Okay. Let's start by saying that I am a developer that does mostly web stuff.
+
+This means that a majority of the code I write will end up in a browser. Of course I
 sometimes have to interact with APIs or open one, write background jobs, some
 security, databases and so on... but the point is that, professionnally, I do not write
 entire projects that have nothing to do with a web app.
 
-My friend [André](http://www.andreberlemont.com/portfolio/)
-has a different background as he mainly [develops games](http://www.oneliferemains.com/).
-
-One evening we ended up talking about how complex it would be to create an online multiplayer
+My friend [André](http://www.andreberlemont.com/portfolio/) has a different background as he mainly [develops games](http://www.oneliferemains.com/). One evening we started talking about how complex it would be to create an online multiplayer
 game from scratch. Being the web guy, I felt that I should know how all this was supposed to work... after
 all, the multiplayer appens over the internet, right?
 
@@ -47,7 +45,7 @@ technologies I had a bit of experience with:
 
 - [NodeJS](http://nodejs.org/) (for the server)
 - [HTML5 Canvas](https://developer.mozilla.org/en-US/docs/HTML/Canvas/Tutorial) (to display the game board)
-- [Websockets](http://en.wikipedia.org/wiki/WebSocket) with [Socket.io](http://socket.io/) (to make it fast).
+- [Websockets](http://en.wikipedia.org/wiki/WebSocket) with [Socket.io](http://socket.io/) (to make it fast)
 
 <img src='/assets/blog/stackgame.png' alt='logos' style='margin:20px auto; display: block'/>
 
@@ -143,7 +141,7 @@ For instance let's say two players touch the target at the same time.
 Who gets +1 point?
 
 To fix this I hacked together a basic
-[mutexy](http://en.wikipedia.org/wiki/Mutual_exclusion)/[transactiony](http://en.wikipedia.org/wiki/Database_transaction) system
+[mutex](http://en.wikipedia.org/wiki/Mutual_exclusion) system
 to handle the simple problems that kept on happening. This did the trick
 after an hour of code, but it wasn't something I'd put in production!
 
@@ -162,7 +160,7 @@ save yourself major headaches while still producing something fun! It all
 depends if you seek a technical challenge or if you just want to create
 a cool project.
 
-Also I'll need to find a designer because my game looked like shit, but
+Also I'll need to find a graphic designer because my game looked like shit, but
 that's another story.
 
 <img src='/assets/blog/screengame.png' alt='the game' style='margin:20px auto; display: block'/>

@@ -6,6 +6,8 @@
     <title>
       2 Days Trying To Create a Multiplayer HTML5 Game
       
+        - Marcgg#Blog
+      
     </title>
     <meta name="description" content="I'm not a game developer at all, so in order to see the problems linked to creating a multiplayer game I decided to create a prototype with NodeJS, Websockets and HTML5.">
     <meta name="author" content="Marc G Gauthier">
@@ -39,11 +41,11 @@
 </p>
 
 <div class="post">
-  <p>Okay. Let&#8217;s start by saying that I am a developer that does mostly web stuff. This means that a majority of the code I write will end up in a browser. Of course I sometimes have to interact with APIs or open one, write background jobs, some security, databases and so on&#8230; but the point is that, professionnally, I do not write entire projects that have nothing to do with a web app.</p>
+  <p>Okay. Let&#8217;s start by saying that I am a developer that does mostly web stuff.</p>
 
-<p>My friend <a href='http://www.andreberlemont.com/portfolio/'>André</a> has a different background as he mainly <a href='http://www.oneliferemains.com/'>develops games</a>.</p>
+<p>This means that a majority of the code I write will end up in a browser. Of course I sometimes have to interact with APIs or open one, write background jobs, some security, databases and so on&#8230; but the point is that, professionnally, I do not write entire projects that have nothing to do with a web app.</p>
 
-<p>One evening we ended up talking about how complex it would be to create an online multiplayer game from scratch. Being the web guy, I felt that I should know how all this was supposed to work&#8230; after all, the multiplayer appens over the internet, right?</p>
+<p>My friend <a href='http://www.andreberlemont.com/portfolio/'>André</a> has a different background as he mainly <a href='http://www.oneliferemains.com/'>develops games</a>. One evening we started talking about how complex it would be to create an online multiplayer game from scratch. Being the web guy, I felt that I should know how all this was supposed to work&#8230; after all, the multiplayer appens over the internet, right?</p>
 
 <h2 id='i_can_code_that_with_my_eyes_closed'>I Can Code That With My Eyes Closed&#8230;?</h2>
 
@@ -64,7 +66,7 @@
 
 <li><a href='https://developer.mozilla.org/en-US/docs/HTML/Canvas/Tutorial'>HTML5 Canvas</a> (to display the game board)</li>
 
-<li><a href='http://en.wikipedia.org/wiki/WebSocket'>Websockets</a> with <a href='http://socket.io/'>Socket.io</a> (to make it fast).</li>
+<li><a href='http://en.wikipedia.org/wiki/WebSocket'>Websockets</a> with <a href='http://socket.io/'>Socket.io</a> (to make it fast)</li>
 </ul>
 <img alt='logos' src='/assets/blog/stackgame.png' style='margin:20px auto; display: block' />
 <h2 id='building_the_game'>Building The Game</h2>
@@ -139,7 +141,7 @@
 
 <p>When you have a lot of players connected and modifying the same board, you&#8217;re bound to run into some <a href='http://en.wikipedia.org/wiki/Concurrency_control'>concurent access</a> issues. For instance let&#8217;s say two players touch the target at the same time. Who gets +1 point?</p>
 
-<p>To fix this I hacked together a basic <a href='http://en.wikipedia.org/wiki/Mutual_exclusion'>mutexy</a>/<a href='http://en.wikipedia.org/wiki/Database_transaction'>transactiony</a> system to handle the simple problems that kept on happening. This did the trick after an hour of code, but it wasn&#8217;t something I&#8217;d put in production!</p>
+<p>To fix this I hacked together a basic <a href='http://en.wikipedia.org/wiki/Mutual_exclusion'>mutex</a> system to handle the simple problems that kept on happening. This did the trick after an hour of code, but it wasn&#8217;t something I&#8217;d put in production!</p>
 
 <h2 id='conclusion'>Conclusion</h2>
 
@@ -147,7 +149,7 @@
 
 <p>Now I think the next step would be to design a game taking the constraints discovered into account in order to simplify development. You don&#8217;t want a game where precision and timing is key. You could instead create a massively online turn-by-turn game and save yourself major headaches while still producing something fun! It all depends if you seek a technical challenge or if you just want to create a cool project.</p>
 
-<p>Also I&#8217;ll need to find a designer because my game looked like shit, but that&#8217;s another story.</p>
+<p>Also I&#8217;ll need to find a graphic designer because my game looked like shit, but that&#8217;s another story.</p>
 <img alt='the game' src='/assets/blog/screengame.png' style='margin:20px auto; display: block' />
 
   <div id="more">

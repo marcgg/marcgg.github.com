@@ -4,7 +4,7 @@
  <title>Marcgg#Blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2013-01-13T23:28:24+01:00</updated>
+ <updated>2013-01-14T00:10:18+01:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -12,6 +12,123 @@
  </author>
 
  
+  
+   <entry>
+     <title>2 Days Trying To Create a Multiplayer HTML5 Game</title>
+     <link href="http://marcgg.com/2013/01/14/html5-nodejs-websockets-games-learning"/>
+     <updated>2013-01-14T00:00:00+01:00</updated>
+     <id>http://marcgg.com/2013/01/14/html5-nodejs-websockets-games-learning</id>
+     <content type="html">&lt;p&gt;Okay. Let&amp;#8217;s start by saying that I am a developer that does mostly web stuff.&lt;/p&gt;
+
+&lt;p&gt;This means that a majority of the code I write will end up in a browser. Of course I sometimes have to interact with APIs or open one, write background jobs, some security, databases and so on&amp;#8230; but the point is that, professionnally, I do not write entire projects that have nothing to do with a web app.&lt;/p&gt;
+
+&lt;p&gt;My friend &lt;a href='http://www.andreberlemont.com/portfolio/'&gt;André&lt;/a&gt; has a different background as he mainly &lt;a href='http://www.oneliferemains.com/'&gt;develops games&lt;/a&gt;. One evening we started talking about how complex it would be to create an online multiplayer game from scratch. Being the web guy, I felt that I should know how all this was supposed to work&amp;#8230; after all, the multiplayer appens over the internet, right?&lt;/p&gt;
+
+&lt;h2 id='i_can_code_that_with_my_eyes_closed'&gt;I Can Code That With My Eyes Closed&amp;#8230;?&lt;/h2&gt;
+
+&lt;p&gt;On paper it seemed pretty simple.&lt;/p&gt;
+
+&lt;p&gt;People connect to a server. This server keeps the game board and broadcasts it to everyone when needed. Each player keeps some kind of state on its side for caching. Everything related to drawing the game board as well as UI should be handled by the client.&lt;/p&gt;
+
+&lt;p&gt;Of course I knew it couldn&amp;#8217;t be that simple and I was 100% sure I was disregarding most of the problems that can occur when creating an online game.&lt;/p&gt;
+
+&lt;p&gt;I &lt;a href='/2012/01/09/start-working-on-your-side-project/'&gt;already blogged&lt;/a&gt; about how side projects are the best response to such situation, therefore at that point I pretty much had to create some kind of game to try it out!&lt;/p&gt;
+
+&lt;h2 id='stack'&gt;Stack&lt;/h2&gt;
+
+&lt;p&gt;Time being a factor, I didn&amp;#8217;t want to go all out game development with C++, Unity or something like that. Instead I kept it in my &amp;#8220;safe&amp;#8221; zone by using technologies I had a bit of experience with:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href='http://nodejs.org/'&gt;NodeJS&lt;/a&gt; (for the server)&lt;/li&gt;
+
+&lt;li&gt;&lt;a href='https://developer.mozilla.org/en-US/docs/HTML/Canvas/Tutorial'&gt;HTML5 Canvas&lt;/a&gt; (to display the game board)&lt;/li&gt;
+
+&lt;li&gt;&lt;a href='http://en.wikipedia.org/wiki/WebSocket'&gt;Websockets&lt;/a&gt; with &lt;a href='http://socket.io/'&gt;Socket.io&lt;/a&gt; (to make it fast)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img alt='logos' src='/assets/blog/stackgame.png' style='margin:20px auto; display: block' /&gt;
+&lt;h2 id='building_the_game'&gt;Building The Game&lt;/h2&gt;
+
+&lt;p&gt;I wanted a simple game so that I could focus on the online aspect of it. The rules I came up with are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;There are n players represented as squares on a board.&lt;/li&gt;
+
+&lt;li&gt;1 player is the target and earn 1 point per 30 movements.&lt;/li&gt;
+
+&lt;li&gt;If another player hits the target, she becomes the target and win 1 point.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I also added a simplistic chat system so that players could talk to one another during the game.&lt;/p&gt;
+
+&lt;p&gt;The first version of the multiplayer code was pretty simple:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;When the player connects she gets the latest version of the game board.&lt;/li&gt;
+
+&lt;li&gt;Each time the player moves it sends an event to the server that updates the world and broadcasts it to everyone connected.&lt;/li&gt;
+
+&lt;li&gt;Client side javascript renders the board in the canvas at each change.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This is when I started to see why it wouldn&amp;#8217;t be as simple.&lt;/p&gt;
+
+&lt;h2 id='oh_wait_problems'&gt;Oh Wait. Problems.&lt;/h2&gt;
+
+&lt;h3 id='speed'&gt;Speed&lt;/h3&gt;
+
+&lt;p&gt;My first version was hosted on Heroku and lagged like crazy. This is because right now Heroku doesn&amp;#8217;t support Websockets and forces socket.io to fall back to its polling mode. After some &lt;a href='https://github.com/joyent/node/wiki/Node-Hosting'&gt;research&lt;/a&gt; I moved to &lt;a href='https://www.dotcloud.com/'&gt;DotCloud&lt;/a&gt; and got an impressive boost in speed.&lt;/p&gt;
+
+&lt;p&gt;I also had to rewrite a lot of code using &lt;a href='http://expressjs.com/'&gt;Express&lt;/a&gt; because it would make deployment way easier.&lt;/p&gt;
+&lt;img alt='logos' src='/assets/blog/morestackgaming.png' style='margin:20px auto; display: block' /&gt;
+&lt;p&gt;Now that hosting and basic interactions were a bit more optimized, I started to see another problem: passing around the whole board was still too costly network-wise.&lt;/p&gt;
+
+&lt;p&gt;At that moment of development the board was just a JSON object containing all the players, their names, positions, scores and other meta data regarding the game. It seemed pretty small but it wasn&amp;#8217;t, and as the game would grow the problem would only get worse.&lt;/p&gt;
+
+&lt;p&gt;The solution here would be to only broadcast what changed instead of redrawing everything. This was annoying because it meant that you need to be able to draw the board from scratch (when you connect) as well as incrementally (while you play). Twice the logic.&lt;/p&gt;
+
+&lt;p&gt;I also noticed a lag for the player&amp;#8217;s own actions. This was because it would always go via the server before updating the board. As a matter of fact there wasn&amp;#8217;t even a board on the client side, just its rendering on the HTML5 Canvas.&lt;/p&gt;
+
+&lt;p&gt;Soooo to fix this the client code should also be able to know the state of the world and update it locally.&lt;/p&gt;
+
+&lt;h3 id='fun_gameplay__complexity'&gt;Fun, Gameplay &amp;amp; Complexity&lt;/h3&gt;
+
+&lt;p&gt;A game needs to be fun, or else there is no point. And a couple of laggy squares moving around is clearly not fun. This seems trivial, but when you spend your time working on web apps, you don&amp;#8217;t spend a lot of time thinking about whether the app is fun or not. Making it efficient, fast and user friendly is complicated enought!&lt;/p&gt;
+
+&lt;p&gt;I added some rules and gameplay elements to make it feel more like something one would like to play, including:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Feedbacks when you get hit&lt;/li&gt;
+
+&lt;li&gt;Scoreboards during game&lt;/li&gt;
+
+&lt;li&gt;Invicibility frames when you get hit&lt;/li&gt;
+
+&lt;li&gt;Board boundaries&lt;/li&gt;
+
+&lt;li&gt;Changing a player&amp;#8217;s name&lt;/li&gt;
+
+&lt;li&gt;Tweaks in the player&amp;#8217;s speed &amp;amp; size&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It&amp;#8217;s also good to know that some of the gameplay elements are based on constants. For instance you always move of X, and your player is Y pixel-wide. When you get hit you are invicible for Z frames and so on. To tweak it I had to add a debug mode to change everything while playing to quickly see how it felt.&lt;/p&gt;
+
+&lt;p&gt;All these changes made my simple game complex and it became harder to maintain the code, even only after something like 6 hours of work in. I had to throw away a lot of code and start again fresh.&lt;/p&gt;
+
+&lt;h3 id='concurent_access'&gt;Concurent Access&lt;/h3&gt;
+
+&lt;p&gt;When you have a lot of players connected and modifying the same board, you&amp;#8217;re bound to run into some &lt;a href='http://en.wikipedia.org/wiki/Concurrency_control'&gt;concurent access&lt;/a&gt; issues. For instance let&amp;#8217;s say two players touch the target at the same time. Who gets +1 point?&lt;/p&gt;
+
+&lt;p&gt;To fix this I hacked together a basic &lt;a href='http://en.wikipedia.org/wiki/Mutual_exclusion'&gt;mutex&lt;/a&gt; system to handle the simple problems that kept on happening. This did the trick after an hour of code, but it wasn&amp;#8217;t something I&amp;#8217;d put in production!&lt;/p&gt;
+
+&lt;h2 id='conclusion'&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Overall I&amp;#8217;m pretty happy with the results. Even with my lack of experience in the subject I still got something running and gained a better grasp of why game developers tremble when you mention online multiplayer.&lt;/p&gt;
+
+&lt;p&gt;Now I think the next step would be to design a game taking the constraints discovered into account in order to simplify development. You don&amp;#8217;t want a game where precision and timing is key. You could instead create a massively online turn-by-turn game and save yourself major headaches while still producing something fun! It all depends if you seek a technical challenge or if you just want to create a cool project.&lt;/p&gt;
+
+&lt;p&gt;Also I&amp;#8217;ll need to find a graphic designer because my game looked like shit, but that&amp;#8217;s another story.&lt;/p&gt;
+&lt;img alt='the game' src='/assets/blog/screengame.png' style='margin:20px auto; display: block' /&gt;</content>
+   </entry>
   
  
   
