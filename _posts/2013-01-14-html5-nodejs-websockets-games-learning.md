@@ -11,7 +11,7 @@ tags: [Dev]
 {% include JB/setup %}
 
 Okay let's start by saying that I am a developer that does mostly web stuff. This means
- that most of the code I write will end up in a browser. Of course I
+ that a majority of the code I write will end up in a browser. Of course I
 sometimes have to interact with APIs or open one, write background jobs, some
 security, databases and so on... but the point is that, professionnally, I do not write
 entire projects that have nothing to do with a web app.
@@ -19,7 +19,7 @@ entire projects that have nothing to do with a web app.
 My friend [André](http://www.andreberlemont.com/portfolio/)
 has a different background as he only [develops games](http://www.oneliferemains.com/).
 
-Somehow we ended up talking about how complex it would be to create an online multiplayer
+One evening we somehow ended up talking about how complex it would be to create an online multiplayer
 game from scratch. Being the web guy, I felt that I should know how all this was supposed to work... after
 all, the multiplayer appens over the internet, right ?
 
@@ -28,7 +28,7 @@ all, the multiplayer appens over the internet, right ?
 On paper it seemed pretty simple.
 
 People connect to a server.
-This server keeps the whole board of the game and broadcasts it to the everyone when
+This server keeps the game board and broadcasts it to everyone when
 needed. Each player keeps some kind of state on its side for caching.
 Everything related to drawing the game board as well as UI should be
 handled by the client.
@@ -46,7 +46,7 @@ something like that. Instead I kept it in my "safe" zone by using
 technologies I had a bit of experience with:
 
 - [NodeJS](http://nodejs.org/) (for the server)
-- HTML5 Canvas (for the game board)
+- [HTML5 Canvas](https://developer.mozilla.org/en-US/docs/HTML/Canvas/Tutorial) (for the game board)
 - [Websockets](http://en.wikipedia.org/wiki/WebSocket) with [Socket.io](http://socket.io/) (to make it fast).
 
 <img src='/assets/blog/stackgame.png' alt='logos' style='margin:20px auto; display: block'/>
@@ -112,10 +112,13 @@ and update it locally.
 ### Fun, Gameplay & Complexity
 
 A game needs to be fun, or else there is no point. And a couple of laggy
-squares moving around is clearly not fun.
+squares moving around is clearly not fun. This seems trivial, but when
+you spend your time working on web apps, you don't spend a lot of time thinking about
+whether the app is fun or not. Making it efficient, fast and user friendly
+is complicated enought!
 
-I had to add some rules and gameplay elements to make it more feel like
-so mething you'd like to play, including:
+I added some rules and gameplay elements to make it feel more like
+something one would like to play, including:
 
 - Feedbacks when you get hit
 - Scoreboards during game
@@ -124,8 +127,8 @@ so mething you'd like to play, including:
 - Changing a player's name
 - Tweaks in the player's speed & size
 
-Some of the gameplay elements are based on constants. For instant you
-always move of X, and your player is Y pixel-wide. When you get hit you
+It's also good to know that some of the gameplay elements are based on constants.
+For instance you always move of X, and your player is Y pixel-wide. When you get hit you
 are invicible for Z frames and so on. To tweak it I had to add a debug
 mode to change everything while playing to quickly see how it felt.
 
@@ -147,9 +150,14 @@ after an hour of code, but it wasn't something I'd put in production!
 
 ## Conclusion
 
-Overall I was pretty happy, because in a dozen hours work I got
-something working and I have a better grasp of why game developers
+In a couple of days I threw away a lot of code because I was constantly
+discovering problems or learning new best practices... but that's ok,
+that's what simple prototypes are for! But how did it turn out?
+
+Well, overall I'm pretty happy with the result. In approximatively 15 hours of work I got
+something running and I gained a better grasp of why game developers
 tremble when you mention online multiplayer.
+
 
 I think the next step would be to design a game taking the
 constraints into account to simplify development a bit. You don't want a
