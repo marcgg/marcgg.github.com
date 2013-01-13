@@ -17,11 +17,11 @@ security, databases and so on... but the point is that, professionnally, I do no
 entire projects that have nothing to do with a web app.
 
 My friend [André](http://www.andreberlemont.com/portfolio/)
-has a different background as he only [develops games](http://www.oneliferemains.com/).
+has a different background as he mostly [develops games](http://www.oneliferemains.com/).
 
-One evening we somehow ended up talking about how complex it would be to create an online multiplayer
+One evening we ended up talking about how complex it would be to create an online multiplayer
 game from scratch. Being the web guy, I felt that I should know how all this was supposed to work... after
-all, the multiplayer appens over the internet, right ?
+all, the multiplayer appens over the internet, right?
 
 ## I Can Code That With My Eyes Closed...?
 
@@ -46,11 +46,10 @@ something like that. Instead I kept it in my "safe" zone by using
 technologies I had a bit of experience with:
 
 - [NodeJS](http://nodejs.org/) (for the server)
-- [HTML5 Canvas](https://developer.mozilla.org/en-US/docs/HTML/Canvas/Tutorial) (for the game board)
+- [HTML5 Canvas](https://developer.mozilla.org/en-US/docs/HTML/Canvas/Tutorial) (to display the game board)
 - [Websockets](http://en.wikipedia.org/wiki/WebSocket) with [Socket.io](http://socket.io/) (to make it fast).
 
 <img src='/assets/blog/stackgame.png' alt='logos' style='margin:20px auto; display: block'/>
-
 
 ## Building The Game
 
