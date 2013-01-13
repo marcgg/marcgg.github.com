@@ -17,7 +17,7 @@ security, databases and so on... but the point is that, professionnally, I do no
 entire projects that have nothing to do with a web app.
 
 My friend [André](http://www.andreberlemont.com/portfolio/)
-has a different background as he mostly [develops games](http://www.oneliferemains.com/).
+has a different background as he mainly [develops games](http://www.oneliferemains.com/).
 
 One evening we ended up talking about how complex it would be to create an online multiplayer
 game from scratch. Being the web guy, I felt that I should know how all this was supposed to work... after
