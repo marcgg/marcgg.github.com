@@ -45,7 +45,7 @@
 
 <p>This means that a majority of the code I write will end up displaying something in a browser. Of course I do <a href='/2012/09/24/working-with-apis-facebook/'>interact with APIs</a>, write background jobs, add some security, optimize databases and so on&#8230; the point here is that, professionnally, I do not write entire projects that have nothing to do with a web app.</p>
 
-<p>My friend <a href='http://www.andreberlemont.com/portfolio/'>André</a> on the other hand has a different background as he mainly <a href='http://www.oneliferemains.com/'>develops games</a>. One evening we started talking about how complex it would be to create an online multiplayer game from scratch. Being the web guy, I felt that I should know how all this was supposed to work&#8230; after all, the multiplayer appens over the internet, right?</p>
+<p>My friend <a href='http://www.andreberlemont.com/portfolio/'>André</a> on the other hand has a different background as he mainly <a href='http://www.oneliferemains.com/'>develops games</a>. One evening we started talking about how complex it would be to create an online multiplayer game from scratch. Being the web guy, I felt that I should know how all this was supposed to work&#8230; after all, the multiplayer happens over the internet, right?</p>
 
 <h2 id='i_can_code_that_with_my_eyes_closed'>I Can Code That With My Eyes Closed&#8230;?</h2>
 
@@ -76,9 +76,9 @@
 <ul>
 <li>There are n players represented as squares on a board.</li>
 
-<li>1 player is the target and earn 1 point per 30 movements.</li>
+<li>1 player is the target and earns 1 point per 30 movements.</li>
 
-<li>If another player hits the target, she becomes the target and win 1 point.</li>
+<li>If another player hits the target, he becomes the target and win 1 point.</li>
 </ul>
 
 <p>I also added a simplistic chat system so that players could talk to one another during the game.</p>
@@ -86,7 +86,7 @@
 <p>The first version of the multiplayer code was pretty simple:</p>
 
 <ul>
-<li>When the player connects she gets the latest version of the game board.</li>
+<li>When the player connects he gets the latest version of the game board.</li>
 
 <li>Each time the player moves it sends an event to the server that updates the world and broadcasts it to everyone connected.</li>
 
@@ -115,7 +115,7 @@
 
 <h3 id='fun_gameplay__complexity'>Fun, Gameplay &amp; Complexity</h3>
 
-<p>A game needs to be fun, or else there is no point. And a couple of laggy squares moving around is clearly not fun. This seems trivial, but when you spend your time working on web apps, you don&#8217;t spend a lot of time thinking about whether the app is fun or not. Making it efficient, fast and user friendly is complicated enought!</p>
+<p>A game needs to be fun, or else there is no point. And a couple of laggy squares moving around is clearly not fun. This seems trivial, but when you spend your time working on web apps, you don&#8217;t spend a lot of time thinking about whether the app is fun or not. Making it efficient, fast and user friendly is complicated enough!</p>
 
 <p>I added some rules and gameplay elements to make it feel more like something one would like to play, including:</p>
 
