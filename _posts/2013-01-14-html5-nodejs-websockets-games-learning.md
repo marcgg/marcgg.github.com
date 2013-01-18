@@ -21,7 +21,7 @@ My friend [André](http://www.andreberlemont.com/portfolio/) on the other hand
 has a different background as he mainly [develops games](http://www.oneliferemains.com/).
 One evening we started talking about how complex it would be to create an online multiplayer
 game from scratch. Being the web guy, I felt that I should know how all this was supposed to work... after
-all, the multiplayer appens over the internet, right?
+all, the multiplayer happens over the internet, right?
 
 ## I Can Code That With My Eyes Closed...?
 
@@ -57,15 +57,15 @@ I wanted a simple game so that I could focus on the online aspect of it.
 The rules I came up with are:
 
 - There are n players represented as squares on a board.
-- 1 player is the target and earn 1 point per 30 movements.
-- If another player hits the target, she becomes the target and win 1 point.
+- 1 player is the target and earns 1 point per 30 movements.
+- If another player hits the target, he becomes the target and win 1 point.
 
 I also added a simplistic chat system so that players could talk
 to one another during the game.
 
 The first version of the multiplayer code was pretty simple:
 
-- When the player connects she gets the latest version of the game board.
+- When the player connects he gets the latest version of the game board.
 - Each time the player moves it sends an event to the server that
   updates the world and broadcasts it to everyone connected.
 - Client side javascript renders the board in the canvas at each change.
@@ -114,7 +114,7 @@ A game needs to be fun, or else there is no point. And a couple of laggy
 squares moving around is clearly not fun. This seems trivial, but when
 you spend your time working on web apps, you don't spend a lot of time thinking about
 whether the app is fun or not. Making it efficient, fast and user friendly
-is complicated enought!
+is complicated enough!
 
 I added some rules and gameplay elements to make it feel more like
 something one would like to play, including:
