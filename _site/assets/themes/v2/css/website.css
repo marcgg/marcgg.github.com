@@ -170,6 +170,10 @@ blockquote p{
   margin: 5px 20px !important;
 }
 
+#about{
+  margin-top: 60px;
+}
+
 
 /* CODE */
 pre{
