@@ -5,6 +5,7 @@ description: "For years I've been having a health problem that got fixed
 in seconds. This got me wondering about how this could apply to other
 areas of one's life."
 blog: true
+category: blog
 tags: [Health, Life]
 ---
 

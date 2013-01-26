@@ -4,7 +4,7 @@
  <title>Marcgg#Blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2013-01-14T00:25:32+01:00</updated>
+ <updated>2013-01-26T22:14:57+01:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -15,9 +15,9 @@
   
    <entry>
      <title>2 Days Trying To Create a Multiplayer HTML5 Game</title>
-     <link href="http://marcgg.com/2013/01/14/html5-nodejs-websockets-games-learning"/>
+     <link href="http://marcgg.com/blog/2013/01/14/html5-nodejs-websockets-games-learning"/>
      <updated>2013-01-14T00:00:00+01:00</updated>
-     <id>http://marcgg.com/2013/01/14/html5-nodejs-websockets-games-learning</id>
+     <id>http://marcgg.com/blog/2013/01/14/html5-nodejs-websockets-games-learning</id>
      <content type="html">&lt;p&gt;Okay. Let&amp;#8217;s start by saying that I&amp;#8217;m a developer that does mostly web stuff.&lt;/p&gt;
 
 &lt;p&gt;This means that a majority of the code I write will end up displaying something in a browser. Of course I do &lt;a href='/2012/09/24/working-with-apis-facebook/'&gt;interact with APIs&lt;/a&gt;, write background jobs, add some security, optimize databases and so on&amp;#8230; the point here is that, professionnally, I do not write entire projects that have nothing to do with a web app.&lt;/p&gt;
@@ -134,9 +134,9 @@
   
    <entry>
      <title>I Left Tigerlily</title>
-     <link href="http://marcgg.com/2013/01/06/left-tigerlily-job"/>
+     <link href="http://marcgg.com/blog/2013/01/06/left-tigerlily-job"/>
      <updated>2013-01-06T00:00:00+01:00</updated>
-     <id>http://marcgg.com/2013/01/06/left-tigerlily-job</id>
+     <id>http://marcgg.com/blog/2013/01/06/left-tigerlily-job</id>
      <content type="html">&lt;p&gt;I joined &lt;a href='http://tigerlilyapps.com'&gt;Tigerlily&lt;/a&gt; even before it was called that and, for 3 years, I contributed to the creation of &lt;a href='http://www.tigerlilyapps.com/products'&gt;amazing products&lt;/a&gt; that are now used by major companies in France and abroad. We built a great team of very talented people, brought innovation to how brands would interact with their users on social networks and always thrived to be the best at what we’d put our minds into.&lt;/p&gt;
 
 &lt;p&gt;It was a great experience in which I learned a lot and enjoyed the &lt;a href='/2011/12/12/developer-from-ssii-to-startup/'&gt;startup atmosphere&lt;/a&gt;. I became really invested in the project and became the lead developer, but now I feel that it is time for another adventure.&lt;/p&gt;
@@ -158,9 +158,9 @@
   
    <entry>
      <title>How We Made Third Place At AngelHack Paris</title>
-     <link href="http://marcgg.com/2012/12/10/angelhack-third-place-paris-hackathon"/>
+     <link href="http://marcgg.com/blog/2012/12/10/angelhack-third-place-paris-hackathon"/>
      <updated>2012-12-10T00:00:00+01:00</updated>
-     <id>http://marcgg.com/2012/12/10/angelhack-third-place-paris-hackathon</id>
+     <id>http://marcgg.com/blog/2012/12/10/angelhack-third-place-paris-hackathon</id>
      <content type="html">&lt;p&gt;A couple of weeks ago &lt;a href='http://twitter.com/kevintunc'&gt;Kevin&lt;/a&gt;, &lt;a href='http://twitter.com/etiennebarrie'&gt;Étienne&lt;/a&gt;, &lt;a href='http://twitter.com/benjaminbouwyn'&gt;Benjamin&lt;/a&gt;, &lt;a href='http://twitter.com/emilanddc'&gt;Emiland&lt;/a&gt; and I decided to go to the the Paris’ session of &lt;a href='http://angelhack.com'&gt;AngelHack&lt;/a&gt;. This is a worldwide &lt;a href='http://en.wikipedia.org/wiki/Hackathon'&gt;hackathon&lt;/a&gt; with fancy &lt;a href='http://angelhack.com/#sponsors'&gt;sponsors&lt;/a&gt; giving you the opportunity to build and pitch a new product in 24 hours. This edition gathered 165 attendees and 47 projects.&lt;/p&gt;
 
 &lt;p&gt;In this article I’ll try to present what we did while hopefully recreating a bit the experience and giving some tips.&lt;/p&gt;
@@ -241,9 +241,9 @@
   
    <entry>
      <title>Web Views &amp; RubyMotion</title>
-     <link href="http://marcgg.com/2012/11/12/webviews-javascript-ios-rubymotion"/>
+     <link href="http://marcgg.com/blog/2012/11/12/webviews-javascript-ios-rubymotion"/>
      <updated>2012-11-12T00:00:00+01:00</updated>
-     <id>http://marcgg.com/2012/11/12/webviews-javascript-ios-rubymotion</id>
+     <id>http://marcgg.com/blog/2012/11/12/webviews-javascript-ios-rubymotion</id>
      <content type="html">&lt;p&gt;Here we go, another article on &lt;a href='http://www.rubymotion.com/'&gt;RubyMotion&lt;/a&gt;! For those of you that don&amp;#8217;t know what&amp;#8217;s that&amp;#8217;s all about, it&amp;#8217;s a toolchain created by &lt;a href='https://twitter.com/lrz'&gt;Laurent Sansonetti&lt;/a&gt; (of &lt;a href='http://macruby.org/'&gt;MacRuby&lt;/a&gt; fame) allowing you to create native iOS application using &lt;a href='http://www.ruby-lang.org/'&gt;Ruby&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;I like it a lot, but please keep in mind that while I have a decent knowledge of Ruby, I&amp;#8217;m only using RubyMotion on a side project. I worked hard to get everything here to work, but it still might not be the most efficient way of doing it. If you do know a better solution, please share it in the comments and I&amp;#8217;ll update the article.&lt;/p&gt;
@@ -417,9 +417,9 @@ to avoid creating a UIView just to throw it away. Thanks to
   
    <entry>
      <title>Create a Custom Slider With RubyMotion</title>
-     <link href="http://marcgg.com/2012/10/22/custom-slider-ios-rubymotion"/>
+     <link href="http://marcgg.com/blog/2012/10/22/custom-slider-ios-rubymotion"/>
      <updated>2012-10-22T00:00:00+02:00</updated>
-     <id>http://marcgg.com/2012/10/22/custom-slider-ios-rubymotion</id>
+     <id>http://marcgg.com/blog/2012/10/22/custom-slider-ios-rubymotion</id>
      <content type="html">&lt;p&gt;I always liked the idea of developing mobile applications, but also found the Objective C + XCode experience not very enjoyable. I gave alternatives like &lt;a href='http://www.appcelerator.com/platform/titanium-sdk/'&gt;Titanium&lt;/a&gt; a try, but wasn’t fully convinced. Lately I’ve been getting into &lt;a href='http://www.rubymotion.com/'&gt;RubyMotion&lt;/a&gt; and so far I’m really impressed by the general feel of it.&lt;/p&gt;
 
 &lt;p&gt;Alas it&amp;#8217;s not perfect. My main grief right now about the project is the terrible lack of documentation. The community is also still small and while you can still find &lt;a href='https://twitter.com/vacawama'&gt;helpful&lt;/a&gt; &lt;a href='https://twitter.com/julienXX'&gt;people&lt;/a&gt;, you often end up alone with your code. That&amp;#8217;s why I figured I would contribute my share of blog posts on the subject! Hopefully it’ll help out some people.&lt;/p&gt;
@@ -551,9 +551,9 @@ to avoid creating a UIView just to throw it away. Thanks to
   
    <entry>
      <title>Don’t Accept Brokenness</title>
-     <link href="http://marcgg.com/2012/10/15/dont-accept-brokeness-deal-with-annoyances"/>
+     <link href="http://marcgg.com/blog/2012/10/15/dont-accept-brokeness-deal-with-annoyances"/>
      <updated>2012-10-15T00:00:00+02:00</updated>
-     <id>http://marcgg.com/2012/10/15/dont-accept-brokeness-deal-with-annoyances</id>
+     <id>http://marcgg.com/blog/2012/10/15/dont-accept-brokeness-deal-with-annoyances</id>
      <content type="html">&lt;p&gt;For a while I had a problem with my jaw. Ten years back I got elbowed in the face (don’t ask), and since then I had trouble yawning or just opening my mouth wide open. I could try to do it, but it would result in the whole thing locking and a good deal of pain.&lt;/p&gt;
 
 &lt;p&gt;The first months I was annoyed, but as time passed I learned to live with it. After all, it was really nothing important. I could eat, speak and do pretty much anything normally. I accepted this as part of how my body functions. Some can’t do a right split, I can’t open my mouth that wide, who cares? I learned how to avoid doing this, and carried on.&lt;/p&gt;
@@ -581,9 +581,9 @@ to avoid creating a UIView just to throw it away. Thanks to
   
    <entry>
      <title>How I Avoid Thumb Pain From Too Much Coding</title>
-     <link href="http://marcgg.com/2012/10/01/thumb-pain-developer-keyboard"/>
+     <link href="http://marcgg.com/blog/2012/10/01/thumb-pain-developer-keyboard"/>
      <updated>2012-10-01T00:00:00+02:00</updated>
-     <id>http://marcgg.com/2012/10/01/thumb-pain-developer-keyboard</id>
+     <id>http://marcgg.com/blog/2012/10/01/thumb-pain-developer-keyboard</id>
      <content type="html">&lt;p&gt;Most coders complain about wrist pain. For some reason I never had major trouble there except when working for hours on a laptop. My main issue seemed more original and was located in &lt;a href='http://en.wikipedia.org/wiki/Thenar_eminence'&gt;the group of muscles controlling the thumb&lt;/a&gt;. Suddently it would hurt for days, then go away, then come back&amp;#8230; good times.&lt;/p&gt;
 
 &lt;p&gt;Eventually I mentioned it to a kinesiotherapist, and the conversation was very similar to the famous joke that goes something like:&lt;/p&gt;
@@ -611,9 +611,9 @@ to avoid creating a UIView just to throw it away. Thanks to
   
    <entry>
      <title>The Risks of Working With Another Company's API</title>
-     <link href="http://marcgg.com/2012/09/24/working-with-apis-facebook"/>
+     <link href="http://marcgg.com/blog/2012/09/24/working-with-apis-facebook"/>
      <updated>2012-09-24T00:00:00+02:00</updated>
-     <id>http://marcgg.com/2012/09/24/working-with-apis-facebook</id>
+     <id>http://marcgg.com/blog/2012/09/24/working-with-apis-facebook</id>
      <content type="html">&lt;p&gt;Before we begin let me give you a little background on why I’m writing this article.&lt;/p&gt;
 
 &lt;p&gt;I’ve been working with the Facebook platform for almost 3 years now. I also wrote code using the APIs provided by Twitter, Instagram, Flickr, Google, Foursquare, Amazon, Youtube, Spotify and others. I’ve participated in building products like the &lt;a href='http://www.tigerlilyapps.com/conversation'&gt;Tigerlily Conversation Suite&lt;/a&gt; or &lt;a href='http://ffocused.com'&gt;ffocused&lt;/a&gt;, both heavily relying on some of those API. In the process I learned a lot on how to handle these services, their evolutions and their problems.&lt;/p&gt;
@@ -709,9 +709,9 @@ to avoid creating a UIView just to throw it away. Thanks to
   
    <entry>
      <title>The One Thing That Made Me Switch To Vim</title>
-     <link href="http://marcgg.com/2012/09/04/one-reason-to-switch-to-vim-editor"/>
+     <link href="http://marcgg.com/blog/2012/09/04/one-reason-to-switch-to-vim-editor"/>
      <updated>2012-09-04T00:00:00+02:00</updated>
-     <id>http://marcgg.com/2012/09/04/one-reason-to-switch-to-vim-editor</id>
+     <id>http://marcgg.com/blog/2012/09/04/one-reason-to-switch-to-vim-editor</id>
      <content type="html">&lt;p&gt;I know, I know, this has been done to death, but stay with me for a second. I’m not here to tell you that Vim is the best editor out there, just to tell you the one reason that got me to switch.&lt;/p&gt;
 
 &lt;p&gt;Like every developer with some curiosity, I tried a ridiculous amount of text editors and IDEs. I started with Notepad at first, but quickly discovered that some text editors would actually help you. I downloaded &lt;a href='http://download.cnet.com/Amiasoft-SiteAid/3000-10247_4-10015046.html'&gt;SiteAid&lt;/a&gt; and enjoyed the gain of productivity. Then I quickly moved on to Scite, Eclipse, Netbeans, Notepad++, Emacs, Text Edit, Rad Rails, Kate, Rubymine, TextMate, Sublime&amp;#8230; the list goes on.&lt;/p&gt;
@@ -737,9 +737,9 @@ to avoid creating a UIView just to throw it away. Thanks to
   
    <entry>
      <title>Start Working on Your Side Project Tonight</title>
-     <link href="http://marcgg.com/2012/01/09/start-working-on-your-side-project"/>
+     <link href="http://marcgg.com/blog/2012/01/09/start-working-on-your-side-project"/>
      <updated>2012-01-09T00:00:00+01:00</updated>
-     <id>http://marcgg.com/2012/01/09/start-working-on-your-side-project</id>
+     <id>http://marcgg.com/blog/2012/01/09/start-working-on-your-side-project</id>
      <content type="html">&lt;p&gt;To me a side project is taking an idea and building it from scratch. You do not have to complete it, it doesn’t need a business model or turn into a company over time, it doesn’t even need to make sense to other people than you. It is just a way to experiment. If later on it turns out into a successful company, good for you, but it doesn’t have to be your goal.&lt;/p&gt;
 
 &lt;p&gt;If you’re like me, you think that development is a creative process, and should be treated as such. So what better way to be more creative than by removing all the usual constraints of a day job – deadlines, &lt;a href='http://en.wikipedia.org/wiki/Legacy_code'&gt;legacy code&lt;/a&gt;, clients, etc. – and just building something for fun and the sake of building something cool!&lt;/p&gt;
@@ -792,9 +792,9 @@ to avoid creating a UIView just to throw it away. Thanks to
   
    <entry>
      <title>Outsourcing In A Startup</title>
-     <link href="http://marcgg.com/2011/12/21/startup-outsourcing"/>
+     <link href="http://marcgg.com/blog/2011/12/21/startup-outsourcing"/>
      <updated>2011-12-21T00:00:00+01:00</updated>
-     <id>http://marcgg.com/2011/12/21/startup-outsourcing</id>
+     <id>http://marcgg.com/blog/2011/12/21/startup-outsourcing</id>
      <content type="html">&lt;p&gt;So you&amp;#8217;re a startup and want to outsource graphic design, system administration or development? Don’t feel bad, this is very common. Often startups can’t afford to hire many people right away or do not have a team with every skill required to build the perfect product.&lt;/p&gt;
 
 &lt;h2 id='should_i_outsource'&gt;Should I Outsource?&lt;/h2&gt;
@@ -878,9 +878,9 @@ to avoid creating a UIView just to throw it away. Thanks to
   
    <entry>
      <title>Developers, Go From SSII To Startup</title>
-     <link href="http://marcgg.com/2011/12/12/developer-from-ssii-to-startup"/>
+     <link href="http://marcgg.com/blog/2011/12/12/developer-from-ssii-to-startup"/>
      <updated>2011-12-12T00:00:00+01:00</updated>
-     <id>http://marcgg.com/2011/12/12/developer-from-ssii-to-startup</id>
+     <id>http://marcgg.com/blog/2011/12/12/developer-from-ssii-to-startup</id>
      <content type="html">&lt;p&gt;In France we have what we call SSII for Société de Service en Ingénierie Informatique. Poorly translated it goes something like «IT Consulting Firm». This is where most young CS graduates will go, mainly because once you get your degree you are spammed by job offers from their recruiters.&lt;/p&gt;
 
 &lt;p&gt;This is fine for some, but other might feel like they are missing out what’s happening in the startup world. The problem is that after a few years in a SSII it can seem complicated to switch career path and start working for a startup. For the most part it’s because the technologies, processes and general mindset are radically different… but believe me, it is possible!&lt;/p&gt;

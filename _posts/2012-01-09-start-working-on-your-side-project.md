@@ -4,6 +4,7 @@ title: "Start Working on Your Side Project Tonight"
 description: "Having a side project have a lot of advantages and helps
 you to grow as a developer. Here's why."
 blog: true
+category: blog
 tags: ["Projects"]
 ---
 

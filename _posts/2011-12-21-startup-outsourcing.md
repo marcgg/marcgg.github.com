@@ -4,6 +4,7 @@ title: "Outsourcing In A Startup"
 description: "Sometimes you have to outsource, but there are some
 guidelines to follow if you want everything to go well."
 blog: true
+category: blog
 tags: [Startup]
 ---
 

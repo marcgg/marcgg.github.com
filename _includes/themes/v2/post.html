@@ -1,15 +1,10 @@
-<div id="nav">
-  <a href="/blog">&lt; More articles</a>
-</div>
 <h1>
   <span>{{ page.title }}</span>
 </h1>
-<p class="published">
-  ~
+
+<div class="published">
   <span>{{ page.date | date_to_long_string }}</span>
-  by Marc G Gauthier
-  ~
-</p>
+</div>
 
 <div class="post">
   {{ content }}

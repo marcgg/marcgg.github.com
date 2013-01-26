@@ -5,6 +5,7 @@ description: "RubyMotion allows you to write native iOS applications
 using Ruby. Here I'll try to explain how to customize the UISlider
 element's look."
 blog: true
+category: blog
 tags: [Dev, RubyMotion]
 ---
 

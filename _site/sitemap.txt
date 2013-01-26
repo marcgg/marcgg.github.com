@@ -4,15 +4,15 @@ http://marcgg.com/blog/index.html
 http://marcgg.com/index.html
 http://marcgg.com/sitemap.txt
 
-http://marcgg.com/2013/01/14/html5-nodejs-websockets-games-learning
-http://marcgg.com/2013/01/06/left-tigerlily-job
-http://marcgg.com/2012/12/10/angelhack-third-place-paris-hackathon
-http://marcgg.com/2012/11/12/webviews-javascript-ios-rubymotion
-http://marcgg.com/2012/10/22/custom-slider-ios-rubymotion
-http://marcgg.com/2012/10/15/dont-accept-brokeness-deal-with-annoyances
-http://marcgg.com/2012/10/01/thumb-pain-developer-keyboard
-http://marcgg.com/2012/09/24/working-with-apis-facebook
-http://marcgg.com/2012/09/04/one-reason-to-switch-to-vim-editor
-http://marcgg.com/2012/01/09/start-working-on-your-side-project
-http://marcgg.com/2011/12/21/startup-outsourcing
-http://marcgg.com/2011/12/12/developer-from-ssii-to-startup
+http://marcgg.com/blog/2013/01/14/html5-nodejs-websockets-games-learning
+http://marcgg.com/blog/2013/01/06/left-tigerlily-job
+http://marcgg.com/blog/2012/12/10/angelhack-third-place-paris-hackathon
+http://marcgg.com/blog/2012/11/12/webviews-javascript-ios-rubymotion
+http://marcgg.com/blog/2012/10/22/custom-slider-ios-rubymotion
+http://marcgg.com/blog/2012/10/15/dont-accept-brokeness-deal-with-annoyances
+http://marcgg.com/blog/2012/10/01/thumb-pain-developer-keyboard
+http://marcgg.com/blog/2012/09/24/working-with-apis-facebook
+http://marcgg.com/blog/2012/09/04/one-reason-to-switch-to-vim-editor
+http://marcgg.com/blog/2012/01/09/start-working-on-your-side-project
+http://marcgg.com/blog/2011/12/21/startup-outsourcing
+http://marcgg.com/blog/2011/12/12/developer-from-ssii-to-startup

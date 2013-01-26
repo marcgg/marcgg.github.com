@@ -1,24 +1,24 @@
 ---
 layout: page
 title : Marcgg#Blog - Thoughts on software development, startups and the process of making things happen.
+category: blog
 ---
 {% include JB/setup %}
-
-<h1>marcgg # blog</h1>
-<p class="published">~ Turning ideas into code ~</p>
 
 <div id="all-posts">
   {% for post in site.posts %}
     {% if post.blog == true %}
-      <div class="single-post">
-        <h3>
-          <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
-          <span>({{ post.date | date: "%B %e, %Y" }})</span>
-        </h3>
+      <div class="single-post clearfix">
+        <div class="date">{{ post.date | date: "%B %e, %Y" }}</div>
+        <div class="excerpt">
+          <h4>
+            <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+          </h4>
 
-        <p class="description">
-          {{ post.description }}
-        </p>
+          <p class="description">
+            {{ post.description }}
+          </p>
+        </div>
       </div>
     {% endif %}
   {% endfor %}
@@ -28,41 +28,3 @@ title : Marcgg#Blog - Thoughts on software development, startups and the process
   Everything on this blog is under <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative commons</a> license
   unless stated otherwise
 </p>
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-<script language="javascript">
-  $(function(){
-    var selected = location.search.replace('?tag=','');
-    if(selected != ""){ selectTag(selected) }
-
-    $(".tag").click(function(e){
-      e.preventDefault()
-      var $this = $(this)
-      var tag = $this.data("tag")
-      if(!$this.hasClass("selected")){
-        selectTag(tag)
-      } else {
-        unSelectedTag()
-      }
-    })
-
-    $(document).keyup(function(e) {
-      if (e.keyCode == 27){ unSelectedTag() }
-    })
-  })
-
-  function selectTag(tag){
-    $(".selected").removeClass("selected")
-    $(".single-post").addClass("unselected")
-    $(".tag-" + tag).addClass("selected")
-    $(".tag-" + tag).parents(".single-post").addClass("selected").removeClass("unselected")
-    history.pushState({}, null, '?tag=' + tag)
-  }
-
-  function unSelectedTag(){
-    $(".selected").removeClass("selected")
-    $(".unselected").removeClass("unselected")
-    history.pushState({}, null, '?')
-  }
-
-</script>

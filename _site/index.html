@@ -10,17 +10,22 @@
     
     <meta name="author" content="Marc G Gauthier">
 
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <!--[if lt IE 9]> <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,400,700,300' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic' rel='stylesheet' type='text/css'>
     <link href="/assets/themes/v2/css/app.css?body=1" rel="stylesheet" type="text/css" media="all">
     <link rel="shortcut icon" href="/assets/themes/v2/favicon.ico">
   </head>
 
   <body>
+    <header>
+      <div id="logo"></div>
+      <nav>
+        <a href="/blog" class="">Blog</a>
+        <a href="/" class=" selected ">About</a>
+      </nav>
+    </header>
 
     <div id="container">
       <div id="content">
@@ -28,15 +33,15 @@
 
 
 <div id="about">
-  <h1><span> Hey ~ </span></h1>
-  <p>
-    I'm Marc G Gauthier and I approve this website.
-  </p>
+  <h1><span> About </span></h1>
+  <div class="published">
+    <span>For some reason you want to know about me</span>
+  </div>
   <p>
     If you want to know what I am up to right now, please head over to
     <a href="http://twitter.com/marcgg" class="twitter" target="_blank">@marcgg on Twitter</a>.
     I also write things in <a href="/blog">my blog</a>. The most recent article is
-    <a href="/2013/01/14/html5-nodejs-websockets-games-learning">2 Days Trying To Create a Multiplayer HTML5 Game</a>, you should take a look!
+    <a href="/blog/2013/01/14/html5-nodejs-websockets-games-learning">2 Days Trying To Create a Multiplayer HTML5 Game</a>, you should take a look!
   </p>
 
   <h2>Professionally</h2>
@@ -80,8 +85,8 @@
   </p>
   <p>
     When I'm home, I spend time on an quantified self iOS app using RubyMotion.
-    I also play around with random projects, such as a Twitter bot acting like a social media consultant or
-    a <a href="http://whatsmyairport.com" target="_blank" class="wma">website mapping airport codes to user names</a>.
+    I also play around with random projects, such as a Twitter bot acting like a social media consultant,
+    a website mapping airport codes to user names or an iOS app.
     One of my most polished project is <a href="http://ffocused.com" class="ffocused" target="_blank">ffocused</a>,
     a free service giving users the ability to create their
     fully customizable photo portfolio based on their Facebook, Flickr or Instagram accounts

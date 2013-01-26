@@ -11,17 +11,22 @@
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
     <meta name="author" content="{{ site.author.name }}">
 
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <!--[if lt IE 9]> <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,400,700,300' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic' rel='stylesheet' type='text/css'>
     <link href="{{ ASSET_PATH }}/css/app.css?body=1" rel="stylesheet" type="text/css" media="all">
     <link rel="shortcut icon" href="{{ ASSET_PATH }}/favicon.ico">
   </head>
 
   <body>
+    <header>
+      <div id="logo"></div>
+      <nav>
+        <a href="/blog" class="{% if page.category == 'blog' %} selected {% endif %}">Blog</a>
+        <a href="/" class="{% if page.category == 'about' %} selected {% endif %}">About</a>
+      </nav>
+    </header>
 
     <div id="container">
       <div id="content">

@@ -5,6 +5,7 @@ description: "After 3 years I decided to change job and join
 Drivy where I'll work on a product based on the concept of collaborative
 consumption"
 blog: true
+category: blog
 tags: [Blog]
 ---
 
