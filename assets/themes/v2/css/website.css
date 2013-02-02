@@ -26,7 +26,7 @@ header{
   width: 87px;
   height: 38px;
   float: left;
-  margin-top: 20px;
+  margin-top: 22px;
   background: url(/assets/misc/logo.png) no-repeat;
 }
 nav{
@@ -78,8 +78,9 @@ a{
   float: left;
   width: 170px;
   text-align: right;
-  padding-right: 20px;
+  padding: 2px 20px 0px 0px;
   color: #858585;
+  font-size: 0.9em;
 }
 .single-post .excerpt{
   float: right;
@@ -153,8 +154,8 @@ h4{
 
 #more{
   border-top: 1px solid #e6e6e6;
-  margin-top: 20px;
-  padding: 20px 0px;
+  margin-top: 40px;
+  padding: 40px 0px;
 }
 
 
