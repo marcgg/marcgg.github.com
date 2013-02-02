@@ -5,7 +5,7 @@ description: "I participated in a hackathon with 4 other persons where we
 built a project to give away objects and track their lives. Here's how it went."
 blog: true
 category: blog
-tags: [Dev, Hackathon]
+tag: Projects
 ---
 
 {% include JB/setup %}

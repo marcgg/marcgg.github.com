@@ -6,7 +6,7 @@ the problems linked to creating a multiplayer game I decided to create a
 prototype with NodeJS, Websockets and HTML5."
 blog: true
 category: blog
-tags: [Dev]
+tag: Projects
 ---
 
 {% include JB/setup %}

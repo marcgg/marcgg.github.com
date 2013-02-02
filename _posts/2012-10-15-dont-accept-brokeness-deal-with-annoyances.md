@@ -6,7 +6,7 @@ in seconds. This got me wondering about how this could apply to other
 areas of one's life."
 blog: true
 category: blog
-tags: [Health, Life]
+tag: Health
 ---
 
 {% include JB/setup %}

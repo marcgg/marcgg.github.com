@@ -5,7 +5,7 @@ description: "Sometimes you have to outsource, but there are some
 guidelines to follow if you want everything to go well."
 blog: true
 category: blog
-tags: [Startup]
+tag: Startup
 ---
 
 So you're a startup and want to outsource graphic design, system administration or development? Don’t feel bad, this is very common. Often startups can’t afford to hire many people right away or do not have a team with every skill required to build the perfect product.

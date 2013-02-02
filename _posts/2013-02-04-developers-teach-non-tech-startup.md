@@ -6,7 +6,7 @@ teach them a bit about how your software works can be a good idea with
 joy for all."
 blog: false
 category: blog
-tags: [Startup]
+tag: Startup
 ---
 
 {% include JB/setup %}

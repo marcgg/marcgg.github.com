@@ -5,7 +5,7 @@ description: "This is the one reason that got me to switch to vim after
 experimenting for years with a lot of different editors."
 blog: true
 category: blog
-tags: [Dev]
+tag: Dev
 ---
 
 {% include JB/setup %}
