@@ -22,7 +22,7 @@ My friend [André](http://www.andreberlemont.com/portfolio/) on the other hand
 has a different background as he mainly [develops games](http://www.oneliferemains.com/).
 One evening we started talking about how complex it would be to create an online multiplayer
 game from scratch. Being the web guy, I felt that I should know how all this was supposed to work... after
-all, the multiplayer appens over the internet, right?
+all, the multiplayer happens over the internet, right?
 
 ## I Can Code That With My Eyes Closed...?
 
@@ -58,7 +58,7 @@ I wanted a simple game so that I could focus on the online aspect of it.
 The rules I came up with are:
 
 - There are n players represented as squares on a board.
-- 1 player is the target and earn 1 point per 30 movements.
+- 1 player is the target and earns 1 point per 30 movements.
 - If another player hits the target, she becomes the target and win 1 point.
 
 I also added a simplistic chat system so that players could talk
