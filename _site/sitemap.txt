@@ -4,6 +4,7 @@ http://marcgg.com/blog/index.html
 http://marcgg.com/index.html
 http://marcgg.com/sitemap.txt
 
+http://marcgg.com/blog/2013/02/04/developers-teach-non-tech-startup
 http://marcgg.com/blog/2013/01/14/html5-nodejs-websockets-games-learning
 http://marcgg.com/blog/2013/01/06/left-tigerlily-job
 http://marcgg.com/blog/2012/12/10/angelhack-third-place-paris-hackathon

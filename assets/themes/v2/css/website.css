@@ -158,6 +158,12 @@ h4{
   padding: 40px 0px;
 }
 
+em{
+  font-style: italic;
+}
+strong{
+  font-weight: bold;
+}
 
 
 blockquote{
