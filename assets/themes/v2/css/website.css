@@ -14,7 +14,24 @@ body{
 #content{
   width: 760px;
   margin: auto;
-  padding-bottom: 40px;
+}
+
+footer{
+  margin-top: 40px;
+  padding: 40px 0px;
+  text-align: center;
+  border-top: 1px solid #e6e6e6;
+  font-size: 0.8em;
+  color: #858585;
+}
+
+footer a{
+  color: #5b7f9b;
+}
+
+footer a:hover{
+  text-decoration: underline;
+  color: #157ac6;
 }
 
 header{
