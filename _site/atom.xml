@@ -4,7 +4,7 @@
  <title>Marcgg#Blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2013-02-03T16:15:58+01:00</updated>
+ <updated>2013-02-03T16:57:47+01:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -12,6 +12,116 @@
  </author>
 
  
+  
+   <entry>
+     <title>Developers, Share Your Technical Knowledge</title>
+     <link href="http://marcgg.com/blog/2013/02/04/developers-teach-non-tech-startup"/>
+     <updated>2013-02-04T00:00:00+01:00</updated>
+     <id>http://marcgg.com/blog/2013/02/04/developers-teach-non-tech-startup</id>
+     <content type="html">&lt;p&gt;When you think startup, you might get the picture of a bunch of developers writing code all day. While this can be true, the vast majority will incorporate some people that have absolutely no technical background.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#8217;m thinking about the ones working on marketing, sales, project management, product design, support, business development, graphic design and so on. All of them like the idea of working in a small and promising company, but they never learned anything about coding - and I&amp;#8217;m not here to blame them.&lt;/p&gt;
+
+&lt;h2 id='no_need_to_learn_how_to_code'&gt;No need to learn how to code&lt;/h2&gt;
+
+&lt;p&gt;I&amp;#8217;m personnaly not an advocate of the concept of &lt;a href='http://www.codeyear.com/'&gt;getting everybody to code&lt;/a&gt;. Of course I love this field, but I wouldn&amp;#8217;t say that it is a required skill to live a successful life, no matter how big technology is today.&lt;/p&gt;
+
+&lt;p&gt;However I&amp;#8217;m all for giving people a basic overview of how everything works behind the scene of a successfull piece of software. Then, if the person wants to learn how to code for fun or to make a living out of it, great! But if not, I wouldn&amp;#8217;t mind.&lt;/p&gt;
+
+&lt;p&gt;To each his own and bla bla bla.&lt;/p&gt;
+
+&lt;h2 id='just_get_the_big_picture'&gt;Just get the big picture&lt;/h2&gt;
+
+&lt;p&gt;As a developer, I&amp;#8217;m always trying to give some technical references to my colleagues. Of course I won&amp;#8217;t get into the details about how I optimized a complicated database query, but I might say that I got a page to load faster because I did &lt;em&gt;something&lt;/em&gt; to the way the app talks to the database.&lt;/p&gt;
+
+&lt;p&gt;To sum it up:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Don&amp;#8217;t say&lt;/strong&gt;: &amp;#8220;I refactored module X to speed up the GC in order to stop the memory leak occuring for the workers processing the queue Y.&amp;#8221;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Say&lt;/strong&gt;: &amp;#8220;Our machines would use too much memory doing Y, so I had to improve how we would handle that.&amp;#8221;&lt;/p&gt;
+
+&lt;p&gt;As time passes I might add some information and complexify my vocabulary as people get the idea. It&amp;#8217;s all about introducing concepts step by step.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#8217;m absolutely not saying take them for idiots. They are not. They just do not have the same vocabulary and the same background as me. Imagine a marketing guy showing up and starting to talk about &lt;a href='http://en.wikipedia.org/wiki/Marketing_mix'&gt;4Ps&lt;/a&gt; without giving you any indication of what all those Ps are about.&lt;/p&gt;
+
+&lt;h2 id='what_everyone_should_know'&gt;What everyone should know&lt;/h2&gt;
+
+&lt;p&gt;Spoilers: all that is written here is nothing more than my opinion.&lt;/p&gt;
+
+&lt;p&gt;I think that everyone in a startup working on a web product should know some things about how the software works. This is not the definitive ultimate most awesomest list, so feel free to add your points in the comments and I might update the article accordingly.&lt;/p&gt;
+
+&lt;p&gt;Here we go.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;What code is. The fact that a bunch of text files can create a website, a game or whatever can be surprising for a lot of people.&lt;/li&gt;
+
+&lt;li&gt;What a browser is and understand that there are differences between browsers.&lt;/li&gt;
+
+&lt;li&gt;Recognize different kinds of problems. A complete crash is not as bad as a CSS alignment issue or a word change.&lt;/li&gt;
+
+&lt;li&gt;How to report a bug and understand that developers are not wizards that can guess the steps to reproduce it (if only).&lt;/li&gt;
+
+&lt;li&gt;What &lt;a href='http://en.wikipedia.org/wiki/Software_regression'&gt;software regression&lt;/a&gt; is, or why sometimes a feature working yesterday is broken today.&lt;/li&gt;
+
+&lt;li&gt;What a server is.&lt;/li&gt;
+
+&lt;li&gt;Understand that something can be really complicated even if it seems simple. It&amp;#8217;s rarely about just &amp;#8220;adding a button&amp;#8221;, there is &lt;strong&gt;way more&lt;/strong&gt; to a feature than the UI.&lt;/li&gt;
+
+&lt;li&gt;What it means to deploy something in production. What is a migration. Why every once in a while you need to put the site down for maintenance.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It&amp;#8217;s not much, but knowing all this will help a lot communication between the development team and everyone else. To an extent it will also help the team be more efficient. Obviously it&amp;#8217;s easier when everyone within a team can have a &lt;a href='http://martinfowler.com/bliki/UbiquitousLanguage.html'&gt;common vocabulary&lt;/a&gt; to talk about what occurs during development.&lt;/p&gt;
+
+&lt;p&gt;Going further, there are some subjects that can be very interesting if someone wanted to learn more. This can be particularly good for a person working on the product or selling it. Knowing more gives a better insight on what the app &lt;em&gt;could&lt;/em&gt; do based on what is already there.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Databases. How things are stored, how the data can be used.&lt;/li&gt;
+
+&lt;li&gt;What are the possibilities and &lt;a href='/blog/2012/09/24/working-with-apis-facebook/'&gt;risks&lt;/a&gt; of using third party APIs.&lt;/li&gt;
+
+&lt;li&gt;Performances. What can make a site slow. Understand what asynchronous means.&lt;/li&gt;
+
+&lt;li&gt;Code reusability and its limit. Why it&amp;#8217;s good to have a consistent product.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Bonus points to learn if you want to show off at dinner parties:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In most cases the cloud is really just a fancy way of talking about the internet.&lt;/li&gt;
+
+&lt;li&gt;Developers are just as bad as you at fixing printers.&lt;/li&gt;
+
+&lt;li&gt;Internet Explorer is terrible. Critize it and befriend developers.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='learning_something_different_is_also_for_developers'&gt;Learning something different is also for developers&lt;/h2&gt;
+
+&lt;p&gt;Working in a small structure like a startup is a lot of fun because you get to see what everybody is doing. All the people involved should take this opportunity to learn more.&lt;/p&gt;
+
+&lt;p&gt;So far I&amp;#8217;ve talked a lot about non-technical people learning technical things, but a good idea for another blog post would be developers learning things non related to coding!&lt;/p&gt;
+
+&lt;p&gt;For instance knowing a bit about product design can help you catch wireframe mistakes before implementing them, or see an easy to create feature that could improve the application because you knew exactly what is possible with the current code base.&lt;/p&gt;
+
+&lt;p&gt;A front-end with an eye for graphic design could add a little polish to a website using the latest CSS3 techniques that the designer maybe didn&amp;#8217;t know about.&lt;/p&gt;
+
+&lt;h2 id='be_nice'&gt;Be nice&lt;/h2&gt;
+
+&lt;p&gt;This part is mainly a few tips for my fellow developers.&lt;/p&gt;
+
+&lt;p&gt;If you decide to follow my advice - or if you already do what I&amp;#8217;m talking about, keep in mind that a lot of things that we take for granted are only obvious because we&amp;#8217;ve been playing around with computers for waaay too long. If someone doesn&amp;#8217;t get it, take the time to explain. No matter what it is. Remember that you had to learn this too at some point.&lt;/p&gt;
+
+&lt;p&gt;Be aware that what you can find amazing can be really boring for others, so don&amp;#8217;t go too far harassing people with technical facts. Stick to what&amp;#8217;s important, but stay available and helpful. Of course if the person wants to know more, go crazy.&lt;/p&gt;
+
+&lt;p&gt;To help you be clear in your explanations, remember that &lt;a href='http://programmers.stackexchange.com/questions/2410/whats-a-good-programming-metaphor'&gt;metaphors&lt;/a&gt; can go a &lt;a href='http://xenia.media.mit.edu/~mt/thesis/mt-thesis-2.2.html'&gt;long way&lt;/a&gt;. Extrem programming even lists this as &lt;a href='http://en.wikipedia.org/wiki/Extreme_programming_practices#System_metaphor'&gt;a good practice&lt;/a&gt; that can &lt;a href='http://reports-archive.adm.cs.cmu.edu/anon/isri/CMU-ISRI-03-103.pdf'&gt;have positive results&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Personnaly, I like talking about robots walking around a warehouse doing tasks while I&amp;#8217;m yelling orders from afar&amp;#8230; and now that I&amp;#8217;m writing that, I think I might pass for someone with a very odd job!&lt;/p&gt;
+
+&lt;h2 id='go'&gt;Go!&lt;/h2&gt;
+
+&lt;p&gt;If you agree that this is important and you&amp;#8217;re a developer, go ahead and start explaining what you&amp;#8217;re doing to others!&lt;/p&gt;
+
+&lt;p&gt;If you are on the non technical side of things, ask your colleagues writing code what&amp;#8217;s up. Most of them would be happy to explain. If they aren&amp;#8217;t, drop me a line &lt;a href='http://twitter.com/marcgg'&gt;on twitter&lt;/a&gt; and if I can, I&amp;#8217;ll happily take a few minutes to help you out!&lt;/p&gt;</content>
+   </entry>
   
  
   
