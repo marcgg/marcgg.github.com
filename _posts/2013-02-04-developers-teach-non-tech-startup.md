@@ -109,11 +109,11 @@ the app _could_ do based on what is already there.
 - Performances. What can make a site slow. Understand what asynchronous means.
 - Code reusability and its limit.
 
-Bonus points to learn if you want to show off at diner parties:
+Bonus points to learn if you want to show off at dinner parties:
 
 - In most cases the cloud is really just a fancy way of talking about the internet.
 - Developers are just as bad as you at fixing printers.
-- Internet Explorer is terrible. Critizing it and make developers happy.
+- Internet Explorer is terrible. Critize it and make developers happy.
 
 ## Learning something different is also for developers
 

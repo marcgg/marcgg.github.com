@@ -1,6 +1,6 @@
 source :rubygems
 
-gem "jekyll", "=0.11.2"
+gem "jekyll"
 
 # Requires Pygments
 # sudo easy_install Pygments
