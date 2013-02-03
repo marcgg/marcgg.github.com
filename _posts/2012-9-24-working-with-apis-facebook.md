@@ -4,7 +4,7 @@ title: "The Risks of Working With Another Company's API"
 description: "A point of view and advices to people wanting to build on top of an existing platform such as Facebook or Twitter."
 blog: true
 category: blog
-tags: [Dev, Product]
+tag: Product
 ---
 
 {% include JB/setup %}

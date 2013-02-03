@@ -4,13 +4,15 @@
  <title>Marcgg#Blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2013-01-31T00:15:10+01:00</updated>
+ <updated>2013-02-02T23:08:09+01:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
    <email>marcg.gauthier@gmail.com</email>
  </author>
 
+ 
+  
  
   
    <entry>
@@ -22,7 +24,7 @@
 
 &lt;p&gt;This means that a majority of the code I write will end up displaying something in a browser. Of course I do &lt;a href='/2012/09/24/working-with-apis-facebook/'&gt;interact with APIs&lt;/a&gt;, write background jobs, add some security, optimize databases and so on&amp;#8230; the point here is that, professionnally, I do not write entire projects that have nothing to do with a web app.&lt;/p&gt;
 
-&lt;p&gt;My friend &lt;a href='http://www.andreberlemont.com/portfolio/'&gt;André&lt;/a&gt; on the other hand has a different background as he mainly &lt;a href='http://www.oneliferemains.com/'&gt;develops games&lt;/a&gt;. One evening we started talking about how complex it would be to create an online multiplayer game from scratch. Being the web guy, I felt that I should know how all this was supposed to work&amp;#8230; after all, the multiplayer appens over the internet, right?&lt;/p&gt;
+&lt;p&gt;My friend &lt;a href='http://www.andreberlemont.com/portfolio/'&gt;André&lt;/a&gt; on the other hand has a different background as he mainly &lt;a href='http://www.oneliferemains.com/'&gt;develops games&lt;/a&gt;. One evening we started talking about how complex it would be to create an online multiplayer game from scratch. Being the web guy, I felt that I should know how all this was supposed to work&amp;#8230; after all, the multiplayer happens over the internet, right?&lt;/p&gt;
 
 &lt;h2 id='i_can_code_that_with_my_eyes_closed'&gt;I Can Code That With My Eyes Closed&amp;#8230;?&lt;/h2&gt;
 
@@ -53,7 +55,7 @@
 &lt;ul&gt;
 &lt;li&gt;There are n players represented as squares on a board.&lt;/li&gt;
 
-&lt;li&gt;1 player is the target and earn 1 point per 30 movements.&lt;/li&gt;
+&lt;li&gt;1 player is the target and earns 1 point per 30 movements.&lt;/li&gt;
 
 &lt;li&gt;If another player hits the target, she becomes the target and win 1 point.&lt;/li&gt;
 &lt;/ul&gt;

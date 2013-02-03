@@ -10,6 +10,28 @@
   {{ content }}
 
   <div id="more">
+    {% assign has_res=false %}
+    {% capture res %}
+      {% for post in site.posts %}
+        {% if post.blog == true and post.tag == page.tag and page.title != post.title%}
+          {% assign has_res=true %}
+          <li><a href="{{ BASE_PATH }}{{ post.url}}">{{post.title}}</a></li>
+        {% endif %}
+      {% endfor %}
+    {% endcapture %}
+
+    <div id="more-articles">
+      {% if has_res %}
+        <p>You might also be interested in reading:</p>
+        <ul>
+          {{ res }}
+        </ul>
+        <p>... or <a href="/blog">some other article</a> from my blog!</p>
+      {% else %}
+      <p>If you liked this article, feel free to <a href="/blog">browse other articles
+        on my blog</a></p>
+      {% endif %}
+    </div>
     <a href="https://twitter.com/marcgg" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @marcgg</a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 

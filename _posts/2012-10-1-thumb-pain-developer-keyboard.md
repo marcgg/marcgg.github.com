@@ -6,7 +6,7 @@ again. This can be bad for some hand muscles. Here's one of the
 tricks I use every day to avoid any unecessary pain."
 blog: true
 category: blog
-tags: [Dev, Health]
+tag: Health
 ---
 
 {% include JB/setup %}
