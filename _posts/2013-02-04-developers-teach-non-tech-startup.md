@@ -89,6 +89,7 @@ Here we go.
   a feature than the UI.
 - What it means to deploy something in production. What is a migration.
   Why every once in a while you need to put the site down for maintenance.
+- What a URL is.
 
 It's not much, but knowing all this will help a lot communication between the development
 team and everyone else. To an extent it will also help the team be more
