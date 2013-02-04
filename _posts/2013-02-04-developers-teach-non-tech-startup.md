@@ -147,7 +147,9 @@ be really boring for others, so don't go too far harassing people with technical
 Stick to what's important, but stay available and helpful.
 Of course if the person wants to know more, go crazy.
 
-To help you be clear in your explanations, remember that
+To help you be clear in your explanations, it's convenient to have some graphs,
+simple flow charts or even drawings that you can refer to when discussing a subject.
+Also, remember that
 [metaphors](http://programmers.stackexchange.com/questions/2410/whats-a-good-programming-metaphor)
 can go a [long way](http://xenia.media.mit.edu/~mt/thesis/mt-thesis-2.2.html). Extrem programming
 even lists this as [a good practice](http://en.wikipedia.org/wiki/Extreme_programming_practices#System_metaphor)
@@ -155,6 +157,7 @@ that can [have positive results](http://reports-archive.adm.cs.cmu.edu/anon/isri
 
 Personnaly, I like talking about robots walking around a warehouse doing tasks while
 I'm yelling orders from afar... and now that I'm writing that, I think I might pass for someone with a very odd job!
+
 
 ## Go!
 
