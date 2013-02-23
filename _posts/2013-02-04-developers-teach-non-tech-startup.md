@@ -77,8 +77,8 @@ Here we go.
   create a website, a game or whatever can be surprising for a lot of people.
 - What a browser is and understand that there are differences between
   browsers.
-- Recognize different kinds of problems. A complete crash is not as bad as
-  a CSS alignment issue or a word change.
+- Recognize different kinds of problems. A complete crash is way worse
+  than a CSS alignment issue or a word change!
 - How to report a bug and understand that developers are not wizards that can
   guess the steps to reproduce it (if only).
 - What [software regression](http://en.wikipedia.org/wiki/Software_regression) is,

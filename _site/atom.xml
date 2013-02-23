@@ -4,7 +4,7 @@
  <title>Marcgg#Blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2013-02-08T20:44:23+01:00</updated>
+ <updated>2013-02-23T19:40:15+01:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -57,7 +57,7 @@
 
 &lt;li&gt;What a browser is and understand that there are differences between browsers.&lt;/li&gt;
 
-&lt;li&gt;Recognize different kinds of problems. A complete crash is not as bad as a CSS alignment issue or a word change.&lt;/li&gt;
+&lt;li&gt;Recognize different kinds of problems. A complete crash is way worse than a CSS alignment issue or a word change!&lt;/li&gt;
 
 &lt;li&gt;How to report a bug and understand that developers are not wizards that can guess the steps to reproduce it (if only).&lt;/li&gt;
 
