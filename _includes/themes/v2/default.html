@@ -25,15 +25,39 @@
       <div id="logo"></div>
       <nav>
         <a href="/blog" class="{% if page.category == 'blog' %} selected {% endif %}">Blog</a>
+        <a href="/photos" class="{% if page.category == 'photos' %} selected {% endif %}">Photo</a>
         <a href="/" class="{% if page.category == 'about' %} selected {% endif %}">About</a>
       </nav>
     </header>
 
-    <div id="container">
-      <div id="content" class="">
-        {{ content }}
+    {% if page.category == 'photos' %}
+      <div id="photo-container">
+        <div id="container">
+          <div id="photo-menu">
+            <a href="/photos/" class="{% if page.photos == 'favorites' %} selected {% endif %}">Favorites</a>
+            <a href="/photos/traveling.html" class="{% if page.photos == 'traveling' %} selected {% endif %}">Traveling</a>
+            <a href="/photos/people.html" class="{% if page.photos == 'people' %} selected {% endif %}">People</a>
+            <a href="/photos/iceland.html" class="{% if page.photos == 'iceland' %} selected {% endif %}">Iceland</a>
+            <a href="/photos/street_art.html" class="{% if page.photos == 'street_art' %} selected {% endif %}">Street Art</a>
+            <a href="/photos/tigerlily.html" class="{% if page.photos == 'tigerlily' %} selected {% endif %}">Tigerlily</a>
+            <a href="/photos/bastille.html" class="{% if page.photos == 'bastille' %} selected {% endif %}">Bastille</a>
+            <a href="/photos/nyc.html" class="{% if page.photos == 'nyc' %} selected {% endif %}">NYC</a>
+            <a href="/photos/1984.html" class="{% if page.photos == 1984 %} selected {% endif %}">1984</a>
+            <a href="/photos/random.html" class="{% if page.photos == 'random' %} selected {% endif %}">Random</a>
+            <a href="/photos/sarajevo.html" class="{% if page.photos == 'sarajevo' %} selected {% endif %}">Sarajevo</a>
+            <a href="/photos/in_motion.html" class="{% if page.photos == 'in_motion' %} selected {% endif %}">In Motion</a>
+            <a href="/photos/disposable_camera.html" class="{% if page.photos == 'disposable_camera' %} selected {% endif %}">Disposable Camera</a>
+          </div>
+        </div>
+        <div id="photo-content">{{ content }}</div>
       </div>
-    </div>
+    {% else %}
+      <div id="container">
+        <div id="content" class="">
+          {{ content }}
+        </div>
+      </div>
+    {% endif %}
 
     <footer>
       Website designed by <a href="http://twitter.com/kevintunc">@kevintunc</a>,

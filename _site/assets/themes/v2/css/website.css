@@ -330,3 +330,35 @@ pre{
 .photo img{
   width: 337px;
 }
+
+
+/* PHOTOS */
+#photo-content{
+  width: 1024px;
+  margin: auto;
+}
+#photo-menu{
+  text-align: center;
+  padding: 40px 0px;
+}
+#photo-menu a{
+  font-family: 'Open Sans', sans-serif;
+  display: inline-block;
+  margin: 0px 5px;
+  color: #545454;
+}
+#photo-menu a:hover{
+  text-decoration: none;
+  color: #157ac6;
+}
+
+#photo-menu .selected{
+  font-weight: bold;
+  color: #157ac6;
+}
+
+#photo-content img{
+  display:block;
+  margin: 0px auto 40px auto;
+  border: 2px solid #333;
+}
