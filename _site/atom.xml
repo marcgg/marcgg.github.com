@@ -4,7 +4,7 @@
  <title>Marcgg#Blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2013-03-23T20:22:57+01:00</updated>
+ <updated>2013-03-23T20:28:07+01:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -15,9 +15,9 @@
   
    <entry>
      <title>Please Keep a Changelog For Your Open Source Lib</title>
-     <link href="http://marcgg.com/blog/2013/03/24/please-changelog-open-source"/>
-     <updated>2013-03-24T00:00:00+01:00</updated>
-     <id>http://marcgg.com/blog/2013/03/24/please-changelog-open-source</id>
+     <link href="http://marcgg.com/blog/2013/03/25/please-changelog-open-source"/>
+     <updated>2013-03-25T00:00:00+01:00</updated>
+     <id>http://marcgg.com/blog/2013/03/25/please-changelog-open-source</id>
      <content type="html">&lt;p&gt;I love open source. I think it&amp;#8217;s amazing that some people are willing to share their hard work with everyone and accepting contributions. I don&amp;#8217;t help out myself as much as I&amp;#8217;d like to (couple of commits in &lt;a href='https://github.com/fog/fog/commit/c35f4affa79dea5cf520dd1c954c8f32022dfb96'&gt;fog&lt;/a&gt;, &lt;a href='http://contributors.rubyonrails.org/contributors/marc-g-gauthier/commits'&gt;rails&lt;/a&gt;, &lt;a href='https://github.com/arsduo/koala/commit/85d5e16bccde1b153f861043a7ac818f61409633'&gt;koala&lt;/a&gt; &lt;a href='https://github.com/marcgg/Simple-Placeholder'&gt;&amp;#8230;&lt;/a&gt;) but I use open source frameworks and software every day both professionnally and at home.&lt;/p&gt;
 
 &lt;p&gt;I&amp;#8217;m writing this article because something has been bothering me in a lot of projects I use: they don&amp;#8217;t keep any form of changelog.&lt;/p&gt;
