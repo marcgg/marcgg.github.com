@@ -4,13 +4,118 @@
  <title>Marcgg#Blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2013-03-17T15:06:18+01:00</updated>
+ <updated>2013-03-23T20:22:57+01:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
    <email>marcg.gauthier@gmail.com</email>
  </author>
 
+ 
+  
+   <entry>
+     <title>Please Keep a Changelog For Your Open Source Lib</title>
+     <link href="http://marcgg.com/blog/2013/03/24/please-changelog-open-source"/>
+     <updated>2013-03-24T00:00:00+01:00</updated>
+     <id>http://marcgg.com/blog/2013/03/24/please-changelog-open-source</id>
+     <content type="html">&lt;p&gt;I love open source. I think it&amp;#8217;s amazing that some people are willing to share their hard work with everyone and accepting contributions. I don&amp;#8217;t help out myself as much as I&amp;#8217;d like to (couple of commits in &lt;a href='https://github.com/fog/fog/commit/c35f4affa79dea5cf520dd1c954c8f32022dfb96'&gt;fog&lt;/a&gt;, &lt;a href='http://contributors.rubyonrails.org/contributors/marc-g-gauthier/commits'&gt;rails&lt;/a&gt;, &lt;a href='https://github.com/arsduo/koala/commit/85d5e16bccde1b153f861043a7ac818f61409633'&gt;koala&lt;/a&gt; &lt;a href='https://github.com/marcgg/Simple-Placeholder'&gt;&amp;#8230;&lt;/a&gt;) but I use open source frameworks and software every day both professionnally and at home.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#8217;m writing this article because something has been bothering me in a lot of projects I use: they don&amp;#8217;t keep any form of changelog.&lt;/p&gt;
+
+&lt;p&gt;Before I get started, I just want to let you know that if you have an open source project and don&amp;#8217;t have a changelog, I&amp;#8217;m not pointing fingers going &amp;#8220;shame on you! shame on you!&amp;#8221;. Not at all. I already appreciate and respect the fact that you put your code out there for me to use.&lt;/p&gt;
+
+&lt;p&gt;It&amp;#8217;d just be extra awesome if it was there, that&amp;#8217;s all.&lt;/p&gt;
+
+&lt;h2 id='sometimes_you_just_have_to_update'&gt;Sometimes You Just Have To Update&lt;/h2&gt;
+
+&lt;p&gt;Say I use LibY for a project and it&amp;#8217;s great. So great that it does exactly what I want perfectly so I leave it there without looking at it too much. Maybe after a couple of months I&amp;#8217;ll run into a weird bug that requires me to update LibY or another project has a dependency to a more recent version of LibY. The result is that I need to update.&lt;/p&gt;
+
+&lt;p&gt;So I&amp;#8217;ll go to the repository / website / tracker / github&amp;#8217;s page or whatever and look up the latest version&amp;#8230; and have no clue what changed since last time.&lt;/p&gt;
+
+&lt;p&gt;Of course I could look up every commit since last version, but often my knowledge of the project is too basic to fully understand everything that happened. This is particulary true for very larges projects of which I only use a very small subset.&lt;/p&gt;
+
+&lt;h2 id='i_know_i_know'&gt;I Know, I Know&lt;/h2&gt;
+
+&lt;p&gt;At that point someone will point out that I should keep all my libraries up to date, and that someone would be right. But let&amp;#8217;s stay realistic. While I can find time to update my main dependencies, it is really hard to keep up and have everything at the latest version. And even then, if there is a minor patch version in one of the libraries I use and there is no changelog&amp;#8230; well it&amp;#8217;s still complicated to know if it&amp;#8217;s updatable!&lt;/p&gt;
+
+&lt;p&gt;I&amp;#8217;m sure someone else will say that my automated tests should find any bug when I update. This is true as well, it is always better to be able to have an exhaustive test suite that guaranties you that nothing will break. But we live in the real world and test suites are not perfect. You could even argue that testing your libraries is not within the scope of your app.&lt;/p&gt;
+
+&lt;p&gt;And hey, if &lt;a href='https://github.com/blog/1440-today-s-email-incident'&gt;Github&lt;/a&gt; can get it wrong, how can I not fail every once in a while!&lt;/p&gt;
+
+&lt;p&gt;Lastly I also wanted to point out that sometimes checking the changelog is not the only thing you need to do. If you want to update a very major and central library, checking quickly the changelog is clearly not enough. You need to make sure everything still works fine, maybe look up the discussion that went on to lead to this new release and so on.&lt;/p&gt;
+
+&lt;p&gt;However, even in that case, a simple list of the changes is still a good point to start your reflexion on how you should update.&lt;/p&gt;
+
+&lt;h2 id='the_changelog_i_need'&gt;The Changelog I Need&lt;/h2&gt;
+
+&lt;p&gt;I don&amp;#8217;t need much to be in a changelog. If you want to make me (and probably other developers) happy, here&amp;#8217;s what would do the trick.&lt;/p&gt;
+
+&lt;h3 id='a_version_number_that_makes_sense'&gt;A Version Number That Makes Sense&lt;/h3&gt;
+
+&lt;p&gt;If it&amp;#8217;s a release candidate, label it RC. If it&amp;#8217;s a beta or an alpha, write it down as well. I want to know if this version is supposed to be stable.&lt;/p&gt;
+
+&lt;p&gt;Keep a logical versioning logic and stick to it. I don&amp;#8217;t care exactly how you do it, as long as you explain it. People like to go MAJOR.MINOR.PATCH, so if it&amp;#8217;s like that it&amp;#8217;s even better, but really anything that helps me understand if there are bug fixes, new features or breaking DSL changes in the update is perfect.&lt;/p&gt;
+
+&lt;h3 id='a_changelog_file'&gt;A Changelog File&lt;/h3&gt;
+
+&lt;p&gt;A file called &amp;#8220;changelog&amp;#8221; somewhere at the root of your project. Maybe you want to keep track of changing versions on your website and that&amp;#8217;s fine. I would still love if the file was there and referenced the place you want to keep the actual changes.&lt;/p&gt;
+
+&lt;h3 id='a_brief_list_of_what_changed'&gt;A Brief List Of What Changed&lt;/h3&gt;
+
+&lt;p&gt;Again, you don&amp;#8217;t need to be exhaustive. I usually want to know:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Did anything changed so much I&amp;#8217;d need to update my code?&lt;/li&gt;
+
+&lt;li&gt;What are the new features?&lt;/li&gt;
+
+&lt;li&gt;Are there bugfixes? Security updates?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;No need to make it long, no need to reference the commits or tickets. While it&amp;#8217;s nice to have, a simple bullet point list with a entence for each major change is usually enough for me to get the big picture.&lt;/p&gt;
+
+&lt;h2 id='example_why_i_love_thins_changelog'&gt;Example: Why I Love Thin&amp;#8217;s Changelog&lt;/h2&gt;
+
+&lt;p&gt;Let&amp;#8217;s look at some of what &lt;a href='http://macournoyer.com/'&gt;Marc-André Cournoyer&lt;/a&gt; did with &lt;a href='https://github.com/macournoyer/thin'&gt;thin&lt;/a&gt;&amp;#8217;s &lt;a href='https://github.com/macournoyer/thin/blob/master/CHANGELOG'&gt;changelog&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;== 1.5.1 Straight Razor
+ * Fix issue when running as another user/group without a PID file.
+ * Allow overriding Connection &amp;amp; Server response headers.
+ * Update vlad example [Mathieu Lemoine]
+ * Keep connections in a Hash to speedup deletion [slivu]
+ * Force kill using already known pid. Prevents &amp;quot;thin stop&amp;quot;
+   from leaving a process that removed its pid file,
+    but is still running
+    (e.g. hung on some at_exit callback) [Michal Kwiatkowski]
+
+== 1.5.0 Knife
+ * Fix compilation under Ubuntu 12.04
+   with -Werror=format-security option.
+ * Raise an error when no PID file.
+ * Prevent duplicate response headers.
+ * Make proper response on exception [MasterLambaster].
+ * Automatically close idling pipeline connections on
+   server stop [MasterLambaster].
+
+== 1.4.1 Chromeo Fix
+ * Fix error when sending USR1 signal and no log file is supplied.
+
+== 1.4.0 Chromeo
+ * kill -USR1 $PID for log rotation [catwell].
+ * Fix HUP signal being reseted after deamonization [atotic].
+ * Fix error with nil addresses in Connection#socket_address.&lt;/code&gt;&lt;/pre&gt;
+&lt;img alt='Rainbows' src='/assets/blog/rainbows.png' style='margin: 0px auto 20px auto; display: block;' /&gt;
+&lt;p&gt;To me it&amp;#8217;s perfect. Not too long and very clear. He mentions contributors and even have codenames for each release making it extra easy to remember. You can clearly see what&amp;#8217;s new in each release and what will happen if you update. This also gives a good overview of how the project is doing.&lt;/p&gt;
+
+&lt;h2 id='pretty_please'&gt;Pretty Please?&lt;/h2&gt;
+
+&lt;p&gt;If you have an open source project and want to be even nicer to the people using it, please please please keep a changelog.&lt;/p&gt;
+
+&lt;p&gt;You don&amp;#8217;t need to make it fancy, but anything would be better than random version numbers with no explanations.&lt;/p&gt;
+
+&lt;p&gt;Thanks!&lt;/p&gt;</content>
+   </entry>
+  
  
   
    <entry>

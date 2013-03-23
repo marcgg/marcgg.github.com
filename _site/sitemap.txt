@@ -17,6 +17,7 @@ http://marcgg.com/photos/tigerlily.html
 http://marcgg.com/photos/traveling.html
 http://marcgg.com/sitemap.txt
 
+http://marcgg.com/blog/2013/03/24/please-changelog-open-source
 http://marcgg.com/blog/2013/02/04/developers-teach-non-tech-startup
 http://marcgg.com/blog/2013/01/14/html5-nodejs-websockets-games-learning
 http://marcgg.com/blog/2013/01/06/left-tigerlily-job
