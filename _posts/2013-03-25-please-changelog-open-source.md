@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Please Keep a Changelog For Your Open Source Lib"
-description: "Having an up to date list of changes in your open source
-project is priceless. Here's why."
+description: "Keeping an up to date list of changes in your open source
+project is a must have. Here's why."
 blog: true
 category: blog
 tag: Dev
@@ -19,13 +19,13 @@ I don't help out myself as much as I'd like to (couple of commits in
 [...](https://github.com/marcgg/Simple-Placeholder))
 but I use open source frameworks and software every day both professionnally and at home.
 
-I'm writing this article because something has been bothering me in a lot
+Today I'm writing this article because something has been bothering me in a lot
 of projects I use: they don't keep any form of changelog.
 
-Before I get started, I just want to let you know that
-if you have an open source project and don't have a changelog, I'm not
-pointing fingers going "shame on you! shame on you!". Not at all.
-I already appreciate and respect the fact that you put your code out there for me
+Before I get started, I just want to make clear that
+if you have an open source project and don't keep a changelog, I don't
+want to be pointing fingers going "shame on you! shame on you!". Not at all.
+I really appreciate and respect the fact that you put your code out there for me
 to use.
 
 It'd just be extra awesome if it was there, that's all.
@@ -33,11 +33,11 @@ It'd just be extra awesome if it was there, that's all.
 ## Sometimes You Just Have To Update
 
 Say I use LibY for a project and it's great. So great that it does
-exactly what I want perfectly so I leave it there without looking at it
+exactly what I want perfectly and I end up leaving it there without looking at it
 too much. Maybe after a couple of months I'll run
-into a weird bug that requires me to update LibY or another
+into a weird bug that requires me to update LibY, or maybe another
 project has a dependency to a more recent version of LibY.
-The result is that I need to update.
+The result will be that I need to update.
 
 So I'll go to the repository / website / tracker / github's page or
 whatever and look up the latest version... and have no clue what
@@ -51,11 +51,11 @@ which I only use a very small subset.
 ## I Know, I Know
 
 At that point someone will point out that I should keep all my libraries
-up to date, and that someone would be right. But let's stay realistic.
+up to date. Obviously that someone would be right, but let's stay realistic.
 While I can find time to update my main dependencies, it is really hard
 to keep up and have everything at the latest version. And even then, if
-there is a minor patch version in one of the libraries I use and there
-is no changelog... well it's still complicated to know if it's updatable!
+there is a minor update in one of the libraries I use and there
+is no changelog... well it would still be complicated to know if it's updatable!
 
 I'm sure someone else will say that my automated tests should find any bug when I
 update. This is true as well, it is always better to be able to have an
@@ -109,8 +109,8 @@ Again, you don't need to be exhaustive. I usually want to know:
 - Are there bugfixes? Security updates?
 
 No need to make it long, no need to reference the commits or tickets.
-While it's nice to have, a simple bullet point list with a
-entence for each major change is usually enough for me to get the big picture.
+While it's a nice thing to have, a simple bullet point list with a
+sentence for each major change is usually enough for me to get the big picture.
 
 ## Example: Why I Love Thin's Changelog
 
