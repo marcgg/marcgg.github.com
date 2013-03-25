@@ -4,7 +4,7 @@
  <title>Marcgg#Blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2013-03-24T13:34:49+01:00</updated>
+ <updated>2013-03-25T09:59:29+01:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -32,7 +32,7 @@
 
 &lt;p&gt;So I&amp;#8217;ll go to the repository / website / tracker / github&amp;#8217;s page or whatever and look up the latest version&amp;#8230; and have no clue what changed since last time.&lt;/p&gt;
 
-&lt;p&gt;Of course I could look up every commit since last version, but often my knowledge of the project is too basic to fully understand everything that happened. This is particulary true for very larges projects of which I only use a very small subset.&lt;/p&gt;
+&lt;p&gt;Of course I could look up every commit since last version, but often my knowledge of the project is too basic to fully understand everything that happened. This is particulary true for very large projects of which I only use a very small subset.&lt;/p&gt;
 
 &lt;h2 id='i_know_i_know'&gt;I Know, I Know&lt;/h2&gt;
 

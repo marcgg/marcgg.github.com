@@ -15,7 +15,7 @@ share their hard work with everyone and accepting contributions.
 I don't help out myself as much as I'd like to (couple of commits in
 [fog](https://github.com/fog/fog/commit/c35f4affa79dea5cf520dd1c954c8f32022dfb96),
 [rails](http://contributors.rubyonrails.org/contributors/marc-g-gauthier/commits),
-[koala](https://github.com/arsduo/koala/commit/85d5e16bccde1b153f861043a7ac818f61409633) 
+[koala](https://github.com/arsduo/koala/commit/85d5e16bccde1b153f861043a7ac818f61409633)
 [...](https://github.com/marcgg/Simple-Placeholder))
 but I use open source frameworks and software every day both professionnally and at home.
 
@@ -45,7 +45,7 @@ changed since last time.
 
 Of course I could look up every commit since last version, but often my
 knowledge of the project is too basic to fully understand everything
-that happened. This is particulary true for very larges projects of
+that happened. This is particulary true for very large projects of
 which I only use a very small subset.
 
 ## I Know, I Know
