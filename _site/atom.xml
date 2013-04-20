@@ -4,13 +4,94 @@
  <title>Marcgg#Blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2013-04-20T20:06:23+02:00</updated>
+ <updated>2013-04-20T23:06:45+02:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
    <email>marcg.gauthier@gmail.com</email>
  </author>
 
+ 
+  
+   <entry>
+     <title>What I Learned While Giving Classes</title>
+     <link href="http://marcgg.com/blog/2013/04/22/what-i-learned-giving-classes"/>
+     <updated>2013-04-22T00:00:00+02:00</updated>
+     <id>http://marcgg.com/blog/2013/04/22/what-i-learned-giving-classes</id>
+     <content type="html">&lt;p&gt;A few months back I wrote &lt;a href='/blog/2013/02/04/developers-teach-non-tech-startup/'&gt;an article about how developers should share their knowledge with others&lt;/a&gt;. Once it was published I received tons of very positive feedbacks from both developers and non tech people, some of them even asking what they should do to learn more about how the web works.&lt;/p&gt;
+
+&lt;p&gt;At the same time I happened to be talking with a &lt;a href='http://emiland.me/'&gt;friend of mine&lt;/a&gt; who started giving classes to young entrepreneurs via &lt;a href='http://leeaarn.com/'&gt;leeaarn&lt;/a&gt; and it seemed pretty cool. Once thing lead to another and I decided it would be a good experiment to take this blog post even further and actually try to create a serie of classes to actually teach something to non developers.&lt;/p&gt;
+
+&lt;h2 id='the_class'&gt;The Class&lt;/h2&gt;
+
+&lt;p&gt;After discuting with &lt;a href='https://twitter.com/antoamiel'&gt;one of leeaarn&amp;#8217;s co-founders&lt;/a&gt; we decided on a format of 3 classes of 2 hours each dedicated to people with little to no experience in creating websites.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Class #1: What is the web (internet, client/servers, networks, IP, DNS&amp;#8230;)&lt;/li&gt;
+
+&lt;li&gt;Class #2: What is coding (Front/Back, HTML/CSS/JS, algorithms&amp;#8230;)&lt;/li&gt;
+
+&lt;li&gt;CLass #3: How to work with developers&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I spent quite a while laying out the content of these classes.&lt;/p&gt;
+
+&lt;p&gt;Of course I already knew the subjects quite well but making complex ideas simple can get pretty hard! Also I had to find a good middle point in technical accuracy and not boring everyone to death with details or wasting too much time.&lt;/p&gt;
+
+&lt;h2 id='what_i_learned'&gt;What I Learned&lt;/h2&gt;
+
+&lt;p&gt;While I already helped out friends or colleagues learning new concepts, this was the first time where I&amp;#8217;d give a class to complete strangers. In the process I learned a lot.&lt;/p&gt;
+
+&lt;h3 id='people_are_interested'&gt;People are interested&lt;/h3&gt;
+
+&lt;p&gt;I was really surprised wheng around 10 people showed up for the class, and even more surprised by how involved they were. A lot of relevant questions were asked and there often was a discussion going on. Questions, as it turned out, are perfect to get instant feedbacks on wether I was clear or not and allowed me to reformulate a lot of my ideas to get my message accross better.&lt;/p&gt;
+
+&lt;p&gt;It was great to see a non tech crowd so genuily interested in concepts as obscure to them as DNS or source control. This made my day every time.&lt;/p&gt;
+
+&lt;h3 id='some_obvious_things_are_not__vice_versa'&gt;Some obvious things are not (&amp;amp; vice versa)&lt;/h3&gt;
+
+&lt;p&gt;While writting my slides for the first class I overlooked some concepts that seemed obvious to me and focused on others that felt more complex. In some cases I was way off and ended up explaining something for a long time while having everyone noding at what I assumed was more complicated!&lt;/p&gt;
+
+&lt;p&gt;For instance I thought that the word &amp;#8220;protocol&amp;#8221; was known by everyone. Spoiler: it&amp;#8217;s not. On the other hand people understood very quickly what HTML, CSS and javascript were and how they intereacted with one another when I thought it would take half the class to get this point accross.&lt;/p&gt;
+
+&lt;h3 id='people_dont_know_much_about_security'&gt;People don&amp;#8217;t know much about security&lt;/h3&gt;
+
+&lt;p&gt;I feel there is a great need of education regarding this topic. For instance it didn&amp;#8217;t shock a lot of people that some websites would store their password without encryption and send them back by email when pressing &amp;#8220;I forgot my password&amp;#8221;.&lt;/p&gt;
+
+&lt;p&gt;I hope I freaked them out enough about the risks they&amp;#8217;ll spend the extra time needed to properly secure their company&amp;#8217;s website :evilsmileyface:&lt;/p&gt;
+
+&lt;h3 id='examples_are_great'&gt;Examples are great&lt;/h3&gt;
+
+&lt;p&gt;I did some live coding and it seemed like it helped them a lot to understand what programming is all about. Overall I&amp;#8217;d say that 2 minute spent in the Chrome inspector are worth 10 slides of tedious HTML syntax description.&lt;/p&gt;
+
+&lt;p&gt;I also spent time in the console, using whois, dig, ping, curl and so on to showcase a bit of the web&amp;#8217;s behind the scene. While I think that the console felt a bit weird to people present (&amp;#8220;wtf is that black screen with lines of text scrolling&amp;#8221;), it helped demonstrate that there is a lot going on when you try to access a website.&lt;/p&gt;
+
+&lt;p&gt;It was also very fun to crash one of the student&amp;#8217;s website with a simple &lt;a href='http://en.wikipedia.org/wiki/Denial-of-service_attack'&gt;DoS attack&lt;/a&gt; to explain what this was all about and introduce a part of the class about performances.&lt;/p&gt;
+
+&lt;h3 id='two_hours_is_short'&gt;Two hours is short&lt;/h3&gt;
+
+&lt;p&gt;At first I was really worried I wouldn&amp;#8217;t have enough material to keep people interested for two hours each class&amp;#8230; but by the last session it seemed like we should have spent a full day talking and there would still be discussions to be had! The subjects I presented are very broad and each have immense ramifications, so staying focused and do not take too much time was actually the hard part.&lt;/p&gt;
+
+&lt;p&gt;To sum it up, I now think that it isn&amp;#8217;t an overstatement when I say &amp;#8220;I could talk about the web for days&amp;#8221;.&lt;/p&gt;
+
+&lt;h3 id='public_speaking_is_a_skill_that_requires_practice'&gt;Public speaking is a skill that requires practice&lt;/h3&gt;
+
+&lt;p&gt;While working on my engineering degree we had quite a lot of projects and keynotes. This taught us to talk in public, and at the end I felt that I got decent at it&amp;#8230; but damn does it go away! This is clearly something you need to work on every once in a while to be efficient right away.&lt;/p&gt;
+
+&lt;p&gt;In my case it came back very quickly, but the first minutes of the class were painful and a better preparation would have fixed that.&lt;/p&gt;
+
+&lt;h3 id='making_complex_things_simple_is_hard'&gt;Making complex things simple is hard&lt;/h3&gt;
+
+&lt;p&gt;Ok, this isn&amp;#8217;t news to anyone who tried to explain how to use a computer to an old relative, but it really is a challenge. While preparing for the class I realized that I wasn&amp;#8217;t really able to explain some concepts off the top of my head. Just like public speaking it&amp;#8217;s a skill that needs practice.&lt;/p&gt;
+
+&lt;p&gt;No wonder the &lt;a href='http://www.reddit.com/r/explainlikeimfive'&gt;Explain Like I&amp;#8217;m 5 subreddit&lt;/a&gt; is so popular, it truly is an intelectual and stylistic exercice!&lt;/p&gt;
+
+&lt;h2 id='overall'&gt;Overall&lt;/h2&gt;
+
+&lt;p&gt;This was a great experience. I got to teach things I am pasionated about and so far I got some very positive feedbacks. I think that I&amp;#8217;ll do it again sometimes!&lt;/p&gt;
+&lt;img alt='Presenting' src='/assets/blog/leeaarn.jpg' style='margin:20px auto; display: block' /&gt;</content>
+   </entry>
+  
  
   
    <entry>
