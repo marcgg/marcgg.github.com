@@ -58,7 +58,7 @@ as obscure to them as DNS or source control. This made my day every time.
 
 ### Some obvious things are not (& vice versa)
 
-While writting my slides for the first class I overlooked some concepts
+While writing my slides for the first class I overlooked some concepts
 that seemed obvious to me and focused on others that felt more complex.
 
 In some cases I was way off, like when I thought that the word "protocol" was known by everyone.

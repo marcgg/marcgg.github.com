@@ -4,7 +4,7 @@
  <title>Marcgg#Blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2013-04-21T14:11:26+02:00</updated>
+ <updated>2013-04-21T14:14:15+02:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -48,7 +48,7 @@
 
 &lt;h3 id='some_obvious_things_are_not__vice_versa'&gt;Some obvious things are not (&amp;amp; vice versa)&lt;/h3&gt;
 
-&lt;p&gt;While writting my slides for the first class I overlooked some concepts that seemed obvious to me and focused on others that felt more complex.&lt;/p&gt;
+&lt;p&gt;While writing my slides for the first class I overlooked some concepts that seemed obvious to me and focused on others that felt more complex.&lt;/p&gt;
 
 &lt;p&gt;In some cases I was way off, like when I thought that the word &amp;#8220;protocol&amp;#8221; was known by everyone. Spoiler: it&amp;#8217;s not. On the other hand people understood very quickly what HTML, CSS and Javascript were and how they intereacted with one another when I thought it would take half the class to get this point accross.&lt;/p&gt;
 
