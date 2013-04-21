@@ -21,9 +21,9 @@ they should do to learn more about how the web works.
 At the same time I happened to be talking with a [friend of mine](http://emiland.me/)
 who started giving classes to young entrepreneurs via [leeaarn](http://leeaarn.com/)
 and it seemed pretty cool.
-Once thing lead to another and I decided it would be a good experiment to take this
+One thing lead to another and I decided it would be a good experiment to take this
 blog post even further and actually try to create a serie of classes to
-actually teach something to non developers.
+teach something to non developers.
 
 ## The Class
 
@@ -44,19 +44,15 @@ boring everyone to death with details or wasting too much time.
 
 ## What I Learned
 
-While I already helped out friends or colleagues learning new concepts,
-this was the first time where I'd give a class to complete strangers.
+While I already helped out friends or teammates learning new concepts,
+this was the first time where I'd give a more formal class to complete strangers.
 In the process I learned a lot.
 
 ### People are interested
 
-I was really surprised wheng around 10 people showed up for the class,
+I was really surprised when around 10 people showed up,
 and even more surprised by how involved they were. A lot of
 relevant questions were asked and there often was a discussion going on.
-Questions, as it turned out, are perfect to get instant feedbacks on wether
-I was clear or not and allowed me to reformulate a lot of my ideas to get
-my message accross better.
-
 It was great to see a non tech crowd so genuily interested in concepts
 as obscure to them as DNS or source control. This made my day every time.
 
@@ -64,12 +60,10 @@ as obscure to them as DNS or source control. This made my day every time.
 
 While writting my slides for the first class I overlooked some concepts
 that seemed obvious to me and focused on others that felt more complex.
-In some cases I was way off and ended up explaining something for a long
-time while having everyone noding at what I assumed was more complicated!
 
-For instance I thought that the word "protocol" was known by everyone.
+In some cases I was way off, like when I thought that the word "protocol" was known by everyone.
 Spoiler: it's not. On the other hand people understood very quickly what
-HTML, CSS and javascript were and how they intereacted with one another
+HTML, CSS and Javascript were and how they intereacted with one another
 when I thought it would take half the class to get this point accross.
 
 ### People don't know much about security
@@ -85,23 +79,24 @@ time needed to properly secure their company's website :evilsmileyface:
 ### Examples are great
 
 I did some live coding and it seemed like it helped them a lot to understand what
-programming is all about. Overall I'd say that 2 minute spent in the Chrome
-inspector are worth 10 slides of tedious HTML syntax description.
+programming is all about. Overall I'd say that 2 minutes spent in the Chrome
+inspector are worth 10 slides of tedious HTML syntax description or
+any other kind of theory.
 
 I also spent time in the console, using whois, dig, ping, curl and so on to
 showcase a bit of the web's behind the scene. While I think that the
-console felt a bit weird to people present ("wtf is that black screen
-with lines of text scrolling"), it helped demonstrate that there is a lot
+console felt a bit weird to people present (the "wtf is that black screen
+with lines of text scrolling?" effect), it helped demonstrate that there is a lot
 going on when you try to access a website.
 
 It was also very fun to crash one of the student's website with a simple
 [DoS attack](http://en.wikipedia.org/wiki/Denial-of-service_attack)
-to explain what this was all about and introduce a part of the class about performances.
+to explain what this was all about and introduce a part of the class about performances!
 
 ### Two hours is short
 
 At first I was really worried I wouldn't have enough material to keep
-people interested for two hours each class... but by the last session it seemed
+people interested for two hours... but by the last session it seemed
 like we should have spent a full day talking and there would still be
 discussions to be had! The subjects I presented are very broad and each have immense
 ramifications, so staying focused and do not take too much time was
@@ -123,17 +118,19 @@ were painful and a better preparation would have fixed that.
 ### Making complex things simple is hard
 
 Ok, this isn't news to anyone who tried to explain how to use a computer to
-an old relative, but it really is a challenge. While preparing for the class I
-realized that I wasn't really able to explain some concepts off the top of my head.
-Just like public speaking it's a skill that needs practice.
+an old relative, but it's always worth mentionning that it really is a challenge.
+While preparing for the class I realized that I wasn't really able to explain some
+concepts off the top of my head. Just like public speaking it's a skill that needs practice.
 
 No wonder the [Explain Like I'm 5 subreddit](http://www.reddit.com/r/explainlikeimfive)
-is so popular, it truly is an intelectual and stylistic exercice!
+is so popular, it truly is an intellectual and stylistic exercice!
 
 ## Overall
 
 This was a great experience. I got to teach things I am pasionated about and so far
 I got some very positive feedbacks. I think that I'll do it again sometimes!
+
+In the meantime, here's a picture of me looking all teachery:
 
 <img src='/assets/blog/leeaarn.jpg' alt='Presenting' style='margin:20px auto; display: block'/>
 
