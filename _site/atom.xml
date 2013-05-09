@@ -4,7 +4,7 @@
  <title>Marcgg#Blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2013-05-06T12:07:39+02:00</updated>
+ <updated>2013-05-09T12:27:17+02:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -20,7 +20,7 @@
      <id>http://marcgg.com/blog/2013/04/22/what-i-learned-teaching-web</id>
      <content type="html">&lt;p&gt;A few months back I wrote &lt;a href='/blog/2013/02/04/developers-teach-non-tech-startup/'&gt;an article about how developers should share their knowledge with others&lt;/a&gt;. Once it was published I received tons of very positive feedbacks from both developers and non tech people, some of them even asking what they should do to learn more about how the web works.&lt;/p&gt;
 
-&lt;p&gt;At the same time I happened to be talking with a &lt;a href='http://emiland.me/'&gt;friend of mine&lt;/a&gt; who started giving classes to young entrepreneurs via &lt;a href='http://leeaarn.com/'&gt;leeaarn&lt;/a&gt; and it seemed pretty cool. One thing lead to another and I decided it would be a good experiment to take this blog post even further and actually try to create a serie of classes to teach something to non developers.&lt;/p&gt;
+&lt;p&gt;At the same time I happened to be talking with a &lt;a href='http://emiland.me/'&gt;friend of mine&lt;/a&gt; who started giving classes to young entrepreneurs via &lt;a href='http://leeaarn.com/'&gt;leeaarn&lt;/a&gt; and it seemed pretty cool. One thing lead to another and I decided it would be a good experiment to take this blog post even further and actually try to create a series of classes to teach something to non developers.&lt;/p&gt;
 
 &lt;h2 id='the_class'&gt;The Class&lt;/h2&gt;
 
@@ -44,7 +44,7 @@
 
 &lt;h3 id='people_are_interested'&gt;People are interested&lt;/h3&gt;
 
-&lt;p&gt;I was really surprised when around 10 people showed up, and even more surprised by how involved they were. A lot of relevant questions were asked and there often was a discussion going on. It was great to see a non tech crowd so genuily interested in concepts as obscure to them as DNS or source control. This made my day every time.&lt;/p&gt;
+&lt;p&gt;I was really surprised when around 10 people showed up, and even more surprised by how involved they were. A lot of relevant questions were asked and there often was a discussion going on. It was great to see a non tech crowd so genuinely interested in concepts as obscure to them as DNS or source control. This made my day every time.&lt;/p&gt;
 
 &lt;h3 id='some_obvious_things_are_not__vice_versa'&gt;Some obvious things are not (&amp;amp; vice versa)&lt;/h3&gt;
 
@@ -68,7 +68,7 @@
 
 &lt;h3 id='two_hours_is_short'&gt;Two hours is short&lt;/h3&gt;
 
-&lt;p&gt;At first I was really worried I wouldn&amp;#8217;t have enough material to keep people interested for two hours&amp;#8230; but by the last session it seemed like we should have spent a full day talking and there would still be discussions to be had! The subjects I presented are very broad and each have immense ramifications, so staying focused and do not take too much time was actually the hard part.&lt;/p&gt;
+&lt;p&gt;At first I was really worried I wouldn&amp;#8217;t have enough material to keep people interested for two hours&amp;#8230; but by the last session it seemed like we should have spent a full day talking and there would still be discussions to be had! The subjects I presented are very broad and each have immense ramifications, so staying focused and not taking too much time was actually the hard part.&lt;/p&gt;
 
 &lt;p&gt;To sum it up, I now think that it isn&amp;#8217;t an overstatement when I say &amp;#8220;I could talk about the web for days&amp;#8221;.&lt;/p&gt;
 

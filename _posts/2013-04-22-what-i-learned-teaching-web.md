@@ -22,7 +22,7 @@ At the same time I happened to be talking with a [friend of mine](http://emiland
 who started giving classes to young entrepreneurs via [leeaarn](http://leeaarn.com/)
 and it seemed pretty cool.
 One thing lead to another and I decided it would be a good experiment to take this
-blog post even further and actually try to create a serie of classes to
+blog post even further and actually try to create a series of classes to
 teach something to non developers.
 
 ## The Class
@@ -53,7 +53,7 @@ In the process I learned a lot.
 I was really surprised when around 10 people showed up,
 and even more surprised by how involved they were. A lot of
 relevant questions were asked and there often was a discussion going on.
-It was great to see a non tech crowd so genuily interested in concepts
+It was great to see a non tech crowd so genuinely interested in concepts
 as obscure to them as DNS or source control. This made my day every time.
 
 ### Some obvious things are not (& vice versa)
@@ -99,7 +99,7 @@ At first I was really worried I wouldn't have enough material to keep
 people interested for two hours... but by the last session it seemed
 like we should have spent a full day talking and there would still be
 discussions to be had! The subjects I presented are very broad and each have immense
-ramifications, so staying focused and do not take too much time was
+ramifications, so staying focused and not taking too much time was
 actually the hard part.
 
 To sum it up, I now think that it isn't an overstatement when I say "I
