@@ -4,13 +4,43 @@
  <title>Marcgg#Blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2013-05-09T12:27:17+02:00</updated>
+ <updated>2013-05-18T21:43:02+02:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
    <email>marcg.gauthier@gmail.com</email>
  </author>
 
+ 
+  
+   <entry>
+     <title>Information About Bots & People Clicking a Link</title>
+     <link href="http://marcgg.com/blog/2013/05/18/track-link-clicks"/>
+     <updated>2013-05-18T00:00:00+02:00</updated>
+     <id>http://marcgg.com/blog/2013/05/18/track-link-clicks</id>
+     <content type="html">&lt;p&gt;A couple of days ago I saw &lt;a href='http://www.zdnet.com/is-microsoft-reading-your-skype-instant-messages-7000015388/'&gt;articles popping around&lt;/a&gt; saying that Microsoft &lt;a href='http://www.h-online.com/security/news/item/Skype-with-care-Microsoft-is-reading-everything-you-write-1862870.html'&gt;is visiting links posted on Skype&lt;/a&gt;. In my opinion it got a bit blown out of proportion, but I&amp;#8217;m not writting this to discuss the matter.&lt;/p&gt;
+
+&lt;p&gt;The thing is that the first thing that came to me is that it would have been pretty hard for a regular user to identify such a thing. This is why I created a very simple project that does just that. You can create a link by entering a password. Then the site gives you two links: one two see your access logs, the other to paste around. If someone clicks the link it saves some info about the user.&lt;/p&gt;
+
+&lt;h2 id='what_it_looks_like'&gt;What It Looks Like&lt;/h2&gt;
+&lt;img alt='' src='/assets/blog/t1.png' style='margin:20px auto; display: block' /&gt;&lt;img alt='' src='/assets/blog/t2.png' style='margin:20px auto; display: block' /&gt;&lt;img alt='' src='/assets/blog/t3.png' style='margin:20px auto; display: block' /&gt;
+&lt;h2 id='its_not_good__but_it_could_be'&gt;It&amp;#8217;s Not Good - But It Could Be&lt;/h2&gt;
+
+&lt;p&gt;Right now it&amp;#8217;s only a couple hours of work. As it is, it won&amp;#8217;t scale. This is mainly because I deploy it on heroku and heroku doesn&amp;#8217;t provide a good database solution for free. After 10000 people try it out I&amp;#8217;ll run out of space and the server will go down.&lt;/p&gt;
+
+&lt;p&gt;It also lacks features and needs a better UI.&lt;/p&gt;
+
+&lt;p&gt;I could improve it a bit and open source the code for people to set up on their own heroku server - or whatever they like. The only thing is that I don&amp;#8217;t really know if there is a point. Web developers can already easily set this up without my help, and I suspect others to not care about this.&lt;/p&gt;
+
+&lt;p&gt;I also had feedbacks of people saying that it could be used for &amp;#8220;evil&amp;#8221; as it gives a very easy way to get the IP and referer of someone&amp;#8230; but again, for anyone with a webserver this is all very basic stuff so I feel like this won&amp;#8217;t be a problem.&lt;/p&gt;
+
+&lt;h2 id='for_now'&gt;For Now&lt;/h2&gt;
+
+&lt;p&gt;Anyways, for the moment being I&amp;#8217;ll put the link out there: &lt;a href='http://tracklink.herokuapp.com'&gt;tracklink.herokuapp.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Depending on the feedbacks I&amp;#8217;ll get - or don&amp;#8217;t get - I&amp;#8217;ll decide what to do with this! Worst case scenario I keep this as a pet project that I use once in a while when feeling paranoid.&lt;/p&gt;</content>
+   </entry>
+  
  
   
    <entry>

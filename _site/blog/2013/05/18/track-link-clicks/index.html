@@ -4,12 +4,12 @@
   <head>
     <meta charset="utf-8">
     <title>
-      Don’t Accept Brokenness
+      Information About Bots & People Clicking a Link
       
         - Marcgg#Blog
       
     </title>
-    <meta name="description" content="For years I've been having a health problem that got fixed in seconds. This got me wondering about how this could apply to other areas of one's life.">
+    <meta name="description" content="I built a very basic app that lets you know who is clicking a link">
     <meta name="author" content="Marc G Gauthier">
 
     <!--[if lt IE 9]> <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -36,35 +36,35 @@
         <div id="content" class="">
           
 <h1>
-  <span>Don’t Accept Brokenness</span>
+  <span>Information About Bots & People Clicking a Link</span>
 </h1>
 
 <div class="published">
-  <span>15 October 2012</span>
+  <span>18 May 2013</span>
 </div>
 
 <div class="post">
-  <p>For a while I had a problem with my jaw. Ten years back I got elbowed in the face (don’t ask), and since then I had trouble yawning or just opening my mouth wide open. I could try to do it, but it would result in the whole thing locking and a good deal of pain.</p>
+  <p>A couple of days ago I saw <a href='http://www.zdnet.com/is-microsoft-reading-your-skype-instant-messages-7000015388/'>articles popping around</a> saying that Microsoft <a href='http://www.h-online.com/security/news/item/Skype-with-care-Microsoft-is-reading-everything-you-write-1862870.html'>is visiting links posted on Skype</a>. In my opinion it got a bit blown out of proportion, but I&#8217;m not writting this to discuss the matter.</p>
 
-<p>The first months I was annoyed, but as time passed I learned to live with it. After all, it was really nothing important. I could eat, speak and do pretty much anything normally. I accepted this as part of how my body functions. Some can’t do a right split, I can’t open my mouth that wide, who cares? I learned how to avoid doing this, and carried on.</p>
+<p>The thing is that the first thing that came to me is that it would have been pretty hard for a regular user to identify such a thing. This is why I created a very simple project that does just that. You can create a link by entering a password. Then the site gives you two links: one two see your access logs, the other to paste around. If someone clicks the link it saves some info about the user.</p>
 
-<p>This year I had to see a doctor regarding some unrelated issue, and I ended up mentioning this fact. She told me that she could take a look at it and, in literally a matter of seconds, she fixed the problem. It’s been a few months and while it’s still not perfect, it’s incredibly better.</p>
+<h2 id='what_it_looks_like'>What It Looks Like</h2>
+<img alt='' src='/assets/blog/t1.png' style='margin:20px auto; display: block' /><img alt='' src='/assets/blog/t2.png' style='margin:20px auto; display: block' /><img alt='' src='/assets/blog/t3.png' style='margin:20px auto; display: block' />
+<h2 id='its_not_good__but_it_could_be'>It&#8217;s Not Good - But It Could Be</h2>
 
-<p>In seconds a ten years problem was fixed.</p>
+<p>Right now it&#8217;s only a couple hours of work. As it is, it won&#8217;t scale. This is mainly because I deploy it on heroku and heroku doesn&#8217;t provide a good database solution for free. After 10000 people try it out I&#8217;ll run out of space and the server will go down.</p>
 
-<p>Seconds.</p>
+<p>It also lacks features and needs a better UI.</p>
 
-<p>Of course this got me thinking: what else is broken that I’m accepting as it is ? At first I went through all the very minor physical problem I was having and discussed it with her. While some were fixable, others were not and some could be improved.</p>
+<p>I could improve it a bit and open source the code for people to set up on their own heroku server - or whatever they like. The only thing is that I don&#8217;t really know if there is a point. Web developers can already easily set this up without my help, and I suspect others to not care about this.</p>
 
-<p>But here’s the thing, that approach doesn’t only apply to health issues. As a matter of fact it works for pretty much everything ! When facing a problem, the easiest response is to simply accept it and deal with it&#8230; while sometimes trying to fix the problem is actually faster, requires less work and is less expensive!</p>
+<p>I also had feedbacks of people saying that it could be used for &#8220;evil&#8221; as it gives a very easy way to get the IP and referer of someone&#8230; but again, for anyone with a webserver this is all very basic stuff so I feel like this won&#8217;t be a problem.</p>
 
-<p>Another example I could give is a door in my appartment that would require you lifting a bit the handle before being able to close it. I did that for months until one day I decided to stop for one second and look at what was going on. In ten minutes I figured it out and was able to fix it by replacing a screw or two.</p>
+<h2 id='for_now'>For Now</h2>
 
-<p>These are just my examples, but for you it could be one piece of legacy code that’s always getting in your way inside your application, or this door that just won’t open without having to jiggle your keys for minutes. It could be this light that flickers a bit, or the fact that you keep on smashing your toes in the same piece of furniture.</p>
+<p>Anyways, for the moment being I&#8217;ll put the link out there: <a href='http://tracklink.herokuapp.com'>tracklink.herokuapp.com</a></p>
 
-<p>All these are minor inconveniences, but you deal with them every day. They waste your time, build frustration, and you don’t even see it because it’s always been like that as far as you can remember!</p>
-
-<p>I’m not saying that everything is fixable, because it’s not true. I’m saying you should take a minute every once in a while to ask yourself if this tiny thing really is unavoidable, if doing something to fix it wouldn’t actually be easier than dealing with it every day.</p>
+<p>Depending on the feedbacks I&#8217;ll get - or don&#8217;t get - I&#8217;ll decide what to do with this! Worst case scenario I keep this as a pet project that I use once in a while when feeling paranoid.</p>
 
   <div id="more">
     
@@ -85,6 +85,18 @@
         
       
         
+          
+          <li><a href="/blog/2013/01/14/html5-nodejs-websockets-games-learning">2 Days Trying To Create a Multiplayer HTML5 Game</a></li>
+        
+      
+        
+      
+        
+          
+          <li><a href="/blog/2012/12/10/angelhack-third-place-paris-hackathon">How We Made Third Place At AngelHack Paris</a></li>
+        
+      
+        
       
         
       
@@ -98,13 +110,7 @@
       
         
           
-          <li><a href="/blog/2012/10/01/thumb-pain-developer-keyboard">How I Avoid Thumb Pain From Too Much Coding</a></li>
-        
-      
-        
-      
-        
-      
+          <li><a href="/blog/2012/01/09/start-working-on-your-side-project">Start Working on Your Side Project Tonight</a></li>
         
       
         
