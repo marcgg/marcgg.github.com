@@ -17,7 +17,7 @@ http://marcgg.com/photos/tigerlily.html
 http://marcgg.com/photos/traveling.html
 http://marcgg.com/sitemap.txt
 
-http://marcgg.com/blog/2013/05/18/track-link-clicks
+http://marcgg.com/blog/2013/05/20/track-link-clicks
 http://marcgg.com/blog/2013/04/22/what-i-learned-teaching-web
 http://marcgg.com/blog/2013/03/25/please-changelog-open-source
 http://marcgg.com/blog/2013/02/04/developers-teach-non-tech-startup
