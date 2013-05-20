@@ -14,7 +14,7 @@ A couple of days ago I saw
 [articles popping around](http://www.zdnet.com/is-microsoft-reading-your-skype-instant-messages-7000015388/)
 saying that Microsoft
 [is visiting links posted on Skype](http://www.h-online.com/security/news/item/Skype-with-care-Microsoft-is-reading-everything-you-write-1862870.html). In my opinion it got a bit blown out of proportion, but I'm
-not wrtting this to discuss the matter.
+not writing this to discuss the matter.
 
 The thing is that the first thing that came to me is that it would have
 been pretty hard for a regular user to identify such a thing.
