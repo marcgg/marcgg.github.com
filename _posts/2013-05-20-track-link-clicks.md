@@ -20,7 +20,7 @@ The thing is that the first thing that came to me is that it would have
 been pretty hard for a regular user to identify such a thing.
 This is why I created a very simple project that does just that.
 You can create a link by entering a password. Then the site gives you
-two links: one two see your access logs, the other to paste around.
+two links: one to see your access logs, the other to paste around.
 If someone clicks the link it saves some info about the user.
 
 ## What It Looks Like
