@@ -51,7 +51,7 @@ pride in the mere act of being born that is really a product of pure luck.
 If my country achieved a lot 300 years ago, what does it has to do with
 me and why should all of this influence the way I feel? If I start
 to think this way, then comes the question of what
-events I should take into account to make up my mind about how I the way
+events I should take into account to make up my mind about the way
 I "live" my nationality.
 It's a hard question because France did great things and was host
 of [amazing](http://en.wikipedia.org/wiki/Voltaire)
