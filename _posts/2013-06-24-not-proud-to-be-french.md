@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Why I'm Not Proud To Be French"
-description: ""
+description: "My take on pride and the feelings linked to
+nationnality."
 blog: true
 category: blog
 tag: Philosophy
