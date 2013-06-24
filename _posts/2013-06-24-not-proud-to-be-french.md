@@ -34,14 +34,14 @@ of where I was born sounds a bit like being proud to be blond, or being
 proud to be right handed. It's a fact about me, true, but it does not
 define me and I had no choice in it.
 
-I can honnestly say that I love France and that being French is a good
+I can honestly say that I love France and that being French is a good
 situation to be in. I'm not necessarily a big fan of
 [every aspect of it](http://www.hadopi.fr/),
 but it's a great place to live. I don't have to pay
 ridiculous tuitions for my education, I get a fair share of freedom,
 Paris is one of my favorite cities, I can go in most places in Europe
 without having to worry about visas and being able to
-speak french will make me seem sofisticated and charming abroad.
+speak french will make me seem sophisticated and charming abroad.
 
 It's pretty cool if you ask me!
 
