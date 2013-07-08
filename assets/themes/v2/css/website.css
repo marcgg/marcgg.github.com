@@ -362,3 +362,40 @@ pre{
   margin: 0px auto 40px auto;
   border: 2px solid #333;
 }
+
+
+
+
+
+
+#flag {
+    width: 30px;
+    height: 15px;
+    text-align: center;
+    border: 1px solid #111;
+    position: relative;
+    background: #fff;
+    margin-top: 5px;
+    float: right;
+}
+
+#flag:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    background: #00f;
+    width: 33%;
+    z-index: 4;
+}
+#flag:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: #f00;
+    width: 33%;
+    z-index: 4;
+}

@@ -12,6 +12,9 @@ category: blog
         <div class="date">{{ post.date | date: "%B %e, %Y" }}</div>
         <div class="excerpt">
           <h4>
+            {% if post.lang == "fr" %}
+            <div id="flag"></div>
+            {% endif %}
             <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
           </h4>
 
