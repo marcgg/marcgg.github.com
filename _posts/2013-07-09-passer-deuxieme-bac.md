@@ -30,16 +30,16 @@ passer le bac à nouveau. Cette fois ci j'ai 25 ans, j'ai fini mes études
 depuis quelques années. Je n'ai aucune envie de changer de carrière, je
 m'amuse plutôt bien à écrire des lignes de code, mais je me demande si j'ai les
 capacités pour réussir l'épreuve. Je fini donc par m'inscrire, ce qui se
-prouva être beaucoup plus simple que prévu - un formulaire en ligne et
+s'avéra être beaucoup plus simple que prévu - un formulaire en ligne et
 c'était réglé.
 
 Me voila donc candidat individuel au Bac L, spécialité Anglais. Je
 devrais passer les épreuves réparties sur deux ans, la première scéance
-proposant le français et les sciences, le reste vennant l'année d'après.
+proposant le français et les sciences, le reste venant l'année d'après.
 L'objectif à ce moment là était de voir si j'arriverais à m'en sortir lors des épreuves
-anticipées. Je me dis que si je pars avec des points de
-retard j'arrêterais les frais ici. Par contre si tout se passe bien je dois
-de continuer jusqu'au bout.
+anticipées. Le plan alors était que si je partais avec des points de
+retard j'arrêterais les frais ici. Par contre si tout se passe bien je
+devrais continuer jusqu'au bout.
 
 Mes deux plus grosses questions sont: vais-je l'avoir et combien aurais-je
 en philo? J'avais été un peu vexé de n'avoir eu que 10/20 dans cette
@@ -69,9 +69,9 @@ créer un dossier frankenstein fait de morceaux d'anabac, de souvenirs de
 ## Les épreuves anticipées
 
 Je ne m'y attendais pas du tout, mais les épreuves se déroulaient toutes
-dans un lycées. Je ne sais pas pourquoi, mais je supposais être avec
-d'autres candidats individuels dans une sorte de centre d'examen, mais
-non. Me voila donc à gratter ma copie double avec des ados qui ont 10
+dans un lycée. Je ne sais pas pourquoi, mais je supposais être avec
+d'autres candidats individuels dans un centre d'examen. Ce ne fut pas le
+cas mais. Me voila donc à gratter ma copie double avec des ados qui ont 10
 ans de moins que moi. On me regarde un peu avec surprise, la barbe
 n'aidant rien.
 
@@ -103,8 +103,8 @@ prochaine avec la suite des épreuves.
 ## La suite des révisions
 
 La deuxième vague d'épreuves s'annonce être bien plus compliquée que la
-première. Tout d'abbord parce qu'il y en a bien plus, mais également parce
-que mon emploi de temps est bien plus compliqué. Je viens de changer de
+première. Tout d'abord parce qu'il y en a bien plus, mais également parce
+que mon emploi du temps est bien plus compliqué. Je viens de changer de
 travail en début d'année et j'ai un voyage au Canada prévu juste avant
 le début des épreuves orales.
 
@@ -123,7 +123,7 @@ n'arrive pas à mener tous les combats de front, je décide de faire
 l'impasse sur énormément de points et me concentrer sur les grandes lignes du
 programme.
 
-Comme pour moi la philosophie est non seulement ce qu'il m'intéresse le
+Comme pour moi la philosophie est non seulement ce qui m'intéresse le
 plus dans ce bac, mais également ce qui déterminera si je l'obtient ou
 non du fait de son coefficient très élevé, j'accorde le plus clair mon temps de
 révision sur cette matière. Hormis les fiches de révision que j'ai pu
@@ -145,7 +145,7 @@ mais sans grand espoir.
 L'autre petite blague est que je suis sensé passer les épreuves de sport, c'est à dire le
 badminton et le 3x500m. Ouch. Bien sûr je pourrais me faire dispenser, mais ça serait tricher. Je me
 retrouve donc à recruter un ami et, deux semaines avant l'épreuve,
-je dois louer terrain pour voir si je me rappelle comment jouer avec ces raquettes.
+je dois louer un terrain pour voir si je me rappelle comment jouer avec ces raquettes.
 
 Enfin revient l'horrible _dossier préparé en cours_ pour les oraux
 d'espagnol et d'anglais. Je dois donc concocter à nouveau une suite de
@@ -166,14 +166,14 @@ difficultés que moi, ce qui me rassure. C'est donc avec une grande
 détresse que je le vois vomir et à moitié tomber dans les pommes à la
 fin du premier 500m... Par contre le badmiton fut une réussite,
 j'imagine que ces années à m'entraîner aux raquettes de plage ont enfin
-payées.
+payé.
 
 <img src='/assets/blog/stade.jpg' alt='Stade' style='margin:20px auto; display: block'/>
 
 
 Les oraux de langue vivantes furent littéralement une épreuve.
-J'étais partit au Canada et
-mon avion revenait lundi matin, ce qui coincidais avec mon oral
+J'étais parti au Canada et
+mon avion revenait lundi matin, ce qui coïncidait avec mon oral
 d'espagnol... _lundi après midi_. C'est donc au saut de l'avion, épuisé et jet laggué, que je me
 suis présenté pour expliquer des textes que je ne comprenais qu'à moitié
 dans une langue que je ne parlais pas. Magique.
@@ -203,7 +203,7 @@ L'épreuve de philosophie était non seulement celle ouvrant la semaine d'hostil
 mais c'est surtout la plus mythique. J'ai choisi le sujet "La science se
 limite-t-elle à constater les faits?" car le deuxième sujet sur le
 langage semblait rempli de pièges et que je ne voulais même pas regarder
-le commentaire de documents... je n'y peut rien, l'épreuve de philo ça sera toujours pour
+le commentaire de documents... je n'y peux rien, l'épreuve de philo ça sera toujours pour
 moi répondre à une question un peu obscure pendant 4 heures!
 
 A la fin de la journée je surveillais les sites de correction en ligne
@@ -223,7 +223,7 @@ Pour être honnête, je n'ai pas réellement ressentit de stress pendant les ép
 même après. Si je n'étais pas reçu, ça ne changerais absolument rien à
 ma vie... mais le jour des résultats j'ai eu l'impression d'être en
 terminale à nouveau. Mine de rien j'avais passé pas mal de temps à faire
-les démarches, monter les dossiers, réviser... et si ce n'était pour
+les démarches, monter les dossiers, réviser... et si c'était pour
 rien? J'ai donc hâté le pas pour arriver au lycée qui affichait les
 résultats.
 
@@ -234,15 +234,15 @@ Finalement je retrouve mon nom sur la paneau des reçus, accolé de la
 mention Bien! Je mentirais si je disais que ce n'étais pas un gros
 soulagement.
 
-A partir de la il m'a fallu récupérer le détail de mes notes et je me suis retrouvé à
+A partir de là il m'a fallu récupérer le détail de mes notes et je me suis retrouvé à
 nouveau incrédule: 9 en littérature, 18 en histoire/géo, 17 en anglais,
 14 en espagnol, 14 en LELE (littérature étrange en langue étrangère),
 20 en philosophie et 10 en sport.
 
 Je pense avoir complètement bloqué sur le 20 en philo. J'ai du fixer
-cette ligne dans le relevé de note, d'abbord en supposant m'être trompé de
+cette ligne dans le relevé de note, d'abord en supposant m'être trompé de
 ligne, puis en imaginant que c'était 20 après pondération et que j'avais
-donc environ 2,8... mais non. Je suis donc sortit calmement entre les
+donc environ 2,8... mais non. Je suis donc sorti calmement entre les
 lycéens hurlant de joie et ceux pleurant et j'ai effectué une petite danse
 de la victoire.
 
@@ -254,8 +254,8 @@ plaisir. Mon mode de vie actuel me laisse peu de temps libre et le
 remplir ainsi était parfois frustrant. De plus poser des congés pour
 passer des épreuves était assez contrariant.
 
-Cependant si c'était à refaire, je le referrais avec joie. J'ai pu me
-replonger dans des sujets que j'avais complètement oublié et pu donner
+Cependant si c'était à refaire, je le referais avec joie. J'ai pu me
+replonger dans des sujets que j'avais complètement oublié et pu
 donner une nouvelle chance à la philosophie.
 Je me suis d'ailleurs rendu compte à quel point cette matière est difficile
 à l'âge où les lycéens l'abordent.
