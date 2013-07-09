@@ -20,30 +20,33 @@ lesquelles je suis passé ainsi que toutes mes notes - glorieuses ou non.
 
 ## La motivation
 
-J'ai donc mon Bac S en poche, mais à l'époque j'avais hésité
+J'avais donc mon Bac S en poche, cependant à l'époque j'avais hésité
 avec la possibilité de faire un bac L. Il faut dire que
 j'ai toujours eu un attrait pour le côté littéraire des choses, mais comme mon
 objectif était de travailler dans l'informatique, le S s'est imposé.
 
 Un jour je fini par me motiver pour tenter de
-passer le bac à nouveau. Cette fois ci j'ai 25 ans, j'ai fini mes études
-depuis quelques années. Je n'ai aucune envie de changer de carrière, je
-m'amuse plutôt bien à écrire des lignes de code, mais je me demande si j'ai les
-capacités pour réussir l'épreuve. Je fini donc par m'inscrire, ce qui se
-s'avéra être beaucoup plus simple que prévu - un formulaire en ligne et
-c'était réglé.
+passer le bac à nouveau. Juste comme ça.
+Cette fois ci j'ai 25 ans, j'ai fini mes études
+depuis quelques années et je n'ai aucune envie de changer de carrière. Je
+m'amuse même plutôt bien à écrire
+[des lignes de code](http://marcgg.com/blog/2013/01/14/html5-nodejs-websockets-games-learning/),
+mais je me demande vraiment si j'ai les capacités pour réussir l'épreuve sans passer des heures à
+bachoter et sans avoir à m'inscrire au [CNED](http://www.cned.fr/).
 
-Me voila donc candidat individuel au Bac L, spécialité Anglais. Je
-devrais passer les épreuves réparties sur deux ans, la première scéance
+Je fini donc par m'inscrire, ce qui se s'avéra être beaucoup plus simple que prévu.
+[Un formulaire en ligne](http://ocean.siec.education.fr/) et me voila 
+candidat individuel au Bac L, spécialité Anglais.
+
+Je devrais donc passer les épreuves réparties sur deux ans, la première scéance
 proposant le français et les sciences, le reste venant l'année d'après.
 L'objectif à ce moment là était de voir si j'arriverais à m'en sortir lors des épreuves
-anticipées. Le plan alors était que si je partais avec des points de
-retard j'arrêterais les frais ici. Par contre si tout se passe bien je
-devrais continuer jusqu'au bout.
+anticipées. Si je partais avec des points de retard j'arrêterais les frais ici.
+Par contre si tout se passait bien je devrais continuer jusqu'au bout.
 
-Mes deux plus grosses questions sont: vais-je l'avoir et combien aurais-je
+Mes deux plus grosses questions étaient: vais-je l'avoir et combien aurais-je
 en philo? J'avais été un peu vexé de n'avoir eu que 10/20 dans cette
-matière lors de mon Bac S et j'espère faire mieux cette fois ci.
+matière lors de mon Bac S et j'espèrais faire mieux cette fois ci.
 
 ## Le début des révisions
 
@@ -69,10 +72,10 @@ créer un dossier frankenstein fait de morceaux d'anabac, de souvenirs de
 ## Les épreuves anticipées
 
 Je ne m'y attendais pas du tout, mais les épreuves se déroulaient toutes
-dans un lycée. Je ne sais pas pourquoi, mais je supposais être avec
-d'autres candidats individuels dans un centre d'examen. Ce ne fut pas le
-cas mais. Me voila donc à gratter ma copie double avec des ados qui ont 10
-ans de moins que moi. On me regarde un peu avec surprise, la barbe
+dans un lycée. Sans vraiment de raisons je supposais être avec
+d'autres candidats individuels dans un centre d'examen...
+Me voila donc à gratter ma copie double avec des ados qui ont 10
+ans de moins que moi! On me regarde un peu avec surprise, la barbe
 n'aidant rien.
 
 L'oral de français est assez surprenant aussi bien pour moi que pour
