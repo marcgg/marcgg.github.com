@@ -139,7 +139,7 @@ que j'écoute en boucle dans le métro pour me mettre dans le bain.
 ## Les surprises
 
 A mon grand découragement, je découvre avec ma convocation que la LV2 possède un oral. Je
-n'ai pas parlé un mot d'espagnol depuis des années et ,même à l'époque,
+n'ai pas parlé un mot d'espagnol depuis des années et, même à l'époque,
 j'étais plutôt médiocre. Je peux sauver les meubles à l'écrit, mais
 m'envoyer passer l'épreuve orale c'est du suicide.
 Je me lance donc dans des révisions avec [duolingo](http://www.duolingo.com/),
@@ -223,7 +223,7 @@ entre Descartes et les nombres imaginaires.
 ## Les résultats
 
 Pour être honnête, je n'ai pas réellement ressenti de stress pendant les épreuves ou
-même après. Si je n'étais pas reçu, ça ne changerais absolument rien à
+même après. Si je n'étais pas reçu, ça ne changerait absolument rien à
 ma vie... mais le jour des résultats j'ai eu l'impression d'être en
 terminale à nouveau. Mine de rien j'avais passé pas mal de temps à faire
 les démarches, monter les dossiers, réviser... et si c'était pour
@@ -234,7 +234,7 @@ Pour rajouter au suspens je me suis trompé de panneau de jury, et j'ai
 donc passé 2 minutes à chercher désespérément mon nom dans une liste
 dont j'étais forcément absent. De la joie à l'état pur.
 Finalement je retrouve mon nom sur la liste des reçus, accolé de la
-mention Bien! Je mentirais si je disais que ce n'étais pas un gros
+mention Bien! Je mentirais si je disais que ce n'était pas un gros
 soulagement.
 
 A partir de là il m'a fallu récupérer le détail de mes notes et je me suis retrouvé à
