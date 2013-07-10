@@ -96,7 +96,7 @@ quand je lui explique les vraies raisons. Elle me pose énormément de
 questions, bien plus interessée que quand je démontrais le parallèle
 entre _La Peste_ et le nazisme. Notre discussion se conclue par
 l'examinatrice m'expliquant qu'en 15 ans de correction de bac elle
-n'avait jamais vu ça - mais que ça n'influerais pas sur ma note. Dommage.
+n'avait jamais vu ça - mais que ça n'influerait pas sur ma note. Dommage.
 
 Après quelques semaines d'attente, les résultats tombent et je m'en sors
 pas trop mal avec 15 au français écrit, 12 au français oral et 12 en sciences.
