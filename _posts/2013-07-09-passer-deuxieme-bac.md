@@ -34,19 +34,19 @@ m'amuse même plutôt bien à écrire
 mais je me demande vraiment si j'ai les capacités pour réussir l'épreuve sans passer des heures à
 bachoter et sans avoir à m'inscrire au [CNED](http://www.cned.fr/).
 
-Je fini donc par m'inscrire, ce qui se s'avéra être beaucoup plus simple que prévu.
+Je finis donc par m'inscrire, ce qui se s'avéra être beaucoup plus simple que prévu.
 [Un formulaire en ligne](http://ocean.siec.education.fr/) et me voila
 candidat individuel au Bac L, spécialité Anglais.
 
 Je devrais donc passer les épreuves réparties sur deux ans, la première scéance
 proposant le français et les sciences, le reste venant l'année d'après.
 L'objectif à ce moment là était de voir si j'arriverais à m'en sortir lors des épreuves
-anticipées. Si je partais avec des points de retard j'arrêterais les frais ici.
-Par contre si tout se passait bien je devrais continuer jusqu'au bout.
+anticipées. Si je partais avec des points de retard j'arrêterais les frais ici,
+par contre, si tout se passait bien, je devrais continuer jusqu'au bout.
 
 Mes deux plus grosses questions étaient: vais-je l'avoir et combien aurais-je
-en philo? J'avais été un peu vexé de n'avoir eu que 10/20 dans cette
-matière lors de mon Bac S et j'espèrais faire mieux cette fois ci.
+en philo ? J'avais été un peu vexé de n'avoir eu que 10/20 dans cette
+matière lors de mon Bac S et j'espèrais faire mieux cette fois-ci.
 
 ## Le début des révisions
 
@@ -157,9 +157,9 @@ sur la cohérence générale.
 
 ## Les épreuves
 
-Les épreuves de 2014 commencèrent par le sport, qui fut un grand moment de solitude.
+Les épreuves de 2013 commencèrent par le sport, qui fut un grand moment de solitude.
 Imaginez un groupe d'ados de 17-18 ans qui se sont entraînés toute l'année pour l'épreuve,
-et moi qui sait à peine ce qu'il doit se passer.
+et moi qui sais à peine ce qu'il doit se passer.
 
 Le 3x500 est une catastrophe car
 même si je ne suis pas complètement rouillé, c'est une distance assez
