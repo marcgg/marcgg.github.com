@@ -233,7 +233,7 @@ résultats.
 Pour rajouter au suspens je me suis trompé de panneau de jury, et j'ai
 donc passé 2 minutes à chercher désespérément mon nom dans une liste
 dont j'étais forcément absent. De la joie à l'état pur.
-Finalement je retrouve mon nom sur la paneau des reçus, accolé de la
+Finalement je retrouve mon nom sur la liste des reçus, accolé de la
 mention Bien! Je mentirais si je disais que ce n'étais pas un gros
 soulagement.
 
