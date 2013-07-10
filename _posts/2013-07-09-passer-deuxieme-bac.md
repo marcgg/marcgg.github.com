@@ -38,7 +38,7 @@ Je finis donc par m'inscrire, ce qui se s'avéra être beaucoup plus simple que 
 [Un formulaire en ligne](http://ocean.siec.education.fr/) et me voila
 candidat individuel au Bac L, spécialité Anglais.
 
-Je devrais donc passer les épreuves réparties sur deux ans, la première scéance
+Je devrais donc passer les épreuves réparties sur deux ans, la première séance
 proposant le français et les sciences, le reste venant l'année d'après.
 L'objectif à ce moment là était de voir si j'arriverais à m'en sortir lors des épreuves
 anticipées. Si je partais avec des points de retard j'arrêterais les frais ici,
@@ -128,7 +128,7 @@ programme.
 
 Comme pour moi la philosophie est non seulement ce qui m'intéresse le
 plus dans ce bac, mais également ce qui déterminera si je l'obtient ou
-non du fait de son coefficient très élevé, j'accorde le plus clair mon temps de
+non du fait de son coefficient très élevé, j'accorde le plus clair de mon temps de
 révision sur cette matière. Hormis les fiches de révision que j'ai pu
 acheter, je trouve quelques podcasts spécialisés comme
 [Bob Radio](http://www.sfr.com/les-mondes-numeriques/sfr-player/05232012-1009-tendance-bob-radio-les-revisions-dans-la-poche)
