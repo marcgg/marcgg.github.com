@@ -25,7 +25,7 @@ avec la possibilité de faire un bac L. Il faut dire que
 j'ai toujours eu un attrait pour le côté littéraire des choses, mais comme mon
 objectif était de travailler dans l'informatique, le S s'est imposé.
 
-Un jour je fini par me motiver pour tenter de
+Un jour je finis par me motiver pour tenter de
 passer le bac à nouveau. Juste comme ça.
 Cette fois ci j'ai 25 ans, j'ai fini mes études
 depuis quelques années et je n'ai aucune envie de changer de carrière. Je
@@ -35,7 +35,7 @@ mais je me demande vraiment si j'ai les capacités pour réussir l'épreuve sans
 bachoter et sans avoir à m'inscrire au [CNED](http://www.cned.fr/).
 
 Je fini donc par m'inscrire, ce qui se s'avéra être beaucoup plus simple que prévu.
-[Un formulaire en ligne](http://ocean.siec.education.fr/) et me voila 
+[Un formulaire en ligne](http://ocean.siec.education.fr/) et me voila
 candidat individuel au Bac L, spécialité Anglais.
 
 Je devrais donc passer les épreuves réparties sur deux ans, la première scéance
