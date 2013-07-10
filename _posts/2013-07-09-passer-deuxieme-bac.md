@@ -222,7 +222,7 @@ entre Descartes et les nombres imaginaires.
 
 ## Les résultats
 
-Pour être honnête, je n'ai pas réellement ressentit de stress pendant les épreuves ou
+Pour être honnête, je n'ai pas réellement ressenti de stress pendant les épreuves ou
 même après. Si je n'étais pas reçu, ça ne changerais absolument rien à
 ma vie... mais le jour des résultats j'ai eu l'impression d'être en
 terminale à nouveau. Mine de rien j'avais passé pas mal de temps à faire
