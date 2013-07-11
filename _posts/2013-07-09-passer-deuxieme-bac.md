@@ -239,7 +239,7 @@ soulagement.
 
 A partir de là il m'a fallu récupérer le détail de mes notes et je me suis retrouvé à
 nouveau incrédule: 9 en littérature, 18 en histoire/géo, 17 en anglais,
-14 en espagnol, 14 en LELE (littérature étrange en langue étrangère),
+14 en espagnol, 14 en LELE (littérature étrangère en langue étrangère),
 20 en philosophie et 10 en sport.
 
 Je pense avoir complètement bloqué sur le 20 en philo. J'ai du fixer
