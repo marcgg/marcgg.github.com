@@ -39,6 +39,7 @@ header{
   margin: auto;
   height: 80px;
 }
+
 #logo{
   width: 87px;
   height: 38px;
@@ -46,6 +47,7 @@ header{
   margin-top: 22px;
   background: url(/assets/misc/logo.png) no-repeat;
 }
+
 nav{
   padding-top: 25px;
   float: right;
@@ -55,6 +57,7 @@ h1, h2, h3, h4, h5{
   font-family: 'Open Sans', sans-serif;
   color: #1c1c1c;
 }
+
 nav a{
   font-family: 'Open Sans', sans-serif;
   display: inline-block;
@@ -65,10 +68,12 @@ nav a{
   font-size: 0.8em;
   font-weight: bold;
 }
+
 nav .selected{
   color: #e03e3e;
   border-bottom: 3px solid #e03e3e;
 }
+
 nav a:hover{
   text-decoration: none;
   color: #e03e3e;
@@ -77,12 +82,15 @@ nav a:hover{
 h4 a{
   color: #1c1c1c;
 }
+
 a{
   text-decoration: none;
 }
+
 a:hover{
   text-decoration: underline;
 }
+
 a{
   color: #157ac6;
 }
@@ -99,12 +107,14 @@ a{
   color: #858585;
   font-size: 0.9em;
 }
+
 .single-post .excerpt{
   float: right;
   width: 540px;
   border-left: 1px solid #e6e6e6;
   padding-left: 20px;
 }
+
 .excerpt p{
   margin-bottom: 0px;
 }
