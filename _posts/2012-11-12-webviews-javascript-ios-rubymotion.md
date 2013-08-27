@@ -6,7 +6,7 @@ how to use UIWebViews using RubyMotion. This includes loading URLs, local files 
 them via Javascript"
 blog: true
 category: blog
-tag: RubyMotion
+tag: iphone
 ---
 
 {% include JB/setup %}
