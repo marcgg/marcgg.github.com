@@ -1,61 +1,70 @@
 ---
 layout: post
 title: "My First Impressions of AppGyver's Steroids.js"
-description: "SteroidsJS promised a way to build PhoneGap based
-applications with a native feel, so I decided to try it out."
-blog: false
+description: "SteroidsJS promises a way to use Javascript to build PhoneGap-based
+applications with a native feel on both iPhone and Android. It seemed great so I decided to try it out."
+blog: true
 category: blog
 tag: iphone
 ---
 
 {% include JB/setup %}
 
-As I wrote before I like the idea of developing mobile applications. I
+As I wrote before,  like the idea of developing mobile applications. I
 don't plan to focus exclusively on it, but having an iPhone app as a pet
-project seems pretty cool. Creating something for Android could be
-interesting as well, but for now I have an iPhone so I'll work with
-that.
+project seems pretty cool and creating something for Android could be
+interesting as well in the future.
 
-My problem is that I don't enjoy much having to work with Objective C
-and Xcode. I thought I found a solution with [RubyMotion](http://www.rubymotion.com/),
-and I even [wrote about it](/blog/2012/10/22/custom-slider-ios-rubymotion/)...
-but I was mistaking. While RubyMotion is a great project, it's not for
-me.
+The problem is that, like a lot of people, I don't enjoy the
+experience of working with Objective C
+and XCode. I thought I found a solution with [RubyMotion](http://www.rubymotion.com/),
+I even [wrote about it](/blog/2012/10/22/custom-slider-ios-rubymotion/)...
+but I was mistaken. While RubyMotion is a great project, it's not for me.
 
 Yes you get to write Ruby code, but that's pretty much it. You still
-have to understand the SDK to even start to create something simple.
-This can be perfectly fine for some with more experience, but in the end
-it felt like using Ruby just complexified development for me. I couldn't
-use code snippets or the main iPhone resources, and RubyMotion lacked
-documentation. I got something done, but it wasn't good and in the end I
+have to learn about the SDK to even start to create something simple.
+This can be perfectly fine for some with more experience or wanting to
+get experience with the iOS SDK, but I just want to build something.
+Overall it felt like using Ruby just complexified development for me. I couldn't
+use code snippets or the main iPhone resources available, and RubyMotion lacked
+documentation and tutorials. I got something done, but it wasn't good enough and I
 never released anything.
 
-I tried again a couple of months later with an idea more simple: create a web view wrapper in
-RubyMotion and do everything inside a single page HTML 5 app. Sadly but the
+I tried again a couple of months later with an idea more simple: create a web view wrapper using
+RubyMotion and do everything inside a single page HTML 5 app. Sadly the
 lack of native UI made everything feel a bit off, so I scrapped that as well.
+I thought about using [PhoneGap](http://phonegap.com/)
+but I figured that the app would end up with the same problem.
 
-Fast forward 6 months later when I read that AppGyver released 
-[Steroids.js](http://www.appgyver.com/steroids) that would 
-"[Bridges The Performance Gap Between PhoneGap And Native Apps By Using Native UI Components And Animations](http://techcrunch.com/2013/08/20/steroids-js-bridges-the-performance-gap-between-phonegap-and-native-apps-by-using-native-ui-components-and-animations/)".
+Fast forward 6 months and I read that AppGyver released
+[Steroids.js](http://www.appgyver.com/steroids), an solution
+promising to
+"[Bridge The Performance Gap Between PhoneGap And Native Apps By Using Native UI Components And Animations](http://techcrunch.com/2013/08/20/steroids-js-bridges-the-performance-gap-between-phonegap-and-native-apps-by-using-native-ui-components-and-animations/)".
 I immediatly thought that it was what I wanted! The next day AppGyver
 announced that Steroids would be
 [free for everyone](http://appgyver.blogspot.fr/2013/08/steroids-is-now-free-for-everyone.html),
 so I decided to give it a try and write about it here.
 
-Take this article as it is: feedbacks on the service. I'm not trying to
-educate anyone on how to do things. I know I'm making a lot of mistakes because, while
+<div style="text-align: center"><img src="/assets/blog/steroids.png" /></div>
+
+Before reading more, please take this article as it is: feedback on this new solution to create mobile apps.
+I'm not trying to  educate anyone on how to do things or evangelize. I
+only played with it for a few days and haven't put anything in
+production using Steroids. I also know I'm making a lot of mistakes because, while
 I'm a decent web developer, I'm not really a great mobile developer.
+
+Alright.
 
 ## Installation
 
-AppGiver provides pretty good documentation. It's far from complete, but
+AppGiver provides a pretty good documentation. It's far from complete, but
 what is there is well written and very clear. To set my development
 environment I followed their [tutorial](http://academy.appgyver.com/courses/2/lessons/32).
 
 Overall everything went smoothly aside from a couple of gotchas very
 easy to figure out.
 
-Steroids uses an older version of node.js so I had to set up [nvm](https://github.com/creationix/nvm)
+For instance Steroids uses an older version of node.js so I had to set up [nvm](https://github.com/creationix/nvm)
 in order to get it to run. The thing is that nvm creates a
 .bash_profile, but since I use [zsh](http://www.zsh.org/) it wouldn't pick up the correct path
 automatically as promised. Moving the concerned code to .zshrc fixed
@@ -66,7 +75,7 @@ that.
 {% endhighlight %}
 
 nvm requires that you specify the version you need in order for you to
-see Steroids. It's similar to what rvm does, but you still have to think about it.
+access the steroids command. It's similar to what rvm does, but you still have to think about it.
 
 {% highlight bash %}
 nvm use 0.8.0
@@ -74,19 +83,24 @@ nvm use 0.8.0
 
 ## First Impression
 
-I run the script to scaffold a new application, download the scanner
-app, start the application, scan the QR code and ... Wow! It's really neat!
-The application runs on my iPhone just a few minutes after installation.
+After completing the installation, I executed the script to scaffold a new application,
+downloaded the scanner app, started the application, scanned the QR code and ...
+Wow! It's really neat!
+The application ran on my iPhone just a few minutes after starting
+working.
 
-If you run the Steroids connect script with the watch option it will reload the app
+By the way, if you run the Steroids connect script with the watch option it will reload the app
 automatically on every device connected for maximum effect.
 
 {% highlight bash %}
 steroids connect --watch
 {% endhighlight %}
 
-Right away you don't really get a full structured project. To do so you
-have to run some generators. The default approach is to give you free
+## Organizing Files
+
+Right away you don't really get a full structured project.
+To do so you have to run some generators.
+The default approach is to give you free
 choice over what you want to do about file organisation. Personnally I
 would have prefered it was the other way around, giving me the structure
 but allowing me to remove it... or maybe an option in the scaffolding
@@ -96,12 +110,12 @@ script.
 
 ### Drawer
 
-Steroids comes with a very cool native Drawer, meaning that it will
+Steroids comes with a very cool "native" Drawer, meaning that it will
 display a webview on the side of your app with a native animation. The
 [tutorial](http://academy.appgyver.com/courses/4/lessons/44) explaining
 that got me excited so I decided that my app would have a drawer!
 
-Overall is almost as simple as going:
+Getting it to work was almost as simple as going:
 
 {% highlight javascript %}
 var drawer = new steroids.views.WebView("/views/drawer/show.html");
@@ -117,18 +131,19 @@ And then create a webview with a link to open it.
 {% endhighlight %}
 
 Doing this will work, but you'd prefer to have a gesture to open and
-close the drawer as well. This is handled by Steroids as well, but this
+close the drawer. This is handled by Steroids as well, but this
 breaks gestures inside your webview. It's also a bit more complicated to
 have the drawer on some screens and not others.
 
-After a few hours playing with it and talking with a real iOS developer
+After a few hours playing with it and talking with
+[a real iOS developer](http://twitter.com/jeclic)
 ("you have a drawer for your app with 4 screens???") I decided that it wasn't really the
 UI I needed for this project.
 
 ### Natives Navs & Tabs
 
 The next day I dropped everything and went for a more classical
-approach with tabs at the botton and a nav bar up top. It turned out it was way simpler and 
+approach with tabs at the bottom and a nav bar up top. It turned out it was way simpler and
 actually pretty straightforward to do with Steroids.
 
 Adding the following in a controller gives you a nav bar:
@@ -138,6 +153,7 @@ steroids.view.navigationBar.show("My Nav Bar")
 {% endhighlight %}
 
 This added in the config gives you a tab menu:
+
 {% highlight javascript %}
 steroids.config.statusBar.enabled = false
 
@@ -179,7 +195,7 @@ The application I'm building requires that you login. At first I wanted
 to have two different webviews and shift between disconnected and
 connected mode, but it got complicated because of the tab menu... so in
 the end I just put a modal window that pops up when the user is not
-logged in.
+logged in. It's not perfect but it gets the job done for now.
 
 {% highlight javascript %}
 var webView = new steroids.views.WebView("../views/login/show.html");
@@ -277,34 +293,35 @@ in the click of a button.
 
 <div style="text-align: center"><img src="/assets/blog/cloudbuild.jpg" /></div>
 
-This works fine, but still needs some polishing, mainly ways to get an
+This works fine, but still needs some polishing, mainly on ways to get an
 ETA for the build. Right now I've seen build times varying between 12
-hours and 1 minute - but
-[it should be better moving forward](http://forums.appgyver.com/#!/steroids#how-long-does-a-adhoc-build).
+hours and a couple of minutes. Apparently
+[it should be better moving forward](http://forums.appgyver.com/#!/steroids#how-long-does-a-adhoc-build),
+so I'll wait and see.
 
 ## The Documentation & Community
 
 The documentation provided by Appgyver is very clean, but could use some
-more tutorials and examples. This is expected since the project has been
+more tutorials and examples. This was to be expected since the project has only been
 released very recently.
 
 It's worth mentioning that the team is very responsive on
 [twitter](https://twitter.com/appgyver) or the
-[forums](http://developers.appgyver.com/forums). I was confused about
-customizing colors, asked on the site and the next day they would have
-put up a new tutorial with concrete examples. Pretty awesome.
+[forums](http://developers.appgyver.com/forums). For instance I was confused about
+customizing colors, so I asked on the site. The next day they would have
+put up a new tutorial with concrete examples. Pretty sweet.
 
 The community is small right now, and looking online for documentation
-or blog posts will yield absolutely no result. Hopefuly this will
+or blog posts will yield absolutely no results. Hopefully this will
 improve.
 
-## Overall
+## Wrapping It Up
 
-I think that this is a very interesting project, and I will keep on
+I think that this is a very interesting project so I will keep on
 working with Steroids to get as far as I can creating my app. You can
 see that the team put a lot of work into it and the product feels right.
 
-The next steps on my part is stop playing around and actually developing features.
+The next steps on my part is to stop playing around and actually start developing something more concrete.
 I'm also waiting for some features that are supposed to be in the roadmap,
 such as icons in nav bar or iOS 7 native UI.
 
