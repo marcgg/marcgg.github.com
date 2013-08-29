@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2013-08-28T23:19:35+02:00</updated>
+ <updated>2013-08-29T10:06:52+02:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -18,7 +18,7 @@
      <link href="http://marcgg.com/blog/2013/08/29/appgyver-steroids-iphone-hybrid-javascript"/>
      <updated>2013-08-29T00:00:00+02:00</updated>
      <id>http://marcgg.com/blog/2013/08/29/appgyver-steroids-iphone-hybrid-javascript</id>
-     <content type="html">&lt;p&gt;As I wrote before, like the idea of developing mobile applications. I don&amp;#8217;t plan to focus exclusively on it, but having an iPhone app as a pet project seems pretty cool and creating something for Android could be interesting as well in the future.&lt;/p&gt;
+     <content type="html">&lt;p&gt;As I wrote before, I like the idea of developing mobile applications. I don&amp;#8217;t plan to focus exclusively on it, but having an iPhone app as a pet project seems pretty cool and creating something for Android could be interesting as well in the future.&lt;/p&gt;
 
 &lt;p&gt;The problem is that, like a lot of people, I don&amp;#8217;t enjoy the experience of working with Objective C and XCode. I thought I found a solution with &lt;a href='http://www.rubymotion.com/'&gt;RubyMotion&lt;/a&gt;, I even &lt;a href='/blog/2012/10/22/custom-slider-ios-rubymotion/'&gt;wrote about it&lt;/a&gt;&amp;#8230; but I was mistaken. While RubyMotion is a great project, it&amp;#8217;s not for me.&lt;/p&gt;
 

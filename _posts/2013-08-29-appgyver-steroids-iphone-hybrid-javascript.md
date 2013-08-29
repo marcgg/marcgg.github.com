@@ -10,7 +10,7 @@ tag: iphone
 
 {% include JB/setup %}
 
-As I wrote before,  like the idea of developing mobile applications. I
+As I wrote before, I like the idea of developing mobile applications. I
 don't plan to focus exclusively on it, but having an iPhone app as a pet
 project seems pretty cool and creating something for Android could be
 interesting as well in the future.
