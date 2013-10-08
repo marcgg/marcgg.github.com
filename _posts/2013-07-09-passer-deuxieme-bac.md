@@ -15,7 +15,7 @@ tag: Philosophy
 J'ai obtenu mon baccalauréat scientifique en 2004. Malgré cela, ces deux dernières années j'ai mis un peu
 de temps de côté pour passer mon bac L en candidat libre.
 
-Cet article relate cette petite aventure. Je donnerais les différentes étapes par
+Cet article relate cette petite aventure. Je donnerai les différentes étapes par
 lesquelles je suis passé ainsi que toutes mes notes - glorieuses ou non.
 
 ## La motivation
