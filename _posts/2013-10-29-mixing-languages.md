@@ -11,12 +11,12 @@ tag: Philosophy
 {% include JB/setup %}
 
 I was born in France and lived there for the most part of my life. I have
-the [frenchiest of names](http://en.wikipedia.org/wiki/Gauthier_(surname)).
+the [frenchiest of names](http://bit.ly/17UlpMx).
 I'm not big into striped shirts, but I could easily switch to a cheese-only
 diet if given the opportunity.
 
 It's also fair to say that I love the French language.
-I think that using it well enought can produce
+I think that using it well enough can produce
 [amazing novels](http://www.amazon.fr/L%C3%A9tranger-Albert-Camus/dp/2070360024),
 [songs](http://www.youtube.com/watch?v=rslShTbqNbo)
 or just cool sounding conversations.
@@ -27,8 +27,8 @@ or just cool sounding conversations.
 A few years back I went to live in the US. At that point I knew some
 English from school, but I never actually got to use it in real life and my accent was
 terrible. After a while I got better at it even if I never
-got the accent quite down. However to my ammusement I could pass for American
-with French tourists asking for direction in Times Square.
+got the accent quite down. However to my amusement I could pass for American
+with French tourists asking for directions in Times Square.
 
 So really I think that the English language is very interesting as well. I wouldn't say that I
 love it as much as I love French, but it's a close second. We can say
@@ -36,7 +36,7 @@ that it's because I'm annoyed about the fact that I can't be perfectly billingua
 
 For the record, I got back to Paris in 2009 so I've lost a lot, so
 please bear with my written English on this one. I'm sure talking about
-mixing languages while writting poorly constructed sentences will sound
+mixing languages while writing poorly constructed sentences will sound
 silly at some point, but hey.
 
 ## Mixing
@@ -52,7 +52,7 @@ Same goes for articles that I read online, I'll remember the facts but
 often forget if I read them in French or not. Of course right after I'll
 still have some memory of it, but a few months later some information would
 stick but the language behind it gets blurry if there wasn't some
-memorable quote to memorize in the text.
+memorable quote in the text.
 
 While staying in New York I met people that would speak English but also
 some French. This was really a lot of fun since we could just switch
@@ -60,7 +60,7 @@ back and forth between languages as we felt, picking the most fitting
 words to communicate. The novelty of doing that wearing off, I realized that it was
 really the perfect way to go for me. In each languages there are
 concepts that you can't express in the other... or at least not a
-specificaly.
+specifically.
 
 For instance let's take "whimsical". [WordReference](http://www.wordreference.com/enfr/whimsical)
 would say "Fantasque", "Capricieux" or "Saugrenu". To me it doesn't
@@ -77,7 +77,7 @@ Here is a conversation I see myself having all the time:
 
 And I'm not just being annoying. This is quite true that you wouldn't say
 some things this way. Languages tend to lead you in a direction when it comes to
-constructing sentences and sometimes even your reflexion changes when
+constructing sentences and sometimes even your reflection changes when
 thinking with a given language. If you write something in X and translate to Y,
 you lose the soul of the text.
 
@@ -108,7 +108,7 @@ in [French](http://www.franceculture.fr/emission-les-nouveaux-chemins-de-la-conn
 I mostly find [my](http://www.radiolab.org/) [content](http://www.thisamericanlife.org/)
 [in](http://continuecast.podomatic.com/) [English](http://themoth.org/about/programs/the-moth-podcast).
 Same goes for reading, I like novels written in French, but most of the
-blog posts or in depth articles that I read will be in English. Same
+blog posts or in-depth articles that I read will be in English. Same
 logic goes for movies, shows, songs...
 
 All this seems to keep the confusion alive, even if I don't speak the
@@ -117,7 +117,7 @@ language.
 ## Who Cares
 
 In the end this isn't a real problem for me. I'd much rather be
-be understood by more people than be perfectly eloquant for less people.
+understood by more people than be perfectly eloquent for less people.
 
 It has downsides, but it often consists in me having to repeat words again
 in some situations. I manage to mostly use French words and only add English
