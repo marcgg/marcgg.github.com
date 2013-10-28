@@ -122,6 +122,13 @@ p{
   font-style: italic;
 }
 
+.image_notes{
+  text-align: center;
+  color: #858585;
+  font-size: 0.9em;
+  margin: -5px 0px 15px 0px;
+}
+
 h1{
   font-size: 1.85em;
   font-weight: bold;
