@@ -25,7 +25,7 @@ or just cool sounding conversations.
 <div class="image_notes">Actual Google Search results page</div>
 
 A few years back I went to live in the US. At that point I knew some
-English from school, but I never actually got to use it in real life and my accent was
+English from school, but never actually used it in real life. Also, my accent was
 terrible. After a while I got better at it even if I never
 got the accent quite down. However to my amusement I could pass for American
 with French tourists asking for directions in Times Square.
