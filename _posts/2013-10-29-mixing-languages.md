@@ -73,7 +73,7 @@ Here is a conversation I see myself having all the time:
 
 > « Hey! How do you translate X in French/English ?
 >
-> - You don't !»
+> \- You don't !»
 
 And I'm not just being annoying. This is quite true that you wouldn't say
 some things this way. Languages tend to lead you in a direction when it comes to
