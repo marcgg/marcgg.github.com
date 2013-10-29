@@ -84,7 +84,7 @@ you lose the soul of the text.
 Obviously you can do some clever translating, but without moving huge blocks
 of ideas around, it won't sound good.
 
-## The Problem
+## Back In France
 
 When I got back to France I kept this habit going with some friends
 of mine that could follow such a way of speaking.
