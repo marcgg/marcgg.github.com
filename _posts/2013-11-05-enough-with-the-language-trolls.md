@@ -5,7 +5,7 @@ description: "Every week I see people arguing over languages, frameworks, hostin
 solutions, design patterns... and every week it's pointless."
 blog: true
 category: blog
-tag: Development
+tag: Dev
 ---
 
 {% include JB/setup %}
