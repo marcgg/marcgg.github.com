@@ -75,4 +75,4 @@ adapt.
 
 > &quot;Don&#39;t define yourself by hating other things. Define yourself by building cool stuff.&quot;
 >
-> [Steve Klabnik](@steveklabni) at [DotRB](http://www.dotrb.eu/)
+> [Steve Klabnik](http://twitter.com/steveklabnik) at [DotRB](http://www.dotrb.eu/)
