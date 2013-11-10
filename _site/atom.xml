@@ -4,13 +4,147 @@
  <title>marcgg#blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2013-11-10T17:04:27+01:00</updated>
+ <updated>2013-11-10T19:47:48+01:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
    <email>marcg.gauthier@gmail.com</email>
  </author>
 
+ 
+  
+   <entry>
+     <title>The Problem With Peak</title>
+     <link href="http://marcgg.com/blog/2013/11/12/peak-productivity"/>
+     <updated>2013-11-12T00:00:00+01:00</updated>
+     <id>http://marcgg.com/blog/2013/11/12/peak-productivity</id>
+     <content type="html">&lt;p&gt;I love The Daily WTF and its cautionary tales about software development.&lt;/p&gt;
+
+&lt;p&gt;Some are just funny, but others tell a lot about what can actually happens in some misguided companies. For instance &lt;a href='http://thedailywtf.com/Articles/Productivity-20.aspx'&gt;what happens when you start measuring productivity by the number of commits&lt;/a&gt; or &lt;a href='http://thedailywtf.com/Articles/Measured_By_The_Line.aspx'&gt;by the number of lines of code&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Spoiler: it&amp;#8217;s a disaster.&lt;/p&gt;
+
+&lt;h2 id='discovering_peak'&gt;Discovering Peak&lt;/h2&gt;
+
+&lt;p&gt;A couple of days ago I ran into a new application by &lt;a href='http://metalabdesign.com/'&gt;MetaLab&lt;/a&gt; called &lt;a href='http://www.usepeak.com/'&gt;Peak&lt;/a&gt;. The application is supposed to be &amp;#8220;the automated way to keep track of what everyone is working on&amp;#8221;. Basically you plug in a bunch of services such as Gmail, Github or Basecamp and the app gives your an overview of what&amp;#8217;s going on as well as metrics about your team.&lt;/p&gt;
+
+&lt;p&gt;Since I&amp;#8217;m a big fan of what MetaLab produces, I decided to check it out and I&amp;#8217;m sad to say that I was very disapointed.&lt;/p&gt;
+
+&lt;p&gt;Don&amp;#8217;t get me wrong, the app looks amazing. The UI is slick and everything is very well organized. My problem with it is that the product seems misguided.&lt;/p&gt;
+
+&lt;p&gt;I might be wrong and totally open to change my mind if I mind, but I&amp;#8217;ll try to demonstrate in this article why I feel this way.&lt;/p&gt;
+
+&lt;h2 id='about_metrics'&gt;About metrics&lt;/h2&gt;
+
+&lt;p&gt;In my opinion some metrics are interesting, such how are the deadlines met, what&amp;#8217;s the team velocity, how much time is spent on a given task and so on. Peak kind of track this thanks to the Github and Harvest integration. They tell me something and I can act on them such assigning more people to a hard task, organize the roadmap, plan for team growth&amp;#8230;&lt;/p&gt;
+
+&lt;p&gt;Others are not interesting, and downright noise. For instance I don&amp;#8217;t see how the number of emails sent is not relevant at all.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;#8217;s say Alice sent 100 emails this week and Bob sent 10. What does it tell me? Is Alice really productive and Bob slacking off? Is Alice wasting time sending emails and Bob is very efficient? I just know, with absolutely no context, that emails were exchanged, it might even be internal emails with jokes in them.&lt;/p&gt;
+
+&lt;p&gt;Same thing with file editions. If Bob edited 20 files, what does that tell me? Is he working a lot? Is he reorganizing his dropbox? Again, this tells me nothing of value.&lt;/p&gt;
+
+&lt;p&gt;I might be able to get something out of these if I spend time talking with Alice and Bob, but then it defeats the purpose of the app. So I ask, why even bother looking at metrics if I can&amp;#8217;t do anything about them?&lt;/p&gt;
+&lt;div style='text-align: center'&gt;&lt;img src='/assets/blog/peak_emails.png' /&gt;&lt;/div&gt;
+&lt;h2 id='activity__productivity'&gt;Activity ≠ Productivity&lt;/h2&gt;
+
+&lt;p&gt;I&amp;#8217;m going to make some assumptions about the way Peak works. I haven&amp;#8217;t an access to the app, so I&amp;#8217;m just going to make educated guesses based on the commercial websites. If I&amp;#8217;m wrong, please let me know.&lt;/p&gt;
+
+&lt;p&gt;So here&amp;#8217;s how it looks like.&lt;/p&gt;
+
+&lt;p&gt;Based on the employees&amp;#8217; activity, the app will output metrics for the managers or team leads to read.&lt;/p&gt;
+
+&lt;h3 id='ranking_employees'&gt;Ranking employees&lt;/h3&gt;
+&lt;div style='text-align: center'&gt;&lt;img src='/assets/blog/graph_peak.png' /&gt;&lt;/div&gt;
+&lt;p&gt;Here we have &amp;#8220;red employees&amp;#8221;. Color coding seems to indicate that these are not performing well as red is always related to something negative. On the other side we have &amp;#8220;green employees&amp;#8221;, these must be working well because green is usually a good thing.&lt;/p&gt;
+
+&lt;p&gt;Since the metrics used are not relevant, this ranking is biased and unsuable. It just creates random goals based on nothing else but activity.&lt;/p&gt;
+
+&lt;p&gt;The value of an employee is not her activity but what she produces. If Jane sent 0 emails about a new feature, but delivered on time with happy customers, then Jane did a good job even if there is no perceivable activity within the Peak app.&lt;/p&gt;
+
+&lt;p&gt;Still, if William doesn&amp;#8217;t produce anything but sends of lot of emails and messes around with files on the dropbox, he will be deemed &amp;#8220;productive&amp;#8221;. Jane will be &amp;#8220;red&amp;#8221; and William will be &amp;#8220;green&amp;#8221; in the eyes of management. This can&amp;#8217;t lead to good things when you reward people based on the wrong kind of metric.&lt;/p&gt;
+
+&lt;p&gt;One could say that the intent isn&amp;#8217;t to say that &amp;#8220;red&amp;#8221; employees are bad, but seriously, who would like to be flaged as the &amp;#8220;least active employee&amp;#8221; of the company ?&lt;/p&gt;
+&lt;div style='text-align: center'&gt;&lt;img src='/assets/blog/activity_peak.png' /&gt;&lt;/div&gt;
+&lt;h3 id='measuring_work_hours'&gt;Measuring work hours&lt;/h3&gt;
+
+&lt;p&gt;I personnally think that measuring hours leads to anything. You just know that your employees were here, but they could be reading Facebook all day. Still this is the oldest and easiest form of management so it&amp;#8217;s not surprising that it&amp;#8217;s the way it is in most places.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;What [banning remote working] reveals more than anything is that Yahoo management doesn’t have a clue as to who’s actually productive and who’s not. In their blindness they’re reaching for the lowest form of control a manager can assert: Ensuring butts in seats for eight hours between 9-5+. Though while they can make people come to the office under the threat of termination, they most certainly cannot make those same people motivated to do great work.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href='http://twitter.com/dhh'&gt;@dhh&lt;/a&gt; about &lt;a href='http://37signals.com/svn/posts/3453-no-more-remote-work-at-yahoo'&gt;Yahoo banning remote work&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Again, this rewards employees that are not necesserally the best ones you have. Someone completing her tasks working a 40 hours week is to me more valuable than another person working 100 hours a week to produce the same output. One could also add that long hours are not sustainable and that the employee working crazy hours is more prone to burn out, which is not good for anyone - employer included.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Working overtime sucks the spirit and motivation out of your team. When your team becomes tired and demoralized they will get less work done, not more, no matter how many hours are worked.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href='http://www.extremeprogramming.org/rules/overtime.html'&gt;Extreme Programming Manifesto&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div style='text-align: center'&gt;&lt;img src='/assets/blog/brandon.png' /&gt;&lt;/div&gt;
+&lt;p&gt;Note that this applies mostly for qualified workers, but Peak seems to be targeted to startups where there are a lot of engineers, product managers or designers.&lt;/p&gt;
+
+&lt;h2 id='automated_micromanagement'&gt;Automated Micromanagement&lt;/h2&gt;
+
+&lt;p&gt;A lot of people throw the term micromanagement around, so I&amp;#8217;ll define what I believe is micromanagement.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;In business management, micromanagement is a management style whereby a manager closely observes or controls the work of subordinates or employees. Micromanagement generally has a negative connotation.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href='http://en.wikipedia.org/wiki/Micromanagement'&gt;Wikipedia&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;micromanage: to manage especially with excessive control or attention to details&lt;/p&gt;
+
+&lt;p&gt;&lt;a href='http://www.merriam-webster.com/dictionary/micromanage'&gt;Merriam Webster&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Going back at the metrics, to me knowing what tasks someone is working on and assuring that it is delivered on time is management. Checking how many emails are sent is micromanagement since it&amp;#8217;s a detail that should not be checked.&lt;/p&gt;
+
+&lt;p&gt;Some features in Peak encourages micromanagement even if the automated tweet when sharing from their website says:&lt;/p&gt;
+&lt;div style='text-align: center'&gt;&lt;img src='/assets/blog/micro.png' /&gt;&lt;/div&gt;
+&lt;p&gt;To me it feels that the solution here would be to stop micromanagement alltogether and not provide an app to make it easier! If, as a manager, I have the need to interupt my team every hours to know what they are doing, I must be doing something wrong.&lt;/p&gt;
+
+&lt;p&gt;There are no perfect solution for this and it&amp;#8217;s a really hard subject. I&amp;#8217;m not trying to solve this here, there are a lot of smart people theorizing about it out there. I just want to point out that making it automated doesn&amp;#8217;t make it something else than micromanagement.&lt;/p&gt;
+
+&lt;h2 id='still_a_promising_app'&gt;Still a promising app&lt;/h2&gt;
+
+&lt;h3 id='risks'&gt;Risks&lt;/h3&gt;
+
+&lt;p&gt;To me Peak has a lot of potential, but the team working on it should take all this into consideration. I&amp;#8217;m sure that they mean well. In an ideal world, people will take the metrics as they are - possibly flawed outputs of a complex process aimed at creating value for the company. No one will consider the &amp;#8220;red employee&amp;#8221; factor. No one will game the system.&lt;/p&gt;
+
+&lt;p&gt;Except we&amp;#8217;re not in a perfect world.&lt;/p&gt;
+
+&lt;p&gt;Managers will abuse it, employees will game it.&lt;/p&gt;
+
+&lt;p&gt;Not everywhere, of course - there are some great companies that knows how to deal with these subjects. But some will use this for &amp;#8220;evil&amp;#8221;.&lt;/p&gt;
+
+&lt;h3 id='what_id_do'&gt;What I&amp;#8217;d do&lt;/h3&gt;
+
+&lt;p&gt;I&amp;#8217;m sure they have thought about it, and I&amp;#8217;m not a product guy. But I don&amp;#8217;t like critizing without giving ideas on how to improve the situation.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Get rid of employee ranking, nothing good can come out of it&lt;/li&gt;
+
+&lt;li&gt;Remove Gmail integration, this is not relevant&lt;/li&gt;
+
+&lt;li&gt;Hour tracking should not judge people (red vs green) and should just be a neutral data&lt;/li&gt;
+
+&lt;li&gt;Make some things active, like allowing the employee to say what she is working on&lt;/li&gt;
+
+&lt;li&gt;Do not track hours if you don&amp;#8217;t bill by the hour (with harvest for instance)&lt;/li&gt;
+
+&lt;li&gt;Keep up the good work with the UI. Loving it.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id='hopes'&gt;Hopes&lt;/h3&gt;
+
+&lt;p&gt;I really hope that people will use this tool for good (helping companies create value and protect employees from interuptions) and not evil (micromanagement).&lt;/p&gt;</content>
+   </entry>
+  
  
   
    <entry>
