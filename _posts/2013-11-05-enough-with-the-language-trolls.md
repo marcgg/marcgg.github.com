@@ -5,7 +5,7 @@ description: "Every week I see people arguing over languages, frameworks, hostin
 solutions, design patterns... and every week it's pointless."
 blog: true
 category: blog
-tag: Development
+tag: Dev
 ---
 
 {% include JB/setup %}
@@ -75,4 +75,4 @@ adapt.
 
 > &quot;Don&#39;t define yourself by hating other things. Define yourself by building cool stuff.&quot;
 >
-> [Steve Klabnik](@steveklabni) at [DotRB](http://www.dotrb.eu/)
+> [Steve Klabnik](http://twitter.com/steveklabnik) at [DotRB](http://www.dotrb.eu/)
