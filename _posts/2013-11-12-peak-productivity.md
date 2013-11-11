@@ -44,7 +44,7 @@ Harvest integration. They tell me something and I can act based on them.
 For instance I could assign more people to a hard task, organize the roadmap or plan for team growth.
 
 Others are not interesting, and downright noise. For instance I don't
-see how the number of emails sent is not relevant at all.
+see how the number of emails sent is relevant.
 
 Let's say Alice sent 100 emails this week and Bob sent 10. What does it
 tell me? Is Alice really productive and Bob slacking off? Is Alice
@@ -58,7 +58,7 @@ this tells me nothing of value.
 
 I might be able to get something out of these if I spend time talking
 with Alice and Bob, but then it defeats the purpose of the app.
-So I ask, why even bother looking at metrics if I can't do anything about them?
+So I ask, why even bother looking at metrics if I can't do anything based on the information they provide?
 
 <div style="text-align: center"><img src="/assets/blog/peak_emails.png" /></div>
 
@@ -81,7 +81,7 @@ On the other side we have "green employees", these must be working well
 because green is usually a good thing.
 
 Since the metrics used are not relevant, this ranking is biased and
-unsuable. It just creates random ranks based on nothing else but
+unusable. It just creates random ranks based on nothing else but
 activity.
 
 The value of an employee is not her activity but what she produces. If
@@ -96,7 +96,7 @@ of management. This can't lead to good things when you reward people
 based on the wrong kind of metric.
 
 One could say that the intent isn't to say that "red" employees are bad,
-but seriously, who would like to be flaged as the "least active
+but seriously, who would like to be flagged as the "least active
 employee" of the company ?
 
 <div style="text-align: center"><img src="/assets/blog/activity_peak.png" /></div>
@@ -155,14 +155,14 @@ on and assuring that it is delivered on time is management. Checking how
 many emails are sent is micromanagement, checking a detail that is irelevant unless
 your job description is to write and send as many emails as possible.
 
-Some features in Peak encourages micromanagement even if the automated
+Some features in Peak encourage micromanagement even if the automated
 tweet when sharing from their website says otherwise.
 
 <div style="text-align: center"><img src="/assets/blog/micro.png" /></div>
 
 To me it feels that the solution here would be to stop micromanaging
-alltogether and not provide an app to make it easier! If, as a manager,
-I have the need to interupt my team every hours to know what they are
+altogether and not provide an app to make it easier! If, as a manager,
+I have the need to interrupt my team every hours to know what they are
 doing, I must be doing something wrong.
 
 There are no perfect solution for this and it's a really hard subject.
@@ -186,7 +186,7 @@ Except we're not in a perfect world.
 
 Managers will abuse it, employees will game it.
 
-Of course this will not happen everywhere! There are some great companies that knows how
+Of course this will not happen everywhere! There are some great companies that know how
 to deal with these subjects, but it's very likely that some will use this for "evil".
 
 ### What I'd do
@@ -198,7 +198,7 @@ situation.
 - Get rid of employee ranking, nothing good can come out of it
 - Remove Gmail integration, this is not relevant
 - Hour tracking should not judge people (red vs green) and should just be a neutral data
-- Make some things active, like allowing the employees to input what she is working on
+- Make some things active, like allowing the employees to input what they are working on
 - Do not track hours if you don't bill by the hour (with harvest for instance)
 - Keep up the good work with the UI. Loving it.
 
