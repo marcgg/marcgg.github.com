@@ -10,8 +10,25 @@ tag: Startup
 
 {% include JB/setup %}
 
-I love The Daily WTF and its cautionary tales about software development.
+A couple of days ago I ran into a new application by [MetaLab](http://metalabdesign.com/) called
+[Peak](http://www.usepeak.com/). The application is supposed to be "the automated way to keep track
+of what everyone is working on". Basically you plug in a bunch of
+services such as Gmail, Github or Basecamp and the app gives your an
+overview of what's going on as well as metrics about your team.
+Since I'm a big fan of what MetaLab produces, I decided to check it out.
 
+I was very disapointed.
+
+Don't get me wrong, the app looks amazing. The UI is slick and
+everything is very well organized. My problem with it is that
+the product seems misguided.
+
+I might be mistaken and I'm totally open to change my mind if proven wrong,
+but I'll try to demonstrate in this article why I feel this way.
+
+## About metrics
+
+I love The Daily WTF and its cautionary tales about software development.
 Some are just funny, but others tell a lot about what can actually happens
 in some misguided companies. For instance
 [what happens when you start measuring productivity by the number of
@@ -20,31 +37,11 @@ number of lines of code](http://thedailywtf.com/Articles/Measured_By_The_Line.as
 
 Spoiler: it's a disaster.
 
-## Discovering Peak
-
-A couple of days ago I ran into a new application by [MetaLab](http://metalabdesign.com/) called
-[Peak](http://www.usepeak.com/). The application is supposed to be "the automated way to keep track
-of what everyone is working on". Basically you plug in a bunch of
-services such as Gmail, Github or Basecamp and the app gives your an
-overview of what's going on as well as metrics about your team.
-
-Since I'm a big fan of what MetaLab produces, I decided to check it out
-and I'm sad to say that I was very disapointed.
-
-Don't get me wrong, the app looks amazing. The UI is slick and
-everything is very well organized. My problem with it is that
-the product seems misguided.
-
-I might be wrong and totally open to change my mind if I mind, but I'll try to demonstrate
-in this article why I feel this way.
-
-## About metrics
-
-In my opinion some metrics are interesting, such how are the
-deadlines met, what's the team velocity, how much time is spent on a
+Some metrics are interesting, such as progress on the
+deadlines, what's the team velocity, how much time is spent on a
 given task and so on. Peak kind of track this thanks to the Github and
-Harvest integration. They tell me something and I can act on them such
-assigning more people to a hard task, organize the roadmap, plan for team growth...
+Harvest integration. They tell me something and I can act based on them.
+For instance I could assign more people to a hard task, organize the roadmap or plan for team growth.
 
 Others are not interesting, and downright noise. For instance I don't
 see how the number of emails sent is not relevant at all.
@@ -52,7 +49,7 @@ see how the number of emails sent is not relevant at all.
 Let's say Alice sent 100 emails this week and Bob sent 10. What does it
 tell me? Is Alice really productive and Bob slacking off? Is Alice
 wasting time sending emails and Bob is very efficient? I just know, with
-absolutely no context, that emails were exchanged, it might even be internal
+absolutely no context, that emails were exchanged. It might even be internal
 emails with jokes in them.
 
 Same thing with file editions. If Bob edited 20 files, what does that
@@ -68,34 +65,32 @@ So I ask, why even bother looking at metrics if I can't do anything about them?
 ## Activity ≠ Productivity
 
 I'm going to make some assumptions about the way Peak works. I
-haven't an access to the app, so I'm just going to make educated guesses
+don't have an access to the app, so I'm just going to make educated guesses
 based on the commercial websites. If I'm wrong, please let me know.
 
-So here's how it looks like.
-
-Based on the employees' activity, the app will output metrics for the
+It seems like that, based on the employees' activity, the app will output metrics for the
 managers or team leads to read.
 
 ### Ranking employees
 
 <div style="text-align: center"><img src="/assets/blog/graph_peak.png" /></div>
 
-Here we have "red employees". Color coding seems to indicate that these
+On one side we have "red employees". Color coding seems to indicate that these
 are not performing well as red is always related to something negative.
 On the other side we have "green employees", these must be working well
 because green is usually a good thing.
 
 Since the metrics used are not relevant, this ranking is biased and
-unsuable. It just creates random goals based on nothing else but
+unsuable. It just creates random ranks based on nothing else but
 activity.
 
 The value of an employee is not her activity but what she produces. If
-Jane sent 0 emails about a new feature, but delivered on time with happy
-customers, then Jane did a good job even if there is no perceivable
+Jane sent 0 emails about a new feature, but delivered on time and
+customers were happy, then Jane did a good job even if there is no perceivable
 activity within the Peak app.
 
-Still, if William doesn't produce anything but sends of lot of emails
-and messes around with files on the dropbox, he will be deemed
+On the other end, if William doesn't produce anything but sends of lot of emails
+while messing around with files on the dropbox, he will be deemed
 "productive". Jane will be "red" and William will be "green" in the eyes
 of management. This can't lead to good things when you reward people
 based on the wrong kind of metric.
@@ -108,7 +103,7 @@ employee" of the company ?
 
 ### Measuring work hours
 
-I personnally think that measuring hours leads to anything. You just
+I personnally think that measuring hours doesn't help producing value. You just
 know that your employees were here, but they could be reading Facebook
 all day. Still this is the oldest and easiest form of management so it's
 not surprising that it's the way it is in most places.
@@ -121,8 +116,8 @@ not surprising that it's the way it is in most places.
 > 
 > [@dhh](http://twitter.com/dhh) about [Yahoo banning remote work](http://37signals.com/svn/posts/3453-no-more-remote-work-at-yahoo)
 
-Again, this rewards employees that are not necesserally the best ones
-you have. Someone completing her tasks working a 40 hours week is to me
+Again, this rewards employees that are not necesserally the best ones.
+Someone completing her tasks working a 40 hours week is probably
 more valuable than another person working 100 hours a week to produce
 the same output. One could also add that long hours are not sustainable
 and that the employee working crazy hours is more prone to burn out,
@@ -143,7 +138,7 @@ managers or designers.
 ## Automated Micromanagement
 
 A lot of people throw the term micromanagement around, so I'll define
-what I believe is micromanagement.
+what I believe is micromanagement before continuing.
 
 > In business management, micromanagement is a management style whereby a manager
 > closely observes or controls the work of subordinates or employees.
@@ -155,33 +150,34 @@ what I believe is micromanagement.
 >
 > [Merriam Webster](http://www.merriam-webster.com/dictionary/micromanage)
 
-Going back at the metrics, to me knowing what tasks someone is working
+To me knowing what tasks someone is working
 on and assuring that it is delivered on time is management. Checking how
-many emails are sent is micromanagement since it's a detail that should
-not be checked.
+many emails are sent is micromanagement, checking a detail that is irelevant unless
+your job description is to write and send as many emails as possible.
 
 Some features in Peak encourages micromanagement even if the automated
-tweet when sharing from their website says:
+tweet when sharing from their website says otherwise.
 
 <div style="text-align: center"><img src="/assets/blog/micro.png" /></div>
 
-To me it feels that the solution here would be to stop micromanagement
+To me it feels that the solution here would be to stop micromanaging
 alltogether and not provide an app to make it easier! If, as a manager,
 I have the need to interupt my team every hours to know what they are
 doing, I must be doing something wrong.
 
 There are no perfect solution for this and it's a really hard subject.
-I'm not trying to solve this here, there are a lot of smart people
+I'm not trying to solve this issue here, there are a lot of smart people
 theorizing about it out there. I just want to point out that making it
-automated doesn't make it something else than micromanagement.
+automated doesn't make it something else than some kind of less
+intrusive micromanagement.
 
 ## Still a promising app
 
 ### Risks
 
-To me Peak has a lot of potential, but the team working on it should
-take all this into consideration. I'm sure that they mean well.
-In an ideal world, people will take the metrics as they
+It seems that Peak has a lot of potential, but the team working on it should
+take all this into consideration. I'm sure that they mean well and,
+in an ideal world, people will take the metrics as they
 are - possibly flawed outputs of a complex process aimed at creating
 value for the company. No one will consider the "red employee" factor.
 No one will game the system.
@@ -190,8 +186,8 @@ Except we're not in a perfect world.
 
 Managers will abuse it, employees will game it.
 
-Not everywhere, of course - there are some great companies that knows how
-to deal with these subjects. But some will use this for "evil".
+Of course this will not happen everywhere! There are some great companies that knows how
+to deal with these subjects, but it's very likely that some will use this for "evil".
 
 ### What I'd do
 
@@ -202,14 +198,12 @@ situation.
 - Get rid of employee ranking, nothing good can come out of it
 - Remove Gmail integration, this is not relevant
 - Hour tracking should not judge people (red vs green) and should just be a neutral data
-- Make some things active, like allowing the employee to say what she is working on
+- Make some things active, like allowing the employees to input what she is working on
 - Do not track hours if you don't bill by the hour (with harvest for instance)
 - Keep up the good work with the UI. Loving it.
 
 ### Hopes
 
-I really hope that people will use this tool for good (helping companies
+I really hope that people will use this product for good (helping companies
 create value and protect employees from interuptions) and not evil
 (micromanagement).
-
-
