@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2013-11-11T18:42:27+01:00</updated>
+ <updated>2013-11-13T10:33:52+01:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -20,7 +20,7 @@
      <id>http://marcgg.com/blog/2013/11/12/peak-productivity</id>
      <content type="html">&lt;p&gt;A couple of days ago I ran into a new application by &lt;a href='http://metalabdesign.com/'&gt;MetaLab&lt;/a&gt; called &lt;a href='http://www.usepeak.com/'&gt;Peak&lt;/a&gt;. The application is supposed to be &amp;#8220;the automated way to keep track of what everyone is working on&amp;#8221;. Basically you plug in a bunch of services such as Gmail, Github or Basecamp and the app gives your an overview of what&amp;#8217;s going on as well as metrics about your team. Since I&amp;#8217;m a big fan of what MetaLab produces, I decided to check it out.&lt;/p&gt;
 
-&lt;p&gt;I was very disapointed.&lt;/p&gt;
+&lt;p&gt;I was very disappointed.&lt;/p&gt;
 
 &lt;p&gt;Don&amp;#8217;t get me wrong, the app looks amazing. The UI is slick and everything is very well organized. My problem with it is that the product seems misguided.&lt;/p&gt;
 
@@ -62,7 +62,7 @@
 &lt;div style='text-align: center'&gt;&lt;img src='/assets/blog/activity_peak.png' /&gt;&lt;/div&gt;
 &lt;h3 id='measuring_work_hours'&gt;Measuring work hours&lt;/h3&gt;
 
-&lt;p&gt;I personnally think that measuring hours doesn&amp;#8217;t help producing value. You just know that your employees were here, but they could be reading Facebook all day. Still this is the oldest and easiest form of management so it&amp;#8217;s not surprising that it&amp;#8217;s the way it is in most places.&lt;/p&gt;
+&lt;p&gt;I personally think that measuring hours doesn&amp;#8217;t help producing value. You just know that your employees were here, but they could be reading Facebook all day. Still this is the oldest and easiest form of management so it&amp;#8217;s not surprising that it&amp;#8217;s the way it is in most places.&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;What [banning remote working] reveals more than anything is that Yahoo management doesn’t have a clue as to who’s actually productive and who’s not. In their blindness they’re reaching for the lowest form of control a manager can assert: Ensuring butts in seats for eight hours between 9-5+. Though while they can make people come to the office under the threat of termination, they most certainly cannot make those same people motivated to do great work.&lt;/p&gt;
@@ -70,7 +70,7 @@
 &lt;p&gt;&lt;a href='http://twitter.com/dhh'&gt;@dhh&lt;/a&gt; about &lt;a href='http://37signals.com/svn/posts/3453-no-more-remote-work-at-yahoo'&gt;Yahoo banning remote work&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Again, this rewards employees that are not necesserally the best ones. Someone completing her tasks working a 40 hours week is probably more valuable than another person working 100 hours a week to produce the same output. One could also add that long hours are not sustainable and that the employee working crazy hours is more prone to burn out, which is not good for anyone - employer included.&lt;/p&gt;
+&lt;p&gt;Again, this rewards employees that are not necessarily the best ones. Someone completing her tasks working a 40 hours week is probably more valuable than another person working 100 hours a week to produce the same output. One could also add that long hours are not sustainable and that the employee working crazy hours is more prone to burn out, which is not good for anyone - employer included.&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Working overtime sucks the spirit and motivation out of your team. When your team becomes tired and demoralized they will get less work done, not more, no matter how many hours are worked.&lt;/p&gt;
@@ -96,7 +96,7 @@
 &lt;p&gt;&lt;a href='http://www.merriam-webster.com/dictionary/micromanage'&gt;Merriam Webster&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;To me knowing what tasks someone is working on and assuring that it is delivered on time is management. Checking how many emails are sent is micromanagement, checking a detail that is irelevant unless your job description is to write and send as many emails as possible.&lt;/p&gt;
+&lt;p&gt;To me knowing what tasks someone is working on and assuring that it is delivered on time is management. Checking how many emails are sent is micromanagement, checking a detail that is irrelevant unless your job description is to write and send as many emails as possible.&lt;/p&gt;
 
 &lt;p&gt;Some features in Peak encourage micromanagement even if the automated tweet when sharing from their website says otherwise.&lt;/p&gt;
 &lt;div style='text-align: center'&gt;&lt;img src='/assets/blog/micro.png' /&gt;&lt;/div&gt;
@@ -118,7 +118,7 @@
 
 &lt;h3 id='what_id_do'&gt;What I&amp;#8217;d do&lt;/h3&gt;
 
-&lt;p&gt;I&amp;#8217;m sure they have thought about it, and I&amp;#8217;m not a product guy. But I don&amp;#8217;t like critizing without giving ideas on how to improve the situation.&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;m sure they have thought about it, and I&amp;#8217;m not a product guy. But I don&amp;#8217;t like criticizing without giving ideas on how to improve the situation.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Get rid of employee ranking, nothing good can come out of it&lt;/li&gt;
@@ -136,7 +136,7 @@
 
 &lt;h3 id='hopes'&gt;Hopes&lt;/h3&gt;
 
-&lt;p&gt;I really hope that people will use this product for good (helping companies create value and protect employees from interuptions) and not evil (micromanagement).&lt;/p&gt;</content>
+&lt;p&gt;I really hope that people will use this product for good (helping companies create value and protect employees from interruptions) and not evil (micromanagement).&lt;/p&gt;</content>
    </entry>
   
  
