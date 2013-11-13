@@ -17,7 +17,7 @@ services such as Gmail, Github or Basecamp and the app gives your an
 overview of what's going on as well as metrics about your team.
 Since I'm a big fan of what MetaLab produces, I decided to check it out.
 
-I was very disapointed.
+I was very disappointed.
 
 Don't get me wrong, the app looks amazing. The UI is slick and
 everything is very well organized. My problem with it is that
@@ -103,7 +103,7 @@ employee" of the company ?
 
 ### Measuring work hours
 
-I personnally think that measuring hours doesn't help producing value. You just
+I personally think that measuring hours doesn't help producing value. You just
 know that your employees were here, but they could be reading Facebook
 all day. Still this is the oldest and easiest form of management so it's
 not surprising that it's the way it is in most places.
@@ -116,7 +116,7 @@ not surprising that it's the way it is in most places.
 > 
 > [@dhh](http://twitter.com/dhh) about [Yahoo banning remote work](http://37signals.com/svn/posts/3453-no-more-remote-work-at-yahoo)
 
-Again, this rewards employees that are not necesserally the best ones.
+Again, this rewards employees that are not necessarily the best ones.
 Someone completing her tasks working a 40 hours week is probably
 more valuable than another person working 100 hours a week to produce
 the same output. One could also add that long hours are not sustainable
@@ -152,7 +152,7 @@ what I believe is micromanagement before continuing.
 
 To me knowing what tasks someone is working
 on and assuring that it is delivered on time is management. Checking how
-many emails are sent is micromanagement, checking a detail that is irelevant unless
+many emails are sent is micromanagement, checking a detail that is irrelevant unless
 your job description is to write and send as many emails as possible.
 
 Some features in Peak encourage micromanagement even if the automated
@@ -192,7 +192,7 @@ to deal with these subjects, but it's very likely that some will use this for "e
 ### What I'd do
 
 I'm sure they have thought about it, and I'm not a product guy. But I
-don't like critizing without giving ideas on how to improve the
+don't like criticizing without giving ideas on how to improve the
 situation.
 
 - Get rid of employee ranking, nothing good can come out of it
@@ -205,5 +205,5 @@ situation.
 ### Hopes
 
 I really hope that people will use this product for good (helping companies
-create value and protect employees from interuptions) and not evil
+create value and protect employees from interruptions) and not evil
 (micromanagement).
