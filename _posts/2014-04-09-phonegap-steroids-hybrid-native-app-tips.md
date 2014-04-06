@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Tips Learned Releasing an Hybrid App Using SteroidsJS"
+title: "Tips Learned Releasing an Hybrid App Using Steroids.js"
 description: "300ms delay, overscroll, text rendering, 1px borders,
 local storage, performances, i18n ... After lot of work and an app released, I'm releasing
 a long list of solutions to problems I ran into while developing an hybrid app."
