@@ -11,12 +11,12 @@ category: blog
       <div class="single-post clearfix">
         <div class="date">{{ post.date | date: "%B %e, %Y" }}</div>
         <div class="excerpt">
-          <h4>
+          <h5>
             {% if post.lang == "fr" %}
             [fr]
             {% endif %}
             <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
-          </h4>
+          </h5>
 
           <p class="description">
             {{ post.description }}

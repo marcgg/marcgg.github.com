@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "Tips Learned Releasing an Hybrid App Using SteroidsJS"
-description: ""
-blog: true
+description: "300ms delay, overscroll, text rendering, 1px borders,
+local storage, performances, i18n ... After lot of work and an app released, I'm releasing
+a long list of solutions to problems I ran into while developing an hybrid app."
+blog: false
 category: blog
 tag: iphone
 ---
@@ -11,16 +13,18 @@ tag: iphone
 
 A while ago I [wrote about AppGyver's SteroidsJS](/blog/2013/08/29/appgyver-steroids-iphone-hybrid-javascript/)
 and its interesting take on hybrid app development. Since then I've teamed up
-with [Kevin Tunc](http://dribbble.com/kevintunc), worked a lot and managed to actually release something
+with [Kevin Tunc](http://dribbble.com/kevintunc), worked a lot, managed to actually release something
 [on the appstore](https://itunes.apple.com/app/liff-understand-your-life/id834944345) and
-won AppGyver X's app of the month.
+won AppGyver's app of the month.
 
 <div style="text-align: center"><img src="/assets/misc/win_app_month.jpg" /></div>
 
-It wasn't all that easy, so I figured I'd share some of the gotchas I
-ran into. Really this is the article I wish existed when I started development.
+It wasn't all that easy to create an hybrid app with a quality UI,
+so I figured I'd share some of the gotchas I ran into.
+It's a long article, but really this is what I wish was written when I started
+working on my app and hopefully it'll help out some people.
 
-Of course, like any other article I can write here,
+Of course, like any other things I write here,
 [I don't claim to know everything](/blog/2013/11/05/enough-with-the-language-trolls/).
 Please take this as it is: some tips I learned making mistakes and wasting time.
 I'm no JavaScript guru master ninja 2.0 rock star,
@@ -385,6 +389,19 @@ window.mySwipe = Swipe(document.getElementById('slider'));
 The only gotcha is that you won't be able to put inputs in a slide
 because text edition (long press on iOS) will not work properly.
 
+### Hammer.js
+
+[Hammer](http://eightmedia.github.io/hammer.js/) ships with Steroids JS, so I gave it a try.
+Overall it works fine for some events such as tap or release, but the
+way it handles clicks seemed buggy. I can't quite put my finger on it,
+but I was better of just using jQuery for click events.
+
+### Use Clicks
+
+When in doubt, use links and their click event. It will feel better on
+the end user than if you'd use tap or any other event. There is no need
+to get fancy.
+
 ### Loader
 
 I like having a global way of calling a loader in any view and
@@ -443,11 +460,44 @@ As you can see, the CSS is very simple. Again, not claiming to provide the defin
 solution here, just some guidance. Feel free to improve on it and add a
 comment.
 
+### Settings
+
+I think I managed to get a decent looking settings tab, but I didn't
+find anything that would do it out of the box. Here's a screenshot:
+
+<div style="text-align: center"><img src="/assets/misc/settings_liff.jpg" /></div>
+
+I'm not perfectly happy with the way I had to do it, so I won't share it.
+However you can take a look at what I used for the checkbox
+[here](http://www.cyberantics.net/toggle.html). I found it in a comment
+on [a very interesting article](http://www.designcouch.com/home/why/2013/09/19/ios7-style-pure-css-toggle/)
+and had to change a couple of things (mostly having to do with webkit-appearance)
+to get it to work perfectly within my app, but it's a very good base.
+
+### Local Storage
+
+Here is a quick extract of my User model using the
+[localStorage API](https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Storage#localStorage)
+for persistence.
+
+{% highlight javascript %}
+window.User = {
+
+  id: function(){
+    return window.localStorage.getItem("liff_id")
+  }
+
+  setStatsMode: function(val){
+    window.localStorage.setItem("liff_stats_mode", val)
+  }
+
+  // Way more things go here
+}
+{% endhighlight %}
 
 
-
-
-
+If I were to complexify my data model, I would consider using
+[SQLite](https://github.com/AppGyver/steroids-plugins/tree/master/sqlite).
 
 
 
@@ -455,9 +505,14 @@ comment.
 
 ### I18n
 
+I decided to create my app in both French and English, so I had to deal
+with internationalization right away. I prefered handling it in the app
+rather than creating multiple builds or other complicated solutions. The
+performance problem was a non issue thanks to preloading (as explained
+further below).
+
 Working with SteroidsJS means working with Cordova/PhoneGap. In this case the
 [globalization API](http://docs.phonegap.com/en/2.2.0/cordova_globalization_globalization.md.html).
-When loading a view, I internationalize it right away like this:
 
 {% highlight javascript %}
 document.addEventListener("deviceready", function(){
@@ -488,6 +543,38 @@ so I can load different images in CSS if needed.
 I find it easy to use and it's decent performance wise if you don't have
 too much text displayed.
 
+### Preloading
+
+Preloading is great, it really speeds up everything.
+
+As explained above, I internationalized all my app, so without preloading I would have a
+couple of miliseconds where the text would appear, causing a blink.
+Preloading views fixed this.
+
+{% highlight javascript %}
+var someView = new steroids.views.WebView("/views/settings/some_view.html");
+var anotherView = new steroids.views.WebView("/views/settings/another_view.html");
+
+function preload(){
+  someView.preload()
+  anotherView.preload()
+}
+{% endhighlight %}
+
+I also wait a bit before actually preloading the view, so the first load
+time is reduced. I think it's better to only preload when you really need
+it to preserve ressources.
+
+{% highlight javascript %}
+setTimeout(preload, 3000)
+{% endhighlight %}
+
+_Note that this not fully functional in production on my app because of
+an issue in Steroids JS where loading the navigation bar in a certain
+way disrupts preloading. Because of this you will see some minor
+blinking in some internal setting screens. It will be fixed soon :)_
+
+Learn more about it on [AppGyver's website](http://academy.appgyver.com/categories/3/contents/19).
 
 ### Getting Out Of The Background
 
@@ -526,16 +613,15 @@ window.addEventListener("message", function(msg) {
 ## Check Out The Result!
 
 Of course you don't have to take my word for it, give my application a try !
+
 It's called Liff and is
 [available on the appstore](https://itunes.apple.com/en/app/liff-understand-your-life/id834944345).
 The goal is to give a [relevant way to get insights on ones day](http://liffapp.io) and
-we put extra effort to create a pleasant experience with a solid design.
+we put in extra efforts in order to create a pleasant experience with a solid design.
 
 <div style="text-align: center"><img src="/assets/misc/liff_screen.jpg" /></div>
 
-
-
-
-
-
-## Overall
+Clearly creating an hybrid app is easier than ever, but there is still a
+lot of things to keep in mind when doing so. Projects like PhoneGap push
+the ball in the right direction and I can't wait to see what kind of
+apps we'll be creating in a few years!
