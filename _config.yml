@@ -6,6 +6,8 @@ exclude: [".rvmrc", "README.md", "Rakefile"]
 auto: true
 pygments: true
 
+markdown: kramdown
+
 title : marcgg#blog
 tagline: Site Tagline
 author :
