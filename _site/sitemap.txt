@@ -17,7 +17,7 @@ http://marcgg.com/photos/tigerlily.html
 http://marcgg.com/photos/traveling.html
 http://marcgg.com/sitemap.txt
 
-http://marcgg.com/blog/2014/04/09/appgyver-steroids-hybrid-native-app-tips
+http://marcgg.com/blog/2014/04/09/phonegap-steroids-hybrid-native-app-tips
 http://marcgg.com/blog/2013/11/12/peak-productivity
 http://marcgg.com/blog/2013/11/05/enough-with-the-language-trolls
 http://marcgg.com/blog/2013/10/29/mixing-languages

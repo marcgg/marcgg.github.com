@@ -156,7 +156,7 @@ h5{
   margin-bottom: 20px;
   font-weight: bold;
 }
-h5 a{
+h5 *{
   color: #545454;
 }
 

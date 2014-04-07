@@ -12,7 +12,10 @@ tag: iphone
 {% include JB/setup %}
 
 A while ago I [wrote about AppGyver's SteroidsJS](/blog/2013/08/29/appgyver-steroids-iphone-hybrid-javascript/)
-and its interesting take on hybrid app development. Since then I've teamed up
+and its interesting take on hybrid app development. If you haven't read it, basically they add the ability
+to use native UI elements to PhoneGap applications.
+
+Since then I've teamed up
 with [Kevin Tunc](http://dribbble.com/kevintunc), worked a lot, managed to actually release something
 [on the appstore](https://itunes.apple.com/app/liff-understand-your-life/id834944345) and
 won AppGyver's app of the month.
@@ -21,8 +24,8 @@ won AppGyver's app of the month.
 
 It wasn't all that easy to create an hybrid app with a quality UI,
 so I figured I'd share some of the gotchas I ran into.
-It's a long article, but really this is what I wish was written when I started
-working on my app and hopefully it'll help out some people.
+I know it's a longer article than what I use to post, but really this is what I wish was written when I started
+working on my app, so hopefully it'll help out some people getting started.
 
 Of course, like any other things I write here,
 [I don't claim to know everything](/blog/2013/11/05/enough-with-the-language-trolls/).
@@ -30,22 +33,20 @@ Please take this as it is: some tips I learned making mistakes and wasting time.
 I'm no JavaScript guru master ninja 2.0 rock star,
 [ain't nobody got time for that](https://www.youtube.com/watch?v=Nh7UgAprdpM)!
 I'll also focus on iOS because I built an iOS app, but a lot of this
-applies to Android phones as well.
-
-Note that some parts of the article are just as true for any kind of hybrid app
-development, be it with PhoneGap or something else.
+applies to Android phones as well. Also note that some parts of the article are just as
+true for any kind of hybrid app development, be it with PhoneGap or something else.
 
 ## Getting The Device To Leave You Alone
 
-You probably know all about [reset.css](http://meyerweb.com/eric/tools/css/reset/), but
+You probably know all about using a [reset.css file](http://meyerweb.com/eric/tools/css/reset/), but
 for a webview trying to pass for a native view, it's not enought.
 
 ### 300ms Tap Delay
 
 Mobile browsers implement a delay on tap, to see if you tried to double
 tap or not. Overall it goes: touchstart -> touchend -> wait 300ms ->
-send click. This result in a terrible experience when navigating your
-app.
+send click. This results in a terrible experience when navigating your
+app as it feels slow and/or broken.
 
 For some browsers you can just
 [specify a viewport and it'll go away](http://updates.html5rocks.com/2013/12/300ms-tap-delay-gone-away):
@@ -54,7 +55,7 @@ For some browsers you can just
 <meta name="viewport" content="width=device-width, user-scalable=no">
 {% endhighlight %}
 
-If it doesn't work, for instance if you use Safari, use [FastClick](https://github.com/ftlabs/fastclick):
+If this solution doesn't work, for instance if your code runs on Safari, use [FastClick](https://github.com/ftlabs/fastclick):
 
 {% highlight javascript %}
 window.addEventListener('load', function() {
@@ -68,7 +69,7 @@ You know... this thing:
 
 <div style="text-align: center"><img src="/assets/misc/copy.jpg" /></div>
 
-This one is pretty easy for webkit you add this in your CSS:
+Fixing this one is pretty easy for webkit you add this in your CSS:
 
 {% highlight css %}
 -webkit-user-select: none;
@@ -110,8 +111,9 @@ Just in case it disapears, here's what it looks like:
 
 I think that you want the "bounce" effect when you scroll out of a
 webview. It actually feels better for the end user. However in some
-cases you don't want this. There are a lot of options to do this, I used
-this one from [stackoverflow](http://stackoverflow.com/questions/10238084/ios-safari-how-to-disable-overscroll-but-allow-scrollable-divs-to-scroll-norma) again:
+specific cases you might need to disable this behavior. There are a lot of options to do this, but I personnaly used
+this one from
+[stackoverflow](http://stackoverflow.com/questions/10238084/ios-safari-how-to-disable-overscroll-but-allow-scrollable-divs-to-scroll-norma):
 
 {% highlight javascript %}
 function disallowOverscroll(){
@@ -135,12 +137,13 @@ function disallowOverscroll(){
 
 ### Higcharts
 
-If you use [highcharts](http://www.highcharts.com/), you might run into some scrolling trouble. This
-gist might help: [https://gist.github.com/skarface/2994906](https://gist.github.com/skarface/2994906)
+If you use [highcharts](http://www.highcharts.com/), you could run into some scrolling trouble when
+the user touches the graphs. This gist might help:
+[https://gist.github.com/skarface/2994906](https://gist.github.com/skarface/2994906)
 
 ### Allow Text Selection For Input
 
-This is an iOS issue, in some cases you won't be able to select and edit
+This is an iOS issue. In some cases you won't be able to select and edit
 the text in your inputs as you'd like. You can fix this using
 [user-select](https://developer.mozilla.org/en-US/docs/Web/CSS/user-select)
 
@@ -150,9 +153,9 @@ the text in your inputs as you'd like. You can fix this using
 
 ### Better Looking Text
 
-For some reason I noticed that changing the
+I noticed that changing the
 [text-rendering](https://developer.mozilla.org/en-US/docs/Web/CSS/text-rendering)
-option makes things look better:
+option gets things to look better and doesn't harm performances if you don't have huge chunks of text:
 
 {% highlight css %}
 text-rendering: optimizeLegibility;
@@ -184,8 +187,8 @@ you can [read about it](http://quirksmode.org/css/user-interface/boxsizing.html)
 ### Removing Gray Highlight When Tapping Links
 
 On mobile Safari, tapped links will get quickly highlighted, which
-doesn't look very "native" once embeded in a Steroids JS webview. Change
-this using:
+doesn't look very "native" once embeded in a Steroids JS webview. This is especialy true
+for images. Change this using:
 
 {% highlight css %}
 -webkit-tap-highlight-color: #123456; /* To change it */
@@ -203,6 +206,7 @@ looking in this direction:
 {% highlight css %}
  -webkit-overflow-scrolling: touch;
 {% endhighlight %}
+
 
 
 
@@ -232,8 +236,7 @@ background-size: 100px 100px; /* with my_image.jpg being 200x200 px */
 
 If all your images are in your build and not on a remote server, I would recommend always loading the @2x version.
 The rule of thumb is that if it looks fine in retina, it will look fine in 1x and embeding
-the 1x image will only increase your build's size and complexify your
-assets management.
+the 1x image will only increase your build's size and complexify the way you manage your assets.
 
 ### Background Position
 
@@ -246,7 +249,7 @@ If you specify a 1px border in your CSS, a 2px border will be displayed
 on retina displays. Yeah, this is pretty unituitive and a major pain.
 There are a lot of ways to try to get this to work.
 
-This might not be best for you, but for my use case, I found 
+This might not be best for you but, for my use case, I found
 [Stephan Bönnemann's solution](https://excellenteasy.com/devblog/posts/how-to-target-physical-pixels-on-retina-screens-with-css/)
 simpler, and I ended adding a DOM element and styling it like this:
 
@@ -278,16 +281,21 @@ them out and make an opinion for yourself:
 
 ## Performances
 
+### Avoid HTTP Calls
+
+This seems obvious, but embed as many images and javascript libraries as possible in your build.
+It will run on mobile, and connectivity is an issue there. Yes it does increases build size, but
+it's totally worth it.
+
 ### jQuery ?
 
 I used jQuery. There, I said it.
 
 I knew it would degrade performances, but I benchmarked it a bit versus Vanilla JS and the
-difference was not really noticable so I kept it because I'm used to the
-syntax and it [gets the job done](/blog/2013/11/05/enough-with-the-language-trolls/)
-so I didn't feel the need to drop it.
+difference was not really noticable for my use cases, so I kept it because I'm used to the
+syntax and it [gets the job done](/blog/2013/11/05/enough-with-the-language-trolls/).
 
-Of course I used [the usual performances tips](http://www.artzstudio.com/2009/04/jquery-performance-rules/),
+Of course I followed [the usual performances tips](http://www.artzstudio.com/2009/04/jquery-performance-rules/),
 not too much DOM manipulation, do not reselect the same element over and
 over etc.
 
@@ -341,14 +349,14 @@ HTML 5 / CSS 3 app, but what about SteroidsJS itself ?
 
 ### Learning
 
-Like very new technology there will be problems, bugs and API changes.
+Like any new libraries there will be problems, bugs and API changes.
 It is important to keep up to date, I'd suggest:
 
 - Following what goes on in the [forums](http://forums.appgyver.com)
 - Keep an eye on the [changelog](http://blog.appgyver.com/changelog/)
   and the [blog](http://blog.appgyver.com/)
 
-For documentation and ways to code:
+For documentation and tips on how to code:
 
 - Use [the API documentation](http://docs.appgyver.com/en/edge/index.html) that is quite
   extensive, even if it's very poorly referenced on Google right now so
@@ -362,7 +370,7 @@ For documentation and ways to code:
 I personnally didn't go the AngularJS route because it felt overkill for
 what I tried to achieve. I also didn't like the MVC solution proposed by
 basic steroids scaffolding. In the end what worked for me was quite
-view-centric and looked like this:
+view-centric approach that looked like this:
 
 - /app/views/my_scope/action.html (a view in a separate webview)
 - /app/controllers/my_scope/action.js (all the JS related to a view)
@@ -372,6 +380,8 @@ view-centric and looked like this:
 
 Overall once I set it up like this, it was easier to figure out what
 would interact with what.
+
+
 
 
 
@@ -394,18 +404,18 @@ because text edition (long press on iOS) will not work properly.
 [Hammer](http://eightmedia.github.io/hammer.js/) ships with Steroids JS, so I gave it a try.
 Overall it works fine for some events such as tap or release, but the
 way it handles clicks seemed buggy. I can't quite put my finger on it,
-but I was better of just using jQuery for click events.
+but in some cases I was better of just using jQuery for click events.
 
 ### Use Clicks
 
-When in doubt, use links and their click event. It will feel better on
-the end user than if you'd use tap or any other event. There is no need
+When in doubt, use links and their click event. It will feel better for
+the end user than using tap or any other event. There is no need
 to get fancy.
 
 ### Loader
 
-I like having a global way of calling a loader in any view and
-centralize the style and retry logic. The javascript code est pretty
+I liked having a global way of calling a loader in any view and
+centralize the style and retry logic. The javascript code is pretty
 domain specific to my app, but I'll share the CSS part if you want it to
 look like this:
 
@@ -467,7 +477,7 @@ find anything that would do it out of the box. Here's a screenshot:
 
 <div style="text-align: center"><img src="/assets/misc/settings_liff.jpg" /></div>
 
-I'm not perfectly happy with the way I had to do it, so I won't share it.
+I'm not perfectly happy with the way I had to do it, so I won't share it even if it does look fine.
 However you can take a look at what I used for the checkbox
 [here](http://www.cyberantics.net/toggle.html). I found it in a comment
 on [a very interesting article](http://www.designcouch.com/home/why/2013/09/19/ios7-style-pure-css-toggle/)
@@ -501,6 +511,7 @@ If I were to complexify my data model, I would consider using
 
 
 
+
 ## Deeper Into SteroidsJS and Cordova
 
 ### I18n
@@ -531,24 +542,24 @@ document.addEventListener("deviceready", function(){
 function localize(language){
   $("body").attr("id", language)
   $("*[data-t]").each(function(){
-    $(this).html(I18n[language][$this.data("t")]) 
+    $(this).html(I18n[language][$this.data("t")])
   })
 }
 {% endhighlight %}
 
-Meaning it will use my I18n object (very basic JSON) and replace the
+... meaning it will use my I18n object (very basic JSON) and replace the
 content of any HTML element with a data-t attribute. The body ID is set
 so I can load different images in CSS if needed.
 
-I find it easy to use and it's decent performance wise if you don't have
+I find it very easy to use every day and it's decent performance wise if you don't have
 too much text displayed.
 
 ### Preloading
 
 Preloading is great, it really speeds up everything.
 
-As explained above, I internationalized all my app, so without preloading I would have a
-couple of miliseconds where the text would appear, causing a blink.
+As explained above, I internationalized my whole app. Because of this, without preloading,
+I would have a couple of miliseconds where the text would appear, causing a blink.
 Preloading views fixed this.
 
 {% highlight javascript %}
@@ -561,29 +572,30 @@ function preload(){
 }
 {% endhighlight %}
 
-I also wait a bit before actually preloading the view, so the first load
+I also wait a bit before actually preloading the views, so the first app load
 time is reduced. I think it's better to only preload when you really need
-it to preserve ressources.
+it in order to preserve ressources.
 
 {% highlight javascript %}
 setTimeout(preload, 3000)
 {% endhighlight %}
+
+Learn more about it on [AppGyver's website](http://academy.appgyver.com/categories/3/contents/19).
 
 _Note that this not fully functional in production on my app because of
 an issue in Steroids JS where loading the navigation bar in a certain
 way disrupts preloading. Because of this you will see some minor
 blinking in some internal setting screens. It will be fixed soon :)_
 
-Learn more about it on [AppGyver's website](http://academy.appgyver.com/categories/3/contents/19).
 
 ### Getting Out Of The Background
 
-You might want to do something when the user reopen the app after
+You might want to do something when the user reopens the app after
 putting it in the background. Here's how to do it:
 
 {% highlight javascript %}
 document.addEventListener("resume", function(){
-  // Do the things
+  // Do things
 }, false);
 {% endhighlight %}
 
@@ -604,7 +616,8 @@ window.addEventListener("message", function(msg) {
 })
 {% endhighlight %}
 
-
+_Right now there is an open issue when adding alerts in the event listener
+as discussed [on the forum)[http://forums.appgyver.com/#!/steroids:sometimes-alerts-block-th)_.
 
 
 
