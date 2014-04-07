@@ -13,7 +13,7 @@ tag: iphone
 
 A while ago I [wrote about AppGyver's SteroidsJS](/blog/2013/08/29/appgyver-steroids-iphone-hybrid-javascript/)
 and its interesting take on hybrid app development. If you haven't read it, basically they add the ability
-to use native UI elements to PhoneGap applications.
+to use native UI elements in PhoneGap applications.
 
 Since then I've teamed up
 with [Kevin Tunc](http://dribbble.com/kevintunc), worked a lot, managed to actually release something
@@ -25,7 +25,7 @@ won AppGyver's app of the month.
 It wasn't all that easy to create an hybrid app with a quality UI,
 so I figured I'd share some of the gotchas I ran into.
 I know it's a longer article than what I use to post, but really this is what I wish was written when I started
-working on my app, so hopefully it'll help out some people getting started.
+working on my app.
 
 Of course, like any other things I write here,
 [I don't claim to know everything](/blog/2013/11/05/enough-with-the-language-trolls/).
@@ -39,11 +39,11 @@ true for any kind of hybrid app development, be it with PhoneGap or something el
 ## Getting The Device To Leave You Alone
 
 You probably know all about using a [reset.css file](http://meyerweb.com/eric/tools/css/reset/), but
-for a webview trying to pass for a native view, it's not enought.
+for a webview trying to pass for a native view, it's not enough.
 
 ### 300ms Tap Delay
 
-Mobile browsers implement a delay on tap, to see if you tried to double
+Mobile browsers implement a delay on tap to check if you tried to double
 tap or not. Overall it goes: touchstart -> touchend -> wait 300ms ->
 send click. This results in a terrible experience when navigating your
 app as it feels slow and/or broken.
@@ -69,7 +69,7 @@ You know... this thing:
 
 <div style="text-align: center"><img src="/assets/misc/copy.jpg" /></div>
 
-Fixing this one is pretty easy for webkit you add this in your CSS:
+Fixing this one is pretty easy. For webkit you add this in your CSS:
 
 {% highlight css %}
 -webkit-user-select: none;
@@ -79,7 +79,7 @@ Fixing this one is pretty easy for webkit you add this in your CSS:
 ### Disable Double Tap
 
 If you don't like double tapping and use jQuery, try [this stackoverflow answer](http://stackoverflow.com/a/9728511).
-Just in case it disapears, here's what it looks like:
+Just in case this answer disapears, here's what it looks like:
 
 {% highlight javascript %}
 
@@ -111,7 +111,7 @@ Just in case it disapears, here's what it looks like:
 
 I think that you want the "bounce" effect when you scroll out of a
 webview. It actually feels better for the end user. However in some
-specific cases you might need to disable this behavior. There are a lot of options to do this, but I personnaly used
+specific cases you might need to disable this behavior. There are many ways of doing this and I personnaly used
 this one from
 [stackoverflow](http://stackoverflow.com/questions/10238084/ios-safari-how-to-disable-overscroll-but-allow-scrollable-divs-to-scroll-norma):
 

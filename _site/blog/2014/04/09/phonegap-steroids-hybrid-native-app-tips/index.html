@@ -44,7 +44,7 @@
   
 <p>A while ago I <a href="/blog/2013/08/29/appgyver-steroids-iphone-hybrid-javascript/">wrote about AppGyver’s SteroidsJS</a>
 and its interesting take on hybrid app development. If you haven’t read it, basically they add the ability
-to use native UI elements to PhoneGap applications.</p>
+to use native UI elements in PhoneGap applications.</p>
 
 <p>Since then I’ve teamed up
 with <a href="http://dribbble.com/kevintunc">Kevin Tunc</a>, worked a lot, managed to actually release something
@@ -56,7 +56,7 @@ won AppGyver’s app of the month.</p>
 <p>It wasn’t all that easy to create an hybrid app with a quality UI,
 so I figured I’d share some of the gotchas I ran into.
 I know it’s a longer article than what I use to post, but really this is what I wish was written when I started
-working on my app, so hopefully it’ll help out some people getting started.</p>
+working on my app.</p>
 
 <p>Of course, like any other things I write here,
 <a href="/blog/2013/11/05/enough-with-the-language-trolls/">I don’t claim to know everything</a>.
@@ -70,11 +70,11 @@ true for any kind of hybrid app development, be it with PhoneGap or something el
 <h2 id="getting-the-device-to-leave-you-alone">Getting The Device To Leave You Alone</h2>
 
 <p>You probably know all about using a <a href="http://meyerweb.com/eric/tools/css/reset/">reset.css file</a>, but
-for a webview trying to pass for a native view, it’s not enought.</p>
+for a webview trying to pass for a native view, it’s not enough.</p>
 
 <h3 id="ms-tap-delay">300ms Tap Delay</h3>
 
-<p>Mobile browsers implement a delay on tap, to see if you tried to double
+<p>Mobile browsers implement a delay on tap to check if you tried to double
 tap or not. Overall it goes: touchstart -&gt; touchend -&gt; wait 300ms -&gt;
 send click. This results in a terrible experience when navigating your
 app as it feels slow and/or broken.</p>
@@ -98,7 +98,7 @@ app as it feels slow and/or broken.</p>
 
 <div style="text-align: center"><img src="/assets/misc/copy.jpg" /></div>
 
-<p>Fixing this one is pretty easy for webkit you add this in your CSS:</p>
+<p>Fixing this one is pretty easy. For webkit you add this in your CSS:</p>
 
 <div class="highlight"><pre><code class="css"><span class="nt">-webkit-user-select</span><span class="o">:</span> <span class="nt">none</span><span class="o">;</span>
 <span class="nt">-webkit-touch-callout</span><span class="o">:</span> <span class="nt">none</span><span class="o">;</span>
@@ -107,7 +107,7 @@ app as it feels slow and/or broken.</p>
 <h3 id="disable-double-tap">Disable Double Tap</h3>
 
 <p>If you don’t like double tapping and use jQuery, try <a href="http://stackoverflow.com/a/9728511">this stackoverflow answer</a>.
-Just in case it disapears, here’s what it looks like:</p>
+Just in case this answer disapears, here’s what it looks like:</p>
 
 <div class="highlight"><pre><code class="javascript"><span class="c1">// jQuery no-double-tap-zoom plugin</span>
 <span class="c1">// Triple-licensed: Public Domain, MIT and WTFPL license - share and enjoy!</span>
@@ -136,7 +136,7 @@ Just in case it disapears, here’s what it looks like:</p>
 
 <p>I think that you want the “bounce” effect when you scroll out of a
 webview. It actually feels better for the end user. However in some
-specific cases you might need to disable this behavior. There are a lot of options to do this, but I personnaly used
+specific cases you might need to disable this behavior. There are many ways of doing this and I personnaly used
 this one from
 <a href="http://stackoverflow.com/questions/10238084/ios-safari-how-to-disable-overscroll-but-allow-scrollable-divs-to-scroll-norma">stackoverflow</a>:</p>
 
