@@ -137,18 +137,16 @@ h1{
   line-height : 1.5em;
 }
 h2{
-  font-size: 1.5em;
-  margin: 10px 0px 20px 0px;
+  font-size: 1.65em;
+  margin: 15px 0px 25px 0px;
 }
 h3{
   font-size: 1.35em;
   margin-bottom: 20px;
-  padding-left: 20px;
 }
 h4{
   font-size: 1.2em;
   margin-bottom: 20px;
-  padding-left: 40px;
   font-style: italic;
 }
 
