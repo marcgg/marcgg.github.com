@@ -225,6 +225,12 @@ looking in this direction:</p>
 <div class="highlight"><pre><code class="css"> <span class="nt">-webkit-overflow-scrolling</span><span class="o">:</span> <span class="nt">touch</span><span class="o">;</span>
 </code></pre></div>
 
+<h3 id="on-fluid-layouts">On Fluid Layouts</h3>
+
+<p>Using percentages for size can be a good option to handle different screen sizes.
+Just know that there is a <a href="https://github.com/twbs/bootstrap/issues/9282">known issue</a> where Safari
+rounds up percentages that can cause for weird behaviors when using fluid layouts.</p>
+
 <h2 id="retina">Retina</h2>
 
 <p>If you build for iOS, you have to take retina into account. Spoiler:

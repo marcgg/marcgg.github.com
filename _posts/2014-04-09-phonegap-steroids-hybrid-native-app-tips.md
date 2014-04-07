@@ -207,6 +207,12 @@ looking in this direction:
  -webkit-overflow-scrolling: touch;
 {% endhighlight %}
 
+### On Fluid Layouts
+
+Using percentages for size can be a good option to handle different screen sizes.
+Just know that there is a [known issue](https://github.com/twbs/bootstrap/issues/9282) where Safari
+rounds up percentages that can cause for weird behaviors when using fluid layouts.
+
 
 
 
