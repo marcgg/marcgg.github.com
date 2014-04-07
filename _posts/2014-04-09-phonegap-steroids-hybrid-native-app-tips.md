@@ -155,7 +155,8 @@ the text in your inputs as you'd like. You can fix this using
 
 I noticed that changing the
 [text-rendering](https://developer.mozilla.org/en-US/docs/Web/CSS/text-rendering)
-option gets things to look better and doesn't harm performances if you don't have huge chunks of text:
+option gets things to look better. The trade-off is performance, but if you don't have
+huge chunks of text you'll be fine.
 
 {% highlight css %}
 text-rendering: optimizeLegibility;
@@ -247,7 +248,7 @@ the 1x image will only increase your build's size and complexify the way you man
 ### Background Position
 
 Be careful when using background positions with background sizes as they
-sometimes [don't play well together](http://stackoverflow.com/questions/17033806/background-size-with-background-position-doesnt-scale-the-position) if you leave them alone.
+sometimes [don't play well together](http://stackoverflow.com/questions/17033806/background-size-with-background-position-doesnt-scale-the-position).
 
 ### 1px Border
 
@@ -310,8 +311,7 @@ over etc.
 #### Animations
 
 On a lot of devices CSS animations are slow. Often it's not slow enough
-you want to stop using them altogether, but they are still pretty bad if
-you're a perfectionist.
+you want to stop using them altogether, but they are still not that good.
 
 My point is that you should not count on perfectly smooth animations when designing your app.
 
@@ -332,7 +332,7 @@ This happened when I tried to apply an animation to a div with a linear-gradient
 > [webkit.org](https://trac.webkit.org/wiki/QtWebKitGraphics#Usestaticimages)
 
 The solution here is to prefer using images as background images rather
-than CSS gradients. This is agravating, but I never found a way
+than CSS gradients. This is irritating, but I never found a way
 around this performance issue.
 
 ### JavaScript
@@ -351,7 +351,7 @@ arrays will slow everything down.
 ## Working with SteroidsJS
 
 Alright, we talked a lot of general facts that could apply to any hybrid
-HTML 5 / CSS 3 app, but what about SteroidsJS itself ?
+HTML 5 / CSS 3 app, but what about SteroidsJS itself?
 
 ### Learning
 
@@ -364,8 +364,8 @@ It is important to keep up to date, I'd suggest:
 
 For documentation and tips on how to code:
 
-- Use [the API documentation](http://docs.appgyver.com/en/edge/index.html) that is quite
-  extensive, even if it's very poorly referenced on Google right now so
+- Use [the API documentation](http://docs.appgyver.com/en/edge/index.html) which is quite
+  extensive. Be aware that it is very poorly referenced on Google right now so
   you'll have to be precise in your searches.
 - Reading [the tutorials](http://academy.appgyver.com/)
   is a must. They are well done and give a good overview of what the technology can do.
@@ -486,9 +486,9 @@ find anything that would do it out of the box. Here's a screenshot:
 I'm not perfectly happy with the way I had to do it, so I won't share it even if it does look fine.
 However you can take a look at what I used for the checkbox
 [here](http://www.cyberantics.net/toggle.html). I found it in a comment
-on [a very interesting article](http://www.designcouch.com/home/why/2013/09/19/ios7-style-pure-css-toggle/)
-and had to change a couple of things (mostly having to do with webkit-appearance)
-to get it to work perfectly within my app, but it's a very good base.
+on [a very interesting article](http://www.designcouch.com/home/why/2013/09/19/ios7-style-pure-css-toggle/).
+Based on this I only had to change a couple of things (webkit-appearance, mostly)
+to get it to work perfectly within my app.
 
 ### Local Storage
 
@@ -564,8 +564,7 @@ too much text displayed.
 
 Preloading is great, it really speeds up everything.
 
-As explained above, I internationalized my whole app. Because of this, without preloading,
-I would have a couple of miliseconds where the text would appear, causing a blink.
+As explained above, I internationalized my whole app. Because of this I'd have a couple of miliseconds blink before the text appears.
 Preloading views fixed this.
 
 {% highlight javascript %}
