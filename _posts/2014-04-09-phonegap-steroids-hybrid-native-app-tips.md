@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Tips Learned Releasing an Hybrid App Using Steroids.js"
+title: "Tips & Tricks Learned Releasing an Hybrid App Using&nbsp;Steroids.js"
 description: "300ms delay, overscroll, text rendering, 1px borders,
-local storage, performances, i18n ... After lot of work and an app released, I'm releasing
+local storage, performances, i18n ... After lot of work and an app released, I'm sharing
 a long list of solutions to problems I ran into while developing an hybrid app."
-blog: false
+blog: true
 category: blog
 tag: iphone
 ---
@@ -18,7 +18,7 @@ to use native UI elements in PhoneGap applications.
 Since then I've teamed up
 with [Kevin Tunc](http://dribbble.com/kevintunc), worked a lot, managed to actually release something
 [on the appstore](https://itunes.apple.com/app/liff-understand-your-life/id834944345) and
-won AppGyver's app of the month.
+won AppGyver's app of the month!
 
 <div style="text-align: center"><img src="/assets/misc/win_app_month.jpg" /></div>
 

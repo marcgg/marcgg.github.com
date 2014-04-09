@@ -10,6 +10,11 @@ tag: iphone
 
 {% include JB/setup %}
 
+***Update 9 April 2014**: Since this post, I've written another article going with [tips & tricks
+to know when building a Steroids.js app (or any hybrid app really)](/blog/2014/04/09/phonegap-steroids-hybrid-native-app-tips/).
+300ms delay, overscroll, text rendering, 1px borders, local storage, performances, i18n ... it's all there!*
+
+
 As I wrote before, I like the idea of developing mobile applications. I
 don't plan to focus exclusively on it, but having an iPhone app as a pet
 project seems pretty cool and creating something for Android could be
@@ -325,7 +330,8 @@ The next steps on my part is to stop playing around and actually start developin
 I'm also waiting for some features that are supposed to be in the roadmap,
 such as icons in nav bar or iOS 7 native UI.
 
+***2014 Update**: Since this, I've released an application using Steroids.js, it's a [quantified self application
+to track your day](http://liffapp.io). You can check it out [on the appstore](https://itunes.apple.com/en/app/liff-understand-your-life/id834944345)!*
+
 If you have any remarks, I'll be happy to hear them in the comments. For
 questions, I'm not sure to be able to answer all of them - but I'll try!
-
-
