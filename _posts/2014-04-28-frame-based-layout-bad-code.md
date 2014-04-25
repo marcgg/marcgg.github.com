@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Tips to Create a Website From When I Was 12"
-description: ""
+title: "Tips on Creating a Website From When I Was 12"
+description: "Let's just say that when I was younger I didn't write very good code."
 blog: false
 category: blog
 tag: Dev
@@ -12,7 +12,7 @@ tag: Dev
 I've been writting code for a while. I started with QBasic when I was a kid and the two things I remember from
 that time was using PRINT and the fact I was dead confused by the editor I had to use.
 
-Also I might have written something calculating my age from my birthday...
+I might also have written something calculating my age based on my birthday...
 
 Computer science!
 
@@ -26,17 +26,17 @@ to browse *the web* and it's amazing.
 Seeing all these websites makes me want to create my own. Something great. Something about pokemons, AOL chatroom bots
 or whatever I was interested in at the time !
 
-The problem was that back then there was very little information available... or at least I didn't know where to find it.
+The thing is that back then there was very little information available... or at least I didn't know where to find it.
 After time spent on forums whinning for help, I only found that I had to download SiteAid.
 
 For reference, here is what it looked like in all its glory:
 
 <div style="text-align: center"><img src="/assets/blog/siteaid.png" /></div>
 
-Since I wanted a menu on the left and content on the right, I understood that I could use frames to do that.
+Since I wanted a menu on the left and content on the right, I somehow understood that I could use frames to do that.
 After some fiddling around with the UI, I got it to work.
 
-The problem is that I stopped trying to figure out things here.
+The problem is that I stopped trying to figure out things here and started building my website.
 
 ## Tutorial (aka The Abomination)
 
@@ -54,7 +54,7 @@ So first you want to create your main page:
 </HTML>
 {% endhighlight %}
 
-In each frame file, add some sweet design:
+Let's add some sweet design in each frame file:
 
 {% highlight html %}
 <BODY bgcolor="orange">Content!</BODY>
@@ -71,7 +71,7 @@ You could very much do this:
 <BODY bgcolor="orange">Menu 1<BR><BR><BR>Menu 2<BR><BR><BR>Menu 3</BODY>
 {% endhighlight %}
 
-But then you won't have colors on your menu items ! That's when my very clever trick
+The problem is that then you won't have colors on your menu items ! That's when my very clever trick
 comes in. You just need... more frames !
 
 Change f1.html to look like this:
@@ -103,9 +103,11 @@ knowledge of *advanced colors in HTML*.
 
 <div style="text-align: center"><img src="/assets/frames/page3.png" /></div>
 
-Finally let's say I want to add an image next to a menu item. Easy. Frames.
+Finally let's say I want to add an image next to a menu item. Seems complicated, right ?
 
-Change menu.html:
+No. It's easy. Use frames.
+
+You only need to change menu.html like this:
 
 {% highlight html %}
 <HTML>
@@ -146,9 +148,12 @@ You're welcome.
 
 ## The Worst Code
 
-My take on this is that the code you wrote yesterday will be crap compared to what you can
-write today. And don't be depressed about it, that's a good thing: it only means you're getting better!
+My take on this is that the code you wrote yesterday will always be crap compared to what you can
+write today. Don't be depressed about it, that's a good thing ! It means you're getting better!
 
-On some forum a few years back, someone asked "what's the worst code you ever saw".
+On some forum a few years back, someone asked "what's the worst code you ever saw ?".
 Someone responded something along the line of "every single piece of code I've written a long enough time ago".
-I really liked this answer, quite humbling and so much better than bashing a coworker or a random funny story.
+I really liked this answer, quite humbling and much better than bashing a coworker or a random funny story.
+
+So keep improving your skills, don't feel too bad about past coding mistakes and don't hate on new developers
+still learning - you were making the same mistakes at some point !
