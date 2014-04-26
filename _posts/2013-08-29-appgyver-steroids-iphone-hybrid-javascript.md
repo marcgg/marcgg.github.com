@@ -10,8 +10,10 @@ tag: iphone
 
 {% include JB/setup %}
 
-***Update 9 April 2014**: Since this post, I've written another article going with [tips & tricks
-to know when building a Steroids.js app (or any hybrid app really)](/blog/2014/04/09/phonegap-steroids-hybrid-native-app-tips/).
+***Update 9 April 2014**: Since this post, I released a [quantified self app](http://liffapp.io)
+using SteroidsJs and 
+wrote another article with [tips & tricks to know when building a
+Steroids.js app](/blog/2014/04/09/phonegap-steroids-hybrid-native-app-tips/) (or any hybrid app really).
 300ms delay, overscroll, text rendering, 1px borders, local storage, performances, i18n ... it's all there!*
 
 

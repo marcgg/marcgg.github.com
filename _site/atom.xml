@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2014-04-25T15:05:19+02:00</updated>
+ <updated>2014-04-26T20:32:25+02:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -1056,8 +1056,10 @@ I don’t see why I couldn’t either!&lt;/p&gt;
      <updated>2013-08-29T00:00:00+02:00</updated>
      <id>http://marcgg.com/blog/2013/08/29/appgyver-steroids-iphone-hybrid-javascript</id>
      <content type="html">
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Update 9 April 2014&lt;/strong&gt;: Since this post, I’ve written another article going with &lt;a href=&quot;/blog/2014/04/09/phonegap-steroids-hybrid-native-app-tips/&quot;&gt;tips &amp;amp; tricks
-to know when building a Steroids.js app (or any hybrid app really)&lt;/a&gt;.
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Update 9 April 2014&lt;/strong&gt;: Since this post, I released a &lt;a href=&quot;http://liffapp.io&quot;&gt;quantified self app&lt;/a&gt;
+using SteroidsJs and 
+wrote another article with &lt;a href=&quot;/blog/2014/04/09/phonegap-steroids-hybrid-native-app-tips/&quot;&gt;tips &amp;amp; tricks to know when building a
+Steroids.js app&lt;/a&gt; (or any hybrid app really).
 300ms delay, overscroll, text rendering, 1px borders, local storage, performances, i18n … it’s all there!&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;As I wrote before, I like the idea of developing mobile applications. I
