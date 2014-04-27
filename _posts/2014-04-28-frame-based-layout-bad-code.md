@@ -2,7 +2,7 @@
 layout: post
 title: "Tips on Creating a Website From When I Was 12"
 description: "Let's just say that when I was younger I didn't write very good code."
-blog: false
+blog: true
 category: blog
 tag: Dev
 ---
