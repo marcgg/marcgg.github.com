@@ -9,7 +9,7 @@ tag: Dev
 
 {% include JB/setup %}
 
-I've been writting code for a while. I started with QBasic when I was a kid and the two things I remember from
+I've been writing code for a while. I started with QBasic when I was a kid and the two things I remember from
 that time was using PRINT and the fact I was dead confused by the editor I had to use.
 
 I might also have written something calculating my age based on my birthday...

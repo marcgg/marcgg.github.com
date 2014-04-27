@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2014-04-27T19:01:45+02:00</updated>
+ <updated>2014-04-27T19:07:27+02:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -19,7 +19,7 @@
      <updated>2014-04-28T00:00:00+02:00</updated>
      <id>http://marcgg.com/blog/2014/04/28/frame-based-layout-bad-code</id>
      <content type="html">
-&lt;p&gt;I’ve been writting code for a while. I started with QBasic when I was a kid and the two things I remember from
+&lt;p&gt;I’ve been writing code for a while. I started with QBasic when I was a kid and the two things I remember from
 that time was using PRINT and the fact I was dead confused by the editor I had to use.&lt;/p&gt;
 
 &lt;p&gt;I might also have written something calculating my age based on my birthday…&lt;/p&gt;
