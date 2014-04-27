@@ -194,6 +194,68 @@ h5 *{
   margin-bottom: 40px;
 }
 
+/* NEWSLETTER */
+#newsletter{
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+}
+
+#newsletter label{
+  display: block;
+  text-align: center;
+}
+
+#news-cta{
+  display: block;
+  margin: 20px auto 0px auto;
+  text-align: center;
+}
+
+#mce-EMAIL{
+  padding: 15px 30px;
+  border: 1px solid #ed5252;
+  width: 300px;
+  font-family: 'Droid Serif', serif;
+  font-size: 14px;
+  border-radius: 5px 0px 0px 5px;
+  border-right: 0px;
+  box-shadow:none;
+  outline: none;
+}
+#newsletter em{
+  font-size: 11px;
+  color: #ccc;
+  margin-top: 15px;
+  display: block;
+  text-align: center;
+}
+
+#mc-embedded-subscribe{
+  border: 1px solid #ed5252;
+  background-color: #ed5252;
+  color: #fff;
+  font-size: 14px;
+  font-family: 'Droid Serif', serif;
+  padding: 15px 30px;
+  border-radius: 0px 5px 5px 0px;
+  margin-left: -5px;
+  font-weight: bold;
+}
+
+#mc-embedded-subscribe:hover{
+  background-color: #fff;
+  color: #ed5252;
+  cursor: pointer;
+}
+
+.leave-email{
+  color: #ed5252;
+}
+
+
+
+
 em{
   font-style: italic;
 }
