@@ -9,16 +9,16 @@ tag: Health
 
 {% include JB/setup %}
 
-I wouldn't say that I'm into quantified self, but I do enjoy having some idea of what I'm doing in my life. Wearing gear like jawbones feels overkill to me, my approach is more based on Foursquare to see where I've been and a calendar app to note what I've done.
+I wouldn't say that I'm into quantified self, but I do enjoy having some idea of what I'm doing in my life. Wearing gear tracking you like a Jawbone feels overkill to me, my approach is more based on Foursquare to see where I've been and a calendar app to note what I've done.
 
-However a while back I thought it would be cool to have stats summing up how I felt about my life. It's a thing to know facts about my activities, but it's another to see if I actually enjoyed it ! I then searched the web for good mobile applications, but didn't find anything matching what I wanted.
+A while back I thought it would be cool to have stats summing up how I felt about my life. It's a thing to know facts about my activities, but it's another to see if I actually enjoyed it ! I then searched the web for good mobile applications, but didn't find anything matching what I wanted.
 
 _**Disclaimer**: From this point on please understand that I'm not here to bash anyone. The apps I tried were not for me, but I'm sure they work for some. I might also have missed some good apps, but I did spent quite a while looking. Either they had bad SEO or they weren't released a year ago when I searched._
 
 
 ## The Problem
 
-First, let's look at some of the apps I tried.
+First, let's look at some of the apps I tried. There are also countless joke "mood scanners", but I'll spare you those.
 
 <div style="text-align: center"><img src="/assets/blog/all_apps.jpg" /></div>
 
