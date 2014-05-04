@@ -9,38 +9,8 @@ pygments: true
 markdown: kramdown
 
 title : marcgg#blog
-tagline: Site Tagline
 author :
   name : Marc G Gauthier
   email : marcg.gauthier@gmail.com
-  github : marcgg
-  twitter : marcgg
 
 production_url : http://marcgg.com
-
-JB :
-  version : 0.2.13
-  BASE_PATH : false
-  ASSET_PATH : false
-  archive_path: /archive.html
-  categories_path : /categories.html
-  tags_path : /tags.html
-  comments :
-    provider : disqus
-    disqus :
-      short_name : jekyllbootstrap
-    livefyre :
-      site_id : 123
-    intensedebate :
-      account : 123abc
-    facebook :
-      appid : 123
-      num_posts: 5
-      width: 580
-      colorscheme: light
-  analytics :
-    provider : google
-    google :
-        tracking_id : 'UA-31071519-1'
-  sharing :
-    provider : false
