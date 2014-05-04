@@ -11,7 +11,7 @@ I wouldn't say that I'm into quantified self, but I do enjoy having some idea of
 
 A while back I thought it would be cool to have stats summing up how I felt about my life. It's a thing to know facts about my activities, but it's another to see if I actually enjoyed it ! I then searched the web for good mobile applications, but didn't find anything matching what I wanted.
 
-_**Disclaimer**: From this point on please understand that I'm not here to bash anyone. The apps I tried were not for me, but I'm sure they work for some. I might also have missed some good apps, but I did spent quite a while looking. Either they had bad SEO or they weren't released a year ago when I searched._
+_**Disclaimer**: From this point on please understand that I'm not here to bash anyone. The apps I tried were not for me, but I'm sure they work for some. I might also have missed some good apps, but I did spend quite a while looking. Either they had bad SEO or they weren't released a year ago when I searched._
 
 
 ## The Problem
@@ -40,7 +40,7 @@ I also really don't like the green/red color coding for the same reason.
 
 ### Everything Doesn't Have To Be Social
 
-I was really surprised by the number of apps that have sharing built in. My take on these kind of apps is that they should be treated like the new iteration of diaries, just a bit more data oriented. You wouldn't go arround showing your diary arround, would you ?
+I was really surprised by the number of apps that have sharing built in. My take on these kind of apps is that they should be treated like the new iteration of diaries, just a bit more data oriented. You wouldn't go show your diary around, would you ?
 
 I think this would lead to dishonest daily ratings just for sharing purposes.
 
@@ -56,7 +56,7 @@ We noticed that everything in one's life fell into 6 categories: Love, Friendshi
 
 Based on that, you don't rate your day with a single grade or smiley face. Instead you get to use 6 sliders, one for each category. This allows you to be more granular. A bad day at work doesn't mean a bad day in general.
 
-The idea is to get better data and help the user relativize. It's both simple enough that rating a day doesn't take much time and complex enough so that the data are interesting.
+The idea is to get better data and help the user relativize. It's both simple enough that rating a day doesn't take much time and complex enough so that the result is interesting.
 
 <div style="text-align: center;"><img style="width: 700px;" src="/assets/blog/liff_3d.jpg" /></div>
 
@@ -80,13 +80,13 @@ Oh, and absolutely no social media integration ! And let's just say that it's no
 
 ## Give It A Try, It's Free
 
-I've been using Liff ever since it was somewhat functional, so for about 8 months now. So far I'm very happy with it and I did notice some paterns with the way I feel about my days.
+I've been using Liff ever since it was somewhat functional, so for about 8 months now. So far I'm very happy with it and I did notice some patterns with the way I feel about my days.
 
 We released it recently on iOS for free. Depending on reception we'll release on Android too (it uses [SteroidsJs][6] so it should be possible quickly). If you share my opinion, please give the app a try and send me your feedback... and if you don't agree, remember that I don't claim to have the truth, but feel free to leave a comment. I'd love to know what you think.
 
 [1]:	https://gettingreal.37signals.com/ch02_Whats_Your_Problem.php
 [2]:	http://stackoverflow.com/a/5233378
-[3]:	dribbble.com/kevintunc
+[3]:	http://dribbble.com/kevintunc
 [4]:	https://itunes.apple.com/app/liff-understand-your-life/id834944345
 [5]:	/blog/2012/09/24/working-with-apis-facebook/
 [6]:	/blog/2014/04/09/phonegap-steroids-hybrid-native-app-tips/
