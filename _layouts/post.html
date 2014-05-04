@@ -3,7 +3,13 @@ layout: default
 ---
 
 <h1>
-  <span>{{ page.title }}</span>
+  <span>
+    {% if page.title_html %}
+      {{ page.title_html }}
+    {% else %}
+      {{ page.title }}
+    {% endif %}
+    </span>
 </h1>
 
 <div class="published">
