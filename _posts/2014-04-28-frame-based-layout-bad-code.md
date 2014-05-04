@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Tips on Creating a Website From When I Was 12"
-description: "Let's just say that when I was younger I didn't write very good code."
+description: "Witness pure folly and learn how to create professional yet beautiful websites
+by only using FRAMES and other amazing tricks."
 blog: true
 category: blog
 tag: Dev
