@@ -8,8 +8,6 @@ category: blog
 tag: Dev
 ---
 
-{% include JB/setup %}
-
 Every week I see people arguing over languages, frameworks, hosting
 solutions, architectural patterns... and every week it's pointless.
 I cringe when, interviewing candidates for a Rails developer position,

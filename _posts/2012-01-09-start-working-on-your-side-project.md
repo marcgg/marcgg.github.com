@@ -8,8 +8,6 @@ category: blog
 tag: Projects
 ---
 
-{% include JB/setup %}
-
 To me a side project is taking an idea and building it from scratch. You do not have to complete it, it doesn’t need a business model or turn into a company over time, it doesn’t even need to make sense to other people than you. It is just a way to experiment. If later on it turns out into a successful company, good for you, but it doesn’t have to be your goal.
 
 If you’re like me, you think that development is a creative process, and should be treated as such. So what better way to be more creative than by removing all the usual constraints of a day job – deadlines, [legacy code](http://en.wikipedia.org/wiki/Legacy_code), clients, etc. – and just building something for fun and the sake of building something cool!

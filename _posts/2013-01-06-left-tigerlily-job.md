@@ -9,8 +9,6 @@ category: blog
 tag: Perso
 ---
 
-{% include JB/setup %}
-
 I joined [Tigerlily](http://tigerlilyapps.com) even before it was called that and, for 3 years, I contributed to the creation of [amazing products](http://www.tigerlilyapps.com/products) that are now used by major companies in France and abroad. We built a great team of very talented people, brought innovation to how brands would interact with their users on social networks and always thrived to be the best at what we’d put our minds into.
 
 It was a great experience in which I learned a lot and enjoyed the [startup atmosphere](/2011/12/12/developer-from-ssii-to-startup/). I became really invested in the project and became the lead developer, but now I feel that it is time for another adventure.

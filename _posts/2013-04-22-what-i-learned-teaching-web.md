@@ -9,9 +9,6 @@ category: blog
 tag: Startup
 ---
 
-{% include JB/setup %}
-
-
 A few months back I wrote [an article about how developers should share
 their knowledge with others](/blog/2013/02/04/developers-teach-non-tech-startup/).
 Once it was published I received tons of very positive feedbacks from

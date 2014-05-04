@@ -8,8 +8,6 @@ category: blog
 tag: Projects
 ---
 
-{% include JB/setup %}
-
 A couple of days ago I saw
 [articles popping around](http://www.zdnet.com/is-microsoft-reading-your-skype-instant-messages-7000015388/)
 saying that Microsoft

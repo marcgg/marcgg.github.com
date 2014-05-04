@@ -8,8 +8,6 @@ category: blog
 tag: Dev
 ---
 
-{% include JB/setup %}
-
 I love open source. I think it's amazing that some people are willing to
 share their hard work with everyone and accepting contributions.
 I don't help out myself as much as I'd like to (couple of commits in

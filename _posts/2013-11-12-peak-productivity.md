@@ -8,8 +8,6 @@ category: blog
 tag: Startup
 ---
 
-{% include JB/setup %}
-
 A couple of days ago I ran into a new application by [MetaLab](http://metalabdesign.com/) called
 [Peak](http://www.usepeak.com/). The application is supposed to be "the automated way to keep track
 of what everyone is working on". Basically you plug in a bunch of

@@ -9,8 +9,6 @@ category: blog
 tag: Startup
 ---
 
-{% include JB/setup %}
-
 When you think startup, you might get the picture of a bunch of
 developers writing code all day. While this can be true, the vast
 majority will incorporate some people that have absolutely no technical

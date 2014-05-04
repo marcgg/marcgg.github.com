@@ -8,8 +8,6 @@ category: blog
 tag: Projects
 ---
 
-{% include JB/setup %}
-
 A couple of weeks ago [Kevin](http://twitter.com/kevintunc), [Étienne](http://twitter.com/etiennebarrie), [Benjamin](http://twitter.com/benjaminbouwyn), [Emiland](http://twitter.com/emilanddc) and I decided to go to the the Paris’ session of [AngelHack](http://angelhack.com). This is a worldwide [hackathon](http://en.wikipedia.org/wiki/Hackathon) with fancy [sponsors](http://angelhack.com/#sponsors) giving you the opportunity to build and pitch a new product in 24 hours. This edition gathered 165 attendees and 47 projects.
 
 In this article I’ll try to present what we did while hopefully recreating a bit the experience and giving some tips.

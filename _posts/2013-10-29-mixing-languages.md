@@ -8,8 +8,6 @@ category: blog
 tag: Philosophy
 ---
 
-{% include JB/setup %}
-
 I was born in France and lived there for the most part of my life. I have
 the [frenchiest of names](http://bit.ly/17UlpMx).
 I'm not big into striped shirts, but I could easily switch to a cheese-only

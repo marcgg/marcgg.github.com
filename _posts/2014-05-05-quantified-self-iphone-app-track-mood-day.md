@@ -7,8 +7,6 @@ category: blog
 tag: Health
 ---
 
-{% include JB/setup %}
-
 I wouldn't say that I'm into quantified self, but I do enjoy having some idea of what I'm doing in my life. Wearing gear tracking you like a Jawbone feels overkill to me, my approach is more based on Foursquare to see where I've been and a calendar app to note what I've done.
 
 A while back I thought it would be cool to have stats summing up how I felt about my life. It's a thing to know facts about my activities, but it's another to see if I actually enjoyed it ! I then searched the web for good mobile applications, but didn't find anything matching what I wanted.

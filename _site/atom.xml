@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2014-05-04T15:57:33+02:00</updated>
+ <updated>2014-05-04T16:19:18+02:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -18,8 +18,7 @@
      <link href="http://marcgg.com/blog/2014/05/05/quantified-self-iphone-app-track-mood-day"/>
      <updated>2014-05-05T00:00:00+02:00</updated>
      <id>http://marcgg.com/blog/2014/05/05/quantified-self-iphone-app-track-mood-day</id>
-     <content type="html">
-&lt;p&gt;I wouldn’t say that I’m into quantified self, but I do enjoy having some idea of what I’m doing in my life. Wearing gear tracking you like a Jawbone feels overkill to me, my approach is more based on Foursquare to see where I’ve been and a calendar app to note what I’ve done.&lt;/p&gt;
+     <content type="html">&lt;p&gt;I wouldn’t say that I’m into quantified self, but I do enjoy having some idea of what I’m doing in my life. Wearing gear tracking you like a Jawbone feels overkill to me, my approach is more based on Foursquare to see where I’ve been and a calendar app to note what I’ve done.&lt;/p&gt;
 
 &lt;p&gt;A while back I thought it would be cool to have stats summing up how I felt about my life. It’s a thing to know facts about my activities, but it’s another to see if I actually enjoyed it ! I then searched the web for good mobile applications, but didn’t find anything matching what I wanted.&lt;/p&gt;
 
@@ -103,8 +102,7 @@
      <link href="http://marcgg.com/blog/2014/04/28/frame-based-layout-bad-code"/>
      <updated>2014-04-28T00:00:00+02:00</updated>
      <id>http://marcgg.com/blog/2014/04/28/frame-based-layout-bad-code</id>
-     <content type="html">
-&lt;p&gt;I’ve been writing code for a while. I started with QBasic when I was a kid and the two things I remember from
+     <content type="html">&lt;p&gt;I’ve been writing code for a while. I started with QBasic when I was a kid and the two things I remember from
 that time was using PRINT and the fact I was dead confused by the editor I had to use.&lt;/p&gt;
 
 &lt;p&gt;I might also have written something calculating my age based on my birthday…&lt;/p&gt;
@@ -255,8 +253,7 @@ still learning - you were making the same mistakes at some point !&lt;/p&gt;
      <link href="http://marcgg.com/blog/2014/04/09/phonegap-steroids-hybrid-native-app-tips"/>
      <updated>2014-04-09T00:00:00+02:00</updated>
      <id>http://marcgg.com/blog/2014/04/09/phonegap-steroids-hybrid-native-app-tips</id>
-     <content type="html">
-&lt;p&gt;A while ago I &lt;a href=&quot;/blog/2013/08/29/appgyver-steroids-iphone-hybrid-javascript/&quot;&gt;wrote about AppGyver’s SteroidsJS&lt;/a&gt;
+     <content type="html">&lt;p&gt;A while ago I &lt;a href=&quot;/blog/2013/08/29/appgyver-steroids-iphone-hybrid-javascript/&quot;&gt;wrote about AppGyver’s SteroidsJS&lt;/a&gt;
 and its interesting take on hybrid app development. If you haven’t read it, basically they add the ability
 to use native UI elements in PhoneGap applications.&lt;/p&gt;
 
@@ -858,8 +855,7 @@ apps we’ll be creating in a few years!&lt;/p&gt;
      <link href="http://marcgg.com/blog/2013/11/12/peak-productivity"/>
      <updated>2013-11-12T00:00:00+01:00</updated>
      <id>http://marcgg.com/blog/2013/11/12/peak-productivity</id>
-     <content type="html">
-&lt;p&gt;A couple of days ago I ran into a new application by &lt;a href=&quot;http://metalabdesign.com/&quot;&gt;MetaLab&lt;/a&gt; called
+     <content type="html">&lt;p&gt;A couple of days ago I ran into a new application by &lt;a href=&quot;http://metalabdesign.com/&quot;&gt;MetaLab&lt;/a&gt; called
 &lt;a href=&quot;http://www.usepeak.com/&quot;&gt;Peak&lt;/a&gt;. The application is supposed to be “the automated way to keep track
 of what everyone is working on”. Basically you plug in a bunch of
 services such as Gmail, Github or Basecamp and the app gives your an
@@ -1076,8 +1072,7 @@ create value and protect employees from interruptions) and not evil
      <link href="http://marcgg.com/blog/2013/11/05/enough-with-the-language-trolls"/>
      <updated>2013-11-05T00:00:00+01:00</updated>
      <id>http://marcgg.com/blog/2013/11/05/enough-with-the-language-trolls</id>
-     <content type="html">
-&lt;p&gt;Every week I see people arguing over languages, frameworks, hosting
+     <content type="html">&lt;p&gt;Every week I see people arguing over languages, frameworks, hosting
 solutions, architectural patterns… and every week it’s pointless.
 I cringe when, interviewing candidates for a Rails developer position,
 I hear something along the lines of “Hey, PHP is so bad, AMIRIGHT? *nudge*
@@ -1154,8 +1149,7 @@ adapt.&lt;/p&gt;
      <link href="http://marcgg.com/blog/2013/10/29/mixing-languages"/>
      <updated>2013-10-29T00:00:00+01:00</updated>
      <id>http://marcgg.com/blog/2013/10/29/mixing-languages</id>
-     <content type="html">
-&lt;p&gt;I was born in France and lived there for the most part of my life. I have
+     <content type="html">&lt;p&gt;I was born in France and lived there for the most part of my life. I have
 the &lt;a href=&quot;http://bit.ly/17UlpMx&quot;&gt;frenchiest of names&lt;/a&gt;.
 I’m not big into striped shirts, but I could easily switch to a cheese-only
 diet if given the opportunity.&lt;/p&gt;
@@ -1290,8 +1284,7 @@ I don’t see why I couldn’t either!&lt;/p&gt;
      <link href="http://marcgg.com/blog/2013/08/29/appgyver-steroids-iphone-hybrid-javascript"/>
      <updated>2013-08-29T00:00:00+02:00</updated>
      <id>http://marcgg.com/blog/2013/08/29/appgyver-steroids-iphone-hybrid-javascript</id>
-     <content type="html">
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Update 9 April 2014&lt;/strong&gt;: Since this post, I released a &lt;a href=&quot;http://liffapp.io&quot;&gt;quantified self app&lt;/a&gt;
+     <content type="html">&lt;p&gt;&lt;em&gt;&lt;strong&gt;Update 9 April 2014&lt;/strong&gt;: Since this post, I released a &lt;a href=&quot;http://liffapp.io&quot;&gt;quantified self app&lt;/a&gt;
 using SteroidsJs and 
 wrote another article with &lt;a href=&quot;/blog/2014/04/09/phonegap-steroids-hybrid-native-app-tips/&quot;&gt;tips &amp;amp; tricks to know when building a
 Steroids.js app&lt;/a&gt; (or any hybrid app really).
@@ -1616,8 +1609,7 @@ questions, I’m not sure to be able to answer all of them - but I’ll try!&lt;
      <link href="http://marcgg.com/blog/2013/07/09/passer-deuxieme-bac"/>
      <updated>2013-07-09T00:00:00+02:00</updated>
      <id>http://marcgg.com/blog/2013/07/09/passer-deuxieme-bac</id>
-     <content type="html">
-&lt;p&gt;J’ai obtenu mon baccalauréat scientifique en 2004. Malgré cela, ces deux dernières années j’ai mis un peu
+     <content type="html">&lt;p&gt;J’ai obtenu mon baccalauréat scientifique en 2004. Malgré cela, ces deux dernières années j’ai mis un peu
 de temps de côté pour passer mon bac L en candidat libre.&lt;/p&gt;
 
 &lt;p&gt;Cet article relate cette petite aventure. Je donnerai les différentes étapes par
@@ -1888,8 +1880,7 @@ recruteurs qui le liront!&lt;/p&gt;
      <link href="http://marcgg.com/blog/2013/06/24/not-proud-to-be-french"/>
      <updated>2013-06-24T00:00:00+02:00</updated>
      <id>http://marcgg.com/blog/2013/06/24/not-proud-to-be-french</id>
-     <content type="html">
-&lt;p&gt;A few years back, when I was living in the US, a lot of people asked me if I
+     <content type="html">&lt;p&gt;A few years back, when I was living in the US, a lot of people asked me if I
 were proud of being French. I always found this question very strange and
 never knew exactly how to respond without getting into a two hours long
 argumentation… because no, I am not proud to be French.
@@ -1966,8 +1957,7 @@ most talented fellow countryman.&lt;/p&gt;
      <link href="http://marcgg.com/blog/2013/05/20/track-link-clicks"/>
      <updated>2013-05-20T00:00:00+02:00</updated>
      <id>http://marcgg.com/blog/2013/05/20/track-link-clicks</id>
-     <content type="html">
-&lt;p&gt;A couple of days ago I saw
+     <content type="html">&lt;p&gt;A couple of days ago I saw
 &lt;a href=&quot;http://www.zdnet.com/is-microsoft-reading-your-skype-instant-messages-7000015388/&quot;&gt;articles popping around&lt;/a&gt;
 saying that Microsoft
 &lt;a href=&quot;http://www.h-online.com/security/news/item/Skype-with-care-Microsoft-is-reading-everything-you-write-1862870.html&quot;&gt;is visiting links posted on Skype&lt;/a&gt;. In my opinion it got a bit blown out of proportion, but I’m
@@ -2025,8 +2015,7 @@ use once in a while when feeling paranoid.&lt;/p&gt;
      <link href="http://marcgg.com/blog/2013/04/22/what-i-learned-teaching-web"/>
      <updated>2013-04-22T00:00:00+02:00</updated>
      <id>http://marcgg.com/blog/2013/04/22/what-i-learned-teaching-web</id>
-     <content type="html">
-&lt;p&gt;A few months back I wrote &lt;a href=&quot;/blog/2013/02/04/developers-teach-non-tech-startup/&quot;&gt;an article about how developers should share
+     <content type="html">&lt;p&gt;A few months back I wrote &lt;a href=&quot;/blog/2013/02/04/developers-teach-non-tech-startup/&quot;&gt;an article about how developers should share
 their knowledge with others&lt;/a&gt;.
 Once it was published I received tons of very positive feedbacks from
 both developers and non tech people, some of them even asking what
@@ -2160,8 +2149,7 @@ I got some very positive feedbacks. I think that I’ll do it again sometimes!&l
      <link href="http://marcgg.com/blog/2013/03/25/please-changelog-open-source"/>
      <updated>2013-03-25T00:00:00+01:00</updated>
      <id>http://marcgg.com/blog/2013/03/25/please-changelog-open-source</id>
-     <content type="html">
-&lt;p&gt;I love open source. I think it’s amazing that some people are willing to
+     <content type="html">&lt;p&gt;I love open source. I think it’s amazing that some people are willing to
 share their hard work with everyone and accepting contributions.
 I don’t help out myself as much as I’d like to (couple of commits in
 &lt;a href=&quot;https://github.com/fog/fog/commit/c35f4affa79dea5cf520dd1c954c8f32022dfb96&quot;&gt;fog&lt;/a&gt;,
@@ -2327,8 +2315,7 @@ random version numbers with no explanations.&lt;/p&gt;
      <link href="http://marcgg.com/blog/2013/02/04/developers-teach-non-tech-startup"/>
      <updated>2013-02-04T00:00:00+01:00</updated>
      <id>http://marcgg.com/blog/2013/02/04/developers-teach-non-tech-startup</id>
-     <content type="html">
-&lt;p&gt;When you think startup, you might get the picture of a bunch of
+     <content type="html">&lt;p&gt;When you think startup, you might get the picture of a bunch of
 developers writing code all day. While this can be true, the vast
 majority will incorporate some people that have absolutely no technical
 background.&lt;/p&gt;
@@ -2498,8 +2485,7 @@ and if I can, I’ll happily take a few minutes to help you out!&lt;/p&gt;
      <link href="http://marcgg.com/blog/2013/01/14/html5-nodejs-websockets-games-learning"/>
      <updated>2013-01-14T00:00:00+01:00</updated>
      <id>http://marcgg.com/blog/2013/01/14/html5-nodejs-websockets-games-learning</id>
-     <content type="html">
-&lt;p&gt;Okay. Let’s start by saying that I’m a developer that does mostly web stuff.&lt;/p&gt;
+     <content type="html">&lt;p&gt;Okay. Let’s start by saying that I’m a developer that does mostly web stuff.&lt;/p&gt;
 
 &lt;p&gt;This means that a majority of the code I write will end up displaying something in a browser.
 Of course I do &lt;a href=&quot;/2012/09/24/working-with-apis-facebook/&quot;&gt;interact with APIs&lt;/a&gt;, write background jobs, add some
@@ -2674,8 +2660,7 @@ that’s another story.&lt;/p&gt;
      <link href="http://marcgg.com/blog/2013/01/06/left-tigerlily-job"/>
      <updated>2013-01-06T00:00:00+01:00</updated>
      <id>http://marcgg.com/blog/2013/01/06/left-tigerlily-job</id>
-     <content type="html">
-&lt;p&gt;I joined &lt;a href=&quot;http://tigerlilyapps.com&quot;&gt;Tigerlily&lt;/a&gt; even before it was called that and, for 3 years, I contributed to the creation of &lt;a href=&quot;http://www.tigerlilyapps.com/products&quot;&gt;amazing products&lt;/a&gt; that are now used by major companies in France and abroad. We built a great team of very talented people, brought innovation to how brands would interact with their users on social networks and always thrived to be the best at what we’d put our minds into.&lt;/p&gt;
+     <content type="html">&lt;p&gt;I joined &lt;a href=&quot;http://tigerlilyapps.com&quot;&gt;Tigerlily&lt;/a&gt; even before it was called that and, for 3 years, I contributed to the creation of &lt;a href=&quot;http://www.tigerlilyapps.com/products&quot;&gt;amazing products&lt;/a&gt; that are now used by major companies in France and abroad. We built a great team of very talented people, brought innovation to how brands would interact with their users on social networks and always thrived to be the best at what we’d put our minds into.&lt;/p&gt;
 
 &lt;p&gt;It was a great experience in which I learned a lot and enjoyed the &lt;a href=&quot;/2011/12/12/developer-from-ssii-to-startup/&quot;&gt;startup atmosphere&lt;/a&gt;. I became really invested in the project and became the lead developer, but now I feel that it is time for another adventure.&lt;/p&gt;
 
@@ -2700,8 +2685,7 @@ that’s another story.&lt;/p&gt;
      <link href="http://marcgg.com/blog/2012/12/10/angelhack-third-place-paris-hackathon"/>
      <updated>2012-12-10T00:00:00+01:00</updated>
      <id>http://marcgg.com/blog/2012/12/10/angelhack-third-place-paris-hackathon</id>
-     <content type="html">
-&lt;p&gt;A couple of weeks ago &lt;a href=&quot;http://twitter.com/kevintunc&quot;&gt;Kevin&lt;/a&gt;, &lt;a href=&quot;http://twitter.com/etiennebarrie&quot;&gt;Étienne&lt;/a&gt;, &lt;a href=&quot;http://twitter.com/benjaminbouwyn&quot;&gt;Benjamin&lt;/a&gt;, &lt;a href=&quot;http://twitter.com/emilanddc&quot;&gt;Emiland&lt;/a&gt; and I decided to go to the the Paris’ session of &lt;a href=&quot;http://angelhack.com&quot;&gt;AngelHack&lt;/a&gt;. This is a worldwide &lt;a href=&quot;http://en.wikipedia.org/wiki/Hackathon&quot;&gt;hackathon&lt;/a&gt; with fancy &lt;a href=&quot;http://angelhack.com/#sponsors&quot;&gt;sponsors&lt;/a&gt; giving you the opportunity to build and pitch a new product in 24 hours. This edition gathered 165 attendees and 47 projects.&lt;/p&gt;
+     <content type="html">&lt;p&gt;A couple of weeks ago &lt;a href=&quot;http://twitter.com/kevintunc&quot;&gt;Kevin&lt;/a&gt;, &lt;a href=&quot;http://twitter.com/etiennebarrie&quot;&gt;Étienne&lt;/a&gt;, &lt;a href=&quot;http://twitter.com/benjaminbouwyn&quot;&gt;Benjamin&lt;/a&gt;, &lt;a href=&quot;http://twitter.com/emilanddc&quot;&gt;Emiland&lt;/a&gt; and I decided to go to the the Paris’ session of &lt;a href=&quot;http://angelhack.com&quot;&gt;AngelHack&lt;/a&gt;. This is a worldwide &lt;a href=&quot;http://en.wikipedia.org/wiki/Hackathon&quot;&gt;hackathon&lt;/a&gt; with fancy &lt;a href=&quot;http://angelhack.com/#sponsors&quot;&gt;sponsors&lt;/a&gt; giving you the opportunity to build and pitch a new product in 24 hours. This edition gathered 165 attendees and 47 projects.&lt;/p&gt;
 
 &lt;p&gt;In this article I’ll try to present what we did while hopefully recreating a bit the experience and giving some tips.&lt;/p&gt;
 
@@ -2829,8 +2813,7 @@ teammates on the spot, it’ll be great.&lt;/p&gt;
      <link href="http://marcgg.com/blog/2012/11/12/webviews-javascript-ios-rubymotion"/>
      <updated>2012-11-12T00:00:00+01:00</updated>
      <id>http://marcgg.com/blog/2012/11/12/webviews-javascript-ios-rubymotion</id>
-     <content type="html">
-&lt;p&gt;Here we go, another article on &lt;a href=&quot;http://www.rubymotion.com/&quot;&gt;RubyMotion&lt;/a&gt;!
+     <content type="html">&lt;p&gt;Here we go, another article on &lt;a href=&quot;http://www.rubymotion.com/&quot;&gt;RubyMotion&lt;/a&gt;!
 For those of you that don’t know what’s that’s all about, it’s a
 toolchain created by &lt;a href=&quot;https://twitter.com/lrz&quot;&gt;Laurent Sansonetti&lt;/a&gt;
 (of &lt;a href=&quot;http://macruby.org/&quot;&gt;MacRuby&lt;/a&gt; fame)
@@ -3085,8 +3068,7 @@ project and it might not be the case in a few months.&lt;/p&gt;
      <link href="http://marcgg.com/blog/2012/10/22/custom-slider-ios-rubymotion"/>
      <updated>2012-10-22T00:00:00+02:00</updated>
      <id>http://marcgg.com/blog/2012/10/22/custom-slider-ios-rubymotion</id>
-     <content type="html">
-&lt;p&gt;I always liked the idea of developing mobile applications, but also found the Objective C + XCode experience not very enjoyable. I gave alternatives like &lt;a href=&quot;http://www.appcelerator.com/platform/titanium-sdk/&quot;&gt;Titanium&lt;/a&gt; a try, but wasn’t fully convinced. Lately I’ve been getting into &lt;a href=&quot;http://www.rubymotion.com/&quot;&gt;RubyMotion&lt;/a&gt; and so far I’m really impressed by the general feel of it.&lt;/p&gt;
+     <content type="html">&lt;p&gt;I always liked the idea of developing mobile applications, but also found the Objective C + XCode experience not very enjoyable. I gave alternatives like &lt;a href=&quot;http://www.appcelerator.com/platform/titanium-sdk/&quot;&gt;Titanium&lt;/a&gt; a try, but wasn’t fully convinced. Lately I’ve been getting into &lt;a href=&quot;http://www.rubymotion.com/&quot;&gt;RubyMotion&lt;/a&gt; and so far I’m really impressed by the general feel of it.&lt;/p&gt;
 
 &lt;p&gt;Alas it’s not perfect. My main grief right now about the project
 is the terrible lack of documentation.
@@ -3285,8 +3267,7 @@ few months.&lt;/p&gt;
      <link href="http://marcgg.com/blog/2012/10/15/dont-accept-brokeness-deal-with-annoyances"/>
      <updated>2012-10-15T00:00:00+02:00</updated>
      <id>http://marcgg.com/blog/2012/10/15/dont-accept-brokeness-deal-with-annoyances</id>
-     <content type="html">
-&lt;p&gt;For a while I had a problem with my jaw. Ten years back I got elbowed in the face (don’t ask), and since then I had trouble yawning or just opening my mouth wide open. I could try to do it, but it would result in the whole thing locking and a good deal of pain.&lt;/p&gt;
+     <content type="html">&lt;p&gt;For a while I had a problem with my jaw. Ten years back I got elbowed in the face (don’t ask), and since then I had trouble yawning or just opening my mouth wide open. I could try to do it, but it would result in the whole thing locking and a good deal of pain.&lt;/p&gt;
 
 &lt;p&gt;The first months I was annoyed, but as time passed I learned to live with it. After all, it was really nothing important. I could eat, speak and do pretty much anything normally. I accepted this as part of how my body functions. Some can’t do a right split, I can’t open my mouth that wide, who cares? I learned how to avoid doing this, and carried on.&lt;/p&gt;
 
@@ -3317,8 +3298,7 @@ few months.&lt;/p&gt;
      <link href="http://marcgg.com/blog/2012/10/01/thumb-pain-developer-keyboard"/>
      <updated>2012-10-01T00:00:00+02:00</updated>
      <id>http://marcgg.com/blog/2012/10/01/thumb-pain-developer-keyboard</id>
-     <content type="html">
-&lt;p&gt;Most coders complain about wrist pain. For some reason I never had major trouble there except when working for hours on a laptop. My main issue seemed more original and was located in &lt;a href=&quot;http://en.wikipedia.org/wiki/Thenar_eminence&quot;&gt;the group of muscles controlling the thumb&lt;/a&gt;. Suddently it would hurt for days, then go away, then come back… good times.&lt;/p&gt;
+     <content type="html">&lt;p&gt;Most coders complain about wrist pain. For some reason I never had major trouble there except when working for hours on a laptop. My main issue seemed more original and was located in &lt;a href=&quot;http://en.wikipedia.org/wiki/Thenar_eminence&quot;&gt;the group of muscles controlling the thumb&lt;/a&gt;. Suddently it would hurt for days, then go away, then come back… good times.&lt;/p&gt;
 
 &lt;p&gt;Eventually I mentioned it to a kinesiotherapist, and the conversation was very similar to the famous joke that goes something like:&lt;/p&gt;
 
@@ -3351,8 +3331,7 @@ few months.&lt;/p&gt;
      <link href="http://marcgg.com/blog/2012/09/24/working-with-apis-facebook"/>
      <updated>2012-09-24T00:00:00+02:00</updated>
      <id>http://marcgg.com/blog/2012/09/24/working-with-apis-facebook</id>
-     <content type="html">
-&lt;p&gt;Before we begin let me give you a little background on why I’m writing this article.&lt;/p&gt;
+     <content type="html">&lt;p&gt;Before we begin let me give you a little background on why I’m writing this article.&lt;/p&gt;
 
 &lt;p&gt;I’ve been working with the Facebook platform for almost 3 years now. I also wrote code using the APIs provided by Twitter, Instagram, Flickr, Google, Foursquare, Amazon, Youtube, Spotify and others. I’ve participated in building products like the &lt;a href=&quot;http://www.tigerlilyapps.com/conversation&quot;&gt;Tigerlily Conversation Suite&lt;/a&gt; or &lt;a href=&quot;http://ffocused.com&quot;&gt;ffocused&lt;/a&gt;, both heavily relying on some of those API. In the process I learned a lot on how to handle these services, their evolutions and their problems.&lt;/p&gt;
 
@@ -3454,8 +3433,7 @@ few months.&lt;/p&gt;
      <link href="http://marcgg.com/blog/2012/09/04/one-reason-to-switch-to-vim-editor"/>
      <updated>2012-09-04T00:00:00+02:00</updated>
      <id>http://marcgg.com/blog/2012/09/04/one-reason-to-switch-to-vim-editor</id>
-     <content type="html">
-&lt;p&gt;I know, I know, this has been done to death, but stay with me for a second. I’m not here to tell you that Vim is the best editor out there, just to tell you the one reason that got me to switch.&lt;/p&gt;
+     <content type="html">&lt;p&gt;I know, I know, this has been done to death, but stay with me for a second. I’m not here to tell you that Vim is the best editor out there, just to tell you the one reason that got me to switch.&lt;/p&gt;
 
 &lt;p&gt;Like every developer with some curiosity, I tried a ridiculous amount of text editors and IDEs. I started with Notepad at first, but quickly discovered that some text editors would actually help you. I downloaded &lt;a href=&quot;http://download.cnet.com/Amiasoft-SiteAid/3000-10247_4-10015046.html&quot;&gt;SiteAid&lt;/a&gt; and enjoyed the gain of productivity. Then I quickly moved on to Scite, Eclipse, Netbeans, Notepad++, Emacs, Text Edit, Rad Rails, Kate, Rubymine, TextMate, Sublime… the list goes on.&lt;/p&gt;
 
@@ -3484,8 +3462,7 @@ few months.&lt;/p&gt;
      <link href="http://marcgg.com/blog/2012/01/09/start-working-on-your-side-project"/>
      <updated>2012-01-09T00:00:00+01:00</updated>
      <id>http://marcgg.com/blog/2012/01/09/start-working-on-your-side-project</id>
-     <content type="html">
-&lt;p&gt;To me a side project is taking an idea and building it from scratch. You do not have to complete it, it doesn’t need a business model or turn into a company over time, it doesn’t even need to make sense to other people than you. It is just a way to experiment. If later on it turns out into a successful company, good for you, but it doesn’t have to be your goal.&lt;/p&gt;
+     <content type="html">&lt;p&gt;To me a side project is taking an idea and building it from scratch. You do not have to complete it, it doesn’t need a business model or turn into a company over time, it doesn’t even need to make sense to other people than you. It is just a way to experiment. If later on it turns out into a successful company, good for you, but it doesn’t have to be your goal.&lt;/p&gt;
 
 &lt;p&gt;If you’re like me, you think that development is a creative process, and should be treated as such. So what better way to be more creative than by removing all the usual constraints of a day job – deadlines, &lt;a href=&quot;http://en.wikipedia.org/wiki/Legacy_code&quot;&gt;legacy code&lt;/a&gt;, clients, etc. – and just building something for fun and the sake of building something cool!&lt;/p&gt;
 
@@ -3624,8 +3601,7 @@ few months.&lt;/p&gt;
      <link href="http://marcgg.com/blog/2011/12/12/developer-from-ssii-to-startup"/>
      <updated>2011-12-12T00:00:00+01:00</updated>
      <id>http://marcgg.com/blog/2011/12/12/developer-from-ssii-to-startup</id>
-     <content type="html">
-&lt;p&gt;In France we have what we call SSII for Société de Service en Ingénierie Informatique. Poorly translated it goes something like «IT Consulting Firm». This is where most young CS graduates will go, mainly because once you get your degree you are spammed by job offers from their recruiters.&lt;/p&gt;
+     <content type="html">&lt;p&gt;In France we have what we call SSII for Société de Service en Ingénierie Informatique. Poorly translated it goes something like «IT Consulting Firm». This is where most young CS graduates will go, mainly because once you get your degree you are spammed by job offers from their recruiters.&lt;/p&gt;
 
 &lt;p&gt;This is fine for some, but other might feel like they are missing out what’s happening in the startup world. The problem is that after a few years in a SSII it can seem complicated to switch career path and start working for a startup. For the most part it’s because the technologies, processes and general mindset are radically different… but believe me, it is possible!&lt;/p&gt;
 

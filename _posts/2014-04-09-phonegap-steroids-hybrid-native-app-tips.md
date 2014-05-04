@@ -9,8 +9,6 @@ category: blog
 tag: iphone
 ---
 
-{% include JB/setup %}
-
 A while ago I [wrote about AppGyver's SteroidsJS](/blog/2013/08/29/appgyver-steroids-iphone-hybrid-javascript/)
 and its interesting take on hybrid app development. If you haven't read it, basically they add the ability
 to use native UI elements in PhoneGap applications.

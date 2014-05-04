@@ -8,8 +8,6 @@ category: blog
 tag: Philosophy
 ---
 
-{% include JB/setup %}
-
 A few years back, when I was living in the US, a lot of people asked me if I
 were proud of being French. I always found this question very strange and
 never knew exactly how to respond without getting into a two hours long

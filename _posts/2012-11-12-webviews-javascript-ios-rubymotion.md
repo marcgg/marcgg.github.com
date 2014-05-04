@@ -9,8 +9,6 @@ category: blog
 tag: iphone
 ---
 
-{% include JB/setup %}
-
 Here we go, another article on [RubyMotion](http://www.rubymotion.com/)!
 For those of you that don't know what's that's all about, it's a
 toolchain created by [Laurent Sansonetti](https://twitter.com/lrz)

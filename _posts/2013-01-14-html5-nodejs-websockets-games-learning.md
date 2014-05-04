@@ -9,8 +9,6 @@ category: blog
 tag: Projects
 ---
 
-{% include JB/setup %}
-
 Okay. Let's start by saying that I'm a developer that does mostly web stuff.
 
 This means that a majority of the code I write will end up displaying something in a browser.

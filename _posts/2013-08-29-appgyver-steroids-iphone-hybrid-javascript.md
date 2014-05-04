@@ -8,8 +8,6 @@ category: blog
 tag: iphone
 ---
 
-{% include JB/setup %}
-
 ***Update 9 April 2014**: Since this post, I released a [quantified self app](http://liffapp.io)
 using SteroidsJs and 
 wrote another article with [tips & tricks to know when building a

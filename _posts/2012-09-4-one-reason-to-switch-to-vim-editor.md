@@ -8,8 +8,6 @@ category: blog
 tag: Dev
 ---
 
-{% include JB/setup %}
-
 I know, I know, this has been done to death, but stay with me for a second. I’m not here to tell you that Vim is the best editor out there, just to tell you the one reason that got me to switch.
 
 Like every developer with some curiosity, I tried a ridiculous amount of text editors and IDEs. I started with Notepad at first, but quickly discovered that some text editors would actually help you. I downloaded [SiteAid](http://download.cnet.com/Amiasoft-SiteAid/3000-10247_4-10015046.html) and enjoyed the gain of productivity. Then I quickly moved on to Scite, Eclipse, Netbeans, Notepad++, Emacs, Text Edit, Rad Rails, Kate, Rubymine, TextMate, Sublime... the list goes on.

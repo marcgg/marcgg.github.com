@@ -7,8 +7,6 @@ category: blog
 tag: Product
 ---
 
-{% include JB/setup %}
-
 Before we begin let me give you a little background on why I’m writing this article.
 
 I’ve been working with the Facebook platform for almost 3 years now. I also wrote code using the APIs provided by Twitter, Instagram, Flickr, Google, Foursquare, Amazon, Youtube, Spotify and others. I’ve participated in building products like the [Tigerlily Conversation Suite](http://www.tigerlilyapps.com/conversation) or [ffocused](http://ffocused.com), both heavily relying on some of those API. In the process I learned a lot on how to handle these services, their evolutions and their problems.

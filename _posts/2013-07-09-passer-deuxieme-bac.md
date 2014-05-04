@@ -10,8 +10,6 @@ category: blog
 tag: Philosophy
 ---
 
-{% include JB/setup %}
-
 J'ai obtenu mon baccalauréat scientifique en 2004. Malgré cela, ces deux dernières années j'ai mis un peu
 de temps de côté pour passer mon bac L en candidat libre.
 

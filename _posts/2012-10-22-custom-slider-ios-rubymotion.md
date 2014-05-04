@@ -9,8 +9,6 @@ category: blog
 tag: iphone
 ---
 
-{% include JB/setup %}
-
 I always liked the idea of developing mobile applications, but also found the Objective C + XCode experience not very enjoyable. I gave alternatives like [Titanium](http://www.appcelerator.com/platform/titanium-sdk/) a try, but wasn’t fully convinced. Lately I’ve been getting into [RubyMotion](http://www.rubymotion.com/) and so far I’m really impressed by the general feel of it.
 
 Alas it's not perfect. My main grief right now about the project
