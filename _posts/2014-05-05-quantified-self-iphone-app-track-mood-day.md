@@ -1,10 +1,11 @@
----- 
+--- 
 layout: post
-title: "My Problem With Apps To Track Your Life"
+title: "My Problem With Apps To Track Your Life (and Why I Created My Own)"
 description: "A lot of iOS and Android applications have been created to track one's day, but none really matched what I wanted so I created my own. Something with a clean design and focused goal."
 blog: true
 category: blog
-## tag: Health
+tag: Health
+--- 
 
 I wouldn't say that I'm into quantified self, but I do enjoy having some idea of what I'm doing in my life. Wearing gear tracking you like a Jawbone feels overkill to me, my approach is more based on Foursquare to see where I've been and a calendar app to note what I've done.
 
