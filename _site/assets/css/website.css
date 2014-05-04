@@ -363,3 +363,59 @@ blockquote p{
 
 
 
+/* HIRE */
+
+#hire{
+  margin-top: 60px;
+}
+
+#hire ul{
+  padding-left: 40px;
+  line-height: 25px;
+  list-style: circle;
+  margin-bottom: 20px;
+}
+
+#hire li{
+  display: list-item;
+}
+
+.review{
+  width: 200px;
+  float: left;
+  padding: 5px;
+  margin: 20px;
+}
+
+#reviews{
+  margin-bottom: 20px;
+}
+
+.person{
+  text-align: center;
+  font-weight: bold;
+}
+.position{
+  text-align: center;
+  font-size: 0.8em;
+}
+.review-body{
+  margin-top: 10px;
+  text-align: justify;
+}
+
+#references_logo{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* CLEARFIX */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
