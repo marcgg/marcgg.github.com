@@ -1,11 +1,10 @@
----
+---- 
 layout: post
 title: "My Problem With Apps To Track Your Life"
 description: "A lot of iOS and Android applications have been created to track one's day, but none really matched what I wanted so I created my own. Something with a clean design and focused goal."
 blog: true
 category: blog
-tag: Health
----
+## tag: Health
 
 I wouldn't say that I'm into quantified self, but I do enjoy having some idea of what I'm doing in my life. Wearing gear tracking you like a Jawbone feels overkill to me, my approach is more based on Foursquare to see where I've been and a calendar app to note what I've done.
 
@@ -52,7 +51,7 @@ Here's how this new app addresses the points above.
 
 ### Everything Falls In 6 Categories
 
-We noticed that everything in one's life fell into 6 categories: Love, Friendship, Health, Family, Spirit and Work. For instance a good birthday party might have positive effects on Friendship, Love and Family... but could have a negative impact on Health if you stay out too late !
+Very losely basing ourselves on [Brian G. Dyson's juggling metaphore][5], we decided to classify everything happening in one's life into 6 categories: Love, Friendship, Health, Family, Spirit and Work. For instance a fun birthday party might have positive effects on Friendship, Love and Family... but could have a negative impact on Health if you stay out too late !
 
 Based on that, you don't rate your day with a single grade or smiley face. Instead you get to use 6 sliders, one for each category. This allows you to be more granular. A bad day at work doesn't mean a bad day in general.
 
@@ -76,17 +75,18 @@ Of course like any quantified self app, you get graphs, daily push reminders, da
 
 <div style="text-align: center;"><img style="width: 700px;" src="/assets/blog/liff_all.jpg" /></div>
 
-Oh, and absolutely no social media integration ! And let's just say that it's not because I don't know how - [I worked with the Facebook API][5] for years after all !
+Oh, and absolutely no social media integration ! And let's just say that it's not because I don't know how - [I worked with the Facebook API][6] for years after all !
 
 ## Give It A Try, It's Free
 
 I've been using Liff ever since it was somewhat functional, so for about 8 months now. So far I'm very happy with it and I did notice some patterns with the way I feel about my days.
 
-We released it recently on iOS for free. Depending on reception we'll release on Android too (it uses [SteroidsJs][6] so it should be possible quickly). If you share my opinion, please give the app a try and send me your feedback... and if you don't agree, remember that I don't claim to have the truth, but feel free to leave a comment. I'd love to know what you think.
+We released it recently on iOS for free. Depending on reception we'll release on Android too (it uses [SteroidsJs][7] so it should be possible quickly). If you share my opinion, please give the app a try and send me your feedback... and if you don't agree, remember that I don't claim to have the truth, but feel free to leave a comment. I'd love to know what you think.
 
 [1]:	https://gettingreal.37signals.com/ch02_Whats_Your_Problem.php
 [2]:	http://stackoverflow.com/a/5233378
 [3]:	http://dribbble.com/kevintunc
 [4]:	https://itunes.apple.com/app/liff-understand-your-life/id834944345
-[5]:	/blog/2012/09/24/working-with-apis-facebook/
-[6]:	/blog/2014/04/09/phonegap-steroids-hybrid-native-app-tips/
+[5]:	http://www.bcbusiness.ca/lifestyle/bryan-dysons-30-second-speech
+[6]:	/blog/2012/09/24/working-with-apis-facebook/
+[7]:	/blog/2014/04/09/phonegap-steroids-hybrid-native-app-tips/

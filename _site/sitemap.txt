@@ -18,7 +18,7 @@ http://marcgg.com/photos/tigerlily.html
 http://marcgg.com/photos/traveling.html
 http://marcgg.com/sitemap.txt
 
-http://marcgg.com/blog/2014/05/05/quantified-self-iphone-app-track-mood-day
+http://marcgg.com/2014/05/05/quantified-self-iphone-app-track-mood-day
 http://marcgg.com/blog/2014/04/28/frame-based-layout-bad-code
 http://marcgg.com/blog/2014/04/09/phonegap-steroids-hybrid-native-app-tips
 http://marcgg.com/blog/2013/11/12/peak-productivity
