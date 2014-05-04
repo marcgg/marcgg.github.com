@@ -90,7 +90,7 @@ a{
   text-decoration: none;
 }
 a:hover{
-  text-decoration: underline;
+  color: #157ac6;
 }
 a{
   color: #157ac6;
