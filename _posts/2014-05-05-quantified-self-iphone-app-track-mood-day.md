@@ -67,7 +67,7 @@ You might have noticed that there is no explicit value on the app sliders. This 
 
 Overall, the app design and copy try to be neutral without being completely impersonal.
 
-<div style="text-align: center"><img src="/assets/misc/loader.jpg" /></div>
+<div style="text-align: center"><img style="width: 220px;" src="/assets/misc/loader.jpg" /></div>
 
 _To help you have a coherent grading system, note that the current day's sliders are prefiled with yesterday's values._
 

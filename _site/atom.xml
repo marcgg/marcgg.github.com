@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2014-05-04T22:50:56+02:00</updated>
+ <updated>2014-05-04T23:05:40+02:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -74,7 +74,7 @@
 
 &lt;p&gt;Overall, the app design and copy try to be neutral without being completely impersonal.&lt;/p&gt;
 
-&lt;div style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/misc/loader.jpg&quot; /&gt;&lt;/div&gt;
+&lt;div style=&quot;text-align: center&quot;&gt;&lt;img style=&quot;width: 220px;&quot; src=&quot;/assets/misc/loader.jpg&quot; /&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;em&gt;To help you have a coherent grading system, note that the current day’s sliders are prefiled with yesterday’s values.&lt;/em&gt;&lt;/p&gt;
 
