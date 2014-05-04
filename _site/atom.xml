@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2014-05-04T16:28:36+02:00</updated>
+ <updated>2014-05-04T16:33:30+02:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -153,7 +153,7 @@ After some fiddling around with the UI, I got it to work.&lt;/p&gt;
 
 &lt;p&gt;Right away it starts looking good:&lt;/p&gt;
 
-&lt;div style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/frames/page1.png&quot; /&gt;&lt;/div&gt;
+&lt;div style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/frames/page1.png&quot; /&gt;&lt;/div&gt;
 
 &lt;p&gt;That’s nice, but I want to have more than 1 element in my left menu, so how can I do that ?
 You could very much do this:&lt;/p&gt;
@@ -181,7 +181,7 @@ comes in. You just need… more frames !&lt;/p&gt;
 
 &lt;p&gt;Wow. Such color. Much design.&lt;/p&gt;
 
-&lt;div style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/frames/page2.png&quot; /&gt;&lt;/div&gt;
+&lt;div style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/frames/page2.png&quot; /&gt;&lt;/div&gt;
 
 &lt;p&gt;You can even create some impressive gradients with only a few more lines of code and
 knowledge of &lt;em&gt;advanced colors in HTML&lt;/em&gt;.&lt;/p&gt;
@@ -189,7 +189,7 @@ knowledge of &lt;em&gt;advanced colors in HTML&lt;/em&gt;.&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;BODY&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;bgcolor=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;black&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;text=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;white&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Menu 1&lt;span class=&quot;nt&quot;&gt;&amp;lt;/BODY&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/frames/page3.png&quot; /&gt;&lt;/div&gt;
+&lt;div style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/frames/page3.png&quot; /&gt;&lt;/div&gt;
 
 &lt;p&gt;Finally let’s say I want to add an image next to a menu item. Seems complicated, right ?&lt;/p&gt;
 
@@ -208,7 +208,7 @@ knowledge of &lt;em&gt;advanced colors in HTML&lt;/em&gt;.&lt;/p&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/HTML&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/frames/page4.png&quot; /&gt;&lt;/div&gt;
+&lt;div style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/frames/page4.png&quot; /&gt;&lt;/div&gt;
 
 &lt;p&gt;Perfect.&lt;/p&gt;
 
@@ -230,7 +230,7 @@ lines that are the frame borders. To do this, add a frameborder set to 0.&lt;/p&
 
 &lt;p&gt;You’re welcome.&lt;/p&gt;
 
-&lt;div style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/frames/page5.png&quot; /&gt;&lt;/div&gt;
+&lt;div style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/frames/page5.png&quot; /&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;the-worst-code&quot;&gt;The Worst Code&lt;/h2&gt;
 

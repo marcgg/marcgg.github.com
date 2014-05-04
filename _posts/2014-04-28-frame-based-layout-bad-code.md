@@ -60,7 +60,7 @@ Let's add some sweet design in each frame file:
 
 Right away it starts looking good:
 
-<div style="text-align: center"><img src="/assets/frames/page1.png" /></div>
+<div style="text-align: center"><img src="/assets/blog/frames/page1.png" /></div>
 
 That's nice, but I want to have more than 1 element in my left menu, so how can I do that ?
 You could very much do this:
@@ -90,7 +90,7 @@ Change f1.html to look like this:
 
 Wow. Such color. Much design.
 
-<div style="text-align: center"><img src="/assets/frames/page2.png" /></div>
+<div style="text-align: center"><img src="/assets/blog/frames/page2.png" /></div>
 
 You can even create some impressive gradients with only a few more lines of code and
 knowledge of *advanced colors in HTML*.
@@ -99,7 +99,7 @@ knowledge of *advanced colors in HTML*.
 <BODY bgcolor="black" text="white">Menu 1</BODY>
 {% endhighlight %}
 
-<div style="text-align: center"><img src="/assets/frames/page3.png" /></div>
+<div style="text-align: center"><img src="/assets/blog/frames/page3.png" /></div>
 
 Finally let's say I want to add an image next to a menu item. Seems complicated, right ?
 
@@ -119,7 +119,7 @@ You only need to change menu.html like this:
 </HTML>
 {% endhighlight %}
 
-<div style="text-align: center"><img src="/assets/frames/page4.png" /></div>
+<div style="text-align: center"><img src="/assets/blog/frames/page4.png" /></div>
 
 Perfect.
 
@@ -142,7 +142,7 @@ Now you have a professional looking website.
 
 You're welcome.
 
-<div style="text-align: center"><img src="/assets/frames/page5.png" /></div>
+<div style="text-align: center"><img src="/assets/blog/frames/page5.png" /></div>
 
 ## The Worst Code
 
