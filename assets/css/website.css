@@ -89,9 +89,15 @@ h4 a{
 a{
   text-decoration: none;
 }
+
 a:hover{
   color: #157ac6;
 }
+
+p a:hover{
+  text-decoration: underline;
+}
+
 a{
   color: #157ac6;
 }
