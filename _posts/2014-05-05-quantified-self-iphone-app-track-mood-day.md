@@ -1,7 +1,7 @@
---- 
+---
 layout: post
 title: "My Problem With Apps To Track Your Life (and Why I Created My Own)"
-title\_html: "My Problem With Apps To Track Your Life<br /><em>(And Why I Created My Own)</em>"
+titlehtml: "My Problem With Apps To Track Your Life<br /><em>(And Why I Created My Own)</em>"
 description: "A lot of iOS and Android applications have been created to track one's day, but none really matched what I wanted so I created my own. Something with a clean design and focused goal."
 blog: true
 category: blog
