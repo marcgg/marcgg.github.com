@@ -18,6 +18,7 @@ http://marcgg.com/photos/tigerlily.html
 http://marcgg.com/photos/traveling.html
 http://marcgg.com/sitemap.txt
 
+http://marcgg.com/blog/2014/07/20/some-respect-for-legacy-code
 http://marcgg.com/blog/2014/05/06/quantified-self-iphone-app-track-mood-day
 http://marcgg.com/blog/2014/04/28/frame-based-layout-bad-code
 http://marcgg.com/blog/2014/04/09/phonegap-steroids-hybrid-native-app-tips

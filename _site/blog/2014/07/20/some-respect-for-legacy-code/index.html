@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>
-      Why I'm Not Proud To Be French
+      Have Some Respect For Legacy Code
     </title>
-    <meta name="description" content="My take on pride and the feelings linked to nationality.">
+    <meta name="description" content="">
     <meta name="author" content="Marc G Gauthier">
 
     <!--[if lt IE 9]> <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -34,83 +34,60 @@
           <h1>
   <span>
     
-      Why I'm Not Proud To Be French
+      Have Some Respect For Legacy Code
     
     </span>
 </h1>
 
 <div class="published">
-  <span>24 June 2013</span>
+  <span>20 July 2014</span>
 </div>
 
 <div class="post">
-  <p>A few years back, when I was living in the US, a lot of people asked me if I
-were proud of being French. I always found this question very strange and
-never knew exactly how to respond without getting into a two hours long
-argumentation… because no, I am not proud to be French.
-Of course to be fair I have to mention at that point that if I were born
-American I wouldn’t be proud of it either.</p>
+  <p>It’s your first day. You just joined a team that’s working on a cool project. That’s usually at this point that you get to discover that the project is not as good as you’d expected as there’s code that’s not up to the industries standards. Most likely you’ll then hear from your colleagues something like “Jane wrote that a few years back, we didn’t need to change it so it’s a bit outdated” or “this is some <strong>legacy code</strong>” <em>gasp</em>.</p>
 
-<p>So here’s my humble written reflexion that I will redirect people to next
-time I’m asked how I feel about my nationality.
-Note that I won’t get into the negative aspects of national pride because I think
-it’s beside the point. I can get how people are proud of their countries
-without being radical nationalists.</p>
+<p>This is the definition of legacy code I’m going to use in this article. Code that still works, is still being used but is not convenient to update and maintain. This could be linked to outdated frameworks, weird coding conventions, incoherences with the main code base, lack of proper automated tests … </p>
 
-<p>Alright.</p>
+<div style="text-align: center"><img src="/assets/blog/rube.jpg" style="width: 400px;" /></div>
 
-<p>To me being proud of one’s nationality makes very little sense. I’m
-usually proud of the things I accomplish or, at the very least, that I helped create. If I
-work months on a project that succeeds, obviously I’ll be very proud. If I spend
-time helping out a friend and she turns out very successfull, I’ll share
-a subset of the pride while being happy for her. Being proud
-of where I was born sounds a bit like being proud to be blond, or being
-proud to be right handed. It’s a fact about me, true, but it does not
-define me and I had no choice in it.</p>
+<p>When encountering legacy code, a lot of developers want to refactor everything or even rewrite everything from scratch. I can’t blame them, there’s nothing like a greenfield project ! I would even go as far as saying that it’s perfectly logical and healthy. It’s important to identify a source of problems and want to fix it.</p>
 
-<p>I can honestly say that I love France and that being French is a good
-situation to be in. I’m not necessarily a big fan of
-<a href="http://www.hadopi.fr/">every aspect of it</a>,
-but it’s a great place to live. I don’t have to pay
-ridiculous tuitions for my education, I get a fair share of freedom,
-Paris is one of my favorite cities, I can go in most places in Europe
-without having to worry about visas and being able to
-speak french will make me seem sophisticated and charming abroad.</p>
+<p>However, there are ways to approach this issues.</p>
 
-<p>It’s pretty cool if you ask me!</p>
+<h2 id="someone-wrote-this">Someone Wrote This</h2>
 
-<p>The thing is that, while I can feel glad to be born french, I won’t take any
-pride in the mere act of being born that is really a product of pure luck.</p>
+<p>First of all, understand that this legacy code was most likely written by someone with good intentions. Coders wanting to purposely hurt a codebase are rare and it’s usually either the lack of experience of the lack of time that lead to what you consider terrible design choices. If you think back, you’ll realize you too wrote terrible code at some point. If you didn’t, either you don’t know it or you’re at the beginning of your career.</p>
 
-<p>If my country achieved a lot 300 years ago, what does it has to do with
-me and why should all of this influence the way I feel? If I start
-to think this way, then comes the question of what
-events I should take into account to make up my mind about the way
-I “live” my nationality.
-It’s a hard question because France did great things and was host
-of <a href="http://en.wikipedia.org/wiki/Voltaire">amazing</a>
-<a href="http://www.amazon.com/L%C3%A9tranger-Collection-Folio-French-Edition/dp/2070360024">minds</a>,
-but also had some dark sides, both <a href="http://en.wikipedia.org/wiki/Vichy_France">relatively recently</a>
-or <a href="http://en.wikipedia.org/wiki/Reign_of_Terror">way back</a>. I’m sure
-it’s a harder one for countries with a harsher history.</p>
+<p>Once you realize that, you’ll see that there is no need to critize the person behind the code. Nothing positive can come out of it.</p>
 
-<p>Of course I’m not asking for a clean slate or to forget what happened in
-the past as it’s obvious that we be able to look back at
-what occurred before and learn from it. I just think that such a gut
-feeling as pride (or shame) has no place here.</p>
+<h2 id="it-worked-so-far">It Worked So Far</h2>
 
-<p>There are situations where I could be proud of be a part of my country,
-but that would be more the pride of of belonging to a movement I judge
-positive or important than something related to my nationality.
-To illustrate, if I lived in Canada and the country as a whole, myself included,
-did something great, I would have the exact same feeling even though I’m not Canadian.</p>
+<p>When looking a piece of legacy code and asking for its termination, think that it worked so far. The product is at this point thanks to it. Maybe it’s bad now, but at some point it most likely allowed project to move forward. It created some value… and it’s still working after years!</p>
 
-<p>To conclude I’ll leave you with a song by Brassens, another one of my
-most talented fellow countryman.</p>
+<p>Maybe the context is not clear for you now yet. Legacy code is usually written a long time ago, with different best practices, different company objectives, different time constraints. Maybe the code was perfect and awesome at a point, and then requirements changed so much it became more and more clunky and weird.</p>
 
-<div style="width:560px; margin: auto">
-<object width="560" height="315"><param name="movie" value="http://www.youtube.com/v/RSJmN-Mg978?version=3&amp;hl=fr_FR&amp;rel=0" /><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><embed src="http://www.youtube.com/v/RSJmN-Mg978?version=3&amp;hl=fr_FR&amp;rel=0" type="application/x-shockwave-flash" width="560" height="315" allowscriptaccess="always" allowfullscreen="true" /></object>
-</div>
+<p>So don’t judge a piece of code written by an intern during a rush to ship the v1 the same way you’d judge something calmly written by two experienced developers pairing based on perfectly written specs.</p>
+
+<h2 id="fix-avoid">Fix, Avoid</h2>
+
+<p>You might get my point by now: there is no need to be overly harsh. Yeah, maybe you think this piece of code is garbage… and maybe it is ! But it’s counter productive to attack the previous coder or to trash talk the way it was coded.</p>
+
+<p>Identify the issue, put it in some kind of ticketing system and prioritize it based on risks, time wasted and so on.</p>
+
+<p>For instance I wouldn’t stress out too much for a poorly written code that’s never updated and works perfectly. If I tried to fix it, I might introduce regression bugs and it wouldn’t be much better. However, if the project requires me to update this part of the code every other week, it becomes an entirely different discussion!</p>
+
+<p>When you get to it, fix it the best you can and try not to introduce some <em>different</em> legacy code!</p>
+
+<h2 id="you-will-write-legacy-code">You Will Write Legacy Code</h2>
+
+<p>There is no way you’ll go your entire developer career without <a href="/blog/2014/04/28/frame-based-layout-bad-code/">leaving some legacy code behind you</a>. And it’s okay. If you try to avoid leaving less than perfect code behind you, you might end up not writting anything at all.</p>
+
+<p>I really like Sandi Metz’s talk “<a href="%5Bhttp://www.confreaks.com/videos/1115-gogaruco2012-go-ahead-make-a-mess%5D">Go Ahead, Make A Mess</a>” where she explains that you won’t reach perfection any time soon. You will have people in your team, including yourself, writting poor code at some point.</p>
+
+<p>Knowing that, you can focus on mitigating the risk of writting bad code - with strategies as reducing dependecies, good testing, good training and so on. Have some metrics or process (code reviews?) to spot what could become legacy and keep on refactoring.</p>
+
+<div style="text-align: center"><img src="/assets/blog/wtfminute.png" style="width: 400px;" /></div>
+
 
 
   <div id="more">
@@ -144,6 +121,24 @@ most talented fellow countryman.</p>
         
       
         
+          
+          <li><a href="/blog/2014/04/28/frame-based-layout-bad-code">Tips on Creating a Website From When I Was 12</a></li>
+        
+      
+        
+      
+        
+      
+        
+          
+          <li><a href="/blog/2013/11/05/enough-with-the-language-trolls">Enough With The Trolls</a></li>
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -153,42 +148,30 @@ most talented fellow countryman.</p>
       
         
           
-          <li><a href="/blog/2013/10/29/mixing-languages">Mixing Languages</a></li>
+          <li><a href="/blog/2013/03/25/please-changelog-open-source">Please Keep a Changelog For Your Open Source Lib</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
       
         
           
-          <li><a href="/blog/2013/07/09/passer-deuxieme-bac">J'ai Passé Un Deuxième Bac. Pour Voir.</a></li>
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
+          <li><a href="/blog/2012/09/04/one-reason-to-switch-to-vim-editor">The One Thing That Made Me Switch To Vim</a></li>
         
       
         
