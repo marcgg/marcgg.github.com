@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2014-07-22T09:00:10+02:00</updated>
+ <updated>2014-07-22T09:06:30+02:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -15,9 +15,9 @@
   
    <entry>
      <title>Some Respect For Legacy Code</title>
-     <link href="http://marcgg.com/blog/2014/07/20/some-respect-for-legacy-code"/>
-     <updated>2014-07-20T00:00:00+02:00</updated>
-     <id>http://marcgg.com/blog/2014/07/20/some-respect-for-legacy-code</id>
+     <link href="http://marcgg.com/blog/2014/07/22/in-defense-of-legacy-code"/>
+     <updated>2014-07-22T00:00:00+02:00</updated>
+     <id>http://marcgg.com/blog/2014/07/22/in-defense-of-legacy-code</id>
      <content type="html">&lt;p&gt;It’s your first day. You just joined a team working on a cool project. That’s usually at this point that you discover that the code base is not as good as you’d expected. Most likely you’ll then hear from your colleagues something like “Jane wrote that a few years back, we didn’t need to change it so it’s a bit outdated” or “this is some &lt;strong&gt;legacy code&lt;/strong&gt;” &lt;em&gt;gasp&lt;/em&gt;.&lt;/p&gt;
 
 &lt;div style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/reveal.png&quot; /&gt;&lt;/div&gt;
@@ -52,7 +52,7 @@
 
 &lt;p&gt;For instance I wouldn’t stress out too much for a poorly written code that’s never updated and works perfectly. If I tried to fix it, I might introduce regression bugs and it wouldn’t be much better. However, if the project requires me to update this part of the code every other week, it becomes an entirely different discussion.&lt;/p&gt;
 
-&lt;p&gt;When you get to it, fix it the best you can and try not to introduce some &lt;em&gt;different&lt;/em&gt; legacy code!&lt;/p&gt;
+&lt;p&gt;When you get to it, fix it the best you can and do everything you can in order to avoid introducing some &lt;em&gt;different&lt;/em&gt; legacy code! You could also see if the system would still work &lt;a href=&quot;http://blog.codinghorror.com/the-best-code-is-no-code-at-all/&quot;&gt;with no code at all&lt;/a&gt;.&lt;/p&gt;
 
 &lt;div style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/wtfminute.png&quot; style=&quot;width: 400px;&quot; /&gt;&lt;/div&gt;
 

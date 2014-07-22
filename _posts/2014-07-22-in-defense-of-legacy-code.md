@@ -41,15 +41,15 @@ Identify the issue, put it in some kind of ticketing system and prioritize it ba
 
 For instance I wouldn’t stress out too much for a poorly written code that’s never updated and works perfectly. If I tried to fix it, I might introduce regression bugs and it wouldn’t be much better. However, if the project requires me to update this part of the code every other week, it becomes an entirely different discussion.
 
-When you get to it, fix it the best you can and try not to introduce some _different_ legacy code!
+When you get to it, fix it the best you can and do everything you can in order to avoid introducing some _different_ legacy code! You could also see if the system would still work [with no code at all][2].
 
 <div style="text-align: center"><img src="/assets/blog/wtfminute.png" style="width: 400px;"/></div>
 
 ## You Will Write Legacy Code
 
-Sorry to break the news, but there is no way you’ll go your entire developer career without [leaving some legacy code behind you][2]. And it’s okay. If you try to avoid leaving less than perfect code behind you, you might end up not writting anything at all. We all need to learn and hopefully your learning mistakes won’t be too bad. Having good mentors helps.
+Sorry to break the news, but there is no way you’ll go your entire developer career without [leaving some legacy code behind you][3]. And it’s okay. If you try to avoid leaving less than perfect code behind you, you might end up not writting anything at all. We all need to learn and hopefully your learning mistakes won’t be too bad. Having good mentors helps.
 
-I really like Sandi Metz’s talk “[Go Ahead, Make A Mess][3]” where she explains that you won’t reach perfection any time soon. You will have people in your team, including yourself, writting poor code at some point. Knowing that, you can focus on mitigating the risk of writting bad code - with strategies as reducing dependecies, good testing, good training and so on. Have some metrics or process (code reviews?) to spot what could become legacy and keep on refactoring.
+I really like Sandi Metz’s talk “[Go Ahead, Make A Mess][4]” where she explains that you won’t reach perfection any time soon. You will have people in your team, including yourself, writting poor code at some point. Knowing that, you can focus on mitigating the risk of writting bad code - with strategies as reducing dependecies, good testing, good training and so on. Have some metrics or process (code reviews?) to spot what could become legacy and keep on refactoring.
 
 In this whole process, learn from what you just refactored or rewrote, and always thrive to achieve better design and a cleaner coding style. It can only lead to better software and happier teammates.
 
@@ -58,5 +58,6 @@ In this whole process, learn from what you just refactored or rewrote, and alway
 
 
 [1]:	http://www.goodreads.com/quotes/718460-code-without-tests-is-bad-code-it-doesn-t-matter-how
-[2]:	/blog/2014/04/28/frame-based-layout-bad-code/
-[3]:	%5Bhttp://www.confreaks.com/videos/1115-gogaruco2012-go-ahead-make-a-mess%5D
+[2]:	http://blog.codinghorror.com/the-best-code-is-no-code-at-all/
+[3]:	/blog/2014/04/28/frame-based-layout-bad-code/
+[4]:	%5Bhttp://www.confreaks.com/videos/1115-gogaruco2012-go-ahead-make-a-mess%5D
