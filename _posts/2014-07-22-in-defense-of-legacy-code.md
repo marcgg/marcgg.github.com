@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Some Respect For Legacy Code
-description: “While it is easy to complain about legacy code, it’s important to keep in mind that this old code deserves some respect.“
+description: While it is easy to complain about legacy code, it’s important to keep in mind that this old code deserves some respect.
 blog: true
 category: blog
 tag: Dev
