@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2014-07-22T09:07:23+02:00</updated>
+ <updated>2014-07-22T09:08:21+02:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -18,7 +18,7 @@
      <link href="http://marcgg.com/blog/2014/07/22/in-defense-of-legacy-code"/>
      <updated>2014-07-22T00:00:00+02:00</updated>
      <id>http://marcgg.com/blog/2014/07/22/in-defense-of-legacy-code</id>
-     <content type="html">&lt;p&gt;It’s your first day. You just joined a team working on a cool project. That’s usually at this point that you discover that the code base is not as good as you’d expected. Most likely you’ll then hear from your colleagues something like “Jane wrote that a few years back, we didn’t need to change it so it’s a bit outdated” or “this is some &lt;strong&gt;legacy code&lt;/strong&gt;” &lt;em&gt;gasp&lt;/em&gt;.&lt;/p&gt;
+     <content type="html">&lt;p&gt;It’s your first day. You just joined a team working on a cool project. That’s usually at this point that you discover that the code base is not as good as you’d expected. Most likely you’ll then hear from your colleagues something like “Jane wrote that a few years back, we didn’t need to change it so it’s a bit outdated” or “this is some &lt;strong&gt;legacy code&lt;/strong&gt;”. &lt;em&gt;Gasp&lt;/em&gt;.&lt;/p&gt;
 
 &lt;div style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/reveal.png&quot; /&gt;&lt;/div&gt;
 

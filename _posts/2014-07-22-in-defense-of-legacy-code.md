@@ -7,7 +7,7 @@ category: blog
 tag: Dev
 ---
 
-It’s your first day. You just joined a team working on a cool project. That’s usually at this point that you discover that the code base is not as good as you’d expected. Most likely you’ll then hear from your colleagues something like “Jane wrote that a few years back, we didn’t need to change it so it’s a bit outdated” or “this is some **legacy code**” _gasp_.
+It’s your first day. You just joined a team working on a cool project. That’s usually at this point that you discover that the code base is not as good as you’d expected. Most likely you’ll then hear from your colleagues something like “Jane wrote that a few years back, we didn’t need to change it so it’s a bit outdated” or “this is some **legacy code**”. _Gasp_.
 
 <div style="text-align: center"><img src="/assets/blog/reveal.png"/></div>
 
