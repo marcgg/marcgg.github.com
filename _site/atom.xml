@@ -4,13 +4,53 @@
  <title>marcgg#blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2014-07-22T09:08:21+02:00</updated>
+ <updated>2014-07-26T21:48:27+02:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
    <email>marcg.gauthier@gmail.com</email>
  </author>
 
+ 
+  
+   <entry>
+     <title>Reflexions On Company Procedures</title>
+     <link href="http://marcgg.com/blog/2014/07/28/company-process-red-tape"/>
+     <updated>2014-07-28T00:00:00+02:00</updated>
+     <id>http://marcgg.com/blog/2014/07/28/company-process-red-tape</id>
+     <content type="html">&lt;p&gt;To me, a process is just like code. A way to solve a problem. For instance if a team constantly have problem communicating, it could be interesting to set and enforce some kind of recurring meeting to facilitate discussions. &lt;/p&gt;
+
+&lt;p&gt;However, in some situations, leadership might want to overengineer and add processes everywhere, even if there is little to no problem. This will not improve a thing, just adding inertia and slowing down the team. If you have too much red tape, energy is wasted on enforcing the newly created procedures while legitimate ideas to improve will be buried or ignored.&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/brazil.jpg&quot; style=&quot;width: 450px;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;It’s all about adapting your processes to the situation. A brilliant organizational idea from another company might not work for your team. &lt;a href=&quot;/assets/blog/heck.jpg&quot;&gt;Heck&lt;/a&gt;, what worked for you at some point might not even do it anymore after doubling in size!&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;One of my fav authors once said every law should be signed with mourning, “this is where we failed each other, and now require force”. &lt;/p&gt;
+
+  &lt;p&gt;Quinn Norton (&lt;a href=&quot;https://twitter.com/quinnnorton/&quot;&gt;@quinnnorton&lt;/a&gt;), &lt;a href=&quot;https://twitter.com/quinnnorton/statuses/465838348473761792&quot;&gt;May 12th 2014&lt;/a&gt;, paraphrasing &lt;a href=&quot;http://dalependell.com/&quot;&gt;Dale Pendell&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I really like this tweet. A bit extreme but hey, the phrasing is pretty cool. Just replace “law” by “company processes” and &lt;em&gt;voilà&lt;/em&gt;. What I take from it is that, &lt;strong&gt;idealy&lt;/strong&gt;, you should have everyone in your team working well without having to apply force.&lt;/p&gt;
+
+&lt;p&gt;If John often arrives late in meetings doesn’t necessary mean you need to create a company policy about that. You could take 5 minutes to talk with John and try to figure out what the problem is first. Of course this solution doesn’t scale and depend on the team, so again, this has to be adapted.&lt;/p&gt;
+
+&lt;p&gt;To this point I’ve repeated a lot how everything should be adapted and how it depends on a given situation. Let me just add that the corollary all that is that anyone telling you that methodology X is &lt;a href=&quot;/blog/2013/11/05/enough-with-the-language-trolls/&quot;&gt;perfect&lt;/a&gt; for &lt;em&gt;any&lt;/em&gt; team is mistaken.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“I suppose it is tempting, if the only tool you have is a hammer, to treat everything as if it were a nail.”&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://books.google.fr/books?id=3%5C_40fK8PW6QC&amp;amp;printsec=frontcover&amp;amp;redir%5C_esc=y#v=onepage&amp;amp;q=hammer&amp;amp;f=false&quot;&gt;Abraham H. Maslow&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I would not claim to have the perfect way to work with a team. I’m bound to make &lt;a href=&quot;/blog/2014/04/28/frame-based-layout-bad-code/&quot;&gt;mistakes&lt;/a&gt;, we all are. And it’s a complex subject… there are even &lt;a href=&quot;http://www.dtic.mil/dtic/tr/fulltext/u2/a346053.pdf&quot;&gt;people writting thesis about it&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;The important thing is to know this and be able to adapt to the best of our abilities and keep shipping. Don’t add rules blindly, these new “laws” could have a cost outweighing their benefits.&lt;/p&gt;
+
+</content>
+   </entry>
+  
  
   
    <entry>
