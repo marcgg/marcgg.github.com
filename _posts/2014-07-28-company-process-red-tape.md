@@ -21,11 +21,11 @@ It’s all about adapting your processes to the situation. A brilliant organizat
 > 
 > Quinn Norton ([@quinnnorton][2]), [May 12th 2014][3], paraphrasing [Dale Pendell][4]
 
-I really like this tweet. A bit extreme but hey, the phrasing is pretty cool. Just replace “law” by “company processes” and _voilà_. What I take from it is that, **idealy**, you should have everyone in your team working well without having to apply force.
+I really like this tweet. A bit extreme but hey, the phrasing is pretty cool. Just replace “law” by “company processes” and _voilà_. What I take from it is that, **ideally**, you should have everyone in your team working well without having to apply force.
 
 If John often arrives late in meetings doesn’t necessary mean you need to create a company policy about that. You could take 5 minutes to talk with John and try to figure out what the problem is first. Of course this solution doesn’t scale and depends on the team, so again, this has to be adapted.
 
-To this point I’ve repeated a lot how everything should be adapted and how it depends on and given situation. Let me just add that the corollary all that is that anyone telling you that methodology X is [perfect][5] for _any_ team is mistaken.
+To this point I’ve repeated a lot how everything should be adapted and how it depends on a given situation. The corollary of this is that anyone telling you that methodology X is [perfect][5] for _any_ team is mistaken.
 
 > "I suppose it is tempting, if the only tool you have is a hammer, to treat everything as if it were a nail.”
 > 
