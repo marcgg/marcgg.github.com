@@ -7,9 +7,11 @@ category: blog
 tag: Startup
 ---
 
-To me, a process is just like code. A way to solve a problem. For instance if a team constantly have problem communicating, it could be interesting to set and enforce some kind of recurring meeting to facilitate discussions. 
+To me, a formal process is just like code. A way to solve a problem. I’m not talking about best practices or common sense but real formalized ways of doing things. For instance if a team constantly have problem communicating, it could be interesting to set and enforce some kind of recurring meeting to facilitate discussions - let’s say every monday, 1 hour, all hands.
 
 However, in some situations, leadership might want to overengineer and add processes everywhere, even if there is little to no problem. This will not improve a thing, just adding inertia and slowing down the team. If you have too much red tape, energy is wasted on enforcing the newly created procedures while legitimate ideas to improve will be buried or ignored.
+
+Going back to my first example, if the development team is only two people in the same office talking constantly together there might not be a need for any communication process.
 
 <div style="text-align: center"><img src="/assets/blog/brazil.jpg" style="width: 450px;"/></div>
 
@@ -21,9 +23,9 @@ It’s all about adapting your processes to the situation. A brilliant organizat
 
 I really like this tweet. A bit extreme but hey, the phrasing is pretty cool. Just replace “law” by “company processes” and _voilà_. What I take from it is that, **idealy**, you should have everyone in your team working well without having to apply force.
 
-If John often arrives late in meetings doesn’t necessary mean you need to create a company policy about that. You could take 5 minutes to talk with John and try to figure out what the problem is first. Of course this solution doesn’t scale and depend on the team, so again, this has to be adapted.
+If John often arrives late in meetings doesn’t necessary mean you need to create a company policy about that. You could take 5 minutes to talk with John and try to figure out what the problem is first. Of course this solution doesn’t scale and depends on the team, so again, this has to be adapted.
 
-To this point I’ve repeated a lot how everything should be adapted and how it depends on a given situation. Let me just add that the corollary all that is that anyone telling you that methodology X is [perfect][5] for _any_ team is mistaken.
+To this point I’ve repeated a lot how everything should be adapted and how it depends on and given situation. Let me just add that the corollary all that is that anyone telling you that methodology X is [perfect][5] for _any_ team is mistaken.
 
 > "I suppose it is tempting, if the only tool you have is a hammer, to treat everything as if it were a nail.”
 > 

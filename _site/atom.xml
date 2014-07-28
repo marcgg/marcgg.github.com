@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2014-07-26T21:48:27+02:00</updated>
+ <updated>2014-07-28T10:45:36+02:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -18,9 +18,11 @@
      <link href="http://marcgg.com/blog/2014/07/28/company-process-red-tape"/>
      <updated>2014-07-28T00:00:00+02:00</updated>
      <id>http://marcgg.com/blog/2014/07/28/company-process-red-tape</id>
-     <content type="html">&lt;p&gt;To me, a process is just like code. A way to solve a problem. For instance if a team constantly have problem communicating, it could be interesting to set and enforce some kind of recurring meeting to facilitate discussions. &lt;/p&gt;
+     <content type="html">&lt;p&gt;To me, a formal process is just like code. A way to solve a problem. I’m not talking about best practices or common sense but real formalized ways of doing things. For instance if a team constantly have problem communicating, it could be interesting to set and enforce some kind of recurring meeting to facilitate discussions - let’s say every monday, 1 hour, all hands.&lt;/p&gt;
 
 &lt;p&gt;However, in some situations, leadership might want to overengineer and add processes everywhere, even if there is little to no problem. This will not improve a thing, just adding inertia and slowing down the team. If you have too much red tape, energy is wasted on enforcing the newly created procedures while legitimate ideas to improve will be buried or ignored.&lt;/p&gt;
+
+&lt;p&gt;Going back to my first example, if the development team is only two people in the same office talking constantly together there might not be a need for any communication process.&lt;/p&gt;
 
 &lt;div style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/brazil.jpg&quot; style=&quot;width: 450px;&quot; /&gt;&lt;/div&gt;
 
@@ -34,9 +36,9 @@
 
 &lt;p&gt;I really like this tweet. A bit extreme but hey, the phrasing is pretty cool. Just replace “law” by “company processes” and &lt;em&gt;voilà&lt;/em&gt;. What I take from it is that, &lt;strong&gt;idealy&lt;/strong&gt;, you should have everyone in your team working well without having to apply force.&lt;/p&gt;
 
-&lt;p&gt;If John often arrives late in meetings doesn’t necessary mean you need to create a company policy about that. You could take 5 minutes to talk with John and try to figure out what the problem is first. Of course this solution doesn’t scale and depend on the team, so again, this has to be adapted.&lt;/p&gt;
+&lt;p&gt;If John often arrives late in meetings doesn’t necessary mean you need to create a company policy about that. You could take 5 minutes to talk with John and try to figure out what the problem is first. Of course this solution doesn’t scale and depends on the team, so again, this has to be adapted.&lt;/p&gt;
 
-&lt;p&gt;To this point I’ve repeated a lot how everything should be adapted and how it depends on a given situation. Let me just add that the corollary all that is that anyone telling you that methodology X is &lt;a href=&quot;/blog/2013/11/05/enough-with-the-language-trolls/&quot;&gt;perfect&lt;/a&gt; for &lt;em&gt;any&lt;/em&gt; team is mistaken.&lt;/p&gt;
+&lt;p&gt;To this point I’ve repeated a lot how everything should be adapted and how it depends on and given situation. Let me just add that the corollary all that is that anyone telling you that methodology X is &lt;a href=&quot;/blog/2013/11/05/enough-with-the-language-trolls/&quot;&gt;perfect&lt;/a&gt; for &lt;em&gt;any&lt;/em&gt; team is mistaken.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;“I suppose it is tempting, if the only tool you have is a hammer, to treat everything as if it were a nail.”&lt;/p&gt;
