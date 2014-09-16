@@ -18,6 +18,7 @@ http://marcgg.com/photos/tigerlily.html
 http://marcgg.com/photos/traveling.html
 http://marcgg.com/sitemap.txt
 
+http://marcgg.com/blog/2014/09/17/huboard-kanban-board-github
 http://marcgg.com/blog/2014/07/28/company-process-red-tape
 http://marcgg.com/blog/2014/07/22/in-defense-of-legacy-code
 http://marcgg.com/blog/2014/05/06/quantified-self-iphone-app-track-mood-day

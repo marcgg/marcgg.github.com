@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      How We Made Third Place At AngelHack Paris
+    </title>
+    <meta name="description" content="I participated in a hackathon with 4 other persons where we built a project to give away objects and track their lives. Here's how it went.">
+    <meta name="author" content="Marc G Gauthier">
+
+    <!--[if lt IE 9]> <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,400,700,300' rel='stylesheet' type='text/css'>
+    <link href="/assets/css/app.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/atom.xml" rel="alternate" type="application/atom+xml" title="Marcgg#Blog">
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+  </head>
+
+  <body>
+    <header>
+      <a id="logo" href="/"></a>
+      <nav>
+        <a href="/blog" class=" selected ">Blog</a>
+        <a href="/photos" class="">Photo</a>
+        <a href="/hire" class="">Hire Me</a>
+        <a href="/" class="">About</a>
+      </nav>
+    </header>
+
+    
+      <div id="container">
+        <div id="content" class="">
+          <h1>
+  <span>
+    
+      How We Made Third Place At AngelHack Paris
+    
+    </span>
+</h1>
+
+<div class="published">
+  <span>10 December 2012</span>
+</div>
+
+<div class="post">
+  <p>A couple of weeks ago <a href="http://twitter.com/kevintunc">Kevin</a>, <a href="http://twitter.com/etiennebarrie">Étienne</a>, <a href="http://twitter.com/benjaminbouwyn">Benjamin</a>, <a href="http://twitter.com/emilanddc">Emiland</a> and I decided to go to the the Paris’ session of <a href="http://angelhack.com">AngelHack</a>. This is a worldwide <a href="http://en.wikipedia.org/wiki/Hackathon">hackathon</a> with fancy <a href="http://angelhack.com/#sponsors">sponsors</a> giving you the opportunity to build and pitch a new product in 24 hours. This edition gathered 165 attendees and 47 projects.</p>
+
+<p>In this article I’ll try to present what we did while hopefully recreating a bit the experience and giving some tips.</p>
+
+<h2 id="brainstorming">Brainstorming</h2>
+
+<p>Two weeks prior, we started brainstorming over lunch. We knew we wanted to make a product with a positive concept, original if possible, and not try to build yet another Twitter connected app plugging your instagram to your last.fm account or whatever.</p>
+
+<p>We started by talking about a time sharing solution based on the concept that 1 hour of someone is worth 1 hour of anyone else. You would give a way for people to exchange services. Since there was already a lot of projects doing this we focused on the education niche: how we could apply this idea to make teaching better. From this idea we jumped to sharing goods. From sharing to trading, to giving.</p>
+
+<p>We liked the idea of giving objects, but <a href="http://www.freecycle.org/">some websites</a> did that already, so we looked for incentives for people to give away their things and found the idea of tracking every steps of an object’s life very interesting. This concept has a lot of potential. It not only made giving an object more fun, it could also lead to great stories and maybe give the feeling that property can be temporary, lasting just long enough to have an experience.</p>
+
+<h2 id="getting-ready">Getting Ready</h2>
+
+<p>According to the <a href="http://angelhack.com/rules">rules</a> of AngelHack, you can’t start coding before the limit, but you are allowed to prepare wireframes and use cases… so we did that!</p>
+
+<div style="text-align: center"><img style="width: 320px; float: right;" src="http://distilleryimage7.instagram.com/8e2b7cae3b1a11e2ab4c22000a1faffd_7.jpg" /><img style="width: 320px; float: left; margin: 0px !important;" src="/assets/blog/ready.png" /></div>
+
+<div style="clear:both">&nbsp;</div>
+
+<p>The hardest part at that point was to determine what our minimal viable product would be.</p>
+
+<p>In this kind of situation it is very easy to get side tracked and try to build too much. Obviously you want to make your project as good as possible, with a ton of awesome features and shiny graphics. The bad news is, by doing that, you’ll end up with nothing, or an app messy and bugged beyond belief. We also knew we’d only get 2 minutes to present our work… which is REALLY short. Therefore it was important to focus and get the most important feature done and polished.</p>
+
+<p>Tech-wise, the stack was pretty obvious since we are all well versed with Ruby on Rails and wanted to get the project as complete as possible. However we left some room for improvisation in terms of what <a href="http://en.wikipedia.org/wiki/RubyGems">gems</a> or database we’d use.</p>
+
+<p>The day before the hackathon, in order to gain some time, we prepared how the first hour would go, dispatching tasks and so on.</p>
+
+<h2 id="hacking">Hacking</h2>
+
+<p>The first day started around 9am with presentations, pitches from teams missing members and sponsors. Around noon we started coding. Right away we got some issues with the internet, leading to my deepest despair as we installed most of what we needed to work, but not everything. After a while it got fixed and we were finally able to install the gems we needed.</p>
+
+<div style="text-align:center"><img style="width: 500px;" src="/assets/blog/githack.png" /></div>
+
+<p>In the middle of the development we got the crazy idea of switching database from MySQL to Posgres in case we’d need it for its geospatial features. It didn’t break everything we made before or destroy one of our dev machine, which was pretty good.</p>
+
+<p>We also quickly got the need to get everyone to test the site. Since the non technical people on the team didn’t have a laptop fully setup for development, we had to deploy the project to Heroku. This lead to an awesome moment where we had a problem and just had to turn around to get help from the guys on the Heroku stand sitting feets away from us.</p>
+
+<p>Since we like the added challenge, one of our team member had to leave
+for a couple of hours to see a <a href="http://www.youtube.com/watch?v=56E8yYgLNHE">Crystal Castle</a>
+concert nearby… but it worked out fine and to our surprise,
+the minimal viable product was more or less ready around 4am! This was great
+news because it meant that we could spend the remaining time adding the extra
+features like some Facebook <a href="https://developers.facebook.com/docs/concepts/opengraph/">open graph</a>
+ or a better integration of <a href="http://mapbox.com/">mapbox</a> to show how an object travelled.</p>
+
+<div style="text-align: center"><img style="width: 350px; float: right;" src="/assets/blog/screen2.png" /><img style="width: 350px; float: left; margin: 0px !important;" src="/assets/blog/screen1.png" /></div>
+
+<div style="clear:both">&nbsp;</div>
+
+<p>It’s also good to note that at that point we already entered the phase where we didn’t really cared
+about best practices, and it shows a lot in our <a href="https://github.com/marcgg/thegoodslife/commits/master">git log</a>.</p>
+
+<div style="text-align:center"><img style="width: 500px;" src="/assets/blog/gitlol.png" /></div>
+
+<p>This is when I decided to get a couple hours of sleep while others stayed to work a bit more. Some will say that <a href="/assets/blog/sleep.jpg">sleep is for the weak</a>, but I still think that getting rest in a hackathon is important. When you need to be able to focus and think, it’s always better to have some kind of sanity left or you’ll just end up coding bugs after bugs and get frustrated.</p>
+
+<p>There is also the solution of some of my teammates which was taking advantage of the free Redbulls. I guess it can work too.</p>
+
+<div style="width:640px; margin: auto">
+<iframe width="640" height="400" src="http://www.youtube.com/embed/c2iqbAirnAk?rel=0" frameborder="0">Loading</iframe>
+</div>
+
+<h2 id="pitching">Pitching</h2>
+
+<p>Some of us started to prepare the pitch, while others were fixing the
+last remaining bugs. For this presentation we decided before that we’d do a
+a couple of slides followed by a screencast serving as demo.
+This was a choice in order to avoid internet connections issues, aspect ratio problems on the video projector…
+or really any Murphy’s law related incident.</p>
+
+<div style="width:560px; margin: auto">
+<iframe width="560" height="315" src="http://www.youtube.com/embed/mDdNOf0EKy4?rel=0" frameborder="0">Loading</iframe>
+</div>
+
+<p>While waiting we got to see the other teams’ presentation. When it was
+close to our turn we were sent to another room, and let me tell you that even
+I wasn’t the one giving the presentation,
+<a href="http://emiland.me/">Emiland</a> was, but I was stressing out for him.
+I got the opportunity to pitch at the
+<a href="http://blog.tigerlilyapps.com/en/tigerlily-wins-the-facebook-mobile-hack-with-watchify-a-social-tv-web-app/">last hackathon</a>
+I participated in, so I know how hard it can be. The fact that everything was in english
+and we’re not native speakers didn’t help either.</p>
+
+<div style="text-align:center"><img style="width: 500px;" src="/assets/blog/pres.png" /></div>
+
+<p>Overall the presentation went well, even if I failed to answer a question while
+trying to save Emiland from failing to answer another question. We got
+some very good feedbacks from the judges and then had to wait.</p>
+
+<p>After what seemed like a very long time, the winners and prizes were announced:</p>
+
+<ul>
+  <li>(1) Lugga.me, Track your bag talk to her. Tickets to San Francisco.</li>
+  <li>(2) Cubes, Unleash Your God Power. Tickets to San Francisco.</li>
+  <li>(3) The Goods Life, Give your goods a second life - or a third. 5 Macbook Pro 13” Retina Display.</li>
+  <li>(4) Hvid.io, World Wide Watch - Watch our World live. 3 iPad mini.</li>
+</ul>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>While we didn’t make it to San Francisco we still got a cool prize
+courtesy of <a href="http://www.heroku.com/">Heroku</a> and
+managed to finish our project. It was also a great experience to create
+something from the ground up quickly and get instantly feedbacks on it.</p>
+
+<p>I’m very proud of what we accomplished during this weekend. The team was
+awesome as everybody had complementary skills and each team member had a major impact on the
+result. This left me with the feeling that with the right group of people
+and a good mindset you can really create great things.</p>
+
+<p>Overall I’d advise anyone that like <a href="/2012/01/09/start-working-on-your-side-project/">starting projects</a>
+to participate in events like these. Gather a group of people or just find
+teammates on the spot, it’ll be great.</p>
+
+<p>Exhausting, but great.</p>
+
+<div style="text-align:center"><img style="" src="/assets/blog/team.png" /></div>
+
+
+  <div id="more">
+    
+    
+
+    <div id="newsletter">
+      <div id="mc_embed_signup">
+      <form action="http://marcgg.us8.list-manage.com/subscribe/post?u=68290282c7458f0699fbef320&amp;id=8d64404e17" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <label for="mce-EMAIL">
+          Enjoyed the article ? Want to keep up to date with what I do ?
+        </label>
+        <div id="news-cta">
+          <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter your Email address" required>
+          <div style="position: absolute; left: -5000px;"><input type="text" name="b_68290282c7458f0699fbef320_8d64404e17" value=""></div>
+          <input type="submit" value="Leave me your email ☺" name="subscribe" id="mc-embedded-subscribe" class="button">
+        </div>
+        <em>I won't spam, promised</em>
+      </form>
+      </div>
+    </div>
+
+    <div id="more-articles">
+      
+        <p>Since you scrolled this far, you might as well take a look at some other things I wrote !</p>
+        <ul>
+          
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          <li><a href="/blog/2013/05/20/track-link-clicks">Information About Bots & People Clicking a Link</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          <li><a href="/blog/2013/01/14/html5-nodejs-websockets-games-learning">2 Days Trying To Create a Multiplayer HTML5 Game</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          <li><a href="/blog/2012/01/09/start-working-on-your-side-project">Start Working on Your Side Project Tonight</a></li>
+        
+      
+        
+      
+        
+      
+    
+        </ul>
+        <p>
+          ... or <a href="/blog">some other article</a> from my blog.
+          Oh and I also take <a href="/photos">pictures</a>!
+        </p>
+      
+    </div>
+    <a href="https://twitter.com/marcgg" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @marcgg</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+    <a href="https://twitter.com/share" class="twitter-share-button" data-via="marcgg" data-size="large">Tweet</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+  </div>
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = 'marcgg';
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+
+
+        </div>
+      </div>
+    
+
+    <footer>
+      Website designed by <a href="http://twitter.com/kevintunc">@kevintunc</a>,
+      powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>, hosted on
+      <a href="https://github.com/marcgg/marcgg.github.com">Github</a>
+      and put together by <a href="http://twitter.com/marcgg">@marcgg</a>
+      <br />
+      All of the <a href="/blog">blog's articles</a> are under
+      <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative commons</a> license
+      unless stated otherwise. Everything else is &copy;
+    </footer>
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-31071519-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </body>
+</html>
