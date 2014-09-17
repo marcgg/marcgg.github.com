@@ -52,7 +52,7 @@ For reference, here is what we use at [Drivy][9], but obviously it needs to adap
 
 Once the ticket is in production and tested there, then and only then the ticket is closed.
 
-I confess that I don’t use a lot of the new features available. What makes HuBoard usefull to me is mostly the board visualisation and the ability to use drag & drop to change a Github issue’s state. I also enjoy the ability to order issues to represent priority, and the quick filtering to know what’s assigned to who.
+I confess that I don’t use a lot of the new features available. What makes HuBoard usefull to me is mostly the board visualisation and the ability to use drag & drop to change a Github issue’s state. I also enjoy the ability to order issues to represent priority as well as the quick filtering to know what’s assigned to who.
 
 Thanks to this approach your issues are left in your repository but you still get a cool Kanban board interface to manage everything! If some people in your team don’t like it, they can always stay on Github.com: the tags will be there and everything is synchronised seemlessly.
 
