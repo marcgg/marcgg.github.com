@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2014-09-17T15:22:33+02:00</updated>
+ <updated>2014-09-17T15:28:03+02:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -22,7 +22,7 @@
 
 &lt;h2 id=&quot;some-structure&quot;&gt;Some Structure&lt;/h2&gt;
 
-&lt;p&gt;However, when scalling a bit the team, having a good overview on what is being worked on get more complex. That’s usually when teams add a physical board with tickets and some kind of organized workflow. These days &lt;a href=&quot;http://en.wikipedia.org/wiki/Kanban&quot;&gt;Kanban&lt;/a&gt; is really popular, and I personnally really like most aspects of it. For instance here is the board we used back when I worked at &lt;a href=&quot;http://tigerlilyapps.com&quot;&gt;Tigerlily&lt;/a&gt;. It did it job very well but reached its limit after a while.&lt;/p&gt;
+&lt;p&gt;However, when scalling a bit the team, having a good overview on what is being worked on get more complex. That’s usually when teams add a physical board with tickets and some kind of organized workflow. These days &lt;a href=&quot;http://en.wikipedia.org/wiki/Kanban&quot;&gt;Kanban&lt;/a&gt; is really popular, and I personnally really like most aspects of it. For instance here is the board we used back when I worked at &lt;a href=&quot;http://www.tigerlilyapps.com&quot;&gt;Tigerlily&lt;/a&gt;. It did it job very well but reached its limit after a while.&lt;/p&gt;
 
 &lt;div style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/board.jpg&quot; style=&quot;width: 450px;&quot; /&gt;&lt;/div&gt;
 

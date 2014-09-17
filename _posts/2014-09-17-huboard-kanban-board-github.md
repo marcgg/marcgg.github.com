@@ -72,7 +72,7 @@ _Keep in mind that this is just my opinion, and not a sponsored post. I just lov
 [1]:	/blog/2014/07/28/company-process-red-tape/
 [2]:	https://www.youtube.com/watch?v=qYodWEKCuGg
 [3]:	http://en.wikipedia.org/wiki/Kanban
-[4]:	http://tigerlilyapps.com
+[4]:	http://www.tigerlilyapps.com
 [5]:	https://guides.github.com/features/issues/
 [6]:	http://www.pivotaltracker.com/
 [7]:	http://scottchacon.com/2011/08/31/github-flow.html
