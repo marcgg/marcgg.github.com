@@ -65,6 +65,7 @@ They also have an offer for those working with [Github Enterprise][14].
 
 Since the project is open source, you can also [grab the code][12] and deploy it to your own servers. For my usage, I’m running my own fork of the code on a [Heroku][13] free plan.
 
+_Keep in mind that this is just my opinion, and not a sponsored post. I just love this project and been using it for a couple of years for free, so I thought I'd share the love :)_
 
 
 

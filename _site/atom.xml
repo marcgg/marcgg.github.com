@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2014-09-17T15:05:50+02:00</updated>
+ <updated>2014-09-17T15:22:33+02:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -77,6 +77,8 @@
 They also have an offer for those working with &lt;a href=&quot;https://enterprise.huboard.com/?utm_source=marcgg&amp;amp;utm_medium=blog&amp;amp;utm_campaign=marcgg&quot;&gt;Github Enterprise&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Since the project is open source, you can also &lt;a href=&quot;https://github.com/rauhryan/huboard&quot;&gt;grab the code&lt;/a&gt; and deploy it to your own servers. For my usage, I’m running my own fork of the code on a &lt;a href=&quot;https://www.heroku.com/&quot;&gt;Heroku&lt;/a&gt; free plan.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Keep in mind that this is just my opinion, and not a sponsored post. I just love this project and been using it for a couple of years for free, so I thought I’d share the love :)&lt;/em&gt;&lt;/p&gt;
 
 </content>
    </entry>
