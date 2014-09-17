@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2014-09-16T22:53:45+02:00</updated>
+ <updated>2014-09-17T15:03:55+02:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -73,7 +73,8 @@
 
 &lt;h3 id=&quot;sounds-cool-how-do-i-use-it-&quot;&gt;Sounds Cool, How Do I Use It ?&lt;/h3&gt;
 
-&lt;p&gt;HuBoard is available as a service on &lt;a href=&quot;https://huboard.com/&quot;&gt;HuBoard.com&lt;/a&gt;. It’s free for public projects and if you want to use it for private projects &lt;a href=&quot;https://huboard.com/pricing&quot;&gt;you can pay $24 a month for organization and $7 a month for single users&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;HuBoard is available as a service on &lt;a href=&quot;https://huboard.com/?utm_source=marcgg&amp;amp;utm_medium=blog&amp;amp;utm_campaign=marcgg&quot;&gt;HuBoard.com&lt;/a&gt;. It’s free for public projects and if you want to use it for private projects &lt;a href=&quot;https://huboard.com/pricing?utm_source=marcgg&amp;amp;utm_medium=blog&amp;amp;utm_campaign=marcgg&quot;&gt;you can pay $24 a month for organization and $7 a month for single users&lt;/a&gt;.
+They also have an offer for those working with &lt;a href=&quot;https://enterprise.huboard.com/?utm_source=marcgg&amp;amp;utm_medium=blog&amp;amp;utm_campaign=marcgg&quot;&gt;Github Enterprise&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Since the project is open source, you can also &lt;a href=&quot;https://github.com/rauhryan/huboard&quot;&gt;grab the code&lt;/a&gt; and deploy it to your own servers. For my usage, I’m running my own fork of the code on a &lt;a href=&quot;https://www.heroku.com/&quot;&gt;Heroku&lt;/a&gt; free plan.&lt;/p&gt;
 

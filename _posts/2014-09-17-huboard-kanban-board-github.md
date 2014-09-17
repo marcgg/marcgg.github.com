@@ -61,6 +61,7 @@ It Just Works™!
 ### Sounds Cool, How Do I Use It ?
 
 HuBoard is available as a service on [HuBoard.com][10]. It’s free for public projects and if you want to use it for private projects [you can pay $24 a month for organization and $7 a month for single users][11].
+They also have an offer for those working with [Github Enterprise][14].
 
 Since the project is open source, you can also [grab the code][12] and deploy it to your own servers. For my usage, I’m running my own fork of the code on a [Heroku][13] free plan.
 
@@ -76,7 +77,8 @@ Since the project is open source, you can also [grab the code][12] and deploy it
 [7]:	http://scottchacon.com/2011/08/31/github-flow.html
 [8]:	http://nvie.com/posts/a-successful-git-branching-model/
 [9]:	https://drivy.com
-[10]:	https://huboard.com/
-[11]:	https://huboard.com/pricing
+[10]:	https://huboard.com/?utm_source=marcgg&utm_medium=blog&utm_campaign=marcgg
+[11]:	https://huboard.com/pricing?utm_source=marcgg&utm_medium=blog&utm_campaign=marcgg
 [12]:	https://github.com/rauhryan/huboard
 [13]:	https://www.heroku.com/
+[14]: https://enterprise.huboard.com/?utm_source=marcgg&utm_medium=blog&utm_campaign=marcgg
