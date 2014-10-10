@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      Pragmatic and Rage-Driven Approach To MySQL Indexes
+    </title>
+    <meta name="description" content="Sometimes finding the right index for a really complex SQL query can be hard and time consuming. That’s why I wrote a script trying all possible combinations of indexes and benchmark each one!">
+    <meta name="author" content="Marc G Gauthier">
+
+    <!--[if lt IE 9]> <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,400,700,300' rel='stylesheet' type='text/css'>
+    <link href="/assets/css/app.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/atom.xml" rel="alternate" type="application/atom+xml" title="Marcgg#Blog">
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+  </head>
+
+  <body>
+    <header>
+      <a id="logo" href="/"></a>
+      <nav>
+        <a href="/blog" class=" selected ">Blog</a>
+        <a href="/photos" class="">Photo</a>
+        <a href="/hire" class="">Hire Me</a>
+        <a href="/" class="">About</a>
+      </nav>
+    </header>
+
+    
+      <div id="container">
+        <div id="content" class="">
+          <h1>
+  <span>
+    
+      Pragmatic and Rage-Driven Approach To MySQL Indexes
+    
+    </span>
+</h1>
+
+<div class="published">
+  <span>14 October 2014</span>
+</div>
+
+<div class="post">
+  <p>I’ve been working with MySQL for a long time and I think that it’s a pretty good solution to store your data. Lately I’m more leaning toward Postgres but that’s another story.</p>
+
+<p>However every once in a while, when it comes to performances, it can get incredibly frustrating. MySQL decides to use the bad index for no visible reasons, best practices and common optimizations don’t seem to work and everything becomes slow. That’s usually when “computer-rage.jpg” happens, as illustrated by this magnificient stock photos montage I did.</p>
+
+<div style="text-align: center"><img style="width: 700px;" src="/assets/blog/computer_rage.jpg" /></div>
+
+<p>Usually I would dig into the problem and figure out what is going on, except the other I got really annoyed by the whole process. I was trying the most likely indexes to speed up a really complex query and it just wasn’t working as expected. At this point I didn’t have much time to spend investigating, so I came up with a different approach.</p>
+
+<h2 id="try-all-the-indexes">Try ALL The Indexes!</h2>
+
+<p>I thought, why not just benchmark all the possible indexes on a given table and see how it would perform on a query! Then, based on the results, I could reduce the scope of my reflexion and figure out what to do faster.</p>
+
+<p>With this idea I wrote a script that would do just that! </p>
+
+<p>After running the script, I noticed that there was indeed some indexes that would nicely improve that query.</p>
+
+<h2 id="interpreting-the-results--disclaimer">Interpreting The Results / Disclaimer</h2>
+
+<p>At this point I need to say that you <strong>SHOULD NEVER</strong> just take the script’s word for it. There are so many ways in which this script could mislead you if you have no idea of how to optimize queries for MySQL. An index speed up a given query could slow down another or slow down insertions.</p>
+
+<p>Run your <code>EXPLAIN</code>s, your load tests. Take time to think about it.</p>
+
+<p>In the end the results turned out to be a very nice base for discussion with the team and to really quickly testing assumptions. We noticed that some indexes we thought that would be used for sure weren’t, investigated that and ended up greatly improving the speed of the query.</p>
+
+<p>That’s why I’m sharing it now. Not for the quick win it could give you, but more because it can spawn interesting conversations or lead you torward a solution you didn’t think of because of the sheer complexity of some queries.</p>
+
+<h2 id="the-script">The Script</h2>
+
+<p>All this being said, I’m counting on you to use it wisely. Again, do not take the results and blindly add indexes, that’s not the point. Also, the code is not perfect and fancy because it’s a hacky little script and was never meant to be anything more.</p>
+
+<p>All I’m saying is: don’t put it on Jenkins to automatically add indexes to production and then blame me for the nonsense that will inevitably ensue.</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="nb">require</span> <span class="s1">&#39;benchmark&#39;</span>
+
+<span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span><span class="o">.</span><span class="n">logger</span> <span class="o">=</span> <span class="kp">nil</span>
+<span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Schema</span><span class="o">.</span><span class="n">verbose</span> <span class="o">=</span> <span class="kp">false</span>
+<span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Migration</span><span class="o">.</span><span class="n">verbose</span> <span class="o">=</span> <span class="kp">false</span>
+
+<span class="c1"># PARAMS</span>
+<span class="n">sql</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="n">attributes</span> <span class="o">=</span> <span class="o">[]</span>
+<span class="n">table</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="n">min_permutations</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">max_permutations</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">repeat_for_bench</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="c1"># COMPUTING POSSIBILITIES</span>
+<span class="n">possibilities</span> <span class="o">=</span> <span class="o">[]</span>
+
+<span class="p">(</span><span class="n">min_permutations</span><span class="o">.</span><span class="n">.max_permutations</span><span class="p">)</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span>
+  <span class="n">possibilities</span> <span class="o">+=</span> <span class="n">attributes</span><span class="o">.</span><span class="n">repeated_permutation</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">to_a</span>
+<span class="k">end</span>
+
+<span class="n">possibilities</span><span class="o">.</span><span class="n">select!</span> <span class="k">do</span> <span class="o">|</span><span class="n">perm</span><span class="o">|</span>
+  <span class="n">perm</span><span class="o">.</span><span class="n">map</span><span class="p">{</span><span class="o">|</span><span class="n">v</span><span class="o">|</span> <span class="n">perm</span><span class="o">.</span><span class="n">grep</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">}</span><span class="o">.</span><span class="n">inject</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:+</span><span class="p">)</span> <span class="o">==</span> <span class="n">perm</span><span class="o">.</span><span class="n">size</span>
+<span class="k">end</span>
+
+<span class="c1"># BENCHMARK</span>
+
+<span class="nb">puts</span> <span class="s2">&quot;We have </span><span class="si">#{</span><span class="n">possibilities</span><span class="o">.</span><span class="n">count</span><span class="si">}</span><span class="s2"> possibilities&quot;</span>
+<span class="n">possibilities</span><span class="o">.</span><span class="n">each_with_index</span> <span class="k">do</span> <span class="o">|</span><span class="n">perm</span><span class="p">,</span> <span class="n">i</span><span class="o">|</span>
+  <span class="n">index_name</span> <span class="o">=</span> <span class="s2">&quot;madness_test_</span><span class="se">\#</span><span class="s2">{i}&quot;</span>
+
+  <span class="k">begin</span>
+<span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Migration</span><span class="o">.</span><span class="n">add_index</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">perm</span><span class="p">,</span> <span class="nb">name</span><span class="p">:</span> <span class="n">index_name</span><span class="p">)</span>
+<span class="n">r</span> <span class="o">=</span> <span class="no">Benchmark</span><span class="o">.</span><span class="n">measure</span> <span class="p">{</span>
+  <span class="n">repeat_for_bench</span><span class="o">.</span><span class="n">times</span><span class="p">{</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span><span class="o">.</span><span class="n">connection</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">)</span> <span class="p">}</span>
+<span class="p">}</span>
+<span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Migration</span><span class="o">.</span><span class="n">remove_index</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="nb">name</span><span class="p">:</span> <span class="n">index_name</span><span class="p">)</span>
+
+<span class="nb">puts</span> <span class="o">[</span><span class="n">i</span><span class="p">,</span> <span class="n">perm</span><span class="o">.</span><span class="n">inspect</span><span class="p">,</span> <span class="n">r</span><span class="o">]</span><span class="p">()</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+  <span class="k">rescue</span> <span class="no">Exception</span> <span class="o">=</span><span class="p">\</span><span class="o">&gt;</span> <span class="n">e</span>
+<span class="nb">puts</span> <span class="o">[</span><span class="n">i</span><span class="p">,</span> <span class="n">perm</span><span class="o">.</span><span class="n">inspect</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">e</span><span class="o">.</span><span class="n">class</span><span class="si">}</span><span class="s2"> - </span><span class="si">#{</span><span class="n">e</span><span class="o">.</span><span class="n">message</span><span class="si">}</span><span class="s2">&quot;</span><span class="o">]</span><span class="p">()</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+  <span class="k">end</span>
+
+<span class="k">end</span>
+</code></pre></div>
+
+<p>The script is using Ruby and Rails as well. Of course you could easily take the basic idea and rewrite it for any language and framework if you’d like. It’s very simplistic and didn’t even take me an hour to write.</p>
+
+<p>Note that you need to specify some params to get it to run, this is mostly to keep the benchmark short enough. In my case, trying all possibilities on my main table would litteraly take days, so I had to ignore the attributes that wouldn’t make sense in the context of my query.</p>
+
+<p>It could also be improved to test any combination of indexes accross multiple tables, but I didn’t need it. Feel free to contribute by commenting or tweeting a gist at me and I’ll update the attributes.</p>
+
+
+
+  <div id="more">
+    
+    
+
+    <div id="newsletter">
+      <div id="mc_embed_signup">
+      <form action="http://marcgg.us8.list-manage.com/subscribe/post?u=68290282c7458f0699fbef320&amp;id=8d64404e17" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <label for="mce-EMAIL">
+          Enjoyed the article ? Want to keep up to date with what I do ?
+        </label>
+        <div id="news-cta">
+          <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter your Email address" required>
+          <div style="position: absolute; left: -5000px;"><input type="text" name="b_68290282c7458f0699fbef320_8d64404e17" value=""></div>
+          <input type="submit" value="Leave me your email ☺" name="subscribe" id="mc-embedded-subscribe" class="button">
+        </div>
+        <em>I won't spam, promised</em>
+      </form>
+      </div>
+    </div>
+
+    <div id="more-articles">
+      
+      <p>
+        If you liked this, feel free to <a href="/blog">browse other articles on my blog</a>.
+      </p>
+      
+    </div>
+    <a href="https://twitter.com/marcgg" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @marcgg</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+    <a href="https://twitter.com/share" class="twitter-share-button" data-via="marcgg" data-size="large">Tweet</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+  </div>
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = 'marcgg';
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+
+
+        </div>
+      </div>
+    
+
+    <footer>
+      Website designed by <a href="http://twitter.com/kevintunc">@kevintunc</a>,
+      powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>, hosted on
+      <a href="https://github.com/marcgg/marcgg.github.com">Github</a>
+      and put together by <a href="http://twitter.com/marcgg">@marcgg</a>
+      <br />
+      All of the <a href="/blog">blog's articles</a> are under
+      <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative commons</a> license
+      unless stated otherwise. Everything else is &copy;
+    </footer>
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-31071519-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </body>
+</html>
