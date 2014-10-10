@@ -39,61 +39,21 @@ That’s why I’m sharing it now. Not for the quick win it could give you, but 
 
 All this being said, I’m counting on you to use it wisely. Again, do not take the results and blindly add indexes, that’s not the point. Also, the code is not perfect and fancy because it’s a hacky little script and was never meant to be anything more.
 
-All I’m saying is: don’t put it on Jenkins to automatically add indexes to production and then blame me for the nonsense that will inevitably ensue.
+All I’m saying is: don’t put it on Jenkins to automatically add indexes to production and then blame me for the nonsense that will inevitably ensue, alright?
 
-{% highlight ruby %}
-require 'benchmark'
-
-ActiveRecord::Base.logger = nil
-ActiveRecord::Schema.verbose = false
-ActiveRecord::Migration.verbose = false
-
-# PARAMS
-sql = ""
-attributes = []
-table = ""
-min_permutations = 1
-max_permutations = 3
-repeat_for_bench = 10
-
-# COMPUTING POSSIBILITIES
-possibilities = []
-
-(min_permutations..max_permutations).each do |i|
-  possibilities += attributes.repeated_permutation(i).to_a
-end
-
-possibilities.select! do |perm|
-  perm.map{|v| perm.grep(v).size}.inject(&:+) == perm.size
-end
-
-# BENCHMARK
-
-puts "We have #{possibilities.count} possibilities"
-possibilities.each_with_index do |perm, i|
-  index_name = "madness_test_\#{i}"
-
-  begin
-ActiveRecord::Migration.add_index(table, perm, name: index_name)
-r = Benchmark.measure {
-  repeat_for_bench.times{ ActiveRecord::Base.connection.execute(sql) }
-}
-ActiveRecord::Migration.remove_index(table, name: index_name)
-
-puts [i, perm.inspect, r]().join(",")
-  rescue Exception =\> e
-puts [i, perm.inspect, "#{e.class} - #{e.message}"]().join(",")
-  end
-
-end
-{% endhighlight %}
+{% gist marcgg/bb10ba6d80bf598ccd38 %}
 
 The script is using Ruby and Rails as well. Of course you could easily take the basic idea and rewrite it for any language and framework if you’d like. It’s very simplistic and didn’t even take me an hour to write.
 
 Note that you need to specify some params to get it to run, this is mostly to keep the benchmark short enough. In my case, trying all possibilities on my main table would litteraly take days, so I had to ignore the attributes that wouldn’t make sense in the context of my query.
 
-It could also be improved to test any combination of indexes accross multiple tables, but I didn’t need it. Feel free to contribute by commenting or tweeting a gist at me and I’ll update the attributes.
+It could also be improved to test any combination of indexes accross multiple tables, but I didn’t need it.
+
+It’s a [gist][1] and the license is [MIT][2] &copy; [Marc G Gauthier][3], so feel free to use it and contribute.
 
 
 
 
+[1]:	https://gist.github.com/marcgg/bb10ba6d80bf598ccd38
+[2]:	http://opensource.org/licenses/MIT
+[3]:	http://marcgg.com

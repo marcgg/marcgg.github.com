@@ -74,59 +74,17 @@
 
 <p>All this being said, I’m counting on you to use it wisely. Again, do not take the results and blindly add indexes, that’s not the point. Also, the code is not perfect and fancy because it’s a hacky little script and was never meant to be anything more.</p>
 
-<p>All I’m saying is: don’t put it on Jenkins to automatically add indexes to production and then blame me for the nonsense that will inevitably ensue.</p>
+<p>All I’m saying is: don’t put it on Jenkins to automatically add indexes to production and then blame me for the nonsense that will inevitably ensue, alright?</p>
 
-<div class="highlight"><pre><code class="ruby"><span class="nb">require</span> <span class="s1">&#39;benchmark&#39;</span>
-
-<span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span><span class="o">.</span><span class="n">logger</span> <span class="o">=</span> <span class="kp">nil</span>
-<span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Schema</span><span class="o">.</span><span class="n">verbose</span> <span class="o">=</span> <span class="kp">false</span>
-<span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Migration</span><span class="o">.</span><span class="n">verbose</span> <span class="o">=</span> <span class="kp">false</span>
-
-<span class="c1"># PARAMS</span>
-<span class="n">sql</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-<span class="n">attributes</span> <span class="o">=</span> <span class="o">[]</span>
-<span class="n">table</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-<span class="n">min_permutations</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">max_permutations</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">repeat_for_bench</span> <span class="o">=</span> <span class="mi">10</span>
-
-<span class="c1"># COMPUTING POSSIBILITIES</span>
-<span class="n">possibilities</span> <span class="o">=</span> <span class="o">[]</span>
-
-<span class="p">(</span><span class="n">min_permutations</span><span class="o">.</span><span class="n">.max_permutations</span><span class="p">)</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span>
-  <span class="n">possibilities</span> <span class="o">+=</span> <span class="n">attributes</span><span class="o">.</span><span class="n">repeated_permutation</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">to_a</span>
-<span class="k">end</span>
-
-<span class="n">possibilities</span><span class="o">.</span><span class="n">select!</span> <span class="k">do</span> <span class="o">|</span><span class="n">perm</span><span class="o">|</span>
-  <span class="n">perm</span><span class="o">.</span><span class="n">map</span><span class="p">{</span><span class="o">|</span><span class="n">v</span><span class="o">|</span> <span class="n">perm</span><span class="o">.</span><span class="n">grep</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">}</span><span class="o">.</span><span class="n">inject</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:+</span><span class="p">)</span> <span class="o">==</span> <span class="n">perm</span><span class="o">.</span><span class="n">size</span>
-<span class="k">end</span>
-
-<span class="c1"># BENCHMARK</span>
-
-<span class="nb">puts</span> <span class="s2">&quot;We have </span><span class="si">#{</span><span class="n">possibilities</span><span class="o">.</span><span class="n">count</span><span class="si">}</span><span class="s2"> possibilities&quot;</span>
-<span class="n">possibilities</span><span class="o">.</span><span class="n">each_with_index</span> <span class="k">do</span> <span class="o">|</span><span class="n">perm</span><span class="p">,</span> <span class="n">i</span><span class="o">|</span>
-  <span class="n">index_name</span> <span class="o">=</span> <span class="s2">&quot;madness_test_</span><span class="se">\#</span><span class="s2">{i}&quot;</span>
-
-  <span class="k">begin</span>
-<span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Migration</span><span class="o">.</span><span class="n">add_index</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">perm</span><span class="p">,</span> <span class="nb">name</span><span class="p">:</span> <span class="n">index_name</span><span class="p">)</span>
-<span class="n">r</span> <span class="o">=</span> <span class="no">Benchmark</span><span class="o">.</span><span class="n">measure</span> <span class="p">{</span>
-  <span class="n">repeat_for_bench</span><span class="o">.</span><span class="n">times</span><span class="p">{</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span><span class="o">.</span><span class="n">connection</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">)</span> <span class="p">}</span>
-<span class="p">}</span>
-<span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Migration</span><span class="o">.</span><span class="n">remove_index</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="nb">name</span><span class="p">:</span> <span class="n">index_name</span><span class="p">)</span>
-
-<span class="nb">puts</span> <span class="o">[</span><span class="n">i</span><span class="p">,</span> <span class="n">perm</span><span class="o">.</span><span class="n">inspect</span><span class="p">,</span> <span class="n">r</span><span class="o">]</span><span class="p">()</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
-  <span class="k">rescue</span> <span class="no">Exception</span> <span class="o">=</span><span class="p">\</span><span class="o">&gt;</span> <span class="n">e</span>
-<span class="nb">puts</span> <span class="o">[</span><span class="n">i</span><span class="p">,</span> <span class="n">perm</span><span class="o">.</span><span class="n">inspect</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">e</span><span class="o">.</span><span class="n">class</span><span class="si">}</span><span class="s2"> - </span><span class="si">#{</span><span class="n">e</span><span class="o">.</span><span class="n">message</span><span class="si">}</span><span class="s2">&quot;</span><span class="o">]</span><span class="p">()</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
-  <span class="k">end</span>
-
-<span class="k">end</span>
-</code></pre></div>
+<script src="https://gist.github.com/marcgg/bb10ba6d80bf598ccd38.js"> </script>
 
 <p>The script is using Ruby and Rails as well. Of course you could easily take the basic idea and rewrite it for any language and framework if you’d like. It’s very simplistic and didn’t even take me an hour to write.</p>
 
 <p>Note that you need to specify some params to get it to run, this is mostly to keep the benchmark short enough. In my case, trying all possibilities on my main table would litteraly take days, so I had to ignore the attributes that wouldn’t make sense in the context of my query.</p>
 
-<p>It could also be improved to test any combination of indexes accross multiple tables, but I didn’t need it. Feel free to contribute by commenting or tweeting a gist at me and I’ll update the attributes.</p>
+<p>It could also be improved to test any combination of indexes accross multiple tables, but I didn’t need it.</p>
+
+<p>It’s a <a href="https://gist.github.com/marcgg/bb10ba6d80bf598ccd38">gist</a> and the license is <a href="http://opensource.org/licenses/MIT">MIT</a> © <a href="http://marcgg.com">Marc G Gauthier</a>, so feel free to use it and contribute.</p>
 
 
 
