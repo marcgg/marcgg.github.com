@@ -9,11 +9,11 @@ tag: Performance
 
 I’ve been working with MySQL for a long time and I think that it’s a pretty good solution to store your data. Lately I’m more leaning toward Postgres but that’s another story.
 
-However every once in a while, when it comes to performances, it can get incredibly frustrating. MySQL decides to use the bad index for no visible reasons, best practices and common optimizations don’t seem to work and everything becomes slow. That’s usually when “computer-rage.jpg” happens, as illustrated by this magnificient stock photos montage I did.
+However every once in a while, when it comes to performance, it can get incredibly frustrating. MySQL decides to use the bad index for no visible reasons, best practices and common optimizations don’t seem to work and everything becomes slow. That’s usually when “computer-rage.jpg” happens, as illustrated by this magnificient stock photos montage I did.
 
 <div style="text-align: center"><img style="width: 700px;" src="/assets/blog/computer_rage.jpg" /></div>
 
-Usually I would dig into the problem and figure out what is going on, except the other I got really annoyed by the whole process. I was trying the most likely indexes to speed up a really complex query and it just wasn’t working as expected. At this point I didn’t have much time to spend investigating, so I came up with a different approach.
+Usually I would dig into the problem and figure out what is going on, but the other day I got really annoyed by the whole process. I was trying the most likely indexes to speed up a really complex query and it just wasn’t working as expected. At this point I didn’t have much time to spend investigating, so I came up with a different approach.
 
 ## Try ALL The Indexes!
 
@@ -31,7 +31,7 @@ At this point I need to say that you **SHOULD NEVER** just take the script’s w
 
 Run your `EXPLAIN`s, your load tests. Take time to think about it.
 
-In the end the results turned out to be a very nice base for discussion with the team and to really quickly testing assumptions. We noticed that some indexes we thought that would be used for sure weren’t, investigated that and ended up greatly improving the speed of the query.
+In the end the results turned out to be a very nice base for discussion with the team and to really quickly test assumptions. We noticed that some indexes we thought that would be used for sure weren’t, investigated that and ended up greatly improving the speed of the query.
 
 That’s why I’m sharing it now. Not for the quick win it could give you, but more because it can spawn interesting conversations or lead you torward a solution you didn’t think of because of the sheer complexity of some queries.
 
