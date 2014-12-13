@@ -10,9 +10,6 @@
 			<string>2011-12-12-developer-from-ssii-to-startup.md</string>
 		</array>
 		<array>
-			<string>2014-10-13-mysql-try-all-indexes-combinations-script.md</string>
-		</array>
-		<array>
 			<string>2011-12-21-startup-outsourcing.md</string>
 		</array>
 		<array>
@@ -95,6 +92,9 @@
 		</array>
 		<array>
 			<string>2014-09-17-huboard-kanban-board-github.md</string>
+		</array>
+		<array>
+			<string>2014-10-13-mysql-try-all-indexes-combinations-script.md</string>
 		</array>
 	</array>
 	<key>userIconName</key>

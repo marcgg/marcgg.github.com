@@ -418,6 +418,14 @@ blockquote p{
 #references_logo{
   text-align: center;
   margin-bottom: 20px;
+  padding-left: 30px;
+}
+
+#references_logo img{
+  width: 130px;
+  float: left;
+  margin: 20px 20px;
+  border: 1px solid #ddd;
 }
 
 /* CLEARFIX */
