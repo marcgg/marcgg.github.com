@@ -15,8 +15,8 @@ Once it was published I received tons of very positive feedbacks from
 both developers and non tech people, some of them even asking what
 they should do to learn more about how the web works.
 
-At the same time I happened to be talking with a [friend of mine](http://emiland.me/)
-who started giving classes to young entrepreneurs via [leeaarn](http://leeaarn.com/)
+At the same time I happened to be talking with a [friend of mine][1]
+who started giving classes to young entrepreneurs via [leeaarn][2]
 and it seemed pretty cool.
 One thing lead to another and I decided it would be a good experiment to take this
 blog post even further and actually try to create a series of classes to
@@ -24,13 +24,13 @@ teach something to non developers.
 
 ## The Class
 
-After discuting with [one of leeaarn's co-founders](https://twitter.com/antoamiel)
+After discuting with [one of leeaarn's co-founders][3]
 we decided on a format of 3 classes of 2 hours each dedicated to
 people with little to no experience in creating websites.
 
 - Class #1: What is the web (internet, client/servers, networks, IP, DNS...)
 - Class #2: What is coding (Front/Back, HTML/CSS/JS, algorithms...)
-- CLass #3: How to work with developers
+- Class #3: How to work with developers
 
 I spent quite a while laying out the content of these classes.
 
@@ -87,7 +87,7 @@ with lines of text scrolling?" effect), it helped demonstrate that there is a lo
 going on when you try to access a website.
 
 It was also very fun to crash one of the student's website with a simple
-[DoS attack](http://en.wikipedia.org/wiki/Denial-of-service_attack)
+[DoS attack][4]
 to explain what this was all about and introduce a part of the class about performances!
 
 ### Two hours is short
@@ -119,7 +119,7 @@ an old relative, but it's always worth mentionning that it really is a challenge
 While preparing for the class I realized that I wasn't really able to explain some
 concepts off the top of my head. Just like public speaking it's a skill that needs practice.
 
-No wonder the [Explain Like I'm 5 subreddit](http://www.reddit.com/r/explainlikeimfive)
+No wonder the [Explain Like I'm 5 subreddit][5]
 is so popular, it truly is an intellectual and stylistic exercice!
 
 ## Overall
@@ -131,3 +131,8 @@ In the meantime, here's a picture of me looking all teachery:
 
 <img src='/assets/blog/leeaarn.jpg' alt='Presenting' style='margin:20px auto; display: block'/>
 
+[1]:	http://emiland.me/
+[2]:	http://leeaarn.com/
+[3]:	https://twitter.com/antoamiel
+[4]:	http://en.wikipedia.org/wiki/Denial-of-service_attack
+[5]:	http://www.reddit.com/r/explainlikeimfive

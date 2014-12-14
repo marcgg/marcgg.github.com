@@ -240,6 +240,13 @@ blockquote p{
   margin-bottom: 40px;
 }
 
+.image-wrapper em{
+  display: block;
+  font-size: 0.8em;
+  margin: -20px 0px 20px 0px;
+  color: #aaa;
+}
+
 /* NEWSLETTER */
 #newsletter{
   border-bottom: 1px solid #e6e6e6;

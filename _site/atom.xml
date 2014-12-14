@@ -4,13 +4,15 @@
  <title>marcgg#blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2014-12-13T21:40:34+01:00</updated>
+ <updated>2014-12-14T14:13:23+01:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
    <email>marcg.gauthier@gmail.com</email>
  </author>
 
+ 
+  
  
   
    <entry>
@@ -2259,7 +2261,7 @@ people with little to no experience in creating websites.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Class #1: What is the web (internet, client/servers, networks, IP, DNS…)&lt;/li&gt;
   &lt;li&gt;Class #2: What is coding (Front/Back, HTML/CSS/JS, algorithms…)&lt;/li&gt;
-  &lt;li&gt;CLass #3: How to work with developers&lt;/li&gt;
+  &lt;li&gt;Class #3: How to work with developers&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;I spent quite a while laying out the content of these classes.&lt;/p&gt;
