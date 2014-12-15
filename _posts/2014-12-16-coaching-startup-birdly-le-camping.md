@@ -8,21 +8,21 @@ category: blog
 tag: Startup
 ---
 
-A few months back I was contacted by three students that wanted to create their company. As a developer, it happens to me all the time, and I often refuse to help because of the lack of realism of the projects. After a phone call I decided that it would be interesting to meet them… and I have to say that I was impressed by how much potential the team was showing.
+A few months back I was contacted by three students that wanted to create their company. As a developer, this happens to me all the time and I often refuse to help because of the projects’ lack of realism. After a phone call I decided that it would be interesting to meet them… and I have to say that I was impressed by how much potential the team was showing.
 
-They were three students with an engineering degree, a good business sense and no real coding background wanting to create an app prototype in order to get accepted into [Le Camping][1], a famous Parisian accelerator program. They already had something running built during a [startup weekend][2] by someone who wasn’t in the team anymore, but it was obvious it needed to be rewritten from scratch.
+They were three students with engineering degrees, a good business sense and no real coding background wanting to create an app prototype in order to get accepted into [Le Camping][1], a famous Parisian accelerator program. They already had some code running written during a [startup weekend][2] by someone who wasn’t in the team anymore, but it was obvious it needed to be rewritten from scratch.
 
-What made the difference with other projects I was pitched before was their approach. They wanted to build their own app, and not look for a fourth person to do all the technical work. This seems very logical as a team with no technical cofounder is suboptimal, but most inexperienced people underestimate the importance of the technical side of things in a startup.
+What made the difference with other projects I was pitched before was their approach. They wanted to build their own app, not look for a fourth person to do all of the technical work. This seems very logical as a team with no technical cofounder is less than optimal, but most inexperienced people underestimate the importance of the technical side of things in a startup.
 
-I absolutely loved how they didn’t wanted me to code their app but instead give the means to do it themselves and we decided to work together.
+It goes without saying that I absolutely loved how they didn’t want me to code their app but instead give them means to do it on their own, and we decided to work together.
 
-The plan was to have something functionnal to show in order to get accepted by the accelerator. We had enough time, but a lot of development was required, especially based on the team’s lack of experience. Thankfully they were determined to make it work.
+The plan was to produce something functionnal to show in order to get accepted by the accelerator. We had enough time, but a lot of development was required, especially based on the team’s lack of experience. Thankfully they were determined to make it work.
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/birdly.jpg" style="width: 600px;"/><em>Just look at that determination :)</em></div>
 
-We decided on starting with a kickoff were we would work together to set up the right bases. I tried to guide them toward a [tech stack][3] that wouldn’t be too hard to change later on if needed nor slow down development, but that would still teach them about building a real product.
+We decided on starting with a kickoff were we would work together to set up the right bases. I tried to guide them toward a [tech stack][3] that wouldn’t be too hard to change later if needed nor slow down development, but that would still teach them a lot about building a real product.
 
-Once the fundations were in place (Website, Phonegap mobile app, REST API), we started to meet once or twice a week. They’d show me their progress and I’d help them make adjustments or get past a technical roadblock.
+Once the fundations were in place (Website, Phonegap mobile app, REST API), we started to meet once or twice a week. They’d show me their progress and I’d help make adjustments or get past a technical roadblock.
 
 After a few months of hard work, they were one of the 12 startups selected by Le Camping out of the [330 candidates][4]! Since then they have been working even harder to get their solution to simplify expense reports for employees and freelancers, [Birdly][5], out there.
 
