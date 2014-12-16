@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2014-12-15T14:18:05+01:00</updated>
+ <updated>2014-12-16T14:57:17+01:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -12,6 +12,38 @@
  </author>
 
  
+  
+   <entry>
+     <title>Coaching A Young Team Creating a Startup (And Helping Them Get Accepted at Le Camping)</title>
+     <link href="http://marcgg.com/blog/2014/12/16/coaching-startup-birdly-le-camping"/>
+     <updated>2014-12-16T00:00:00+01:00</updated>
+     <id>http://marcgg.com/blog/2014/12/16/coaching-startup-birdly-le-camping</id>
+     <content type="html">&lt;p&gt;A few months back I was contacted by three students that wanted to create their company. As a developer, this happens to me all the time and I often refuse to help because of the projects’ lack of realism. After a phone call I decided that it would be interesting to meet them… and I have to say that I was impressed by how much potential the team was showing.&lt;/p&gt;
+
+&lt;p&gt;They were three students with engineering degrees, a good business sense and no real coding background wanting to create an app prototype in order to get accepted into &lt;a href=&quot;http://accelerate.numa.paris/&quot;&gt;Le Camping&lt;/a&gt;, a famous Parisian accelerator program. They already had some code running written during a &lt;a href=&quot;http://rennes.startupweekend.org/2014/03/29/les-projets-du-startup-weekend/&quot;&gt;startup weekend&lt;/a&gt; by someone who wasn’t in the team anymore, but it was obvious it needed to be rewritten from scratch.&lt;/p&gt;
+
+&lt;p&gt;What made the difference with other projects I was pitched before was their approach. They wanted to build their own app, not look for a fourth person to do all of the technical work. This seems very logical as a team with no technical cofounder is less than optimal, but most inexperienced people underestimate the importance of the technical side of things in a startup.&lt;/p&gt;
+
+&lt;p&gt;It goes without saying that I absolutely loved how they didn’t want me to code their app but instead give them means to do it on their own, and we decided to work together.&lt;/p&gt;
+
+&lt;p&gt;The plan was to produce something functionnal to show in order to get accepted by the accelerator. We had enough time, but a lot of development was required, especially based on the team’s lack of experience. Thankfully they were determined to make it work.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/birdly.jpg&quot; style=&quot;width: 600px;&quot; /&gt;&lt;em&gt;Just look at that determination :)&lt;/em&gt;&lt;/div&gt;
+
+&lt;p&gt;We decided on starting with a kickoff were we would work together to set up the right bases. I tried to guide them toward a &lt;a href=&quot;http://en.wikipedia.org/wiki/Technology_stack&quot;&gt;tech stack&lt;/a&gt; that wouldn’t be too hard to change later if needed nor slow down development, but that would still teach them a lot about building a real product.&lt;/p&gt;
+
+&lt;p&gt;Once the fundations were in place (Website, Phonegap mobile app, REST API), we started to meet once or twice a week. They’d show me their progress and I’d help make adjustments or get past a technical roadblock.&lt;/p&gt;
+
+&lt;p&gt;After a few months of hard work, they were one of the 12 startups selected by Le Camping out of the &lt;a href=&quot;https://twitter.com/getbirdly/status/507459495912820736&quot;&gt;330 candidates&lt;/a&gt;! Since then they have been working even harder to get their solution to simplify expense reports for employees and freelancers, &lt;a href=&quot;http://www.getbirdly.com/&quot;&gt;Birdly&lt;/a&gt;, out there.&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/birdly_screen.jpg&quot; style=&quot;width: 600px;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;I really think the Birdly team made a great move by deciding to learn instead of handing the work to someone else. Not only it showed their determination to the Camping’s entry jury, but it will most likely pay even more in the future. Even if they decide that coding is not for them and decide to stop coding themselves, they will be able to make better decisions regarding the technical side of their company.&lt;/p&gt;
+
+&lt;p&gt;On my end this was a great experience. I barely wrote a line of code but still contributed to the very early stage of an interesting startup with a great team!&lt;/p&gt;
+
+</content>
+   </entry>
   
  
   

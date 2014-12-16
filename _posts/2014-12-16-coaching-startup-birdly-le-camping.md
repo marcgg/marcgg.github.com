@@ -3,7 +3,7 @@ layout: post
 title: Coaching A Young Team Creating a Startup (And Helping Them Get Accepted at Le Camping)
 titlehtml: Coaching A Young Team Creating a Startup <br /><em>(And Helping Them Get Accepted at Le Camping)</em>
 description: How I helped a team of 3 students with little to no development background get accepted into a prestigious parisian accelerator.
-blog: false
+blog: true
 category: blog
 tag: Startup
 ---
