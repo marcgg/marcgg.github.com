@@ -9,7 +9,7 @@ tag: Tests
 
 If you don’t have some kind of acceptance tests, you should probably add some. Personnally I like to use [Capybara][1] with [PhantomJS][2]/[Poltergeist][3] and this post takes this stack as example, but other testing options will most likely have similar behavior.
 
-Once you have your tests running, you would expect your backend code or your javascript to break them. However, it’s entirely possible that your CSS will make them fail randomly as well… and no one a randomly failing test suite!
+Once you have your tests running, you would expect your backend code or your javascript to break them. However, it’s entirely possible that your CSS will make them fail randomly as well… and no one likes a randomly failing test suite!
 
 ## The Problem
 
@@ -26,15 +26,15 @@ Let’s say that step 2 triggers a CSS animation. If the animation is not done b
 You could solve the problem by doing this:
 
 {% highlight ruby %}
-find(form_x_selector, visible: false)
+find(form\_x\_selector, visible: false)
 {% endhighlight %}
 
 … or wait until the element is visible …
 
 {% highlight ruby %}
-find(button_selector).click
+find(button\_selector).click
 sleep 1 # Or some kind of loop testing if the element is now visible
-find(form_x_selector)
+find(form\_x\_selector)
 {% endhighlight %}
 
 … but that’s not great as it requires you to either change or slow down your tests.
@@ -76,8 +76,8 @@ There might also be some weirder cases where the fix above won’t work. For ins
  /* Element is hidden */
  animation: reveal .5s;
 
- /*  Because of this property, the element will stay visible
-at the end of the animation */
+ /\*  Because of this property, the element will stay visible
+at the end of the animation \*/
   animation-fill-mode: forwards;
 }
 @keyframes reveal {
@@ -107,4 +107,4 @@ Interesting fact, by removing CSS animations we sped up by a couple of percents 
 [1]:	https://github.com/jnicklas/capybara
 [2]:	http://phantomjs.org/
 [3]:	https://github.com/teampoltergeist/poltergeist
-[4]:	(http://benjaminbouwyn.com/
+[4]:	http://benjaminbouwyn.com/

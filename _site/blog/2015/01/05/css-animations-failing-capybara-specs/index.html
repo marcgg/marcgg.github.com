@@ -46,7 +46,7 @@
 <div class="post">
   <p>If you don’t have some kind of acceptance tests, you should probably add some. Personnally I like to use <a href="https://github.com/jnicklas/capybara">Capybara</a> with <a href="http://phantomjs.org/">PhantomJS</a>/<a href="https://github.com/teampoltergeist/poltergeist">Poltergeist</a> and this post takes this stack as example, but other testing options will most likely have similar behavior.</p>
 
-<p>Once you have your tests running, you would expect your backend code or your javascript to break them. However, it’s entirely possible that your CSS will make them fail randomly as well… and no one a randomly failing test suite!</p>
+<p>Once you have your tests running, you would expect your backend code or your javascript to break them. However, it’s entirely possible that your CSS will make them fail randomly as well… and no one likes a randomly failing test suite!</p>
 
 <h2 id="the-problem">The Problem</h2>
 
@@ -64,14 +64,14 @@
 
 <p>You could solve the problem by doing this:</p>
 
-<div class="highlight"><pre><code class="ruby"><span class="n">find</span><span class="p">(</span><span class="n">form_x_selector</span><span class="p">,</span> <span class="ss">visible</span><span class="p">:</span> <span class="kp">false</span><span class="p">)</span>
+<div class="highlight"><pre><code class="ruby"><span class="n">find</span><span class="p">(</span><span class="n">form</span><span class="p">\</span><span class="n">_x</span><span class="p">\</span><span class="n">_selector</span><span class="p">,</span> <span class="ss">visible</span><span class="p">:</span> <span class="kp">false</span><span class="p">)</span>
 </code></pre></div>
 
 <p>… or wait until the element is visible …</p>
 
-<div class="highlight"><pre><code class="ruby"><span class="n">find</span><span class="p">(</span><span class="n">button_selector</span><span class="p">)</span><span class="o">.</span><span class="n">click</span>
+<div class="highlight"><pre><code class="ruby"><span class="n">find</span><span class="p">(</span><span class="n">button</span><span class="p">\</span><span class="n">_selector</span><span class="p">)</span><span class="o">.</span><span class="n">click</span>
 <span class="nb">sleep</span> <span class="mi">1</span> <span class="c1"># Or some kind of loop testing if the element is now visible</span>
-<span class="n">find</span><span class="p">(</span><span class="n">form_x_selector</span><span class="p">)</span>
+<span class="n">find</span><span class="p">(</span><span class="n">form</span><span class="p">\</span><span class="n">_x</span><span class="p">\</span><span class="n">_selector</span><span class="p">)</span>
 </code></pre></div>
 
 <p>… but that’s not great as it requires you to either change or slow down your tests.</p>
@@ -105,14 +105,14 @@
 
 <p>Firstly, do not disable animations if you consider them to be very important and you want to test them. Pretty obvious I think.</p>
 
-<p>There might also be some weirder cases where the fix above won’t work. For instance if the animation’s end frame is the one holding the visibility state, not running the animation will break the reveal. Here is an example courtesy of <a href="(http://benjaminbouwyn.com/">Benjamin</a> showcasing this situation:</p>
+<p>There might also be some weirder cases where the fix above won’t work. For instance if the animation’s end frame is the one holding the visibility state, not running the animation will break the reveal. Here is an example courtesy of <a href="http://benjaminbouwyn.com/">Benjamin</a> showcasing this situation:</p>
 
 <div class="highlight"><pre><code class="css"><span class="nc">.element</span> <span class="p">{</span>
  <span class="c">/* Element is hidden */</span>
  <span class="n">animation</span><span class="o">:</span> <span class="n">reveal</span> <span class="m">.5s</span><span class="p">;</span>
 
- <span class="c">/*  Because of this property, the element will stay visible</span>
-<span class="c">at the end of the animation */</span>
+ <span class="o">/</span><span class="err">\</span><span class="o">*</span><span class="err"> </span> <span class="n">Because</span> <span class="n">of</span> <span class="n">this</span> <span class="n">property</span><span class="o">,</span> <span class="n">the</span> <span class="n">element</span> <span class="n">will</span> <span class="n">stay</span> <span class="k">visible</span>
+<span class="n">at</span> <span class="n">the</span> <span class="n">end</span> <span class="n">of</span> <span class="n">the</span> <span class="n">animation</span> <span class="err">\</span><span class="o">*/</span>
   <span class="n">animation</span><span class="o">-</span><span class="n">fill</span><span class="o">-</span><span class="n">mode</span><span class="o">:</span> <span class="n">forwards</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="k">@keyframes</span> <span class="nt">reveal</span> <span class="p">{</span>
