@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>
-      How CSS Animations Can Break Your Build
+      How CSS Animations Can Break Your Tests
     </title>
     <meta name="description" content="It is very possible that random tests in your suite fail because of CSS animations. It’s true, I’ve seen it with Capybara + Poltergeist. Thankfully it’s quite easy to fix.">
     <meta name="author" content="Marc G Gauthier">
@@ -34,7 +34,7 @@
           <h1>
   <span>
     
-      How CSS Animations Can Break Your Build
+      How CSS Animations Can Break Your Tests
     
     </span>
 </h1>
@@ -44,13 +44,13 @@
 </div>
 
 <div class="post">
-  <p>If you don’t have some kind of acceptance tests, you should probably add some. Personnally I like to use <a href="(https://github.com/jnicklas/capybara">Capybara</a> with <a href="http://phantomjs.org/">PhantomJS</a>/<a href="https://github.com/teampoltergeist/poltergeist">Poltergeist</a> and this post takes this stack as example, but other testing options will most likely have similar behavior.</p>
+  <p>If you don’t have some kind of acceptance tests, you should probably add some. Personnally I like to use <a href="https://github.com/jnicklas/capybara">Capybara</a> with <a href="http://phantomjs.org/">PhantomJS</a>/<a href="https://github.com/teampoltergeist/poltergeist">Poltergeist</a> and this post takes this stack as example, but other testing options will most likely have similar behavior.</p>
 
-<p>Once you have your tests running, you would expect your backend code or your javascript to break them. However, it’s entirely possible that your CSS will make them fail randomly as well.</p>
+<p>Once you have your tests running, you would expect your backend code or your javascript to break them. However, it’s entirely possible that your CSS will make them fail randomly as well… and no one a randomly failing test suite!</p>
 
 <h2 id="the-problem">The Problem</h2>
 
-<p>Let’s see how in this small scenario:</p>
+<p>Let’s see what’s going on in a simple scenario:</p>
 
 <ol>
   <li>Go to Page A</li>
@@ -60,9 +60,9 @@
   <li>Expect that it creates an item in the database</li>
 </ol>
 
-<p>What can happen is that step 2 triggers a CSS animation. If the animation is not done by the time step 3 runs, it can fail because Form X is not visible yet. Since by default Capybara doesn’t find hidden elements, it will break. This is particularly annoying since the failure will be random, depending on the speed of the machine running the specs.</p>
+<p>Let’s say that step 2 triggers a CSS animation. If the animation is not done by the time step 3 runs, it can fail because Form X is not visible yet. Since by default Capybara doesn’t find hidden elements, it will break. This is particularly annoying since the failure will be random, depending on the speed of the machine running the specs.</p>
 
-<p>You can change this by doing this:</p>
+<p>You could solve the problem by doing this:</p>
 
 <div class="highlight"><pre><code class="ruby"><span class="n">find</span><span class="p">(</span><span class="n">form_x_selector</span><span class="p">,</span> <span class="ss">visible</span><span class="p">:</span> <span class="kp">false</span><span class="p">)</span>
 </code></pre></div>
@@ -70,7 +70,7 @@
 <p>… or wait until the element is visible …</p>
 
 <div class="highlight"><pre><code class="ruby"><span class="n">find</span><span class="p">(</span><span class="n">button_selector</span><span class="p">)</span><span class="o">.</span><span class="n">click</span>
-<span class="nb">sleep</span> <span class="mi">1</span>
+<span class="nb">sleep</span> <span class="mi">1</span> <span class="c1"># Or some kind of loop testing if the element is now visible</span>
 <span class="n">find</span><span class="p">(</span><span class="n">form_x_selector</span><span class="p">)</span>
 </code></pre></div>
 
@@ -101,16 +101,40 @@
 <span class="p">}</span>
 </code></pre></div>
 
-<p>Obviously do not disable animations if you consider them to be very important and you want to test them. In this case waiting for the animation to be done seems like the way to go.</p>
+<h3 id="edge-cases">Edge Cases</h3>
 
-<h2 id="javascript-too">JavaScript Too</h2>
+<p>Firstly, do not disable animations if you consider them to be very important and you want to test them. Pretty obvious I think.</p>
 
-<p>Note that this issue can also happen because of JavaScript animations with jQuery and you can fix this like so:</p>
+<p>There might also be some weirder cases where the fix above won’t work. For instance if the animation’s end frame is the one holding the visibility state, not running the animation will break the reveal. Here is an example courtesy of <a href="(http://benjaminbouwyn.com/">Benjamin</a> showcasing this situation:</p>
+
+<div class="highlight"><pre><code class="css"><span class="nc">.element</span> <span class="p">{</span>
+ <span class="c">/* Element is hidden */</span>
+ <span class="n">animation</span><span class="o">:</span> <span class="n">reveal</span> <span class="m">.5s</span><span class="p">;</span>
+
+ <span class="c">/*  Because of this property, the element will stay visible</span>
+<span class="c">at the end of the animation */</span>
+  <span class="n">animation</span><span class="o">-</span><span class="n">fill</span><span class="o">-</span><span class="n">mode</span><span class="o">:</span> <span class="n">forwards</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">@keyframes</span> <span class="nt">reveal</span> <span class="p">{</span>
+ <span class="nt">from</span> <span class="p">{</span>
+ <span class="c">/*  Element is hidden */</span>
+ <span class="p">}</span>
+ <span class="nt">to</span> <span class="p">{</span>
+ <span class="c">/* Element is visible */</span>
+ <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>In this case waiting for the animation to be done seems like the way to go. You could also change your logic to a simpler way of doing CSS3 animations.</p>
+
+<h3 id="javascript-too">JavaScript Too!</h3>
+
+<p>Note that this issue can also happen because of JavaScript animations with jQuery. You can fix this in the same fashion, by disabling fx in your test environment:</p>
 
 <div class="highlight"><pre><code class="javascript"><span class="nx">$</span><span class="p">.</span><span class="nx">fx</span><span class="p">.</span><span class="nx">off</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
 </code></pre></div>
 
-<h2 id="for-the-same-price-faster-tests">For The Same Price: Faster Tests</h2>
+<h3 id="for-the-same-price-faster-tests">For The Same Price: Faster Tests</h3>
 
 <p>Interesting fact, by removing CSS animations we sped up by a couple of percents our test suite.</p>
 
