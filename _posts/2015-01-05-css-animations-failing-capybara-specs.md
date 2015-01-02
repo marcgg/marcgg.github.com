@@ -74,6 +74,7 @@ There might also be some weirder cases where the fix above won’t work. For ins
 {% highlight css %}
 .element {
  /* Element is hidden */
+
  animation: reveal .5s;
 
  /\*  Because of this property, the element will stay visible
