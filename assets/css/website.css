@@ -219,6 +219,13 @@ blockquote p{
   display: list-item;
 }
 
+.post ol{
+  padding-left: 40px;
+  line-height: 25px;
+  margin-bottom: 20px;
+  list-style-type: decimal;
+}
+
 .published span{
   border-top: 1px solid #e6e6e6;
   display: inline-block;

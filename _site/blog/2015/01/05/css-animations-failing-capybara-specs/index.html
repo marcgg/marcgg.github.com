@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      How CSS Animations Can Break Your Build
+    </title>
+    <meta name="description" content="It is very possible that random tests in your suite fail because of CSS animations. It’s true, I’ve seen it with Capybara + Poltergeist. Thankfully it’s quite easy to fix.">
+    <meta name="author" content="Marc G Gauthier">
+
+    <!--[if lt IE 9]> <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,400,700,300' rel='stylesheet' type='text/css'>
+    <link href="/assets/css/app.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/atom.xml" rel="alternate" type="application/atom+xml" title="Marcgg#Blog">
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+  </head>
+
+  <body>
+    <header>
+      <a id="logo" href="/"></a>
+      <nav>
+        <a href="/blog" class=" selected ">Blog</a>
+        <a href="/photos" class="">Photo</a>
+        <a href="/hire" class="">Hire Me</a>
+        <a href="/" class="">About</a>
+      </nav>
+    </header>
+
+    
+      <div id="container">
+        <div id="content" class="">
+          <h1>
+  <span>
+    
+      How CSS Animations Can Break Your Build
+    
+    </span>
+</h1>
+
+<div class="published">
+  <span>05 January 2015</span>
+</div>
+
+<div class="post">
+  <p>If you don’t have some kind of acceptance tests, you should probably add some. Personnally I like to use <a href="(https://github.com/jnicklas/capybara">Capybara</a> with <a href="http://phantomjs.org/">PhantomJS</a>/<a href="https://github.com/teampoltergeist/poltergeist">Poltergeist</a> and this post takes this stack as example, but other testing options will most likely have similar behavior.</p>
+
+<p>Once you have your tests running, you would expect your backend code or your javascript to break them. However, it’s entirely possible that your CSS will make them fail randomly as well.</p>
+
+<h2 id="the-problem">The Problem</h2>
+
+<p>Let’s see how in this small scenario:</p>
+
+<ol>
+  <li>Go to Page A</li>
+  <li>Click button “Reveal the hidden Form X”</li>
+  <li>Input data in Form X</li>
+  <li>Submit Form X</li>
+  <li>Expect that it creates an item in the database</li>
+</ol>
+
+<p>What can happen is that step 2 triggers a CSS animation. If the animation is not done by the time step 3 runs, it can fail because Form X is not visible yet. Since by default Capybara doesn’t find hidden elements, it will break. This is particularly annoying since the failure will be random, depending on the speed of the machine running the specs.</p>
+
+<p>You can change this by doing this:</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="n">find</span><span class="p">(</span><span class="n">form_x_selector</span><span class="p">,</span> <span class="ss">visible</span><span class="p">:</span> <span class="kp">false</span><span class="p">)</span>
+</code></pre></div>
+
+<p>… or wait until the element is visible …</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="n">find</span><span class="p">(</span><span class="n">button_selector</span><span class="p">)</span><span class="o">.</span><span class="n">click</span>
+<span class="nb">sleep</span> <span class="mi">1</span>
+<span class="n">find</span><span class="p">(</span><span class="n">form_x_selector</span><span class="p">)</span>
+</code></pre></div>
+
+<p>… but that’s not great as it requires you to either change or slow down your tests.</p>
+
+<h2 id="the-solution">The Solution</h2>
+
+<p>I’d recommend disabling CSS animations entirely in your test environment. To do so, you can include this into your code:</p>
+
+<div class="highlight"><pre><code class="css"><span class="o">*</span> <span class="p">{</span>
+ <span class="n">transition</span><span class="o">-</span><span class="n">property</span><span class="o">:</span> <span class="k">none</span> <span class="cp">!important</span><span class="p">;</span>
+ <span class="o">-</span><span class="n">o</span><span class="o">-</span><span class="n">transition</span><span class="o">-</span><span class="n">property</span><span class="o">:</span> <span class="k">none</span> <span class="cp">!important</span><span class="p">;</span>
+ <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="n">transition</span><span class="o">-</span><span class="n">property</span><span class="o">:</span> <span class="k">none</span> <span class="cp">!important</span><span class="p">;</span>
+ <span class="o">-</span><span class="n">ms</span><span class="o">-</span><span class="n">transition</span><span class="o">-</span><span class="n">property</span><span class="o">:</span> <span class="k">none</span> <span class="cp">!important</span><span class="p">;</span>
+ <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">transition</span><span class="o">-</span><span class="n">property</span><span class="o">:</span> <span class="k">none</span> <span class="cp">!important</span><span class="p">;</span>
+
+ <span class="n">transform</span><span class="o">:</span> <span class="k">none</span> <span class="cp">!important</span><span class="p">;</span>
+ <span class="o">-</span><span class="n">o</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span> <span class="k">none</span> <span class="cp">!important</span><span class="p">;</span>
+ <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span> <span class="k">none</span> <span class="cp">!important</span><span class="p">;</span>
+ <span class="o">-</span><span class="n">ms</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span> <span class="k">none</span> <span class="cp">!important</span><span class="p">;</span>
+ <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span> <span class="k">none</span> <span class="cp">!important</span><span class="p">;</span>
+
+ <span class="n">animation</span><span class="o">:</span> <span class="k">none</span> <span class="cp">!important</span><span class="p">;</span>
+ <span class="o">-</span><span class="n">o</span><span class="o">-</span><span class="n">animation</span><span class="o">:</span> <span class="k">none</span> <span class="cp">!important</span><span class="p">;</span>
+ <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="n">animation</span><span class="o">:</span> <span class="k">none</span> <span class="cp">!important</span><span class="p">;</span>
+ <span class="o">-</span><span class="n">ms</span><span class="o">-</span><span class="n">animation</span><span class="o">:</span> <span class="k">none</span> <span class="cp">!important</span><span class="p">;</span>
+ <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">animation</span><span class="o">:</span> <span class="k">none</span> <span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Obviously do not disable animations if you consider them to be very important and you want to test them. In this case waiting for the animation to be done seems like the way to go.</p>
+
+<h2 id="javascript-too">JavaScript Too</h2>
+
+<p>Note that this issue can also happen because of JavaScript animations with jQuery and you can fix this like so:</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="nx">$</span><span class="p">.</span><span class="nx">fx</span><span class="p">.</span><span class="nx">off</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</code></pre></div>
+
+<h2 id="for-the-same-price-faster-tests">For The Same Price: Faster Tests</h2>
+
+<p>Interesting fact, by removing CSS animations we sped up by a couple of percents our test suite.</p>
+
+
+
+  <div id="more">
+    
+    
+
+    <div id="newsletter">
+      <div id="mc_embed_signup">
+      <form action="http://marcgg.us8.list-manage.com/subscribe/post?u=68290282c7458f0699fbef320&amp;id=8d64404e17" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <label for="mce-EMAIL">
+          Enjoyed the article ? Want to keep up to date with what I do ?
+        </label>
+        <div id="news-cta">
+          <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter your Email address" required>
+          <div style="position: absolute; left: -5000px;"><input type="text" name="b_68290282c7458f0699fbef320_8d64404e17" value=""></div>
+          <input type="submit" value="Leave me your email ☺" name="subscribe" id="mc-embedded-subscribe" class="button">
+        </div>
+        <em>I won't spam, promised</em>
+      </form>
+      </div>
+    </div>
+
+    <div id="more-articles">
+      
+      <p>
+        If you liked this, feel free to <a href="/blog">browse other articles on my blog</a>.
+      </p>
+      
+    </div>
+    <a href="https://twitter.com/marcgg" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @marcgg</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+    <a href="https://twitter.com/share" class="twitter-share-button" data-via="marcgg" data-size="large">Tweet</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+  </div>
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = 'marcgg';
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+
+
+        </div>
+      </div>
+    
+
+    <footer>
+      Website designed by <a href="http://twitter.com/kevintunc">@kevintunc</a>,
+      powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>, hosted on
+      <a href="https://github.com/marcgg/marcgg.github.com">Github</a>
+      and put together by <a href="http://twitter.com/marcgg">@marcgg</a>
+      <br />
+      All of the <a href="/blog">blog's articles</a> are under
+      <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative commons</a> license
+      unless stated otherwise. Everything else is &copy;
+    </footer>
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-31071519-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </body>
+</html>
