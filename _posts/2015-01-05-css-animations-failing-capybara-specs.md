@@ -77,8 +77,8 @@ There might also be some weirder cases where the fix above won’t work. For ins
 
  animation: reveal .5s;
 
- /\*  Because of this property, the element will stay visible
-at the end of the animation \*/
+ /*  Because of this property, the element will stay visible
+at the end of the animation */
   animation-fill-mode: forwards;
 }
 @keyframes reveal {
