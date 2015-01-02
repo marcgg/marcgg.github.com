@@ -26,15 +26,15 @@ Let’s say that step 2 triggers a CSS animation. If the animation is not done b
 You could solve the problem by doing this:
 
 {% highlight ruby %}
-find(form\_x\_selector, visible: false)
+find(formxSelector, visible: false)
 {% endhighlight %}
 
 … or wait until the element is visible …
 
 {% highlight ruby %}
-find(button\_selector).click
+find(buttonSelector).click
 sleep 1 # Or some kind of loop testing if the element is now visible
-find(form\_x\_selector)
+find(formxSelector)
 {% endhighlight %}
 
 … but that’s not great as it requires you to either change or slow down your tests.

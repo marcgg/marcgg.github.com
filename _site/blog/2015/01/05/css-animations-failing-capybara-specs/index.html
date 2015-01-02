@@ -64,14 +64,14 @@
 
 <p>You could solve the problem by doing this:</p>
 
-<div class="highlight"><pre><code class="ruby"><span class="n">find</span><span class="p">(</span><span class="n">form</span><span class="p">\</span><span class="n">_x</span><span class="p">\</span><span class="n">_selector</span><span class="p">,</span> <span class="ss">visible</span><span class="p">:</span> <span class="kp">false</span><span class="p">)</span>
+<div class="highlight"><pre><code class="ruby"><span class="n">find</span><span class="p">(</span><span class="n">formxSelector</span><span class="p">,</span> <span class="ss">visible</span><span class="p">:</span> <span class="kp">false</span><span class="p">)</span>
 </code></pre></div>
 
 <p>… or wait until the element is visible …</p>
 
-<div class="highlight"><pre><code class="ruby"><span class="n">find</span><span class="p">(</span><span class="n">button</span><span class="p">\</span><span class="n">_selector</span><span class="p">)</span><span class="o">.</span><span class="n">click</span>
+<div class="highlight"><pre><code class="ruby"><span class="n">find</span><span class="p">(</span><span class="n">buttonSelector</span><span class="p">)</span><span class="o">.</span><span class="n">click</span>
 <span class="nb">sleep</span> <span class="mi">1</span> <span class="c1"># Or some kind of loop testing if the element is now visible</span>
-<span class="n">find</span><span class="p">(</span><span class="n">form</span><span class="p">\</span><span class="n">_x</span><span class="p">\</span><span class="n">_selector</span><span class="p">)</span>
+<span class="n">find</span><span class="p">(</span><span class="n">formxSelector</span><span class="p">)</span>
 </code></pre></div>
 
 <p>… but that’s not great as it requires you to either change or slow down your tests.</p>
