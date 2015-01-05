@@ -5,7 +5,7 @@
     <title>
       How CSS Animations Can Break Your Tests
     </title>
-    <meta name="description" content="It is very possible that random tests in your suite fail because of CSS animations. It’s true, I’ve seen it with Capybara + Poltergeist. Thankfully it’s quite easy to fix.">
+    <meta name="description" content="It is possible that random tests in your suite are failing because of CSS or JavaScript animations. I’ve seen it with Capybara + Poltergeist. Thankfully it’s quite easy to fix.">
     <meta name="author" content="Marc G Gauthier">
 
     <!--[if lt IE 9]> <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -112,9 +112,8 @@
 
  <span class="n">animation</span><span class="o">:</span> <span class="n">reveal</span> <span class="m">.5s</span><span class="p">;</span>
 
- <span class="c">/*  Because of this property, the element will stay visible</span>
-<span class="c">at the end of the animation */</span>
-  <span class="n">animation</span><span class="o">-</span><span class="n">fill</span><span class="o">-</span><span class="n">mode</span><span class="o">:</span> <span class="n">forwards</span><span class="p">;</span>
+ <span class="c">/* Because of this, the element will stay visible at the end of the anim */</span>
+ <span class="n">animation</span><span class="o">-</span><span class="n">fill</span><span class="o">-</span><span class="n">mode</span><span class="o">:</span> <span class="n">forwards</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="k">@keyframes</span> <span class="nt">reveal</span> <span class="p">{</span>
  <span class="nt">from</span> <span class="p">{</span>

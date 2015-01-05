@@ -1,8 +1,8 @@
 ---
 layout: post
 title: How CSS Animations Can Break Your Tests
-description: It is very possible that random tests in your suite fail because of CSS animations. It’s true, I’ve seen it with Capybara + Poltergeist. Thankfully it’s quite easy to fix. 
-blog: false
+description: It is possible that random tests in your suite are failing because of CSS or JavaScript animations. I’ve seen it with Capybara + Poltergeist. Thankfully it’s quite easy to fix. 
+blog: true
 category: blog
 tag: Tests
 ---
@@ -77,9 +77,8 @@ There might also be some weirder cases where the fix above won’t work. For ins
 
  animation: reveal .5s;
 
- /*  Because of this property, the element will stay visible
-at the end of the animation */
-  animation-fill-mode: forwards;
+ /* Because of this, the element will stay visible at the end of the anim */
+ animation-fill-mode: forwards;
 }
 @keyframes reveal {
  from {
