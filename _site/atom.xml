@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2015-01-05T08:42:42+01:00</updated>
+ <updated>2015-01-05T09:37:57+01:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -34,7 +34,7 @@
   &lt;li&gt;Expect that it creates an item in the database&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Let’s say that step 2 triggers a CSS animation. If the animation is not done by the time step 3 runs, it can fail because Form X is not visible yet. Since by default Capybara doesn’t find hidden elements, it will break. This is particularly annoying since the failure will be random, depending on the speed of the machine running the specs.&lt;/p&gt;
+&lt;p&gt;Let’s say that step 2 triggers a CSS animation. If the animation is not done by the time step 3 runs, it can fail because Form X is not visible yet (by default Capybara doesn’t find hidden elements). This is particularly annoying since the failure will be random, depending on the speed of the machine running the specs.&lt;/p&gt;
 
 &lt;p&gt;You could solve the problem by doing this:&lt;/p&gt;
 

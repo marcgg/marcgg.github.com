@@ -21,7 +21,7 @@ Let’s see what’s going on in a simple scenario:
 4. Submit Form X
 5. Expect that it creates an item in the database
 
-Let’s say that step 2 triggers a CSS animation. If the animation is not done by the time step 3 runs, it can fail because Form X is not visible yet. Since by default Capybara doesn’t find hidden elements, it will break. This is particularly annoying since the failure will be random, depending on the speed of the machine running the specs.
+Let’s say that step 2 triggers a CSS animation. If the animation is not done by the time step 3 runs, it can fail because Form X is not visible yet (by default Capybara doesn’t find hidden elements). This is particularly annoying since the failure will be random, depending on the speed of the machine running the specs.
 
 You could solve the problem by doing this:
 
