@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Pragmatic and Rage-Driven Approach To MySQL Indexes
+title: A Script To Benchmark MySQL Indexes
 description: Sometimes finding the right index for a really complex SQL query can be hard and time consuming. That’s why I wrote a script trying all possible combinations of indexes and benchmark each one!
 blog: true
 category: blog

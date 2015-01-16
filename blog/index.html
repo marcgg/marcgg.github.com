@@ -8,18 +8,21 @@ category: blog
   {% for post in site.posts %}
     {% if post.blog == true %}
       <div class="single-post clearfix">
-        <div class="date">{{ post.date | date: "%B %e, %Y" }}</div>
         <div class="excerpt">
-          <h5>
-            {% if post.lang == "fr" %}
-            [fr]
-            {% endif %}
-            <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
-          </h5>
+          <div class="title">
+            <a href="{{ BASE_PATH }}{{ post.url }}">
+              {% if post.titlehtml %}
+                {{ post.titlehtml }}
+              {% else %}
+                {{ post.title }}
+              {% endif %}
+            </a>
+          </div>
 
           <p class="description">
             {{ post.description }}
           </p>
+          <div class="date">Written on {{ post.date | date: "%B %Y" }}</div>
         </div>
       </div>
     {% endif %}

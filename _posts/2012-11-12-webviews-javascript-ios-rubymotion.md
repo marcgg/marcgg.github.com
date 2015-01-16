@@ -3,7 +3,7 @@ layout: post
 title: "Web Views &amp; RubyMotion"
 description: "In this article I'll explain
 how to use UIWebViews using RubyMotion. This includes loading URLs, local files and communicating with
-them via Javascript"
+them via Javascript."
 blog: true
 category: blog
 tag: iphone

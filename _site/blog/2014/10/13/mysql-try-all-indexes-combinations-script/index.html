@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>
-      Pragmatic and Rage-Driven Approach To MySQL Indexes
+      A Script To Benchmark MySQL Indexes
     </title>
     <meta name="description" content="Sometimes finding the right index for a really complex SQL query can be hard and time consuming. That’s why I wrote a script trying all possible combinations of indexes and benchmark each one!">
     <meta name="author" content="Marc G Gauthier">
@@ -14,37 +14,43 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,400,700,300' rel='stylesheet' type='text/css'>
     <link href="/assets/css/app.css?body=1" rel="stylesheet" type="text/css" media="all">
     <link href="/atom.xml" rel="alternate" type="application/atom+xml" title="Marcgg#Blog">
-    <link rel="shortcut icon" href="/assets/favicon.ico">
+    <link rel="shortcut icon" href="/assets/favicon.png">
   </head>
 
   <body>
     <header>
-      <a id="logo" href="/"></a>
-      <nav>
-        <a href="/blog" class=" selected ">Blog</a>
-        <a href="/photos" class="">Photo</a>
-        <a href="/hire" class="">Hire Me</a>
-        <a href="/" class="">About</a>
-      </nav>
+
+      <div id="logo">
+        <div id="more-nav">
+          &rarr; <a href="/blog" class="selected">blog</a>
+          &rarr; <a href="/photos" class="">photos</a>
+          &rarr; <a href="/hire" class="">hire me</a>
+        </div>
+        <a id='logo1' href="/">marcgg</a>
+        <span id='logo2'>#</span>
+        <a id='logo3' href="/blog">
+          blog
+        </a>
+      </div>
     </header>
 
     
-      <div id="container">
-        <div id="content" class="">
-          <h1>
+      <h1>
   <span>
-    
-      Pragmatic and Rage-Driven Approach To MySQL Indexes
-    
-    </span>
+  
+    A Script To Benchmark MySQL Indexes
+  
+  </span>
 </h1>
 
 <div class="published">
   <span>13 October 2014</span>
 </div>
 
-<div class="post">
-  <p>I’ve been working with MySQL for a while now and I think that it’s a pretty good solution to store your data. Lately I’m more leaning toward Postgres but that’s another story.</p>
+<div id="container">
+  <div id="content">
+    <div class="post">
+      <p>I’ve been working with MySQL for a while now and I think that it’s a pretty good solution to store your data. Lately I’m more leaning toward Postgres but that’s another story.</p>
 
 <p>However every once in a while, when it comes to performance, it can get incredibly frustrating. MySQL decides to use the bad index for no visible reasons, best practices and common optimizations don’t seem to work and everything becomes slow. That’s usually when “computer-rage.jpg” appears, as illustrated by this magnificient stock photos montage I did.</p>
 
@@ -88,69 +94,65 @@
 
 
 
-  <div id="more">
-    
-    
+      <div id="more">
+        
+        
 
-    <div id="newsletter">
-      <div id="mc_embed_signup">
-      <form action="http://marcgg.us8.list-manage.com/subscribe/post?u=68290282c7458f0699fbef320&amp;id=8d64404e17" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        <label for="mce-EMAIL">
-          Enjoyed the article ? Want to keep up to date with what I do ?
-        </label>
-        <div id="news-cta">
-          <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter your Email address" required>
-          <div style="position: absolute; left: -5000px;"><input type="text" name="b_68290282c7458f0699fbef320_8d64404e17" value=""></div>
-          <input type="submit" value="Leave me your email ☺" name="subscribe" id="mc-embedded-subscribe" class="button">
+        <div id="more-articles">
+          
+          <p>
+            If you liked this, feel free to <a href="/blog">browse other articles on my blog</a>.
+          </p>
+          
         </div>
-        <em>I won't spam, promised</em>
-      </form>
+        <a href="https://twitter.com/marcgg" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @marcgg</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+        <a href="https://twitter.com/share" class="twitter-share-button" data-via="marcgg" data-size="large">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
       </div>
-    </div>
 
-    <div id="more-articles">
-      
+      <style id="disqus_hide">
+        #disqus_thread{
+          display: none;
+        }
+      </style>
       <p>
-        If you liked this, feel free to <a href="/blog">browse other articles on my blog</a>.
+        <a href="#" id="show-disqus">Show Comments</a>
       </p>
-      
-    </div>
-    <a href="https://twitter.com/marcgg" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @marcgg</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      <div id="disqus_thread"></div>
+      <script>
+        document.getElementById('show-disqus').onclick=function(e){
+          e.preventDefault();
+          document.getElementById("disqus_hide").innerHTML = "";
+          document.getElementById("show-disqus").innerHTML = "";
+        }
+      </script>
+      <script type="text/javascript">
+          var disqus_shortname = 'marcgg';
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+      </script>
 
-    <a href="https://twitter.com/share" class="twitter-share-button" data-via="marcgg" data-size="large">Tweet</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </div>
 
   </div>
-
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-      var disqus_shortname = 'marcgg';
-      (function() {
-          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
 </div>
 
-
-        </div>
-      </div>
     
 
     <footer>
-      Website designed by <a href="http://twitter.com/kevintunc">@kevintunc</a>,
-      powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>, hosted on
+      Website powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>, hosted on
       <a href="https://github.com/marcgg/marcgg.github.com">Github</a>
       and put together by <a href="http://twitter.com/marcgg">@marcgg</a>
       <br />
       All of the <a href="/blog">blog's articles</a> are under
       <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative commons</a> license
-      unless stated otherwise. Everything else is &copy;
+      unless stated otherwise. Everything else is &copy;.
     </footer>
 
     <script type="text/javascript">

@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2015-01-05T09:37:57+01:00</updated>
+ <updated>2015-01-16T23:11:03+01:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -152,7 +152,7 @@
  
   
    <entry>
-     <title>Pragmatic and Rage-Driven Approach To MySQL Indexes</title>
+     <title>A Script To Benchmark MySQL Indexes</title>
      <link href="http://marcgg.com/blog/2014/10/13/mysql-try-all-indexes-combinations-script"/>
      <updated>2014-10-13T00:00:00+02:00</updated>
      <id>http://marcgg.com/blog/2014/10/13/mysql-try-all-indexes-combinations-script</id>
