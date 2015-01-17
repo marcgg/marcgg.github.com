@@ -422,7 +422,6 @@ blockquote p{
 /* HIRE */
 
 #hire{
-  margin-top: 60px;
 }
 
 #hire ul{
@@ -441,6 +440,13 @@ blockquote p{
   float: left;
   padding: 5px;
   margin: 20px;
+}
+.reviewer{
+  text-align: center;
+}
+.review img{
+  width: 80px;
+  border-radius: 80px;
 }
 
 #reviews{
