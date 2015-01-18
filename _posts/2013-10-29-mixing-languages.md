@@ -20,6 +20,7 @@ I think that using it well enough can produce
 or just cool sounding conversations.
 
 <img src='/assets/blog/french.png' alt='Actual Google results' style='margin:20px auto; display: block'/>
+
 <div class="image_notes">Actual Google Search results page</div>
 
 A few years back I went to live in the US. At that point I knew some

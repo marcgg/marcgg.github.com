@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2015-01-18T18:29:14+01:00</updated>
+ <updated>2015-01-18T18:42:01+01:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -1520,8 +1520,9 @@ I think that using it well enough can produce
 &lt;a href=&quot;http://www.youtube.com/watch?v=rslShTbqNbo&quot;&gt;songs&lt;/a&gt;
 or just cool sounding conversations.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/blog/french.png&quot; alt=&quot;Actual Google results&quot; style=&quot;margin:20px auto; display: block&quot; /&gt;
-&amp;lt;div class=&quot;image_notes&quot;&amp;gt;Actual Google Search results page&amp;lt;/div&amp;gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/blog/french.png&quot; alt=&quot;Actual Google results&quot; style=&quot;margin:20px auto; display: block&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;image_notes&quot;&gt;Actual Google Search results page&lt;/div&gt;
 
 &lt;p&gt;A few years back I went to live in the US. At that point I knew some
 English from school, but never actually used it in real life. Also, my accent was
