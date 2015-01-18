@@ -65,13 +65,8 @@ header{
   padding: 0px 2px;
 }
 #more-nav .selected{
-  color: #fff;
-  background-color: #545454;
-}
-
-#more-nav .selected:hover{
-  background-color: #ed5252;
-  color: #fff;
+  color: #ed5252;
+  font-weight: bold;
 }
 
 #logo{
@@ -151,9 +146,19 @@ h1 em{
 }
 
 h2{
-  font-size: 1.65em;
-  margin: 15px 0px 25px 0px;
+  font-size: 1.75em;
+  margin: 50px 0px 50px 0px;
 }
+h2::before{
+  content: "#";
+  color: #ed5252;
+  font-family: "anonymousregular";
+  display: inline-block;
+  float: left;
+  padding: 3px 10px 0px 0px;
+  font-size: 0.7em;
+}
+
 h3{
   font-size: 1.35em;
   margin-bottom: 20px;
@@ -214,9 +219,27 @@ blockquote p{
   font-size: 1.6em;
   margin-bottom: 20px;
   line-height: 1.6em;
+  position: relative;
 }
 .single-post .title a{
   color: #545454;
+  text-decoration: none;
+}
+
+.single-post .title a::before{
+  content: "→";
+  opacity: 0;
+  font-family: "anonymousregular";
+  font-size: 0.7em;
+  position: absolute;
+  left: -30px;
+  transition: all .4s ease-in-out;
+}
+
+.single-post .title a:hover::before{
+  opacity: 1;
+  transition: all .4s ease-in-out;
+  color: #ed5252;
 }
 
 .single-post .title em{

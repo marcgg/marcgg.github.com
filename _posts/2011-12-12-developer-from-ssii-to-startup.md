@@ -1,7 +1,9 @@
 ---
 layout: post
 title: "Developers, Go From SSII To Startup"
-description: "How can one move away from a outdated consulting firm and join a cool startup?"
+description: "How can one move away from a outdated consulting firm
+and join an interesting startup? It won't be easy, but it can be a great
+career move."
 blog: true
 category: blog
 tag: Startup

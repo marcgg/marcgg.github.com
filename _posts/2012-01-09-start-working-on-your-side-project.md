@@ -2,7 +2,9 @@
 layout: post
 title: "Start Working on Your Side Project Tonight"
 description: "Having a side project have a lot of advantages and helps
-you to grow as a developer. Here's why."
+you to grow as a developer. It could help you learn new technologies,
+experiment with an idea... if you can afford the time, you should start
+working on yours tonight."
 blog: true
 category: blog
 tag: Projects
