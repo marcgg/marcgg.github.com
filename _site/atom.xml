@@ -4,13 +4,72 @@
  <title>marcgg#blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2015-01-18T18:42:01+01:00</updated>
+ <updated>2015-01-21T23:14:30+01:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
    <email>marcg.gauthier@gmail.com</email>
  </author>
 
+ 
+  
+   <entry>
+     <title>New Website Design!</title>
+     <link href="http://marcgg.com/blog/2015/01/22/new-design"/>
+     <updated>2015-01-22T00:00:00+01:00</updated>
+     <id>http://marcgg.com/blog/2015/01/22/new-design</id>
+     <content type="html">&lt;p&gt;I’m not a good designer, not at all. However I still tried to create a new version of my website based on the old one - mainly because I grew really tired of the previous design.&lt;/p&gt;
+
+&lt;p&gt;Here I tried to put the focus even more on the content without going full &lt;a href=&quot;https://stallman.org/&quot;&gt;Richard Stallman&lt;/a&gt;. You’ll notice that there are less colors, but I added whitespace so that reading is a bit easier. I also gave up on having a logo since I just couldn’t figure out how to do that properly, so instead I added a title changing based on the category. Add to that some cleaning up of useless information, and voila!&lt;/p&gt;
+
+&lt;p&gt;I’ll leave this before/after galery mainly for me to look at it later on, but if you have feedback on the changes, please &lt;a href=&quot;http://twitter.com/marcgg&quot;&gt;let me know&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;The old version is on the left, the new on on the right. Click any image to enlarge.&lt;/p&gt;
+
+&lt;h2 id=&quot;homepage&quot;&gt;Homepage&lt;/h2&gt;
+
+&lt;div style=&quot;text-align: center;&quot;&gt;
+&lt;a href=&quot;/assets/blog/old_home.png&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;/assets/blog/old_home.png&quot; style=&quot;width: 360px;border: 0px; padding: 0px; margin: 0px;&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;/assets/blog/new_home.png&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;/assets/blog/new_home.png&quot; style=&quot;width: 360px;border: 0px; padding: 0px;margin: 0px 0px 0px 20px;&quot; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;blog-index&quot;&gt;Blog Index&lt;/h2&gt;
+
+&lt;div style=&quot;text-align: center;&quot;&gt;
+&lt;a href=&quot;/assets/blog/old_blog_index.png&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;/assets/blog/old_blog_index.png&quot; style=&quot;width: 360px;border: 0px; padding: 0px; margin: 0px;&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;/assets/blog/new_blog_index.png&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;/assets/blog/new_blog_index.png&quot; style=&quot;width: 360px;border: 0px; padding: 0px;margin: 0px 0px 0px 20px;&quot; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;blog-post&quot;&gt;Blog Post&lt;/h2&gt;
+
+&lt;div style=&quot;text-align: center;&quot;&gt;
+&lt;a href=&quot;/assets/blog/old_blog_post.png&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;/assets/blog/old_blog_post.png&quot; style=&quot;width: 360px;border: 0px; padding: 0px; margin: 0px;&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;/assets/blog/new_blog_post.png&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;/assets/blog/new_blog_post.png&quot; style=&quot;width: 360px;border: 0px; padding: 0px;margin: 0px 0px 0px 20px;&quot; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;photos&quot;&gt;Photos&lt;/h2&gt;
+
+&lt;p&gt;On this one I removed the navigation on every page by an index page with a preview of each gallery that you can see &lt;a href=&quot;/assets/blog/new_photo_index.png&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center;&quot;&gt;
+&lt;a href=&quot;/assets/blog/old_photo.png&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;/assets/blog/old_photo.png&quot; style=&quot;width: 360px;border: 0px; padding: 0px; margin: 0px;&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;/assets/blog/new_photo.png&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;/assets/blog/new_photo.png&quot; style=&quot;width: 360px;border: 0px; padding: 0px;margin: 0px 0px 0px 20px;&quot; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;hire-me-page&quot;&gt;Hire Me Page&lt;/h2&gt;
+
+&lt;div style=&quot;text-align: center;&quot;&gt;
+&lt;a href=&quot;/assets/blog/old_hire.png&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;/assets/blog/old_hire.png&quot; style=&quot;width: 360px;border: 0px; padding: 0px; margin: 0px;&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;/assets/blog/new_hire.png&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;/assets/blog/new_hire.png&quot; style=&quot;width: 360px;border: 0px; padding: 0px;margin: 0px 0px 0px 20px;&quot; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;mobile&quot;&gt;Mobile&lt;/h2&gt;
+
+&lt;p&gt;The website looks decent on mobile, but I didn’t do a full responsive design. Maybe later!&lt;/p&gt;
+
+</content>
+   </entry>
+  
  
   
    <entry>

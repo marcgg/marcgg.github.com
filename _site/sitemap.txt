@@ -18,6 +18,7 @@ http://marcgg.com/photos/tigerlily.html
 http://marcgg.com/photos/traveling.html
 http://marcgg.com/sitemap.txt
 
+http://marcgg.com/blog/2015/01/22/new-design
 http://marcgg.com/blog/2015/01/05/css-animations-failing-capybara-specs
 http://marcgg.com/blog/2014/12/16/coaching-startup-birdly-le-camping
 http://marcgg.com/blog/2014/10/13/mysql-try-all-indexes-combinations-script
