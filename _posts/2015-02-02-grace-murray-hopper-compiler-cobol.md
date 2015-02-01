@@ -9,7 +9,7 @@ tag: History
 
 Rear Admiral Grace M. Hopper, USN, Ph.D., born December 9 1906, is a really interesting person.
 
-I ran into information about her a while back while researching the origin of the expression “debugging”. Turns out that she denied coining the term, but it got me reading and I have to say… why don’t we know more about her? She did so much for computer science! Also, I’m pretty sure no coder beside her have [a guided missile destroyer][1] named after them.
+I ran into information about her a while back while researching the origin of the expression “debugging”. Turns out that she denied coining the term, but it got me reading and I have to say… why don’t we know more about her? She did so much for computer science! Also, I’m pretty sure no coder besides her have [a guided missile destroyer][1] named after them.
 
 I know there was a [Google doodle][2] made in her honor but, at the end of the day, a lot of developers don’t even know her name… or they think that she “only” created COBOL, which is not entirely true.
 
@@ -53,7 +53,7 @@ They also created FLOW-MATIC, also known as B-0 (Business Language version 0). I
 > 
 > Grace Murray Hopper [in a 1980 interview][12]
 
-In 1953, Hoper proposed that problems could be expressed with english keywords. Her company’s management at the time decided that the idea would be unfeasible and discarded the idea. Despite this, in early 1955, Hopper and her team wrote a specification for such a programming language and implemented a prototype.
+In 1953, Hoper proposed that problems could be expressed with English keywords. Her company’s management at the time decided that the idea would be unfeasible and discarded it. Despite this, in early 1955, Hopper and her team wrote a specification for such a programming language and implemented a prototype.
 
 > “It's always easier to apologize than to ask permission.”
 > 
@@ -73,7 +73,7 @@ _That’s right, I have a FLOW-MATIC Gist now._
 
 In 1959, Grace Hopper and a group of colleagues started to push for a common language for business applications. This was aimed to reach a greater compatibility among vendor systems. With this goal, they organized the Conference on Data Systems Languages or CODASYL.
 
-Following its objective, the organisation designed COBOL (COmmon Business-Oriented Language) to be a compiled English-like computer programming language aimed to be used by businesses. It reached a great level of adoption and is [still in use today][15].
+Following its objective, the organisation designed COBOL (COmmon Business-Oriented Language) to be a compiled English-like computer programming language aimed to be used by businesses. It reached a great level of adoption and is [still in use today][15], mostly in banking.
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/cobol.png" style="height: 300px;"/></div>
 
@@ -119,7 +119,7 @@ Rear Admiral Grace M. Hopper, USN, Ph.D. passed away in 1992 at age 85.
 
 #### Quick References
 
-Again, I’m not a biographer, but here is a list of what I read through to write this post. I’m not mentioning the countless wikipedia pages and random websites.
+Here is a list of what I read through to write this post. I’m not mentioning the countless wikipedia pages and random websites.
 
 - [http://www.cbi.umn.edu/hostedpublications/pdf/McGee\_Book-4.2.2.pdf][20]
 - [http://www-gap.dcs.st-and.ac.uk/\~history/Biographies/Hopper.html][21]
@@ -132,6 +132,8 @@ Again, I’m not a biographer, but here is a list of what I read through to writ
 - [http://archive.computerhistory.org/resources/text/Knuth\_Don\_X4100/PDF\_index/k-8-pdf/k-8-u2776-Honeywell-mag-History-Cobol.pdf][28]
 - [http://www.dvq.com/oldcomp/oldads.htm][29]
 - [http://discover.lib.umn.edu/cgi/f/findaid/findaid-idx?c=umfa;cc=umfa;rgn=main;view=text;didno=cbi00011][30]
+
+If you found that I made a mistake or that something is not clear, please let me know in the comments with a reference to a correction and I’ll fix the article as soon as possible.
 
 [1]:	http://en.wikipedia.org/wiki/USS_Hopper_%28DDG-70%29
 [2]:	/assets/blog/doodle_grace.jpg
