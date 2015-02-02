@@ -2,7 +2,7 @@
 layout: post
 title: Grace Murray Hopper, Creator Of The First Compiler
 description: Here is a summary of what I learned about Grace Murray Hopper, the not-famous-enought creator of the first compiler, precursor of COBOL and much more.
-blog: false
+blog: true
 category: blog
 tag: History
 ---
