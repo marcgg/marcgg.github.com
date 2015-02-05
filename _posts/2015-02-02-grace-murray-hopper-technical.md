@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Technical Accomplishments of Grace Murray Hopper
-titlehtml: The Technical Accomplishments of Grace Murray Hopper <br /><em>(The First Compiler, COBOL, Influence on Standards, MATHS-MATIC, FLOW-MATIC…)</em>
+titlehtml: The Technical Accomplishments of Grace Murray Hopper <br /><em>(The First Compiler, COBOL, Influence on Standards, MATH-MATIC, FLOW-MATIC…)</em>
 description: Here is a summary of what I learned about Grace Murray Hopper, the not-famous-enought creator of the first compiler, precursor of COBOL and much more.
 blog: true
 category: blog
