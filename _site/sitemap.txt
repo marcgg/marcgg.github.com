@@ -18,7 +18,7 @@ http://marcgg.com/photos/tigerlily.html
 http://marcgg.com/photos/traveling.html
 http://marcgg.com/sitemap.txt
 
-http://marcgg.com/blog/2015/02/02/grace-murray-hopper-compiler-cobol
+http://marcgg.com/blog/2015/02/02/grace-murray-hopper-technical
 http://marcgg.com/blog/2015/01/22/new-design
 http://marcgg.com/blog/2015/01/05/css-animations-failing-capybara-specs
 http://marcgg.com/blog/2014/12/16/coaching-startup-birdly-le-camping

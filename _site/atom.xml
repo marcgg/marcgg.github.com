@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2015-02-02T10:59:51+01:00</updated>
+ <updated>2015-02-05T17:38:28+01:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -14,10 +14,10 @@
  
   
    <entry>
-     <title>Grace Murray Hopper, Creator Of The First Compiler</title>
-     <link href="http://marcgg.com/blog/2015/02/02/grace-murray-hopper-compiler-cobol"/>
+     <title>The Technical Accomplishments of Grace Murray Hopper</title>
+     <link href="http://marcgg.com/blog/2015/02/02/grace-murray-hopper-technical"/>
      <updated>2015-02-02T00:00:00+01:00</updated>
-     <id>http://marcgg.com/blog/2015/02/02/grace-murray-hopper-compiler-cobol</id>
+     <id>http://marcgg.com/blog/2015/02/02/grace-murray-hopper-technical</id>
      <content type="html">&lt;p&gt;Rear Admiral Grace M. Hopper, USN, Ph.D., born December 9 1906, is a really interesting person.&lt;/p&gt;
 
 &lt;p&gt;I ran into information about her a while back while researching the origin of the expression “debugging”. Turns out that she denied coining the term, but it got me reading and I have to say… why don’t we know more about her? She did so much for computer science! Also, I’m pretty sure no coder besides her have &lt;a href=&quot;http://en.wikipedia.org/wiki/USS_Hopper_%28DDG-70%29&quot;&gt;a guided missile destroyer&lt;/a&gt; named after them.&lt;/p&gt;
