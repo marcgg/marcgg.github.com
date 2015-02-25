@@ -108,6 +108,9 @@
 		<array>
 			<string>2015-02-02-grace-murray-hopper-technical.md</string>
 		</array>
+		<array>
+			<string>2015-02-26-heroku-deploy-speed.md</string>
+		</array>
 	</array>
 	<key>userIconName</key>
 	<string>Notes</string>

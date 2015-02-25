@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>
-      The One Thing That Made Me Switch To Vim
+      Benchmark Your Deploy Speed on Heroku
     </title>
-    <meta name="description" content="This is the one reason that got me to switch to vim after experimenting for years with a lot of different editors. Promised, it won't be about emacs vs vim.">
+    <meta name="description" content="If you are having trouble finding the part your deployment to Heroku that’s actually slow, be it bundler, the asset pipeline or the slug compilation, here is a very simple script that could help.">
     <meta name="author" content="Marc G Gauthier">
 
     <!--[if lt IE 9]> <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -37,37 +37,58 @@
     <h1>
   <span>
   
-    The One Thing That Made Me Switch To Vim
+    Benchmark Your Deploy Speed on Heroku
   
   </span>
 </h1>
 
 <div class="published">
-  <span>04 September 2012</span>
+  <span>26 February 2015</span>
 </div>
 
 <div id="container">
   <div id="content">
     <div class="post">
-      <p>I know, I know, this has been done to death, but stay with me for a second. I’m not here to tell you that Vim is the best editor out there, just to tell you the one reason that got me to switch.</p>
+      <p>Sometimes deploying to Heroku can get really slow.</p>
 
-<p>Like every developer with some curiosity, I tried a ridiculous amount of text editors and IDEs. I started with Notepad at first, but quickly discovered that some text editors would actually help you. I downloaded <a href="http://download.cnet.com/Amiasoft-SiteAid/3000-10247_4-10015046.html">SiteAid</a> and enjoyed the gain of productivity. Then I quickly moved on to Scite, Eclipse, Netbeans, Notepad++, Emacs, Text Edit, Rad Rails, Kate, Rubymine, TextMate, Sublime… the list goes on.</p>
+<p>My obvious advice is that, before spending any time speeding it up, you should actually know what part of it is slow. For instance if you run Ruby on Rails, you get output regarding the asset precompilation or the time spent running Bundler.</p>
 
-<p>At some point I realized that I was wasting my time learning slightly different shortcuts and ways of setting up a project. I began to consider Vim seriously because it stood the test of time and seemed cool for some reason, but really the one thing that convinced me was a problem I had at my job.</p>
+<p>However, if this isn’t enough, here is a little script that could help you by simply timestamping every line, giving you something looking like that:</p>
 
-<p>One day something went wrong on a server running Debian. The sysadmin was not around and I ended up being the one that had to go on there and fix it. It was linked to some config files that were not properly set up, and the only editor available was Vim. </p>
+<div class="highlight"><pre><code class="ruby"><span class="mi">16</span><span class="p">:</span><span class="mi">50</span><span class="p">:</span><span class="mi">16</span>  <span class="no">Fetching</span> <span class="n">repository</span><span class="p">,</span> <span class="n">done</span><span class="o">.</span>
+<span class="mi">16</span><span class="p">:</span><span class="mi">50</span><span class="p">:</span><span class="mi">20</span>  
+<span class="mi">16</span><span class="p">:</span><span class="mi">50</span><span class="p">:</span><span class="mi">26</span>  <span class="o">-----</span> <span class="no">Deleting</span> <span class="mi">1</span> <span class="n">files</span> <span class="n">matching</span> <span class="o">.</span><span class="n">slugignore</span> <span class="n">patterns</span><span class="o">.</span>
+<span class="mi">16</span><span class="p">:</span><span class="mi">50</span><span class="p">:</span><span class="mi">26</span>  <span class="o">-----</span> <span class="no">Ruby</span> <span class="n">app</span> <span class="n">detected</span>
+<span class="mi">16</span><span class="p">:</span><span class="mi">50</span><span class="p">:</span><span class="mi">27</span>  <span class="o">-----</span> <span class="no">Compiling</span> <span class="no">Ruby</span><span class="o">/</span><span class="no">Rails</span>
+<span class="mi">16</span><span class="p">:</span><span class="mi">50</span><span class="p">:</span><span class="mi">29</span>  <span class="o">-----</span> <span class="no">Using</span> <span class="no">Ruby</span> <span class="ss">version</span><span class="p">:</span> <span class="n">ruby</span><span class="o">-</span><span class="mi">2</span><span class="o">.</span><span class="mi">2</span><span class="o">.</span><span class="mi">0</span>
+<span class="mi">16</span><span class="p">:</span><span class="mi">50</span><span class="p">:</span><span class="mi">30</span>  <span class="o">-----</span> <span class="no">Installing</span> <span class="n">dependencies</span> <span class="n">using</span> <span class="mi">1</span><span class="o">.</span><span class="mi">7</span><span class="o">.</span><span class="mi">12</span>
+<span class="n">etc</span>
+</code></pre></div>
 
-<p>Back then I had almost <a href="http://vimdoc.sourceforge.net/htmldoc/intro.html">no clue</a> on how to use it.</p>
+<h2 id="the-script">The Script</h2>
 
-<p>It resulted in me editing the files as a 70 years old guy that just discovered what a keyboard is. It was painful to watch to say the least. Of course while this was going on, the server was more or less down. Pure joy if you ask me!</p>
+<p>Here’s the script. Note that I use a simple HH:MM:SS formating in this example, but feel free to use what <a href="http://unixhelp.ed.ac.uk/CGI/man-cgi?date">makes sense</a> depending on your setup and preferences.</p>
 
-<p>Even before this incident, more than a couple of times I had to inject some debug lines on the code deployed on our staging server to figure out a very environment-specific bug, but it wasn’t as stressful as this time.</p>
+<div class="highlight"><pre><code class="bash"><span class="c"># !/usr/bin/env bash</span>
+<span class="k">while </span><span class="nb">read </span>line<span class="p">;</span> <span class="k">do</span>
+<span class="k">  </span><span class="nb">echo</span> <span class="k">$(</span>date +<span class="s2">&quot;%H:%M:%S&quot;</span><span class="k">)</span> - <span class="nv">$line</span>
+<span class="k">done</span>
+</code></pre></div>
 
-<p><strong>It felt terrible to be so lost with a task as simple as editing a file.</strong></p>
+<p>Save it to “timecat” and give it write permissions:</p>
 
-<p>This is why I decided to use Vim as my primary editor. It already had enough qualities to be a good choice, but the fact that it is set up on most servers was the final selling point for me.</p>
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>chmod +x timecat
+</code></pre></div>
 
-<p>Sometimes you just need to be able to fire up Vim and be very fast using it. You don’t even have to <a href="http://yehudakatz.com/2010/07/29/everyone-who-tried-to-convince-me-to-use-vim-was-wrong/">be snob while doing it</a>.</p>
+<h2 id="running-it">Running It</h2>
+
+<p>The fun part here is to know that git push is actually sending its output to STDERR, so you need to do:</p>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>git push heroku master 2<span class="se">\&gt;</span><span class="p">&amp;</span>1 <span class="p">|</span> timecat
+</code></pre></div>
+
+<p>Hopefully this will help you pinpoint with more accuracy the problem in your deployment.</p>
+
 
 
       <div id="more">
@@ -91,30 +112,8 @@
             
           
             
-          
-            
-          
-            
-          
-            
               
-              <li><a href="/blog/2014/07/22/in-defense-of-legacy-code">Some Respect For Legacy Code</a></li>
-            
-          
-            
-          
-            
-              
-              <li><a href="/blog/2014/04/28/frame-based-layout-bad-code">Tips on Creating a Website From When I Was 12</a></li>
-            
-          
-            
-          
-            
-          
-            
-              
-              <li><a href="/blog/2013/11/05/enough-with-the-language-trolls">Enough With The Trolls</a></li>
+              <li><a href="/blog/2014/10/13/mysql-try-all-indexes-combinations-script">A Script To Benchmark MySQL Indexes</a></li>
             
           
             
@@ -130,8 +129,21 @@
             
           
             
-              
-              <li><a href="/blog/2013/03/25/please-changelog-open-source">Please Keep a Changelog For Your Open Source Lib</a></li>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
             
           
             
