@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2015-02-25T18:01:30+01:00</updated>
+ <updated>2015-02-25T23:43:09+01:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -12,6 +12,52 @@
  </author>
 
  
+  
+   <entry>
+     <title>Benchmarking Deployment Speed on Heroku</title>
+     <link href="http://marcgg.com/blog/2015/02/26/heroku-deploy-speed"/>
+     <updated>2015-02-26T00:00:00+01:00</updated>
+     <id>http://marcgg.com/blog/2015/02/26/heroku-deploy-speed</id>
+     <content type="html">&lt;p&gt;Sometimes deploying to Heroku can get really slow. Obviously before spending any time trying to speed it up, you should actually know what part of it is causing the problem. For instance, if you run Ruby on Rails, you get some information regarding the asset precompilation time or for how long Bundler installed your gems.&lt;/p&gt;
+
+&lt;p&gt;However, if this isn’t enough, here is a small script that could help you by simply timestamping every line of the Heroku deploy log, giving you something looking like that:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;  &lt;span class=&quot;no&quot;&gt;Fetching&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;repository&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;  
+&lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;26&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;-----&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Deleting&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;files&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;matching&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;slugignore&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;patterns&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;26&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;-----&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Ruby&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;app&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;detected&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;27&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;-----&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Compiling&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Ruby&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Rails&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;29&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;-----&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Using&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Ruby&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ruby&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;-----&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Installing&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dependencies&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;etc&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;the-script&quot;&gt;The Script&lt;/h2&gt;
+
+&lt;p&gt;Here’s the script. Note that I use a simple HH:MM:SS formating in this example, but feel free to use what &lt;a href=&quot;http://unixhelp.ed.ac.uk/CGI/man-cgi?date&quot;&gt;makes sense&lt;/a&gt; depending on your setup and preferences.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# !/usr/bin/env bash&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;while &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;read &lt;/span&gt;line&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;date +&lt;span class=&quot;s2&quot;&gt;&amp;quot;%H:%M:%S&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt; - &lt;span class=&quot;nv&quot;&gt;$line&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Save it to a local file called “timestp” and give it write permissions:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;chmod +x timestp
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;running-it&quot;&gt;Running It&lt;/h2&gt;
+
+&lt;p&gt;The tricky part here is to know that git push is actually sending its output to STDERR, so you need to do:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git push heroku master 2&amp;gt;&amp;amp;1 | timestp
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hopefully this will help you pinpoint with more accuracy the problem in your deployment.&lt;/p&gt;
+
+</content>
+   </entry>
   
  
   

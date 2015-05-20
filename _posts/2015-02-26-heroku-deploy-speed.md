@@ -1,17 +1,15 @@
 ---
 layout: post
-title: Benchmark Your Deploy Speed on Heroku
+title: Benchmarking Deployment Speed on Heroku
 description: If you are having trouble finding the part your deployment to Heroku that’s actually slow, be it bundler, the asset pipeline or the slug compilation, here is a very simple script that could help.
-blog: false
+blog: true
 category: blog
 tag: Performance
 ---
 
-Sometimes deploying to Heroku can get really slow.
+Sometimes deploying to Heroku can get really slow. Obviously before spending any time trying to speed it up, you should actually know what part of it is causing the problem. For instance, if you run Ruby on Rails, you get some information regarding the asset precompilation time or for how long Bundler installed your gems.
 
-My obvious advice is that, before spending any time speeding it up, you should actually know what part of it is slow. For instance if you run Ruby on Rails, you get output regarding the asset precompilation or the time spent running Bundler.
-
-However, if this isn’t enough, here is a little script that could help you by simply timestamping every line, giving you something looking like that:
+However, if this isn’t enough, here is a small script that could help you by simply timestamping every line of the Heroku deploy log, giving you something looking like that:
 
 {% highlight ruby %}
 16:50:16  Fetching repository, done.
@@ -35,19 +33,17 @@ while read line; do
 done
 {% endhighlight %}
 
-Save it to “timecat” and give it write permissions:
+Save it to a local file called “timestp” and give it write permissions:
 
 {% highlight bash %}
-$ chmod +x timecat
+$ chmod +x timestp
 {% endhighlight %}
 
 ## Running It
 
-The fun part here is to know that git push is actually sending its output to STDERR, so you need to do:
+The tricky part here is to know that git push is actually sending its output to STDERR, so you need to do:
 
-{% highlight bash %}
-$ git push heroku master 2\>&1 | timecat
-{% endhighlight %}
+	$ git push heroku master 2>&1 | timestp
 
 Hopefully this will help you pinpoint with more accuracy the problem in your deployment.
 
