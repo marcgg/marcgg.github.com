@@ -2,7 +2,7 @@
 layout: post
 title: Real Life A/B Testing With Universal Analytics
 description: Blah
-blog: true
+blog: false
 category: blog
 tag: Performance
 ---
