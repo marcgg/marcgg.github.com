@@ -9,11 +9,9 @@ tag: Performance
 
 I've been enthusiastic about the concept of A/B testing for a very long time, but I only got to implement it for the first time about two years ago. At the time I thought it would be easy. So many companies are talking about it, there must be a clear path to do it, right?
 
-Short answer: no.
+Well, after some research I'm starting to think that a lot of people are doing it wrong. Either by A/B testing too early, or just by not measuring things correctly, they are wasting time trying to follow the trend that split testing is the solution to all your startup problems. 
 
-Long answer: no, unless your website is a landing page.
-
-_**tl;dr:** To do effective real life A/B testing, you need clearly identified KPIs, a few lines of code, enough volume and someone analysing the results. It is harder than using a drop in tool usable by anyone, but it is way more powerful and still totally doable. _
+_**tl;dr:** To do effective real life A/B testing, you need clearly identified KPIs, a few lines of code, enough volume and someone analysing the results. It is harder than using a drop in tool usable by anyone, it takes way more time than you'd think, but doing it this way is more powerful and still totally doablee. _
 
 ## A/B Testing 101
 
@@ -53,7 +51,7 @@ What I'm getting at is that measuring conversion is hard. Often you have to take
 
 At [Drivy][1] we use A/B testing to validate some ideas. It gives us insights on what works well and what doesn't. Obviously that's not the only input we use for decision making, but it is one of them.
 
-Instead of relying on an existing tool to do this, we decided to build our own on top of Google's Universal Analytics. We don't use an existing tool because, at the time, nothing great existed to do this, and the code needed to get it to run is very light.
+Instead of relying on an existing tool to do this, we decided to build our own on top of Google's Universal Analytics. We don't use an existing tool because, at the time, nothing great existed to do this, and the code needed to get it to run is very light. Also, all our tracking was already done with Universal Analytics, so we could leverage the time we spent defining our metrics as well as centralise everything KPI-related in one powerful tool.
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/universal.png" style="width: 300px;"/></div>
 
@@ -82,13 +80,19 @@ Like this, once you are A/B testing, you will be able to say "by changing X, we 
 
 If you decide to change the hat ranking algorithm to display only hat with HD pictures, you could get an increase in (1) -\> (2) because the search results looks prettier. However it could decrease global conversion (1) -\> (4) because even if the search results look better, users don't want to buy the hats with HD pictures. The solution here would be to add HD pictures for all hats and keep the old ranking algorithm.
 
+#### Track Your KPIs
+
+Once you identified your KPIs, you have to track them and make sure that the data you use is correct. To do this at Drivy we used Universal Analytics.
+
+Note that you should be doing this, wether or not you're doing A/B testing!
+
 #### Have Enough Volumes
 
 First of all, don't A/B test if you don't have much traffic.
 
 If you don't have enough people using your website, it will take a very long time to reach a good enough level of [statistical significance][3].
 
-I know it sounds cool to be doing A/B testing, but if you're too early, it makes very little sense and it might misguide you more than anything else.
+I know it sounds cool to be running A/B tests, but if you're too early of a website, it makes very little sense and it might misguide you more than anything else. You need to focus on the product first and once it is working, use split testing to improve on what you already have.
 
 _Also if you say "we improved conversion by 2000% thanks to a/b testing" and your website is a landing page viewed by 500 visitors a months, it honnestly sounds a bit silly._
 
@@ -142,9 +146,13 @@ _Protip: To be faster, don't try to write robust and elegant code in an experime
 
 After a while, check if you reached an acceptable level of statistical significance. Don't even look at the metrics before that since they don't mean a thing yet.
 
-(TODO: check aymeric))
+Note that the volume of traffic you need depends on the expected impact of the modification. If you're making a minuscule change that would impact an already low conversion, you will need hundred of thousands of views on your page to know if it worked. If you're making a major change that will have a large impact on conversion, you'll probably need a smaller sample to know if it has a positive or negative impact.
 
-Once it is reached, you can go in Universal Analytics and segment your KPIs based on the custom dimensions you set up earlier. That's where you'll see which variation performs better.
+Once you have a sufficient amount of data, you can go in Universal Analytics and segment your KPIs based on the custom dimensions you set up earlier. That's where you'll see which variation performs better.
+
+Note that it's where Universal Analytics shines. Not only it is free, but it allows complex segmentation. For instance if you run some kind of marketing campaign, you might want to exclude these users from your reporting because they are not your regular users and therefore might not be interesting in the context of an A/B test.
+
+_To learn more about the subject of segmenting, take a look at "[New user and sequence based segments in the Core Reporting API][5]" or "[Re-imagining Segmentation In Analytics To Help You Make Better Decisions, Faster][6]" from the Google Universal Analytics blog._
 
 #### Close The Experiment
 
@@ -154,7 +162,7 @@ Never leave an experiment's code in the codebase for too long once it's consider
 
 #### Checking Tests Validity
 
-Every once in a while, don't forget to test your system by running "dummy experiments". [AirBnB goes into details about this on their blog][5], and the tl;dr; of this is that if you run an A/A test and one of the two version wins, you must be doing something wrong. 
+Every once in a while, don't forget to test your system by running "dummy experiments". [AirBnB goes into details about this on their blog][7], and the tl;dr; of this is that if you run an A/A test and one of the two version wins, you must be doing something wrong. 
 
 
 
@@ -165,8 +173,10 @@ Every once in a while, don't forget to test your system by running "dummy experi
 
 
 
-[1]:	https://en.drivy.com
+[1]:	https://www.drivy.com
 [2]:	http://en.wikipedia.org/wiki/Conversion_funnel
 [3]:	http://en.wikipedia.org/wiki/Statistical_significance
 [4]:	https://developers.google.com/analytics/devguides/collection/analyticsjs/custom-dims-mets
-[5]:	http://nerds.airbnb.com/experiments-at-airbnb/
+[5]:	http://analytics.blogspot.fr/2014/04/new-user-and-sequence-based-segments-in.html
+[6]:	http://analytics.blogspot.fr/2013/07/re-imagining-segmentation-in-analytics.html
+[7]:	http://nerds.airbnb.com/experiments-at-airbnb/

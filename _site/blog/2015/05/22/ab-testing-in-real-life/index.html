@@ -51,11 +51,9 @@
     <div class="post">
       <p>I’ve been enthusiastic about the concept of A/B testing for a very long time, but I only got to implement it for the first time about two years ago. At the time I thought it would be easy. So many companies are talking about it, there must be a clear path to do it, right?</p>
 
-<p>Short answer: no.</p>
+<p>Well, after some research I’m starting to think that a lot of people are doing it wrong. Either by A/B testing too early, or just by not measuring things correctly, they are wasting time trying to follow the trend that split testing is the solution to all your startup problems. </p>
 
-<p>Long answer: no, unless your website is a landing page.</p>
-
-<p><em><strong>tl;dr:</strong> To do effective real life A/B testing, you need clearly identified KPIs, a few lines of code, enough volume and someone analysing the results. It is harder than using a drop in tool usable by anyone, but it is way more powerful and still totally doable. </em></p>
+<p><em><strong>tl;dr:</strong> To do effective real life A/B testing, you need clearly identified KPIs, a few lines of code, enough volume and someone analysing the results. It is harder than using a drop in tool usable by anyone, it takes way more time than you’d think, but doing it this way is more powerful and still totally doablee. </em></p>
 
 <h2 id="ab-testing-101">A/B Testing 101</h2>
 
@@ -95,9 +93,9 @@
 
 <h2 id="real-life-ab-testing">Real Life A/B Testing</h2>
 
-<p>At <a href="https://en.drivy.com">Drivy</a> we use A/B testing to validate some ideas. It gives us insights on what works well and what doesn’t. Obviously that’s not the only input we use for decision making, but it is one of them.</p>
+<p>At <a href="https://www.drivy.com">Drivy</a> we use A/B testing to validate some ideas. It gives us insights on what works well and what doesn’t. Obviously that’s not the only input we use for decision making, but it is one of them.</p>
 
-<p>Instead of relying on an existing tool to do this, we decided to build our own on top of Google’s Universal Analytics. We don’t use an existing tool because, at the time, nothing great existed to do this, and the code needed to get it to run is very light.</p>
+<p>Instead of relying on an existing tool to do this, we decided to build our own on top of Google’s Universal Analytics. We don’t use an existing tool because, at the time, nothing great existed to do this, and the code needed to get it to run is very light. Also, all our tracking was already done with Universal Analytics, so we could leverage the time we spent defining our metrics as well as centralise everything KPI-related in one powerful tool.</p>
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/universal.png" style="width: 300px;" /></div>
 
@@ -129,13 +127,19 @@
 
 <p>If you decide to change the hat ranking algorithm to display only hat with HD pictures, you could get an increase in (1) -&gt; (2) because the search results looks prettier. However it could decrease global conversion (1) -&gt; (4) because even if the search results look better, users don’t want to buy the hats with HD pictures. The solution here would be to add HD pictures for all hats and keep the old ranking algorithm.</p>
 
+<h4 id="track-your-kpis">Track Your KPIs</h4>
+
+<p>Once you identified your KPIs, you have to track them and make sure that the data you use is correct. To do this at Drivy we used Universal Analytics.</p>
+
+<p>Note that you should be doing this, wether or not you’re doing A/B testing!</p>
+
 <h4 id="have-enough-volumes">Have Enough Volumes</h4>
 
 <p>First of all, don’t A/B test if you don’t have much traffic.</p>
 
 <p>If you don’t have enough people using your website, it will take a very long time to reach a good enough level of <a href="http://en.wikipedia.org/wiki/Statistical_significance">statistical significance</a>.</p>
 
-<p>I know it sounds cool to be doing A/B testing, but if you’re too early, it makes very little sense and it might misguide you more than anything else.</p>
+<p>I know it sounds cool to be running A/B tests, but if you’re too early of a website, it makes very little sense and it might misguide you more than anything else. You need to focus on the product first and once it is working, use split testing to improve on what you already have.</p>
 
 <p><em>Also if you say “we improved conversion by 2000% thanks to a/b testing” and your website is a landing page viewed by 500 visitors a months, it honnestly sounds a bit silly.</em></p>
 
@@ -187,9 +191,13 @@
 
 <p>After a while, check if you reached an acceptable level of statistical significance. Don’t even look at the metrics before that since they don’t mean a thing yet.</p>
 
-<p>(TODO: check aymeric))</p>
+<p>Note that the volume of traffic you need depends on the expected impact of the modification. If you’re making a minuscule change that would impact an already low conversion, you will need hundred of thousands of views on your page to know if it worked. If you’re making a major change that will have a large impact on conversion, you’ll probably need a smaller sample to know if it has a positive or negative impact.</p>
 
-<p>Once it is reached, you can go in Universal Analytics and segment your KPIs based on the custom dimensions you set up earlier. That’s where you’ll see which variation performs better.</p>
+<p>Once you have a sufficient amount of data, you can go in Universal Analytics and segment your KPIs based on the custom dimensions you set up earlier. That’s where you’ll see which variation performs better.</p>
+
+<p>Note that it’s where Universal Analytics shines. Not only it is free, but it allows complex segmentation. For instance if you run some kind of marketing campaign, you might want to exclude these users from your reporting because they are not your regular users and therefore might not be interesting in the context of an A/B test.</p>
+
+<p><em>To learn more about the subject of segmenting, take a look at “<a href="http://analytics.blogspot.fr/2014/04/new-user-and-sequence-based-segments-in.html">New user and sequence based segments in the Core Reporting API</a>” or “<a href="http://analytics.blogspot.fr/2013/07/re-imagining-segmentation-in-analytics.html">Re-imagining Segmentation In Analytics To Help You Make Better Decisions, Faster</a>” from the Google Universal Analytics blog.</em></p>
 
 <h4 id="close-the-experiment">Close The Experiment</h4>
 
