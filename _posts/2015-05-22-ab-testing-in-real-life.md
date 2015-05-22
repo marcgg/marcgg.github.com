@@ -28,7 +28,7 @@ For instance, here are some interesting things on which you'd probably like to e
 - Ranking algorithms
 - Emails & notifications (either the volume or the content)
 - Having a feature vs not having it
-- A serie of related content changes on various pages
+- A series of related content changes on various pages
 - Entirely different page or set of pages
 
 In a lot of these cases, you need way more than just front-end changes. If your tool promised a solution usable without any code to write, that's where you reach its limit.
