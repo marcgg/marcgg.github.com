@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Real Life A/B Testing With Universal Analytics
-description: Blah
-blog: false
+description: Split testing... everyone is talking about it, but how do you actually run experiments on an actual website and not just a landing page? Here is a realistic approach to A/B testing based on real life experiences.
+blog: true
 category: blog
 tag: Performance
 ---
@@ -128,16 +128,16 @@ Of course, try to do it in a way that is easy to revert. At Drivy we use a simpl
 
 {% highlight ruby %}
 -# Sets up tracking
-- start_experiment(:welcome_message)
+- start\_experiment(:welcome\_message)
 
 -# Displays things
-= render_experiment do |e|
-  = e.first_variation do
-    Hello!
-  = e.second_variation do
-    Hello all!
+= render\_experiment do |e|
+  = e.first\_variation do
+	Hello!
+  = e.second\_variation do
+	Hello all!
   = e.original do
-    Welcome.
+	Welcome.
 {% endhighlight %}
 
 _Protip: To be faster, don't try to write robust and elegant code in an experiment. Treat it as a prototype that will be thrown away at the end - and then actually throw it away and rewrite everything once the experiment is over._
