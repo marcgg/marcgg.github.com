@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2015-05-26T11:01:53+02:00</updated>
+ <updated>2015-05-26T11:16:46+02:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -20,15 +20,17 @@
      <id>http://marcgg.com/blog/2015/05/26/ab-testing-in-real-life-google-analytics</id>
      <content type="html">&lt;p&gt;I’ve been enthusiastic about the concept of A/B testing for a very long time, but I only got to implement it for the first time about two years ago. At the time I thought it would be easy. So many companies are talking about it, there must be a clear path to do it, right?&lt;/p&gt;
 
-&lt;p&gt;Well, after some research I’m starting to think that a lot of people are doing it wrong. Either by A/B testing too early, or just by not measuring things correctly, they are wasting time trying to follow the trend that split testing is the solution to all your startup problems. &lt;/p&gt;
+&lt;p&gt;Well, after some research I’m starting to think that a lot of people are doing it wrong. Either by A/B testing too early, or just by not measuring things correctly, they are wasting time trying to follow the trend that &lt;a href=&quot;https://www.optimizely.com/split-testing/&quot;&gt;split testing&lt;/a&gt; is the solution to all your startup problems. &lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;tl;dr:&lt;/strong&gt; To do effective real life A/B testing, you need clearly identified KPIs, a few lines of code, enough volume and someone analysing the results. It is harder than using a drop in tool usable by anyone, it takes way more time than you’d think, but doing it this way is more powerful and still totally doablee. &lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;tl;dr:&lt;/strong&gt; To do effective real life A/B testing, you need clearly identified KPIs, a few lines of code, enough volume and someone analysing the results. It is harder than using a drop in tool usable by anyone and it takes way more time than you’d think. However, doing it this way is more powerful and still totally doable.&lt;/em&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;ab-testing-101&quot;&gt;A/B Testing 101&lt;/h2&gt;
 
-&lt;p&gt;Alright, to be fair if you want to see if putting a picture of a cat on your homepage leads to people clicking on a button, then the internet got you covered… drop some JavaScript in and voilà!&lt;/p&gt;
+&lt;p&gt;First of, if you want to see if putting a picture of a cat on your homepage leads to people clicking on a button, then the internet got you covered… drop some JavaScript in and voilà!&lt;/p&gt;
 
-&lt;p&gt;However that’s a very poor definition of conversion and a very limited set of A/B tests you can run. Let me elaborate.&lt;/p&gt;
+&lt;p&gt;The thing is it is a very poor definition of conversion and it leaves you with a very limited set of A/B tests you can run.&lt;/p&gt;
+
+&lt;p&gt;Let me elaborate.&lt;/p&gt;
 
 &lt;h3 id=&quot;what-you-actually-test&quot;&gt;What You Actually Test&lt;/h3&gt;
 
@@ -44,19 +46,19 @@
   &lt;li&gt;Entirely different page or set of pages&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;In a lot of these cases, you need way more than just front-end changes. If your tool promised a solution usable without any code to write, that’s where you reach its limit.&lt;/p&gt;
+&lt;p&gt;In a lot of these cases, you need way more than just front-end or wording changes. If your tool promised a solution usable without any code to write, that’s where you reach its limit.&lt;/p&gt;
 
 &lt;h3 id=&quot;how-to-mesure-success&quot;&gt;How To Mesure Success&lt;/h3&gt;
 
 &lt;p&gt;The other limit of a lot of tools is that the measure for success is sometimes simplistic. If “people clicked on this button” means to you that your website is performing well, you might be doing something wrong.&lt;/p&gt;
 
-&lt;p&gt;Let’s see why.&lt;/p&gt;
+&lt;p&gt;Let’s take an example.&lt;/p&gt;
 
 &lt;p&gt;Imagine you’re testing a variation of a link’s copy and use “Click here, it’s amazing” instead of a duller wording. Because of this change, people end up clicking more on the button. &lt;/p&gt;
 
 &lt;p&gt;Great! This version is better! … OR IS IT!?!&lt;/p&gt;
 
-&lt;p&gt;Well… what if people click on the button and bounce right away because it’s linking to a page that’s really not that amazing?&lt;/p&gt;
+&lt;p&gt;What if people click on the button and bounce right away because it’s linking to a page that’s really not that amazing?&lt;/p&gt;
 
 &lt;p&gt;What I’m getting at is that measuring conversion is hard. Often you have to take multiple variables into consideration, so “people clicked on the button” is often not a good metric to follow.&lt;/p&gt;
 
@@ -64,7 +66,7 @@
 
 &lt;p&gt;At &lt;a href=&quot;https://www.drivy.com&quot;&gt;Drivy&lt;/a&gt; we use A/B testing to validate some ideas. It gives us insights on what works well and what doesn’t. Obviously that’s not the only input we use for decision making, but it is one of them.&lt;/p&gt;
 
-&lt;p&gt;Instead of relying on an existing tool to do this, we decided to build our own on top of Google’s Universal Analytics. We don’t use an existing tool because, at the time, nothing great existed to do this, and the code needed to get it to run is very light. Also, all our tracking was already done with Universal Analytics, so we could leverage the time we spent defining our metrics as well as centralise everything KPI-related in one powerful tool.&lt;/p&gt;
+&lt;p&gt;Instead of relying on an existing tool to do this, we decided to build our own on top of Google’s Universal Analytics. We don’t use an existing tool because, at least at the time, nothing great existed to do this. Plus the code needed to get it to run is very light anyways. Also, and this is a important, all our tracking was already done with Universal Analytics, so we could leverage the time we spent defining our metrics as well as centralise everything KPI-related in one powerful tool.&lt;/p&gt;
 
 &lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/universal.png&quot; style=&quot;width: 300px;&quot; /&gt;&lt;/div&gt;
 
@@ -72,7 +74,7 @@
 
 &lt;h4 id=&quot;identify-your-kpis&quot;&gt;Identify Your KPIs&lt;/h4&gt;
 
-&lt;p&gt;First of all, don’t start any split testing if you don’t have clear KPIs and clear objectives. For instance, if you have an online hat store, a goal could be “user buys a hat”. It could also be “user signs up for the newsletter” or “user spends more than 2 minutes reading an article”.&lt;/p&gt;
+&lt;p&gt;First of all, don’t start doing any split testing if you don’t have identified KPIs and clear objectives. For instance, if you have an online hat store, a goal could be “user buys a hat”. It could also be “user signs up for the newsletter” or “user spends more than 2 minutes reading an article”.&lt;/p&gt;
 
 &lt;p&gt;Based on this, try to define a clear conversion funnel. If you’re not familiar with the concept, allow me to quote &lt;a href=&quot;http://en.wikipedia.org/wiki/Conversion_funnel&quot;&gt;Wikipedia&lt;/a&gt;:&lt;/p&gt;
 
@@ -108,7 +110,7 @@
 
 &lt;p&gt;If you don’t have enough people using your website, it will take a very long time to reach a good enough level of &lt;a href=&quot;http://en.wikipedia.org/wiki/Statistical_significance&quot;&gt;statistical significance&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;I know it sounds cool to be running A/B tests, but if you’re too early of a website, it makes very little sense and it might misguide you more than anything else. You need to focus on the product first and once it is working, use split testing to improve on what you already have.&lt;/p&gt;
+&lt;p&gt;I know it sounds cool to be running A/B tests but, if you’re too small, it makes very little sense and it might misguide you more than anything else. You need to focus on the product first and once it is working, use split testing to improve on what you already have.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Also if you say “we improved conversion by 2000% thanks to a/b testing” and your website is a landing page viewed by 500 visitors a months, it honnestly sounds a bit silly.&lt;/em&gt;&lt;/p&gt;
 
@@ -164,7 +166,7 @@
 
 &lt;p&gt;Once you have a sufficient amount of data, you can go in Universal Analytics and segment your KPIs based on the custom dimensions you set up earlier. That’s where you’ll see which variation performs better.&lt;/p&gt;
 
-&lt;p&gt;Note that it’s where Universal Analytics shines. Not only it is free, but it allows complex segmentation. For instance if you run some kind of marketing campaign, you might want to exclude these users from your reporting because they are not your regular users and therefore might not be interesting in the context of an A/B test.&lt;/p&gt;
+&lt;p&gt;Note that it’s where Universal Analytics shines. Not only it is free, but it allows complex segmentation. For instance if you run some kind of marketing campaign, you might want to exclude these users from your reporting because they are not your regular users and therefore might not be relevant in the context of a given A/B test.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;To learn more about the subject of segmenting, take a look at “&lt;a href=&quot;http://analytics.blogspot.fr/2014/04/new-user-and-sequence-based-segments-in.html&quot;&gt;New user and sequence based segments in the Core Reporting API&lt;/a&gt;” or “&lt;a href=&quot;http://analytics.blogspot.fr/2013/07/re-imagining-segmentation-in-analytics.html&quot;&gt;Re-imagining Segmentation In Analytics To Help You Make Better Decisions, Faster&lt;/a&gt;” from the Google Universal Analytics blog.&lt;/em&gt;&lt;/p&gt;
 
@@ -172,11 +174,11 @@
 
 &lt;p&gt;Once you decided which variation performs the best, close the experiment, throw away all the code related to it and write the winning variation properly.&lt;/p&gt;
 
-&lt;p&gt;Never leave an experiment’s code in the codebase for too long once it’s considered “closed” as it will add needless complexity to your codebase.&lt;/p&gt;
+&lt;p&gt;Once it’s considered “closed”, Never leave an experiment’s code in the codebase for too long. It will add needless complexity to your codebase and no value.&lt;/p&gt;
 
 &lt;h4 id=&quot;checking-tests-validity&quot;&gt;Checking Tests Validity&lt;/h4&gt;
 
-&lt;p&gt;Every once in a while, don’t forget to test your system by running “dummy experiments”. &lt;a href=&quot;http://nerds.airbnb.com/experiments-at-airbnb/&quot;&gt;AirBnB goes into details about this on their blog&lt;/a&gt;, and the tl;dr; of this is that if you run an A/A test and one of the two version wins, you must be doing something wrong. &lt;/p&gt;
+&lt;p&gt;Every once in a while, don’t forget to test your system by running “dummy experiments”. &lt;a href=&quot;http://nerds.airbnb.com/experiments-at-airbnb/&quot;&gt;AirBnB goes into details about this on their blog&lt;/a&gt;. The tl;dr; of this is that if you run an A/A test and one of the two version wins, you must be doing something wrong. &lt;/p&gt;
 
 </content>
    </entry>
