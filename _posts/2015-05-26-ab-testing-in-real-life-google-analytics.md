@@ -129,13 +129,13 @@ Of course, try to do it in a way that is easy to revert. At Drivy we use a simpl
 
 {% highlight ruby %}
 -# Sets up tracking
-- start\_experiment(:welcome\_message)
+- start_experiment(:welcome_message)
 
 -# Displays things
-= render\_experiment do |e|
-  = e.first\_variation do
+= render_experiment do |e|
+  = e.first_variation do
 	Hello!
-  = e.second\_variation do
+  = e.second_variation do
 	Hello all!
   = e.original do
 	Welcome.
