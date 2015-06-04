@@ -162,7 +162,7 @@ However, running this would only give me:
 
 This makes sense since the process shuts down once it received a message, as we saw before. To achieve this, we need to maintain some state.
 
-### Keep Listening
+### Keep On Listening
 
 This time we'll have to define a [module][7] to simplify everything. This module responds to a start method that will just spawn a process running its second method, "loop". I made loop method [private](), but it is not required for this to work.
 

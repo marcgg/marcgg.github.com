@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2015-06-04T14:02:56+02:00</updated>
+ <updated>2015-06-04T14:10:55+02:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -171,7 +171,7 @@
 
 &lt;p&gt;This makes sense since the process shuts down once it received a message, as we saw before. To achieve this, we need to maintain some state.&lt;/p&gt;
 
-&lt;h3 id=&quot;keep-listening&quot;&gt;Keep Listening&lt;/h3&gt;
+&lt;h3 id=&quot;keep-on-listening&quot;&gt;Keep On Listening&lt;/h3&gt;
 
 &lt;p&gt;This time we’ll have to define a &lt;a href=&quot;http://elixir-lang.org/getting-started/modules.html&quot;&gt;module&lt;/a&gt; to simplify everything. This module responds to a start method that will just spawn a process running its second method, “loop”. I made loop method &lt;a href=&quot;&quot;&gt;private&lt;/a&gt;, but it is not required for this to work.&lt;/p&gt;
 

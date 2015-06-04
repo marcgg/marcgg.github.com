@@ -202,7 +202,7 @@
 
 <p>This makes sense since the process shuts down once it received a message, as we saw before. To achieve this, we need to maintain some state.</p>
 
-<h3 id="keep-listening">Keep Listening</h3>
+<h3 id="keep-on-listening">Keep On Listening</h3>
 
 <p>This time we’ll have to define a <a href="http://elixir-lang.org/getting-started/modules.html">module</a> to simplify everything. This module responds to a start method that will just spawn a process running its second method, “loop”. I made loop method <a href="">private</a>, but it is not required for this to work.</p>
 
