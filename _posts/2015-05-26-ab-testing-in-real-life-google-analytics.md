@@ -129,16 +129,16 @@ Of course, try to do it in a way that is easy to revert. At Drivy we use a simpl
 
 {% highlight ruby %}
 -# Sets up tracking
-- start_experiment(:welcome_message)
+- start_experiment(:welcome_message) 
 
 -# Displays things
-= render_experiment do |e|
-  = e.first_variation do
-	Hello!
-  = e.second_variation do
-	Hello all!
+= render_experiment do |e| 
+  = e.first_variation do 
+ Hello!
+  = e.second_variation do 
+ Hello all!
   = e.original do
-	Welcome.
+ Welcome.
 {% endhighlight %}
 
 _Protip: To be faster, don't try to write robust and elegant code in an experiment. Treat it as a prototype that will be thrown away at the end - and then actually throw it away and rewrite everything once the experiment is over._
