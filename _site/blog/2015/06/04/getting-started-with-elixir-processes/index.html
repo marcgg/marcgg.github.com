@@ -53,7 +53,7 @@
 
 <p>Hope it helps!</p>
 
-<p><strong>Disclaimer</strong>: Please note that, even if I’ve been writing code for a while now, I’m in no way an Elixir expert as I’m mostly using Ruby and JavaScript. If you know more about Elixir and notice that I’ve made a mistake, please leave a comment and I’ll fix the article. If you’re just getting started, I recommend you read some of the official documentation before continuing, mainly about <a href="http://elixir-lang.org/getting-started/basic-types.html">basic types</a>,<a href="http://elixir-lang.org/getting-started/modules.html">modules</a> and <a href="http://elixir-lang.org/getting-started/processes.html">processes</a>.</p>
+<p><strong>Disclaimer</strong>: Please note that, even if I’ve been writing code for a while now, I’m in no way an Elixir expert as I’m mostly using Ruby and JavaScript. If you know more about Elixir and notice that I’ve made a mistake, please leave a comment and I’ll fix the article. If you’re just getting started, I recommend you read some of the official documentation before continuing, mainly about <a href="http://elixir-lang.org/getting-started/basic-types.html">basic types</a> and <a href="http://elixir-lang.org/getting-started/modules.html">modules</a>.</p>
 
 <h2 id="processes-101">Processes 101</h2>
 
@@ -63,6 +63,12 @@
   <p>“Processes are not only the basis for concurrency in Elixir, but they also provide the means for building distributed and fault-tolerant programs.”</p>
 
   <p><a href="http://elixir-lang.org/getting-started/processes.html">Elixir Documentation</a></p>
+</blockquote>
+
+<p>Note that Elixir should not be confused with operating system processes. Again, quoting the documentation:</p>
+
+<blockquote>
+  <p>“Processes in Elixir are extremely lightweight in terms of memory and CPU (unlike threads in many other programming languages). Because of this, it is not uncommon to have dozens of thousands of processes running simultaneously.”</p>
 </blockquote>
 
 <h3 id="start-a-process-watch-it-die">Start A Process, Watch It Die</h3>
@@ -132,7 +138,7 @@
 <span class="nb"> false</span>
 </code></pre></div>
 
-<p>Note how the process is still alive right after the call to send, but dies shortly after. This can be a bit surprising at first, but you can see how it makes sense as the spawned process needs some time to actually execute.</p>
+<p>Notice how the process is still alive right after the call to send, but dies shortly after. This can be a bit surprising at first, but you can see how it makes sense as the spawned process needs some time to actually execute, and once it is done responding it just shuts down because it has done what it was supposed to do. </p>
 
 <h3 id="using-links">Using Links</h3>
 
@@ -198,8 +204,9 @@
 
 <h3 id="maintaining-state">Maintaining State</h3>
 
-<p>This time we’ll have to define a <a href="http://elixir-lang.org/getting-started/modules.html">module</a> to simplify everything. This module responds to a start method that will just spawn a process running its second method, “loop”. I made loop method <a href="">private</a>, but it is not required for this to work._ 
-The loop method is very similar to what our previous process would do, but this time it calls itself after receiving a message, maintaining state and keeping itself alive.</p>
+<p>This time we’ll have to define a <a href="http://elixir-lang.org/getting-started/modules.html">module</a> to simplify everything. This module responds to a start method that will just spawn a process running its second method, “loop”. I made loop method <a href="">private</a>, but it is not required for this to work.</p>
+
+<p>The loop method is very similar to what our previous process would do, but this time it calls itself after receiving a message, maintaining state and keeping itself alive.</p>
 
 <p>I left a few debugging messages so what happens is even clearer when looking at the output.</p>
 

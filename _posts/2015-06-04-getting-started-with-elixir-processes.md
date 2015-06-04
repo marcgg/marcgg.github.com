@@ -11,7 +11,7 @@ In this article, there will be no fancy tricks or protips, just simple ideas and
 
 Hope it helps!
 
-**Disclaimer**: Please note that, even if I've been writing code for a while now, I'm in no way an Elixir expert as I'm mostly using Ruby and JavaScript. If you know more about Elixir and notice that I've made a mistake, please leave a comment and I'll fix the article. If you're just getting started, I recommend you read some of the official documentation before continuing, mainly about [basic types][1],[modules][2] and [processes][3].
+**Disclaimer**: Please note that, even if I've been writing code for a while now, I'm in no way an Elixir expert as I'm mostly using Ruby and JavaScript. If you know more about Elixir and notice that I've made a mistake, please leave a comment and I'll fix the article. If you're just getting started, I recommend you read some of the official documentation before continuing, mainly about [basic types][1] and [modules][2].
 
 ## Processes 101
 
@@ -19,9 +19,11 @@ If you're getting into Elixir, knowing about processes is crucial. There's no wa
 
 > "Processes are not only the basis for concurrency in Elixir, but they also provide the means for building distributed and fault-tolerant programs."
 > 
-> [Elixir Documentation][4]
+> [Elixir Documentation][3]
 
+Note that Elixir should not be confused with operating system processes. Again, quoting the documentation:
 
+> "Processes in Elixir are extremely lightweight in terms of memory and CPU (unlike threads in many other programming languages). Because of this, it is not uncommon to have dozens of thousands of processes running simultaneously."
 
 ### Start A Process, Watch It Die
 
@@ -96,11 +98,11 @@ I get:
  false
 {% endhighlight %}
 
-Note how the process is still alive right after the call to send, but dies shortly after. This can be a bit surprising at first, but you can see how it makes sense as the spawned process needs some time to actually execute.
+Notice how the process is still alive right after the call to send, but dies shortly after. This can be a bit surprising at first, but you can see how it makes sense as the spawned process needs some time to actually execute, and once it is done responding it just shuts down because it has done what it was supposed to do. 
 
 ### Using Links
 
-I've been using "spawn" so far, but it's actually best to use "spawn_link" instead. Quoting from [the Elixir documentation][5]:
+I've been using "spawn" so far, but it's actually best to use "spawn_link" instead. Quoting from [the Elixir documentation][4]:
 
 > "The most common form of spawning in Elixir is actually via spawn_link/1."
 
@@ -124,7 +126,7 @@ Running this outputs absolutely nothing. However, the version with "spawn_link" 
 		main.exs:3: anonymous fn/0 in :elixircompiler0.FILE/1
 {% endhighlight %}
 
-Note that, in this article, I will not use [Elixir Tasks][7] to avoid manipulating too many concepts, even if it would lead to even better error messages, as explained in the official [documentation][8]:
+Note that, in this article, I will not use [Elixir Tasks][6] to avoid manipulating too many concepts, even if it would lead to even better error messages, as explained in the official [documentation][7]:
 
 > With spawn/1 and spawn_link/1 functions, the error messages are generated directly by the Virtual Machine and therefore compact and lacking in details. In practice, developers would rather use the functions in the Task module, more explicitly, Task.start/1 and Task.start_link/1
 
@@ -162,7 +164,8 @@ This makes sense since the process shuts down once it received a message, as we 
 
 ### Maintaining State
 
-This time we'll have to define a [module][11] to simplify everything. This module responds to a start method that will just spawn a process running its second method, "loop". I made loop method [private](), but it is not required for this to work._ 
+This time we'll have to define a [module][10] to simplify everything. This module responds to a start method that will just spawn a process running its second method, "loop". I made loop method [private](), but it is not required for this to work.
+
 The loop method is very similar to what our previous process would do, but this time it calls itself after receiving a message, maintaining state and keeping itself alive.
 
 I left a few debugging messages so what happens is even clearer when looking at the output.
@@ -208,17 +211,16 @@ Running the code above gives us:
 
 ### Using Agents
 
-State is nice, but it feels very manual. In this case we could use [Agents][13] as a nice abstraction layer to get a similar behaviour. 
+State is nice, but it feels very manual. In this case we could use [Agents][12] as a nice abstraction layer to get a similar behaviour. 
 
-I won't get into details regarding Agents for now, but if you want to go further, I recommend [the official documentation][14] as a starting point.
+I won't get into details regarding Agents for now, but if you want to go further, I recommend [the official documentation][13] as a starting point.
 
 [1]:	http://elixir-lang.org/getting-started/basic-types.html
 [2]:	http://elixir-lang.org/getting-started/modules.html
 [3]:	http://elixir-lang.org/getting-started/processes.html
-[4]:	http://elixir-lang.org/getting-started/processes.html
-[5]:	%5Bhttp://elixir-lang.org/getting-started/processes.html#links%5D
-[7]:	http://elixir-lang.org/docs/v1.0/elixir/Task.html
-[8]:	http://elixir-lang.org/getting-started/processes.html#tasks
-[11]:	http://elixir-lang.org/getting-started/modules.html
-[13]:	http://elixir-lang.org/docs/stable/elixir/#!Agent.html
-[14]:	http://elixir-lang.org/getting-started/mix-otp/agent.html
+[4]:	%5Bhttp://elixir-lang.org/getting-started/processes.html#links%5D
+[6]:	http://elixir-lang.org/docs/v1.0/elixir/Task.html
+[7]:	http://elixir-lang.org/getting-started/processes.html#tasks
+[10]:	http://elixir-lang.org/getting-started/modules.html
+[12]:	http://elixir-lang.org/docs/stable/elixir/#!Agent.html
+[13]:	http://elixir-lang.org/getting-started/mix-otp/agent.html
