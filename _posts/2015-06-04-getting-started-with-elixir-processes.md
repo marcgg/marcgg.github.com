@@ -7,7 +7,7 @@ category: blog
 tag: Elixir
 ---
 
-In this article, there will be no fancy tricks or protips, just simple ideas and examples to get started. This is basically the result of my trial and error approach to understand Elixir Processes. 
+In this article, there will be no fancy tricks or protips, just simple ideas and examples to get started. This is basically the result of my trial and error approach to understand Elixir Processes.
 
 Hope it helps!
 
@@ -18,7 +18,7 @@ Hope it helps!
 If you're getting into Elixir, knowing about processes is crucial. There's no way around it, it's a concept you have to know to get better and use the langage properly.
 
 > "Processes are not only the basis for concurrency in Elixir, but they also provide the means for building distributed and fault-tolerant programs."
-> 
+>
 > [Elixir Documentation][3]
 
 Note that Elixir should not be confused with operating system processes. Again, quoting the documentation:
@@ -32,7 +32,7 @@ Let's start a process:
 {% highlight elixir %}
 spawn(
   fn ->
-	IO.puts "Starting Process"
+	  IO.puts "Starting Process"
   end
 )
 
@@ -45,7 +45,7 @@ In this example I added a timer just to make sure that the IO has no chance to b
 If we run this piece of code, we get:
 
 {% highlight bash %}
- Starting Process 
+ Starting Process
  false
 {% endhighlight %}
 
@@ -58,11 +58,11 @@ Now let's add a way to receive a message. Here I'll spawn the process in the sam
 {% highlight elixir %}
  pid = spawn(
    fn ->
-	IO.puts "Starting Process"
-	receive do
-	  {:first, message} ->
-	    "Received first: " <> message
-	end
+    IO.puts "Starting Process"
+    receive do
+      {:first, message} ->
+        "Received first: " <> message
+    end
   end
 )
 
@@ -98,21 +98,21 @@ I get:
  false
 {% endhighlight %}
 
-Notice how the process is still alive right after the call to send, but dies shortly after. This can be a bit surprising at first, but you can see how it makes sense as the spawned process needs some time to actually execute, and once it is done responding it just shuts down because it has done what it was supposed to do. 
+Notice how the process is still alive right after the call to send, but dies shortly after. This can be a bit surprising at first, but you can see how it makes sense as the spawned process needs some time to actually execute, and once it is done responding it just shuts down because it has done what it was supposed to do.
 
 ### Using Links
 
-I've been using "spawn" so far, but it's actually best to use "spawn_link " instead. Quoting from [the Elixir documentation][4]:
+I've been using "spawn" so far, but it's actually best to use "spawn\_link " instead. Quoting from [the Elixir documentation][4]:
 
-> "The most common form of spawning in Elixir is actually via spawn_link/1."
+> "The most common form of spawning in Elixir is actually via spawn\_link/1."
 
 This is because it gives us better error handling, among other things.
 
 {% highlight elixir %}
 spawn(
   fn ->
-	raise "Ouch"
-	IO.puts "Starting Process"
+    raise "Ouch"
+    IO.puts "Starting Process"
   end
 )
 {% endhighlight %}
@@ -120,8 +120,8 @@ spawn(
 Running this outputs absolutely nothing. However, the version with "spawn\_link" instead of "spawn" gives us:
 
 {% highlight bash %}
- 08:37:20.422 error Error in process \<0.51.0\> with exit value: ...
- (EXIT from #PID\<0.48.0\>) an exception was raised:
+ 08:37:20.422 error Error in process <0.51.0> with exit value: ...
+ (EXIT from #PID<0.48.0>) an exception was raised:
 	 (RuntimeError) Ouch
 	    main.exs:3: anonymous fn/0 in :elixircompiler0.FILE/1
 {% endhighlight %}
@@ -139,13 +139,13 @@ When I first got my hands on Elixir I wanted to send multiple messages to a proc
 {% highlight elixir %}
  pid = spawn(
   fn ->
-	IO.puts "Starting Process"
-	receive do
-	  {:first, message} ->
-	    IO.puts Enum.join("Received first: ", message)
-	  {:second, message} ->
-	    IO.puts Enum.join("Received second: ", message)
-	end
+    IO.puts "Starting Process"
+    receive do
+      {:first, message} ->
+        IO.puts Enum.join("Received first: ", message)
+      {:second, message} ->
+        IO.puts Enum.join("Received second: ", message)
+    end
   end
 )
 
@@ -174,19 +174,19 @@ I left a few debugging messages so what happens is even clearer when looking at 
 defmodule Receiver do
   def start do
     IO.puts "Starting Process"
-    spawnlink(fn -> loop end)
+    spawn_link(fn -> loop end)
   end
 
   defp loop do
     IO.puts "Looping"
       receive do
-	  {:first, message} ->
-          IO.puts "Received first: " <> message
-	    loop
-	  {:second, message} ->
-	     IO.puts "Received second: " <> message
-	     loop
-	end
+      {:first, message} ->
+        IO.puts "Received first: " <> message
+        loop
+      {:second, message} ->
+         IO.puts "Received second: " <> message
+         loop
+    end
   end
  end
 
@@ -213,7 +213,7 @@ This gives us a lot of possibilities. For instane we could have some kind of arg
 
 ### Using Agents
 
-State is nice, but it feels very manual. In this case we could use [Agents][9] as a nice abstraction layer to get a similar behaviour. 
+State is nice, but it feels very manual. In this case we could use [Agents][9] as a nice abstraction layer to get a similar behaviour.
 
 I won't get into details regarding Agents for now, but if you want to go further, I recommend [the official documentation][10] as a starting point.
 

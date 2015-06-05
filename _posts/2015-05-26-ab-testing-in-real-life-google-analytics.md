@@ -9,7 +9,7 @@ tag: Performance
 
 I've been enthusiastic about the concept of A/B testing for a very long time, but I only got to implement it for the first time about two years ago. At the time I thought it would be easy. So many companies are talking about it, there must be a clear path to do it, right?
 
-Well, after some research I'm starting to think that a lot of people are doing it wrong. Either by A/B testing too early, or just by not measuring things correctly, they are wasting time trying to follow the trend that [split testing][1] is the solution to all your startup problems. 
+Well, after some research I'm starting to think that a lot of people are doing it wrong. Either by A/B testing too early, or just by not measuring things correctly, they are wasting time trying to follow the trend that [split testing][1] is the solution to all your startup problems.
 
 _**tl;dr:** To do effective real life A/B testing, you need clearly identified KPIs, a few lines of code, enough volume and someone analysing the results. It is harder than using a drop in tool usable by anyone and it takes way more time than you'd think. However, doing it this way is more powerful and still totally doable._
 
@@ -41,7 +41,7 @@ The other limit of a lot of tools is that the measure for success is sometimes s
 
 Let's take an example.
 
-Imagine you're testing a variation of a link's copy and use "Click here, it's amazing" instead of a duller wording. Because of this change, people end up clicking more on the button. 
+Imagine you're testing a variation of a link's copy and use "Click here, it's amazing" instead of a duller wording. Because of this change, people end up clicking more on the button.
 
 Great! This version is better! ... OR IS IT!?!
 
@@ -65,8 +65,8 @@ First of all, don't start doing any split testing if you don't have identified K
 
 Based on this, try to define a clear conversion funnel. If you're not familiar with the concept, allow me to quote [Wikipedia][3]:
 
-> Conversion funnel is a technical term used in e-commerce operations to describe the track a consumer takes through an Internet advertising or search system, navigating an e-commerce website and finally converting to a sale. 
-> 
+> Conversion funnel is a technical term used in e-commerce operations to describe the track a consumer takes through an Internet advertising or search system, navigating an e-commerce website and finally converting to a sale.
+>
 > The metaphor of a funnel is used to describe the decrease in numbers that occurs at each step of the process.
 
 For instance, in the case of the hat website:
@@ -77,9 +77,9 @@ For instance, in the case of the hat website:
 - 3) User sees the payment form
 - 4) User pays and enjoys their hat
 
-Like this, once you are A/B testing, you will be able to say "by changing X, we saw a increase in (1) -\> (2), but a decrease in (3) -\> (4) and an overall improvement on (1) -\> (4)". This way you'll get way more interesting insights.
+Like this, once you are A/B testing, you will be able to say "by changing X, we saw a increase in (1) -> (2), but a decrease in (3) -> (4) and an overall improvement on (1) -> (4)". This way you'll get way more interesting insights.
 
-If you decide to change the hat ranking algorithm to display only hat with HD pictures, you could get an increase in (1) -\> (2) because the search results looks prettier. However it could decrease global conversion (1) -\> (4) because even if the search results look better, users don't want to buy the hats with HD pictures. The solution here would be to add HD pictures for all hats and keep the old ranking algorithm.
+If you decide to change the hat ranking algorithm to display only hat with HD pictures, you could get an increase in (1) -> (2) because the search results looks prettier. However it could decrease global conversion (1) -> (4) because even if the search results look better, users don't want to buy the hats with HD pictures. The solution here would be to add HD pictures for all hats and keep the old ranking algorithm.
 
 #### Track Your KPIs
 
@@ -99,9 +99,9 @@ _Also if you say "we improved conversion by 2000% thanks to a/b testing" and you
 
 ### Starting Your Experiment
 
-Once you have your KPIs and a decent volume of users on your website, it's time to start your "experiment". 
+Once you have your KPIs and a decent volume of users on your website, it's time to start your "experiment".
 
-By the way, what I'll call experiment from now on is the process of testing multiple versions/variations of a given feature. 
+By the way, what I'll call experiment from now on is the process of testing multiple versions/variations of a given feature.
 
 #### Flagging Users
 
@@ -129,13 +129,13 @@ Of course, try to do it in a way that is easy to revert. At Drivy we use a simpl
 
 {% highlight ruby %}
 -# Sets up tracking
-- start_experiment(:welcome_message) 
+- start_experiment(:welcome_message)
 
 -# Displays things
-= render_experiment do |e| 
-  = e.first_variation do 
+= render_experiment do |e|
+  = e.first_variation do
  Hello!
-  = e.second_variation do 
+  = e.second_variation do
  Hello all!
   = e.original do
  Welcome.
@@ -163,7 +163,7 @@ Once it's considered "closed", Never leave an experiment's code in the codebase 
 
 #### Checking Tests Validity
 
-Every once in a while, don't forget to test your system by running "dummy experiments". [AirBnB goes into details about this on their blog][8]. The tl;dr; of this is that if you run an A/A test and one of the two version wins, you must be doing something wrong. 
+Every once in a while, don't forget to test your system by running "dummy experiments". [AirBnB goes into details about this on their blog][8]. The tl;dr; of this is that if you run an A/A test and one of the two version wins, you must be doing something wrong.
 
 
 

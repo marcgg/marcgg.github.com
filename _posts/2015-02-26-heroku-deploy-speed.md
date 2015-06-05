@@ -13,7 +13,7 @@ However, if this isn’t enough, here is a small script that could help you by s
 
 {% highlight ruby %}
 16:50:16  Fetching repository, done.
-16:50:20  
+16:50:20
 16:50:26  ----- Deleting 1 files matching .slugignore patterns.
 16:50:26  ----- Ruby app detected
 16:50:27  ----- Compiling Ruby/Rails
