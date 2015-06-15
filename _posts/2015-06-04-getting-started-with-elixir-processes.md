@@ -18,7 +18,7 @@ Hope it helps!
 If you're getting into Elixir, knowing about processes is crucial. There's no way around it, it's a concept you have to know to get better and use the langage properly.
 
 > "Processes are not only the basis for concurrency in Elixir, but they also provide the means for building distributed and fault-tolerant programs."
->
+> 
 > [Elixir Documentation][3]
 
 Note that Elixir should not be confused with operating system processes. Again, quoting the documentation:
@@ -30,12 +30,11 @@ Note that Elixir should not be confused with operating system processes. Again, 
 Let's start a process:
 
 {% highlight elixir %}
-spawn(
-  fn ->
-	  IO.puts "Starting Process"
-  end
+pid = spawn(
+ fn ->
+   IO.puts "Starting Process"
+ end
 )
-
 :timer.sleep(1000)
 IO.puts Process.alive?(pid)
 {% endhighlight %}
@@ -56,18 +55,18 @@ This is because the process dies once it has done its job. Pretty straightforwar
 Now let's add a way to receive a message. Here I'll spawn the process in the same way, except I'll store its PID. Note that this is an Elixir PID, and is unrelated to UNIX PIDs.
 
 {% highlight elixir %}
- pid = spawn(
-   fn ->
+pid = spawn(
+  fn ->
     IO.puts "Starting Process"
     receive do
       {:first, message} ->
-        "Received first: " <> message
+	 "Received first: " <> message
     end
   end
 )
 
 :timer.sleep(1000)
- send pid, {:first, "Amazing first message!"}
+send pid, {:first, "Amazing first message!"}
 {% endhighlight %}
 
 Which gives us:
@@ -122,8 +121,8 @@ Running this outputs absolutely nothing. However, the version with "spawn\_link"
 {% highlight bash %}
  08:37:20.422 error Error in process <0.51.0> with exit value: ...
  (EXIT from #PID<0.48.0>) an exception was raised:
-	 (RuntimeError) Ouch
-	    main.exs:3: anonymous fn/0 in :elixircompiler0.FILE/1
+ (RuntimeError) Ouch
+	main.exs:3: anonymous fn/0 in :elixircompiler0.FILE/1
 {% endhighlight %}
 
 Note that, in this article, I will not use [Elixir Tasks][5] to avoid manipulating too many concepts, even if it would lead to even better error messages, as explained in the official [documentation][6]:
@@ -137,20 +136,20 @@ Note that, in this article, I will not use [Elixir Tasks][5] to avoid manipulati
 When I first got my hands on Elixir I wanted to send multiple messages to a process, so I did this:
 
 {% highlight elixir %}
- pid = spawn(
+pid = spawn(
   fn ->
     IO.puts "Starting Process"
     receive do
       {:first, message} ->
-        IO.puts Enum.join("Received first: ", message)
+	 IO.puts Enum.join("Received first: ", message)
       {:second, message} ->
-        IO.puts Enum.join("Received second: ", message)
+	 IO.puts Enum.join("Received second: ", message)
     end
   end
 )
 
- send pid, {:first, "Amazing first message!"}
- send pid, {:second, "Disappointing second message."}
+send pid, {:first, "Amazing first message!"}
+send pid, {:second, "Disappointing second message."}
 {% endhighlight %}
 
 However, running this would only give me:
@@ -179,21 +178,21 @@ defmodule Receiver do
 
   defp loop do
     IO.puts "Looping"
-      receive do
+    receive do
       {:first, message} ->
-        IO.puts "Received first: " <> message
-        loop
+	 IO.puts "Received first: " <> message
+	 loop
       {:second, message} ->
-         IO.puts "Received second: " <> message
-         loop
+	 IO.puts "Received second: " <> message
+	 loop
     end
   end
- end
+end
 
- pid = Receiver.start
- send pid, {:first, "Amazing first message!"}
- send pid, {:second, "Disappointing second message."}
- send pid, {:first, "Amazing first message again!"}
+pid = Receiver.start
+send pid, {:first, "Amazing first message!"}
+send pid, {:second, "Disappointing second message."}
+send pid, {:first, "Amazing first message again!"}
 {% endhighlight %}
 
 Running the code above gives us:

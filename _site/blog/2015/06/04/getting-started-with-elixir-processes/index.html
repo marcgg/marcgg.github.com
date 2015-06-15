@@ -75,12 +75,11 @@
 
 <p>Let’s start a process:</p>
 
-<div class="highlight"><pre><code class="elixir"><span class="n">spawn</span><span class="p">(</span>
-  <span class="k">fn</span> <span class="o">-&gt;</span>
-	  <span class="no">IO</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;Starting Process&quot;</span>
-  <span class="k">end</span>
+<div class="highlight"><pre><code class="elixir"><span class="n">pid</span> <span class="o">=</span> <span class="n">spawn</span><span class="p">(</span>
+ <span class="k">fn</span> <span class="o">-&gt;</span>
+   <span class="no">IO</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;Starting Process&quot;</span>
+ <span class="k">end</span>
 <span class="p">)</span>
-
 <span class="ss">:timer</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="m">1000</span><span class="p">)</span>
 <span class="no">IO</span><span class="o">.</span><span class="n">puts</span> <span class="no">Process</span><span class="o">.</span><span class="n">alive?</span><span class="p">(</span><span class="n">pid</span><span class="p">)</span>
 </code></pre></div>
@@ -99,18 +98,18 @@
 
 <p>Now let’s add a way to receive a message. Here I’ll spawn the process in the same way, except I’ll store its PID. Note that this is an Elixir PID, and is unrelated to UNIX PIDs.</p>
 
-<div class="highlight"><pre><code class="elixir"> <span class="n">pid</span> <span class="o">=</span> <span class="n">spawn</span><span class="p">(</span>
-   <span class="k">fn</span> <span class="o">-&gt;</span>
+<div class="highlight"><pre><code class="elixir"><span class="n">pid</span> <span class="o">=</span> <span class="n">spawn</span><span class="p">(</span>
+  <span class="k">fn</span> <span class="o">-&gt;</span>
     <span class="no">IO</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;Starting Process&quot;</span>
     <span class="k">receive</span> <span class="k">do</span>
 <span class="k">      </span><span class="p">{</span><span class="ss">:first</span><span class="p">,</span> <span class="n">message</span><span class="p">}</span> <span class="o">-&gt;</span>
-        <span class="s2">&quot;Received first: &quot;</span> <span class="o">&lt;&gt;</span> <span class="n">message</span>
+	 <span class="s2">&quot;Received first: &quot;</span> <span class="o">&lt;&gt;</span> <span class="n">message</span>
     <span class="k">end</span>
   <span class="k">end</span>
 <span class="p">)</span>
 
 <span class="ss">:timer</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="m">1000</span><span class="p">)</span>
- <span class="n">send</span> <span class="n">pid</span><span class="p">,</span> <span class="p">{</span><span class="ss">:first</span><span class="p">,</span> <span class="s2">&quot;Amazing first message!&quot;</span><span class="p">}</span>
+<span class="n">send</span> <span class="n">pid</span><span class="p">,</span> <span class="p">{</span><span class="ss">:first</span><span class="p">,</span> <span class="s2">&quot;Amazing first message!&quot;</span><span class="p">}</span>
 </code></pre></div>
 
 <p>Which gives us:</p>
@@ -162,8 +161,8 @@
 
 <div class="highlight"><pre><code class="bash"> 08:37:20.422 error Error in process &lt;0.51.0&gt; with <span class="nb">exit </span>value: ...
  <span class="o">(</span>EXIT from <span class="c">#PID&lt;0.48.0&gt;) an exception was raised:</span>
-	 <span class="o">(</span>RuntimeError<span class="o">)</span> Ouch
-	    main.exs:3: anonymous fn/0 in :elixircompiler0.FILE/1
+ <span class="o">(</span>RuntimeError<span class="o">)</span> Ouch
+	main.exs:3: anonymous fn/0 in :elixircompiler0.FILE/1
 </code></pre></div>
 
 <p>Note that, in this article, I will not use <a href="http://elixir-lang.org/docs/v1.0/elixir/Task.html">Elixir Tasks</a> to avoid manipulating too many concepts, even if it would lead to even better error messages, as explained in the official <a href="http://elixir-lang.org/getting-started/processes.html#tasks">documentation</a>:</p>
@@ -178,20 +177,20 @@
 
 <p>When I first got my hands on Elixir I wanted to send multiple messages to a process, so I did this:</p>
 
-<div class="highlight"><pre><code class="elixir"> <span class="n">pid</span> <span class="o">=</span> <span class="n">spawn</span><span class="p">(</span>
+<div class="highlight"><pre><code class="elixir"><span class="n">pid</span> <span class="o">=</span> <span class="n">spawn</span><span class="p">(</span>
   <span class="k">fn</span> <span class="o">-&gt;</span>
     <span class="no">IO</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;Starting Process&quot;</span>
     <span class="k">receive</span> <span class="k">do</span>
 <span class="k">      </span><span class="p">{</span><span class="ss">:first</span><span class="p">,</span> <span class="n">message</span><span class="p">}</span> <span class="o">-&gt;</span>
-        <span class="no">IO</span><span class="o">.</span><span class="n">puts</span> <span class="no">Enum</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;Received first: &quot;</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
+	 <span class="no">IO</span><span class="o">.</span><span class="n">puts</span> <span class="no">Enum</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;Received first: &quot;</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
       <span class="p">{</span><span class="ss">:second</span><span class="p">,</span> <span class="n">message</span><span class="p">}</span> <span class="o">-&gt;</span>
-        <span class="no">IO</span><span class="o">.</span><span class="n">puts</span> <span class="no">Enum</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;Received second: &quot;</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
+	 <span class="no">IO</span><span class="o">.</span><span class="n">puts</span> <span class="no">Enum</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;Received second: &quot;</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
     <span class="k">end</span>
   <span class="k">end</span>
 <span class="p">)</span>
 
- <span class="n">send</span> <span class="n">pid</span><span class="p">,</span> <span class="p">{</span><span class="ss">:first</span><span class="p">,</span> <span class="s2">&quot;Amazing first message!&quot;</span><span class="p">}</span>
- <span class="n">send</span> <span class="n">pid</span><span class="p">,</span> <span class="p">{</span><span class="ss">:second</span><span class="p">,</span> <span class="s2">&quot;Disappointing second message.&quot;</span><span class="p">}</span>
+<span class="n">send</span> <span class="n">pid</span><span class="p">,</span> <span class="p">{</span><span class="ss">:first</span><span class="p">,</span> <span class="s2">&quot;Amazing first message!&quot;</span><span class="p">}</span>
+<span class="n">send</span> <span class="n">pid</span><span class="p">,</span> <span class="p">{</span><span class="ss">:second</span><span class="p">,</span> <span class="s2">&quot;Disappointing second message.&quot;</span><span class="p">}</span>
 </code></pre></div>
 
 <p>However, running this would only give me:</p>
@@ -218,21 +217,21 @@
 
   <span class="k">defp</span> <span class="k">loop</span> <span class="k">do</span>
 <span class="k">    </span><span class="no">IO</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;Looping&quot;</span>
-      <span class="k">receive</span> <span class="k">do</span>
+    <span class="k">receive</span> <span class="k">do</span>
 <span class="k">      </span><span class="p">{</span><span class="ss">:first</span><span class="p">,</span> <span class="n">message</span><span class="p">}</span> <span class="o">-&gt;</span>
-        <span class="no">IO</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;Received first: &quot;</span> <span class="o">&lt;&gt;</span> <span class="n">message</span>
-        <span class="k">loop</span>
+	 <span class="no">IO</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;Received first: &quot;</span> <span class="o">&lt;&gt;</span> <span class="n">message</span>
+	 <span class="k">loop</span>
       <span class="p">{</span><span class="ss">:second</span><span class="p">,</span> <span class="n">message</span><span class="p">}</span> <span class="o">-&gt;</span>
-         <span class="no">IO</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;Received second: &quot;</span> <span class="o">&lt;&gt;</span> <span class="n">message</span>
-         <span class="k">loop</span>
+	 <span class="no">IO</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;Received second: &quot;</span> <span class="o">&lt;&gt;</span> <span class="n">message</span>
+	 <span class="k">loop</span>
     <span class="k">end</span>
   <span class="k">end</span>
- <span class="k">end</span>
+<span class="k">end</span>
 
- <span class="n">pid</span> <span class="o">=</span> <span class="no">Receiver</span><span class="o">.</span><span class="n">start</span>
- <span class="n">send</span> <span class="n">pid</span><span class="p">,</span> <span class="p">{</span><span class="ss">:first</span><span class="p">,</span> <span class="s2">&quot;Amazing first message!&quot;</span><span class="p">}</span>
- <span class="n">send</span> <span class="n">pid</span><span class="p">,</span> <span class="p">{</span><span class="ss">:second</span><span class="p">,</span> <span class="s2">&quot;Disappointing second message.&quot;</span><span class="p">}</span>
- <span class="n">send</span> <span class="n">pid</span><span class="p">,</span> <span class="p">{</span><span class="ss">:first</span><span class="p">,</span> <span class="s2">&quot;Amazing first message again!&quot;</span><span class="p">}</span>
+<span class="n">pid</span> <span class="o">=</span> <span class="no">Receiver</span><span class="o">.</span><span class="n">start</span>
+<span class="n">send</span> <span class="n">pid</span><span class="p">,</span> <span class="p">{</span><span class="ss">:first</span><span class="p">,</span> <span class="s2">&quot;Amazing first message!&quot;</span><span class="p">}</span>
+<span class="n">send</span> <span class="n">pid</span><span class="p">,</span> <span class="p">{</span><span class="ss">:second</span><span class="p">,</span> <span class="s2">&quot;Disappointing second message.&quot;</span><span class="p">}</span>
+<span class="n">send</span> <span class="n">pid</span><span class="p">,</span> <span class="p">{</span><span class="ss">:first</span><span class="p">,</span> <span class="s2">&quot;Amazing first message again!&quot;</span><span class="p">}</span>
 </code></pre></div>
 
 <p>Running the code above gives us:</p>
