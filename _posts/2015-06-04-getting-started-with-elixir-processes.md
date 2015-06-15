@@ -15,11 +15,11 @@ Hope it helps!
 
 ## Processes 101
 
-If you're getting into Elixir, knowing about processes is crucial. There's no way around it, it's a concept you have to know to get better and use the langage properly.
+If you're getting into [Elixir][3], knowing about processes is crucial. There's no way around it, it's a concept you have to know to get better and use the langage properly.
 
 > "Processes are not only the basis for concurrency in Elixir, but they also provide the means for building distributed and fault-tolerant programs."
 > 
-> [Elixir Documentation][3]
+> [Elixir Documentation][4]
 
 Note that Elixir should not be confused with operating system processes. Again, quoting the documentation:
 
@@ -101,7 +101,7 @@ Notice how the process is still alive right after the call to send, but dies sho
 
 ### Using Links
 
-I've been using "spawn" so far, but it's actually best to use "spawn\_link " instead. Quoting from [the Elixir documentation][4]:
+I've been using "spawn" so far, but it's actually best to use "spawn\_link " instead. Quoting from [the Elixir documentation][5]:
 
 > "The most common form of spawning in Elixir is actually via spawn\_link/1."
 
@@ -125,7 +125,7 @@ Running this outputs absolutely nothing. However, the version with "spawn\_link"
 	main.exs:3: anonymous fn/0 in :elixircompiler0.FILE/1
 {% endhighlight %}
 
-Note that, in this article, I will not use [Elixir Tasks][5] to avoid manipulating too many concepts, even if it would lead to even better error messages, as explained in the official [documentation][6]:
+Note that, in this article, I will not use [Elixir Tasks][6] to avoid manipulating too many concepts, even if it would lead to even better error messages, as explained in the official [documentation][7]:
 
 > With spawn/1 and spawn\_link/1 functions, the error messages are generated directly by the Virtual Machine and therefore compact and lacking in details. In practice, developers would rather use the functions in the Task module, more explicitly, Task.start/1 and Task.start\_link/1
 
@@ -163,7 +163,7 @@ This makes sense since the process shuts down once it received a message, as we 
 
 ### Keep On Listening
 
-This time we'll have to define a [module][7] to simplify everything. This module responds to a start method that will just spawn a process running its second method, "loop". I made loop method [private](), but it is not required for this to work.
+This time we'll have to define a [module][8] to simplify everything. This module responds to a start method that will just spawn a process running its second method, "loop". I made loop method [private](), but it is not required for this to work.
 
 The loop method is very similar to what our previous process would do, but this time it calls itself after receiving a message, maintaining state and keeping itself alive.
 
@@ -212,16 +212,17 @@ This gives us a lot of possibilities. For instane we could have some kind of arg
 
 ### Using Agents
 
-State is nice, but it feels very manual. In this case we could use [Agents][9] as a nice abstraction layer to get a similar behaviour.
+State is nice, but it feels very manual. In this case we could use [Agents][10] as a nice abstraction layer to get a similar behaviour.
 
-I won't get into details regarding Agents for now, but if you want to go further, I recommend [the official documentation][10] as a starting point.
+I won't get into details regarding Agents for now, but if you want to go further, I recommend [the official documentation][11] as a starting point.
 
 [1]:	http://elixir-lang.org/getting-started/basic-types.html
 [2]:	http://elixir-lang.org/getting-started/modules.html
-[3]:	http://elixir-lang.org/getting-started/processes.html
-[4]:	http://elixir-lang.org/getting-started/processes.html#links
-[5]:	http://elixir-lang.org/docs/v1.0/elixir/Task.html
-[6]:	http://elixir-lang.org/getting-started/processes.html#tasks
-[7]:	http://elixir-lang.org/getting-started/modules.html
-[9]:	http://elixir-lang.org/docs/stable/elixir/#!Agent.html
-[10]:	http://elixir-lang.org/getting-started/mix-otp/agent.html
+[3]:	http://
+[4]:	http://elixir-lang.org/getting-started/processes.html
+[5]:	http://elixir-lang.org/getting-started/processes.html#links
+[6]:	http://elixir-lang.org/docs/v1.0/elixir/Task.html
+[7]:	http://elixir-lang.org/getting-started/processes.html#tasks
+[8]:	http://elixir-lang.org/getting-started/modules.html
+[10]:	http://elixir-lang.org/docs/stable/elixir/#!Agent.html
+[11]:	http://elixir-lang.org/getting-started/mix-otp/agent.html
