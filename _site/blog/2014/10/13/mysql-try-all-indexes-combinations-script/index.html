@@ -67,7 +67,7 @@
 
 <p>At this point I need to say that you <strong>SHOULD NEVER</strong> just take the script’s word for what index to add. There are so many ways in which the script could mislead you if you have no idea of how to optimize queries for MySQL. An index speeding up a given query could slow down another or slow down insertions.</p>
 
-<p>Run your <code>EXPLAIN</code>s, your load tests. Take time to think about it.</p>
+<p>Run your <code class="highlighter-rouge">EXPLAIN</code>s, your load tests. Take time to think about it.</p>
 
 <p>In the end the results turned out to be a very nice base for discussion with the team and to really quickly test assumptions. We noticed that some indexes we thought that would be used for sure weren’t, investigated that and ended up greatly improving the speed of the query.</p>
 
@@ -102,6 +102,8 @@
             <p>Since you scrolled this far, you might as well take a look at some other things I wrote !</p>
             <ul>
               
+          
+            
           
             
           

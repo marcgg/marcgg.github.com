@@ -165,27 +165,25 @@
 
 <p>Once you know that a given user is A or B, it becomes very easy to change the website based on that information. Here’s a random snippet of code using Ruby, just in case that’s not clear enought:</p>
 
-<div class="highlight"><pre><code class="ruby"> <span class="k">if</span> <span class="n">user</span><span class="o">.</span><span class="n">experiment?</span><span class="p">(</span><span class="ss">:a</span><span class="p">)</span>
-  <span class="o">.</span><span class="n">.</span><span class="o">.</span>
- <span class="k">else</span>
- <span class="o">.</span><span class="n">.</span><span class="o">.</span>
- <span class="k">end</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">if</span> <span class="n">user</span><span class="p">.</span><span class="nf">experiment?</span><span class="p">(</span><span class="ss">:a</span><span class="p">)</span>
+  <span class="p">.</span><span class="nf">.</span><span class="p">.</span>
+ <span class="nf">else</span>
+ <span class="p">.</span><span class="nf">.</span><span class="p">.</span>
+ <span class="nf">end</span></code></pre></div>
 
 <p>Of course, try to do it in a way that is easy to revert. At Drivy we use a simple DSL that allows us to easily search for any part of the code that is related to an experiment. Here is what it looks when used in a HAML view:</p>
 
-<div class="highlight"><pre><code class="ruby"><span class="o">-</span><span class="c1"># Sets up tracking</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">-</span><span class="c1"># Sets up tracking</span>
 <span class="o">-</span> <span class="n">start_experiment</span><span class="p">(</span><span class="ss">:welcome_message</span><span class="p">)</span>
 
 <span class="o">-</span><span class="c1"># Displays things</span>
 <span class="o">=</span> <span class="n">render_experiment</span> <span class="k">do</span> <span class="o">|</span><span class="n">e</span><span class="o">|</span>
-  <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">first_variation</span> <span class="k">do</span>
+  <span class="o">=</span> <span class="n">e</span><span class="p">.</span><span class="nf">first_variation</span> <span class="k">do</span>
  <span class="no">Hello</span><span class="o">!</span>
-  <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">second_variation</span> <span class="k">do</span>
+  <span class="o">=</span> <span class="n">e</span><span class="p">.</span><span class="nf">second_variation</span> <span class="k">do</span>
  <span class="no">Hello</span> <span class="n">all!</span>
-  <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">original</span> <span class="k">do</span>
- <span class="no">Welcome</span><span class="o">.</span>
-</code></pre></div>
+  <span class="o">=</span> <span class="n">e</span><span class="p">.</span><span class="nf">original</span> <span class="k">do</span>
+ <span class="no">Welcome</span><span class="o">.</span></code></pre></div>
 
 <p><em>Protip: To be faster, don’t try to write robust and elegant code in an experiment. Treat it as a prototype that will be thrown away at the end - and then actually throw it away and rewrite everything once the experiment is over.</em></p>
 
@@ -222,6 +220,8 @@
             <p>Since you scrolled this far, you might as well take a look at some other things I wrote !</p>
             <ul>
               
+          
+            
           
             
           

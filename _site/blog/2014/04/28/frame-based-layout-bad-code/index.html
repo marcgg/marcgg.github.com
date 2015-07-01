@@ -49,7 +49,7 @@
 <div id="container">
   <div id="content">
     <div class="post">
-      <p>I’ve been writing code for a while. I started with QBasic when I was a kid and the two things I remember from
+      <p>I’ve been writing code for a while. I started with QBasic when I was a kid and the two things I remember from<br />
 that time was using PRINT and the fact I was dead confused by the editor I had to use.</p>
 
 <p>I might also have written something calculating my age based on my birthday…</p>
@@ -60,20 +60,20 @@ that time was using PRINT and the fact I was dead confused by the editor I had t
 
 <h2 id="the-internet">The Internet</h2>
 
-<p>A few years later, I’m around 12 years old and the internet is a brand new thing. I use my AOL browser and my 56k modem
+<p>A few years later, I’m around 12 years old and the internet is a brand new thing. I use my AOL browser and my 56k modem<br />
 to browse <em>the web</em> and it’s amazing.</p>
 
-<p>Seeing all these websites makes me want to create my own. Something great. Something about pokemons, AOL chatroom bots
+<p>Seeing all these websites makes me want to create my own. Something great. Something about pokemons, AOL chatroom bots<br />
 or whatever I was interested in at the time !</p>
 
-<p>The thing is that back then there was very little information available… or at least I didn’t know where to find it.
+<p>The thing is that back then there was very little information available… or at least I didn’t know where to find it.<br />
 After time spent on forums whinning for help, I only found that I had to download SiteAid.</p>
 
 <p>For reference, here is what it looked like in all its glory:</p>
 
 <div style="text-align: center"><img src="/assets/blog/siteaid.png" /></div>
 
-<p>Since I wanted a menu on the left and content on the right, I somehow understood that I could use frames to do that.
+<p>Since I wanted a menu on the left and content on the right, I somehow understood that I could use frames to do that.<br />
 After some fiddling around with the UI, I got it to work.</p>
 
 <p>The problem is that I stopped trying to figure out things here and started building my website.</p>
@@ -82,59 +82,54 @@ After some fiddling around with the UI, I got it to work.</p>
 
 <p>So first you want to create your main page:</p>
 
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;HTML&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;HTML&gt;</span>
 <span class="nt">&lt;HEAD&gt;</span>
 <span class="nt">&lt;TITLE&gt;</span>INTERNET!<span class="nt">&lt;/TITLE&gt;</span>
 <span class="nt">&lt;/HEAD&gt;</span>
-<span class="nt">&lt;FRAMESET</span> <span class="na">cols=</span><span class="s">&quot;20%, 80%&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">&quot;f1.html&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">&quot;f2.html&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;FRAMESET</span> <span class="na">cols=</span><span class="s">"20%, 80%"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">"f1.html"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">"f2.html"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/FRAMESET&gt;</span>
-<span class="nt">&lt;/HTML&gt;</span>
-</code></pre></div>
+<span class="nt">&lt;/HTML&gt;</span></code></pre></div>
 
 <p>Let’s add some sweet design in each frame file:</p>
 
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;BODY</span> <span class="na">bgcolor=</span><span class="s">&quot;orange&quot;</span><span class="nt">&gt;</span>Content!<span class="nt">&lt;/BODY&gt;</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;BODY</span> <span class="na">bgcolor=</span><span class="s">"orange"</span><span class="nt">&gt;</span>Content!<span class="nt">&lt;/BODY&gt;</span></code></pre></div>
 
 <p>Right away it starts looking good:</p>
 
 <div style="text-align: center"><img src="/assets/blog/frames/page1.png" /></div>
 
-<p>That’s nice, but I want to have more than 1 element in my left menu, so how can I do that ?
+<p>That’s nice, but I want to have more than 1 element in my left menu, so how can I do that ?<br />
 You could very much do this:</p>
 
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;BODY</span> <span class="na">bgcolor=</span><span class="s">&quot;orange&quot;</span><span class="nt">&gt;</span>Menu 1<span class="nt">&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;</span>Menu 2<span class="nt">&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;</span>Menu 3<span class="nt">&lt;/BODY&gt;</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;BODY</span> <span class="na">bgcolor=</span><span class="s">"orange"</span><span class="nt">&gt;</span>Menu 1<span class="nt">&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;</span>Menu 2<span class="nt">&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;</span>Menu 3<span class="nt">&lt;/BODY&gt;</span></code></pre></div>
 
-<p>The problem is that then you won’t have colors on your menu items ! That’s when my very clever trick
+<p>The problem is that then you won’t have colors on your menu items ! That’s when my very clever trick<br />
 comes in. You just need… more frames !</p>
 
 <p>Change f1.html to look like this:</p>
 
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;HTML&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;HTML&gt;</span>
 <span class="nt">&lt;HEAD&gt;</span>
 <span class="nt">&lt;TITLE&gt;</span>INTERNET!<span class="nt">&lt;/TITLE&gt;</span>
 <span class="nt">&lt;/HEAD&gt;</span>
-<span class="nt">&lt;FRAMESET</span> <span class="na">rows=</span><span class="s">&quot;25%, 25%, 25%, 25%&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">&quot;menu1.html&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">&quot;menu2.html&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">&quot;menu3.html&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">&quot;menu4.html&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;FRAMESET</span> <span class="na">rows=</span><span class="s">"25%, 25%, 25%, 25%"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">"menu1.html"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">"menu2.html"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">"menu3.html"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">"menu4.html"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/FRAMESET&gt;</span>
-<span class="nt">&lt;/HTML&gt;</span>
-</code></pre></div>
+<span class="nt">&lt;/HTML&gt;</span></code></pre></div>
 
 <p>Wow. Such color. Much design.</p>
 
 <div style="text-align: center"><img src="/assets/blog/frames/page2.png" /></div>
 
-<p>You can even create some impressive gradients with only a few more lines of code and
+<p>You can even create some impressive gradients with only a few more lines of code and<br />
 knowledge of <em>advanced colors in HTML</em>.</p>
 
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;BODY</span> <span class="na">bgcolor=</span><span class="s">&quot;black&quot;</span> <span class="na">text=</span><span class="s">&quot;white&quot;</span><span class="nt">&gt;</span>Menu 1<span class="nt">&lt;/BODY&gt;</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;BODY</span> <span class="na">bgcolor=</span><span class="s">"black"</span> <span class="na">text=</span><span class="s">"white"</span><span class="nt">&gt;</span>Menu 1<span class="nt">&lt;/BODY&gt;</span></code></pre></div>
 
 <div style="text-align: center"><img src="/assets/blog/frames/page3.png" /></div>
 
@@ -144,34 +139,32 @@ knowledge of <em>advanced colors in HTML</em>.</p>
 
 <p>You only need to change menu.html like this:</p>
 
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;HTML&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;HTML&gt;</span>
 <span class="nt">&lt;HEAD&gt;</span>
 <span class="nt">&lt;TITLE&gt;</span>INTERNET!<span class="nt">&lt;/TITLE&gt;</span>
 <span class="nt">&lt;/HEAD&gt;</span>
-<span class="nt">&lt;FRAMESET</span> <span class="na">cols=</span><span class="s">&quot;20%, 80%&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">&quot;new.gif&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">&quot;menu1_text.html&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;FRAMESET</span> <span class="na">cols=</span><span class="s">"20%, 80%"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">"new.gif"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">"menu1_text.html"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/FRAMESET&gt;</span>
-<span class="nt">&lt;/HTML&gt;</span>
-</code></pre></div>
+<span class="nt">&lt;/HTML&gt;</span></code></pre></div>
 
 <div style="text-align: center"><img src="/assets/blog/frames/page4.png" /></div>
 
 <p>Perfect.</p>
 
-<p>Now for the protip. If you want your website to look perfect, you want to hide the construction
+<p>Now for the protip. If you want your website to look perfect, you want to hide the construction<br />
 lines that are the frame borders. To do this, add a frameborder set to 0.</p>
 
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;HTML&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;HTML&gt;</span>
 <span class="nt">&lt;HEAD&gt;</span>
 <span class="nt">&lt;TITLE&gt;</span>INTERNET!<span class="nt">&lt;/TITLE&gt;</span>
 <span class="nt">&lt;/HEAD&gt;</span>
-<span class="nt">&lt;FRAMESET</span> <span class="na">cols=</span><span class="s">&quot;20%, 80%&quot;</span> <span class="na">frameborder=</span><span class="s">&quot;0&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">&quot;f1.html&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">&quot;f2.html&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;FRAMESET</span> <span class="na">cols=</span><span class="s">"20%, 80%"</span> <span class="na">frameborder=</span><span class="s">"0"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">"f1.html"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">"f2.html"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/FRAMESET&gt;</span>
-<span class="nt">&lt;/HTML&gt;</span>
-</code></pre></div>
+<span class="nt">&lt;/HTML&gt;</span></code></pre></div>
 
 <p>Now you have a professional looking website.</p>
 
@@ -181,14 +174,14 @@ lines that are the frame borders. To do this, add a frameborder set to 0.</p>
 
 <h2 id="the-worst-code">The Worst Code</h2>
 
-<p>My take on this is that the code you wrote yesterday will always be crap compared to what you can
+<p>My take on this is that the code you wrote yesterday will always be crap compared to what you can<br />
 write today. Don’t be depressed about it, that’s a good thing ! It means you’re getting better!</p>
 
-<p>On some forum a few years back, someone asked “what’s the worst code you ever saw ?”.
-Someone responded something along the line of “every single piece of code I’ve written a long enough time ago”.
+<p>On some forum a few years back, someone asked “what’s the worst code you ever saw ?”.<br />
+Someone responded something along the line of “every single piece of code I’ve written a long enough time ago”.<br />
 I really liked this answer, quite humbling and much better than bashing a coworker or a random funny story.</p>
 
-<p>So keep improving your skills, don’t feel too bad about past coding mistakes and don’t hate on new developers
+<p>So keep improving your skills, don’t feel too bad about past coding mistakes and don’t hate on new developers<br />
 still learning - you were making the same mistakes at some point !</p>
 
 
@@ -201,6 +194,8 @@ still learning - you were making the same mistakes at some point !</p>
             <p>Since you scrolled this far, you might as well take a look at some other things I wrote !</p>
             <ul>
               
+          
+            
           
             
           

@@ -49,55 +49,53 @@
 <div id="container">
   <div id="content">
     <div class="post">
-      <p>A while ago I <a href="/blog/2013/08/29/appgyver-steroids-iphone-hybrid-javascript/">wrote about AppGyver’s SteroidsJS</a>
-and its interesting take on hybrid app development. If you haven’t read it, basically they add the ability
+      <p>A while ago I <a href="/blog/2013/08/29/appgyver-steroids-iphone-hybrid-javascript/">wrote about AppGyver’s SteroidsJS</a><br />
+and its interesting take on hybrid app development. If you haven’t read it, basically they add the ability<br />
 to use native UI elements in PhoneGap applications.</p>
 
-<p>Since then I’ve teamed up
-with <a href="http://dribbble.com/kevintunc">Kevin Tunc</a>, worked a lot, managed to actually release something
-<a href="https://itunes.apple.com/app/liff-understand-your-life/id834944345">on the appstore</a> and
+<p>Since then I’ve teamed up<br />
+with <a href="http://dribbble.com/kevintunc">Kevin Tunc</a>, worked a lot, managed to actually release something<br />
+<a href="https://itunes.apple.com/app/liff-understand-your-life/id834944345">on the appstore</a> and<br />
 won AppGyver’s app of the month!</p>
 
 <div style="text-align: center"><img src="/assets/misc/win_app_month.jpg" /></div>
 
-<p>It wasn’t all that easy to create an hybrid app with a quality UI,
-so I figured I’d share some of the gotchas I ran into.
-I know it’s a longer article than what I use to post, but really this is what I wish was written when I started
+<p>It wasn’t all that easy to create an hybrid app with a quality UI,<br />
+so I figured I’d share some of the gotchas I ran into.<br />
+I know it’s a longer article than what I use to post, but really this is what I wish was written when I started<br />
 working on my app.</p>
 
-<p>Of course, like any other things I write here,
-<a href="/blog/2013/11/05/enough-with-the-language-trolls/">I don’t claim to know everything</a>.
-Please take this as it is: some tips I learned making mistakes and wasting time.
-I’m no JavaScript guru master ninja 2.0 rock star,
-<a href="https://www.youtube.com/watch?v=Nh7UgAprdpM">ain’t nobody got time for that</a>!
-I’ll also focus on iOS because I built an iOS app, but a lot of this
-applies to Android phones as well. Also note that some parts of the article are just as
+<p>Of course, like any other things I write here,<br />
+<a href="/blog/2013/11/05/enough-with-the-language-trolls/">I don’t claim to know everything</a>.<br />
+Please take this as it is: some tips I learned making mistakes and wasting time.<br />
+I’m no JavaScript guru master ninja 2.0 rock star,<br />
+<a href="https://www.youtube.com/watch?v=Nh7UgAprdpM">ain’t nobody got time for that</a>!<br />
+I’ll also focus on iOS because I built an iOS app, but a lot of this<br />
+applies to Android phones as well. Also note that some parts of the article are just as<br />
 true for any kind of hybrid app development, be it with PhoneGap or something else.</p>
 
 <h2 id="getting-the-device-to-leave-you-alone">Getting The Device To Leave You Alone</h2>
 
-<p>You probably know all about using a <a href="http://meyerweb.com/eric/tools/css/reset/">reset.css file</a>, but
+<p>You probably know all about using a <a href="http://meyerweb.com/eric/tools/css/reset/">reset.css file</a>, but<br />
 for a webview trying to pass for a native view, it’s not enough.</p>
 
 <h3 id="ms-tap-delay">300ms Tap Delay</h3>
 
-<p>Mobile browsers implement a delay on tap to check if you tried to double
-tap or not. Overall it goes: touchstart -&gt; touchend -&gt; wait 300ms -&gt;
-send click. This results in a terrible experience when navigating your
+<p>Mobile browsers implement a delay on tap to check if you tried to double<br />
+tap or not. Overall it goes: touchstart -&gt; touchend -&gt; wait 300ms -&gt;<br />
+send click. This results in a terrible experience when navigating your<br />
 app as it feels slow and/or broken.</p>
 
-<p>For some browsers you can just
+<p>For some browsers you can just<br />
 <a href="http://updates.html5rocks.com/2013/12/300ms-tap-delay-gone-away">specify a viewport and it’ll go away</a>:</p>
 
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;width=device-width, user-scalable=no&quot;</span><span class="nt">&gt;</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, user-scalable=no"</span><span class="nt">&gt;</span></code></pre></div>
 
 <p>If this solution doesn’t work, for instance if your code runs on Safari, use <a href="https://github.com/ftlabs/fastclick">FastClick</a>:</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;load&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'load'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">FastClick</span><span class="p">.</span><span class="nx">attach</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
-<span class="p">},</span> <span class="kc">false</span><span class="p">);</span>
-</code></pre></div>
+<span class="p">},</span> <span class="kc">false</span><span class="p">);</span></code></pre></div>
 
 <h3 id="disable-selectioncopy-when-long-tapping">Disable Selection/Copy When Long Tapping</h3>
 
@@ -107,51 +105,49 @@ app as it feels slow and/or broken.</p>
 
 <p>Fixing this one is pretty easy. For webkit you add this in your CSS:</p>
 
-<div class="highlight"><pre><code class="css"><span class="nt">-webkit-user-select</span><span class="o">:</span> <span class="nt">none</span><span class="o">;</span>
-<span class="nt">-webkit-touch-callout</span><span class="o">:</span> <span class="nt">none</span><span class="o">;</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">-webkit-user-select</span><span class="o">:</span> <span class="nt">none</span><span class="o">;</span>
+<span class="nt">-webkit-touch-callout</span><span class="o">:</span> <span class="nt">none</span><span class="o">;</span></code></pre></div>
 
 <h3 id="disable-double-tap">Disable Double Tap</h3>
 
-<p>If you don’t like double tapping and use jQuery, try <a href="http://stackoverflow.com/a/9728511">this stackoverflow answer</a>.
+<p>If you don’t like double tapping and use jQuery, try <a href="http://stackoverflow.com/a/9728511">this stackoverflow answer</a>.<br />
 Just in case this answer disapears, here’s what it looks like:</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="c1">// jQuery no-double-tap-zoom plugin</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// jQuery no-double-tap-zoom plugin</span>
 <span class="c1">// Triple-licensed: Public Domain, MIT and WTFPL license - share and enjoy!</span>
 
 <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">$</span><span class="p">)</span> <span class="p">{</span>
   <span class="kd">var</span> <span class="nx">IS_IOS</span> <span class="o">=</span> <span class="sr">/iphone|ipad/i</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">userAgent</span><span class="p">);</span>
   <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">nodoubletapzoom</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="nx">IS_IOS</span><span class="p">)</span>
-      <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">bind</span><span class="p">(</span><span class="s1">&#39;touchstart&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="nx">preventZoom</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">bind</span><span class="p">(</span><span class="s1">'touchstart'</span><span class="p">,</span> <span class="kd">function</span> <span class="nx">preventZoom</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
         <span class="kd">var</span> <span class="nx">t2</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">timeStamp</span>
-          <span class="p">,</span> <span class="nx">t1</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">data</span><span class="p">(</span><span class="s1">&#39;lastTouch&#39;</span><span class="p">)</span> <span class="o">||</span> <span class="nx">t2</span>
+          <span class="p">,</span> <span class="nx">t1</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">data</span><span class="p">(</span><span class="s1">'lastTouch'</span><span class="p">)</span> <span class="o">||</span> <span class="nx">t2</span>
           <span class="p">,</span> <span class="nx">dt</span> <span class="o">=</span> <span class="nx">t2</span> <span class="o">-</span> <span class="nx">t1</span>
           <span class="p">,</span> <span class="nx">fingers</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">originalEvent</span><span class="p">.</span><span class="nx">touches</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
-        <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">data</span><span class="p">(</span><span class="s1">&#39;lastTouch&#39;</span><span class="p">,</span> <span class="nx">t2</span><span class="p">);</span>
+        <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">data</span><span class="p">(</span><span class="s1">'lastTouch'</span><span class="p">,</span> <span class="nx">t2</span><span class="p">);</span>
         <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">dt</span> <span class="o">||</span> <span class="nx">dt</span> <span class="o">&gt;</span> <span class="mi">500</span> <span class="o">||</span> <span class="nx">fingers</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span> <span class="c1">// not double-tap</span>
 
         <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span> <span class="c1">// double tap - prevent the zoom</span>
         <span class="c1">// also synthesize click events we just swallowed up</span>
-        <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">trigger</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">).</span><span class="nx">trigger</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">);</span>
+        <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">trigger</span><span class="p">(</span><span class="s1">'click'</span><span class="p">).</span><span class="nx">trigger</span><span class="p">(</span><span class="s1">'click'</span><span class="p">);</span>
       <span class="p">});</span>
   <span class="p">};</span>
-<span class="p">})(</span><span class="nx">jQuery</span><span class="p">);</span>
-</code></pre></div>
+<span class="p">})(</span><span class="nx">jQuery</span><span class="p">);</span></code></pre></div>
 
 <h3 id="disable-overscroll">Disable Overscroll</h3>
 
-<p>I think that you want the “bounce” effect when you scroll out of a
-webview. It actually feels better for the end user. However in some
-specific cases you might need to disable this behavior. There are many ways of doing this and I personnaly used
-this one from
+<p>I think that you want the “bounce” effect when you scroll out of a<br />
+webview. It actually feels better for the end user. However in some<br />
+specific cases you might need to disable this behavior. There are many ways of doing this and I personnaly used<br />
+this one from<br />
 <a href="http://stackoverflow.com/questions/10238084/ios-safari-how-to-disable-overscroll-but-allow-scrollable-divs-to-scroll-norma">stackoverflow</a>:</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="kd">function</span> <span class="nx">disallowOverscroll</span><span class="p">(){</span>
-  <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;touchmove&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">disallowOverscroll</span><span class="p">(){</span>
+  <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'touchmove'</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span>
     <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
   <span class="p">});</span>
-  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;body&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;touchstart&#39;</span><span class="p">,</span><span class="s1">&#39;.scrollable&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s1">'body'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'touchstart'</span><span class="p">,</span><span class="s1">'.scrollable'</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">currentTarget</span><span class="p">.</span><span class="nx">scrollTop</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
       <span class="nx">e</span><span class="p">.</span><span class="nx">currentTarget</span><span class="p">.</span><span class="nx">scrollTop</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
     <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">currentTarget</span><span class="p">.</span><span class="nx">scrollHeight</span>
@@ -160,141 +156,131 @@ this one from
       <span class="nx">e</span><span class="p">.</span><span class="nx">currentTarget</span><span class="p">.</span><span class="nx">scrollTop</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
     <span class="p">}</span>
   <span class="p">});</span>
-  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;body&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;touchmove&#39;</span><span class="p">,</span><span class="s1">&#39;.scrollable&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s1">'body'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'touchmove'</span><span class="p">,</span><span class="s1">'.scrollable'</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">e</span><span class="p">.</span><span class="nx">stopPropagation</span><span class="p">();</span>
   <span class="p">});</span>
-<span class="p">}</span>
-</code></pre></div>
+<span class="p">}</span></code></pre></div>
 
 <h3 id="higcharts">Higcharts</h3>
 
-<p>If you use <a href="http://www.highcharts.com/">highcharts</a>, you could run into some scrolling trouble when
-the user touches the graphs. This gist might help:
+<p>If you use <a href="http://www.highcharts.com/">highcharts</a>, you could run into some scrolling trouble when<br />
+the user touches the graphs. This gist might help:<br />
 <a href="https://gist.github.com/skarface/2994906">https://gist.github.com/skarface/2994906</a></p>
 
 <h3 id="allow-text-selection-for-input">Allow Text Selection For Input</h3>
 
-<p>This is an iOS issue. In some cases you won’t be able to select and edit
-the text in your inputs as you’d like. You can fix this using
+<p>This is an iOS issue. In some cases you won’t be able to select and edit<br />
+the text in your inputs as you’d like. You can fix this using<br />
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/user-select">user-select</a></p>
 
-<div class="highlight"><pre><code class="css"><span class="nt">-webkit-user-select</span><span class="o">:</span> <span class="nt">text</span><span class="o">;</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">-webkit-user-select</span><span class="o">:</span> <span class="nt">text</span><span class="o">;</span></code></pre></div>
 
 <h3 id="better-looking-text">Better Looking Text</h3>
 
-<p>I noticed that changing the
-<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-rendering">text-rendering</a>
-option gets things to look better. The trade-off is performance, but if you don’t have
+<p>I noticed that changing the<br />
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-rendering">text-rendering</a><br />
+option gets things to look better. The trade-off is performance, but if you don’t have<br />
 huge chunks of text you’ll be fine.</p>
 
-<div class="highlight"><pre><code class="css"><span class="nt">text-rendering</span><span class="o">:</span> <span class="nt">optimizeLegibility</span><span class="o">;</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">text-rendering</span><span class="o">:</span> <span class="nt">optimizeLegibility</span><span class="o">;</span></code></pre></div>
 
 <h3 id="remove-glossy-looking-buttons-in-safari">Remove Glossy Looking Buttons in Safari</h3>
 
-<p>How to go from a glossy stylized button (left) to a cleaner, flatter,
+<p>How to go from a glossy stylized button (left) to a cleaner, flatter,<br />
 easier to update button (right)?</p>
 
 <div style="text-align: center"><img src="/assets/misc/glossysafari.jpg" /></div>
 
 <p>Easy!</p>
 
-<div class="highlight"><pre><code class="css"><span class="nt">-webkit-appearance</span><span class="o">:</span> <span class="nt">carret</span><span class="o">;</span>
-<span class="nt">-webkit-appearance</span><span class="o">:</span> <span class="nt">none</span><span class="o">;</span> <span class="c">/* alernatively */</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">-webkit-appearance</span><span class="o">:</span> <span class="nt">carret</span><span class="o">;</span>
+<span class="nt">-webkit-appearance</span><span class="o">:</span> <span class="nt">none</span><span class="o">;</span> <span class="c">/* alernatively */</span></code></pre></div>
 
-<p>You can read more about this <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/-moz-appearance">here</a>.
-I also found that changing box sizing could help in the “undesign” process. Smarter people than me explained
-<a href="http://www.paulirish.com/2012/box-sizing-border-box-ftw/">how it works</a>,
+<p>You can read more about this <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/-moz-appearance">here</a>.<br />
+I also found that changing box sizing could help in the “undesign” process. Smarter people than me explained<br />
+<a href="http://www.paulirish.com/2012/box-sizing-border-box-ftw/">how it works</a>,<br />
 you can <a href="http://quirksmode.org/css/user-interface/boxsizing.html">read about it</a> or try it out like this:</p>
 
-<div class="highlight"><pre><code class="css"><span class="nt">-webkit-box-sizing</span><span class="o">:</span> <span class="nt">border-box</span><span class="o">;</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">-webkit-box-sizing</span><span class="o">:</span> <span class="nt">border-box</span><span class="o">;</span></code></pre></div>
 
 <h3 id="removing-gray-highlight-when-tapping-links">Removing Gray Highlight When Tapping Links</h3>
 
-<p>On mobile Safari, tapped links will get quickly highlighted, which
-doesn’t look very “native” once embeded in a Steroids JS webview. This is especialy true
+<p>On mobile Safari, tapped links will get quickly highlighted, which<br />
+doesn’t look very “native” once embeded in a Steroids JS webview. This is especialy true<br />
 for images. Change this using:</p>
 
-<div class="highlight"><pre><code class="css"><span class="nt">-webkit-tap-highlight-color</span><span class="o">:</span> <span class="nf">#123456</span><span class="o">;</span> <span class="c">/* To change it */</span>
-<span class="nt">-webkit-tap-highlight-color</span><span class="o">:</span> <span class="nt">transparent</span><span class="o">;</span> <span class="c">/* To remove it */</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">-webkit-tap-highlight-color</span><span class="o">:</span> <span class="nf">#123456</span><span class="o">;</span> <span class="c">/* To change it */</span>
+<span class="nt">-webkit-tap-highlight-color</span><span class="o">:</span> <span class="nt">transparent</span><span class="o">;</span> <span class="c">/* To remove it */</span></code></pre></div>
 
 <p>I found that changing the color feels better than removing it.</p>
 
 <h3 id="overflow-scrolling">Overflow Scrolling</h3>
 
-<p>If you have some elements that are set to scroll when overflowing, you
-might feel that the scrolling itself doesn’t “feel right”. I suggest
+<p>If you have some elements that are set to scroll when overflowing, you<br />
+might feel that the scrolling itself doesn’t “feel right”. I suggest<br />
 looking in this direction:</p>
 
-<div class="highlight"><pre><code class="css"> <span class="nt">-webkit-overflow-scrolling</span><span class="o">:</span> <span class="nt">touch</span><span class="o">;</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">-webkit-overflow-scrolling</span><span class="o">:</span> <span class="nt">touch</span><span class="o">;</span></code></pre></div>
 
 <h3 id="on-fluid-layouts">On Fluid Layouts</h3>
 
-<p>Using percentages for size can be a good option to handle different screen sizes.
-Just know that there is a <a href="https://github.com/twbs/bootstrap/issues/9282">known issue</a> where Safari
+<p>Using percentages for size can be a good option to handle different screen sizes.<br />
+Just know that there is a <a href="https://github.com/twbs/bootstrap/issues/9282">known issue</a> where Safari<br />
 rounds up percentages that can cause for weird behaviors when using fluid layouts.</p>
 
 <h2 id="retina">Retina</h2>
 
-<p>If you build for iOS, you have to take retina into account. Spoiler:
+<p>If you build for iOS, you have to take retina into account. Spoiler:<br />
 it’s a pain.</p>
 
 <h3 id="the-big-idea">The Big Idea</h3>
 
 <blockquote>
-  <p>Retina Display is a brand name used by Apple for liquid crystal displays
-that have a pixel density high enough that the human eye is unable to discern
+  <p>Retina Display is a brand name used by Apple for liquid crystal displays<br />
+that have a pixel density high enough that the human eye is unable to discern<br />
 individual pixels at a typical viewing distance.</p>
 
   <p><a href="http://en.wikipedia.org/wiki/Retina_Display">wikipedia</a></p>
 </blockquote>
 
-<p>The short version of how to deal with it is pretty straightforward: create images twice as big, call them
+<p>The short version of how to deal with it is pretty straightforward: create images twice as big, call them<br />
 my_image@2x.jpg and resize them in CSS.</p>
 
-<div class="highlight"><pre><code class="css"><span class="nt">background</span><span class="o">:</span> <span class="nt">url</span><span class="o">(</span><span class="nt">my_image</span><span class="nc">.jpg</span><span class="o">);</span>
-<span class="nt">background-size</span><span class="o">:</span> <span class="nt">100px</span> <span class="nt">100px</span><span class="o">;</span> <span class="c">/* with my_image.jpg being 200x200 px */</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">background</span><span class="o">:</span> <span class="nt">url</span><span class="o">(</span><span class="nt">my_image</span><span class="nc">.jpg</span><span class="o">);</span>
+<span class="nt">background-size</span><span class="o">:</span> <span class="nt">100px</span> <span class="nt">100px</span><span class="o">;</span> <span class="c">/* with my_image.jpg being 200x200 px */</span></code></pre></div>
 
 <h3 id="dont-bother-with-normal-size">Don’t Bother With Normal Size</h3>
 
-<p>If all your images are in your build and not on a remote server, I would recommend always loading the @2x version.
-The rule of thumb is that if it looks fine in retina, it will look fine in 1x and embeding
+<p>If all your images are in your build and not on a remote server, I would recommend always loading the @2x version.<br />
+The rule of thumb is that if it looks fine in retina, it will look fine in 1x and embeding<br />
 the 1x image will only increase your build’s size and complexify the way you manage your assets.</p>
 
 <h3 id="background-position">Background Position</h3>
 
-<p>Be careful when using background positions with background sizes as they
+<p>Be careful when using background positions with background sizes as they<br />
 sometimes <a href="http://stackoverflow.com/questions/17033806/background-size-with-background-position-doesnt-scale-the-position">don’t play well together</a>.</p>
 
 <h3 id="px-border">1px Border</h3>
 
-<p>If you specify a 1px border in your CSS, a 2px border will be displayed
-on retina displays. Yeah, this is pretty unituitive and a major pain.
+<p>If you specify a 1px border in your CSS, a 2px border will be displayed<br />
+on retina displays. Yeah, this is pretty unituitive and a major pain.<br />
 There are a lot of ways to try to get this to work.</p>
 
-<p>This might not be best for you but, for my use case, I found
-<a href="https://excellenteasy.com/devblog/posts/how-to-target-physical-pixels-on-retina-screens-with-css/">Stephan Bönnemann’s solution</a>
+<p>This might not be best for you but, for my use case, I found<br />
+<a href="https://excellenteasy.com/devblog/posts/how-to-target-physical-pixels-on-retina-screens-with-css/">Stephan Bönnemann’s solution</a><br />
 simpler, and I ended adding a DOM element and styling it like this:</p>
 
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;physical_1px&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"physical_1px"</span><span class="nt">&gt;&lt;/div&gt;</span></code></pre></div>
 
-<div class="highlight"><pre><code class="css"><span class="nc">.physical_1px</span><span class="p">{</span>
-  <span class="k">background-image</span><span class="o">:</span> <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="m">0</span><span class="n">deg</span><span class="o">,</span> <span class="m">#DFDFDF</span><span class="o">,</span> <span class="m">#DFDFDF</span> <span class="m">50</span><span class="o">%,</span> <span class="k">transparent</span> <span class="m">50</span><span class="o">%</span><span class="p">);</span>
-  <span class="k">background</span><span class="o">-</span><span class="k">size</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span> <span class="m">1px</span><span class="p">;</span>
-  <span class="k">background-repeat</span><span class="o">:</span> <span class="k">no-repeat</span><span class="p">;</span>
-  <span class="k">background-position</span><span class="o">:</span> <span class="k">bottom</span><span class="p">;</span>
-  <span class="k">height</span><span class="o">:</span> <span class="m">1px</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.physical_1px</span><span class="p">{</span>
+  <span class="nl">background-image</span><span class="p">:</span> <span class="n">linear-gradient</span><span class="p">(</span><span class="m">0deg</span><span class="p">,</span> <span class="m">#DFDFDF</span><span class="p">,</span> <span class="m">#DFDFDF</span> <span class="m">50%</span><span class="p">,</span> <span class="nb">transparent</span> <span class="m">50%</span><span class="p">);</span>
+  <span class="nl">background-size</span><span class="p">:</span> <span class="m">100%</span> <span class="m">1px</span><span class="p">;</span>
+  <span class="nl">background-repeat</span><span class="p">:</span> <span class="nb">no-repeat</span><span class="p">;</span>
+  <span class="nl">background-position</span><span class="p">:</span> <span class="nb">bottom</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">1px</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
 
-<p>This is not ideal, but I wasn’t a fan of the alternatives either. Check
+<p>This is not ideal, but I wasn’t a fan of the alternatives either. Check<br />
 them out and make an opinion for yourself:</p>
 
 <ul>
@@ -307,339 +293,330 @@ them out and make an opinion for yourself:</p>
 
 <h3 id="avoid-http-calls">Avoid HTTP Calls</h3>
 
-<p>This seems obvious, but embed as many images and javascript libraries as possible in your build.
-It will run on mobile, and connectivity is an issue there. Yes it does increases build size, but
+<p>This seems obvious, but embed as many images and javascript libraries as possible in your build.<br />
+It will run on mobile, and connectivity is an issue there. Yes it does increases build size, but<br />
 it’s totally worth it.</p>
 
 <h3 id="jquery-">jQuery ?</h3>
 
 <p>I used jQuery. There, I said it.</p>
 
-<p>I knew it would degrade performances, but I benchmarked it a bit versus Vanilla JS and the
-difference was not really noticable for my use cases, so I kept it because I’m used to the
+<p>I knew it would degrade performances, but I benchmarked it a bit versus Vanilla JS and the<br />
+difference was not really noticable for my use cases, so I kept it because I’m used to the<br />
 syntax and it <a href="/blog/2013/11/05/enough-with-the-language-trolls/">gets the job done</a>.</p>
 
-<p>Of course I followed <a href="http://www.artzstudio.com/2009/04/jquery-performance-rules/">the usual performances tips</a>,
-not too much DOM manipulation, do not reselect the same element over and
+<p>Of course I followed <a href="http://www.artzstudio.com/2009/04/jquery-performance-rules/">the usual performances tips</a>,<br />
+not too much DOM manipulation, do not reselect the same element over and<br />
 over etc.</p>
 
 <h3 id="css-performances">CSS Performances</h3>
 
 <h4 id="animations">Animations</h4>
 
-<p>On a lot of devices CSS animations are slow. Often it’s not slow enough
+<p>On a lot of devices CSS animations are slow. Often it’s not slow enough<br />
 you want to stop using them altogether, but they are still not that good.</p>
 
 <p>My point is that you should not count on perfectly smooth animations when designing your app.</p>
 
 <h4 id="linear-gradients-qtwebkit-and-graphics">Linear Gradients, QtWebkit and Graphics</h4>
 
-<p>During development I did run into major CSS performance issues. I’m not even kidding.
+<p>During development I did run into major CSS performance issues. I’m not even kidding.<br />
 This happened when I tried to apply an animation to a div with a linear-gradient.</p>
 
 <blockquote>
-  <p>Sometimes it’s tempting to use webkit’s drawing features, like -webkit-gradient,
-when it’s not actually necessary - maintaining images and dealing with Photoshop
-and drawing tools can be a hassle. However, using CSS for those tasks moves that
-hassle from the designer’s computer to the target’s CPU. Gradients, shadows,
-and other decorations in CSS should be used only when necessary
-(e.g. when the shape is dynamic based on the content) - <strong>otherwise, static images
-are always faster</strong>. On very low-end platforms, it’s even advised to use static images
+  <p>Sometimes it’s tempting to use webkit’s drawing features, like -webkit-gradient,<br />
+when it’s not actually necessary - maintaining images and dealing with Photoshop<br />
+and drawing tools can be a hassle. However, using CSS for those tasks moves that<br />
+hassle from the designer’s computer to the target’s CPU. Gradients, shadows,<br />
+and other decorations in CSS should be used only when necessary<br />
+(e.g. when the shape is dynamic based on the content) - <strong>otherwise, static images<br />
+are always faster</strong>. On very low-end platforms, it’s even advised to use static images<br />
 for some of the text if possible.</p>
 
   <p><a href="https://trac.webkit.org/wiki/QtWebKitGraphics#Usestaticimages">webkit.org</a></p>
 </blockquote>
 
-<p>The solution here is to prefer using images as background images rather
-than CSS gradients. This is irritating, but I never found a way
+<p>The solution here is to prefer using images as background images rather<br />
+than CSS gradients. This is irritating, but I never found a way<br />
 around this performance issue.</p>
 
 <h3 id="javascript">JavaScript</h3>
 
-<p>I’m not going to explain everything about JS performances. This could be
-a serie of articles in itself. It could even be a book.
+<p>I’m not going to explain everything about JS performances. This could be<br />
+a serie of articles in itself. It could even be a book.<br />
 Actually, it is a book! <a href="http://shop.oreilly.com/product/9780596802806.do">Go check it out</a>!</p>
 
-<p>To sum it up: reuse objects, do not lock processes, be evented, large
+<p>To sum it up: reuse objects, do not lock processes, be evented, large<br />
 arrays will slow everything down.</p>
 
 <h2 id="working-with-steroidsjs">Working with SteroidsJS</h2>
 
-<p>Alright, we talked a lot of general facts that could apply to any hybrid
+<p>Alright, we talked a lot of general facts that could apply to any hybrid<br />
 HTML 5 / CSS 3 app, but what about SteroidsJS itself?</p>
 
 <h3 id="learning">Learning</h3>
 
-<p>Like any new libraries there will be problems, bugs and API changes.
+<p>Like any new libraries there will be problems, bugs and API changes.<br />
 It is important to keep up to date, I’d suggest:</p>
 
 <ul>
   <li>Following what goes on in the <a href="http://forums.appgyver.com">forums</a></li>
-  <li>Keep an eye on the <a href="http://blog.appgyver.com/changelog/">changelog</a>
+  <li>Keep an eye on the <a href="http://blog.appgyver.com/changelog/">changelog</a><br />
 and the <a href="http://blog.appgyver.com/">blog</a></li>
 </ul>
 
 <p>For documentation and tips on how to code:</p>
 
 <ul>
-  <li>Use <a href="http://docs.appgyver.com/en/edge/index.html">the API documentation</a> which is quite
-extensive. Be aware that it is very poorly referenced on Google right now so
+  <li>Use <a href="http://docs.appgyver.com/en/edge/index.html">the API documentation</a> which is quite<br />
+extensive. Be aware that it is very poorly referenced on Google right now so<br />
 you’ll have to be precise in your searches.</li>
-  <li>Reading <a href="http://academy.appgyver.com/">the tutorials</a>
-is a must. They are well done and give a good overview of what the technology can do.
+  <li>Reading <a href="http://academy.appgyver.com/">the tutorials</a><br />
+is a must. They are well done and give a good overview of what the technology can do.<br />
 There are also a lot of good step by step examples.</li>
 </ul>
 
 <h3 id="organizing-code">Organizing Code</h3>
 
-<p>I personnally didn’t go the AngularJS route because it felt overkill for
-what I tried to achieve. I also didn’t like the MVC solution proposed by
-basic steroids scaffolding. In the end what worked for me was quite
+<p>I personnally didn’t go the AngularJS route because it felt overkill for<br />
+what I tried to achieve. I also didn’t like the MVC solution proposed by<br />
+basic steroids scaffolding. In the end what worked for me was quite<br />
 view-centric approach that looked like this:</p>
 
 <ul>
   <li>/app/views/my_scope/action.html (a view in a separate webview)</li>
   <li>/app/controllers/my_scope/action.js (all the JS related to a view)</li>
-  <li>/app/models/data_persistence.js (everything that is transversal and
+  <li>/app/models/data_persistence.js (everything that is transversal and<br />
 relates to data)</li>
   <li>/www/javascripts/application.js (shared code between all views)</li>
 </ul>
 
-<p>Overall once I set it up like this, it was easier to figure out what
+<p>Overall once I set it up like this, it was easier to figure out what<br />
 would interact with what.</p>
 
 <h2 id="basic-customization--features">Basic Customization &amp; Features</h2>
 
 <h3 id="slider">Slider</h3>
 
-<p>If you’re in need of a touch slider, I recommend using <a href="https://github.com/thebird/Swipe">Swipe.Js</a>.
+<p>If you’re in need of a touch slider, I recommend using <a href="https://github.com/thebird/Swipe">Swipe.Js</a>.<br />
 It’s both simple, effective and very customizable.</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="nb">window</span><span class="p">.</span><span class="nx">mySwipe</span> <span class="o">=</span> <span class="nx">Swipe</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;slider&#39;</span><span class="p">));</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">window</span><span class="p">.</span><span class="nx">mySwipe</span> <span class="o">=</span> <span class="nx">Swipe</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'slider'</span><span class="p">));</span></code></pre></div>
 
-<p>The only gotcha is that you won’t be able to put inputs in a slide
+<p>The only gotcha is that you won’t be able to put inputs in a slide<br />
 because text edition (long press on iOS) will not work properly.</p>
 
 <h3 id="hammerjs">Hammer.js</h3>
 
-<p><a href="http://eightmedia.github.io/hammer.js/">Hammer</a> ships with Steroids JS, so I gave it a try.
-Overall it works fine for some events such as tap or release, but the
-way it handles clicks seemed buggy. I can’t quite put my finger on it,
+<p><a href="http://eightmedia.github.io/hammer.js/">Hammer</a> ships with Steroids JS, so I gave it a try.<br />
+Overall it works fine for some events such as tap or release, but the<br />
+way it handles clicks seemed buggy. I can’t quite put my finger on it,<br />
 but in some cases I was better of just using jQuery for click events.</p>
 
 <h3 id="use-clicks">Use Clicks</h3>
 
-<p>When in doubt, use links and their click event. It will feel better for
-the end user than using tap or any other event. There is no need
+<p>When in doubt, use links and their click event. It will feel better for<br />
+the end user than using tap or any other event. There is no need<br />
 to get fancy.</p>
 
 <h3 id="loader">Loader</h3>
 
-<p>I liked having a global way of calling a loader in any view and
-centralize the style and retry logic. The javascript code is pretty
-domain specific to my app, but I’ll share the CSS part if you want it to
+<p>I liked having a global way of calling a loader in any view and<br />
+centralize the style and retry logic. The javascript code is pretty<br />
+domain specific to my app, but I’ll share the CSS part if you want it to<br />
 look like this:</p>
 
 <div style="text-align: center"><img src="/assets/misc/loader.jpg" /></div>
 
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;loader&quot;</span> <span class="na">class=</span><span class="s">&quot;loader&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;text_load&quot;</span> <span class="na">class=</span><span class="s">&quot;loader_content&quot;</span> <span class="na">data-t=</span><span class="s">&quot;loading&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;retry_load&quot;</span> <span class="na">class=</span><span class="s">&quot;loader_content&quot;</span> <span class="na">data-t=</span><span class="s">&quot;retry&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"loader"</span> <span class="na">class=</span><span class="s">"loader"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"text_load"</span> <span class="na">class=</span><span class="s">"loader_content"</span> <span class="na">data-t=</span><span class="s">"loading"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"retry_load"</span> <span class="na">class=</span><span class="s">"loader_content"</span> <span class="na">data-t=</span><span class="s">"retry"</span><span class="nt">&gt;&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;loader&quot;</span> <span class="na">id=</span><span class="s">&quot;loader_overlay&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
-</code></pre></div>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"loader"</span> <span class="na">id=</span><span class="s">"loader_overlay"</span><span class="nt">&gt;&lt;/div&gt;</span></code></pre></div>
 
-<p>The loader overlay is to prevent any clicking to happened while the
-loader is present on the screen. The retry_load and text_load are the
+<p>The loader overlay is to prevent any clicking to happened while the<br />
+loader is present on the screen. The retry_load and text_load are the<br />
 elements displayed when it succeeds or fails.</p>
 
-<div class="highlight"><pre><code class="css"><span class="nf">#loader</span><span class="p">{</span>
-  <span class="k">position</span><span class="o">:</span> <span class="k">absolute</span><span class="p">;</span>
-  <span class="k">top</span><span class="o">:</span> <span class="m">130px</span><span class="p">;</span>
-  <span class="k">left</span><span class="o">:</span> <span class="m">70px</span><span class="p">;</span>
-  <span class="k">background-color</span><span class="o">:</span> <span class="m">#000</span><span class="p">;</span>
-  <span class="k">z-index</span><span class="o">:</span> <span class="m">9999</span><span class="p">;</span>
-  <span class="k">width</span><span class="o">:</span> <span class="m">190px</span><span class="p">;</span>
-  <span class="k">font-size</span><span class="o">:</span> <span class="m">1.2em</span><span class="p">;</span>
-  <span class="k">opacity</span><span class="o">:</span> <span class="m">0</span><span class="o">.</span><span class="m">8</span><span class="p">;</span>
-  <span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">10px</span><span class="p">;</span>
-  <span class="k">color</span><span class="o">:</span> <span class="m">#fff</span><span class="p">;</span>
-  <span class="k">text-align</span><span class="o">:</span> <span class="k">center</span><span class="p">;</span>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nf">#loader</span><span class="p">{</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+  <span class="nl">top</span><span class="p">:</span> <span class="m">130px</span><span class="p">;</span>
+  <span class="nl">left</span><span class="p">:</span> <span class="m">70px</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#000</span><span class="p">;</span>
+  <span class="nl">z-index</span><span class="p">:</span> <span class="m">9999</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">190px</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">1.2em</span><span class="p">;</span>
+  <span class="nl">opacity</span><span class="p">:</span> <span class="m">0.8</span><span class="p">;</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#fff</span><span class="p">;</span>
+  <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="nf">#retry_load</span><span class="p">{</span>
-  <span class="k">display</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="nc">.loader_content</span><span class="p">{</span>
-  <span class="k">display</span><span class="o">:</span> <span class="k">block</span><span class="p">;</span>
-  <span class="k">padding</span><span class="o">:</span> <span class="m">70px</span> <span class="m">0px</span><span class="p">;</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">70px</span> <span class="m">0px</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="nf">#loader_overlay</span><span class="p">{</span>
-  <span class="k">position</span><span class="o">:</span> <span class="k">absolute</span><span class="p">;</span>
-  <span class="k">top</span><span class="o">:</span> <span class="m">0px</span><span class="p">;</span>
-  <span class="k">height</span><span class="o">:</span> <span class="m">620px</span><span class="p">;</span>
-  <span class="k">width</span><span class="o">:</span> <span class="m">320px</span><span class="p">;</span>
-  <span class="k">background-color</span><span class="o">:</span> <span class="m">#000</span><span class="p">;</span>
-  <span class="k">opacity</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-  <span class="k">z-index</span><span class="o">:</span> <span class="m">500</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+  <span class="nl">top</span><span class="p">:</span> <span class="m">0px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">620px</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">320px</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#000</span><span class="p">;</span>
+  <span class="nl">opacity</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">z-index</span><span class="p">:</span> <span class="m">500</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
 
-<p>As you can see, the CSS is very simple. Again, not claiming to provide the definitive
-solution here, just some guidance. Feel free to improve on it and add a
+<p>As you can see, the CSS is very simple. Again, not claiming to provide the definitive<br />
+solution here, just some guidance. Feel free to improve on it and add a<br />
 comment.</p>
 
 <h3 id="settings">Settings</h3>
 
-<p>I think I managed to get a decent looking settings tab, but I didn’t
+<p>I think I managed to get a decent looking settings tab, but I didn’t<br />
 find anything that would do it out of the box. Here’s a screenshot:</p>
 
 <div style="text-align: center"><img src="/assets/misc/settings_liff.jpg" /></div>
 
-<p>I’m not perfectly happy with the way I had to do it, so I won’t share it even if it does look fine.
-However you can take a look at what I used for the checkbox
-<a href="http://www.cyberantics.net/toggle.html">here</a>. I found it in a comment
-on <a href="http://www.designcouch.com/home/why/2013/09/19/ios7-style-pure-css-toggle/">a very interesting article</a>.
-Based on this I only had to change a couple of things (webkit-appearance, mostly)
+<p>I’m not perfectly happy with the way I had to do it, so I won’t share it even if it does look fine.<br />
+However you can take a look at what I used for the checkbox<br />
+<a href="http://www.cyberantics.net/toggle.html">here</a>. I found it in a comment<br />
+on <a href="http://www.designcouch.com/home/why/2013/09/19/ios7-style-pure-css-toggle/">a very interesting article</a>.<br />
+Based on this I only had to change a couple of things (webkit-appearance, mostly)<br />
 to get it to work perfectly within my app.</p>
 
 <h3 id="local-storage">Local Storage</h3>
 
-<p>Here is a quick extract of my User model using the
-<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Storage#localStorage">localStorage API</a>
+<p>Here is a quick extract of my User model using the<br />
+<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Storage#localStorage">localStorage API</a><br />
 for persistence.</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="nb">window</span><span class="p">.</span><span class="nx">User</span> <span class="o">=</span> <span class="p">{</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">window</span><span class="p">.</span><span class="nx">User</span> <span class="o">=</span> <span class="p">{</span>
 
-  <span class="nx">id</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
-    <span class="k">return</span> <span class="nb">window</span><span class="p">.</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s2">&quot;liff_id&quot;</span><span class="p">)</span>
+  <span class="na">id</span><span class="p">:</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="k">return</span> <span class="nb">window</span><span class="p">.</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s2">"liff_id"</span><span class="p">)</span>
   <span class="p">}</span>
 
-  <span class="nx">setStatsMode</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">val</span><span class="p">){</span>
-    <span class="nb">window</span><span class="p">.</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s2">&quot;liff_stats_mode&quot;</span><span class="p">,</span> <span class="nx">val</span><span class="p">)</span>
+  <span class="nl">setStatsMode</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">val</span><span class="p">){</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s2">"liff_stats_mode"</span><span class="p">,</span> <span class="nx">val</span><span class="p">)</span>
   <span class="p">}</span>
 
   <span class="c1">// Way more things go here</span>
-<span class="p">}</span>
-</code></pre></div>
+<span class="p">}</span></code></pre></div>
 
-<p>If I were to complexify my data model, I would consider using
+<p>If I were to complexify my data model, I would consider using<br />
 <a href="https://github.com/AppGyver/steroids-plugins/tree/master/sqlite">SQLite</a>.</p>
 
 <h2 id="deeper-into-steroidsjs-and-cordova">Deeper Into SteroidsJS and Cordova</h2>
 
 <h3 id="i18n">I18n</h3>
 
-<p>I decided to create my app in both French and English, so I had to deal
-with internationalization right away. I prefered handling it in the app
-rather than creating multiple builds or other complicated solutions. The
-performance problem was a non issue thanks to preloading (as explained
+<p>I decided to create my app in both French and English, so I had to deal<br />
+with internationalization right away. I prefered handling it in the app<br />
+rather than creating multiple builds or other complicated solutions. The<br />
+performance problem was a non issue thanks to preloading (as explained<br />
 further below).</p>
 
-<p>Working with SteroidsJS means working with Cordova/PhoneGap. In this case the
+<p>Working with SteroidsJS means working with Cordova/PhoneGap. In this case the<br />
 <a href="http://docs.phonegap.com/en/2.2.0/cordova_globalization_globalization.md.html">globalization API</a>.</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;deviceready&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
   <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
     <span class="nx">navigator</span><span class="p">.</span><span class="nx">globalization</span><span class="p">.</span><span class="nx">getPreferredLanguage</span><span class="p">(</span>
       <span class="kd">function</span> <span class="p">(</span><span class="nx">language</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">localize</span><span class="p">(</span><span class="nx">language</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span>
       <span class="p">},</span>
       <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-        <span class="nx">localize</span><span class="p">(</span><span class="s2">&quot;en&quot;</span><span class="p">)</span>
+        <span class="nx">localize</span><span class="p">(</span><span class="s2">"en"</span><span class="p">)</span>
       <span class="p">}</span>
     <span class="p">)</span>
   <span class="p">})</span>
 <span class="p">})</span>
 
 <span class="kd">function</span> <span class="nx">localize</span><span class="p">(</span><span class="nx">language</span><span class="p">){</span>
-  <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;body&quot;</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="nx">language</span><span class="p">)</span>
-  <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;*[data-t]&quot;</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
-    <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">I18n</span><span class="p">[</span><span class="nx">language</span><span class="p">][</span><span class="nx">$this</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span><span class="s2">&quot;t&quot;</span><span class="p">)])</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s2">"body"</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">"id"</span><span class="p">,</span> <span class="nx">language</span><span class="p">)</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s2">"*[data-t]"</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">I18n</span><span class="p">[</span><span class="nx">language</span><span class="p">][</span><span class="nx">$this</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span><span class="s2">"t"</span><span class="p">)])</span>
   <span class="p">})</span>
-<span class="p">}</span>
-</code></pre></div>
+<span class="p">}</span></code></pre></div>
 
-<p>… meaning it will use my I18n object (very basic JSON) and replace the
-content of any HTML element with a data-t attribute. The body ID is set
+<p>… meaning it will use my I18n object (very basic JSON) and replace the<br />
+content of any HTML element with a data-t attribute. The body ID is set<br />
 so I can load different images in CSS if needed.</p>
 
-<p>I find it very easy to use every day and it’s decent performance wise if you don’t have
+<p>I find it very easy to use every day and it’s decent performance wise if you don’t have<br />
 too much text displayed.</p>
 
 <h3 id="preloading">Preloading</h3>
 
 <p>Preloading is great, it really speeds up everything.</p>
 
-<p>As explained above, I internationalized my whole app. Because of this I’d have a couple of miliseconds blink before the text appears.
+<p>As explained above, I internationalized my whole app. Because of this I’d have a couple of miliseconds blink before the text appears.<br />
 Preloading views fixed this.</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">someView</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">steroids</span><span class="p">.</span><span class="nx">views</span><span class="p">.</span><span class="nx">WebView</span><span class="p">(</span><span class="s2">&quot;/views/settings/some_view.html&quot;</span><span class="p">);</span>
-<span class="kd">var</span> <span class="nx">anotherView</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">steroids</span><span class="p">.</span><span class="nx">views</span><span class="p">.</span><span class="nx">WebView</span><span class="p">(</span><span class="s2">&quot;/views/settings/another_view.html&quot;</span><span class="p">);</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">someView</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">steroids</span><span class="p">.</span><span class="nx">views</span><span class="p">.</span><span class="nx">WebView</span><span class="p">(</span><span class="s2">"/views/settings/some_view.html"</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">anotherView</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">steroids</span><span class="p">.</span><span class="nx">views</span><span class="p">.</span><span class="nx">WebView</span><span class="p">(</span><span class="s2">"/views/settings/another_view.html"</span><span class="p">);</span>
 
 <span class="kd">function</span> <span class="nx">preload</span><span class="p">(){</span>
   <span class="nx">someView</span><span class="p">.</span><span class="nx">preload</span><span class="p">()</span>
   <span class="nx">anotherView</span><span class="p">.</span><span class="nx">preload</span><span class="p">()</span>
-<span class="p">}</span>
-</code></pre></div>
+<span class="p">}</span></code></pre></div>
 
-<p>I also wait a bit before actually preloading the views, so the first app load
-time is reduced. I think it’s better to only preload when you really need
+<p>I also wait a bit before actually preloading the views, so the first app load<br />
+time is reduced. I think it’s better to only preload when you really need<br />
 it in order to preserve ressources.</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="nx">setTimeout</span><span class="p">(</span><span class="nx">preload</span><span class="p">,</span> <span class="mi">3000</span><span class="p">)</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">setTimeout</span><span class="p">(</span><span class="nx">preload</span><span class="p">,</span> <span class="mi">3000</span><span class="p">)</span></code></pre></div>
 
 <p>Learn more about it on <a href="http://academy.appgyver.com/categories/3/contents/19">AppGyver’s website</a>.</p>
 
-<p><em>Note that this not fully functional in production on my app because of
-an issue in Steroids JS where loading the navigation bar in a certain
-way disrupts preloading. Because of this you will see some minor
+<p><em>Note that this not fully functional in production on my app because of<br />
+an issue in Steroids JS where loading the navigation bar in a certain<br />
+way disrupts preloading. Because of this you will see some minor<br />
 blinking in some internal setting screens. It will be fixed soon :)</em></p>
 
 <h3 id="getting-out-of-the-background">Getting Out Of The Background</h3>
 
-<p>You might want to do something when the user reopens the app after
+<p>You might want to do something when the user reopens the app after<br />
 putting it in the background. Here’s how to do it:</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;resume&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"resume"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
   <span class="c1">// Do things</span>
-<span class="p">},</span> <span class="kc">false</span><span class="p">);</span>
-</code></pre></div>
+<span class="p">},</span> <span class="kc">false</span><span class="p">);</span></code></pre></div>
 
 <h3 id="communicate-between-views">Communicate Between Views</h3>
 
-<p>Using <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window.postMessage">the postMessage API</a>
+<p>Using <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window.postMessage">the postMessage API</a><br />
 to communicate between views is the way to go.</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="cm">/* In the first view */</span>
-<span class="nb">window</span><span class="p">.</span><span class="nx">postMessage</span><span class="p">({</span> <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;something_happened&quot;</span> <span class="p">},</span> <span class="s2">&quot;*&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="cm">/* In the first view */</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">postMessage</span><span class="p">({</span> <span class="na">type</span><span class="p">:</span> <span class="s2">"something_happened"</span> <span class="p">},</span> <span class="s2">"*"</span><span class="p">)</span>
 
 <span class="cm">/* In the second view */</span>
-<span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;message&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">msg</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span><span class="p">(</span><span class="nx">msg</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">type</span> <span class="o">==</span> <span class="s2">&quot;something_happened&quot;</span><span class="p">){</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"message"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">msg</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span><span class="p">(</span><span class="nx">msg</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">type</span> <span class="o">==</span> <span class="s2">"something_happened"</span><span class="p">){</span>
   <span class="p">}</span>
-<span class="p">})</span>
-</code></pre></div>
+<span class="p">})</span></code></pre></div>
 
-<p><em>Right now there is an open issue when adding alerts in the event listener
+<p><em>Right now there is an open issue when adding alerts in the event listener<br />
 as discussed [on the forum)[http://forums.appgyver.com/#!/steroids:sometimes-alerts-block-th)</em>.</p>
 
 <h2 id="check-out-the-result">Check Out The Result!</h2>
 
 <p>Of course you don’t have to take my word for it, give my application a try !</p>
 
-<p>It’s called Liff and is
-<a href="https://itunes.apple.com/en/app/liff-understand-your-life/id834944345">available on the appstore</a>.
-The goal is to give a <a href="http://liffapp.io">relevant way to get insights on ones day</a> and
+<p>It’s called Liff and is<br />
+<a href="https://itunes.apple.com/en/app/liff-understand-your-life/id834944345">available on the appstore</a>.<br />
+The goal is to give a <a href="http://liffapp.io">relevant way to get insights on ones day</a> and<br />
 we put in extra efforts in order to create a pleasant experience with a solid design.</p>
 
 <div style="text-align: center"><img src="/assets/misc/liff_screen.jpg" /></div>
 
-<p>Clearly creating an hybrid app is easier than ever, but there is still a
-lot of things to keep in mind when doing so. Projects like PhoneGap push
-the ball in the right direction and I can’t wait to see what kind of
+<p>Clearly creating an hybrid app is easier than ever, but there is still a<br />
+lot of things to keep in mind when doing so. Projects like PhoneGap push<br />
+the ball in the right direction and I can’t wait to see what kind of<br />
 apps we’ll be creating in a few years!</p>
 
 
@@ -652,6 +629,8 @@ apps we’ll be creating in a few years!</p>
             <p>Since you scrolled this far, you might as well take a look at some other things I wrote !</p>
             <ul>
               
+          
+            
           
             
           

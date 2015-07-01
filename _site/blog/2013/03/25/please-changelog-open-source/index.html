@@ -49,94 +49,94 @@
 <div id="container">
   <div id="content">
     <div class="post">
-      <p>I love open source. I think it’s amazing that some people are willing to
-share their hard work with everyone and accepting contributions.
-I don’t help out myself as much as I’d like to (couple of commits in
-<a href="https://github.com/fog/fog/commit/c35f4affa79dea5cf520dd1c954c8f32022dfb96">fog</a>,
-<a href="http://contributors.rubyonrails.org/contributors/marc-g-gauthier/commits">rails</a>,
-<a href="https://github.com/arsduo/koala/commit/85d5e16bccde1b153f861043a7ac818f61409633">koala</a>
-<a href="https://github.com/marcgg/Simple-Placeholder">…</a>)
+      <p>I love open source. I think it’s amazing that some people are willing to<br />
+share their hard work with everyone and accepting contributions.<br />
+I don’t help out myself as much as I’d like to (couple of commits in<br />
+<a href="https://github.com/fog/fog/commit/c35f4affa79dea5cf520dd1c954c8f32022dfb96">fog</a>,<br />
+<a href="http://contributors.rubyonrails.org/contributors/marc-g-gauthier/commits">rails</a>,<br />
+<a href="https://github.com/arsduo/koala/commit/85d5e16bccde1b153f861043a7ac818f61409633">koala</a><br />
+<a href="https://github.com/marcgg/Simple-Placeholder">…</a>)<br />
 but I use open source frameworks and software every day both professionnally and at home.</p>
 
-<p>Today I’m writing this article because something has been bothering me in a lot
+<p>Today I’m writing this article because something has been bothering me in a lot<br />
 of projects I use: they don’t keep any form of changelog.</p>
 
-<p>Before I get started, I just want to make clear that
-if you have an open source project and don’t keep a changelog, I don’t
-want to be pointing fingers going “shame on you! shame on you!”. Not at all.
-I really appreciate and respect the fact that you put your code out there for me
+<p>Before I get started, I just want to make clear that<br />
+if you have an open source project and don’t keep a changelog, I don’t<br />
+want to be pointing fingers going “shame on you! shame on you!”. Not at all.<br />
+I really appreciate and respect the fact that you put your code out there for me<br />
 to use.</p>
 
 <p>It’d just be extra awesome if it was there, that’s all.</p>
 
 <h2 id="sometimes-you-just-have-to-update">Sometimes You Just Have To Update</h2>
 
-<p>Say I use LibY for a project and it’s great. So great that it does
-exactly what I want perfectly and I end up leaving it there without looking at it
-too much. Maybe after a couple of months I’ll run
-into a weird bug that requires me to update LibY, or maybe another
-project has a dependency to a more recent version of LibY.
+<p>Say I use LibY for a project and it’s great. So great that it does<br />
+exactly what I want perfectly and I end up leaving it there without looking at it<br />
+too much. Maybe after a couple of months I’ll run<br />
+into a weird bug that requires me to update LibY, or maybe another<br />
+project has a dependency to a more recent version of LibY.<br />
 The result will be that I need to update.</p>
 
-<p>So I’ll go to the repository / website / tracker / github’s page or
-whatever and look up the latest version… and have no clue what
+<p>So I’ll go to the repository / website / tracker / github’s page or<br />
+whatever and look up the latest version… and have no clue what<br />
 changed since last time.</p>
 
-<p>Of course I could look up every commit since last version, but often my
-knowledge of the project is too basic to fully understand everything
-that happened. This is particulary true for very large projects of
+<p>Of course I could look up every commit since last version, but often my<br />
+knowledge of the project is too basic to fully understand everything<br />
+that happened. This is particulary true for very large projects of<br />
 which I only use a very small subset.</p>
 
 <h2 id="i-know-i-know">I Know, I Know</h2>
 
-<p>At that point someone will point out that I should keep all my libraries
-up to date. Obviously that someone would be right, but let’s stay realistic.
-While I can find time to update my main dependencies, it is really hard
-to keep up and have everything at the latest version. And even then, if
-there is a minor update in one of the libraries I use and there
+<p>At that point someone will point out that I should keep all my libraries<br />
+up to date. Obviously that someone would be right, but let’s stay realistic.<br />
+While I can find time to update my main dependencies, it is really hard<br />
+to keep up and have everything at the latest version. And even then, if<br />
+there is a minor update in one of the libraries I use and there<br />
 is no changelog… well it would still be complicated to know if it’s updatable!</p>
 
-<p>I’m sure someone else will say that my automated tests should find any bug when I
-update. This is true as well, it is always better to be able to have an
-exhaustive test suite that guaranties you that nothing will break. But
-we live in the real world and test suites are not perfect. You could
-even argue that testing your libraries is not within the scope of your
+<p>I’m sure someone else will say that my automated tests should find any bug when I<br />
+update. This is true as well, it is always better to be able to have an<br />
+exhaustive test suite that guaranties you that nothing will break. But<br />
+we live in the real world and test suites are not perfect. You could<br />
+even argue that testing your libraries is not within the scope of your<br />
 app.</p>
 
-<p>And hey, if <a href="https://github.com/blog/1440-today-s-email-incident">Github</a>
+<p>And hey, if <a href="https://github.com/blog/1440-today-s-email-incident">Github</a><br />
 can get it wrong, how can I not fail every once in a while!</p>
 
-<p>Lastly I also wanted to point out that sometimes checking the changelog
-is not the only thing you need to do.
-If you want to update a very major and central library, checking quickly
-the changelog is clearly not enough. You need to make sure everything
-still works fine, maybe look up the discussion that went on to lead to
+<p>Lastly I also wanted to point out that sometimes checking the changelog<br />
+is not the only thing you need to do.<br />
+If you want to update a very major and central library, checking quickly<br />
+the changelog is clearly not enough. You need to make sure everything<br />
+still works fine, maybe look up the discussion that went on to lead to<br />
 this new release and so on.</p>
 
-<p>However, even in that case, a simple list of the changes is still a good
+<p>However, even in that case, a simple list of the changes is still a good<br />
 point to start your reflexion on how you should update.</p>
 
 <h2 id="the-changelog-i-need">The Changelog I Need</h2>
 
-<p>I don’t need much to be in a changelog. If you want to make me (and probably other developers)
+<p>I don’t need much to be in a changelog. If you want to make me (and probably other developers)<br />
 happy, here’s what would do the trick.</p>
 
 <h3 id="a-version-number-that-makes-sense">A Version Number That Makes Sense</h3>
 
-<p>If it’s a release candidate, label it RC. If it’s a beta or an alpha, write it down
+<p>If it’s a release candidate, label it RC. If it’s a beta or an alpha, write it down<br />
 as well. I want to know if this version is supposed to be stable.</p>
 
-<p>Keep a logical versioning logic and stick to it. I don’t care exactly how you do it,
-as long as you explain it. People like to go MAJOR.MINOR.PATCH,
-so if it’s like that it’s even better, but really anything that helps me
-understand if there are bug fixes, new features or breaking DSL changes
+<p>Keep a logical versioning logic and stick to it. I don’t care exactly how you do it,<br />
+as long as you explain it. People like to go MAJOR.MINOR.PATCH,<br />
+so if it’s like that it’s even better, but really anything that helps me<br />
+understand if there are bug fixes, new features or breaking DSL changes<br />
 in the update is perfect.</p>
 
 <h3 id="a-changelog-file">A Changelog File</h3>
 
-<p>A file called “changelog” somewhere at the root of your project. Maybe you want to
-keep track of changing versions on your website and that’s fine. I would still love
-if the file was there and referenced the place you want to keep the
+<p>A file called “changelog” somewhere at the root of your project. Maybe you want to<br />
+keep track of changing versions on your website and that’s fine. I would still love<br />
+if the file was there and referenced the place you want to keep the<br />
 actual changes.</p>
 
 <h3 id="a-brief-list-of-what-changed">A Brief List Of What Changed</h3>
@@ -149,18 +149,18 @@ actual changes.</p>
   <li>Are there bugfixes? Security updates?</li>
 </ul>
 
-<p>No need to make it long, no need to reference the commits or tickets.
-While it’s a nice thing to have, a simple bullet point list with a
+<p>No need to make it long, no need to reference the commits or tickets.<br />
+While it’s a nice thing to have, a simple bullet point list with a<br />
 sentence for each major change is usually enough for me to get the big picture.</p>
 
 <h2 id="example-why-i-love-thins-changelog">Example: Why I Love Thin’s Changelog</h2>
 
-<p>Let’s look at some of what
-<a href="http://macournoyer.com/">Marc-André Cournoyer</a> did
-with <a href="https://github.com/macournoyer/thin">thin</a>’s
+<p>Let’s look at some of what<br />
+<a href="http://macournoyer.com/">Marc-André Cournoyer</a> did<br />
+with <a href="https://github.com/macournoyer/thin">thin</a>’s<br />
 <a href="https://github.com/macournoyer/thin/blob/master/CHANGELOG">changelog</a>.</p>
 
-<pre><code>== 1.5.1 Straight Razor
+<div class="highlighter-rouge"><pre class="highlight"><code>== 1.5.1 Straight Razor
  * Fix issue when running as another user/group without a PID file.
  * Allow overriding Connection &amp; Server response headers.
  * Update vlad example [Mathieu Lemoine]
@@ -187,21 +187,22 @@ with <a href="https://github.com/macournoyer/thin">thin</a>’s
  * Fix HUP signal being reseted after deamonization [atotic].
  * Fix error with nil addresses in Connection#socket_address.
 </code></pre>
+</div>
 
 <p><img src="/assets/blog/rainbows.png" alt="Rainbows" style="margin: 0px auto 20px auto; display: block;" /></p>
 
-<p>To me it’s perfect. Not too long and very clear.
-He mentions contributors and even have codenames for each release making
-it extra easy to remember.
-You can clearly see what’s new in each release and what will happen if you
+<p>To me it’s perfect. Not too long and very clear.<br />
+He mentions contributors and even have codenames for each release making<br />
+it extra easy to remember.<br />
+You can clearly see what’s new in each release and what will happen if you<br />
 update. This also gives a good overview of how the project is doing.</p>
 
 <h2 id="pretty-please">Pretty Please?</h2>
 
-<p>If you have an open source project and want to be even nicer to the
+<p>If you have an open source project and want to be even nicer to the<br />
 people using it, please please please keep a changelog.</p>
 
-<p>You don’t need to make it fancy, but anything would be better than
+<p>You don’t need to make it fancy, but anything would be better than<br />
 random version numbers with no explanations.</p>
 
 <p>Thanks!</p>
@@ -216,6 +217,8 @@ random version numbers with no explanations.</p>
             <p>Since you scrolled this far, you might as well take a look at some other things I wrote !</p>
             <ul>
               
+          
+            
           
             
           
