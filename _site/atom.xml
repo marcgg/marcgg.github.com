@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2015-06-15T15:49:21-04:00</updated>
+ <updated>2015-07-01T07:54:42+02:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -18,7 +18,7 @@
    <entry>
      <title>Getting Started With Elixir Processes</title>
      <link href="http://marcgg.com/blog/2015/06/04/getting-started-with-elixir-processes"/>
-     <updated>2015-06-04T00:00:00-04:00</updated>
+     <updated>2015-06-04T00:00:00+02:00</updated>
      <id>http://marcgg.com/blog/2015/06/04/getting-started-with-elixir-processes</id>
      <content type="html">&lt;p&gt;In this article, there will be no fancy tricks or protips, just simple ideas and examples to get started. This is basically the result of my trial and error approach to understand Elixir Processes.&lt;/p&gt;
 
@@ -233,7 +233,7 @@
    <entry>
      <title>Real Life A/B Testing With Universal Analytics</title>
      <link href="http://marcgg.com/blog/2015/05/26/ab-testing-in-real-life-google-analytics"/>
-     <updated>2015-05-26T00:00:00-04:00</updated>
+     <updated>2015-05-26T00:00:00+02:00</updated>
      <id>http://marcgg.com/blog/2015/05/26/ab-testing-in-real-life-google-analytics</id>
      <content type="html">&lt;p&gt;I’ve been enthusiastic about the concept of A/B testing for a very long time, but I only got to implement it for the first time about two years ago. At the time I thought it would be easy. So many companies are talking about it, there must be a clear path to do it, right?&lt;/p&gt;
 
@@ -405,7 +405,7 @@
    <entry>
      <title>Benchmarking Deployment Speed on Heroku</title>
      <link href="http://marcgg.com/blog/2015/02/26/heroku-deploy-speed"/>
-     <updated>2015-02-26T00:00:00-05:00</updated>
+     <updated>2015-02-26T00:00:00+01:00</updated>
      <id>http://marcgg.com/blog/2015/02/26/heroku-deploy-speed</id>
      <content type="html">&lt;p&gt;Sometimes deploying to Heroku can get really slow. Obviously before spending any time trying to speed it up, you should actually know what part of it is causing the problem. For instance, if you run Ruby on Rails, you get some information regarding the asset precompilation time or for how long Bundler installed your gems.&lt;/p&gt;
 
@@ -453,7 +453,7 @@
    <entry>
      <title>The Technical Accomplishments of Grace Murray Hopper</title>
      <link href="http://marcgg.com/blog/2015/02/02/grace-murray-hopper-technical"/>
-     <updated>2015-02-02T00:00:00-05:00</updated>
+     <updated>2015-02-02T00:00:00+01:00</updated>
      <id>http://marcgg.com/blog/2015/02/02/grace-murray-hopper-technical</id>
      <content type="html">&lt;p&gt;Rear Admiral Grace M. Hopper, USN, Ph.D., born December 9 1906, is a really interesting person.&lt;/p&gt;
 
@@ -610,7 +610,7 @@
    <entry>
      <title>New Website Design!</title>
      <link href="http://marcgg.com/blog/2015/01/22/new-design"/>
-     <updated>2015-01-22T00:00:00-05:00</updated>
+     <updated>2015-01-22T00:00:00+01:00</updated>
      <id>http://marcgg.com/blog/2015/01/22/new-design</id>
      <content type="html">&lt;p&gt;I’m not a good designer, not at all. However I still tried to create a new version of my website based on the old one - mainly because I grew really tired of the previous design.&lt;/p&gt;
 
@@ -669,7 +669,7 @@
    <entry>
      <title>How CSS Animations Can Break Your Tests</title>
      <link href="http://marcgg.com/blog/2015/01/05/css-animations-failing-capybara-specs"/>
-     <updated>2015-01-05T00:00:00-05:00</updated>
+     <updated>2015-01-05T00:00:00+01:00</updated>
      <id>http://marcgg.com/blog/2015/01/05/css-animations-failing-capybara-specs</id>
      <content type="html">&lt;p&gt;If you don’t have some kind of acceptance tests, you should probably add some. Personnally I like to use &lt;a href=&quot;https://github.com/jnicklas/capybara&quot;&gt;Capybara&lt;/a&gt; with &lt;a href=&quot;http://phantomjs.org/&quot;&gt;PhantomJS&lt;/a&gt;/&lt;a href=&quot;https://github.com/teampoltergeist/poltergeist&quot;&gt;Poltergeist&lt;/a&gt; and this post takes this stack as example, but other testing options will most likely have similar behavior.&lt;/p&gt;
 
@@ -773,7 +773,7 @@
    <entry>
      <title>Coaching A Young Team Creating a Startup (And Helping Them Get Accepted at Le Camping)</title>
      <link href="http://marcgg.com/blog/2014/12/16/coaching-startup-birdly-le-camping"/>
-     <updated>2014-12-16T00:00:00-05:00</updated>
+     <updated>2014-12-16T00:00:00+01:00</updated>
      <id>http://marcgg.com/blog/2014/12/16/coaching-startup-birdly-le-camping</id>
      <content type="html">&lt;p&gt;A few months back I was contacted by three students that wanted to create their company. As a developer, this happens to me all the time and I often refuse to help because of the projects’ lack of realism. After a phone call I decided that it would be interesting to meet them… and I have to say that I was impressed by how much potential the team was showing.&lt;/p&gt;
 
@@ -807,7 +807,7 @@
    <entry>
      <title>A Script To Benchmark MySQL Indexes</title>
      <link href="http://marcgg.com/blog/2014/10/13/mysql-try-all-indexes-combinations-script"/>
-     <updated>2014-10-13T00:00:00-04:00</updated>
+     <updated>2014-10-13T00:00:00+02:00</updated>
      <id>http://marcgg.com/blog/2014/10/13/mysql-try-all-indexes-combinations-script</id>
      <content type="html">&lt;p&gt;I’ve been working with MySQL for a while now and I think that it’s a pretty good solution to store your data. Lately I’m more leaning toward Postgres but that’s another story.&lt;/p&gt;
 
@@ -859,7 +859,7 @@
    <entry>
      <title>Managing Your Project With Github Issues And HuBoard</title>
      <link href="http://marcgg.com/blog/2014/09/17/huboard-kanban-board-github"/>
-     <updated>2014-09-17T00:00:00-04:00</updated>
+     <updated>2014-09-17T00:00:00+02:00</updated>
      <id>http://marcgg.com/blog/2014/09/17/huboard-kanban-board-github</id>
      <content type="html">&lt;p&gt;I’ve been working in startups for a bit now, and the thing I love with this kind of structure is how &lt;a href=&quot;/blog/2014/07/28/company-process-red-tape/&quot;&gt;lightweight&lt;/a&gt; the company processes can be. I don’t need to ask 3 different people to have access to the internet nor do I have an army of managers telling me &lt;a href=&quot;https://www.youtube.com/watch?v=qYodWEKCuGg&quot;&gt;how to code&lt;/a&gt;. Pretty neat.&lt;/p&gt;
 
@@ -931,7 +931,7 @@ They also have an offer for those working with &lt;a href=&quot;https://enterpri
    <entry>
      <title>Thoughts On Company Procedures</title>
      <link href="http://marcgg.com/blog/2014/07/28/company-process-red-tape"/>
-     <updated>2014-07-28T00:00:00-04:00</updated>
+     <updated>2014-07-28T00:00:00+02:00</updated>
      <id>http://marcgg.com/blog/2014/07/28/company-process-red-tape</id>
      <content type="html">&lt;p&gt;To me, a formal process is just like code. A way to solve a problem. I’m not talking about best practices or common sense but real formalized ways of doing things. For instance if a team constantly have problem communicating, it could be interesting to set and enforce some kind of recurring meeting to facilitate discussions - let’s say every monday, 1 hour, all hands.&lt;/p&gt;
 
@@ -973,7 +973,7 @@ They also have an offer for those working with &lt;a href=&quot;https://enterpri
    <entry>
      <title>Some Respect For Legacy Code</title>
      <link href="http://marcgg.com/blog/2014/07/22/in-defense-of-legacy-code"/>
-     <updated>2014-07-22T00:00:00-04:00</updated>
+     <updated>2014-07-22T00:00:00+02:00</updated>
      <id>http://marcgg.com/blog/2014/07/22/in-defense-of-legacy-code</id>
      <content type="html">&lt;p&gt;It’s your first day. You just joined a team working on a cool project. That’s usually at this point that you discover that the code base is not as good as you’d expected. Most likely you’ll then hear from your colleagues something like “Jane wrote that a few years back, we didn’t need to change it so it’s a bit outdated” or “this is some &lt;strong&gt;legacy code&lt;/strong&gt;”. &lt;em&gt;Gasp&lt;/em&gt;.&lt;/p&gt;
 
@@ -1029,7 +1029,7 @@ They also have an offer for those working with &lt;a href=&quot;https://enterpri
    <entry>
      <title>My Problem With Apps To Track Your Life (and Why I Created My Own)</title>
      <link href="http://marcgg.com/blog/2014/05/06/quantified-self-iphone-app-track-mood-day"/>
-     <updated>2014-05-06T00:00:00-04:00</updated>
+     <updated>2014-05-06T00:00:00+02:00</updated>
      <id>http://marcgg.com/blog/2014/05/06/quantified-self-iphone-app-track-mood-day</id>
      <content type="html">&lt;p&gt;I wouldn’t say that I’m into quantified self, but I do enjoy having some idea of what I’m doing with my life. Wearing gear tracking you, a Jawbone for instance, feels overkill to me. My approach is simply based on Foursquare to see where I’ve been and a calendar app to note what I’ve done.&lt;/p&gt;
 
@@ -1113,7 +1113,7 @@ They also have an offer for those working with &lt;a href=&quot;https://enterpri
    <entry>
      <title>Tips on Creating a Website From When I Was 12</title>
      <link href="http://marcgg.com/blog/2014/04/28/frame-based-layout-bad-code"/>
-     <updated>2014-04-28T00:00:00-04:00</updated>
+     <updated>2014-04-28T00:00:00+02:00</updated>
      <id>http://marcgg.com/blog/2014/04/28/frame-based-layout-bad-code</id>
      <content type="html">&lt;p&gt;I’ve been writing code for a while. I started with QBasic when I was a kid and the two things I remember from
 that time was using PRINT and the fact I was dead confused by the editor I had to use.&lt;/p&gt;
@@ -1264,7 +1264,7 @@ still learning - you were making the same mistakes at some point !&lt;/p&gt;
    <entry>
      <title>Tips & Tricks Learned Releasing an Hybrid App Using&nbsp;Steroids.js</title>
      <link href="http://marcgg.com/blog/2014/04/09/phonegap-steroids-hybrid-native-app-tips"/>
-     <updated>2014-04-09T00:00:00-04:00</updated>
+     <updated>2014-04-09T00:00:00+02:00</updated>
      <id>http://marcgg.com/blog/2014/04/09/phonegap-steroids-hybrid-native-app-tips</id>
      <content type="html">&lt;p&gt;A while ago I &lt;a href=&quot;/blog/2013/08/29/appgyver-steroids-iphone-hybrid-javascript/&quot;&gt;wrote about AppGyver’s SteroidsJS&lt;/a&gt;
 and its interesting take on hybrid app development. If you haven’t read it, basically they add the ability
@@ -1866,7 +1866,7 @@ apps we’ll be creating in a few years!&lt;/p&gt;
    <entry>
      <title>The Problem With Peak</title>
      <link href="http://marcgg.com/blog/2013/11/12/peak-productivity"/>
-     <updated>2013-11-12T00:00:00-05:00</updated>
+     <updated>2013-11-12T00:00:00+01:00</updated>
      <id>http://marcgg.com/blog/2013/11/12/peak-productivity</id>
      <content type="html">&lt;p&gt;A couple of days ago I ran into a new application by &lt;a href=&quot;http://metalabdesign.com/&quot;&gt;MetaLab&lt;/a&gt; called
 &lt;a href=&quot;http://www.usepeak.com/&quot;&gt;Peak&lt;/a&gt;. The application is supposed to be “the automated way to keep track
@@ -2083,7 +2083,7 @@ create value and protect employees from interruptions) and not evil
    <entry>
      <title>Enough With The Trolls</title>
      <link href="http://marcgg.com/blog/2013/11/05/enough-with-the-language-trolls"/>
-     <updated>2013-11-05T00:00:00-05:00</updated>
+     <updated>2013-11-05T00:00:00+01:00</updated>
      <id>http://marcgg.com/blog/2013/11/05/enough-with-the-language-trolls</id>
      <content type="html">&lt;p&gt;Every week I see people arguing over languages, frameworks, hosting
 solutions, architectural patterns… and every week it’s pointless.
@@ -2160,7 +2160,7 @@ adapt.&lt;/p&gt;
    <entry>
      <title>Mixing Languages</title>
      <link href="http://marcgg.com/blog/2013/10/29/mixing-languages"/>
-     <updated>2013-10-29T00:00:00-04:00</updated>
+     <updated>2013-10-29T00:00:00+01:00</updated>
      <id>http://marcgg.com/blog/2013/10/29/mixing-languages</id>
      <content type="html">&lt;p&gt;I was born in France and lived there for the most part of my life. I have
 the &lt;a href=&quot;http://bit.ly/17UlpMx&quot;&gt;frenchiest of names&lt;/a&gt;.
@@ -2296,7 +2296,7 @@ I don’t see why I couldn’t either!&lt;/p&gt;
    <entry>
      <title>My First Impressions of AppGyver's Steroids.js</title>
      <link href="http://marcgg.com/blog/2013/08/29/appgyver-steroids-iphone-hybrid-javascript"/>
-     <updated>2013-08-29T00:00:00-04:00</updated>
+     <updated>2013-08-29T00:00:00+02:00</updated>
      <id>http://marcgg.com/blog/2013/08/29/appgyver-steroids-iphone-hybrid-javascript</id>
      <content type="html">&lt;p&gt;&lt;em&gt;&lt;strong&gt;Update 9 April 2014&lt;/strong&gt;: Since this post, I released a &lt;a href=&quot;http://liffapp.io&quot;&gt;quantified self app&lt;/a&gt;
 using SteroidsJs and 
@@ -2621,7 +2621,7 @@ questions, I’m not sure to be able to answer all of them - but I’ll try!&lt;
    <entry>
      <title>J'ai Passé Un Deuxième Bac. Pour Voir.</title>
      <link href="http://marcgg.com/blog/2013/07/09/passer-deuxieme-bac"/>
-     <updated>2013-07-09T00:00:00-04:00</updated>
+     <updated>2013-07-09T00:00:00+02:00</updated>
      <id>http://marcgg.com/blog/2013/07/09/passer-deuxieme-bac</id>
      <content type="html">&lt;p&gt;J’ai obtenu mon baccalauréat scientifique en 2004. Malgré cela, ces deux dernières années j’ai mis un peu
 de temps de côté pour passer mon bac L en candidat libre.&lt;/p&gt;
@@ -2892,7 +2892,7 @@ recruteurs qui le liront!&lt;/p&gt;
    <entry>
      <title>Why I'm Not Proud To Be French</title>
      <link href="http://marcgg.com/blog/2013/06/24/not-proud-to-be-french"/>
-     <updated>2013-06-24T00:00:00-04:00</updated>
+     <updated>2013-06-24T00:00:00+02:00</updated>
      <id>http://marcgg.com/blog/2013/06/24/not-proud-to-be-french</id>
      <content type="html">&lt;p&gt;A few years back, when I was living in the US, a lot of people asked me if I
 were proud of being French. I always found this question very strange and
@@ -2969,7 +2969,7 @@ most talented fellow countryman.&lt;/p&gt;
    <entry>
      <title>Information About Bots & People Clicking a Link</title>
      <link href="http://marcgg.com/blog/2013/05/20/track-link-clicks"/>
-     <updated>2013-05-20T00:00:00-04:00</updated>
+     <updated>2013-05-20T00:00:00+02:00</updated>
      <id>http://marcgg.com/blog/2013/05/20/track-link-clicks</id>
      <content type="html">&lt;p&gt;A couple of days ago I saw
 &lt;a href=&quot;http://www.zdnet.com/is-microsoft-reading-your-skype-instant-messages-7000015388/&quot;&gt;articles popping around&lt;/a&gt;
@@ -3027,7 +3027,7 @@ use once in a while when feeling paranoid.&lt;/p&gt;
    <entry>
      <title>What I Learned While Teaching</title>
      <link href="http://marcgg.com/blog/2013/04/22/what-i-learned-teaching-web"/>
-     <updated>2013-04-22T00:00:00-04:00</updated>
+     <updated>2013-04-22T00:00:00+02:00</updated>
      <id>http://marcgg.com/blog/2013/04/22/what-i-learned-teaching-web</id>
      <content type="html">&lt;p&gt;A few months back I wrote &lt;a href=&quot;/blog/2013/02/04/developers-teach-non-tech-startup/&quot;&gt;an article about how developers should share
 their knowledge with others&lt;/a&gt;.
@@ -3161,7 +3161,7 @@ I got some very positive feedbacks. I think that I’ll do it again sometimes!&l
    <entry>
      <title>Please Keep a Changelog For Your Open Source Lib</title>
      <link href="http://marcgg.com/blog/2013/03/25/please-changelog-open-source"/>
-     <updated>2013-03-25T00:00:00-04:00</updated>
+     <updated>2013-03-25T00:00:00+01:00</updated>
      <id>http://marcgg.com/blog/2013/03/25/please-changelog-open-source</id>
      <content type="html">&lt;p&gt;I love open source. I think it’s amazing that some people are willing to
 share their hard work with everyone and accepting contributions.
@@ -3327,7 +3327,7 @@ random version numbers with no explanations.&lt;/p&gt;
    <entry>
      <title>Developers, Share Your Technical Knowledge</title>
      <link href="http://marcgg.com/blog/2013/02/04/developers-teach-non-tech-startup"/>
-     <updated>2013-02-04T00:00:00-05:00</updated>
+     <updated>2013-02-04T00:00:00+01:00</updated>
      <id>http://marcgg.com/blog/2013/02/04/developers-teach-non-tech-startup</id>
      <content type="html">&lt;p&gt;When you think startup, you might get the picture of a bunch of
 developers writing code all day. While this can be true, the vast
@@ -3497,7 +3497,7 @@ and if I can, I’ll happily take a few minutes to help you out!&lt;/p&gt;
    <entry>
      <title>2 Days Trying To Create a Multiplayer HTML5 Game</title>
      <link href="http://marcgg.com/blog/2013/01/14/html5-nodejs-websockets-games-learning"/>
-     <updated>2013-01-14T00:00:00-05:00</updated>
+     <updated>2013-01-14T00:00:00+01:00</updated>
      <id>http://marcgg.com/blog/2013/01/14/html5-nodejs-websockets-games-learning</id>
      <content type="html">&lt;p&gt;Okay. Let’s start by saying that I’m a developer that does mostly web stuff.&lt;/p&gt;
 
@@ -3672,7 +3672,7 @@ that’s another story.&lt;/p&gt;
    <entry>
      <title>I Left Tigerlily</title>
      <link href="http://marcgg.com/blog/2013/01/06/left-tigerlily-job"/>
-     <updated>2013-01-06T00:00:00-05:00</updated>
+     <updated>2013-01-06T00:00:00+01:00</updated>
      <id>http://marcgg.com/blog/2013/01/06/left-tigerlily-job</id>
      <content type="html">&lt;p&gt;I joined &lt;a href=&quot;http://tigerlilyapps.com&quot;&gt;Tigerlily&lt;/a&gt; even before it was called that and, for 3 years, I contributed to the creation of &lt;a href=&quot;http://www.tigerlilyapps.com/products&quot;&gt;amazing products&lt;/a&gt; that are now used by major companies in France and abroad. We built a great team of very talented people, brought innovation to how brands would interact with their users on social networks and always thrived to be the best at what we’d put our minds into.&lt;/p&gt;
 
@@ -3697,7 +3697,7 @@ that’s another story.&lt;/p&gt;
    <entry>
      <title>How We Made Third Place At AngelHack Paris</title>
      <link href="http://marcgg.com/blog/2012/12/10/angelhack-third-place-paris-hackathon"/>
-     <updated>2012-12-10T00:00:00-05:00</updated>
+     <updated>2012-12-10T00:00:00+01:00</updated>
      <id>http://marcgg.com/blog/2012/12/10/angelhack-third-place-paris-hackathon</id>
      <content type="html">&lt;p&gt;A couple of weeks ago &lt;a href=&quot;http://twitter.com/kevintunc&quot;&gt;Kevin&lt;/a&gt;, &lt;a href=&quot;http://twitter.com/etiennebarrie&quot;&gt;Étienne&lt;/a&gt;, &lt;a href=&quot;http://twitter.com/benjaminbouwyn&quot;&gt;Benjamin&lt;/a&gt;, &lt;a href=&quot;http://twitter.com/emilanddc&quot;&gt;Emiland&lt;/a&gt; and I decided to go to the the Paris’ session of &lt;a href=&quot;http://angelhack.com&quot;&gt;AngelHack&lt;/a&gt;. This is a worldwide &lt;a href=&quot;http://en.wikipedia.org/wiki/Hackathon&quot;&gt;hackathon&lt;/a&gt; with fancy &lt;a href=&quot;http://angelhack.com/#sponsors&quot;&gt;sponsors&lt;/a&gt; giving you the opportunity to build and pitch a new product in 24 hours. This edition gathered 165 attendees and 47 projects.&lt;/p&gt;
 
@@ -3825,7 +3825,7 @@ teammates on the spot, it’ll be great.&lt;/p&gt;
    <entry>
      <title>Web Views &amp; RubyMotion</title>
      <link href="http://marcgg.com/blog/2012/11/12/webviews-javascript-ios-rubymotion"/>
-     <updated>2012-11-12T00:00:00-05:00</updated>
+     <updated>2012-11-12T00:00:00+01:00</updated>
      <id>http://marcgg.com/blog/2012/11/12/webviews-javascript-ios-rubymotion</id>
      <content type="html">&lt;p&gt;Here we go, another article on &lt;a href=&quot;http://www.rubymotion.com/&quot;&gt;RubyMotion&lt;/a&gt;!
 For those of you that don’t know what’s that’s all about, it’s a
@@ -4080,7 +4080,7 @@ project and it might not be the case in a few months.&lt;/p&gt;
    <entry>
      <title>Create a Custom Slider With RubyMotion</title>
      <link href="http://marcgg.com/blog/2012/10/22/custom-slider-ios-rubymotion"/>
-     <updated>2012-10-22T00:00:00-04:00</updated>
+     <updated>2012-10-22T00:00:00+02:00</updated>
      <id>http://marcgg.com/blog/2012/10/22/custom-slider-ios-rubymotion</id>
      <content type="html">&lt;p&gt;I always liked the idea of developing mobile applications, but also found the Objective C + XCode experience not very enjoyable. I gave alternatives like &lt;a href=&quot;http://www.appcelerator.com/platform/titanium-sdk/&quot;&gt;Titanium&lt;/a&gt; a try, but wasn’t fully convinced. Lately I’ve been getting into &lt;a href=&quot;http://www.rubymotion.com/&quot;&gt;RubyMotion&lt;/a&gt; and so far I’m really impressed by the general feel of it.&lt;/p&gt;
 
@@ -4279,7 +4279,7 @@ few months.&lt;/p&gt;
    <entry>
      <title>Don’t Accept Brokenness</title>
      <link href="http://marcgg.com/blog/2012/10/15/dont-accept-brokeness-deal-with-annoyances"/>
-     <updated>2012-10-15T00:00:00-04:00</updated>
+     <updated>2012-10-15T00:00:00+02:00</updated>
      <id>http://marcgg.com/blog/2012/10/15/dont-accept-brokeness-deal-with-annoyances</id>
      <content type="html">&lt;p&gt;For a while I had a problem with my jaw. Ten years back I got elbowed in the face (don’t ask), and since then I had trouble yawning or just opening my mouth wide open. I could try to do it, but it would result in the whole thing locking and a good deal of pain.&lt;/p&gt;
 
@@ -4310,7 +4310,7 @@ few months.&lt;/p&gt;
    <entry>
      <title>How I Avoid Thumb Pain From Too Much Coding</title>
      <link href="http://marcgg.com/blog/2012/10/01/thumb-pain-developer-keyboard"/>
-     <updated>2012-10-01T00:00:00-04:00</updated>
+     <updated>2012-10-01T00:00:00+02:00</updated>
      <id>http://marcgg.com/blog/2012/10/01/thumb-pain-developer-keyboard</id>
      <content type="html">&lt;p&gt;Most coders complain about wrist pain. For some reason I never had major trouble there except when working for hours on a laptop. My main issue seemed more original and was located in &lt;a href=&quot;http://en.wikipedia.org/wiki/Thenar_eminence&quot;&gt;the group of muscles controlling the thumb&lt;/a&gt;. Suddently it would hurt for days, then go away, then come back… good times.&lt;/p&gt;
 
@@ -4343,7 +4343,7 @@ few months.&lt;/p&gt;
    <entry>
      <title>The Risks of Working With Another Company's API</title>
      <link href="http://marcgg.com/blog/2012/09/24/working-with-apis-facebook"/>
-     <updated>2012-09-24T00:00:00-04:00</updated>
+     <updated>2012-09-24T00:00:00+02:00</updated>
      <id>http://marcgg.com/blog/2012/09/24/working-with-apis-facebook</id>
      <content type="html">&lt;p&gt;Before we begin let me give you a little background on why I’m writing this article.&lt;/p&gt;
 
@@ -4445,7 +4445,7 @@ few months.&lt;/p&gt;
    <entry>
      <title>The One Thing That Made Me Switch To Vim</title>
      <link href="http://marcgg.com/blog/2012/09/04/one-reason-to-switch-to-vim-editor"/>
-     <updated>2012-09-04T00:00:00-04:00</updated>
+     <updated>2012-09-04T00:00:00+02:00</updated>
      <id>http://marcgg.com/blog/2012/09/04/one-reason-to-switch-to-vim-editor</id>
      <content type="html">&lt;p&gt;I know, I know, this has been done to death, but stay with me for a second. I’m not here to tell you that Vim is the best editor out there, just to tell you the one reason that got me to switch.&lt;/p&gt;
 
@@ -4474,7 +4474,7 @@ few months.&lt;/p&gt;
    <entry>
      <title>Start Working on Your Side Project Tonight</title>
      <link href="http://marcgg.com/blog/2012/01/09/start-working-on-your-side-project"/>
-     <updated>2012-01-09T00:00:00-05:00</updated>
+     <updated>2012-01-09T00:00:00+01:00</updated>
      <id>http://marcgg.com/blog/2012/01/09/start-working-on-your-side-project</id>
      <content type="html">&lt;p&gt;To me a side project is taking an idea and building it from scratch. You do not have to complete it, it doesn’t need a business model or turn into a company over time, it doesn’t even need to make sense to other people than you. It is just a way to experiment. If later on it turns out into a successful company, good for you, but it doesn’t have to be your goal.&lt;/p&gt;
 
@@ -4541,7 +4541,7 @@ few months.&lt;/p&gt;
    <entry>
      <title>Outsourcing In A Startup</title>
      <link href="http://marcgg.com/blog/2011/12/21/startup-outsourcing"/>
-     <updated>2011-12-21T00:00:00-05:00</updated>
+     <updated>2011-12-21T00:00:00+01:00</updated>
      <id>http://marcgg.com/blog/2011/12/21/startup-outsourcing</id>
      <content type="html">&lt;p&gt;So you’re a startup and want to outsource graphic design, system administration or development? Don’t feel bad, this is very common. Often startups can’t afford to hire many people right away or do not have a team with every skill required to build the perfect product.&lt;/p&gt;
 
@@ -4613,7 +4613,7 @@ few months.&lt;/p&gt;
    <entry>
      <title>Developers, Go From SSII To Startup</title>
      <link href="http://marcgg.com/blog/2011/12/12/developer-from-ssii-to-startup"/>
-     <updated>2011-12-12T00:00:00-05:00</updated>
+     <updated>2011-12-12T00:00:00+01:00</updated>
      <id>http://marcgg.com/blog/2011/12/12/developer-from-ssii-to-startup</id>
      <content type="html">&lt;p&gt;In France we have what we call SSII for Société de Service en Ingénierie Informatique. Poorly translated it goes something like «IT Consulting Firm». This is where most young CS graduates will go, mainly because once you get your degree you are spammed by job offers from their recruiters.&lt;/p&gt;
 
@@ -4676,3 +4676,4 @@ few months.&lt;/p&gt;
  
 
 </feed>
+

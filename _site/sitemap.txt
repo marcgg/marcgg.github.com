@@ -18,7 +18,7 @@ http://marcgg.com/photos/tigerlily.html
 http://marcgg.com/photos/traveling.html
 http://marcgg.com/sitemap.txt
 
-http://marcgg.com/blog/2015/06/15/code-blocks-ulysses-iii
+http://marcgg.com/blog/2015/06/16/code-blocks-ulysses-iii
 http://marcgg.com/blog/2015/06/04/getting-started-with-elixir-processes
 http://marcgg.com/blog/2015/05/26/ab-testing-in-real-life-google-analytics
 http://marcgg.com/blog/2015/02/26/heroku-deploy-speed

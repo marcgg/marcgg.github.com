@@ -3,10 +3,10 @@
 permalink: /:categories/:year/:month/:day/:title
 
 exclude: [".rvmrc", "README.md", "Rakefile"]
-auto: true
-pygments: true
 
 markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
 
 title : marcgg#blog
 author :
