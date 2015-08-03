@@ -49,7 +49,7 @@
 <div id="container">
   <div id="content">
     <div class="post">
-      <p>Git is full of little features that are very cool to discover. Let me tell you about a feature of the <a href="http://git-scm.com/docs/git-log">git-log</a> function:</p>
+      <p>Git is full of little features that are very cool to discover. Let me tell you about an option of the <a href="http://git-scm.com/docs/git-log">git-log</a> function:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>$ git log --first-parent
 </code></pre>
@@ -57,17 +57,17 @@
 
 <p>This makes it that the log only follows the first parent commit in case of a merge. It seems a bit abstract, so what about a concrete example?</p>
 
-<h2 id="our-system">Our System</h2>
+<h2 id="example-system">Example System</h2>
 
-<p>Let’s say I want to output what has been added and removed from a file on a given branch without looking at the diff. This means I will only look at the content of the file at a given commit.</p>
+<p>Let’s say I want to output what has been added and removed from a file on a given branch <em>without</em> looking at the diff. This means I will only look at the content of the file at a given commit by checking out to a commit and read the content of the file.</p>
 
-<p>For instance I have an empty file and my first commit adds “A”. It needs to output:</p>
+<p>For instance I have an empty file and my first commit adds “A”. The system needs to output:</p>
 
 <ul>
   <li>Added A</li>
 </ul>
 
-<p>Then if I add “B”, the file contains “AB”. The system already knows that I added “A”, so and I want it to only output:</p>
+<p>Then if I add “B”, the file now contains “AB”. The system already knows that I added “A”, so I want it to only output:</p>
 
 <ul>
   <li>Added B</li>
@@ -79,15 +79,15 @@
   <li>Removed B</li>
 </ul>
 
-<p>… and so on.</p>
+<p>… and so on. I know it seems weird, but it is a real use case I have encountered.</p>
 
 <h2 id="the-problem">The Problem</h2>
 
-<p>Now let’s take this example. The main branch when want to look at is, as often, master.</p>
+<p>Now let’s take the example history below. The main branch we want to look at is, as often, master.</p>
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git_first_parent@2x.png" style="width: 600px; padding: 20px;" /></div>
 
-<p>I add A, then B. From here I branch out and add D on my feature branch. On master, I add C. Finally, I merge the feature branch into master. Classic stuff.</p>
+<p>What is going on here is that I add A, then B. From here I branch out and add D on my feature branch. On master, I add C. Finally, I merge the feature branch into master. Classic stuff really.</p>
 
 <p>However, now if I want to go on master’s last commit and run:</p>
 
@@ -95,7 +95,7 @@
 </code></pre>
 </div>
 
-<p>… and use the commit’s SHA to replay the history, it gives me this as an output:</p>
+<p>… and use all the commits’ SHA to replay the history, it gives me this as an output:</p>
 
 <ul>
   <li>Added A</li>
@@ -106,15 +106,15 @@
   <li>Added D</li>
 </ul>
 
-<p>It is because the log will read your history as such:</p>
+<p>It is because the log will display your history as such:</p>
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git_log@2x.png" style="width: 600px; padding: 20px;" /></div>
 
-<p>That’s not what we want here! Ideally, we would like to exclude the commit adding “D”. We have the information of D being added on the merge, so we don’t need to complexify our log.</p>
+<p>That’s not what we want here! We have the information of D being added on the merge, so we don’t need to complexify our log. Here it would make sense to exclude the commit adding “D” and only keep the merge one, “ABCD”.</p>
 
 <h2 id="the-solution-using-first-parent">The Solution Using first-parent</h2>
 
-<p>The great thing is that the commit adding “D” is from another branch and is not the merge commit. Thanks to that, we can run</p>
+<p>The great thing is that the commit adding “D” is from another branch and is not the merge commit. Because of that, we can run:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>$ git log --first-parent
 </code></pre>
@@ -124,7 +124,7 @@
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/nice_log@2x.png" style="width: 600px; padding: 20px;" /></div>
 
-<p>Awesome! I don’t even care that “D” arrives after “C”, because in the context of my master branch, that’s really what happened.</p>
+<p>Awesome! We don’t even care that “D” arrives after “C” in the timeline, because in the context of my master branch, that’s exactly what happened.</p>
 
 
 
