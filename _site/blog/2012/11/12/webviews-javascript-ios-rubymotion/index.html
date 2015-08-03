@@ -49,27 +49,27 @@
 <div id="container">
   <div id="content">
     <div class="post">
-      <p>Here we go, another article on <a href="http://www.rubymotion.com/">RubyMotion</a>!<br />
-For those of you that don’t know what’s that’s all about, it’s a<br />
-toolchain created by <a href="https://twitter.com/lrz">Laurent Sansonetti</a><br />
-(of <a href="http://macruby.org/">MacRuby</a> fame)<br />
-allowing you to create native iOS application using<br />
+      <p>Here we go, another article on <a href="http://www.rubymotion.com/">RubyMotion</a>!
+For those of you that don’t know what’s that’s all about, it’s a
+toolchain created by <a href="https://twitter.com/lrz">Laurent Sansonetti</a>
+(of <a href="http://macruby.org/">MacRuby</a> fame)
+allowing you to create native iOS application using
 <a href="http://www.ruby-lang.org/">Ruby</a>.</p>
 
-<p>I like it a lot, but please keep in mind that while I have a decent knowledge of Ruby, I’m<br />
-only using RubyMotion on a side project. I worked hard to get everything here<br />
-to work, but it still might not be the most<br />
-efficient way of doing it. If you do know a better solution, please<br />
+<p>I like it a lot, but please keep in mind that while I have a decent knowledge of Ruby, I’m
+only using RubyMotion on a side project. I worked hard to get everything here
+to work, but it still might not be the most
+efficient way of doing it. If you do know a better solution, please
 share it in the comments and I’ll update the article.</p>
 
 <h2 id="our-objective">Our Objective</h2>
 
-<p>Right now the general feeling is that in order to get the highest level of quality in<br />
-an app, you have to go native. I’m not disputing that, but there are some cases<br />
-where you just need to have some HTML, JS and CSS displaying. To do that,<br />
-the best way is to use the<br />
-<a href="http://developer.apple.com/library/ios/#documentation/uikit/reference/UIWebView_Class/Reference/Reference.html">UIWebView</a><br />
-element. It allows you to open html file and display them as if you were<br />
+<p>Right now the general feeling is that in order to get the highest level of quality in
+an app, you have to go native. I’m not disputing that, but there are some cases
+where you just need to have some HTML, JS and CSS displaying. To do that,
+the best way is to use the
+<a href="http://developer.apple.com/library/ios/#documentation/uikit/reference/UIWebView_Class/Reference/Reference.html">UIWebView</a>
+element. It allows you to open html file and display them as if you were
 in a browser.</p>
 
 <p>In this article I’ll try to demonstrate how to:</p>
@@ -83,53 +83,53 @@ in a browser.</p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>I won’t get into the details on how to set up a project and will assume you have basic knowledge of how this works.<br />
-If you never created something with RubyMotion, please take a look at <a href="http://rubymotion-tutorial.com/1-hello-motion/">this tutorial</a><br />
+<p>I won’t get into the details on how to set up a project and will assume you have basic knowledge of how this works.
+If you never created something with RubyMotion, please take a look at <a href="http://rubymotion-tutorial.com/1-hello-motion/">this tutorial</a>
  before reading the rest of this article.</p>
 
-<p>RubyMotion uses <a href="http://www.ruby-lang.org/">Ruby</a>. If you are not familiar with it, there<br />
-are tons of tutorials and books on how to code with this language. I<br />
-recommend <a href="http://ruby.learncodethehardway.org/">Learn Ruby The Hard<br />
+<p>RubyMotion uses <a href="http://www.ruby-lang.org/">Ruby</a>. If you are not familiar with it, there
+are tons of tutorials and books on how to code with this language. I
+recommend <a href="http://ruby.learncodethehardway.org/">Learn Ruby The Hard
 Way</a> by <a href="http://zedshaw.com/">Zed A. Shaw</a>.</p>
 
 <h2 id="setting-up-the-appdelegate">Setting up the AppDelegate</h2>
 
-<p>This is pretty basic, we just set up a<br />
-<a href="http://rubymotion-tutorial.com/3-controllers/">controller</a><br />
+<p>This is pretty basic, we just set up a
+<a href="http://rubymotion-tutorial.com/3-controllers/">controller</a>
 and assign it to be the root.</p>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">AppDelegate</span>
-  <span class="k">def</span> <span class="nf">application</span><span class="p">(</span><span class="n">application</span><span class="p">,</span> <span class="n">didFinishLaunchingWithOptions</span><span class="ss">:launchOptions</span><span class="p">)</span>
-    <span class="vi">@window</span> <span class="o">=</span> <span class="no">UIWindow</span><span class="p">.</span><span class="nf">alloc</span><span class="p">.</span><span class="nf">initWithFrame</span><span class="p">(</span><span class="no">UIScreen</span><span class="p">.</span><span class="nf">mainScreen</span><span class="p">.</span><span class="nf">bounds</span><span class="p">)</span>
+  <span class="k">def</span> <span class="nf">application</span><span class="p">(</span><span class="n">application</span><span class="p">,</span> <span class="ss">didFinishLaunchingWithOptions</span><span class="p">:</span><span class="n">launchOptions</span><span class="p">)</span>
+    <span class="vi">@window</span> <span class="o">=</span> <span class="no">UIWindow</span><span class="o">.</span><span class="n">alloc</span><span class="o">.</span><span class="n">initWithFrame</span><span class="p">(</span><span class="no">UIScreen</span><span class="o">.</span><span class="n">mainScreen</span><span class="o">.</span><span class="n">bounds</span><span class="p">)</span>
 
-    <span class="n">main_controller</span> <span class="o">=</span> <span class="no">MainController</span><span class="p">.</span><span class="nf">alloc</span><span class="p">.</span><span class="nf">init</span>
-    <span class="vi">@window</span><span class="p">.</span><span class="nf">rootViewController</span> <span class="o">=</span> <span class="n">main_controller</span>
+    <span class="n">main_controller</span> <span class="o">=</span> <span class="no">MainController</span><span class="o">.</span><span class="n">alloc</span><span class="o">.</span><span class="n">init</span>
+    <span class="vi">@window</span><span class="o">.</span><span class="n">rootViewController</span> <span class="o">=</span> <span class="n">main_controller</span>
 
-    <span class="vi">@window</span><span class="p">.</span><span class="nf">rootViewController</span><span class="p">.</span><span class="nf">wantsFullScreenLayout</span> <span class="o">=</span> <span class="kp">true</span>
-    <span class="vi">@window</span><span class="p">.</span><span class="nf">makeKeyAndVisible</span>
+    <span class="vi">@window</span><span class="o">.</span><span class="n">rootViewController</span><span class="o">.</span><span class="n">wantsFullScreenLayout</span> <span class="o">=</span> <span class="kp">true</span>
+    <span class="vi">@window</span><span class="o">.</span><span class="n">makeKeyAndVisible</span>
     <span class="kp">true</span>
   <span class="k">end</span>
 <span class="k">end</span></code></pre></div>
 
 <h2 id="opening-a-given-url">Opening A Given URL</h2>
 
-<p>We’ll create the structure for a basic controller and set its view to be<br />
+<p>We’ll create the structure for a basic controller and set its view to be
 a UIWebView. Then we’ll build an URL and load it.</p>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">MainController</span> <span class="o">&lt;</span> <span class="no">UIViewController</span>
 
-  <span class="k">def</span> <span class="nf">initWithNibName</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="ss">bundle: </span><span class="n">bundle</span><span class="p">)</span>
+  <span class="k">def</span> <span class="nf">initWithNibName</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="ss">bundle</span><span class="p">:</span> <span class="n">bundle</span><span class="p">)</span>
     <span class="k">super</span>
     <span class="nb">self</span>
   <span class="k">end</span>
 
   <span class="k">def</span> <span class="nf">loadView</span>
-    <span class="nb">self</span><span class="p">.</span><span class="nf">view</span> <span class="o">=</span> <span class="no">UIWebView</span><span class="p">.</span><span class="nf">alloc</span><span class="p">.</span><span class="nf">init</span>
+    <span class="nb">self</span><span class="o">.</span><span class="n">view</span> <span class="o">=</span> <span class="no">UIWebView</span><span class="o">.</span><span class="n">alloc</span><span class="o">.</span><span class="n">init</span>
   <span class="k">end</span>
 
   <span class="k">def</span> <span class="nf">viewDidLoad</span>
-    <span class="nb">self</span><span class="p">.</span><span class="nf">view</span><span class="p">.</span><span class="nf">loadRequest</span><span class="p">(</span>
-      <span class="no">NSURLRequest</span><span class="p">.</span><span class="nf">requestWithURL</span><span class="p">(</span><span class="no">NSURL</span><span class="o">.</span><span class="no">URLWithString</span><span class="p">(</span><span class="s2">"http://marcgg.com"</span><span class="p">))</span>
+    <span class="nb">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">loadRequest</span><span class="p">(</span>
+      <span class="no">NSURLRequest</span><span class="o">.</span><span class="n">requestWithURL</span><span class="p">(</span><span class="no">NSURL</span><span class="o">.</span><span class="n">URLWithString</span><span class="p">(</span><span class="s2">&quot;http://marcgg.com&quot;</span><span class="p">))</span>
     <span class="p">)</span>
   <span class="k">end</span>
 <span class="k">end</span></code></pre></div>
@@ -143,144 +143,144 @@ to avoid creating a UIView just to throw it away. Thanks to
 <p>If we slow down things a bit, we have this:</p>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1"># Creating a URL</span>
-<span class="n">url</span> <span class="o">=</span> <span class="no">NSURL</span><span class="o">.</span><span class="no">URLWithString</span><span class="p">(</span><span class="s2">"http://marcgg.com"</span><span class="p">)</span>
+<span class="n">url</span> <span class="o">=</span> <span class="no">NSURL</span><span class="o">.</span><span class="n">URLWithString</span><span class="p">(</span><span class="s2">&quot;http://marcgg.com&quot;</span><span class="p">)</span>
 
 <span class="c1"># Creating a request based on the URL</span>
-<span class="n">request</span> <span class="o">=</span> <span class="no">NSURLRequest</span><span class="p">.</span><span class="nf">requestWithURL</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">request</span> <span class="o">=</span> <span class="no">NSURLRequest</span><span class="o">.</span><span class="n">requestWithURL</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 
 <span class="c1"># Loading the request into the view (that is set to be our UIWebView)</span>
-<span class="nb">self</span><span class="p">.</span><span class="nf">view</span><span class="p">.</span><span class="nf">loadRequest</span><span class="p">(</span><span class="n">request</span><span class="p">)</span></code></pre></div>
+<span class="nb">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">loadRequest</span><span class="p">(</span><span class="n">request</span><span class="p">)</span></code></pre></div>
 
-<p>Now if we run rake we see my website, and how badly it’s optimized for<br />
+<p>Now if we run rake we see my website, and how badly it’s optimized for
 mobile:</p>
 
 <div style="text-align: center"><img src="/assets/misc/uiweb1.png" /></div>
 
 <h2 id="opening-a-local-file">Opening A Local File</h2>
 
-<p>It’s good to open a website, but what if you don’t have internet access,<br />
-or if you don’t need to load anything since you have already everything<br />
+<p>It’s good to open a website, but what if you don’t have internet access,
+or if you don’t need to load anything since you have already everything
 you need ? That’s when you load your locally stored file.</p>
 
-<p>First, create an <code class="highlighter-rouge">index.html</code> file that you’ll store in <code class="highlighter-rouge">/resources</code>.<br />
-Put whatever HTML you want inside, maybe a background color or something<br />
+<p>First, create an <code class="highlighter-rouge">index.html</code> file that you’ll store in <code class="highlighter-rouge">/resources</code>.
+Put whatever HTML you want inside, maybe a background color or something
 similar to know if the file loaded properly.</p>
 
 <p>Once it’s done, tweak the controller so that it knows what’s up.</p>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">viewDidLoad</span>
-  <span class="n">path</span> <span class="o">=</span> <span class="no">NSBundle</span><span class="p">.</span><span class="nf">mainBundle</span><span class="p">.</span><span class="nf">pathForResource</span><span class="p">(</span><span class="s1">'index'</span><span class="p">,</span> <span class="ss">ofType: </span><span class="s1">'html'</span><span class="p">)</span>
-  <span class="n">url</span> <span class="o">=</span> <span class="no">NSURL</span><span class="p">.</span><span class="nf">fileURLWithPath</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-  <span class="nb">self</span><span class="p">.</span><span class="nf">view</span><span class="p">.</span><span class="nf">loadRequest</span> <span class="no">NSURLRequest</span><span class="p">.</span><span class="nf">requestWithURL</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+  <span class="n">path</span> <span class="o">=</span> <span class="no">NSBundle</span><span class="o">.</span><span class="n">mainBundle</span><span class="o">.</span><span class="n">pathForResource</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">,</span> <span class="ss">ofType</span><span class="p">:</span> <span class="s1">&#39;html&#39;</span><span class="p">)</span>
+  <span class="n">url</span> <span class="o">=</span> <span class="no">NSURL</span><span class="o">.</span><span class="n">fileURLWithPath</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+  <span class="nb">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">loadRequest</span> <span class="no">NSURLRequest</span><span class="o">.</span><span class="n">requestWithURL</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 <span class="k">end</span></code></pre></div>
 
 <p>Run rake again, and you should see your file displaying.</p>
 
 <div style="text-align: center"><img src="/assets/misc/uiweb2.png" /></div>
 
-<p>At this point you can customize the HTML however you want. Keep in mind<br />
-that if you use other files (css, js, images), they need to be stored in<br />
-<code class="highlighter-rouge">/ressources</code> as well in order to be accessible. You might also need to<br />
+<p>At this point you can customize the HTML however you want. Keep in mind
+that if you use other files (css, js, images), they need to be stored in
+<code class="highlighter-rouge">/ressources</code> as well in order to be accessible. You might also need to
 think about how you want to handle retina/non retina images.</p>
 
 <h2 id="customize-the-uiwebview">Customize The UIWebView</h2>
 
-<p>Here what I wanted to do is to forbid scrolling and just have a nice,<br />
-fixed, piece of HTML. This way it’ll feel more like a native piece of UI<br />
+<p>Here what I wanted to do is to forbid scrolling and just have a nice,
+fixed, piece of HTML. This way it’ll feel more like a native piece of UI
 than a web browser. To do so, you can change these parameters:</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">self</span><span class="p">.</span><span class="nf">view</span><span class="p">.</span><span class="nf">scrollView</span><span class="p">.</span><span class="nf">scrollEnabled</span> <span class="o">=</span> <span class="kp">false</span>
-<span class="nb">self</span><span class="p">.</span><span class="nf">view</span><span class="p">.</span><span class="nf">scrollView</span><span class="p">.</span><span class="nf">bounces</span> <span class="o">=</span> <span class="kp">false</span></code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">scrollView</span><span class="o">.</span><span class="n">scrollEnabled</span> <span class="o">=</span> <span class="kp">false</span>
+<span class="nb">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">scrollView</span><span class="o">.</span><span class="n">bounces</span> <span class="o">=</span> <span class="kp">false</span></code></pre></div>
 
 <h2 id="javascript-communication">Javascript Communication</h2>
 
-<p>It’s the part where it gets a bit more tricky. Here I want to have a<br />
-link somewhere in my HTML that triggers something in my RubyMotion code.<br />
+<p>It’s the part where it gets a bit more tricky. Here I want to have a
+link somewhere in my HTML that triggers something in my RubyMotion code.
 It could be a “cancel” link, a form… it doesn’t matter.</p>
 
-<p>To do that we’re going to use the logic behind <code class="highlighter-rouge">shouldStartLoadWithRequest</code><br />
-and the whole <a href="http://developer.apple.com/library/ios/#documentation/uikit/reference/UIWebViewDelegate_Protocol/Reference/Reference.html">UIWebViewDelegate</a> thing. I’m not an iOS master yet, so please bear with me on<br />
+<p>To do that we’re going to use the logic behind <code class="highlighter-rouge">shouldStartLoadWithRequest</code>
+and the whole <a href="http://developer.apple.com/library/ios/#documentation/uikit/reference/UIWebViewDelegate_Protocol/Reference/Reference.html">UIWebViewDelegate</a> thing. I’m not an iOS master yet, so please bear with me on
 the domain-specific vocabulary.</p>
 
-<p>First we’re going to add a delegate to our view. Here I’ll use the<br />
-current controller because it’s a rather small project, but feel free to<br />
+<p>First we’re going to add a delegate to our view. Here I’ll use the
+current controller because it’s a rather small project, but feel free to
 use any object you want.</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">self</span><span class="p">.</span><span class="nf">view</span><span class="p">.</span><span class="nf">delegate</span> <span class="o">=</span> <span class="nb">self</span></code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="nb">self</span></code></pre></div>
 
-<p>Now we can use the fact that our controller, being the delegate of a<br />
-UIWebview, will have its shouldStartLoadWithRequest method called before<br />
+<p>Now we can use the fact that our controller, being the delegate of a
+UIWebview, will have its shouldStartLoadWithRequest method called before
 any frame is loaded. Let’s write our own method and see how it goes.</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">webView</span><span class="p">(</span><span class="n">inWeb</span><span class="p">,</span> <span class="ss">shouldStartLoadWithRequest: </span><span class="n">inRequest</span><span class="p">,</span> <span class="ss">navigationType: </span><span class="n">inType</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="n">inRequest</span><span class="o">.</span><span class="no">URL</span><span class="p">.</span><span class="nf">absoluteString</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">webView</span><span class="p">(</span><span class="n">inWeb</span><span class="p">,</span> <span class="ss">shouldStartLoadWithRequest</span><span class="p">:</span> <span class="n">inRequest</span><span class="p">,</span> <span class="ss">navigationType</span><span class="p">:</span> <span class="n">inType</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="n">inRequest</span><span class="o">.</span><span class="n">URL</span><span class="o">.</span><span class="n">absoluteString</span>
   <span class="kp">true</span>
 <span class="k">end</span></code></pre></div>
 
-<p>Here we have the bare minimum to get started. You’ll notice we have a couple of<br />
-parameters. In this article I’ll just use the request, but know that the<br />
-others can be usefull too. Read the<br />
-<a href="http://developer.apple.com/library/ios/#documentation/uikit/reference/UIWebViewDelegate_Protocol/Reference/Reference.html">documentation</a><br />
+<p>Here we have the bare minimum to get started. You’ll notice we have a couple of
+parameters. In this article I’ll just use the request, but know that the
+others can be usefull too. Read the
+<a href="http://developer.apple.com/library/ios/#documentation/uikit/reference/UIWebViewDelegate_Protocol/Reference/Reference.html">documentation</a>
 if you want to learn more.</p>
 
-<p>Now if we launch rake one more time and look at the trace, we can see the<br />
+<p>Now if we launch rake one more time and look at the trace, we can see the
 current path to the local file we’re loading.</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">file</span><span class="ss">:/</span><span class="o">/</span><span class="n">your_path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">your_project</span><span class="p">.</span><span class="nf">app</span><span class="o">/</span><span class="n">index</span><span class="p">.</span><span class="nf">html</span></code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span> <span class="ss">file</span><span class="p">:</span><span class="sr">//</span><span class="n">your_path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">your_project</span><span class="o">.</span><span class="n">app</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">html</span></code></pre></div>
 
-<p>This is useless, but now let’s add a link in the <code class="highlighter-rouge">index.html</code> file. Now<br />
-if you point it to a regular website, it’ll just load it. It’s not what<br />
+<p>This is useless, but now let’s add a link in the <code class="highlighter-rouge">index.html</code> file. Now
+if you point it to a regular website, it’ll just load it. It’s not what
 we want right now. Instead we’ll create our own protocol (lol) as such:</p>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"myapp://do/something"</span><span class="nt">&gt;</span>Click this<span class="nt">&lt;/a&gt;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;myapp://do/something&quot;</span><span class="nt">&gt;</span>Click this<span class="nt">&lt;/a&gt;</span></code></pre></div>
 
-<p>By now you must have figured out where we’re heading like that. Since we<br />
-have our callback thanks to the UIWebViewDelegate protocol, we can parse<br />
-the URL and do process it how we want. I added a basic example below,<br />
+<p>By now you must have figured out where we’re heading like that. Since we
+have our callback thanks to the UIWebViewDelegate protocol, we can parse
+the URL and do process it how we want. I added a basic example below,
 but really you can do whatever.</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">webView</span><span class="p">(</span><span class="n">inWeb</span><span class="p">,</span> <span class="ss">shouldStartLoadWithRequest: </span><span class="n">inRequest</span><span class="p">,</span> <span class="ss">navigationType: </span><span class="n">inType</span><span class="p">)</span>
-  <span class="k">if</span> <span class="n">inRequest</span><span class="o">.</span><span class="no">URL</span><span class="p">.</span><span class="nf">absoluteString</span> <span class="o">=~</span> <span class="sr">/myapp:\/\//</span>
-    <span class="nb">puts</span> <span class="s2">"Do something!"</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">webView</span><span class="p">(</span><span class="n">inWeb</span><span class="p">,</span> <span class="ss">shouldStartLoadWithRequest</span><span class="p">:</span> <span class="n">inRequest</span><span class="p">,</span> <span class="ss">navigationType</span><span class="p">:</span> <span class="n">inType</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">inRequest</span><span class="o">.</span><span class="n">URL</span><span class="o">.</span><span class="n">absoluteString</span> <span class="o">=~</span> <span class="sr">/myapp:\/\//</span>
+    <span class="nb">puts</span> <span class="s2">&quot;Do something!&quot;</span>
   <span class="k">else</span>
-    <span class="nb">puts</span> <span class="s2">"This is just another link"</span>
+    <span class="nb">puts</span> <span class="s2">&quot;This is just another link&quot;</span>
   <span class="k">end</span>
   <span class="kp">true</span>
 <span class="k">end</span></code></pre></div>
 
-<p>In the same fashion you can trigger the page change using javascript.<br />
+<p>In the same fashion you can trigger the page change using javascript.
 This should be pretty basic stuff here.</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">window</span><span class="p">.</span><span class="nx">location</span> <span class="o">=</span> <span class="s2">"myapp://some_awesome/message"</span></code></pre></div>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">window</span><span class="p">.</span><span class="nx">location</span> <span class="o">=</span> <span class="s2">&quot;myapp://some_awesome/message&quot;</span></code></pre></div>
 
-<p>By now you should have noticed how I always return true. It’s because if<br />
-you return false the frame won’t load. You can use this fact to forbid<br />
-the user to click certain links on the page, or disable browsing<br />
+<p>By now you should have noticed how I always return true. It’s because if
+you return false the frame won’t load. You can use this fact to forbid
+the user to click certain links on the page, or disable browsing
 altogether.</p>
 
 <h2 id="a-quick-security-note">A Quick Security Note</h2>
 
-<p>We now have an HTML page talking to your iOS app ! Pretty cool, but be carefull<br />
-on how you allow this to happen, since you really don’t want<br />
-any website sending funky signals to your app. Make sure you don’t<br />
+<p>We now have an HTML page talking to your iOS app ! Pretty cool, but be carefull
+on how you allow this to happen, since you really don’t want
+any website sending funky signals to your app. Make sure you don’t
 execute any message you receive.</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">webView</span><span class="p">(</span><span class="n">inWeb</span><span class="p">,</span> <span class="ss">shouldStartLoadWithRequest: </span><span class="n">inRequest</span><span class="p">,</span> <span class="ss">navigationType: </span><span class="n">inType</span><span class="p">)</span>
-  <span class="c1"># I'm an Idiot</span>
-  <span class="no">MyVeryImportantModel</span><span class="p">.</span><span class="nf">send</span><span class="p">(</span><span class="n">inRequest</span><span class="o">.</span><span class="no">URL</span><span class="p">.</span><span class="nf">absoluteString</span><span class="p">)</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">webView</span><span class="p">(</span><span class="n">inWeb</span><span class="p">,</span> <span class="ss">shouldStartLoadWithRequest</span><span class="p">:</span> <span class="n">inRequest</span><span class="p">,</span> <span class="ss">navigationType</span><span class="p">:</span> <span class="n">inType</span><span class="p">)</span>
+  <span class="c1"># I&#39;m an Idiot</span>
+  <span class="no">MyVeryImportantModel</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">inRequest</span><span class="o">.</span><span class="n">URL</span><span class="o">.</span><span class="n">absoluteString</span><span class="p">)</span>
 <span class="k">end</span></code></pre></div>
 
 <p>It should be pretty obvious, but it’s still worth mentioning.</p>
 
 <h2 id="hurray-">Hurray !</h2>
 
-<p>We now have a web view loading a local file and talking to the Ruby part<br />
-of the application using Javascript. Neat ! Of course there’s a lot more you can do with<br />
-this, and you should probably add some kind of cool DSL in front of it<br />
+<p>We now have a web view loading a local file and talking to the Ruby part
+of the application using Javascript. Neat ! Of course there’s a lot more you can do with
+this, and you should probably add some kind of cool DSL in front of it
 if you’re going to do this frequently.</p>
 
-<p>As always, you can look up the whole project on <a href="https://github.com/marcgg/rubymotion-uiwebview">github</a>.<br />
-It is compiling and working as I write this article, but keep in mind that RubyMotion is a fast moving<br />
+<p>As always, you can look up the whole project on <a href="https://github.com/marcgg/rubymotion-uiwebview">github</a>.
+It is compiling and working as I write this article, but keep in mind that RubyMotion is a fast moving
 project and it might not be the case in a few months.</p>
 
 
@@ -293,6 +293,8 @@ project and it might not be the case in a few months.</p>
             <p>Since you scrolled this far, you might as well take a look at some other things I wrote !</p>
             <ul>
               
+          
+            
           
             
           

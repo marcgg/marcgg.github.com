@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Game of Life Visualisations
-description: I was stuck in a plan so I started fiddling with my alternative version of Conway's Game of Life. I kind of liked the way the board looked after a while, so I decided to share.
+description: I was stuck in a plane so I started fiddling with my alternative version of Conway's Game of Life. I kind of liked the way the board looked after a while, so I decided to share.
 blog: true
 category: blog
 tag: Projects

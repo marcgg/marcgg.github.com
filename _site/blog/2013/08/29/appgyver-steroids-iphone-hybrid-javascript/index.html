@@ -49,141 +49,141 @@
 <div id="container">
   <div id="content">
     <div class="post">
-      <p><em><strong>Update 9 April 2014</strong>: Since this post, I released a <a href="http://liffapp.io">quantified self app</a><br />
-using SteroidsJs and <br />
-wrote another article with <a href="/blog/2014/04/09/phonegap-steroids-hybrid-native-app-tips/">tips &amp; tricks to know when building a<br />
-Steroids.js app</a> (or any hybrid app really).<br />
+      <p><em><strong>Update 9 April 2014</strong>: Since this post, I released a <a href="http://liffapp.io">quantified self app</a>
+using SteroidsJs and 
+wrote another article with <a href="/blog/2014/04/09/phonegap-steroids-hybrid-native-app-tips/">tips &amp; tricks to know when building a
+Steroids.js app</a> (or any hybrid app really).
 300ms delay, overscroll, text rendering, 1px borders, local storage, performances, i18n … it’s all there!</em></p>
 
-<p>As I wrote before, I like the idea of developing mobile applications. I<br />
-don’t plan to focus exclusively on it, but having an iPhone app as a pet<br />
-project seems pretty cool and creating something for Android could be<br />
+<p>As I wrote before, I like the idea of developing mobile applications. I
+don’t plan to focus exclusively on it, but having an iPhone app as a pet
+project seems pretty cool and creating something for Android could be
 interesting as well in the future.</p>
 
-<p>The problem is that, like a lot of people, I don’t enjoy the<br />
-experience of working with Objective C<br />
-and XCode. I thought I found a solution with <a href="http://www.rubymotion.com/">RubyMotion</a>,<br />
-I even <a href="/blog/2012/10/22/custom-slider-ios-rubymotion/">wrote about it</a>…<br />
+<p>The problem is that, like a lot of people, I don’t enjoy the
+experience of working with Objective C
+and XCode. I thought I found a solution with <a href="http://www.rubymotion.com/">RubyMotion</a>,
+I even <a href="/blog/2012/10/22/custom-slider-ios-rubymotion/">wrote about it</a>…
 but I was mistaken. While RubyMotion is a great project, it’s not for me.</p>
 
-<p>Yes you get to write Ruby code, but that’s pretty much it. You still<br />
-have to learn about the SDK to even start to create something simple.<br />
-This can be perfectly fine for some with more experience or wanting to<br />
-get experience with the iOS SDK, but I just want to build something.<br />
-Overall it felt like using Ruby just complexified development for me. I couldn’t<br />
-use code snippets or the main iPhone resources available, and RubyMotion lacked<br />
-documentation and tutorials. I got something done, but it wasn’t good enough and I<br />
+<p>Yes you get to write Ruby code, but that’s pretty much it. You still
+have to learn about the SDK to even start to create something simple.
+This can be perfectly fine for some with more experience or wanting to
+get experience with the iOS SDK, but I just want to build something.
+Overall it felt like using Ruby just complexified development for me. I couldn’t
+use code snippets or the main iPhone resources available, and RubyMotion lacked
+documentation and tutorials. I got something done, but it wasn’t good enough and I
 never released anything.</p>
 
-<p>I tried again a couple of months later with an idea more simple: create a web view wrapper using<br />
-RubyMotion and do everything inside a single page HTML 5 app. Sadly the<br />
-lack of native UI made everything feel a bit off, so I scrapped that as well.<br />
-I thought about using <a href="http://phonegap.com/">PhoneGap</a><br />
+<p>I tried again a couple of months later with an idea more simple: create a web view wrapper using
+RubyMotion and do everything inside a single page HTML 5 app. Sadly the
+lack of native UI made everything feel a bit off, so I scrapped that as well.
+I thought about using <a href="http://phonegap.com/">PhoneGap</a>
 but I figured that the app would end up with the same problem.</p>
 
-<p>Fast forward 6 months and I read that AppGyver released<br />
-<a href="http://www.appgyver.com/steroids">Steroids.js</a>, an solution<br />
-promising to<br />
-“<a href="http://techcrunch.com/2013/08/20/steroids-js-bridges-the-performance-gap-between-phonegap-and-native-apps-by-using-native-ui-components-and-animations/">Bridge The Performance Gap Between PhoneGap And Native Apps By Using Native UI Components And Animations</a>”.<br />
-I immediatly thought that it was what I wanted! The next day AppGyver<br />
-announced that Steroids would be<br />
-<a href="http://appgyver.blogspot.fr/2013/08/steroids-is-now-free-for-everyone.html">free for everyone</a>,<br />
+<p>Fast forward 6 months and I read that AppGyver released
+<a href="http://www.appgyver.com/steroids">Steroids.js</a>, an solution
+promising to
+“<a href="http://techcrunch.com/2013/08/20/steroids-js-bridges-the-performance-gap-between-phonegap-and-native-apps-by-using-native-ui-components-and-animations/">Bridge The Performance Gap Between PhoneGap And Native Apps By Using Native UI Components And Animations</a>”.
+I immediatly thought that it was what I wanted! The next day AppGyver
+announced that Steroids would be
+<a href="http://appgyver.blogspot.fr/2013/08/steroids-is-now-free-for-everyone.html">free for everyone</a>,
 so I decided to give it a try and write about it here.</p>
 
 <div style="text-align: center"><img src="/assets/blog/steroids.png" /></div>
 
-<p>Before reading more, please take this article as it is: feedback on this new solution to create mobile apps.<br />
-I’m not trying to  educate anyone on how to do things or evangelize. I<br />
-only played with it for a few days and haven’t put anything in<br />
-production using Steroids. I also know I’m making a lot of mistakes because, while<br />
+<p>Before reading more, please take this article as it is: feedback on this new solution to create mobile apps.
+I’m not trying to  educate anyone on how to do things or evangelize. I
+only played with it for a few days and haven’t put anything in
+production using Steroids. I also know I’m making a lot of mistakes because, while
 I’m a decent web developer, I’m not really a great mobile developer.</p>
 
 <p>Alright.</p>
 
 <h2 id="installation">Installation</h2>
 
-<p>AppGiver provides a pretty good documentation. It’s far from complete, but<br />
-what is there is well written and very clear. To set my development<br />
+<p>AppGiver provides a pretty good documentation. It’s far from complete, but
+what is there is well written and very clear. To set my development
 environment I followed their <a href="http://academy.appgyver.com/courses/2/lessons/32">tutorial</a>.</p>
 
-<p>Overall everything went smoothly aside from a couple of gotchas very<br />
+<p>Overall everything went smoothly aside from a couple of gotchas very
 easy to figure out.</p>
 
-<p>For instance Steroids uses an older version of node.js so I had to set up <a href="https://github.com/creationix/nvm">nvm</a><br />
-in order to get it to run. The thing is that nvm creates a<br />
-.bash_profile, but since I use <a href="http://www.zsh.org/">zsh</a> it wouldn’t pick up the correct path<br />
-automatically as promised. Moving the concerned code to .zshrc fixed<br />
+<p>For instance Steroids uses an older version of node.js so I had to set up <a href="https://github.com/creationix/nvm">nvm</a>
+in order to get it to run. The thing is that nvm creates a
+.bash_profile, but since I use <a href="http://www.zsh.org/">zsh</a> it wouldn’t pick up the correct path
+automatically as promised. Moving the concerned code to .zshrc fixed
 that.</p>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[[</span> -s /Users/marcgg/.nvm/nvm.sh <span class="o">]]</span> <span class="o">&amp;&amp;</span> . /Users/marcgg/.nvm/nvm.sh <span class="c"># This loads NVM</span></code></pre></div>
 
-<p>nvm requires that you specify the version you need in order for you to<br />
+<p>nvm requires that you specify the version you need in order for you to
 access the steroids command. It’s similar to what rvm does, but you still have to think about it.</p>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">nvm use 0.8.0</code></pre></div>
 
 <h2 id="first-impression">First Impression</h2>
 
-<p>After completing the installation, I executed the script to scaffold a new application,<br />
-downloaded the scanner app, started the application, scanned the QR code and …<br />
-Wow! It’s really neat!<br />
-The application ran on my iPhone just a few minutes after starting<br />
+<p>After completing the installation, I executed the script to scaffold a new application,
+downloaded the scanner app, started the application, scanned the QR code and …
+Wow! It’s really neat!
+The application ran on my iPhone just a few minutes after starting
 working.</p>
 
-<p>By the way, if you run the Steroids connect script with the watch option it will reload the app<br />
+<p>By the way, if you run the Steroids connect script with the watch option it will reload the app
 automatically on every device connected for maximum effect.</p>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">steroids connect --watch</code></pre></div>
 
 <h2 id="organizing-files">Organizing Files</h2>
 
-<p>Right away you don’t really get a full structured project.<br />
-To do so you have to run some generators.<br />
-The default approach is to give you free<br />
-choice over what you want to do about file organisation. Personnally I<br />
-would have prefered it was the other way around, giving me the structure<br />
-but allowing me to remove it… or maybe an option in the scaffolding<br />
+<p>Right away you don’t really get a full structured project.
+To do so you have to run some generators.
+The default approach is to give you free
+choice over what you want to do about file organisation. Personnally I
+would have prefered it was the other way around, giving me the structure
+but allowing me to remove it… or maybe an option in the scaffolding
 script.</p>
 
 <h2 id="building-the-ui">Building The UI</h2>
 
 <h3 id="drawer">Drawer</h3>
 
-<p>Steroids comes with a very cool “native” Drawer, meaning that it will<br />
-display a webview on the side of your app with a native animation. The<br />
-<a href="http://academy.appgyver.com/courses/4/lessons/44">tutorial</a> explaining<br />
+<p>Steroids comes with a very cool “native” Drawer, meaning that it will
+display a webview on the side of your app with a native animation. The
+<a href="http://academy.appgyver.com/courses/4/lessons/44">tutorial</a> explaining
 that got me excited so I decided that my app would have a drawer!</p>
 
 <p>Getting it to work was almost as simple as going:</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">drawer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">steroids</span><span class="p">.</span><span class="nx">views</span><span class="p">.</span><span class="nx">WebView</span><span class="p">(</span><span class="s2">"/views/drawer/show.html"</span><span class="p">);</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">drawer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">steroids</span><span class="p">.</span><span class="nx">views</span><span class="p">.</span><span class="nx">WebView</span><span class="p">(</span><span class="s2">&quot;/views/drawer/show.html&quot;</span><span class="p">);</span>
 <span class="kd">function</span> <span class="nx">openDrawer</span><span class="p">()</span> <span class="p">{</span>
   <span class="nx">steroids</span><span class="p">.</span><span class="nx">drawers</span><span class="p">.</span><span class="nx">show</span><span class="p">(</span><span class="nx">drawer</span><span class="p">);</span>
 <span class="p">}</span></code></pre></div>
 
 <p>And then create a webview with a link to open it.</p>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">ontouchend=</span><span class="s">"openDrawer()"</span><span class="nt">&gt;</span>Open<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">ontouchend=</span><span class="s">&quot;openDrawer()&quot;</span><span class="nt">&gt;</span>Open<span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<p>Doing this will work, but you’d prefer to have a gesture to open and<br />
-close the drawer. This is handled by Steroids as well, but this<br />
-breaks gestures inside your webview. It’s also a bit more complicated to<br />
+<p>Doing this will work, but you’d prefer to have a gesture to open and
+close the drawer. This is handled by Steroids as well, but this
+breaks gestures inside your webview. It’s also a bit more complicated to
 have the drawer on some screens and not others.</p>
 
-<p>After a few hours playing with it and talking with<br />
-<a href="http://twitter.com/jeclic">a real iOS developer</a><br />
-(“you have a drawer for your app with 4 screens???”) I decided that it wasn’t really the<br />
+<p>After a few hours playing with it and talking with
+<a href="http://twitter.com/jeclic">a real iOS developer</a>
+(“you have a drawer for your app with 4 screens???”) I decided that it wasn’t really the
 UI I needed for this project.</p>
 
 <h3 id="natives-navs--tabs">Natives Navs &amp; Tabs</h3>
 
-<p>The next day I dropped everything and went for a more classical<br />
-approach with tabs at the bottom and a nav bar up top. It turned out it was way simpler and<br />
+<p>The next day I dropped everything and went for a more classical
+approach with tabs at the bottom and a nav bar up top. It turned out it was way simpler and
 actually pretty straightforward to do with Steroids.</p>
 
 <p>Adding the following in a controller gives you a nav bar:</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">steroids</span><span class="p">.</span><span class="nx">view</span><span class="p">.</span><span class="nx">navigationBar</span><span class="p">.</span><span class="nx">show</span><span class="p">(</span><span class="s2">"My Nav Bar"</span><span class="p">)</span></code></pre></div>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">steroids</span><span class="p">.</span><span class="nx">view</span><span class="p">.</span><span class="nx">navigationBar</span><span class="p">.</span><span class="nx">show</span><span class="p">(</span><span class="s2">&quot;My Nav Bar&quot;</span><span class="p">)</span></code></pre></div>
 
 <p>This added in the config gives you a tab menu:</p>
 
@@ -191,44 +191,44 @@ actually pretty straightforward to do with Steroids.</p>
 
 <span class="nx">steroids</span><span class="p">.</span><span class="nx">config</span><span class="p">.</span><span class="nx">tabBar</span><span class="p">.</span><span class="nx">tabs</span> <span class="o">=</span> <span class="p">[</span>
  <span class="p">{</span>
-   <span class="na">title</span><span class="p">:</span> <span class="s2">"Fun"</span>
-   <span class="na">icon</span><span class="p">:</span> <span class="s2">"icons/myicon@2x.png"</span>
-   <span class="na">location</span><span class="p">:</span> <span class="s2">"http://localhost/views/fun/have_it.html"</span>
+   <span class="nx">title</span><span class="o">:</span> <span class="s2">&quot;Fun&quot;</span>
+   <span class="nx">icon</span><span class="o">:</span> <span class="s2">&quot;icons/myicon@2x.png&quot;</span>
+   <span class="nx">location</span><span class="o">:</span> <span class="s2">&quot;http://localhost/views/fun/have_it.html&quot;</span>
  <span class="p">},</span>
  <span class="p">{</span>
-   <span class="na">title</span><span class="p">:</span> <span class="s2">"Excitement"</span>
-   <span class="na">icon</span><span class="p">:</span> <span class="s2">"icons/myothericon@2x.png"</span>
-   <span class="na">location</span><span class="p">:</span> <span class="s2">"http://localhost/views/excitement/amazing.html"</span>
+   <span class="nx">title</span><span class="o">:</span> <span class="s2">&quot;Excitement&quot;</span>
+   <span class="nx">icon</span><span class="o">:</span> <span class="s2">&quot;icons/myothericon@2x.png&quot;</span>
+   <span class="nx">location</span><span class="o">:</span> <span class="s2">&quot;http://localhost/views/excitement/amazing.html&quot;</span>
  <span class="p">}</span>
 <span class="p">]</span></code></pre></div>
 
-<p>You then get access to ways to customize colors for everything as<br />
-explained <a href="http://academy.appgyver.com/courses/4/lessons/50">here</a>,<br />
+<p>You then get access to ways to customize colors for everything as
+explained <a href="http://academy.appgyver.com/courses/4/lessons/50">here</a>,
 and… tadaaaa:</p>
 
 <div style="text-align: center"><img src="/assets/blog/app_steroids.jpg" /></div>
 
-<p>The text displayed is contained in the have_it.html file placed in the<br />
+<p>The text displayed is contained in the have_it.html file placed in the
 project.</p>
 
-<p>It is really simple and, even if this was written with javascript, it<br />
-looks native. The result feels really right and it didn’t take long to<br />
+<p>It is really simple and, even if this was written with javascript, it
+looks native. The result feels really right and it didn’t take long to
 create.</p>
 
-<p>There are some limits to this. For instance, while you can add buttons<br />
-in the nav bar, you can’t add icons yet. I’m sure they will improve on<br />
-it, but for customization you don’t have as much options as going full<br />
+<p>There are some limits to this. For instance, while you can add buttons
+in the nav bar, you can’t add icons yet. I’m sure they will improve on
+it, but for customization you don’t have as much options as going full
 native.</p>
 
 <h3 id="login-modal">Login Modal</h3>
 
-<p>The application I’m building requires that you login. At first I wanted<br />
-to have two different webviews and shift between disconnected and<br />
-connected mode, but it got complicated because of the tab menu… so in<br />
-the end I just put a modal window that pops up when the user is not<br />
+<p>The application I’m building requires that you login. At first I wanted
+to have two different webviews and shift between disconnected and
+connected mode, but it got complicated because of the tab menu… so in
+the end I just put a modal window that pops up when the user is not
 logged in. It’s not perfect but it gets the job done for now.</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">webView</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">steroids</span><span class="p">.</span><span class="nx">views</span><span class="p">.</span><span class="nx">WebView</span><span class="p">(</span><span class="s2">"../views/login/show.html"</span><span class="p">);</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">webView</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">steroids</span><span class="p">.</span><span class="nx">views</span><span class="p">.</span><span class="nx">WebView</span><span class="p">(</span><span class="s2">&quot;../views/login/show.html&quot;</span><span class="p">);</span>
 <span class="nx">steroids</span><span class="p">.</span><span class="nx">modal</span><span class="p">.</span><span class="nx">show</span><span class="p">(</span><span class="nx">webView</span><span class="p">);</span></code></pre></div>
 
 <p>Hiding it is pretty simple as well:</p>
@@ -239,31 +239,31 @@ logged in. It’s not perfect but it gets the job done for now.</p>
 
 <p>A cool feature provided by Steroids is the layer stack.</p>
 
-<p>This gives you a navigation between independent webviews within your<br />
-application. You just display a single HTML page and can organize all<br />
-your files into a tree structure in a pretty straightforward fashion.<br />
+<p>This gives you a navigation between independent webviews within your
+application. You just display a single HTML page and can organize all
+your files into a tree structure in a pretty straightforward fashion.
 Steroids also handles adding and removing views so that it feels native.</p>
 
-<p>They explain it better than me in their tutorials,<br />
-<a href="http://academy.appgyver.com/courses/15/lessons/10">Enhancing Your App with Native UI</a><br />
-and<br />
+<p>They explain it better than me in their tutorials,
+<a href="http://academy.appgyver.com/courses/15/lessons/10">Enhancing Your App with Native UI</a>
+and
 <a href="http://academy.appgyver.com/courses/4/lessons/12">Layer stack</a>.</p>
 
 <h2 id="some-random-features">Some Random Features</h2>
 
 <h3 id="session">Session</h3>
 
-<p>I needed to have some kind of session. I knew about local storage but<br />
-wasn’t sure how to go about it, so I quickly hacked something based on<br />
+<p>I needed to have some kind of session. I knew about local storage but
+wasn’t sure how to go about it, so I quickly hacked something based on
 cookies.</p>
 
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">window</span><span class="p">.</span><span class="nx">User</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="na">setSession</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">val</span><span class="p">){</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">createCookie</span><span class="p">(</span><span class="s2">"my_session"</span><span class="p">,</span> <span class="nx">val</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+  <span class="nx">setSession</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">val</span><span class="p">){</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">createCookie</span><span class="p">(</span><span class="s2">&quot;my_session&quot;</span><span class="p">,</span> <span class="nx">val</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
   <span class="p">},</span>
 
-  <span class="nx">logout</span><span class="err">:</span> <span class="kd">function</span><span class="p">(){</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">eraseCookie</span><span class="p">(</span><span class="s2">"my_session"</span><span class="p">);</span>
+  <span class="nx">logout</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">eraseCookie</span><span class="p">(</span><span class="s2">&quot;my_session&quot;</span><span class="p">);</span>
   <span class="p">}</span>
 
   <span class="c1">// And so on ...</span>
@@ -273,22 +273,22 @@ cookies.</p>
 
 <h3 id="calling-external-api">Calling External API</h3>
 
-<p>My application will work with an API that I am also developing.<br />
-Overall it’s just like developing a website: you get jQuery or whatever<br />
+<p>My application will work with an API that I am also developing.
+Overall it’s just like developing a website: you get jQuery or whatever
 library you want and make calls and display the result on the page.</p>
 
-<p>It might seem obvious, but it is still good to mention that the API will need to accept<br />
-<a href="http://en.wikipedia.org/wiki/Cross-origin_resource_sharing">cross-origin resource sharing</a><br />
+<p>It might seem obvious, but it is still good to mention that the API will need to accept
+<a href="http://en.wikipedia.org/wiki/Cross-origin_resource_sharing">cross-origin resource sharing</a>
 for the calls to work.</p>
 
-<p>I use Rails, and the quick way to do that was to use the<br />
-<a href="https://github.com/cyu/rack-cors">rack-cors gem</a><br />
+<p>I use Rails, and the quick way to do that was to use the
+<a href="https://github.com/cyu/rack-cors">rack-cors gem</a>
 and set it up as such:</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">config</span><span class="p">.</span><span class="nf">middleware</span><span class="p">.</span><span class="nf">use</span> <span class="no">Rack</span><span class="o">::</span><span class="no">Cors</span> <span class="k">do</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">config</span><span class="o">.</span><span class="n">middleware</span><span class="o">.</span><span class="n">use</span> <span class="no">Rack</span><span class="o">::</span><span class="no">Cors</span> <span class="k">do</span>
   <span class="n">allow</span> <span class="k">do</span>
-    <span class="n">origins</span> <span class="s1">'*'</span>
-    <span class="n">resource</span> <span class="s1">'*'</span><span class="p">,</span> <span class="ss">headers: :any</span><span class="p">,</span> <span class="ss">methods: </span><span class="p">[</span><span class="ss">:get</span><span class="p">,</span> <span class="ss">:post</span><span class="p">,</span> <span class="ss">:options</span><span class="p">]</span>
+    <span class="n">origins</span> <span class="s1">&#39;*&#39;</span>
+    <span class="n">resource</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="ss">headers</span><span class="p">:</span> <span class="ss">:any</span><span class="p">,</span> <span class="nb">methods</span><span class="p">:</span> <span class="o">[</span><span class="ss">:get</span><span class="p">,</span> <span class="ss">:post</span><span class="p">,</span> <span class="ss">:options</span><span class="o">]</span>
   <span class="k">end</span>
 <span class="k">end</span></code></pre></div>
 
@@ -296,62 +296,62 @@ and set it up as such:</p>
 
 <h3 id="the-scanner-app">The Scanner App</h3>
 
-<p>You can download an application on the<br />
-<a href="https://itunes.apple.com/us/app/appgyver-scanner/id575076515?mt=8">appstore</a>,<br />
-scan a QR code with it, and it will take you straight to your application. This<br />
-is great to show previews to people and iterate quickly and saves time<br />
-compared to solution like TestFlight that requires you to upload a<br />
+<p>You can download an application on the
+<a href="https://itunes.apple.com/us/app/appgyver-scanner/id575076515?mt=8">appstore</a>,
+scan a QR code with it, and it will take you straight to your application. This
+is great to show previews to people and iterate quickly and saves time
+compared to solution like TestFlight that requires you to upload a
 build.</p>
 
-<p>Of course it has limitation as your app runs inside the scanner<br />
-application, but in some cases it can be enought if it’s just about<br />
-displaying the latest modifications, checking the design or proofreading<br />
+<p>Of course it has limitation as your app runs inside the scanner
+application, but in some cases it can be enought if it’s just about
+displaying the latest modifications, checking the design or proofreading
 the wording.</p>
 
 <h3 id="creating-a-build">Creating a Build</h3>
 
-<p>AppGyver provides a solution to build in the cloud. You need to spend<br />
-some time setting it up, but once it’s done a new build can be scheduled<br />
+<p>AppGyver provides a solution to build in the cloud. You need to spend
+some time setting it up, but once it’s done a new build can be scheduled
 in the click of a button.</p>
 
 <div style="text-align: center"><img src="/assets/blog/cloudbuild.jpg" /></div>
 
-<p>This works fine, but still needs some polishing, mainly on ways to get an<br />
-ETA for the build. Right now I’ve seen build times varying between 12<br />
-hours and a couple of minutes. Apparently<br />
-<a href="http://forums.appgyver.com/#!/steroids#how-long-does-a-adhoc-build">it should be better moving forward</a>,<br />
+<p>This works fine, but still needs some polishing, mainly on ways to get an
+ETA for the build. Right now I’ve seen build times varying between 12
+hours and a couple of minutes. Apparently
+<a href="http://forums.appgyver.com/#!/steroids#how-long-does-a-adhoc-build">it should be better moving forward</a>,
 so I’ll wait and see.</p>
 
 <h2 id="the-documentation--community">The Documentation &amp; Community</h2>
 
-<p>The documentation provided by Appgyver is very clean, but could use some<br />
-more tutorials and examples. This was to be expected since the project has only been<br />
+<p>The documentation provided by Appgyver is very clean, but could use some
+more tutorials and examples. This was to be expected since the project has only been
 released very recently.</p>
 
-<p>It’s worth mentioning that the team is very responsive on<br />
-<a href="https://twitter.com/appgyver">twitter</a> or the<br />
-<a href="http://developers.appgyver.com/forums">forums</a>. For instance I was confused about<br />
-customizing colors, so I asked on the site. The next day they would have<br />
+<p>It’s worth mentioning that the team is very responsive on
+<a href="https://twitter.com/appgyver">twitter</a> or the
+<a href="http://developers.appgyver.com/forums">forums</a>. For instance I was confused about
+customizing colors, so I asked on the site. The next day they would have
 put up a new tutorial with concrete examples. Pretty sweet.</p>
 
-<p>The community is small right now, and looking online for documentation<br />
-or blog posts will yield absolutely no results. Hopefully this will<br />
+<p>The community is small right now, and looking online for documentation
+or blog posts will yield absolutely no results. Hopefully this will
 improve.</p>
 
 <h2 id="wrapping-it-up">Wrapping It Up</h2>
 
-<p>I think that this is a very interesting project so I will keep on<br />
-working with Steroids to get as far as I can creating my app. You can<br />
+<p>I think that this is a very interesting project so I will keep on
+working with Steroids to get as far as I can creating my app. You can
 see that the team put a lot of work into it and the product feels right.</p>
 
-<p>The next steps on my part is to stop playing around and actually start developing something more concrete.<br />
-I’m also waiting for some features that are supposed to be in the roadmap,<br />
+<p>The next steps on my part is to stop playing around and actually start developing something more concrete.
+I’m also waiting for some features that are supposed to be in the roadmap,
 such as icons in nav bar or iOS 7 native UI.</p>
 
-<p><em><strong>2014 Update</strong>: Since this, I’ve released an application using Steroids.js, it’s a <a href="http://liffapp.io">quantified self application<br />
+<p><em><strong>2014 Update</strong>: Since this, I’ve released an application using Steroids.js, it’s a <a href="http://liffapp.io">quantified self application
 to track your day</a>. You can check it out <a href="https://itunes.apple.com/en/app/liff-understand-your-life/id834944345">on the appstore</a>!</em></p>
 
-<p>If you have any remarks, I’ll be happy to hear them in the comments. For<br />
+<p>If you have any remarks, I’ll be happy to hear them in the comments. For
 questions, I’m not sure to be able to answer all of them - but I’ll try!</p>
 
 
@@ -364,6 +364,8 @@ questions, I’m not sure to be able to answer all of them - but I’ll try!</p>
             <p>Since you scrolled this far, you might as well take a look at some other things I wrote !</p>
             <ul>
               
+          
+            
           
             
           

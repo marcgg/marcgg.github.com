@@ -55,10 +55,10 @@
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="mi">16</span><span class="p">:</span><span class="mi">50</span><span class="p">:</span><span class="mi">16</span>  <span class="no">Fetching</span> <span class="n">repository</span><span class="p">,</span> <span class="n">done</span><span class="o">.</span>
 <span class="mi">16</span><span class="p">:</span><span class="mi">50</span><span class="p">:</span><span class="mi">20</span>
-<span class="mi">16</span><span class="p">:</span><span class="mi">50</span><span class="p">:</span><span class="mi">26</span>  <span class="o">-----</span> <span class="no">Deleting</span> <span class="mi">1</span> <span class="n">files</span> <span class="n">matching</span> <span class="p">.</span><span class="nf">slugignore</span> <span class="n">patterns</span><span class="o">.</span>
+<span class="mi">16</span><span class="p">:</span><span class="mi">50</span><span class="p">:</span><span class="mi">26</span>  <span class="o">-----</span> <span class="no">Deleting</span> <span class="mi">1</span> <span class="n">files</span> <span class="n">matching</span> <span class="o">.</span><span class="n">slugignore</span> <span class="n">patterns</span><span class="o">.</span>
 <span class="mi">16</span><span class="p">:</span><span class="mi">50</span><span class="p">:</span><span class="mi">26</span>  <span class="o">-----</span> <span class="no">Ruby</span> <span class="n">app</span> <span class="n">detected</span>
 <span class="mi">16</span><span class="p">:</span><span class="mi">50</span><span class="p">:</span><span class="mi">27</span>  <span class="o">-----</span> <span class="no">Compiling</span> <span class="no">Ruby</span><span class="o">/</span><span class="no">Rails</span>
-<span class="mi">16</span><span class="p">:</span><span class="mi">50</span><span class="p">:</span><span class="mi">29</span>  <span class="o">-----</span> <span class="no">Using</span> <span class="no">Ruby</span> <span class="ss">version: </span><span class="n">ruby</span><span class="o">-</span><span class="mi">2</span><span class="o">.</span><span class="mi">2</span><span class="o">.</span><span class="mi">0</span>
+<span class="mi">16</span><span class="p">:</span><span class="mi">50</span><span class="p">:</span><span class="mi">29</span>  <span class="o">-----</span> <span class="no">Using</span> <span class="no">Ruby</span> <span class="ss">version</span><span class="p">:</span> <span class="n">ruby</span><span class="o">-</span><span class="mi">2</span><span class="o">.</span><span class="mi">2</span><span class="o">.</span><span class="mi">0</span>
 <span class="mi">16</span><span class="p">:</span><span class="mi">50</span><span class="p">:</span><span class="mi">30</span>  <span class="o">-----</span> <span class="no">Installing</span> <span class="n">dependencies</span> <span class="n">using</span> <span class="mi">1</span><span class="o">.</span><span class="mi">7</span><span class="o">.</span><span class="mi">12</span>
 <span class="n">etc</span></code></pre></div>
 
@@ -67,13 +67,13 @@
 <p>Here’s the script. Note that I use a simple HH:MM:SS formating in this example, but feel free to use what <a href="http://unixhelp.ed.ac.uk/CGI/man-cgi?date">makes sense</a> depending on your setup and preferences.</p>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># !/usr/bin/env bash</span>
-<span class="k">while </span><span class="nb">read </span>line; <span class="k">do
-  </span><span class="nb">echo</span> <span class="k">$(</span>date +<span class="s2">"%H:%M:%S"</span><span class="k">)</span> - <span class="nv">$line</span>
+<span class="k">while</span> <span class="nb">read </span>line<span class="p">;</span> <span class="k">do</span>
+  <span class="nb">echo</span> <span class="k">$(</span>date +<span class="s2">&quot;%H:%M:%S&quot;</span><span class="k">)</span> - <span class="nv">$line</span>
 <span class="k">done</span></code></pre></div>
 
 <p>Save it to a local file called “timestp” and give it write permissions:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>chmod +x timestp</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>chmod +x timestp</code></pre></div>
 
 <h2 id="running-it">Running It</h2>
 
@@ -96,6 +96,8 @@
             <p>Since you scrolled this far, you might as well take a look at some other things I wrote !</p>
             <ul>
               
+          
+            
           
             
           

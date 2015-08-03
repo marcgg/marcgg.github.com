@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>
-      Coaching A Young Team Creating a Startup (And Helping Them Get Accepted at Le Camping)
+      Git Log's --first-parent Option
     </title>
-    <meta name="description" content="How I helped a team of 3 students with little to no development background get accepted into a prestigious parisian accelerator.">
+    <meta name="description" content="The first parent options allows you to ignore commits that are not the first parent. This can be very useful to figure out the series of changes a given file went through on a branch.">
     <meta name="author" content="Marc G Gauthier">
 
     <!--[if lt IE 9]> <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -37,41 +37,94 @@
     <h1>
   <span>
   
-    Coaching A Young Team Creating a Startup <br /><em>(And Helping Them Get Accepted at Le Camping)</em>
+    Git Log's --first-parent Option
   
   </span>
 </h1>
 
 <div class="published">
-  <span>16 December 2014</span>
+  <span>04 August 2015</span>
 </div>
 
 <div id="container">
   <div id="content">
     <div class="post">
-      <p>A few months back I was contacted by three students that wanted to create their company. As a developer, this happens to me all the time and I often refuse to help because of the projects’ lack of realism. After a phone call I decided that it would be interesting to meet them… and I have to say that I was impressed by how much potential the team was showing.</p>
+      <p>Git is full of little features that are very cool to discover. Let me tell you about a feature of the <a href="http://git-scm.com/docs/git-log">git-log</a> function:</p>
 
-<p>They were three students with engineering degrees, a good business sense and no real coding background wanting to create an app prototype in order to get accepted into <a href="http://accelerate.numa.paris/">Le Camping</a>, a famous Parisian accelerator program. They already had some code running written during a <a href="http://rennes.startupweekend.org/2014/03/29/les-projets-du-startup-weekend/">startup weekend</a> by someone who wasn’t in the team anymore, but it was obvious it needed to be rewritten from scratch.</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git log --first-parent
+</code></pre>
+</div>
 
-<p>What made the difference with other projects I was pitched before was their approach. They wanted to build their own app, not look for a fourth person to do all of the technical work. This seems very logical as a team with no technical cofounder is less than optimal, but most inexperienced people underestimate the importance of the technical side of things in a startup.</p>
+<p>This makes it that the log only follows the first parent commit in case of a merge. It seems a bit abstract, so what about a concrete example?</p>
 
-<p>It goes without saying that I absolutely loved how they didn’t want me to code their app but instead give them means to do it on their own, and we decided to work together.</p>
+<h2 id="our-system">Our System</h2>
 
-<p>The plan was to produce something functionnal to show in order to get accepted by the accelerator. We had enough time, but a lot of development was required, especially based on the team’s lack of experience. Thankfully they were determined to make it work.</p>
+<p>Let’s say I want to output what has been added and removed from a file on a given branch without looking at the diff. This means I will only look at the content of the file at a given commit.</p>
 
-<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/birdly.jpg" style="width: 600px;" /><em>Just look at that determination :)</em></div>
+<p>For instance I have an empty file and my first commit adds “A”. It needs to output:</p>
 
-<p>We decided on starting with a kickoff were we would work together to set up the right bases. I tried to guide them toward a <a href="http://en.wikipedia.org/wiki/Technology_stack">tech stack</a> that wouldn’t be too hard to change later if needed nor slow down development, but that would still teach them a lot about building a real product.</p>
+<ul>
+  <li>Added A</li>
+</ul>
 
-<p>Once the fundations were in place (Website, Phonegap mobile app, REST API), we started to meet once or twice a week. They’d show me their progress and I’d help make adjustments or get past a technical roadblock.</p>
+<p>Then if I add “B”, the file contains “AB”. The system already knows that I added “A”, so and I want it to only output:</p>
 
-<p>After a few months of hard work, they were one of the 12 startups selected by Le Camping out of the <a href="https://twitter.com/getbirdly/status/507459495912820736">330 candidates</a>! Since then they have been working even harder to get their solution to simplify expense reports for employees and freelancers, <a href="http://www.getbirdly.com/">Birdly</a>, out there.</p>
+<ul>
+  <li>Added B</li>
+</ul>
 
-<div style="text-align: center"><img src="/assets/blog/birdly_screen.jpg" style="width: 600px;" /></div>
+<p>Then if I remove “B”, the file only contains “A”. The system knows that we had “AB” before, so it outputs:</p>
 
-<p>I really think the Birdly team made a great move by deciding to learn instead of handing the work to someone else. Not only it showed their determination to the Camping’s entry jury, but it will most likely pay even more in the future. Even if they decide that coding is not for them and decide to stop coding themselves, they will be able to make better decisions regarding the technical side of their company.</p>
+<ul>
+  <li>Removed B</li>
+</ul>
 
-<p>On my end this was a great experience. I barely wrote a line of code but still contributed to the very early stage of an interesting startup with a great team!</p>
+<p>… and so on.</p>
+
+<h2 id="the-problem">The Problem</h2>
+
+<p>Now let’s take this example. The main branch when want to look at is, as often, master.</p>
+
+<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git_first_parent@2x.png" style="width: 600px; padding: 20px;" /></div>
+
+<p>I add A, then B. From here I branch out and add D on my feature branch. On master, I add C. Finally, I merge the feature branch into master. Classic stuff.</p>
+
+<p>However, now if I want to go on master’s last commit and run:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git log
+</code></pre>
+</div>
+
+<p>… and use the commit’s SHA to replay the history, it gives me this as an output:</p>
+
+<ul>
+  <li>Added A</li>
+  <li>Added B</li>
+  <li>Added D</li>
+  <li>Removed D</li>
+  <li>Added C</li>
+  <li>Added D</li>
+</ul>
+
+<p>It is because the log will read your history as such:</p>
+
+<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git_log@2x.png" style="width: 600px; padding: 20px;" /></div>
+
+<p>That’s not what we want here! Ideally, we would like to exclude the commit adding “D”. We have the information of D being added on the merge, so we don’t need to complexify our log.</p>
+
+<h2 id="the-solution-using-first-parent">The Solution Using first-parent</h2>
+
+<p>The great thing is that the commit adding “D” is from another branch and is not the merge commit. Thanks to that, we can run</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git log --first-parent
+</code></pre>
+</div>
+
+<p>And this will give us a nice and clean log:</p>
+
+<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/nice_log@2x.png" style="width: 600px; padding: 20px;" /></div>
+
+<p>Awesome! I don’t even care that “D” arrives after “C”, because in the context of my master branch, that’s really what happened.</p>
 
 
 
@@ -108,34 +161,19 @@
             
           
             
+          
+            
+          
+            
               
-              <li><a href="/blog/2014/09/17/huboard-kanban-board-github">Managing Your Project With Github Issues And HuBoard</a></li>
-            
-          
-            
-              
-              <li><a href="/blog/2014/07/28/company-process-red-tape">Thoughts On Company Procedures</a></li>
-            
-          
-            
-          
-            
-          
+              <li><a href="/blog/2014/07/22/in-defense-of-legacy-code">Some Respect For Legacy Code</a></li>
             
           
             
           
             
               
-              <li><a href="/blog/2013/11/12/peak-productivity">The Problem With Peak</a></li>
-            
-          
-            
-          
-            
-          
-            
-          
+              <li><a href="/blog/2014/04/28/frame-based-layout-bad-code">Tips on Creating a Website From When I Was 12</a></li>
             
           
             
@@ -144,16 +182,24 @@
           
             
               
-              <li><a href="/blog/2013/04/22/what-i-learned-teaching-web">What I Learned While Teaching</a></li>
+              <li><a href="/blog/2013/11/05/enough-with-the-language-trolls">Enough With The Trolls</a></li>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
             
           
             
           
             
               
-              <li><a href="/blog/2013/02/04/developers-teach-non-tech-startup">Developers, Share Your Technical Knowledge</a></li>
-            
-          
+              <li><a href="/blog/2013/03/25/please-changelog-open-source">Please Keep a Changelog For Your Open Source Lib</a></li>
             
           
             
@@ -176,12 +222,13 @@
           
             
               
-              <li><a href="/blog/2011/12/21/startup-outsourcing">Outsourcing In A Startup</a></li>
+              <li><a href="/blog/2012/09/04/one-reason-to-switch-to-vim-editor">The One Thing That Made Me Switch To Vim</a></li>
             
           
             
-              
-              <li><a href="/blog/2011/12/12/developer-from-ssii-to-startup">Developers, Go From SSII To Startup</a></li>
+          
+            
+          
             
           
         

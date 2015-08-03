@@ -69,11 +69,11 @@
 
 <p>You could solve the problem by doing this:</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">find</span><span class="p">(</span><span class="n">formxSelector</span><span class="p">,</span> <span class="ss">visible: </span><span class="kp">false</span><span class="p">)</span></code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">find</span><span class="p">(</span><span class="n">formxSelector</span><span class="p">,</span> <span class="ss">visible</span><span class="p">:</span> <span class="kp">false</span><span class="p">)</span></code></pre></div>
 
 <p>… or wait until the element is visible …</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">find</span><span class="p">(</span><span class="n">buttonSelector</span><span class="p">).</span><span class="nf">click</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">find</span><span class="p">(</span><span class="n">buttonSelector</span><span class="p">)</span><span class="o">.</span><span class="n">click</span>
 <span class="nb">sleep</span> <span class="mi">1</span> <span class="c1"># Or some kind of loop testing if the element is now visible</span>
 <span class="n">find</span><span class="p">(</span><span class="n">formxSelector</span><span class="p">)</span></code></pre></div>
 
@@ -84,23 +84,23 @@
 <p>I’d recommend disabling CSS animations entirely in your test environment. To do so, you can include this into your code:</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="o">*</span> <span class="p">{</span>
- <span class="nl">transition-property</span><span class="p">:</span> <span class="nb">none</span> <span class="cp">!important</span><span class="p">;</span>
- <span class="nl">-o-transition-property</span><span class="p">:</span> <span class="nb">none</span> <span class="cp">!important</span><span class="p">;</span>
- <span class="nl">-moz-transition-property</span><span class="p">:</span> <span class="nb">none</span> <span class="cp">!important</span><span class="p">;</span>
- <span class="nl">-ms-transition-property</span><span class="p">:</span> <span class="nb">none</span> <span class="cp">!important</span><span class="p">;</span>
- <span class="nl">-webkit-transition-property</span><span class="p">:</span> <span class="nb">none</span> <span class="cp">!important</span><span class="p">;</span>
+ <span class="n">transition</span><span class="o">-</span><span class="n">property</span><span class="o">:</span> <span class="k">none</span> <span class="cp">!important</span><span class="p">;</span>
+ <span class="o">-</span><span class="n">o</span><span class="o">-</span><span class="n">transition</span><span class="o">-</span><span class="n">property</span><span class="o">:</span> <span class="k">none</span> <span class="cp">!important</span><span class="p">;</span>
+ <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="n">transition</span><span class="o">-</span><span class="n">property</span><span class="o">:</span> <span class="k">none</span> <span class="cp">!important</span><span class="p">;</span>
+ <span class="o">-</span><span class="n">ms</span><span class="o">-</span><span class="n">transition</span><span class="o">-</span><span class="n">property</span><span class="o">:</span> <span class="k">none</span> <span class="cp">!important</span><span class="p">;</span>
+ <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">transition</span><span class="o">-</span><span class="n">property</span><span class="o">:</span> <span class="k">none</span> <span class="cp">!important</span><span class="p">;</span>
 
- <span class="nl">transform</span><span class="p">:</span> <span class="nb">none</span> <span class="cp">!important</span><span class="p">;</span>
- <span class="nl">-o-transform</span><span class="p">:</span> <span class="nb">none</span> <span class="cp">!important</span><span class="p">;</span>
- <span class="nl">-moz-transform</span><span class="p">:</span> <span class="nb">none</span> <span class="cp">!important</span><span class="p">;</span>
- <span class="nl">-ms-transform</span><span class="p">:</span> <span class="nb">none</span> <span class="cp">!important</span><span class="p">;</span>
- <span class="nl">-webkit-transform</span><span class="p">:</span> <span class="nb">none</span> <span class="cp">!important</span><span class="p">;</span>
+ <span class="n">transform</span><span class="o">:</span> <span class="k">none</span> <span class="cp">!important</span><span class="p">;</span>
+ <span class="o">-</span><span class="n">o</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span> <span class="k">none</span> <span class="cp">!important</span><span class="p">;</span>
+ <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span> <span class="k">none</span> <span class="cp">!important</span><span class="p">;</span>
+ <span class="o">-</span><span class="n">ms</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span> <span class="k">none</span> <span class="cp">!important</span><span class="p">;</span>
+ <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span> <span class="k">none</span> <span class="cp">!important</span><span class="p">;</span>
 
- <span class="nl">animation</span><span class="p">:</span> <span class="nb">none</span> <span class="cp">!important</span><span class="p">;</span>
- <span class="nl">-o-animation</span><span class="p">:</span> <span class="nb">none</span> <span class="cp">!important</span><span class="p">;</span>
- <span class="nl">-moz-animation</span><span class="p">:</span> <span class="nb">none</span> <span class="cp">!important</span><span class="p">;</span>
- <span class="nl">-ms-animation</span><span class="p">:</span> <span class="nb">none</span> <span class="cp">!important</span><span class="p">;</span>
- <span class="nl">-webkit-animation</span><span class="p">:</span> <span class="nb">none</span> <span class="cp">!important</span><span class="p">;</span>
+ <span class="n">animation</span><span class="o">:</span> <span class="k">none</span> <span class="cp">!important</span><span class="p">;</span>
+ <span class="o">-</span><span class="n">o</span><span class="o">-</span><span class="n">animation</span><span class="o">:</span> <span class="k">none</span> <span class="cp">!important</span><span class="p">;</span>
+ <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="n">animation</span><span class="o">:</span> <span class="k">none</span> <span class="cp">!important</span><span class="p">;</span>
+ <span class="o">-</span><span class="n">ms</span><span class="o">-</span><span class="n">animation</span><span class="o">:</span> <span class="k">none</span> <span class="cp">!important</span><span class="p">;</span>
+ <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">animation</span><span class="o">:</span> <span class="k">none</span> <span class="cp">!important</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
 <h3 id="edge-cases">Edge Cases</h3>
@@ -112,12 +112,12 @@
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.element</span> <span class="p">{</span>
  <span class="c">/* Element is hidden */</span>
 
- <span class="nl">animation</span><span class="p">:</span> <span class="n">reveal</span> <span class="m">.5s</span><span class="p">;</span>
+ <span class="n">animation</span><span class="o">:</span> <span class="n">reveal</span> <span class="m">.5s</span><span class="p">;</span>
 
  <span class="c">/* Because of this, the element will stay visible at the end of the anim */</span>
- <span class="nl">animation-fill-mode</span><span class="p">:</span> <span class="n">forwards</span><span class="p">;</span>
+ <span class="n">animation</span><span class="o">-</span><span class="n">fill</span><span class="o">-</span><span class="n">mode</span><span class="o">:</span> <span class="n">forwards</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="k">@keyframes</span> <span class="n">reveal</span> <span class="p">{</span>
+<span class="k">@keyframes</span> <span class="nt">reveal</span> <span class="p">{</span>
  <span class="nt">from</span> <span class="p">{</span>
  <span class="c">/*  Element is hidden */</span>
  <span class="p">}</span>
