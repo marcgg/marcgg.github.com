@@ -11,11 +11,12 @@ Git is full of little features that are very cool to discover. Let me tell you a
 
 	$ git log --first-parent
 
-This makes it that the log only follows the first parent commit in case of a merge. It seems a bit abstract, so what about a concrete example?
+This makes the log only follow the first parent commit after a merge. It seems a bit abstract, so what about a concrete example?
+
 
 ## Example System
 
-Let's say I want to output what has been added and removed from a file on a given branch *without* looking at the diff. This means I will only look at the content of the file at a given commit by checking out to a commit and read the content of the file. 
+Let’s say I want to output additions and deletions from a file on a given branch *without* looking at the diff. This means I will only look at the content of the file at a given commit by checking out to a commit and read the content of the file. 
 
 For instance I have an empty file and my first commit adds "A". The system needs to output:
 

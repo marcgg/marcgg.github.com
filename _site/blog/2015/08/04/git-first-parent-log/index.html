@@ -55,11 +55,11 @@
 </code></pre>
 </div>
 
-<p>This makes it that the log only follows the first parent commit in case of a merge. It seems a bit abstract, so what about a concrete example?</p>
+<p>This makes the log only follow the first parent commit after a merge. It seems a bit abstract, so what about a concrete example?</p>
 
 <h2 id="example-system">Example System</h2>
 
-<p>Let’s say I want to output what has been added and removed from a file on a given branch <em>without</em> looking at the diff. This means I will only look at the content of the file at a given commit by checking out to a commit and read the content of the file.</p>
+<p>Let’s say I want to output additions and deletions from a file on a given branch <em>without</em> looking at the diff. This means I will only look at the content of the file at a given commit by checking out to a commit and read the content of the file.</p>
 
 <p>For instance I have an empty file and my first commit adds “A”. The system needs to output:</p>
 

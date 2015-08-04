@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2015-08-03T23:21:48+02:00</updated>
+ <updated>2015-08-04T10:39:19+02:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -24,11 +24,11 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;This makes it that the log only follows the first parent commit in case of a merge. It seems a bit abstract, so what about a concrete example?&lt;/p&gt;
+&lt;p&gt;This makes the log only follow the first parent commit after a merge. It seems a bit abstract, so what about a concrete example?&lt;/p&gt;
 
 &lt;h2 id=&quot;example-system&quot;&gt;Example System&lt;/h2&gt;
 
-&lt;p&gt;Let’s say I want to output what has been added and removed from a file on a given branch &lt;em&gt;without&lt;/em&gt; looking at the diff. This means I will only look at the content of the file at a given commit by checking out to a commit and read the content of the file.&lt;/p&gt;
+&lt;p&gt;Let’s say I want to output additions and deletions from a file on a given branch &lt;em&gt;without&lt;/em&gt; looking at the diff. This means I will only look at the content of the file at a given commit by checking out to a commit and read the content of the file.&lt;/p&gt;
 
 &lt;p&gt;For instance I have an empty file and my first commit adds “A”. The system needs to output:&lt;/p&gt;
 
