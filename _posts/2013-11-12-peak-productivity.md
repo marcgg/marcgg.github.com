@@ -5,11 +5,11 @@ description: "Productivity is a hard thing to measure, but counting the
 number of emails sent is not the way to go."
 blog: true
 category: blog
-tag: Startup
+tag: ProjectManagement
 ---
 
-A couple of days ago I ran into a new application by [MetaLab](http://metalabdesign.com/) called
-[Peak](http://www.usepeak.com/). The application is supposed to be "the automated way to keep track
+A couple of days ago I ran into a new application by [MetaLab][1] called
+[Peak][2]. The application is supposed to be "the automated way to keep track
 of what everyone is working on". Basically you plug in a bunch of
 services such as Gmail, Github or Basecamp and the app gives your an
 overview of what's going on as well as metrics about your team.
@@ -31,7 +31,7 @@ Some are just funny, but others tell a lot about what can actually happens
 in some misguided companies. For instance
 [what happens when you start measuring productivity by the number of
 commits](http://thedailywtf.com/Articles/Productivity-20.aspx) or [by the
-number of lines of code](http://thedailywtf.com/Articles/Measured_By_The_Line.aspx).
+number of lines of code](http://thedailywtf.com/Articles/Measured\_By\_The\_Line.aspx).
 
 Spoiler: it's a disaster.
 
@@ -106,13 +106,13 @@ know that your employees were here, but they could be reading Facebook
 all day. Still this is the oldest and easiest form of management so it's
 not surprising that it's the way it is in most places.
 
-> What \[banning remote working\] reveals more than anything is that Yahoo management doesn’t have a clue as to who’s
+> What [banning remote working] reveals more than anything is that Yahoo management doesn’t have a clue as to who’s
 > actually productive and who’s not. In their blindness they’re reaching for the lowest form of
 > control a manager can assert: Ensuring butts in seats for eight hours between 9-5+. Though while
 > they can make people come to the office under the threat of termination, they most certainly
 > cannot make those same people motivated to do great work.
 > 
-> [@dhh](http://twitter.com/dhh) about [Yahoo banning remote work](http://37signals.com/svn/posts/3453-no-more-remote-work-at-yahoo)
+> [@dhh][3] about [Yahoo banning remote work][4]
 
 Again, this rewards employees that are not necessarily the best ones.
 Someone completing her tasks working a 40 hours week is probably
@@ -125,7 +125,7 @@ which is not good for anyone - employer included.
 > When your team becomes tired and demoralized they will get less work done,
 > not more, no matter how many hours are worked.
 > 
-> [Extreme Programming Manifesto](http://www.extremeprogramming.org/rules/overtime.html)
+> [Extreme Programming Manifesto][5]
 
 <div style="text-align: center"><img src="/assets/blog/brandon.png" /></div>
 
@@ -141,12 +141,12 @@ what I believe is micromanagement before continuing.
 > In business management, micromanagement is a management style whereby a manager
 > closely observes or controls the work of subordinates or employees.
 > Micromanagement generally has a negative connotation.
->
-> [Wikipedia](http://en.wikipedia.org/wiki/Micromanagement)
+> 
+> [Wikipedia][6]
 
 > micromanage: to manage especially with excessive control or attention to details
->
-> [Merriam Webster](http://www.merriam-webster.com/dictionary/micromanage)
+> 
+> [Merriam Webster][7]
 
 To me knowing what tasks someone is working
 on and assuring that it is delivered on time is management. Checking how
@@ -205,3 +205,11 @@ situation.
 I really hope that people will use this product for good (helping companies
 create value and protect employees from interruptions) and not evil
 (micromanagement).
+
+[1]:	http://metalabdesign.com/
+[2]:	http://www.usepeak.com/
+[3]:	http://twitter.com/dhh
+[4]:	http://37signals.com/svn/posts/3453-no-more-remote-work-at-yahoo
+[5]:	http://www.extremeprogramming.org/rules/overtime.html
+[6]:	http://en.wikipedia.org/wiki/Micromanagement
+[7]:	http://www.merriam-webster.com/dictionary/micromanage

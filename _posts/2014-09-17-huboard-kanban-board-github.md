@@ -4,7 +4,7 @@ title: Managing Your Project With Github Issues And HuBoard
 description: You all know Github issues. HuBoard is a tool giving more features to manage them, including a very helpful Kanban board. Here is how I’ve been using it.
 blog: true
 category: blog
-tag: Startup
+tag: ProjectManagement
 ---
 
 I’ve been working in startups for a bit now, and the thing I love with this kind of structure is how [lightweight][1] the company processes can be. I don’t need to ask 3 different people to have access to the internet nor do I have an army of managers telling me [how to code][2]. Pretty neat.
@@ -61,9 +61,9 @@ It Just Works™!
 ### Sounds Cool, How Do I Use It ?
 
 HuBoard is available as a service on [HuBoard.com][10]. It’s free for public projects and if you want to use it for private projects [you can pay $24 a month for organization and $7 a month for single users][11].
-They also have an offer for those working with [Github Enterprise][14].
+They also have an offer for those working with [Github Enterprise][12].
 
-Since the project is open source, you can also [grab the code][12] and deploy it to your own servers. For my usage, I’m running my own fork of the code on a [Heroku][13] free plan.
+Since the project is open source, you can also [grab the code][13] and deploy it to your own servers. For my usage, I’m running my own fork of the code on a [Heroku][14] free plan.
 
 _Keep in mind that this is just my opinion, and not a sponsored post. I just love this project and been using it for a couple of years for free, so I thought I'd share the love :)_
 
@@ -80,6 +80,6 @@ _Keep in mind that this is just my opinion, and not a sponsored post. I just lov
 [9]:	https://drivy.com
 [10]:	https://huboard.com/?utm_source=marcgg&utm_medium=blog&utm_campaign=marcgg
 [11]:	https://huboard.com/pricing?utm_source=marcgg&utm_medium=blog&utm_campaign=marcgg
-[12]:	https://github.com/rauhryan/huboard
-[13]:	https://www.heroku.com/
-[14]: https://enterprise.huboard.com/?utm_source=marcgg&utm_medium=blog&utm_campaign=marcgg
+[12]:	https://enterprise.huboard.com/?utm_source=marcgg&utm_medium=blog&utm_campaign=marcgg
+[13]:	https://github.com/rauhryan/huboard
+[14]:	https://www.heroku.com/

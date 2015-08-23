@@ -6,7 +6,7 @@ young entrepreneurs and students from a non technical background. Here's
 what this taught me."
 blog: true
 category: blog
-tag: Startup
+tag: Teaching
 ---
 
 A few months back I wrote [an article about how developers should share

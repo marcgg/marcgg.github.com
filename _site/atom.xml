@@ -4,13 +4,155 @@
  <title>marcgg#blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2015-08-04T10:39:19+02:00</updated>
+ <updated>2015-08-23T15:53:08+02:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
    <email>marcg.gauthier@gmail.com</email>
  </author>
 
+ 
+  
+   <entry>
+     <title>Deadlines And Estimates In Startups</title>
+     <link href="http://marcgg.com/blog/2015/08/18/deadlines-estimates-software-startup"/>
+     <updated>2015-08-18T00:00:00+02:00</updated>
+     <id>http://marcgg.com/blog/2015/08/18/deadlines-estimates-software-startup</id>
+     <content type="html">&lt;p&gt;A couple of years back I blogged about &lt;a href=&quot;/blog/2013/02/04/developers-teach-non-tech-startup/&quot;&gt;sharing knowledge between coders and non-coders&lt;/a&gt;. It is as true in project management as it is in technical fields as a lot of developers in startups are against deadlines and estimates.&lt;/p&gt;
+
+&lt;p&gt;This is usually hard to understand for project owners, and it leads to incomprehensions on both sides.&lt;/p&gt;
+
+&lt;p&gt;Let’s see if we can get what’s happening here.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-is-this-happening&quot;&gt;Why Is This Happening?&lt;/h2&gt;
+
+&lt;p&gt;First, a lot of developers had some experiences that made them very suspicious of both deadlines and estimates. For instance be subjected to painful top down management styles leading to forced unrealistic deadlines or estimates taken as deadlines. You have to understand that some managers treat developers as if they were a poorly qualified workforce, only good at setting up printers and typing. Why would they have anything to contribute to the project management process?&lt;/p&gt;
+
+&lt;p&gt;There are also sales persons that love to promise impossible features to clients, and passing on the blame to the technical team. “You have to do it by the end of next week, we already billed the client - I don’t care that it’s not possible”.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/toxic_dilbert.gif&quot; style=&quot;padding: 20px; width: 600px;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;Obviously I’m not saying that all managers are like that, or that all sales persons do this. My point is that’s what a lot of developers experienced and now we have a situation where they cringe when someone pronounces the word “deadline”.&lt;/p&gt;
+
+&lt;h2 id=&quot;estimates-can-be-ok&quot;&gt;Estimates Can Be Ok&lt;/h2&gt;
+
+&lt;h3 id=&quot;some-definitions&quot;&gt;Some Definitions&lt;/h3&gt;
+
+&lt;p&gt;Before starting, I need to clarify something that most people miss: an estimate is just an estimate. It’s not a deadline, it’s not a binding contract. A developer saying “It should take me around 3 days to complete this” is not saying “this will be done in precisely 3 days, you can count on it”.&lt;/p&gt;
+
+&lt;p&gt;This seems obvious put like this, but it happens a lot that estimates are mistaken for commitments by management. In my experience, it often comes from a misunderstanding. If both parties don’t communicate well enought what they mean, there is a huge room for interpretation and we end up with situation where an estimate becomes a deadline.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“You told me it should take you 3 weeks, so the client will be expecting the project to be done in 3 weeks.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;It’s the responsibility of all parties involved to make sure that these conversations are crystal clear. For instance it should obvious that any change in scope or quality requirements invalidates entirely any estimate.&lt;/p&gt;
+
+&lt;p&gt;If you don’t have a team clear on how to discuss estimates, you’ll end up with management thinking that developers are slackers that can’t keep a deadline, and developers thinking that management don’t understant their craft and set ridiculous deadlines. This is also true for self organized developer teams where missed deadlines can be interpreted as poor craftmanship.&lt;/p&gt;
+
+&lt;h3 id=&quot;communicating-clearly&quot;&gt;Communicating Clearly&lt;/h3&gt;
+
+&lt;p&gt;With the definition above, estimates are perfectly ok in my opinion. It helps everyone get an understanding of the amount of work we’re about to get into as a team. Here’s a conversation summing up my point:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Product Manager: We want to add a newsletter feature to our website. How long do you think it will take?&lt;/p&gt;
+
+  &lt;p&gt;Developer: It depends, do you want to use a third party or do it entirely ourselves?&lt;/p&gt;
+
+  &lt;p&gt;PM: I’m not sure. How long would it take?&lt;/p&gt;
+
+  &lt;p&gt;D: Using a third party would be way faster, probably a day or two of development. Of course I’ll be able to tell you more precisely once we spend a few hours comparing what good SaaS are within our budget and how to use them. Developing the newsletter from scratch would be longer.&lt;/p&gt;
+
+  &lt;p&gt;PM: How much longer? You know we try to avoid adding too many third parties to this app.&lt;/p&gt;
+
+  &lt;p&gt;D: Something close to a couple of weeks. There are a lot of things to think about - unsubscriptions, templates … If you’d like I could spend a day on it to refine my estimate?&lt;/p&gt;
+
+  &lt;p&gt;PM: That’s alright, we’ll go with the third party. There’s no need to spend that much time on a newsletter. I’ll see with the others what budget we have and get back to you.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The product owner means well, but doesn’t have all the information needed to make a decision. So here both parties use estimates to determine what option makes more sense. In the end, no deadline has been set.&lt;/p&gt;
+
+&lt;p&gt;However, not all discussions go like this, so let’s say that a couple of days passed.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;PM: I have the budget, we can afford to use Mailchimp for this. How long will it take?&lt;/p&gt;
+
+  &lt;p&gt;D: I’m not sure exactly, I’d say a couple of days but I never used Mailchimp before. It’s supposed to be simple, but I can’t be sure.&lt;/p&gt;
+
+  &lt;p&gt;PM: I need to know if it’s going to get done for the big meeting tomorrow so I can write a slide about it.&lt;/p&gt;
+
+  &lt;p&gt;D: I can’t promise you that. It will be done by the end of the week, but tomorrow is too close for me to commit.&lt;/p&gt;
+
+  &lt;p&gt;PM: It’s a very important meeting you know.&lt;/p&gt;
+
+  &lt;p&gt;D: Of course, that’s why I don’t want to promise on something I’m not sure I can deliver and leave you at the meeting with an half finished newsletter!&lt;/p&gt;
+
+  &lt;p&gt;PM: I understand.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Here, the developer refuses to commit to a date because she lacks information. It would be risky. If the product manager doesn’t accept this, it’s another problem. It means that the manager doesn’t trust the developer and that’s a whole other story.&lt;/p&gt;
+
+&lt;p&gt;Note that if at any point in this dicussion the developer agreed to a date, it would be now her responsibility to deliver on time. I think that, as a developer, it’s very important to be reliable and professional. For instance if the developer in our story said that the feature would be done in 1 day, she’ll have to pull long hours to make sure the feature is done without bugs by the date agreed upon. If she thought that it was impossible to tell how long it would take, she shouldn’t have agreed and maybe ask to change the scope.&lt;/p&gt;
+
+&lt;p&gt;This, of course, assumes that every individual in the team are working in good faith and want to get the project to succeed. If some are pressuring others and creating a toxic environment, different rules may apply.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-cost-of-estimates&quot;&gt;The Cost Of Estimates&lt;/h3&gt;
+
+&lt;p&gt;Giving an estimate always costs time. It can go to a minute of reflexion to full fledged processes such as &lt;a href=&quot;https://en.wikipedia.org/wiki/Planning_poker&quot;&gt;planning poker&lt;/a&gt; that requires some amount of training.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/planning_poker.jpg&quot; style=&quot;padding: 20px; width: 600px;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;If the cost of estimating something gets too big compared to the scope of the feature, I don’t think it makes sense to be spending this time. For instance if you take 2 hours discussing wether a feature will take 4 hours or 6 hours, you are obviously wasting time.&lt;/p&gt;
+
+&lt;p&gt;If you end up in front of a very large project, let’s say between 6 and 12 months of work, it could make sense to spend weeks estimating. In some cases, developers will need to do this. However, if you have the option, I would suggest breaking these kind of large projects into smaller projects and iterating. This way, instead of spending time estimating, you are moving forward, learning about the project and perfecting your vision of what needs to be done.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“The future is uncertain and you will never know less than you know right now.”&lt;/p&gt;
+
+  &lt;p&gt;Sandi Metz, &lt;a href=&quot;http://www.amazon.com/Practical-Object-Oriented-Design-Ruby-Addison-Wesley/dp/0321721330&quot;&gt;Practical Object-Oriented Design in Ruby: An Agile Primer&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Overall, the more precise the estimate needs to be, the more information need to be shared. I think that, in some situation where the scope is blurry and the timeline is long, it’s perfectly fine to spend time refining an estimate and gathering more information before jumping in. You don’t want to end up with dynamics like this:
+u&lt;/p&gt;
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/dilbert_estimates.jpg&quot; style=&quot;padding: 20px;&quot; /&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;deadlines&quot;&gt;Deadlines&lt;/h2&gt;
+
+&lt;h3 id=&quot;real-deadlines&quot;&gt;Real Deadlines&lt;/h3&gt;
+
+&lt;p&gt;There are deadlines in the real world. It’s just the way it is. Sometimes you need to have something done by a certain date. Let’s say you run an online store and you need to release a crucial new feature before black friday. If you miss this date, you will loose a lot of money and potentially destroy the company.&lt;/p&gt;
+
+&lt;p&gt;You can’t get into this with a “it’ll be done when it do” attitude. Everyone need to be concious that if the feature is not done by then there will be people fired, money lost and a general feeling of massive failure all arround.&lt;/p&gt;
+
+&lt;p&gt;These deadlines are perfectly valid to me. Companies need to make sure they explain well why the exist and put the needed ressources in place so that they are met. For instance, you might need to hire extra help, pay overtime or give up on some unessential feature details. In these situations you can use estimates to make better decisions on what to do in order to succeed.&lt;/p&gt;
+
+&lt;p&gt;Of course these real life deadlines are somewhat exceptionnal, if you have one every week it’s symptomatic of a deeper business related problem.&lt;/p&gt;
+
+&lt;h3 id=&quot;artificial-deadlines&quot;&gt;Artificial Deadlines&lt;/h3&gt;
+
+&lt;p&gt;Not all deadlines make sense. There are some that are not linked to the real world and these are &lt;a href=&quot;http://www.commitstrip.com/en/2015/06/09/deadlines/&quot;&gt;mostly useless&lt;/a&gt;. For instance, rushing to get a feature into production by the end of the week because it’s the end of the sprint. Spending a night of overtime at the office because someone really want to show off the feature at some small meeting.&lt;/p&gt;
+
+&lt;p&gt;To match them, people will reduce quality or scope. So you’ll end up with incomplete or poorly created features, all this for the sake of an artificial deadline. This makes absolutely no sense and, if repeated enough time, will drive your team away or at least lead to some serious loss in productivity over time. Creating a sustainable startup is not a sprint, it’s a longer race.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Agile processes promote sustainable development. The sponsors, developers, and users should be able to maintain a constant pace indefinitely.”&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://agilemanifesto.org/principles.html&quot;&gt;Principles behind the Agile Manifesto&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Some people like to work under deadlines and I get it. It sets a clear goal and provides a good feedback on how you are performing. I’d say that this is fine if you use artificial deadlines for this if everyone agrees that a missed deadline is not a big deal. If you don’t have a real life time constraint, there’s no need to sacrifice scope or quality, so why would you do this? However, if you say that a deadline can be missed… is this even a deadline anymore?&lt;/p&gt;
+
+&lt;h2 id=&quot;deadlines-and-estimates-are-tools&quot;&gt;Deadlines And Estimates Are Tools&lt;/h2&gt;
+
+&lt;p&gt;Deadlines and estimates are not contraptions to alienate developers. They are also not the key to easy project management. They are just tools when, used right, can help the team share knowledge and be focused on an important goal.&lt;/p&gt;
+
+&lt;p&gt;This is why I think that rejecting deadlines and estimates altogether is not a good idea. However, every person working within a team with deadlines and estimates need to be aware of the limitations and risks of such tools to avoid falling back into bad habbits. Like any tools, they are not perfect and a certainly not golden hammers.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;If you want to keep reading about deadlines, I find the article by Michael O. Church, &lt;a href=&quot;https://michaelochurch.wordpress.com/2014/06/20/on-programmers-deadlines-and-agile/&quot;&gt;On programmers, deadlines, and “Agile”&lt;/a&gt;,  very interesting even if I don’t agree with all of it.&lt;/em&gt;&lt;/p&gt;
+
+</content>
+   </entry>
+  
  
   
    <entry>
@@ -1988,7 +2130,7 @@ but I’ll try to demonstrate in this article why I feel this way.&lt;/p&gt;
 Some are just funny, but others tell a lot about what can actually happens
 in some misguided companies. For instance
 &lt;a href=&quot;http://thedailywtf.com/Articles/Productivity-20.aspx&quot;&gt;what happens when you start measuring productivity by the number of
-commits&lt;/a&gt; or &lt;a href=&quot;http://thedailywtf.com/Articles/Measured_By_The_Line.aspx&quot;&gt;by the
+commits&lt;/a&gt; or &lt;a href=&quot;http://thedailywtf.com/Articles/Measured\_By\_The\_Line.aspx&quot;&gt;by the
 number of lines of code&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Spoiler: it’s a disaster.&lt;/p&gt;
@@ -2173,6 +2315,7 @@ situation.&lt;/p&gt;
 &lt;p&gt;I really hope that people will use this product for good (helping companies
 create value and protect employees from interruptions) and not evil
 (micromanagement).&lt;/p&gt;
+
 </content>
    </entry>
   
