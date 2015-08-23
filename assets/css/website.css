@@ -521,6 +521,32 @@ blockquote p{
 
 }
 
+/*************** CUSTOM ARTICLE CSS ***************/
+
+#post-deadlines blockquote{
+  color: rgb(84, 84, 84);
+  font-style: normal;
+  margin: 20px 40px;
+}
+#post-deadlines blockquote p{
+  margin: 10px 20px !important;
+}
+#post-deadlines blockquote .dpm{
+  color: #3B9E2E !important;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+}
+#post-deadlines blockquote .ddev{
+  color: #AD34CF !important;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+}
+#post-deadlines blockquote .dcto{
+  color: #9E2E2E !important;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+}
+
 /* CLEARFIX */
 .cf:before,
 .cf:after {
