@@ -8,19 +8,29 @@ cssscope: deadlines
 tag: ProjectManagement
 ---
 
-A couple of years back I blogged about [sharing knowledge between coders and non-coders][1]. It is as true in project management as it is in technical fields as a lot of developers in startups are against deadlines and estimates.
+A lot of developers in startups are against deadlines and estimates. There's even a whole "#NoEstimate" movement that appeared recently.
 
-This is usually hard to understand for project owners, and it leads to incomprehensions on both sides. Product owners feel like developers don't want to commit and act unprofessionally, developers feel like management don't trust them... it's a mess, and it's not helpful for the company or the well being of the employees.
+This fact is usually hard to understand for project owners, and it leads to incomprehensions on both sides. Product owners feel like developers don't want to commit and act unprofessionally, developers feel like management don't trust them... it's a mess, and it's not helpful for the company or the well being of the employees.
 
-Let's take a few minutes to see why this is happening and what we can do to work more effectively together.
+Let's take a few minutes to see why this is happening and what we can do to work more effectively together. It's a long article, so I summarised the various points in the tl;dr section below.
 
-_Note that this article is more aimed at startups and teams smaller tant 50 people. I'll also be assuming good faith, meaning that all people involved just want to project to succeed and are not just mean spirited or blatantly incompetent. If you have toxic people within your team, that's a another subject._
+_Note that this article is aimed at startups and teams smaller tant 50 people. I'll also be assuming good faith, meaning that all people involved just want to project to succeed and are not just mean spirited or blatantly incompetent. If you have toxic people within your team, that's a another subject._
+
+### tl;dr;
+
+**It's perfectly fine to work with deadlines and estimates**: they are not contraptions to alienate developers and cause everyone stress. As a matter of fact, if you're a developer you probably already do estimates for yourself. However, they need to be handled correctly by every person in the team to be effective instead of toxic.
+
+** Estimates are just a way to communicate** the difficulty and duration of a task inside and outside a team. You don't need to do it all the time, and they do not commit the developer to anything. An estimate is absolutely not a deadline.
+
+** Real deadlines are real life date constraints** applied on the project. They just appear and the team needs to deal with it. Companies should strive to remove them altogether from their path, but sometimes it's impossible because of external factors (competition, vendors, states...). If a company is constantly under external deadlines, there might be a larger problem happening.
+
+** We should acknowledge that there are fake deadlines **. They are the reason everyone is so annoyed at the very concept of deadlines and estimates. These artificial dates bring no value to the project and produce stress while reducing quality.
 
 ## Why Is This Happening?
 
-First, a lot of developers had some experiences that made them very suspicious of both deadlines and estimates. For instance be subjected to painful top down management styles leading to forced unrealistic deadlines or estimates taken as deadlines. You have to understand that some managers treat developers as if they were a poorly qualified workforce, only good at setting up printers and typing. Why would they have anything to contribute to the project management process?
+First, a lot of developers experienced situations that made them very suspicious of both deadlines and estimates. For instance be subjected to painful top down management styles leading to forced unrealistic deadlines or estimates taken as deadlines. You have to understand that some managers treat developers as if they were a poorly qualified workforce, only good at setting up printers and typing. Why would they have anything to contribute to the project management process?
 
-There are also sales persons that love to promise impossible features to clients, and passing on the blame to the technical team. "You have to do it by the end of next week, we already billed the client - I don't care that it's not possible".
+There are also sales persons that love to promise impossible features to clients and passing on the blame to the technical team. "You have to do it by the end of next week, we already billed the client - I don't care that it's not possible".
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/toxic_dilbert.gif" style="padding: 20px; width: 600px;"/></div>
 
@@ -28,39 +38,39 @@ Obviously I'm not saying that all managers are like that, or that all sales pers
 
 ## What Are Estimates Exactly?
 
-Before starting, I need to clarify something that most people miss and is crucial for the rest of this article: an estimate is nothing more than an educated guess. It's not a deadline, it's not a binding contract. A developer saying "It should take me around 3 days to complete this" is not saying "this will be done in precisely 3 days, you can count on it". Because of this, if a developer overshoots an estimate, it is perfectly fine and no one should be blamed.
+Before starting, I need to clarify something that most people miss and is crucial for the rest of this article: an estimate is nothing more than an educated guess. It's not a deadline, it's not a binding contract. A developer saying "It should take me around 3 days to complete this" is not saying "this will be done in precisely 3 days, you can count on it".
 
-This could seem obvious to you put like this, but it happens a lot that estimates are mistaken for commitments by people that are not involved in the implementation. In my experience, it often comes from a misunderstanding. If both parties don't communicate well enough what they mean, there is a huge room for interpretation and we end up with situation where an estimate becomes a deadline.
+Once you use this definition, it becomes obvious that it is perfectly fine to overshoot an estimate and no one should get blamed.
+
+In my experience it often happens that estimates are mistaken for commitments, mostly because of misunderstandings. If both parties don't communicate well enough, there is a huge room for interpretation and we end up with situation where an estimate becomes a deadline in the eyes of one person and not the other.
 
 > "You told me it should take you 3 weeks, so the client will be expecting the project to be done in 3 weeks."
 
 It's the responsibility of all parties involved to make sure that these conversations are crystal clear. For instance it should obvious that any change in scope or quality requirements invalidates entirely any estimate.
 
-If you don't have a team clear on how to discuss estimates, you'll end up with management thinking that developers are slackers that can't keep a deadline, and developers thinking that management don't understand their craft and set ridiculous deadlines. This is also true for self organized developer teams where missed deadlines can be interpreted as poor craftsmanship.
-
 ## Estimates And Clear Communication
 
-With the definition above, estimates are perfectly ok in my opinion. It helps everyone get an understanding of the amount of work we're about to get into as a team. Here's a conversation summing up my point:
+With the definition above, estimates become perfectly ok. They help everyone get an understanding of the amount of work we're about to get into as a team.
 
 > <span class='dpm'>Product Manager:</span> We want to add a newsletter feature to our website. How long do you think it will take?
 > 
-> <span class='ddev'>Developer:</span> It depends, do you want to use a third party or do it entirely ourselves?
+> <span class='ddev'>Developer:</span> It depends, do you want to use a third party or do it entirely internally?
 > 
 > <span class='dpm'>PM:</span> I'm not sure. How long would it take?
 > 
-> <span class='ddev'>D:</span> Using a third party would be way faster, probably a day or two of development. Of course I'll be able to tell you more precisely once we spend a few hours comparing what good SaaS are within our budget and how to use them. Developing the newsletter from scratch would be longer.
+> <span class='ddev'>D:</span> Using a third party should be way faster, probably a day or two of development. Of course I'll be able to tell you more precisely once we spend a few hours comparing what good SaaS are within our budget and how to use them. Developing the newsletter from scratch is going to be longer than that.
 > 
 > <span class='dpm'>PM:</span> How much longer? You know we try to avoid adding too many third parties to this app.
 > 
 > <span class='ddev'>D:</span> Something close to a couple of weeks. There are a lot of things to think about - unsubscriptions, templates ... If you'd like I could spend a day on it to refine my estimate?
 > 
-> <span class='dpm'>PM:</span> That's alright, we'll go with the third party. There's no need to spend that much time on a newsletter. I'll see with the others what budget we have and get back to you.
+> <span class='dpm'>PM:</span> That's alright, we'll go with the third party option. There's no need to spend that much time on a newsletter. I'll see with the others what budget we have and get back to you.
 
-The product owner means well, but doesn't have all the information needed to make a decision. So here both parties use estimates to determine what option makes more sense. In the end, no deadline has been set.
+The product owner means well, but doesn't have all the information needed to make a decision. To handle this, both parties use estimates to determine what option makes the most sense for the company. In the end, no deadline has been set.
 
-However, not all discussions go like this, so let's say that a couple of days passed.
+However, not all discussions go like this. Let's say that a couple of days passed and the product manager comes back to the developer:
 
-> <span class='dpm'>PM:</span> I have the budget, we can afford to use Mailchimp for this. How long will it take?
+> <span class='dpm'>PM:</span> I have the budget approved, we can afford to use Mailchimp for this. How long will it take?
 > 
 > <span class='ddev'>D:</span> I'm not sure exactly, I'd say a couple of days but I never used Mailchimp before. It's supposed to be simple, but I can't be sure.
 > 
@@ -76,7 +86,7 @@ However, not all discussions go like this, so let's say that a couple of days pa
 
 Here, the developer refuses to commit to a date because she lacks information. It would be risky.
 
-If the product manager doesn't accept this, it's another problem. It means that the manager doesn't trust the developer and that's a whole other story. If the product manager pushes too much to have a precise date, the developer should make sure that this need has some real life basis. If not, it might be a fake deadline as I'll be explaining later on.
+If the product manager doesn't accept this it means that the manager doesn't trust the developer... that's a whole other story. If the product manager pushes too much to have a precise date, the developer should make sure that requirement has some real life basis. If not, it might be a fake deadline as I'll be explaining later on.
 
 Overall, if some people are pressuring others and creating a toxic environment, different rules may apply.
 
@@ -89,23 +99,23 @@ Overall, if some people are pressuring others and creating a toxic environment, 
 
 Most people, unless they are working on a R&D project, don't go into a feature with no clue whatsoever of how long it's going to take to complete. 
 
-I'm sure that, if you're a developer, you're making estimates for yourself already. Of course these are not precise estimates, and you don't need a complex process to produce them. It's closer to a short reflexion based on your previous experiences solving similar problems. The result sounds like "this should take me a day or two" or "if I'm not done by the end of the week I'd be really surprised". It's perfectly fine to do this: you don't commit yourself, you don't set a hard date.
+I'm sure that, if you're a developer, you're making estimates for yourself already. Of course these are not precise estimates, and you don't need a complex process to produce them. It's more a short reflexion based on your previous experiences solving similar problems than anything else. The result sounds like "this should take me a day or two" or "if I'm not done by the end of the week I'd be really surprised".
 
-Let's see how your own quick estimate can be useful for the project.
+It's perfectly fine to do this: you don't commit yourself, you don't set a hard date. Now let's see how your own quick estimates can be useful for the project.
 
 ### Not Wasting Time
 
-Sometimes a developer can see that a feature is not worth building because it would take too long. This is something product managers can't know and would be happy to hear about.
+Sometimes a developer can see that a feature is not worth building because it would take too long. This is something product managers can't know and are always happy to hear about.
 
-> <span class='ddev'>Developer:</span> I see you assigned me a ticket to add a PDF export feature for premium users.
+> <span class='ddev'>Developer:</span> I see you assigned me a ticket to add a PDF export feature for our premium users.
 > 
-> <span class='dpm'>Product Manager:</span> Yes, it was a feature request that came out of the last user survey we sent out. Is there a problem?
+> <span class='dpm'>Product Manager:</span> Yes, it was a feature request that came out of the last user survey we sent out. Is there a problem with the spec?
 > 
-> <span class='ddev'>D:</span> Not really a problem, but I think it will take at least two weeks to complete. I looked at it quickly and it seems the data is really not layed out as we want for this export.
+> <span class='ddev'>D:</span> Not really a problem, but I think it will take at least two weeks to complete. I looked at it quickly and it seems the data is really not formatted as we want for this export.
 > 
 > <span class='dpm'>PM:</span> Really? It seemed easy!
 > 
-> <span class='ddev'>D:</span> Yes, but we made this structural choice a while back that I'd need to change before making the export. Do you think it's worth it?
+> <span class='ddev'>D:</span> Yes, it could have been easy. The thing is that we made this structural choice a while back and I'd need to change before making the export. Do you think it's worth it?
 > 
 > <span class='dpm'>PM:</span> I was thinking it would only take a day when I assigned the ticket to you... I don't think it's worth spending two weeks on that. It's just a feature that would have been nice to have if it had taken a day or two.
 > 
@@ -115,7 +125,7 @@ Sometimes a developer can see that a feature is not worth building because it wo
 
 Used correctly, estimates can help technical leads identify other developers struggling with a complex issue. This also prevents the very need for micromanagement or the "are you done yet" effect.
 
-> <span class='dcto'>CTO:</span> I assigned you an this new ticket to develop the discount code feature.
+> <span class='dcto'>CTO:</span> I assigned you an this new ticket to develop the ability to add a discount code on checkout.
 > 
 > <span class='ddev'>Developer:</span> Great! It's been on the roadmap for a while, glad we can get to it.
 > 
@@ -125,15 +135,15 @@ Used correctly, estimates can help technical leads identify other developers str
 
 2 days later...
 
-> <span class='dcto'>CTO:</span> I noticed that you're still not done on the discount feature. It's not a problem, but I was wondering if you were having any trouble
+> <span class='dcto'>CTO:</span> I noticed that you're still not done on the discount feature. It's not a problem, but I was wondering if you were having any trouble.
 > 
 > <span class='ddev'>D:</span> Yes, it turns out we need a special integration with our payment provider I didn't think of.
 > 
-> <span class='dcto'>CTO:</span> That's too bad. How much more time do you think it'll take.
+> <span class='dcto'>CTO:</span> That's too bad. How much more time do you think it'll take?
 > 
-> <span class='ddev'>D:</span> I really don't know, maybe two weeks, but it could be more. Should I go back on another feature?
+> <span class='ddev'>D:</span> I really don't know, maybe two weeks, but it could be more. Should I stop development and go back on another feature?
 > 
-> <span class='dcto'>CTO:</span> No, it's a very important feature, so keep going and take the time you need. If by the end of the week you're still having troubles you could pair with Tim, he knows well this part of the app. What do you think?
+> <span class='dcto'>CTO:</span> No, it's a very important piece of functionality, so please keep going and take the time you need to get it right. If by the end of the week you're still having troubles you could pair with Tim, he knows well this part of the app. What do you think?
 > 
 > <span class='ddev'>D:</span> That would be helpful, great!
 
@@ -143,15 +153,15 @@ Estimates can help a developer find and communicate about quick wins for the pro
 
 > <span class='ddev'>Developer:</span> Remember how we wanted to be able to use advanced filters on our internal search?
 > 
-> <span class='dpm'>Product Manager:</span> Yes, you told me a while back it would take months. I'd love to have it, but it's not very high priority right now.
+> <span class='dpm'>Product Manager:</span> Yes, you told me  a year ago that it would take months. I'd love to have it, but it's not very high priority right now.
 > 
-> <span class='ddev'>D:</span> Well, thanks to my latest refactoring for another feature, we should be able to add the filters in a day or two.
+> <span class='ddev'>D:</span> Well, thanks to my latest refactoring made for another feature I was working on, we should be able to add the filters in a day or two!
 > 
 > <span class='dpm'>PM:</span> That would be amazing! Now that it can be that fast, it's worth spending the time.
 
 ## The Cost Of Estimates
 
-Giving an estimate always costs time. It can go to a minute of reflexion to full fledged processes such as [planning poker][2] that requires some amount of training.
+Giving an estimate always costs time. It can go to a minute of reflexion to full fledged processes such as [planning poker][1] that requires some amount of training.
 
 If the cost of estimating something gets too big compared to the scope of the feature, I don't think it makes sense to be spending this time. For instance if you take 2 hours discussing wether a feature will take 4 hours or 6 hours, you are obviously wasting time.
 
@@ -159,13 +169,13 @@ Overall, for startups, I recommend not spending more than a few minutes on estim
 
 > “The future is uncertain and you will never know less than you know right now.”
 > 
-> Sandi Metz, [Practical Object-Oriented Design in Ruby: An Agile Primer][3]
+> Sandi Metz, [Practical Object-Oriented Design in Ruby: An Agile Primer][2]
 
 ## Deadlines
 
 ### Real Deadlines
 
-There are deadlines in the real world. It's just the way it is. Sometimes you need to have something done by a certain date. Let's say you run an online store and you need to release a crucial new feature before black Friday. If you miss this date, you will loose a lot of money and potentially destroy the company.
+There are deadlines in the real world. It's just the way it is. A company's life leads to situations where you need to have something done by a certain date. Let's say you run an online store and you need to release a crucial new feature before black Friday. If you miss this date, you will loose a lot of money and potentially destroy the company.
 
 If everyone is aware of it and the company is well prepared, facing a deadline can be easy and without stress. For instance if you need 1 month to get a feature out for black Friday, but you start working on it 6 months in advance, everything should be fine.
 
@@ -175,7 +185,7 @@ Of course these real life deadlines are exceptional, if you have one every week 
 
 ### Artificial Deadlines or "Fake" Deadlines
 
-There are some deadlines that are not linked to the real world and these are useless. A a rule of thumb, if the only thing that happens if a deadline is not met is a manager getting angry, then it was not a real deadline. 
+There are some deadlines that are not linked to the real world and these are simply useless. A a rule of thumb, if the only thing that happens if a deadline is not met is a manager getting angry, then it was not a real deadline. 
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/fake_deadline.jpg" style="padding: 20px; width: 450px;"/></div>
 
@@ -185,7 +195,7 @@ To avoid missing these fake deadlines, developers will reduce quality or scope. 
 
 > "Agile processes promote sustainable development. The sponsors, developers, and users should be able to maintain a constant pace indefinitely."
 > 
-> [Principles behind the Agile Manifesto][4]
+> [Principles behind the Agile Manifesto][3]
 
 ### Deadlines For Motivation
 
@@ -193,24 +203,21 @@ Some people like to work under deadlines and I get it. It sets a clear goal and 
 
 I'd say that this is fine if you use artificial deadlines for this, only if everyone agrees that a missed deadline is not a big deal. If you don't have a real life time constraint, there's no need to sacrifice scope or quality, so why would you do this? 
 
-However, if you say that a deadline can be missed... is this even a deadline anymore? Why not start talking about "milestones" instead of "deadlines". It sounds way less terrifying.
+However, if you say that a deadline can be missed... is this even a deadline anymore? Why not start talking about "milestones" instead of "deadlines"? It sounds way less terrifying.
 
-## Summing Up
+## Learn More
 
-It's perfectly fine to work with deadlines and estimates: they are not contraptions to alienate developers and cause everyone stress. However, they need to be handled correctly by every person in the team.
+_If you want to keep reading about deadlines, I find the article by Michael O. Church [On programmers, deadlines, and “Agile”][4]  very interesting even if I don't agree with all of it._
 
-First we should acknowledge that there are fake deadlines. There are the reason everyone is so annoyed at the very concept of deadlines and estimates. These artificial dates bring no value to the project and produce stress while reducing quality.
+_I would also recommend reading [The Clean Coder: A Code of Conduct for Professional Programmers][5] by [Robert C. Martin][6], a great book that goes into more details regarding the relation developers should have with deadlines and estimates. I was very inspired by the dialogues in this book when writing the dialogues in this article._
 
-Estimates are just a way to communicate the difficulty and duration of a task inside and outside a team. You don't need to do it all the time, and they do not commit the developer to anything. An estimate is absolutely not a deadline.
-
-Real deadlines are real life date constraints applied on the project. They just appear and the team needs to deal with it. Companies should strive to remove them altogether from their path, but sometimes it's impossible because of external factors (competition, vendors, states...). If a company is constantly under external deadlines, there might be a larger problem happening.
-
-_If you want to keep reading about deadlines, I find the article by Michael O. Church [On programmers, deadlines, and “Agile”][5]  very interesting even if I don't agree with all of it. Thanks a lot to [Julien][6] for challenging me on the first draft of the article and helping me refine my reflexion._
+_Finally, thanks a lot to [Julien][7] for challenging me on the very first draft of the article and helping me refine my reflexion._
 
 
-[1]:	/blog/2013/02/04/developers-teach-non-tech-startup/
-[2]:	https://en.wikipedia.org/wiki/Planning_poker
-[3]:	http://www.amazon.com/Practical-Object-Oriented-Design-Ruby-Addison-Wesley/dp/0321721330
-[4]:	http://agilemanifesto.org/principles.html
-[5]:	https://michaelochurch.wordpress.com/2014/06/20/on-programmers-deadlines-and-agile/
-[6]:	http://julienblanchard.com/
+[1]:	https://en.wikipedia.org/wiki/Planning_poker
+[2]:	http://www.amazon.com/Practical-Object-Oriented-Design-Ruby-Addison-Wesley/dp/0321721330
+[3]:	http://agilemanifesto.org/principles.html
+[4]:	https://michaelochurch.wordpress.com/2014/06/20/on-programmers-deadlines-and-agile/
+[5]:	http://www.amazon.fr/The-Clean-Coder-Professional-Programmers/dp/0137081073
+[6]:	https://twitter.com/unclebobmartin
+[7]:	http://julienblanchard.com/
