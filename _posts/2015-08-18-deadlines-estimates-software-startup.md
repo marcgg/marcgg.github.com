@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Deadlines And Estimates In Startups
-description: Using deadlines and estimates in a software project  gets a bad reputation, however, when done well, it can make a lot of sense.
+description: Using deadlines and estimates in a software project  gets a bad reputation. However, when done well, it can make a lot of sense to embrace them.
 blog: false
 category: blog
 cssscope: deadlines
@@ -10,7 +10,7 @@ tag: ProjectManagement
 
 A couple of years back I blogged about [sharing knowledge between coders and non-coders][1]. It is as true in project management as it is in technical fields as a lot of developers in startups are against deadlines and estimates.
 
-This is usually hard to understand for project owners, and it leads to incomprehensions on both sides. Product owners feel like developers don't want to commit and act unprofessionnally, developers feel like management don't trust them... it's a mess, and it's not helpful for the company or the well being of the employees.
+This is usually hard to understand for project owners, and it leads to incomprehensions on both sides. Product owners feel like developers don't want to commit and act unprofessionally, developers feel like management don't trust them... it's a mess, and it's not helpful for the company or the well being of the employees.
 
 Let's take a few minutes to see why this is happening and what we can do to work more effectively together.
 
@@ -28,15 +28,15 @@ Obviously I'm not saying that all managers are like that, or that all sales pers
 
 ## What Are Estimates Exactly?
 
-Before starting, I need to clarify something that most people miss and is crucial for the rest of this article: an estimate is nothing more than an educated guess. It's not a deadline, it's not a binding contract. A developer saying "It should take me arround 3 days to complete this" is not saying "this will be done in precisely 3 days, you can count on it". Because of this, if a developer overshoots an estimate, it is perfectly fine and no one should be blamed.
+Before starting, I need to clarify something that most people miss and is crucial for the rest of this article: an estimate is nothing more than an educated guess. It's not a deadline, it's not a binding contract. A developer saying "It should take me around 3 days to complete this" is not saying "this will be done in precisely 3 days, you can count on it". Because of this, if a developer overshoots an estimate, it is perfectly fine and no one should be blamed.
 
-This could seem obvious to you put like this, but it happens a lot that estimates are mistaken for commitments by people that are not involved in the implementation. In my experience, it often comes from a misunderstanding. If both parties don't communicate well enought what they mean, there is a huge room for interpretation and we end up with situation where an estimate becomes a deadline.
+This could seem obvious to you put like this, but it happens a lot that estimates are mistaken for commitments by people that are not involved in the implementation. In my experience, it often comes from a misunderstanding. If both parties don't communicate well enough what they mean, there is a huge room for interpretation and we end up with situation where an estimate becomes a deadline.
 
 > "You told me it should take you 3 weeks, so the client will be expecting the project to be done in 3 weeks."
 
 It's the responsibility of all parties involved to make sure that these conversations are crystal clear. For instance it should obvious that any change in scope or quality requirements invalidates entirely any estimate.
 
-If you don't have a team clear on how to discuss estimates, you'll end up with management thinking that developers are slackers that can't keep a deadline, and developers thinking that management don't understant their craft and set ridiculous deadlines. This is also true for self organized developer teams where missed deadlines can be interpreted as poor craftmanship.
+If you don't have a team clear on how to discuss estimates, you'll end up with management thinking that developers are slackers that can't keep a deadline, and developers thinking that management don't understand their craft and set ridiculous deadlines. This is also true for self organized developer teams where missed deadlines can be interpreted as poor craftsmanship.
 
 ## Estimates And Clear Communication
 
@@ -87,7 +87,7 @@ Overall, if some people are pressuring others and creating a toxic environment, 
 
 ### You Probably Already Do It
 
-Most people, unless they are working on a complete R&D project, don't go into a feature with no clue whatsoever of how long it's going to take to complete. 
+Most people, unless they are working on a R&D project, don't go into a feature with no clue whatsoever of how long it's going to take to complete. 
 
 I'm sure that, if you're a developer, you're making estimates for yourself already. Of course these are not precise estimates, and you don't need a complex process to produce them. It's closer to a short reflexion based on your previous experiences solving similar problems. The result sounds like "this should take me a day or two" or "if I'm not done by the end of the week I'd be really surprised". It's perfectly fine to do this: you don't commit yourself, you don't set a hard date.
 
@@ -165,13 +165,13 @@ Overall, for startups, I recommend not spending more than a few minutes on estim
 
 ### Real Deadlines
 
-There are deadlines in the real world. It's just the way it is. Sometimes you need to have something done by a certain date. Let's say you run an online store and you need to release a crucial new feature before black friday. If you miss this date, you will loose a lot of money and potentially destroy the company.
+There are deadlines in the real world. It's just the way it is. Sometimes you need to have something done by a certain date. Let's say you run an online store and you need to release a crucial new feature before black Friday. If you miss this date, you will loose a lot of money and potentially destroy the company.
 
-If everyone is aware of it and the company is well prepared, facing a deadline can be easy and without stress. For instance if you need 1 month to get a feature out for black friday, but you start working on it 6 months in advance, everything should be fine.
+If everyone is aware of it and the company is well prepared, facing a deadline can be easy and without stress. For instance if you need 1 month to get a feature out for black Friday, but you start working on it 6 months in advance, everything should be fine.
 
-These deadlines are perfectly valid to me and they are often exceptionnal. It's just how real life operates, sometimes you have a hard date you can't change and that's it. Companies need to make sure they explain well why they end up in a situation where a deadline has appeared and put the needed ressources in place so that the deadline is met. For instance, they might need to hire extra help, pay overtime or give up on some unessential feature details. In these situations you can use estimates to make better decisions on what to do in order to succeed.
+These deadlines are perfectly valid to me and they are often exceptional. It's just how real life operates, sometimes you have a hard date you can't change and that's it. Companies need to make sure they explain well why they end up in a situation where a deadline has appeared and put the needed ressources in place so that the deadline is met. For instance, they might need to hire extra help, pay overtime or give up on some unessential feature details. In these situations you can use estimates to make better decisions on what to do in order to succeed.
 
-Of course these real life deadlines are exceptionnal, if you have one every week it's symptomatic of a deeper business related problem.
+Of course these real life deadlines are exceptional, if you have one every week it's symptomatic of a deeper business related problem.
 
 ### Artificial Deadlines or "Fake" Deadlines
 
@@ -199,7 +199,7 @@ However, if you say that a deadline can be missed... is this even a deadline any
 
 It's perfectly fine to work with deadlines and estimates: they are not contraptions to alienate developers and cause everyone stress. However, they need to be handled correctly by every person in the team.
 
-First we should aknowledge that there are fake deadlines. There are the reason everyone is so annoyed at the very concept of deadlines and estimates. These artificial dates bring no value to the project and produce stress while reducing quality.
+First we should acknowledge that there are fake deadlines. There are the reason everyone is so annoyed at the very concept of deadlines and estimates. These artificial dates bring no value to the project and produce stress while reducing quality.
 
 Estimates are just a way to communicate the difficulty and duration of a task inside and outside a team. You don't need to do it all the time, and they do not commit the developer to anything. An estimate is absolutely not a deadline.
 
