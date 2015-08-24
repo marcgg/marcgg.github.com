@@ -14,7 +14,7 @@ This fact is usually hard to understand for project owners, and it leads to inco
 
 Let's take a few minutes to see why this is happening and what we can do to work more effectively together. It's a long article, so I summarised the various points in the tl;dr section below.
 
-_Note that this article is aimed at startups and teams smaller tant 50 people. I'll also be assuming good faith, meaning that all people involved just want to project to succeed and are not just mean spirited or blatantly incompetent. If you have toxic people within your team, that's a another subject._
+_Note that this article is aimed at startups and teams smaller tant 50 people. I'll also be assuming good faith, meaning that all people involved just want to project to succeed and are not just mean spirited or blatantly incompetent. If you have toxic people within your team, that's another subject._
 
 ### tl;dr;
 
@@ -163,7 +163,7 @@ Estimates can help a developer find and communicate about quick wins for the pro
 
 Giving an estimate always costs time. It can go to a minute of reflexion to full fledged processes such as [planning poker][1] that requires some amount of training.
 
-If the cost of estimating something gets too big compared to the scope of the feature, I don't think it makes sense to be spending this time. For instance if you take 2 hours discussing wether a feature will take 4 hours or 6 hours, you are obviously wasting time.
+If the cost of estimating something gets too big compared to the scope of the feature, I don't think it makes sense to be spending this time. For instance if you take 2 hours discussing whether a feature will take 4 hours or 6 hours, you are obviously wasting time.
 
 Overall, for startups, I recommend not spending more than a few minutes on estimates. If you end up with a huge project, try to break it into smaller bits and estimate these instead of trying to deal with the whole thing.
 
