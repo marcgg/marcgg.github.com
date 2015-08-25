@@ -46,7 +46,7 @@ In my experience it often happens that estimates are mistaken for commitments, m
 
 > "You told me it should take you 3 weeks, so the client will be expecting the project to be done in 3 weeks."
 
-It's the responsibility of all parties involved to make sure that these conversations are crystal clear. For instance it should obvious that any change in scope or quality requirements invalidates entirely any estimate.
+It's the responsibility of all parties involved to make sure that these conversations are crystal clear. For instance it should be obvious that any change in scope or quality requirements invalidates entirely any estimate.
 
 ## Estimates And Clear Communication
 
