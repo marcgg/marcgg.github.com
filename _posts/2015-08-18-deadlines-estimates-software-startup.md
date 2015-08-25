@@ -115,7 +115,7 @@ Sometimes a developer can see that a feature is not worth building because it wo
 > 
 > <span class='dpm'>PM:</span> Really? It seemed easy!
 > 
-> <span class='ddev'>D:</span> Yes, it could have been easy. The thing is that we made this structural choice a while back and I'd need to change before making the export. Do you think it's worth it?
+> <span class='ddev'>D:</span> Yes, it could have been easy. The thing is, we made this structural choice a while back and I'd need to change it before making the export. Do you think it's worth it?
 > 
 > <span class='dpm'>PM:</span> I was thinking it would only take a day when I assigned the ticket to you... I don't think it's worth spending two weeks on that. It's just a feature that would have been nice to have if it had taken a day or two.
 > 
@@ -175,7 +175,7 @@ Overall, for startups, I recommend not spending more than a few minutes on estim
 
 ### Real Deadlines
 
-There are deadlines in the real world. It's just the way it is. A company's life leads to situations where you need to have something done by a certain date. Let's say you run an online store and you need to release a crucial new feature before black Friday. If you miss this date, you will loose a lot of money and potentially destroy the company.
+There are deadlines in the real world. It's just the way it is. A company's life leads to situations where you need to have something done by a certain date. Let's say you run an online store and you need to release a crucial new feature before black Friday. If you miss this date, you will lose a lot of money and potentially destroy the company.
 
 If everyone is aware of it and the company is well prepared, facing a deadline can be easy and without stress. For instance if you need 1 month to get a feature out for black Friday, but you start working on it 6 months in advance, everything should be fine.
 
