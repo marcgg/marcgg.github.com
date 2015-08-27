@@ -2,15 +2,15 @@
 layout: post
 title: Deadlines And Estimates In Startups
 description: Using deadlines and estimates in a software project  gets a bad reputation. However, when done well, it can make a lot of sense to embrace them.
-blog: false
+blog: true
 category: blog
 cssscope: deadlines
 tag: ProjectManagement
 ---
 
-A lot of developers in startups are against deadlines and estimates. There's even a whole "#NoEstimate" movement that appeared recently.
+A lot of developers in startups are against deadlines and estimates. There's even a whole "[\#NoEstimate][1]" movement that appeared recently.
 
-This fact is usually hard to understand for project owners, and it leads to incomprehensions on both sides. Product owners feel like developers don't want to commit and act unprofessionally, developers feel like management don't trust them... it's a mess, and it's not helpful for the company or the well being of the employees.
+This fact is usually hard to understand for project owners, and it leads to incomprehensions on both sides. Product owners feel like developers don't want to commit and act unprofessionally, developers feel like management don't trust them and set unrealistic goals... it's a mess, and it's not helpful for the company nor the well being of the employees.
 
 Let's take a few minutes to see why this is happening and what we can do to work more effectively together. It's a long article, so I summarised the various points in the tl;dr section below.
 
@@ -22,31 +22,31 @@ _Note that this article is aimed at startups and teams smaller tant 50 people. I
 
 ** Estimates are just a way to communicate** the difficulty and duration of a task inside and outside a team. You don't need to do it all the time, and they do not commit the developer to anything. An estimate is absolutely not a deadline.
 
-** Real deadlines are real life date constraints** applied on the project. They just appear and the team needs to deal with it. Companies should strive to remove them altogether from their path, but sometimes it's impossible because of external factors (competition, vendors, states...). If a company is constantly under external deadlines, there might be a larger problem happening.
+** Real deadlines are real life date constraints** applied to the project. They simply appear and the team needs to deal with it. Companies should strive to remove them altogether from their path, but sometimes it's impossible to do so because of external factors (competition, vendors, states, laws...). If a company is constantly under external deadlines, there might be a larger problem at work.
 
 ** We should acknowledge that there are fake deadlines **. They are the reason everyone is so annoyed at the very concept of deadlines and estimates. These artificial dates bring no value to the project and produce stress while reducing quality.
 
 ## Why Is This Happening?
 
-First, a lot of developers experienced situations that made them very suspicious of both deadlines and estimates. For instance be subjected to painful top down management styles leading to forced unrealistic deadlines or estimates taken as deadlines. You have to understand that some managers treat developers as if they were a poorly qualified workforce, only good at setting up printers and typing. Why would they have anything to contribute to the project management process?
+First, a lot of developers experienced situations that made them very suspicious of both deadlines and estimates. For instance, be subjected to painful top down management styles leading to forced unrealistic deadlines or estimates taken as deadlines. You have to understand that some managers treat developers as if they were a poorly qualified workforce, only good at setting up printers and typing. Why would they have anything to contribute to the project management process?
 
 There are also sales persons that love to promise impossible features to clients and passing on the blame to the technical team. "You have to do it by the end of next week, we already billed the client - I don't care that it's not possible".
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/toxic_dilbert.gif" style="padding: 20px; width: 600px;"/></div>
 
-Obviously I'm not saying that all managers are like that, or that all sales persons do this. My point is that's what a lot of developers experienced and now we have a situation where they cringe when someone pronounces the word "deadline". 
+Obviously I'm not saying that all managers are like that, or that all sales persons do this. That is just what a lot of developers experienced and now we have a situation where they cringe when someone pronounces the word "deadline". 
 
 ## What Are Estimates Exactly?
 
-Before starting, I need to clarify something that most people miss and is crucial for the rest of this article: an estimate is nothing more than an educated guess. It's not a deadline, it's not a binding contract. A developer saying "It should take me around 3 days to complete this" is not saying "this will be done in precisely 3 days, you can count on it".
+Before starting, I need to clarify something that most people miss and is crucial for the rest of this article: an estimate is nothing more than an educated guess. It's not a deadline, it's not a binding contract. A developer saying "It should take me around 3 days to complete this" is not saying "this will be done in precisely 3 days, you can count on it". An estimate is also not a negotiation, it's just about communicating how long something might take given a set of constraints.
 
 Once you use this definition, it becomes obvious that it is perfectly fine to overshoot an estimate and no one should get blamed.
 
-In my experience it often happens that estimates are mistaken for commitments, mostly because of misunderstandings. If both parties don't communicate well enough, there is a huge room for interpretation and we end up with situation where an estimate becomes a deadline in the eyes of one person and not the other.
+In my experience it often happens that estimates are mistaken for commitments, mostly because of misunderstandings. If both parties don't communicate well enough, there is a huge room for interpretation and we end up with situations where an estimate becomes a deadline in the eyes of one person and not the other.
 
-> "You told me it should take you 3 weeks, so the client will be expecting the project to be done in 3 weeks."
+> "You told me it should take you 3 weeks, therefore the client will be expecting the project to be done in 3 weeks."
 
-It's the responsibility of all parties involved to make sure that these conversations are crystal clear. For instance it should be obvious that any change in scope or quality requirements invalidates entirely any estimate.
+It's the responsibility of all parties involved to make sure that these conversations are crystal clear. For instance it should be obvious that any changes made to scope or quality requirements invalidate entirely any estimate.
 
 ## Estimates And Clear Communication
 
@@ -86,7 +86,7 @@ However, not all discussions go like this. Let's say that a couple of days passe
 
 Here, the developer refuses to commit to a date because she lacks information. It would be risky.
 
-If the product manager doesn't accept this it means that the manager doesn't trust the developer... that's a whole other story. If the product manager pushes too much to have a precise date, the developer should make sure that requirement has some real life basis. If not, it might be a fake deadline as I'll be explaining later on.
+If the product manager doesn't accept this it means that the manager doesn't trust the developer... and that's a whole other story. If the product manager pushes too much to have a precise date, the developer should make sure that his requirement has some real life basis. If not, it might be a fake deadline as I'll be discussing later on.
 
 Overall, if some people are pressuring others and creating a toxic environment, different rules may apply.
 
@@ -161,7 +161,7 @@ Estimates can help a developer find and communicate about quick wins for the pro
 
 ## The Cost Of Estimates
 
-Giving an estimate always costs time. It can go to a minute of reflexion to full fledged processes such as [planning poker][1] that requires some amount of training.
+Giving an estimate always costs time. It can go to a minute of reflexion to full fledged processes such as [planning poker][2] that requires some amount of training.
 
 If the cost of estimating something gets too big compared to the scope of the feature, I don't think it makes sense to be spending this time. For instance if you take 2 hours discussing whether a feature will take 4 hours or 6 hours, you are obviously wasting time.
 
@@ -169,7 +169,12 @@ Overall, for startups, I recommend not spending more than a few minutes on estim
 
 > “The future is uncertain and you will never know less than you know right now.”
 > 
-> Sandi Metz, [Practical Object-Oriented Design in Ruby: An Agile Primer][2]
+> Sandi Metz, [Practical Object-Oriented Design in Ruby: An Agile Primer][3]
+
+If estimates are mandatory for each simple feature, you might be losing a lot of time, and people might start to develop crazy ways to do these estimates.
+
+<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/estimate_nonsense.png" style="padding: 20px; width: 680px;"/></div>
+
 
 ## Deadlines
 
@@ -181,21 +186,21 @@ If everyone is aware of it and the company is well prepared, facing a deadline c
 
 These deadlines are perfectly valid to me and they are often exceptional. It's just how real life operates, sometimes you have a hard date you can't change and that's it. Companies need to make sure they explain well why they end up in a situation where a deadline has appeared and put the needed ressources in place so that the deadline is met. For instance, they might need to hire extra help, pay overtime or give up on some unessential feature details. In these situations you can use estimates to make better decisions on what to do in order to succeed.
 
-Of course these real life deadlines are exceptional, if you have one every week it's symptomatic of a deeper business related problem.
+Of course these real life deadlines are exceptional, if you have one every week it's symptomatic of a deeper business-related problem.
 
 ### Artificial Deadlines or "Fake" Deadlines
 
-There are some deadlines that are not linked to the real world and these are simply useless. A a rule of thumb, if the only thing that happens if a deadline is not met is a manager getting angry, then it was not a real deadline. 
+There are some deadlines that are not linked to the real world and these are simply useless. As a rule of thumb, if the only thing that happens if a deadline is not met is a manager getting angry, then it was not a real deadline. 
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/fake_deadline.jpg" style="padding: 20px; width: 450px;"/></div>
 
 For instance, rushing to get a feature into production by the end of the week because it's the end of the sprint. Spending a night of overtime at the office because someone really want to show off the feature at some small meeting. You could even argue that these are not even deadlines, just some milestones with people stressed out about the due date!
 
-To avoid missing these fake deadlines, developers will reduce quality or scope. So you'll end up with incomplete or poorly created features, all this for the sake of an artificial deadline. This is short sighted, makes absolutely no sense and, if repeated enough time, will drive your team away or at least lead to some serious loss in productivity over time. Creating a sustainable startup is not a sprint, it's a longer race.
+To avoid missing these fake deadlines, developers will reduce quality or scope. So you'll end up with incomplete or poorly created features, all this for the sake of an artificial deadline. This is short-sighted, makes absolutely no sense and, if repeated enough time, will drive your team away or at least lead to some serious loss in productivity over time. Creating a sustainable startup is not a sprint, it's a longer race.
 
 > "Agile processes promote sustainable development. The sponsors, developers, and users should be able to maintain a constant pace indefinitely."
 > 
-> [Principles behind the Agile Manifesto][3]
+> [Principles behind the Agile Manifesto][4]
 
 ### Deadlines For Motivation
 
@@ -207,17 +212,22 @@ However, if you say that a deadline can be missed... is this even a deadline any
 
 ## Learn More
 
-_If you want to keep reading about deadlines, I find the article by Michael O. Church [On programmers, deadlines, and “Agile”][4]  very interesting even if I don't agree with all of it._
+If you want to keep reading about deadlines, I find the article by [Michael O. Church][5], [On programmers, deadlines, and “Agile”][6], very interesting even if I don't agree with all of it.
 
-_I would also recommend reading [The Clean Coder: A Code of Conduct for Professional Programmers][5] by [Robert C. Martin][6], a great book that goes into more details regarding the relation developers should have with deadlines and estimates. I was very inspired by the dialogues in this book when writing the dialogues in this article._
+I would also recommend reading [The Clean Coder: A Code of Conduct for Professional Programmers][7] by [Robert C. Martin][8]. It really is a great book and it goes into more details regarding the relation developers should have with deadlines and estimates. I was very inspired by the dialogues in this book when writing the dialogues in this article.
 
-_Finally, thanks a lot to [Julien][7] for challenging me on the very first draft of the article and helping me refine my reflexion._
+Finally, I encourage you to read ["Estimation - The Best We Can Do"][9] by Jon Jeffries where he discusses the way estimates can be done in the context of agile teams. I don't like the concept of velocity, but some points are worth reading.
+
+_Thanks a lot to [Julien][10] for challenging me on the very first draft of the article and helping me refine my reflexion. Thanks also to all other people who helped me make some adjustments and spelling corrections!_
 
 
-[1]:	https://en.wikipedia.org/wiki/Planning_poker
-[2]:	http://www.amazon.com/Practical-Object-Oriented-Design-Ruby-Addison-Wesley/dp/0321721330
-[3]:	http://agilemanifesto.org/principles.html
-[4]:	https://michaelochurch.wordpress.com/2014/06/20/on-programmers-deadlines-and-agile/
-[5]:	http://www.amazon.fr/The-Clean-Coder-Professional-Programmers/dp/0137081073
-[6]:	https://twitter.com/unclebobmartin
-[7]:	http://julienblanchard.com/
+[1]:	https://twitter.com/search?q=%23noestimates&src=typd
+[2]:	https://en.wikipedia.org/wiki/Planning_poker
+[3]:	http://www.amazon.com/Practical-Object-Oriented-Design-Ruby-Addison-Wesley/dp/0321721330
+[4]:	http://agilemanifesto.org/principles.html
+[5]:	https://twitter.com/michaelochurch
+[6]:	https://michaelochurch.wordpress.com/2014/06/20/on-programmers-deadlines-and-agile/
+[7]:	http://www.amazon.fr/The-Clean-Coder-Professional-Programmers/dp/0137081073
+[8]:	https://twitter.com/unclebobmartin
+[9]:	%5Bhttps://pragprog.com/magazines/2013-04/estimation%5D
+[10]:	http://julienblanchard.com/
