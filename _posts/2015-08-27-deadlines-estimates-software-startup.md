@@ -14,17 +14,17 @@ This fact is usually hard to understand for project owners, and it leads to inco
 
 Let's take a few minutes to see why this is happening and what we can do to work more effectively together. It's a long article, so I summarised the various points in the tl;dr section below.
 
-_Note that this article is aimed at startups and teams smaller tant 50 people. I'll also be assuming good faith, meaning that all people involved just want to project to succeed and are not just mean spirited or blatantly incompetent. If you have toxic people within your team, that's another subject._
+_Note that this article is aimed at startups and teams smaller than 50 people. I'll also be assuming good faith, meaning that all people involved just want the project to succeed and are not just mean spirited or blatantly incompetent. If you have toxic people within your team, that's another subject._
 
 ### tl;dr;
 
-**It's perfectly fine to work with deadlines and estimates**: they are not contraptions to alienate developers and cause everyone stress. As a matter of fact, if you're a developer you probably already do estimates for yourself. However, they need to be handled correctly by every person in the team to be effective instead of toxic.
+** It's perfectly fine to work with deadlines and estimates**: they are not contraptions to alienate developers and cause everyone stress. As a matter of fact, if you're a developer you probably already do estimates for yourself. However, they need to be handled correctly by every person in the team to be effective instead of toxic.
 
 ** Estimates are just a way to communicate** the difficulty and duration of a task inside and outside a team. You don't need to do it all the time, and they do not commit the developer to anything. An estimate is absolutely not a deadline.
 
 ** Real deadlines are real life date constraints** applied to the project. They simply appear and the team needs to deal with it. Companies should strive to remove them altogether from their path, but sometimes it's impossible to do so because of external factors (competition, vendors, states, laws...). If a company is constantly under external deadlines, there might be a larger problem at work.
 
-** We should acknowledge that there are fake deadlines **. They are the reason everyone is so annoyed at the very concept of deadlines and estimates. These artificial dates bring no value to the project and produce stress while reducing quality.
+** We should acknowledge that there are fake deadlines**. They are the reason everyone is so annoyed at the very concept of deadlines and estimates. These artificial dates bring no value to the project and produce stress while reducing quality.
 
 ## Why Is This Happening?
 
@@ -125,13 +125,13 @@ Sometimes a developer can see that a feature is not worth building because it wo
 
 Used correctly, estimates can help technical leads identify other developers struggling with a complex issue. This also prevents the very need for micromanagement or the "are you done yet" effect.
 
-> <span class='dcto'>CTO:</span> I assigned you an this new ticket to develop the ability to add a discount code on checkout.
+> <span class='dcto'>CTO:</span> I assigned you this new ticket to develop the ability to add a discount code on checkout.
 > 
 > <span class='ddev'>Developer:</span> Great! It's been on the roadmap for a while, glad we can get to it.
 > 
 > <span class='dcto'>CTO:</span> How long do you think it should take you?
 > 
-> <span class='ddev'>D:</span> I'm not sure, but I doubt it'll take more than 2 days
+> <span class='ddev'>D:</span> I'm not sure, but I doubt it'll take more than 2 days.
 
 2 days later...
 

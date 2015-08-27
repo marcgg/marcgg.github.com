@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2015-08-27T08:49:46+02:00</updated>
+ <updated>2015-08-27T14:24:01+02:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -24,17 +24,17 @@
 
 &lt;p&gt;Let’s take a few minutes to see why this is happening and what we can do to work more effectively together. It’s a long article, so I summarised the various points in the tl;dr section below.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Note that this article is aimed at startups and teams smaller tant 50 people. I’ll also be assuming good faith, meaning that all people involved just want to project to succeed and are not just mean spirited or blatantly incompetent. If you have toxic people within your team, that’s another subject.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note that this article is aimed at startups and teams smaller than 50 people. I’ll also be assuming good faith, meaning that all people involved just want the project to succeed and are not just mean spirited or blatantly incompetent. If you have toxic people within your team, that’s another subject.&lt;/em&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;tldr&quot;&gt;tl;dr;&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;It’s perfectly fine to work with deadlines and estimates&lt;/strong&gt;: they are not contraptions to alienate developers and cause everyone stress. As a matter of fact, if you’re a developer you probably already do estimates for yourself. However, they need to be handled correctly by every person in the team to be effective instead of toxic.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; It’s perfectly fine to work with deadlines and estimates&lt;/strong&gt;: they are not contraptions to alienate developers and cause everyone stress. As a matter of fact, if you’re a developer you probably already do estimates for yourself. However, they need to be handled correctly by every person in the team to be effective instead of toxic.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt; Estimates are just a way to communicate&lt;/strong&gt; the difficulty and duration of a task inside and outside a team. You don’t need to do it all the time, and they do not commit the developer to anything. An estimate is absolutely not a deadline.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt; Real deadlines are real life date constraints&lt;/strong&gt; applied to the project. They simply appear and the team needs to deal with it. Companies should strive to remove them altogether from their path, but sometimes it’s impossible to do so because of external factors (competition, vendors, states, laws…). If a company is constantly under external deadlines, there might be a larger problem at work.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt; We should acknowledge that there are fake deadlines &lt;/strong&gt;. They are the reason everyone is so annoyed at the very concept of deadlines and estimates. These artificial dates bring no value to the project and produce stress while reducing quality.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; We should acknowledge that there are fake deadlines&lt;/strong&gt;. They are the reason everyone is so annoyed at the very concept of deadlines and estimates. These artificial dates bring no value to the project and produce stress while reducing quality.&lt;/p&gt;
 
 &lt;h2 id=&quot;why-is-this-happening&quot;&gt;Why Is This Happening?&lt;/h2&gt;
 
@@ -143,13 +143,13 @@
 &lt;p&gt;Used correctly, estimates can help technical leads identify other developers struggling with a complex issue. This also prevents the very need for micromanagement or the “are you done yet” effect.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;&lt;span class=&quot;dcto&quot;&gt;CTO:&lt;/span&gt; I assigned you an this new ticket to develop the ability to add a discount code on checkout.&lt;/p&gt;
+  &lt;p&gt;&lt;span class=&quot;dcto&quot;&gt;CTO:&lt;/span&gt; I assigned you this new ticket to develop the ability to add a discount code on checkout.&lt;/p&gt;
 
   &lt;p&gt;&lt;span class=&quot;ddev&quot;&gt;Developer:&lt;/span&gt; Great! It’s been on the roadmap for a while, glad we can get to it.&lt;/p&gt;
 
   &lt;p&gt;&lt;span class=&quot;dcto&quot;&gt;CTO:&lt;/span&gt; How long do you think it should take you?&lt;/p&gt;
 
-  &lt;p&gt;&lt;span class=&quot;ddev&quot;&gt;D:&lt;/span&gt; I’m not sure, but I doubt it’ll take more than 2 days&lt;/p&gt;
+  &lt;p&gt;&lt;span class=&quot;ddev&quot;&gt;D:&lt;/span&gt; I’m not sure, but I doubt it’ll take more than 2 days.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;2 days later…&lt;/p&gt;
