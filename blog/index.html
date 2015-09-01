@@ -7,8 +7,9 @@ category: blog
 <div id="all-posts">
   {% for post in site.posts %}
     {% if post.blog == true %}
-      <div class="single-post clearfix">
+      <div id="index-post-{% increment i %}" class="single-post {%if i > 2%} small-post{%endif%} {%if i > 14%} very-small-post{%endif%}">
         <div class="excerpt">
+          <div class="date">{{ post.date | date: "%B %Y" }}</div>
           <div class="title">
             <a href="{{ BASE_PATH }}{{ post.url }}">
               {% if post.titlehtml %}
@@ -19,10 +20,11 @@ category: blog
             </a>
           </div>
 
-          <p class="description">
-            {{ post.description }}
-          </p>
-          <div class="date">Written on {{ post.date | date: "%B %Y" }}</div>
+          {%if i < 3%}
+            <p class="description">
+              {{post.description}}
+            </p>
+          {%endif%}
         </div>
       </div>
     {% endif %}

@@ -199,20 +199,44 @@ blockquote p{
 
 /* BLOG  INDEX */
 #all-posts{
-  margin: auto;
+  margin: 0px auto 10px auto;
   width: 760px;
 }
 
 .single-post{
   border-top: 1px solid #f1f1f1;
+  padding: 40px 0px;
 }
 .single-post:first-child{
   border-top: none !important;
 }
 
+.small-post{
+  padding: 30px 0px;
+}
+.small-post .title{
+  margin-bottom: 0px !important;
+  font-size: 1.4em !important;
+}
+.small-post .date{
+  margin-top: 5px !important;
+  font-size: 0.9em;
+}
+.very-small-post{
+  padding: 20px 0px;
+}
+.very-small-post .title{
+  font-size: 1.1em !important;
+}
+.very-small-post .date{
+  margin-top: 2px !important;
+  font-size: 0.8em;
+}
+
 .single-post .date{
   color: #cdcdcd;
-  margin-top: 20px;
+  margin-top: 10px;
+  float: right;
 }
 .single-post .title{
   font-family: 'Open Sans', sans-serif;
@@ -246,10 +270,7 @@ blockquote p{
   display: none;
 }
 
-.single-post .excerpt{
-  float: right;
-  padding: 40px 0px;
-}
+
 
 
 /* BLOG SHOW */
@@ -310,65 +331,6 @@ blockquote p{
   color: #aaa;
 }
 
-/* NEWSLETTER */
-#newsletter{
-  border-bottom: 1px solid #e6e6e6;
-  padding-bottom: 40px;
-  margin-bottom: 40px;
-}
-
-#newsletter label{
-  display: block;
-  text-align: center;
-}
-
-#news-cta{
-  display: block;
-  margin: 20px auto 0px auto;
-  text-align: center;
-}
-
-#mce-EMAIL{
-  padding: 15px 30px;
-  border: 1px solid #ed5252;
-  width: 300px;
-  font-family: 'Droid Serif', serif;
-  font-size: 14px;
-  border-radius: 5px 0px 0px 5px;
-  border-right: 0px;
-  box-shadow:none;
-  outline: none;
-}
-
-#newsletter em{
-  font-size: 11px;
-  color: #ccc;
-  margin-top: 15px;
-  display: block;
-  text-align: center;
-}
-
-#mc-embedded-subscribe{
-  border: 1px solid #ed5252;
-  background-color: #ed5252;
-  color: #fff;
-  font-size: 14px;
-  font-family: 'Droid Serif', serif;
-  padding: 15px 30px;
-  border-radius: 0px 5px 5px 0px;
-  margin-left: -5px;
-  font-weight: bold;
-}
-
-#mc-embedded-subscribe:hover{
-  background-color: #fff;
-  color: #ed5252;
-  cursor: pointer;
-}
-
-.leave-email{
-  color: #ed5252;
-}
 
 
 /* ABOUT PAGE */
