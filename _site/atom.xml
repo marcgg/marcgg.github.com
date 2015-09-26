@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2015-09-26T17:45:04+02:00</updated>
+ <updated>2015-09-26T20:07:52+02:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -18,7 +18,7 @@
      <link href="http://marcgg.com/blog/2015/08/27/deadlines-estimates-software-startup"/>
      <updated>2015-08-27T00:00:00+02:00</updated>
      <id>http://marcgg.com/blog/2015/08/27/deadlines-estimates-software-startup</id>
-     <content type="html">&lt;p&gt;A lot of developers in startups are against deadlines and estimates. There’s even a whole “&lt;a href=&quot;https://twitter.com/search?q=%23noestimates&amp;amp;src=typd&quot;&gt;#NoEstimate&lt;/a&gt;” movement that appeared recently.&lt;/p&gt;
+     <content type="html">&lt;p&gt;A lot of developers in startups are against deadlines and estimates. There’s even a whole “&lt;a href=&quot;https://twitter.com/search?q=%23noestimates&amp;amp;src=typd&quot;&gt;#NoEstimates&lt;/a&gt;” movement that appeared recently.&lt;/p&gt;
 
 &lt;p&gt;This fact is usually hard to understand for project owners, and it leads to incomprehensions on both sides. Product owners feel like developers don’t want to commit and act unprofessionally, developers feel like management don’t trust them and set unrealistic goals… it’s a mess, and it’s not helpful for the company nor the well being of the employees.&lt;/p&gt;
 
