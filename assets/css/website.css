@@ -525,4 +525,35 @@ blockquote p{
   footer div{
     display: inline;
   }
+
+  /* Hire me responsive */
+  #hire ul{
+    padding-left: 15px;
+  }
+  #talking-img{
+    width: 100%;
+  }
+  #talking-img img{
+    width: 100% !important;
+  }
+  #reviews{
+    border-top: 1px dashed #e6e6e6;
+    padding: 15px 0px 15px 0px;
+  }
+
+  #references_logo{
+    padding: 0px 0px 15px 0px;
+  }
+
+  .review{
+    width: 100%;
+    margin: 0px 0px 15px 0px;
+    padding: 0px;
+    border-bottom: 1px dashed #e6e6e6;
+  }
+  #references_logo img, #references_logo .minor{
+    width: 22%;
+    float: left;
+    margin: 15px 2% 15px 0px;
+  }
 }
