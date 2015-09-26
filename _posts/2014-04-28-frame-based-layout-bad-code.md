@@ -102,9 +102,9 @@ knowledge of *advanced colors in HTML*.
 
 <div style="text-align: center"><img src="/assets/blog/frames/page3.png" /></div>
 
-Finally let's say I want to add an image next to a menu item. Seems complicated, right ?
+Finally let's say I want to add an image next to a menu item. Seems complicated, right?
 
-No. It's easy. Use frames.
+No. It's easy when you use frames!
 
 You only need to change menu.html like this:
 

@@ -7,9 +7,7 @@
     </title>
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
     <meta name="author" content="{{ site.author.name }}">
-
-    <!--[if lt IE 9]> <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-
+    <meta content='user-scalable=no, width=device-width, initial-scale=1.0' name='viewport'>
     <link href='//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,400,700,300' rel='stylesheet' type='text/css'>
     <link href="/assets/css/app.css?body=1" rel="stylesheet" type="text/css" media="all">
@@ -21,29 +19,28 @@
     <header>
 
       <div id="logo">
-        <div id="more-nav">
-          &rarr; <a href="/blog" class="{% if page.category == 'blog'%}selected{% endif %}">blog</a>
-          &rarr; <a href="/photos" class="{% if page.category == 'photos'%}selected{% endif %}">photos</a>
-          &rarr; <a href="/hire" class="{% if page.category == 'hire'%}selected{% endif %}">hire me</a>
-        </div>
         <a id='logo1' href="/">marcgg</a>
         <span id='logo2'>#</span>
         <a id='logo3' href="/{% if page.category != 'about'%}{{page.category}}{% endif %}">
           {{page.category}}
         </a>
       </div>
+      <div id="more-nav">
+        &rarr; <a href="/blog" class="{% if page.category == 'blog'%}selected{% endif %}">blog</a>
+        &rarr; <a href="/photos" class="{% if page.category == 'photos'%}selected{% endif %}">photos</a>
+        &rarr; <a href="/hire" class="{% if page.category == 'hire'%}selected{% endif %}">hire me</a>
+      </div>
     </header>
 
     {{ content }}
 
     <footer>
-      Website powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>, hosted on
+      <div>Website powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>, hosted on
       <a href="https://github.com/marcgg/marcgg.github.com">Github</a>
-      and put together by <a href="http://twitter.com/marcgg">@marcgg</a>
-      <br />
-      All of the <a href="/blog">blog's articles</a> are under
+      and put together by <a href="http://twitter.com/marcgg">@marcgg</a>.</div>
+      <div>All of the <a href="/blog">blog's articles</a> are under
       <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative commons</a> license
-      unless stated otherwise. Everything else is &copy;.
+      unless stated otherwise. Everything else is &copy;.</div>
     </footer>
 
     <script type="text/javascript">

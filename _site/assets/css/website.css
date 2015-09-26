@@ -10,8 +10,6 @@
 
 }
 
-
-
 body{
   font-size: 15px;
   font-family: 'Droid Serif', serif;
@@ -54,15 +52,20 @@ header{
   margin: auto;
   height: 50px;
   border-bottom: 1px solid #f1f1f1;
+  position: relative;
 }
 #more-nav{
-  font-size: 0.6em;
+  font-size: 0.75em;
   display: inline-block;;
-  float: right;
+  position: absolute;
+  top: 0px;
+  font-family: "anonymousregular";
   padding-top: 5px;
+  right: 0px;
 }
 #more-nav a{
   padding: 0px 2px;
+  text-decoration: none;
 }
 #more-nav .selected{
   color: #ed5252;
@@ -148,6 +151,7 @@ h1 em{
 h2{
   font-size: 1.75em;
   margin: 50px 0px 50px 0px;
+  line-height: 1.75em;
 }
 h2::before{
   content: "#";
@@ -197,7 +201,7 @@ blockquote p{
 }
 
 
-/* BLOG  INDEX */
+/* BLOG INDEX */
 #all-posts{
   margin: 0px auto 10px auto;
   width: 760px;
@@ -209,28 +213,6 @@ blockquote p{
 }
 .single-post:first-child{
   border-top: none !important;
-}
-
-.small-post{
-  padding: 30px 0px;
-}
-.small-post .title{
-  margin-bottom: 0px !important;
-  font-size: 1.4em !important;
-}
-.small-post .date{
-  margin-top: 5px !important;
-  font-size: 0.9em;
-}
-.very-small-post{
-  padding: 20px 0px;
-}
-.very-small-post .title{
-  font-size: 1.1em !important;
-}
-.very-small-post .date{
-  margin-top: 2px !important;
-  font-size: 0.8em;
 }
 
 .single-post .date{
@@ -269,9 +251,6 @@ blockquote p{
 .single-post .title em{
   display: none;
 }
-
-
-
 
 /* BLOG SHOW */
 
@@ -332,47 +311,6 @@ blockquote p{
 }
 
 
-
-/* ABOUT PAGE */
-
-#about, #me{
-  margin-top: 60px;
-}
-
-#about{
-  width: 510px;
-}
-
-#links{
-  float: right;
-  width: 200px;
-  text-align: center;
-}
-
-#links a{
-  display: block;
-}
-
-#links img{
-  border-radius: 50%;
-}
-
-.me-wrapper{
-  padding-bottom: 30px;
-  margin-bottom: 30px;
-  border-bottom: 1px solid #e6e6e6;
-}
-
-#design-by{
-  margin-top: 30px;
-  padding-top: 30px;
-  border-top: 1px solid #e6e6e6;
-}
-
-.drivy{
-  color: #e92464;
-}
-
 /* PHOTOS */
 #photos-index{
   width: 1024px;
@@ -417,11 +355,7 @@ blockquote p{
 }
 
 
-
 /* HIRE */
-
-#hire{
-}
 
 #hire ul{
   padding-left: 40px;
@@ -518,4 +452,77 @@ blockquote p{
 
 .cf:after {
     clear: both;
+}
+
+
+/************************ MOBILE LAYOUT *********************/
+@media all and (max-width: 800px) {
+
+  header{
+    width: 94%;
+    padding: 3%;
+    height: 75px;
+    position: relative;
+    text-align: center;
+    background-color: #fafafa;
+  }
+  #more-nav{
+    left: 0px;
+    top: 50px;
+  }
+  #logo{
+    margin-top: 10px;
+  }
+
+  #content, #all-posts{
+    width: 94%;
+    padding: 3%;
+  }
+  .image-wrapper{
+    width: 100%;
+  }
+  .image-wrapper img, .post div img, .post p img{
+    width: 100% !important;
+    padding: 15px 0px !important;
+    margin: 20px 0px 20px 0px !important;
+    border-right: 0px;
+    border-left: 0px;
+  }
+
+  .single-post .title{
+    font-size: 1.4em;
+  }
+  .date{
+    display: none;
+  }
+  h1{
+    font-size: 1.7em;
+    width: 94%;
+    padding: 3%;
+  }
+  h2{
+    font-size: 1.50em;
+    margin: 30px 0px 30px 0px;
+    line-height: 1.75em;
+  }
+
+  h3{
+    font-size: 1.30em;
+  }
+  blockquote{
+    margin: 0px 0px 20px 0px !important;
+  }
+  pre{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    width: 90%;
+    overflow-x: scroll;
+  }
+  code{
+    width: 100%;
+    font-size: 13px !important;
+  }
+  footer div{
+    display: inline;
+  }
 }

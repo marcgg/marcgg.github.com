@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="http://marcgg.com/atom.xml" rel="self"/>
  <link href="http://marcgg.com"/>
- <updated>2015-09-26T15:48:19+02:00</updated>
+ <updated>2015-09-26T17:14:50+02:00</updated>
  <id>http://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -1565,9 +1565,9 @@ knowledge of &lt;em&gt;advanced colors in HTML&lt;/em&gt;.&lt;/p&gt;
 
 &lt;div style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/frames/page3.png&quot; /&gt;&lt;/div&gt;
 
-&lt;p&gt;Finally let’s say I want to add an image next to a menu item. Seems complicated, right ?&lt;/p&gt;
+&lt;p&gt;Finally let’s say I want to add an image next to a menu item. Seems complicated, right?&lt;/p&gt;
 
-&lt;p&gt;No. It’s easy. Use frames.&lt;/p&gt;
+&lt;p&gt;No. It’s easy when you use frames!&lt;/p&gt;
 
 &lt;p&gt;You only need to change menu.html like this:&lt;/p&gt;
 
