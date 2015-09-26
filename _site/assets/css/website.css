@@ -556,4 +556,31 @@ blockquote p{
     float: left;
     margin: 15px 2% 15px 0px;
   }
+
+  /* Photos */
+  #photos-index{
+    width: 94%;
+    margin: 20px 3% 20px 3%;
+  }
+  #photos-index .photo{
+    width: 100%;
+    display: block;
+    margin: 0px;
+  }
+  #photos-index .photo a{
+    width: 100%;
+  }
+  #photos-index img{
+    width: 100%;
+  }
+  #photos-index .photo span{
+    color: #fff;
+  }
+  #photo-content{
+    width: 94%;
+    margin: 20px 3% 20px 3%;
+  }
+  #photo-content img{
+    width: 100%;
+  }
 }
