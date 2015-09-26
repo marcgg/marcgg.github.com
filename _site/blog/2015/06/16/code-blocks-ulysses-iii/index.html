@@ -130,22 +130,18 @@
 
       </div>
 
-      <style id="disqus_hide">
-        #disqus_thread{
-          display: none;
-        }
-      </style>
-      <p>
-        <a href="#" id="show-disqus">Show Comments</a>
-      </p>
-      <div id="disqus_thread"></div>
-      <script>
-        document.getElementById('show-disqus').onclick=function(e){
-          e.preventDefault();
-          document.getElementById("disqus_hide").innerHTML = "";
-          document.getElementById("show-disqus").innerHTML = "";
-        }
-      </script>
+      <div id="comments">
+        <style id="disqus_hide">
+          #disqus_thread{
+            display: none;
+          }
+        </style>
+        <p>
+          <span id="show-disqus-arrow">&rarr; </span>
+          <a href="#" id="show-disqus">Read the comments or contribute with your own</a>
+        </p>
+        <div id="disqus_thread"></div>
+      </div>
       <script type="text/javascript">
           var disqus_shortname = 'marcgg';
           (function() {
@@ -183,5 +179,7 @@
       })();
 
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/assets/js/comments.js"></script>
   </body>
 </html>

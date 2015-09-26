@@ -443,6 +443,16 @@ blockquote p{
   font-size: 13px;
 }
 
+/* Comments */
+
+#comments{
+  padding-top: 20px;
+}
+
+#show-disqus-arrow{
+  color: #ed5252;
+}
+
 /* CLEARFIX */
 .cf:before,
 .cf:after {
@@ -584,4 +594,5 @@ blockquote p{
   #photo-content img{
     width: 100%;
   }
+
 }
