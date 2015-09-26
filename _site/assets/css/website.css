@@ -575,6 +575,7 @@ blockquote p{
   }
   #photos-index .photo span{
     color: #fff;
+    width: 100%;
   }
   #photo-content{
     width: 94%;
