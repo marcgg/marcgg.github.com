@@ -1,2 +1,7 @@
+Sitemap: https://www.marcgg.com/sitemap.xml
+
 User-agent: *
-Allow: /
+Disallow: /photos/
+Disallow: /assets/css/
+Disallow: /assets/js/
+Disallow: /assets/fonts/
