@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started With Elixir Processes
-description: Here are some very simple examples tu better understand how to spawn and manipulate processes using Elixir.
+description: Here are some very simple examples to better understand how to spawn and manipulate processes using Elixir.
 blog: true
 category: blog
 tag: Elixir
@@ -18,7 +18,7 @@ Hope it helps!
 If you're getting into [Elixir][3], knowing about processes is crucial. There's no way around it, it's a concept you have to know to get better and use the langage properly.
 
 > "Processes are not only the basis for concurrency in Elixir, but they also provide the means for building distributed and fault-tolerant programs."
-> 
+>
 > [Elixir Documentation][4]
 
 Note that Elixir should not be confused with operating system processes. Again, quoting the documentation:
