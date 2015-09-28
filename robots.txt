@@ -2,6 +2,3 @@ Sitemap: https://www.marcgg.com/sitemap.xml
 
 User-agent: *
 Disallow: /photos/
-Disallow: /assets/css/
-Disallow: /assets/js/
-Disallow: /assets/fonts/
