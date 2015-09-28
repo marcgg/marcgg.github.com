@@ -1,4 +1,4 @@
-Sitemap: https://www.marcgg.com/sitemap.xml
+Sitemap: https://marcgg.com/sitemap.xml
 
 User-agent: *
 Disallow: /photos/
