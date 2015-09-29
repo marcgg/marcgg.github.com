@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Reasons Other Than Time To Automate Repetitive Tasks
+title: Don't Automate Tasks Only Because Of Time
 description: Stop looking only as time as a metric to know when to automate. There are other factors such as focus, energy and frustration to take into account.
 blog: true
 category: blog
