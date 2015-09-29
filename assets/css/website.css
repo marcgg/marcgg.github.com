@@ -492,7 +492,7 @@ blockquote p{
     width: 100%;
   }
   .image-wrapper img, .post div img, .post p img{
-    width: 100% !important;
+    max-width: 100% !important;
     padding: 15px 0px !important;
     margin: 20px 0px 20px 0px !important;
     border-right: 0px;
