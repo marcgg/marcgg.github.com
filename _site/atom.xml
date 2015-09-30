@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2015-09-29T21:13:18+02:00</updated>
+ <updated>2015-09-30T09:34:42+02:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -14,54 +14,56 @@
  
   
    <entry>
-     <title>Don't Automate Tasks Only Because Of Time</title>
+     <title>Don't Automate Tasks Only Based On Time</title>
      <link href="https://marcgg.com/blog/2015/09/30/automate-repetitive-tasks"/>
      <updated>2015-09-30T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2015/09/30/automate-repetitive-tasks</id>
-     <content type="html">&lt;p&gt;When it comes to automating repetitive tasks, there seem to be two schools of thought. Either it’s a good thing or it’s overkill.&lt;/p&gt;
+     <content type="html">&lt;p&gt;When it comes to automating repetitive tasks done on a computer, there seem to be two schools of thought.&lt;/p&gt;
 
-&lt;h2 id=&quot;schools-of-thought-regarding-automation&quot;&gt;Schools Of Thought Regarding Automation&lt;/h2&gt;
+&lt;h2 id=&quot;views-on-automation&quot;&gt;Views On Automation&lt;/h2&gt;
 
-&lt;p&gt;The first one is that only fools would spend their time doing these manually and not write a script. In this scenario, the developer “wins” while the poor commoner “loses”. Hm.&lt;/p&gt;
+&lt;p&gt;The first view is that only fools would spend their time doing these repetitive tasks manually and not write a script. In this scenario, the developer “wins” while the poor commoner “loses”. Hm.&lt;/p&gt;
 
 &lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/automation-win.png&quot; alt=&quot;Automating daily tasks as a success&quot; style=&quot;padding: 20px; width: 420px;&quot; /&gt;&lt;/div&gt;
 
-&lt;p&gt;The second one is that the developer is wasting their time because automating the task is often more complex than it seems, and it would have been simpler and more efficient to just do it manually. These nerds can’t just keep their heads down and do simple tasks, they have to overcomplicate everything! Hm.&lt;/p&gt;
+&lt;p&gt;The second view is that developers are wasting their time since automating a task is often more complex than it seems. It would be simpler and more efficient to just suck it up and do it manually. These nerds can’t just keep their heads down and do simple tasks, they have to overcomplicate everything! Hm.&lt;/p&gt;
 
 &lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/automation.png&quot; alt=&quot;Automating tasks overkill&quot; style=&quot;padding: 20px; width: 420px;&quot; /&gt;&lt;em&gt;via &lt;a href=&quot;https://xkcd.com/1319/&quot;&gt;xkcd&lt;/a&gt;&lt;/em&gt;&lt;/div&gt;
 
-&lt;p&gt;Personnaly, I think that the following graph by &lt;a href=&quot;http://blog.jonudell.net/2012/01/09/another-way-to-think-about-geeks-and-repetitive-tasks/&quot;&gt;Jon Udell&lt;/a&gt; is closer to a real life and effective way of thinking of the link between automation and time. Of course it’s also less funny than the xkcd one but that’s fine.&lt;/p&gt;
+&lt;p&gt;Personally, I think that the following graph by &lt;a href=&quot;http://blog.jonudell.net/2012/01/09/another-way-to-think-about-geeks-and-repetitive-tasks/&quot;&gt;Jon Udell&lt;/a&gt; is closer to a real life and effective way of thinking of the link between automation and time. Of course it’s also less funny than the xkcd one but that’s fine.&lt;/p&gt;
 
 &lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/automation-real-win.png&quot; alt=&quot;Agility and iterating on automating tasks&quot; style=&quot;padding: 20px; width: 420px;&quot; /&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;the-missing-factors&quot;&gt;The Missing Factors&lt;/h2&gt;
 
-&lt;p&gt;The thing is, we’re missing important factors when talking about deciding the value of automation. In these kind of graphs or comparaisons we’re mostly wondering if automating will make us gain time, when really time is just one factor in a complex equation.&lt;/p&gt;
+&lt;p&gt;The thing is that we’re missing important factors when talking about deciding if automating a task is worth it or not. In these kind of graphs or comparaisons we’re mostly wondering if automating will make us gain time, when in reality time is just one factor in a complex equation.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Let’s take an example&lt;/strong&gt; and say that every day I need to manually write down 10 numbers in a spreadsheet. Doing this will take me 1 minute, and automating it would take approximatively 10 hours.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Let’s take an example&lt;/strong&gt; and say that every day I need to manually write down 10 numbers in a spreadsheet. Doing this will take me 1 minute, and automating it should take approximatively 10 hours.&lt;/p&gt;
 
-&lt;p&gt;If we only base our logic on time and I trust my&lt;a href=&quot;(/blog/2015/08/27/deadlines-estimates-software-startup/)&quot;&gt;estimate&lt;/a&gt; of 10 hours, it should become interesting to automate after &lt;em&gt;600 working days&lt;/em&gt;. That’s a long time. We should probably not do it, right?&lt;/p&gt;
+&lt;p&gt;If we only base our logic on time and I trust my&lt;a href=&quot;(/blog/2015/08/27/deadlines-estimates-software-startup/)&quot;&gt;estimate&lt;/a&gt; of 10 hours, it should become interesting to automate if I end up doing the task for more than &lt;em&gt;600 working days&lt;/em&gt;. That’s such a long time that it feels like there won’t be a discussion about it unless I spend at least a year doing it manually.&lt;/p&gt;
+
+&lt;p&gt;However that would be ignoring the other factors.&lt;/p&gt;
 
 &lt;h3 id=&quot;energy&quot;&gt;Energy&lt;/h3&gt;
 
-&lt;p&gt;When doing a repetitive task, you’re not only spending time, but also energy. A task can be short, but it can be exhausting mentally. If every time I write down the numbers I have to be cautious not to make mistakes, it might takes a lot of my concentration and drain energy.&lt;/p&gt;
+&lt;p&gt;When doing a repetitive task, you’re not only spending time, but also energy. A task can be short, but it can be exhausting mentally. If every time I write down the numbers in my spreadsheet I have to be cautious to avoid making mistakes, it might take a lot of concentration and drain my energy.&lt;/p&gt;
 
-&lt;p&gt;Once the task is done, I might not be able to go back to the exact thing I’d want to be doing and pick something easier just to do something simpler for a bit.&lt;/p&gt;
+&lt;p&gt;Once the task is done, I might not be able to go back to the exact thing I’d want to be doing and pick something easier instead.&lt;/p&gt;
 
 &lt;h3 id=&quot;frustration&quot;&gt;Frustration&lt;/h3&gt;
 
-&lt;p&gt;In the meantime you’re also building frustration. In the long run this can be a problem.&lt;/p&gt;
+&lt;p&gt;Doing repetitive tasks is rarely fun. Because of this, you’re probably building frustration while working on them. In the long run this can be a problem.&lt;/p&gt;
 
-&lt;p&gt;However, I also need to think about doing it, do it on time and do it right. Once I’ve done it a few dozens of times, it starts getting annoying. After hundreds of times, it seems like a complete waste of time and I might even get mad at the very idea of having to do that.&lt;/p&gt;
+&lt;p&gt;Once I’ve done the task a few dozens of times, it starts getting annoying. After hundreds of times, it seems like a complete waste of time and I might even get mad at the very idea of having to do it. Of course it will depend on different people, but I tried to sum up the idea in this graph:&lt;/p&gt;
 
 &lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/frustration-productivity-automation.png&quot; style=&quot;padding: 20px; width: 420px;&quot; alt=&quot;Relation between automating tasks and frustration&quot; /&gt;&lt;em&gt;Note how the time spent each day increases once the productivy starts to decrease.
 &lt;/em&gt;&lt;/div&gt;
 
-&lt;p&gt;Adding too many repetitive tasks that are not worth automating and you could end up with an hire turnover, a toxic atmosphere or some very low productivity number.&lt;/p&gt;
+&lt;p&gt;Adding too many repetitive tasks that are not worth automating and you could end up with a higher turnover, a toxic atmosphere or some very low productivity number.&lt;/p&gt;
 
 &lt;h3 id=&quot;focus&quot;&gt;Focus&lt;/h3&gt;
 
-&lt;p&gt;Every day I would need to do this one task. I also probably have a few others tasks just like this. To be able to complete them on time, I might have to stop what I’m doing at some point and shift my focus to this repetitive task. Even if the task itself takes 1 minute, the context switching will cost way more.&lt;/p&gt;
+&lt;p&gt;Every day I need to do this one task. I also probably have a few others tasks just like this. To be able to complete them on time, I might have to stop what I’m doing at some point and shift my focus to this repetitive task. Even if the task itself takes 1 minute, the context switching will cost way more.&lt;/p&gt;
 
 &lt;h3 id=&quot;growth&quot;&gt;Growth&lt;/h3&gt;
 
@@ -71,9 +73,9 @@
 
 &lt;h2 id=&quot;when-to-automate&quot;&gt;When To Automate&lt;/h2&gt;
 
-&lt;p&gt;As we saw, these three factors all have an impact on productivity and long term. Focus and energy have a short term effect, when frustration starts to show on a more medium to long term scale.&lt;/p&gt;
+&lt;p&gt;As we saw, all these factors have an impact on productivity and long term. Focus and energy have a short term effect, when frustration starts to show on a more medium to long term scale.&lt;/p&gt;
 
-&lt;p&gt;Overall it is very hard to know what’s the optimal time to automate. Do it too soon, you might waste time, do it too late and you’ll get the same problem. However, I feel like it’s more efficient when you don’t only take time into account when deciding what action to take.&lt;/p&gt;
+&lt;p&gt;Overall it is very hard to know when the optimal time to automate is. Do it too soon, you will waste time, do it too late and you’ll get the same problem. However, I feel like it’s more efficient to take a decision about this when you don’t only take time into account.&lt;/p&gt;
 
 </content>
    </entry>
