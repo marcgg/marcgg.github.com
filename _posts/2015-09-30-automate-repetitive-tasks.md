@@ -29,7 +29,7 @@ The thing is that we're missing important factors when talking about deciding if
 
 __Let's take an example__ and say that every day I need to manually write down 10 numbers in a spreadsheet. Doing this will take me 1 minute, and automating it should take approximatively 10 hours.
 
-If we only base our logic on time and I trust my[estimate][2] of 10 hours, it should become interesting to automate if I end up doing the task for more than *600 working days*. That's such a long time that it feels like there won't be a discussion about it unless I spend at least a year doing it manually.
+If we only base our logic on time and I trust my [estimate][2] of 10 hours, it should become interesting to automate if I end up doing the task for more than *600 working days*. That's such a long time that it feels like there won't be a discussion about it unless I spend at least a year doing it manually.
 
 However that would be ignoring the other factors.
 

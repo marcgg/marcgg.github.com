@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2015-09-30T09:36:23+02:00</updated>
+ <updated>2015-09-30T10:08:23+02:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -40,7 +40,7 @@
 
 &lt;p&gt;&lt;strong&gt;Let’s take an example&lt;/strong&gt; and say that every day I need to manually write down 10 numbers in a spreadsheet. Doing this will take me 1 minute, and automating it should take approximatively 10 hours.&lt;/p&gt;
 
-&lt;p&gt;If we only base our logic on time and I trust my&lt;a href=&quot;(/blog/2015/08/27/deadlines-estimates-software-startup/)&quot;&gt;estimate&lt;/a&gt; of 10 hours, it should become interesting to automate if I end up doing the task for more than &lt;em&gt;600 working days&lt;/em&gt;. That’s such a long time that it feels like there won’t be a discussion about it unless I spend at least a year doing it manually.&lt;/p&gt;
+&lt;p&gt;If we only base our logic on time and I trust my &lt;a href=&quot;(/blog/2015/08/27/deadlines-estimates-software-startup/)&quot;&gt;estimate&lt;/a&gt; of 10 hours, it should become interesting to automate if I end up doing the task for more than &lt;em&gt;600 working days&lt;/em&gt;. That’s such a long time that it feels like there won’t be a discussion about it unless I spend at least a year doing it manually.&lt;/p&gt;
 
 &lt;p&gt;However that would be ignoring the other factors.&lt;/p&gt;
 
