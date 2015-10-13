@@ -4,13 +4,17 @@ layout: default
 
 <h1>
   <span>
-  {% if page.titlehtml %}
-    {{ page.titlehtml }}
-  {% else %}
-    {{ page.title }}
-  {% endif %}
+    {% if page.titlehtml %}
+      {{ page.titlehtml }}
+    {% else %}
+      {{ page.title }}
+    {% endif %}
+    {% if page.tag == "book" %}
+      <br><em>Book review </em>
+    {% endif %}
   </span>
 </h1>
+
 
 <div class="published">
   <span>{{ page.date | date_to_long_string }}</span>
@@ -19,6 +23,19 @@ layout: default
 <div id="container">
   <div id="content">
     <div class="post" id="post-{{page.cssscope}}">
+
+      {% if page.tag == "book" %}
+        <div id="book-review" class="clearfix">
+          <a href="{{page.booklink}}" target="_blank">
+            <img src="/assets/books/{{page.bookimg}}" alt="{{page.title}} book cover" />
+          </a>
+          This post is part of a series of book reviews. This is meant as a way to
+          quickly share my opinion on my what I've been reading and not as a general
+          analysis of the book.
+          If {{page.title}} feels like something you'd like to read,
+          <a href="{{page.booklink}}" target="_blank">you can grab a copy here</a>.
+        </div>
+      {% endif %}
       {{ content }}
 
       <div id="more">
@@ -38,15 +55,17 @@ layout: default
             <ul>
               {{ res }}
             </ul>
-            <p>
-              ... or <a href="/blog">some other article</a> from my blog.
-              Oh and I also take <a href="/photos">pictures</a>!
-            </p>
           {% else %}
           <p>
             If you liked this, feel free to <a href="/blog">browse other articles on my blog</a>.
           </p>
           {% endif %}
+          <p>
+            {% if page.tag == "book" %}
+              Get the book:
+              <a href="{{page.booklink}}" target="_blank">{{ page.title }}</a>
+            {% endif %}
+          </p>
         </div>
         <a href="https://twitter.com/marcgg" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @marcgg</a>
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>

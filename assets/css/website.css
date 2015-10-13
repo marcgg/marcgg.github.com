@@ -310,6 +310,25 @@ blockquote p{
   color: #aaa;
 }
 
+.twitter-tweet{
+  margin: auto;
+  max-width: 420px !important;
+}
+
+#book-review{
+  border: 1px dashed #dedede;
+  padding: 20px;
+  margin-bottom: 20px;
+  opacity: 0.7;
+  font-style: italic;
+}
+#book-review img{
+  width: 60px;
+  float: left;
+  margin: 0px 20px 0px 0px !important;
+  border: 0px !important;
+  padding: 0px !important;
+}
 
 /* PHOTOS */
 #photos-index{
