@@ -1,7 +1,7 @@
 ---
 layout: post
 title: '"Work Rules" by Laszlo Bock'
-description: Quick book review of the book about Google's approach to human ressources, from my point of view of developer working for a startup and involved in the recruitment process.
+description: Quick book review of the book about Google's approach to human ressources, from my point of view of developer working fora a startup and involved in the recruitment process.
 blog: true
 category: blog
 tag: book
@@ -13,7 +13,7 @@ This book is a must have for anyone interested in recruitment, human ressources 
 
 I personally enjoyed the overall experience of reading this book. However, some chapters were way better than others. For instance, the one about recruiting was one of the most insightful piece on the subject I read since [Joel Spolsky][2]'s [Guerilla Guide to Interviewing][3]. It was surprisingly open on the findings of Google as well as the mistakes they made.
 
-Chapters about Google's approach to data in HR were very interesting as well, even if they were not as actionnable for my situation since I'm part of a smaller company. It's great to get an insider's view of how a successful company iterates on their processes while learning from their mistakes.
+Chapters about Google's approach to data in HR were very interesting as well, even if they were not as actionable for my situation since I'm part of a smaller company. It's great to get an insider's view of how a successful company iterates on their processes while learning from their mistakes.
 
 <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">&quot;Work rules for mass empowerment&quot; <a href="http://t.co/WfU0PkdT4r">pic.twitter.com/WfU0PkdT4r</a></p>&mdash; Marc G Gauthier (@marcgg) <a href="https://twitter.com/marcgg/status/643077064887803904">September 13, 2015</a></blockquote>
 
