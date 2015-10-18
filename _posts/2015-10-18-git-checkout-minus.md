@@ -32,11 +32,11 @@ Now with an example:
 	$ git checkout "@{-2}"
 	Switched to branch 'first'
 
-And finally, let's look at this with a schema simply because I love adding schemas when [writing about Git][2]:
+... and let's add a schema to make it even clearer:
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git-checkout-previous.jpg" alt="Git checkout previous schema" style="padding: 20px; width: 420px;"/></div>
 
-It's a nice feature, but it's also bit hard to remember and requires a lot of keystrokes. Thanksfully, [since Git 1.6.2][3] there is a shorthand:
+It's a nice feature, but it's also bit hard to remember and requires a lot of keystrokes. Thanksfully, [since Git 1.6.2][2] there is a shorthand:
 
 	$ git checkout -
 
@@ -47,5 +47,4 @@ As a quick note, if you're into command line aliases, I use this one and it's pr
 	alias g-='git checkout -'
 
 [1]:	https://git-scm.com/docs/git-checkout
-[2]:	/blog/2015/08/04/git-first-parent-log/
-[3]:	https://github.com/git/git/blob/master/Documentation/RelNotes/1.6.2.txt#L85
+[2]:	https://github.com/git/git/blob/master/Documentation/RelNotes/1.6.2.txt#L85

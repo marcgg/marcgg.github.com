@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2015-10-18T17:25:23+02:00</updated>
+ <updated>2015-10-18T17:55:58+02:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -88,7 +88,7 @@ Switched to branch &#39;first&#39;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;And finally, let’s look at this with a schema simply because I love adding schemas when &lt;a href=&quot;/blog/2015/08/04/git-first-parent-log/&quot;&gt;writing about Git&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;… and let’s add a schema to make it even clearer:&lt;/p&gt;
 
 &lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/git-checkout-previous.jpg&quot; alt=&quot;Git checkout previous schema&quot; style=&quot;padding: 20px; width: 420px;&quot; /&gt;&lt;/div&gt;
 
