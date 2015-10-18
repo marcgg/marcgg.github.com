@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2015-10-18T17:22:40+02:00</updated>
+ <updated>2015-10-18T17:25:23+02:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -449,7 +449,7 @@ Switched to branch &#39;first&#39;
 
 &lt;p&gt;If you want to keep reading about deadlines, I find the article by &lt;a href=&quot;https://twitter.com/michaelochurch&quot;&gt;Michael O. Church&lt;/a&gt;, &lt;a href=&quot;https://michaelochurch.wordpress.com/2014/06/20/on-programmers-deadlines-and-agile/&quot;&gt;On programmers, deadlines, and “Agile”&lt;/a&gt;, very interesting even if I don’t agree with all of it.&lt;/p&gt;
 
-&lt;p&gt;I would also recommend reading &lt;a href=&quot;http://www.amazon.fr/The-Clean-Coder-Professional-Programmers/dp/0137081073&quot;&gt;The Clean Coder: A Code of Conduct for Professional Programmers&lt;/a&gt; by &lt;a href=&quot;https://twitter.com/unclebobmartin&quot;&gt;Robert C. Martin&lt;/a&gt;. It really is a great book and it goes into more details regarding the relation developers should have with deadlines and estimates. I was very inspired by the dialogues in this book when writing the dialogues in this article.&lt;/p&gt;
+&lt;p&gt;I would also recommend reading &lt;a href=&quot;/blog/2015/10/19/book-review-clean-coder/&quot;&gt;The Clean Coder: A Code of Conduct for Professional Programmers&lt;/a&gt; by &lt;a href=&quot;https://twitter.com/unclebobmartin&quot;&gt;Robert C. Martin&lt;/a&gt;. It really is a great book and it goes into more details regarding the relation developers should have with deadlines and estimates. I was very inspired by the dialogues in this book when writing the ones in this article.&lt;/p&gt;
 
 &lt;p&gt;Finally, I encourage you to read &lt;a href=&quot;%5Bhttps://pragprog.com/magazines/2013-04/estimation%5D&quot;&gt;“Estimation - The Best We Can Do”&lt;/a&gt; by Jon Jeffries where he discusses the way estimates can be done in the context of agile teams. I don’t like the concept of velocity, but some points are worth reading.&lt;/p&gt;
 

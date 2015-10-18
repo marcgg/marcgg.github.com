@@ -1,7 +1,7 @@
 ---
 layout: post
 title: '"The Clean Coder" by Robert C. Martin'
-description: yos.
+description: Quick review of this book about what it means to be a programmer. It dives into everything ranging from ethics, to commitment to craftsmanship and is a great read for any experienced developer.
 blog: true
 category: blog
 tag: book
