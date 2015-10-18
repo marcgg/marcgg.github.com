@@ -4,13 +4,75 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2015-10-18T15:07:26+02:00</updated>
+ <updated>2015-10-18T16:19:12+02:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
    <email>marcg.gauthier@gmail.com</email>
  </author>
 
+ 
+  
+   <entry>
+     <title>Checkout The Previous Branch In Git</title>
+     <link href="https://marcgg.com/blog/2015/10/18/git-checkout-minus"/>
+     <updated>2015-10-18T00:00:00+02:00</updated>
+     <id>https://marcgg.com/blog/2015/10/18/git-checkout-minus</id>
+     <content type="html">
+       &lt;p&gt;&lt;strong&gt;tl;dr: Use &lt;code class=&quot;highlighter-rouge&quot;&gt;git checkout -&lt;/code&gt; to move back to the previous branch.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;When using Git, it’s very common to move back and forth between two branches. To do this, you can of course type the whole checkout command with the branch name and everything. It works but feels a bit excessive just to move back one branch. Well, just like Unix has &lt;code class=&quot;highlighter-rouge&quot;&gt;cd -&lt;/code&gt;, Git has:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git checkout @{-1}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This will move you back to the branch you were on previously. The syntax looks a bit esoteric, so let’s take a look at the &lt;code class=&quot;highlighter-rouge&quot;&gt;git checkout&lt;/code&gt; documentation to understand it better:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;As a special case, the “@{-N}” syntax for the N-th last branch/commit checks out branches (instead of detaching).&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;https://git-scm.com/docs/git-checkout&quot;&gt;Git Documentation&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Now with an example:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git checkout master
+Switched to branch &#39;master&#39;
+$ git checkout -b first
+Switched to a new branch &#39;first&#39;
+$ git checkout -b second
+Switched to a new branch &#39;second&#39;
+$ git checkout -b third
+Switched to a new branch &#39;third&#39;
+$ git checkout &quot;@{-2}&quot;
+Switched to branch &#39;first&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;And finally, let’s look at this with a schema simply because I love adding schemas when &lt;a href=&quot;/blog/2015/08/04/git-first-parent-log/&quot;&gt;writing about Git&lt;/a&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/git-checkout-previous.jpg&quot; alt=&quot;Git checkout previous schema&quot; style=&quot;padding: 20px; width: 420px;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;It’s a nice feature, but it’s also bit hard to remember and requires a lot of keystrokes. Thanksfully, &lt;a href=&quot;https://github.com/git/git/blob/master/Documentation/RelNotes/1.6.2.txt#L85&quot;&gt;since Git 1.6.2&lt;/a&gt; there is a shorthand:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git checkout -
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If you know your Unix commands, you should feel right at home with this one!&lt;/p&gt;
+
+&lt;p&gt;As a quick note, if you’re into command line aliases, I use this one and it’s pretty rad:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;alias g-=&#39;git checkout -&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+       
+     </content>
+   </entry>
+  
  
   
    <entry>
