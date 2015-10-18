@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>
-      Game of Life Visualisations
+      "The Clean Coder" by Robert C. Martin
     </title>
-    <meta name="description" content="I was stuck in a plane so I started fiddling with my alternative version of Conway's Game of Life. I kind of liked the way the board looked after a while, so I decided to share.">
+    <meta name="description" content="yos.">
     <meta name="author" content="Marc G Gauthier">
     <meta content='user-scalable=no, width=device-width, initial-scale=1.0' name='viewport'>
     <meta name="google-site-verification" content="x2EpQdOMz-k9fP8hak9I3COaXhnQ4jNLp2GU4GYQ8jM" />
@@ -36,15 +36,17 @@
     <h1>
   <span>
     
-      Game of Life Visualisations
+      "The Clean Coder" by Robert C. Martin
     
+    
+      <br><em>Book review </em>
     
   </span>
 </h1>
 
 
 <div class="published">
-  <span>01 July 2015</span>
+  <span>19 October 2015</span>
 </div>
 
 <div id="container">
@@ -52,57 +54,36 @@
     <div class="post" id="post-">
 
       
-      <p>A few days ago I was on a plane for 6 hours and we only had a shared TV screen playing terrible sitcoms and movies. What do you do in this situation? Code some weird version of <a href="https://en.wikipedia.org/wiki/Conway's_Game_of_Life">Conway’s Game of Life</a> of course!</p>
+        <div id="book-review" class="clearfix">
+          <a href="http://www.amazon.fr/gp/product/0137081073/ref=as li tl?ie=UTF8&camp=1642&creative=6746&creativeASIN=0137081073&linkCode=as2&tag=mg092-21" target="_blank">
+            <img src="/assets/books/clean-coder-book-cover.jpg" alt=""The Clean Coder" by Robert C. Martin book cover" />
+          </a>
+          This post is part of a series of book reviews and is meant as a way to
+          quickly share my opinion on what I've been reading, not as a general
+          analysis of the book.
+          If "The Clean Coder" by Robert C. Martin feels like something you'd like to read,
+          <a href="http://www.amazon.fr/gp/product/0137081073/ref=as li tl?ie=UTF8&camp=1642&creative=6746&creativeASIN=0137081073&linkCode=as2&tag=mg092-21" target="_blank">you can grab a copy here</a>.
+        </div>
+      
+      <p>Everybody knows <a href="https://en.wikipedia.org/wiki/Robert_Cecil_Martin">Robert C. Martin</a> aka <a href="https://twitter.com/unclebobmartin">Uncle Bob</a> for his great and influencial book <a href="http://www.amazon.fr/gp/product/0132350882/ref=as_li_tl?ie=UTF8&amp;camp=1642&amp;creative=6746&amp;creativeASIN=0132350882&amp;linkCode=as2&amp;tag=mg092-21">Clean Code</a>, but I feel not enough people know about the followup title “Clean code: a handbook of agile software craftsmanship”.</p>
 
-<h2 id="the-game">The Game</h2>
+<p>I picked up this book because I was trusting its author’s point of view on software development… and I wasn’t disapointed! It is fair to say it changed my view on what is required in terms of commitments and work ethics to consider myself a professional software developer. For instance, a section of the book inspired me greatly to write the article <a href="/blog/2015/08/27/deadlines-estimates-software-startup/">Deadlines and Estimates in Startups</a>.</p>
 
-<h3 id="rules">Rules</h3>
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Commitment vs Estimate <a href="http://t.co/kshSzalQyh">pic.twitter.com/kshSzalQyh</a></p>&mdash; Marc G Gauthier (@marcgg) <a href="https://twitter.com/marcgg/status/592345433428594688">April 26, 2015</a></blockquote>
 
-<p>I didn’t follow the usual rules and instead decided to go with these:</p>
+<p>In this book, Robert C. Martin gives us his view on what it means to be considered a professional through a LOT of examples, both real and fictionnal, that are all very insightful and entertaining to read. The author goes in depth to show us all the branching paths of a discussion and the possible consequences of any choice of word or decision. He also discuss how to handle pressure, improve collaboration or managing your time.</p>
 
-<ul>
-  <li>The board is randomly and entirely filled with “cells” on boot, representing the life forms</li>
-  <li>Each cell have a given number of health points</li>
-  <li>Each cell is part of a team</li>
-  <li>Each cell will attack its neighbours if they are in another team</li>
-  <li>Each cell will heal its neighbours if they are in the same team</li>
-  <li>You can’t heal more than the maximum number of health points</li>
-  <li>Once a cell reaches 0 life, it gets replaced by a new cell of the attacker’s team</li>
-  <li>Each team has given attack, health and healing stats</li>
-  <li>The board has a set height and width</li>
-</ul>
+<p>Just for these chapters I feel like this book is worth reading.</p>
 
-<p>For instance a Cell will have 100 health points, 10 attack, 2 healing and is part of team A. Meaning that any cell of team A next to it will be healed of 2 health points, and cell of team B next to it will loose 10 health points.</p>
+<p>The book also mentions other aspect of being a developer, such as craftmanship, testing and more. These chapters were a nice read as well, but by the time I got to this book I already read tons of other material on the subject such as “<a href="http://www.amazon.fr/gp/product/020161622X/ref=as_li_tl?ie=UTF8&amp;camp=1642&amp;creative=6746&amp;creativeASIN=020161622X&amp;linkCode=as2&amp;tag=mg092-21">The Pragmatic Programmer: From Journeyman to Master</a>” by Andrew Hunt &amp; David Thomas, and I found myself thinking “well yeah, obviously” more than once. If you’re not familiar with it, you’ll learn a lot, otherwise it doesn’t bring anything radically different.</p>
 
-<h3 id="visualisation">Visualisation</h3>
+<p>Finally, I loved how the book sometimes went on somewhat philosophical tangents, such as this one:</p>
 
-<p>As for visualisation, I didn’t have internet so I just sticked with what I had: my terminal. The display choices were:</p>
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Humility <a href="http://t.co/aSkYaOyE6l">pic.twitter.com/aSkYaOyE6l</a></p>&mdash; Marc G Gauthier (@marcgg) <a href="https://twitter.com/marcgg/status/655760049122451456">October 18, 2015</a></blockquote>
 
-<ul>
-  <li>Each team has a given color</li>
-  <li>If a cell life’s is low, the color is lighter</li>
-  <li>If a cell health goes below 10%, it goes black to show very contested zones</li>
-</ul>
+<p>Overall, I’d say that it is an amazing book to pick up if you’ve been developing profesionnaly for a few years. It might be a gross generalization, but it feels like junior developers would not gain as much from it as it goes pretty deep in work ethics and situations you might not encounter in your first years writing software.</p>
 
-<p>It took me a couple of hours to complete, and I find the result quite enjoyable to watch. The terminal colors gives the board a kind of Atari 2600 feel.</p>
-
-<h2 id="end-result">End Result</h2>
-
-<h3 id="everyone-has-the-same-stats">Everyone Has The Same Stats</h3>
-
-<p>When life, attack and healing stats are the same across teams, they usually quickly reach a stalemate. Sometimes, depending on how the board started a color might have some advantage. Because of the healing rule, we see highly contested borders, but no clear movement or winner.</p>
-
-<div class="image-wrapper" style="text-align: center"><img src="/assets/misc/life/life_game.gif" style="width: 400px;" /></div>
-
-<h3 id="stats-are-random">Stats Are Random</h3>
-
-<p>When stats are random, it ends up creating weird looking results after a few dozens frames. Here are these results:</p>
-
-<div class="image-wrapper" style="text-align: center"><img src="/assets/misc/life/1.jpg" style="width: 150px;" /><img src="/assets/misc/life/2.jpg" style="width: 150px;" /><img src="/assets/misc/life/3.jpg" style="width: 150px;" /><img src="/assets/misc/life/4.jpg" style="width: 150px;" /><img src="/assets/misc/life/5.jpg" style="width: 150px;" /><img src="/assets/misc/life/6.jpg" style="width: 150px;" /><img src="/assets/misc/life/7.jpg" style="width: 150px;" /><img src="/assets/misc/life/8.jpg" style="width: 150px;" /><img src="/assets/misc/life/9.jpg" style="width: 150px;" /><img src="/assets/misc/life/10.jpg" style="width: 150px;" /><img src="/assets/misc/life/11.jpg" style="width: 150px;" /><img src="/assets/misc/life/12.jpg" style="width: 150px;" /><img src="/assets/misc/life/13.jpg" style="width: 150px;" /><img src="/assets/misc/life/14.jpg" style="width: 150px;" /><img src="/assets/misc/life/15.jpg" style="width: 150px;" /><img src="/assets/misc/life/16.jpg" style="width: 150px;" /><img src="/assets/misc/life/17.jpg" style="width: 150px;" /><img src="/assets/misc/life/18.jpg" style="width: 150px;" /><img src="/assets/misc/life/19.jpg" style="width: 150px;" /><img src="/assets/misc/life/20.jpg" style="width: 150px;" /><img src="/assets/misc/life/21.jpg" style="width: 150px;" /><img src="/assets/misc/life/22.jpg" style="width: 150px;" /><img src="/assets/misc/life/23.jpg" style="width: 150px;" /><img src="/assets/misc/life/24.jpg" style="width: 150px;" /></div>
-
-<h2 id="note-on-code">Note On Code</h2>
-
-<p>I don’t think the code is worth sharing since it has been literally hacked together in two hours on a plane, but if you really really want to check it out, <a href="https://twitter.com/marcgg">ping me on Twitter</a> and I’ll send you the gist - it’s in Ruby.</p>
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 
@@ -121,78 +102,8 @@
             
           
             
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
               
-              <li><a href="/blog/2013/05/20/track-link-clicks">Information About Bots & People Clicking a Link</a></li>
-            
-          
-            
-          
-            
-          
-            
-          
-            
-              
-              <li><a href="/blog/2013/01/14/html5-nodejs-websockets-games-learning">2 Days Trying To Create a Multiplayer HTML5 Game</a></li>
-            
-          
-            
-          
-            
-              
-              <li><a href="/blog/2012/12/10/angelhack-third-place-paris-hackathon">How We Made Third Place At AngelHack Paris</a></li>
+              <li><a href="/blog/2015/10/13/book-review-work-rules">"Work Rules" by Laszlo Bock</a></li>
             
           
             
@@ -208,8 +119,69 @@
             
           
             
-              
-              <li><a href="/blog/2012/01/09/start-working-on-your-side-project">Start Working on Your Side Project Tonight</a></li>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
             
           
             
@@ -219,6 +191,11 @@
         
             </ul>
           
+          
+            <p>
+              Get the book:
+              <a href="http://www.amazon.fr/gp/product/0137081073/ref=as li tl?ie=UTF8&camp=1642&creative=6746&creativeASIN=0137081073&linkCode=as2&tag=mg092-21" target="_blank">"The Clean Coder" by Robert C. Martin</a>
+            </p>
           
         </div>
         <a href="https://twitter.com/marcgg" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @marcgg</a>
