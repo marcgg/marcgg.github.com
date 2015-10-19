@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2015-10-18T17:55:58+02:00</updated>
+ <updated>2015-10-19T08:26:22+02:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -19,23 +19,23 @@
      <updated>2015-10-19T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2015/10/19/book-review-clean-coder</id>
      <content type="html">
-       &lt;p&gt;Everybody knows &lt;a href=&quot;https://en.wikipedia.org/wiki/Robert_Cecil_Martin&quot;&gt;Robert C. Martin&lt;/a&gt; aka &lt;a href=&quot;https://twitter.com/unclebobmartin&quot;&gt;Uncle Bob&lt;/a&gt; for his great and influencial book &lt;a href=&quot;http://www.amazon.fr/gp/product/0132350882/ref=as_li_tl?ie=UTF8&amp;amp;camp=1642&amp;amp;creative=6746&amp;amp;creativeASIN=0132350882&amp;amp;linkCode=as2&amp;amp;tag=mg092-21&quot;&gt;Clean Code&lt;/a&gt;, but I feel not enough people know about the followup title “Clean code: a handbook of agile software craftsmanship”.&lt;/p&gt;
+       &lt;p&gt;Everybody knows &lt;a href=&quot;https://en.wikipedia.org/wiki/Robert_Cecil_Martin&quot;&gt;Robert C. Martin&lt;/a&gt; aka &lt;a href=&quot;https://twitter.com/unclebobmartin&quot;&gt;Uncle Bob&lt;/a&gt; for his great and influential book &lt;a href=&quot;http://www.amazon.fr/gp/product/0132350882/ref=as_li_tl?ie=UTF8&amp;amp;camp=1642&amp;amp;creative=6746&amp;amp;creativeASIN=0132350882&amp;amp;linkCode=as2&amp;amp;tag=mg092-21&quot;&gt;Clean Code&lt;/a&gt;, but I feel not enough people heard of the followup title “Clean Coder: a handbook of agile software craftsmanship”.&lt;/p&gt;
 
-&lt;p&gt;I picked up this book because I was trusting its author’s point of view on software development… and I wasn’t disapointed! It is fair to say it changed my view on what is required in terms of commitments and work ethics to consider myself a professional software developer. For instance, a section of the book inspired me greatly to write the article &lt;a href=&quot;/blog/2015/08/27/deadlines-estimates-software-startup/&quot;&gt;Deadlines and Estimates in Startups&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I picked up this book without knowing much about its content, mostly because I was trusting its author’s point of view on software development… and I wasn’t disappointed! It is fair to say it changed my view on what is required in terms of commitments and work ethics to be able to consider myself a professional software developer. For instance, a section of the book inspired me greatly to write the article &lt;a href=&quot;/blog/2015/08/27/deadlines-estimates-software-startup/&quot;&gt;Deadlines and Estimates in Startups&lt;/a&gt;.&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Commitment vs Estimate &lt;a href=&quot;http://t.co/kshSzalQyh&quot;&gt;pic.twitter.com/kshSzalQyh&lt;/a&gt;&lt;/p&gt;&amp;mdash; Marc G Gauthier (@marcgg) &lt;a href=&quot;https://twitter.com/marcgg/status/592345433428594688&quot;&gt;April 26, 2015&lt;/a&gt;&lt;/blockquote&gt;
 
-&lt;p&gt;In this book, Robert C. Martin gives us his view on what it means to be considered a professional through a LOT of examples, both real and fictionnal, that are all very insightful and entertaining to read. The author goes in depth to show us all the branching paths of a discussion and the possible consequences of any choice of word or decision. He also discuss how to handle pressure, improve collaboration or managing your time.&lt;/p&gt;
+&lt;p&gt;In this book, Robert C. Martin gives us his view on what it means to be considered a professional through a LOT of examples, both real and fictional, that are all very insightful and entertaining to read. The author goes in depth to show us all the branching paths of a discussion and the possible consequences of any choice of word or decision made. He also discusses how to handle pressure, improve collaboration or managing time.&lt;/p&gt;
 
 &lt;p&gt;Just for these chapters I feel like this book is worth reading.&lt;/p&gt;
 
-&lt;p&gt;The book also mentions other aspect of being a developer, such as craftmanship, testing and more. These chapters were a nice read as well, but by the time I got to this book I already read tons of other material on the subject such as “&lt;a href=&quot;http://www.amazon.fr/gp/product/020161622X/ref=as_li_tl?ie=UTF8&amp;amp;camp=1642&amp;amp;creative=6746&amp;amp;creativeASIN=020161622X&amp;amp;linkCode=as2&amp;amp;tag=mg092-21&quot;&gt;The Pragmatic Programmer: From Journeyman to Master&lt;/a&gt;” by Andrew Hunt &amp;amp; David Thomas, and I found myself thinking “well yeah, obviously” more than once. If you’re not familiar with it, you’ll learn a lot, otherwise it doesn’t bring anything radically different.&lt;/p&gt;
+&lt;p&gt;The book also mentions other aspect of being a developer, such as craftsmanship, testing and more. These chapters were interesting as well, but by the time I got to this book I already read tons of other material on the subject such as “&lt;a href=&quot;http://www.amazon.fr/gp/product/020161622X/ref=as_li_tl?ie=UTF8&amp;amp;camp=1642&amp;amp;creative=6746&amp;amp;creativeASIN=020161622X&amp;amp;linkCode=as2&amp;amp;tag=mg092-21&quot;&gt;The Pragmatic Programmer: From Journeyman to Master&lt;/a&gt;” by Andrew Hunt &amp;amp; David Thomas, and I found myself thinking “well yeah, obviously” more than once. If you’re not familiar with these subjects, you’ll learn a lot, otherwise it doesn’t bring anything radically different to the table.&lt;/p&gt;
 
 &lt;p&gt;Finally, I loved how the book sometimes went on somewhat philosophical tangents, such as this one:&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Humility &lt;a href=&quot;http://t.co/aSkYaOyE6l&quot;&gt;pic.twitter.com/aSkYaOyE6l&lt;/a&gt;&lt;/p&gt;&amp;mdash; Marc G Gauthier (@marcgg) &lt;a href=&quot;https://twitter.com/marcgg/status/655760049122451456&quot;&gt;October 18, 2015&lt;/a&gt;&lt;/blockquote&gt;
 
-&lt;p&gt;Overall, I’d say that it is an amazing book to pick up if you’ve been developing profesionnaly for a few years. It might be a gross generalization, but it feels like junior developers would not gain as much from it as it goes pretty deep in work ethics and situations you might not encounter in your first years writing software.&lt;/p&gt;
+&lt;p&gt;Overall, I’d say that it is an amazing book to pick up if you’ve been developing professionally for a few years. It might be a gross generalisation, but it feels like junior developers would not gain as much from it since it goes pretty deep in work ethics and situations you might not encounter in your few first years writing software.&lt;/p&gt;
 
 &lt;script async=&quot;&quot; src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 

@@ -36,7 +36,7 @@ Now with an example:
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git-checkout-previous.jpg" alt="Git checkout previous schema" style="padding: 20px; width: 420px;"/></div>
 
-It's a nice feature, but it's also bit hard to remember and requires a lot of keystrokes. Thanksfully, [since Git 1.6.2][2] there is a shorthand:
+It's a nice feature, but it's also bit hard to remember and requires a lot of keystrokes. Thankfully, [since Git 1.6.2][2] there is a shorthand:
 
 	$ git checkout -
 
