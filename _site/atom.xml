@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2015-10-19T08:26:22+02:00</updated>
+ <updated>2015-10-19T14:35:04+02:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -52,7 +52,7 @@
  
   
    <entry>
-     <title>Checkout The Previous Branch In Git</title>
+     <title>How To Checkout The Previous Branch In Git</title>
      <link href="https://marcgg.com/blog/2015/10/18/git-checkout-minus"/>
      <updated>2015-10-18T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2015/10/18/git-checkout-minus</id>
@@ -92,7 +92,7 @@ Switched to branch &#39;first&#39;
 
 &lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/git-checkout-previous.jpg&quot; alt=&quot;Git checkout previous schema&quot; style=&quot;padding: 20px; width: 420px;&quot; /&gt;&lt;/div&gt;
 
-&lt;p&gt;It’s a nice feature, but it’s also bit hard to remember and requires a lot of keystrokes. Thanksfully, &lt;a href=&quot;https://github.com/git/git/blob/master/Documentation/RelNotes/1.6.2.txt#L85&quot;&gt;since Git 1.6.2&lt;/a&gt; there is a shorthand:&lt;/p&gt;
+&lt;p&gt;It’s a nice feature, but it’s also bit hard to remember and requires a lot of keystrokes. Thankfully, &lt;a href=&quot;https://github.com/git/git/blob/master/Documentation/RelNotes/1.6.2.txt#L85&quot;&gt;since Git 1.6.2&lt;/a&gt; there is a shorthand:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git checkout -
 &lt;/code&gt;&lt;/pre&gt;
