@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      A Script To Benchmark MySQL Indexes
+    </title>
+    <meta name="description" content="Sometimes finding the right index for a really complex SQL query can be hard and time consuming. That’s why I wrote a script trying all possible combinations of indexes and benchmark each one!">
+    <meta name="author" content="Marc G Gauthier">
+    <meta content='user-scalable=no, width=device-width, initial-scale=1.0' name='viewport'>
+    <meta name="google-site-verification" content="x2EpQdOMz-k9fP8hak9I3COaXhnQ4jNLp2GU4GYQ8jM" />
+    <link href='//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,400,700,300' rel='stylesheet' type='text/css'>
+    <link href="/assets/css/app.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/atom.xml" rel="alternate" type="application/atom+xml" title="Marcgg#Blog">
+    <link rel="shortcut icon" href="/assets/favicon.png">
+  </head>
+
+  <body>
+    <header>
+
+      <div id="logo">
+        <a id='logo1' href="/">marcgg</a>
+        <span id='logo2'>#</span>
+        <a id='logo3' href="/blog">
+          blog
+        </a>
+      </div>
+      <div id="more-nav">
+        &rarr; <a href="/blog/" class="selected">blog</a>
+        &rarr; <a href="/photos/" class="">photos</a>
+        &rarr; <a href="/hire/" class="">hire me</a>
+      </div>
+    </header>
+
+    <h1>
+  <span>
+    
+      A Script To Benchmark MySQL Indexes
+    
+    
+  </span>
+</h1>
+
+
+<div class="published">
+  <span>13 October 2014</span>
+</div>
+
+<div id="container">
+  <div id="content">
+    <div class="post" id="post-">
+
+      
+      <p>I’ve been working with MySQL for a while now and I think that it’s a pretty good solution to store your data. Lately I’m more leaning toward Postgres but that’s another story.</p>
+
+<p>However every once in a while, when it comes to performance, it can get incredibly frustrating. MySQL decides to use the bad index for no visible reasons, best practices and common optimizations don’t seem to work and everything becomes slow. That’s usually when “computer-rage.jpg” appears, as illustrated by this magnificient stock photos montage I did.</p>
+
+<div style="text-align: center"><img style="width: 700px;" src="/assets/blog/computer_rage.jpg" /></div>
+
+<p>Usually I would dig into the problem and figure out what is going on, but the other day I got deeply annoyed by the whole process. I was trying the most logical indexes to speed up a really complex query and it just wasn’t working as expected. At this point I didn’t have much time to spend investigating, so I came up with a different approach.</p>
+
+<h2 id="try-all-the-indexes">Try ALL The Indexes!</h2>
+
+<p>I thought, why not just benchmark all the possible indexes on a given table and see how it would perform on a query. Then, based on the results, I could reduce the scope of my reflexion and figure out what to do faster!</p>
+
+<p>With this idea I wrote a script that would do just that. After running it, I noticed that <strong>there were indeed some indexes that would nicely improve that query</strong>.</p>
+
+<h2 id="interpreting-the-results--disclaimer">Interpreting The Results / Disclaimer</h2>
+
+<p>At this point I need to say that you <strong>SHOULD NEVER</strong> just take the script’s word for what index to add. There are so many ways in which the script could mislead you if you have no idea of how to optimize queries for MySQL. An index speeding up a given query could slow down another or slow down insertions.</p>
+
+<p>Run your <code class="highlighter-rouge">EXPLAIN</code>s, your load tests. Take time to think about it.</p>
+
+<p>In the end the results turned out to be a very nice base for discussion with the team and to really quickly test assumptions. We noticed that some indexes we thought that would be used for sure weren’t, investigated that and ended up greatly improving the speed of the query.</p>
+
+<p>That’s why I’m sharing it now. Not for the quick win it could give you, but mostly because it can spawn interesting conversations or lead you torward a solution you didn’t think of because of the sheer complexity carried by some queries.</p>
+
+<h2 id="the-script">The Script</h2>
+
+<p>With all this being said, I’m counting on you to use this script wisely. Again, do not take the results and blindly add indexes, that’s not the point. Also, the code is not perfect and all fancy. It’s a hacky little script and was never meant to be anything more.</p>
+
+<p>All I’m saying is: don’t put it on Jenkins to automatically add indexes to production and then blame me for the nonsense that will inevitably ensue, alright?</p>
+
+<script src="https://gist.github.com/marcgg/bb10ba6d80bf598ccd38.js"></script>
+
+<p>The script is using Ruby and Rails as well. Of course you could easily take the basic idea and rewrite it for any language and framework if you’d like. It’s very simplistic and didn’t even take me an hour to write.</p>
+
+<p>Note that you need to specify some params to get it to run, this is mostly to keep the benchmark short enough and somewhat focused. In my case, trying all possibilities on my main table would litteraly take days, so I had to ignore the attributes that wouldn’t make sense in the context of my query.</p>
+
+<p>It could also be improved to test any combination of indexes accross multiple tables, but I didn’t need it.</p>
+
+<p>It’s a <a href="http://opensource.org/licenses/MIT">gist</a> and the license is <a href="http://opensource.org/licenses/MIT">MIT</a> © <a href="http://marcgg.com">Marc G Gauthier</a>, so feel free to use it and contribute.</p>
+
+<p>By the way, if you end up with good performance improvements I’d love to read about it in the comments!</p>
+
+
+
+      <div id="more">
+        
+        
+
+        <div id="more-articles">
+          
+            <p>Since you scrolled this far, you might as well take a look at some other things I wrote !</p>
+            <ul>
+              
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              <li><a href="/blog/2015/05/26/ab-testing-in-real-life-google-analytics">Real Life A/B Testing With Universal Analytics</a></li>
+            
+          
+            
+              
+              <li><a href="/blog/2015/02/26/heroku-deploy-speed">Benchmarking Deployment Speed on Heroku</a></li>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        
+            </ul>
+          
+          
+        </div>
+        <a href="https://twitter.com/marcgg" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @marcgg</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+        <a href="https://twitter.com/share" class="twitter-share-button" data-via="marcgg" data-size="large">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+      </div>
+
+      <div id="comments">
+        <style id="disqus_hide">
+          #disqus_thread{
+            display: none;
+          }
+        </style>
+        <p>
+          <span id="show-disqus-arrow">&rarr; </span>
+          <a href="#" id="show-disqus">Read the comments or contribute with your own</a>
+        </p>
+        <div id="disqus_thread"></div>
+      </div>
+      <script type="text/javascript">
+          var disqus_shortname = 'marcgg';
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+      </script>
+
+    </div>
+
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="/assets/js/comments.js"></script>
+
+
+    <footer>
+      <div>Website powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>, hosted on
+      <a href="https://github.com/marcgg/marcgg.github.com">Github</a>
+      and put together by <a href="http://twitter.com/marcgg">@marcgg</a>.</div>
+      <div>All of the <a href="/blog">blog's articles</a> are under
+      <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative commons</a> license
+      unless stated otherwise. Everything else is &copy;.</div>
+    </footer>
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-31071519-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </body>
+</html>

@@ -37,7 +37,7 @@ With all this being said, I’m counting on you to use this script wisely. Again
 
 All I’m saying is: don’t put it on Jenkins to automatically add indexes to production and then blame me for the nonsense that will inevitably ensue, alright?
 
-{% gist marcgg/bb10ba6d80bf598ccd38 %}
+<script src="https://gist.github.com/marcgg/bb10ba6d80bf598ccd38.js"></script>
 
 The script is using Ruby and Rails as well. Of course you could easily take the basic idea and rewrite it for any language and framework if you’d like. It’s very simplistic and didn’t even take me an hour to write.
 
@@ -45,10 +45,9 @@ Note that you need to specify some params to get it to run, this is mostly to ke
 
 It could also be improved to test any combination of indexes accross multiple tables, but I didn’t need it.
 
-It’s a [gist][1] and the license is [MIT][2] &copy; [Marc G Gauthier][3], so feel free to use it and contribute.
+It’s a [gist][1] and the license is [MIT][1] &copy; [Marc G Gauthier][2], so feel free to use it and contribute.
 
 By the way, if you end up with good performance improvements I’d love to read about it in the comments!
 
-[1]:	https://gist.github.com/marcgg/bb10ba6d80bf598ccd38
-[2]:	http://opensource.org/licenses/MIT
-[3]:	http://marcgg.com
+[1]:	http://opensource.org/licenses/MIT
+[2]:	http://marcgg.com

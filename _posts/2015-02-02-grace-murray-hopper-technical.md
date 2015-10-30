@@ -68,7 +68,7 @@ This language was FLOW-MATIC, the first language to use English keywords that fa
 
 If you are curious, here is [the brochure][16] and how the syntax looked:
 
-{% gist marcgg/f9f2da31a973ba319809 %}
+<script src="https://gist.github.com/marcgg/f9f2da31a973ba319809.js"></script>
 
 _That’s right, I have a FLOW-MATIC Gist now._
 

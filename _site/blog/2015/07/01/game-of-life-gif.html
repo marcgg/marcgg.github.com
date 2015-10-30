@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      Game of Life Visualisations
+    </title>
+    <meta name="description" content="I was stuck in a plane so I started fiddling with my alternative version of Conway's Game of Life. I kind of liked the way the board looked after a while, so I decided to share.">
+    <meta name="author" content="Marc G Gauthier">
+    <meta content='user-scalable=no, width=device-width, initial-scale=1.0' name='viewport'>
+    <meta name="google-site-verification" content="x2EpQdOMz-k9fP8hak9I3COaXhnQ4jNLp2GU4GYQ8jM" />
+    <link href='//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,400,700,300' rel='stylesheet' type='text/css'>
+    <link href="/assets/css/app.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/atom.xml" rel="alternate" type="application/atom+xml" title="Marcgg#Blog">
+    <link rel="shortcut icon" href="/assets/favicon.png">
+  </head>
+
+  <body>
+    <header>
+
+      <div id="logo">
+        <a id='logo1' href="/">marcgg</a>
+        <span id='logo2'>#</span>
+        <a id='logo3' href="/blog">
+          blog
+        </a>
+      </div>
+      <div id="more-nav">
+        &rarr; <a href="/blog/" class="selected">blog</a>
+        &rarr; <a href="/photos/" class="">photos</a>
+        &rarr; <a href="/hire/" class="">hire me</a>
+      </div>
+    </header>
+
+    <h1>
+  <span>
+    
+      Game of Life Visualisations
+    
+    
+  </span>
+</h1>
+
+
+<div class="published">
+  <span>01 July 2015</span>
+</div>
+
+<div id="container">
+  <div id="content">
+    <div class="post" id="post-">
+
+      
+      <p>A few days ago I was on a plane for 6 hours and we only had a shared TV screen playing terrible sitcoms and movies. What do you do in this situation? Code some weird version of <a href="https://en.wikipedia.org/wiki/Conway's_Game_of_Life">Conway’s Game of Life</a> of course!</p>
+
+<h2 id="the-game">The Game</h2>
+
+<h3 id="rules">Rules</h3>
+
+<p>I didn’t follow the usual rules and instead decided to go with these:</p>
+
+<ul>
+  <li>The board is randomly and entirely filled with “cells” on boot, representing the life forms</li>
+  <li>Each cell have a given number of health points</li>
+  <li>Each cell is part of a team</li>
+  <li>Each cell will attack its neighbours if they are in another team</li>
+  <li>Each cell will heal its neighbours if they are in the same team</li>
+  <li>You can’t heal more than the maximum number of health points</li>
+  <li>Once a cell reaches 0 life, it gets replaced by a new cell of the attacker’s team</li>
+  <li>Each team has given attack, health and healing stats</li>
+  <li>The board has a set height and width</li>
+</ul>
+
+<p>For instance a Cell will have 100 health points, 10 attack, 2 healing and is part of team A. Meaning that any cell of team A next to it will be healed of 2 health points, and cell of team B next to it will loose 10 health points.</p>
+
+<h3 id="visualisation">Visualisation</h3>
+
+<p>As for visualisation, I didn’t have internet so I just sticked with what I had: my terminal. The display choices were:</p>
+
+<ul>
+  <li>Each team has a given color</li>
+  <li>If a cell life’s is low, the color is lighter</li>
+  <li>If a cell health goes below 10%, it goes black to show very contested zones</li>
+</ul>
+
+<p>It took me a couple of hours to complete, and I find the result quite enjoyable to watch. The terminal colors gives the board a kind of Atari 2600 feel.</p>
+
+<h2 id="end-result">End Result</h2>
+
+<h3 id="everyone-has-the-same-stats">Everyone Has The Same Stats</h3>
+
+<p>When life, attack and healing stats are the same across teams, they usually quickly reach a stalemate. Sometimes, depending on how the board started a color might have some advantage. Because of the healing rule, we see highly contested borders, but no clear movement or winner.</p>
+
+<div class="image-wrapper" style="text-align: center"><img src="/assets/misc/life/life_game.gif" style="width: 400px;" /></div>
+
+<h3 id="stats-are-random">Stats Are Random</h3>
+
+<p>When stats are random, it ends up creating weird looking results after a few dozens frames. Here are these results:</p>
+
+<div class="image-wrapper" style="text-align: center"><img src="/assets/misc/life/1.jpg" style="width: 150px;" /><img src="/assets/misc/life/2.jpg" style="width: 150px;" /><img src="/assets/misc/life/3.jpg" style="width: 150px;" /><img src="/assets/misc/life/4.jpg" style="width: 150px;" /><img src="/assets/misc/life/5.jpg" style="width: 150px;" /><img src="/assets/misc/life/6.jpg" style="width: 150px;" /><img src="/assets/misc/life/7.jpg" style="width: 150px;" /><img src="/assets/misc/life/8.jpg" style="width: 150px;" /><img src="/assets/misc/life/9.jpg" style="width: 150px;" /><img src="/assets/misc/life/10.jpg" style="width: 150px;" /><img src="/assets/misc/life/11.jpg" style="width: 150px;" /><img src="/assets/misc/life/12.jpg" style="width: 150px;" /><img src="/assets/misc/life/13.jpg" style="width: 150px;" /><img src="/assets/misc/life/14.jpg" style="width: 150px;" /><img src="/assets/misc/life/15.jpg" style="width: 150px;" /><img src="/assets/misc/life/16.jpg" style="width: 150px;" /><img src="/assets/misc/life/17.jpg" style="width: 150px;" /><img src="/assets/misc/life/18.jpg" style="width: 150px;" /><img src="/assets/misc/life/19.jpg" style="width: 150px;" /><img src="/assets/misc/life/20.jpg" style="width: 150px;" /><img src="/assets/misc/life/21.jpg" style="width: 150px;" /><img src="/assets/misc/life/22.jpg" style="width: 150px;" /><img src="/assets/misc/life/23.jpg" style="width: 150px;" /><img src="/assets/misc/life/24.jpg" style="width: 150px;" /></div>
+
+<h2 id="note-on-code">Note On Code</h2>
+
+<p>I don’t think the code is worth sharing since it has been literally hacked together in two hours on a plane, but if you really really want to check it out, <a href="https://twitter.com/marcgg">ping me on Twitter</a> and I’ll send you the gist - it’s in Ruby.</p>
+
+
+
+      <div id="more">
+        
+        
+
+        <div id="more-articles">
+          
+            <p>Since you scrolled this far, you might as well take a look at some other things I wrote !</p>
+            <ul>
+              
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              <li><a href="/blog/2013/05/20/track-link-clicks">Information About Bots & People Clicking a Link</a></li>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              <li><a href="/blog/2013/01/14/html5-nodejs-websockets-games-learning">2 Days Trying To Create a Multiplayer HTML5 Game</a></li>
+            
+          
+            
+          
+            
+              
+              <li><a href="/blog/2012/12/10/angelhack-third-place-paris-hackathon">How We Made Third Place At AngelHack Paris</a></li>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              <li><a href="/blog/2012/01/09/start-working-on-your-side-project">Start Working on Your Side Project Tonight</a></li>
+            
+          
+            
+          
+            
+          
+        
+            </ul>
+          
+          
+        </div>
+        <a href="https://twitter.com/marcgg" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @marcgg</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+        <a href="https://twitter.com/share" class="twitter-share-button" data-via="marcgg" data-size="large">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+      </div>
+
+      <div id="comments">
+        <style id="disqus_hide">
+          #disqus_thread{
+            display: none;
+          }
+        </style>
+        <p>
+          <span id="show-disqus-arrow">&rarr; </span>
+          <a href="#" id="show-disqus">Read the comments or contribute with your own</a>
+        </p>
+        <div id="disqus_thread"></div>
+      </div>
+      <script type="text/javascript">
+          var disqus_shortname = 'marcgg';
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+      </script>
+
+    </div>
+
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="/assets/js/comments.js"></script>
+
+
+    <footer>
+      <div>Website powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>, hosted on
+      <a href="https://github.com/marcgg/marcgg.github.com">Github</a>
+      and put together by <a href="http://twitter.com/marcgg">@marcgg</a>.</div>
+      <div>All of the <a href="/blog">blog's articles</a> are under
+      <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative commons</a> license
+      unless stated otherwise. Everything else is &copy;.</div>
+    </footer>
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-31071519-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </body>
+</html>

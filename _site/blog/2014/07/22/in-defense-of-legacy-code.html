@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      Some Respect For Legacy Code
+    </title>
+    <meta name="description" content="While it is easy to complain about legacy code, it’s important to keep in mind that this old code deserves some respect.">
+    <meta name="author" content="Marc G Gauthier">
+    <meta content='user-scalable=no, width=device-width, initial-scale=1.0' name='viewport'>
+    <meta name="google-site-verification" content="x2EpQdOMz-k9fP8hak9I3COaXhnQ4jNLp2GU4GYQ8jM" />
+    <link href='//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,400,700,300' rel='stylesheet' type='text/css'>
+    <link href="/assets/css/app.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/atom.xml" rel="alternate" type="application/atom+xml" title="Marcgg#Blog">
+    <link rel="shortcut icon" href="/assets/favicon.png">
+  </head>
+
+  <body>
+    <header>
+
+      <div id="logo">
+        <a id='logo1' href="/">marcgg</a>
+        <span id='logo2'>#</span>
+        <a id='logo3' href="/blog">
+          blog
+        </a>
+      </div>
+      <div id="more-nav">
+        &rarr; <a href="/blog/" class="selected">blog</a>
+        &rarr; <a href="/photos/" class="">photos</a>
+        &rarr; <a href="/hire/" class="">hire me</a>
+      </div>
+    </header>
+
+    <h1>
+  <span>
+    
+      Some Respect For Legacy Code
+    
+    
+  </span>
+</h1>
+
+
+<div class="published">
+  <span>22 July 2014</span>
+</div>
+
+<div id="container">
+  <div id="content">
+    <div class="post" id="post-">
+
+      
+      <p>It’s your first day. You just joined a team working on a cool project. That’s usually at this point that you discover that the code base is not as good as you’d expected. Most likely you’ll then hear from your colleagues something like “Jane wrote that a few years back, we didn’t need to change it so it’s a bit outdated” or “this is some <strong>legacy code</strong>”. <em>Gasp</em>.</p>
+
+<div style="text-align: center"><img src="/assets/blog/reveal.png" /></div>
+
+<p>This is the definition of legacy code I’m going to use in this article by the way. Meaning, code that still works, is still being used but is not easy to update. This could be due to usage of an outdated frameworks, weird coding conventions, incoherences with the main code base, <a href="http://www.goodreads.com/quotes/718460-code-without-tests-is-bad-code-it-doesn-t-matter-how">lack of automated tests</a> …</p>
+
+<p>When encountering legacy code, a lot of developers want to refactor everything right away or even rewrite everything from scratch. I can’t blame them, there’s nothing like a greenfield project! I would even go as far as saying that it’s perfectly logical and healthy. It’s important to identify a source of problems and want to fix it.</p>
+
+<div style="text-align: center"><img src="/assets/blog/rube.jpg" style="width: 400px;" /></div>
+
+<p>However, there are ways to approach this issue.</p>
+
+<h2 id="someone-wrote-this">Someone Wrote This</h2>
+
+<p>First of all, understand that this legacy code was most likely written by someone with good intentions. Coders wanting to purposely hurt a codebase are rare and it’s usually either the lack of experience or the lack of time that lead to what you consider terrible design choices. If you think back, you’ll realize you too wrote terrible code at some point. If you didn’t, either you don’t know it or you’re at the beginning of your career.</p>
+
+<p>Once you realize that, you’ll see that there is rarely a reason to critize the person behind the code. Nothing positive can come out of it.</p>
+
+<h2 id="it-worked-so-far">It Worked So Far</h2>
+
+<p>When looking a piece of legacy code and asking for its termination, think that it worked so far. The product is at this point thanks to it. Maybe it’s bad now, but at some point it most likely allowed project to move forward. It created some value… and it’s still working after years!</p>
+
+<p>Maybe the context is not clear for you now yet. Legacy code is usually written a long time ago, with different best practices, different company objectives, different time constraints. Maybe the code was perfect and awesome at a point, and then requirements changed so much it became more and more clunky and weird.</p>
+
+<p>So don’t judge a piece of code written by an intern during a rush to ship the v1 the same way you’d judge something calmly written by two experienced developers pairing based on perfectly written specs.</p>
+
+<h2 id="detect-fix-avoid">Detect, Fix, Avoid</h2>
+
+<p>You might get my point by now: there is no need to be overly harsh. Yeah, maybe you think this piece of code is garbage… and maybe it is! But it’s counter productive to attack the previous coder or to trash talk the way it was coded.</p>
+
+<p>Identify the issue, put it in some kind of ticketing system and prioritize it based on risks, time wasted and so on.</p>
+
+<p>For instance I wouldn’t stress out too much for a poorly written code that’s never updated and works perfectly. If I tried to fix it, I might introduce regression bugs and it wouldn’t be much better. However, if the project requires me to update this part of the code every other week, it becomes an entirely different discussion.</p>
+
+<p>When you get to it, fix it the best you can and do everything you can in order to avoid introducing some <em>different</em> legacy code! You could also see if the system would still work <a href="http://blog.codinghorror.com/the-best-code-is-no-code-at-all/">with no code at all</a>.</p>
+
+<div style="text-align: center"><img src="/assets/blog/wtfminute.png" style="width: 400px;" /></div>
+
+<h2 id="you-will-write-legacy-code">You Will Write Legacy Code</h2>
+
+<p>Sorry to break the news, but there is no way you’ll go your entire developer career without <a href="/blog/2014/04/28/frame-based-layout-bad-code/">leaving some legacy code behind you</a>. And it’s okay. If you try to avoid leaving less than perfect code behind you, you might end up not writting anything at all. We all need to learn and hopefully your learning mistakes won’t be too bad. Having good mentors helps.</p>
+
+<p>I really like Sandi Metz’s talk “<a href="%5Bhttp://www.confreaks.com/videos/1115-gogaruco2012-go-ahead-make-a-mess%5D">Go Ahead, Make A Mess</a>” where she explains that you won’t reach perfection any time soon. You will have people in your team, including yourself, writting poor code at some point. Knowing that, you can focus on mitigating the risk of writting bad code - with strategies as reducing dependecies, good testing, good training and so on. Have some metrics or process (code reviews?) to spot what could become legacy and keep on refactoring.</p>
+
+<p>In this whole process, learn from what you just refactored or rewrote, and always thrive to achieve better design and a cleaner coding style. It can only lead to better software and happier teammates.</p>
+
+
+
+      <div id="more">
+        
+        
+
+        <div id="more-articles">
+          
+            <p>Since you scrolled this far, you might as well take a look at some other things I wrote !</p>
+            <ul>
+              
+          
+            
+          
+            
+              
+              <li><a href="/blog/2015/10/18/git-checkout-minus">How To Checkout The Previous Branch In Git</a></li>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              <li><a href="/blog/2015/08/04/git-first-parent-log">Git Log's --first-parent Option</a></li>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              <li><a href="/blog/2014/04/28/frame-based-layout-bad-code">Tips on Creating a Website From When I Was 12</a></li>
+            
+          
+            
+          
+            
+          
+            
+              
+              <li><a href="/blog/2013/11/05/enough-with-the-language-trolls">Enough With The Trolls</a></li>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              <li><a href="/blog/2013/03/25/please-changelog-open-source">Please Keep a Changelog For Your Open Source Lib</a></li>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              <li><a href="/blog/2012/09/04/one-reason-to-switch-to-vim-editor">The One Thing That Made Me Switch To Vim</a></li>
+            
+          
+            
+          
+            
+          
+            
+          
+        
+            </ul>
+          
+          
+        </div>
+        <a href="https://twitter.com/marcgg" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @marcgg</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+        <a href="https://twitter.com/share" class="twitter-share-button" data-via="marcgg" data-size="large">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+      </div>
+
+      <div id="comments">
+        <style id="disqus_hide">
+          #disqus_thread{
+            display: none;
+          }
+        </style>
+        <p>
+          <span id="show-disqus-arrow">&rarr; </span>
+          <a href="#" id="show-disqus">Read the comments or contribute with your own</a>
+        </p>
+        <div id="disqus_thread"></div>
+      </div>
+      <script type="text/javascript">
+          var disqus_shortname = 'marcgg';
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+      </script>
+
+    </div>
+
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="/assets/js/comments.js"></script>
+
+
+    <footer>
+      <div>Website powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>, hosted on
+      <a href="https://github.com/marcgg/marcgg.github.com">Github</a>
+      and put together by <a href="http://twitter.com/marcgg">@marcgg</a>.</div>
+      <div>All of the <a href="/blog">blog's articles</a> are under
+      <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative commons</a> license
+      unless stated otherwise. Everything else is &copy;.</div>
+    </footer>
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-31071519-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </body>
+</html>
