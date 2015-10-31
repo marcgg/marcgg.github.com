@@ -5,6 +5,8 @@ description: Sometimes finding the right index for a really complex SQL query ca
 blog: true
 category: blog
 tag: Performance
+redirect_from:
+- /blog/2014/10/14/mysql-try-all-indexes-combinations-script/
 ---
 
 I’ve been working with MySQL for a while now and I think that it’s a pretty good solution to store your data. Lately I’m more leaning toward Postgres but that’s another story.
@@ -45,9 +47,10 @@ Note that you need to specify some params to get it to run, this is mostly to ke
 
 It could also be improved to test any combination of indexes accross multiple tables, but I didn’t need it.
 
-It’s a [gist][1] and the license is [MIT][1] &copy; [Marc G Gauthier][2], so feel free to use it and contribute.
+It’s a [gist][1] and the license is [MIT][2] &copy; [Marc G Gauthier][3], so feel free to use it and contribute.
 
 By the way, if you end up with good performance improvements I’d love to read about it in the comments!
 
 [1]:	http://opensource.org/licenses/MIT
-[2]:	http://marcgg.com
+[2]:	http://opensource.org/licenses/MIT
+[3]:	http://marcgg.com
