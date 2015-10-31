@@ -8,7 +8,7 @@ category: blog
 tag: Projects
 ---
 
-A couple of weeks ago [Kevin](http://twitter.com/kevintunc), [Étienne](http://twitter.com/etiennebarrie), [Benjamin](http://twitter.com/benjaminbouwyn), [Emiland](http://twitter.com/emilanddc) and I decided to go to the the Paris’ session of [AngelHack](http://angelhack.com). This is a worldwide [hackathon](http://en.wikipedia.org/wiki/Hackathon) with fancy [sponsors](http://angelhack.com/#sponsors) giving you the opportunity to build and pitch a new product in 24 hours. This edition gathered 165 attendees and 47 projects.
+A couple of weeks ago [Kevin][1], [Étienne][2], [Benjamin][3], [Emiland][4] and I decided to go to the the Paris’ session of [AngelHack][5]. This is a worldwide [hackathon][6] with fancy [sponsors][7] giving you the opportunity to build and pitch a new product in 24 hours. This edition gathered 165 attendees and 47 projects.
 
 In this article I’ll try to present what we did while hopefully recreating a bit the experience and giving some tips.
 
@@ -18,11 +18,11 @@ Two weeks prior, we started brainstorming over lunch. We knew we wanted to make 
 
 We started by talking about a time sharing solution based on the concept that 1 hour of someone is worth 1 hour of anyone else. You would give a way for people to exchange services. Since there was already a lot of projects doing this we focused on the education niche: how we could apply this idea to make teaching better. From this idea we jumped to sharing goods. From sharing to trading, to giving.
 
-We liked the idea of giving objects, but [some websites](http://www.freecycle.org/) did that already, so we looked for incentives for people to give away their things and found the idea of tracking every steps of an object’s life very interesting. This concept has a lot of potential. It not only made giving an object more fun, it could also lead to great stories and maybe give the feeling that property can be temporary, lasting just long enough to have an experience.
+We liked the idea of giving objects, but [some websites][8] did that already, so we looked for incentives for people to give away their things and found the idea of tracking every steps of an object’s life very interesting. This concept has a lot of potential. It not only made giving an object more fun, it could also lead to great stories and maybe give the feeling that property can be temporary, lasting just long enough to have an experience.
 
 ## Getting Ready
 
-According to the [rules](http://angelhack.com/rules) of AngelHack, you can’t start coding before the limit, but you are allowed to prepare wireframes and use cases... so we did that!
+According to the [rules][9] of AngelHack, you can’t start coding before the limit, but you are allowed to prepare wireframes and use cases... so we did that!
 
 <div style="text-align: center"><img style="width: 320px; float: right;" src="http://distilleryimage7.instagram.com/8e2b7cae3b1a11e2ab4c22000a1faffd_7.jpg" /><img style="width: 320px; float: left; margin: 0px !important;" src="/assets/blog/ready.png" /></div>
 
@@ -32,7 +32,7 @@ The hardest part at that point was to determine what our minimal viable product 
 
 In this kind of situation it is very easy to get side tracked and try to build too much. Obviously you want to make your project as good as possible, with a ton of awesome features and shiny graphics. The bad news is, by doing that, you’ll end up with nothing, or an app messy and bugged beyond belief. We also knew we’d only get 2 minutes to present our work... which is REALLY short. Therefore it was important to focus and get the most important feature done and polished.
 
-Tech-wise, the stack was pretty obvious since we are all well versed with Ruby on Rails and wanted to get the project as complete as possible. However we left some room for improvisation in terms of what [gems](http://en.wikipedia.org/wiki/RubyGems) or database we’d use.
+Tech-wise, the stack was pretty obvious since we are all well versed with Ruby on Rails and wanted to get the project as complete as possible. However we left some room for improvisation in terms of what [gems][10] or database we’d use.
 
 The day before the hackathon, in order to gain some time, we prepared how the first hour would go, dispatching tasks and so on.
 
@@ -47,12 +47,12 @@ In the middle of the development we got the crazy idea of switching database fro
 We also quickly got the need to get everyone to test the site. Since the non technical people on the team didn’t have a laptop fully setup for development, we had to deploy the project to Heroku. This lead to an awesome moment where we had a problem and just had to turn around to get help from the guys on the Heroku stand sitting feets away from us.
 
 Since we like the added challenge, one of our team member had to leave
-for a couple of hours to see a [Crystal Castle](http://www.youtube.com/watch?v=56E8yYgLNHE)
+for a couple of hours to see a [Crystal Castle][11]
 concert nearby... but it worked out fine and to our surprise,
 the minimal viable product was more or less ready around 4am! This was great
 news because it meant that we could spend the remaining time adding the extra
-features like some Facebook [open graph](https://developers.facebook.com/docs/concepts/opengraph/)
- or a better integration of [mapbox](http://mapbox.com/) to show how an object travelled.
+features like some Facebook [open graph][12]
+ or a better integration of [mapbox][13] to show how an object travelled.
 
 
 <div style="text-align: center"><img style="width: 350px; float: right;" src="/assets/blog/screen2.png" /><img style="width: 350px; float: left; margin: 0px !important;" src="/assets/blog/screen1.png" /></div>
@@ -60,11 +60,11 @@ features like some Facebook [open graph](https://developers.facebook.com/docs/co
 <div style="clear:both">&nbsp;</div>
 
 It's also good to note that at that point we already entered the phase where we didn't really cared
-about best practices, and it shows a lot in our [git log](https://github.com/marcgg/thegoodslife/commits/master).
+about best practices, and it shows a lot in our [git log][14].
 
 <div style="text-align:center"><img style="width: 500px;" src="/assets/blog/gitlol.png" /></div>
 
-This is when I decided to get a couple hours of sleep while others stayed to work a bit more. Some will say that [sleep is for the weak](/assets/blog/sleep.jpg), but I still think that getting rest in a hackathon is important. When you need to be able to focus and think, it’s always better to have some kind of sanity left or you’ll just end up coding bugs after bugs and get frustrated.
+This is when I decided to get a couple hours of sleep while others stayed to work a bit more. Some will say that [sleep is for the weak][15], but I still think that getting rest in a hackathon is important. When you need to be able to focus and think, it’s always better to have some kind of sanity left or you’ll just end up coding bugs after bugs and get frustrated.
 
 There is also the solution of some of my teammates which was taking advantage of the free Redbulls. I guess it can work too.
 
@@ -88,9 +88,9 @@ or really any Murphy's law related incident.
 While waiting we got to see the other teams' presentation. When it was
 close to our turn we were sent to another room, and let me tell you that even
 I wasn't the one giving the presentation,
-[Emiland](http://emiland.me/) was, but I was stressing out for him.
+[Emiland][16] was, but I was stressing out for him.
 I got the opportunity to pitch at the
-[last hackathon](http://blog.tigerlilyapps.com/en/tigerlily-wins-the-facebook-mobile-hack-with-watchify-a-social-tv-web-app/)
+[last hackathon][17]
 I participated in, so I know how hard it can be. The fact that everything was in english
 and we're not native speakers didn't help either.
 
@@ -110,7 +110,7 @@ After what seemed like a very long time, the winners and prizes were announced:
 ## Conclusion
 
 While we didn't make it to San Francisco we still got a cool prize
-courtesy of [Heroku](http://www.heroku.com/) and
+courtesy of [Heroku][18] and
 managed to finish our project. It was also a great experience to create
 something from the ground up quickly and get instantly feedbacks on it.
 
@@ -120,7 +120,7 @@ result. This left me with the feeling that with the right group of people
 and a good mindset you can really create great things.
 
 
-Overall I'd advise anyone that like [starting projects](/2012/01/09/start-working-on-your-side-project/)
+Overall I'd advise anyone that like [starting projects][19]
 to participate in events like these. Gather a group of people or just find
 teammates on the spot, it'll be great.
 
@@ -128,3 +128,23 @@ Exhausting, but great.
 
 
 <div style="text-align:center"><img style="" src="/assets/blog/team.png" /></div>
+
+[1]:	http://twitter.com/kevintunc
+[2]:	http://twitter.com/etiennebarrie
+[3]:	http://twitter.com/benjaminbouwyn
+[4]:	http://twitter.com/emilanddc
+[5]:	http://angelhack.com
+[6]:	http://en.wikipedia.org/wiki/Hackathon
+[7]:	http://angelhack.com/#sponsors
+[8]:	http://www.freecycle.org/
+[9]:	http://angelhack.com/rules
+[10]:	http://en.wikipedia.org/wiki/RubyGems
+[11]:	http://www.youtube.com/watch?v=56E8yYgLNHE
+[12]:	https://developers.facebook.com/docs/concepts/opengraph/
+[13]:	http://mapbox.com/
+[14]:	https://github.com/marcgg/thegoodslife/commits/master
+[15]:	/assets/blog/sleep.jpg
+[16]:	http://emiland.me/
+[17]:	http://blog.tigerlilyapps.com/en/tigerlily-wins-the-facebook-mobile-hack-with-watchify-a-social-tv-web-app/
+[18]:	http://www.heroku.com/
+[19]:	/blog/2012/01/09/start-working-on-your-side-project/

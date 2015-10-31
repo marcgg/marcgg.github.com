@@ -7,17 +7,19 @@ prototype with NodeJS, Websockets and HTML5."
 blog: true
 category: blog
 tag: Projects
+redirect_from:
+- /2013/01/14/html5-nodejs-websockets-games-learning/
 ---
 
 Okay. Let's start by saying that I'm a developer that does mostly web stuff.
 
 This means that a majority of the code I write will end up displaying something in a browser.
-Of course I do [interact with APIs](/2012/09/24/working-with-apis-facebook/), write background jobs, add some
+Of course I do [interact with APIs][1], write background jobs, add some
 security, optimize databases and so on... the point here is that, professionnally, I do not write
 entire projects that have nothing to do with a web app.
 
-My friend [André](http://www.andreberlemont.com/portfolio/) on the other hand
-has a different background as he mainly [develops games](http://www.oneliferemains.com/).
+My friend [André][2] on the other hand
+has a different background as he mainly [develops games][3].
 One evening we started talking about how complex it would be to create an online multiplayer
 game from scratch. Being the web guy, I felt that I should know how all this was supposed to work... after
 all, the multiplayer happens over the internet, right?
@@ -35,7 +37,7 @@ handled by the client.
 Of course I knew it couldn't be that simple and I was 100% sure
 I was disregarding most of the problems that can occur when creating an online game.
 
-I [already blogged](/2012/01/09/start-working-on-your-side-project/) about how side projects are the best response to such
+I [already blogged][4] about how side projects are the best response to such
 situation, therefore at that point I pretty much had to create some kind of game to try it out!
 
 ## Stack
@@ -44,9 +46,9 @@ Time being a factor, I didn't want to go all out game development with C++, Unit
 something like that. Instead I kept it in my "safe" zone by using
 technologies I had a bit of experience with:
 
-- [NodeJS](http://nodejs.org/) (for the server)
-- [HTML5 Canvas](https://developer.mozilla.org/en-US/docs/HTML/Canvas/Tutorial) (to display the game board)
-- [Websockets](http://en.wikipedia.org/wiki/WebSocket) with [Socket.io](http://socket.io/) (to make it fast)
+- [NodeJS][5] (for the server)
+- [HTML5 Canvas][6] (to display the game board)
+- [Websockets][7] with [Socket.io][8] (to make it fast)
 
 <img src='/assets/blog/stackgame.png' alt='logos' style='margin:20px auto; display: block'/>
 
@@ -77,10 +79,10 @@ This is when I started to see why it wouldn't be as simple.
 
 My first version was hosted on Heroku and lagged like crazy. This is
 because right now Heroku doesn't support Websockets and forces socket.io
-to fall back to its polling mode. After some [research](https://github.com/joyent/node/wiki/Node-Hosting)
-I moved to [DotCloud](https://www.dotcloud.com/) and got an impressive boost in speed.
+to fall back to its polling mode. After some [research][9]
+I moved to [DotCloud][10] and got an impressive boost in speed.
 
-I also had to rewrite a lot of code using [Express](http://expressjs.com/) because it would make
+I also had to rewrite a lot of code using [Express][11] because it would make
 deployment way easier.
 
 <img src='/assets/blog/morestackgaming.png' alt='logos' style='margin:20px auto; display: block'/>
@@ -137,12 +139,12 @@ I had to throw away a lot of code and start again fresh.
 ### Concurent Access
 
 When you have a lot of players connected and modifying the same board,
-you're bound to run into some [concurent access](http://en.wikipedia.org/wiki/Concurrency_control) issues.
+you're bound to run into some [concurent access][12] issues.
 For instance let's say two players touch the target at the same time.
 Who gets +1 point?
 
 To fix this I hacked together a basic
-[mutex](http://en.wikipedia.org/wiki/Mutual_exclusion) system
+[mutex][13] system
 to handle the simple problems that kept on happening. This did the trick
 after an hour of code, but it wasn't something I'd put in production!
 
@@ -166,3 +168,16 @@ that's another story.
 
 <img src='/assets/blog/screengame.png' alt='the game' style='margin:20px auto; display: block'/>
 
+[1]:	/2012/09/24/working-with-apis-facebook/
+[2]:	http://www.andreberlemont.com/portfolio/
+[3]:	http://www.oneliferemains.com/
+[4]:	/blog/2012/01/09/start-working-on-your-side-project/
+[5]:	http://nodejs.org/
+[6]:	https://developer.mozilla.org/en-US/docs/HTML/Canvas/Tutorial
+[7]:	http://en.wikipedia.org/wiki/WebSocket
+[8]:	http://socket.io/
+[9]:	https://github.com/joyent/node/wiki/Node-Hosting
+[10]:	https://www.dotcloud.com/
+[11]:	http://expressjs.com/
+[12]:	http://en.wikipedia.org/wiki/Concurrency_control
+[13]:	http://en.wikipedia.org/wiki/Mutual_exclusion

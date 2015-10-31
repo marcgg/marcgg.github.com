@@ -19,7 +19,7 @@ The second view is that developers are wasting their time since automating a tas
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/automation.png" alt="Automating tasks overkill" style="padding: 20px; width: 420px;"/><em>via <a href="https://xkcd.com/1319/">xkcd</a></em></div>
 
-Personally, I think that the following graph by [Jon Udell][1] is closer to a real life and effective way of thinking of the link between automation and time. Of course it's also less funny than the xkcd one but that's fine.
+Personally, I think that the following graph by [Jon Udell][1] is closer to a real life and effective way of thinking of the link between automation and etime. Of course it's also less funny than the xkcd one but that's fine.
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/automation-real-win.png" alt="Agility and iterating on automating tasks" style="padding: 20px; width: 420px;"/></em></div>
 
@@ -67,4 +67,4 @@ As we saw, all these factors have an impact on productivity and long term. Focus
 Overall it is very hard to know when the optimal time to automate is. Do it too soon, you will waste time, do it too late and you'll get the same problem. However, I feel like it's more efficient to take a decision about this when you don't only take time into account.
 
 [1]:	http://blog.jonudell.net/2012/01/09/another-way-to-think-about-geeks-and-repetitive-tasks/
-[2]:	(/blog/2015/08/27/deadlines-estimates-software-startup/)
+[2]:	/blog/2015/08/27/deadlines-estimates-software-startup/

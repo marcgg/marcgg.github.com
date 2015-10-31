@@ -14,3 +14,6 @@ author :
   email : marcg.gauthier@gmail.com
 
 production_url : https://marcgg.com
+
+gems:
+  - jekyll-redirect-from

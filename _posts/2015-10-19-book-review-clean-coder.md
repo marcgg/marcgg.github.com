@@ -6,7 +6,7 @@ blog: true
 category: blog
 tag: book
 booklink: "http://www.amazon.fr/gp/product/0137081073/ref=as\_li\_tl?ie=UTF8&camp=1642&creative=6746&creativeASIN=0137081073&linkCode=as2&tag=mg092-21"
-bookimg: "clean-coder-book-cover.jpg"
+bookimg: "clean-tcoder-book-cover.jpg"
 ---
 
 Everybody knows [Robert C. Martin][1] aka [Uncle Bob][2] for his great and influential book [Clean Code][3], but I feel not enough people heard of the followup title "Clean Coder: a handbook of agile software craftsmanship".

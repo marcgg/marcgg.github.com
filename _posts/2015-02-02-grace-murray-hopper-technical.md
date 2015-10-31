@@ -6,6 +6,8 @@ description: Here is a summary of what I learned about Grace Murray Hopper, the 
 blog: true
 category: blog
 tag: History
+redirect_from:
+- /blog/2015/02/02/grace-murray-hopper-compiler-cobol/
 ---
 
 Rear Admiral Grace M. Hopper, USN, Ph.D., born December 9 1906, is a really interesting person.

@@ -125,7 +125,7 @@
 
 <p>At first we wanted to get all the posts and process them in batches using the <a href="http://developers.facebook.com/docs/reference/api/batch/">Batch API</a>, but at the time this API was very unstable. We tried processing all posts independently in one big routine and this quickly showed its limit as some API calls will time out, impacting the fetching of others comments that were left waiting. Adding a queuing system and ways to retry a given job solved that issue.</p>
 
-<p>We then discovered that Facebook has an undocumented limit of ~800 comments per call. Asking for more will not return an error but a random number of comments. We changed the system to take smaller batches of comments and use Facebook pagination system. The bad news is that it would sometimes glitch and results in an <a href="http://developers.facebook.com/bugs/127681480703469">infinite loop</a>. Some other times everything will seem fine but some comments would be missing for unknown reasons.</p>
+<p>We then discovered that Facebook has an undocumented limit of \~800 comments per call. Asking for more will not return an error but a random number of comments. We changed the system to take smaller batches of comments and use Facebook pagination system. The bad news is that it would sometimes glitch and results in an <a href="http://developers.facebook.com/bugs/127681480703469">infinite loop</a>. Some other times everything will seem fine but some comments would be missing for unknown reasons.</p>
 
 <p>The solution here was to create methods able to determine if the comments returned were valid or not and decide when to stop fetching.</p>
 
@@ -144,6 +144,7 @@
 <p>Finaly I’ll add that this is a good learning experience for when you get to the point where you need to build your own API… because everyone wants to build a cool API! You’ve seen how it’s done, the mistakes made, the good ideas, the architecture behind it…</p>
 
 <p>I can safely say that <a href="http://www.sethcall.com/blog/2010/09/30/facebook-api-does-not-care/">it will be infuriating</a> at times, but within a focused and understanding team, it’s all manageable and the result can be awesome.</p>
+
 
 
       <div id="more">

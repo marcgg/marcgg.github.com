@@ -93,14 +93,14 @@ and assign it to be the root.</p>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">AppDelegate</span>
   <span class="k">def</span> <span class="nf">application</span><span class="p">(</span><span class="n">application</span><span class="p">,</span> <span class="ss">didFinishLaunchingWithOptions</span><span class="p">:</span><span class="n">launchOptions</span><span class="p">)</span>
-    <span class="vi">@window</span> <span class="o">=</span> <span class="no">UIWindow</span><span class="o">.</span><span class="n">alloc</span><span class="o">.</span><span class="n">initWithFrame</span><span class="p">(</span><span class="no">UIScreen</span><span class="o">.</span><span class="n">mainScreen</span><span class="o">.</span><span class="n">bounds</span><span class="p">)</span>
-
-    <span class="n">main_controller</span> <span class="o">=</span> <span class="no">MainController</span><span class="o">.</span><span class="n">alloc</span><span class="o">.</span><span class="n">init</span>
-    <span class="vi">@window</span><span class="o">.</span><span class="n">rootViewController</span> <span class="o">=</span> <span class="n">main_controller</span>
-
-    <span class="vi">@window</span><span class="o">.</span><span class="n">rootViewController</span><span class="o">.</span><span class="n">wantsFullScreenLayout</span> <span class="o">=</span> <span class="kp">true</span>
-    <span class="vi">@window</span><span class="o">.</span><span class="n">makeKeyAndVisible</span>
-    <span class="kp">true</span>
+	<span class="vi">@window</span> <span class="o">=</span> <span class="no">UIWindow</span><span class="o">.</span><span class="n">alloc</span><span class="o">.</span><span class="n">initWithFrame</span><span class="p">(</span><span class="no">UIScreen</span><span class="o">.</span><span class="n">mainScreen</span><span class="o">.</span><span class="n">bounds</span><span class="p">)</span>
+	
+	<span class="n">main_controller</span> <span class="o">=</span> <span class="no">MainController</span><span class="o">.</span><span class="n">alloc</span><span class="o">.</span><span class="n">init</span>
+	<span class="vi">@window</span><span class="o">.</span><span class="n">rootViewController</span> <span class="o">=</span> <span class="n">main_controller</span>
+	
+	<span class="vi">@window</span><span class="o">.</span><span class="n">rootViewController</span><span class="o">.</span><span class="n">wantsFullScreenLayout</span> <span class="o">=</span> <span class="kp">true</span>
+	<span class="vi">@window</span><span class="o">.</span><span class="n">makeKeyAndVisible</span>
+	<span class="kp">true</span>
   <span class="k">end</span>
 <span class="k">end</span></code></pre></div>
 
@@ -109,19 +109,19 @@ and assign it to be the root.</p>
 <p>Now we need to create the MainController. I like to put it in app/controllers,
 with the usual basic structure.</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">MainController</span> <span class="o">&lt;</span> <span class="no">UIViewController</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">MainController</span> <span class="p">\</span><span class="o">&lt;</span> <span class="no">UIViewController</span>
   <span class="k">def</span> <span class="nf">loadView</span>
-    <span class="nb">self</span><span class="o">.</span><span class="n">view</span> <span class="o">=</span> <span class="no">UIView</span><span class="o">.</span><span class="n">new</span>
+	<span class="nb">self</span><span class="o">.</span><span class="n">view</span> <span class="o">=</span> <span class="no">UIView</span><span class="o">.</span><span class="n">new</span>
   <span class="k">end</span>
 
   <span class="k">def</span> <span class="nf">initWithNibName</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="ss">bundle</span><span class="p">:</span> <span class="n">bundle</span><span class="p">)</span>
-    <span class="k">super</span>
-    <span class="nb">self</span>
+	<span class="k">super</span>
+	<span class="nb">self</span>
   <span class="k">end</span>
 
   <span class="k">def</span> <span class="nf">viewDidLoad</span>
-    <span class="k">super</span>
-    <span class="c1"># Everything is now going to go there</span>
+	<span class="k">super</span>
+	<span class="c1"># Everything is now going to go there</span>
   <span class="k">end</span>
 <span class="k">end</span></code></pre></div>
 
@@ -159,10 +159,10 @@ explains that with a better display of vocabulary than I do, but you get the ide
 
 <p>Let’s change the track image to display and image.</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">full_image</span> <span class="o">=</span> <span class="no">UIImage</span><span class="o">.</span><span class="n">imageNamed</span><span class="p">(</span><span class="s2">&quot;full&quot;</span><span class="p">)</span>
-<span class="n">empty_image</span> <span class="o">=</span> <span class="no">UIImage</span><span class="o">.</span><span class="n">imageNamed</span><span class="p">(</span><span class="s2">&quot;empty&quot;</span><span class="p">)</span>
-<span class="n">slider</span><span class="o">.</span><span class="n">setMinimumTrackImage</span> <span class="n">full_image</span><span class="p">,</span> <span class="ss">forState</span><span class="p">:</span> <span class="no">UIControlStateNormal</span>
-<span class="n">slider</span><span class="o">.</span><span class="n">setMaximumTrackImage</span> <span class="n">empty_image</span><span class="p">,</span> <span class="ss">forState</span><span class="p">:</span> <span class="no">UIControlStateNormal</span></code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">full</span><span class="p">\</span><span class="n">_image</span> <span class="o">=</span> <span class="no">UIImage</span><span class="o">.</span><span class="n">imageNamed</span><span class="p">(</span><span class="s2">&quot;full&quot;</span><span class="p">)</span>
+<span class="n">empty</span><span class="p">\</span><span class="n">_image</span> <span class="o">=</span> <span class="no">UIImage</span><span class="o">.</span><span class="n">imageNamed</span><span class="p">(</span><span class="s2">&quot;empty&quot;</span><span class="p">)</span>
+<span class="n">slider</span><span class="o">.</span><span class="n">setMinimumTrackImage</span> <span class="n">full</span><span class="p">\</span><span class="n">_image</span><span class="p">,</span> <span class="ss">forState</span><span class="p">:</span> <span class="no">UIControlStateNormal</span>
+<span class="n">slider</span><span class="o">.</span><span class="n">setMaximumTrackImage</span> <span class="n">empty</span><span class="p">\</span><span class="n">_image</span><span class="p">,</span> <span class="ss">forState</span><span class="p">:</span> <span class="no">UIControlStateNormal</span></code></pre></div>
 
 <p>You can notice that I use two images “full” and “empty”. To get them to
 load correctly, put them in the resources folder of your rubymotion
@@ -174,7 +174,7 @@ following code before giving the image to the slider.</p>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1"># You need an image that is the exact size of the slider</span>
 <span class="c1"># or else it might not look good</span>
-<span class="n">full_image</span> <span class="o">=</span> <span class="n">full_image</span><span class="o">.</span><span class="n">resizableImageWithCapInsets</span><span class="p">(</span>
+<span class="n">full</span><span class="p">\</span><span class="n">_image</span> <span class="o">=</span> <span class="n">full</span><span class="p">\</span><span class="n">_image</span><span class="o">.</span><span class="n">resizableImageWithCapInsets</span><span class="p">(</span>
   <span class="no">UIEdgeInsetsZero</span><span class="p">,</span> <span class="ss">resizingMode</span><span class="p">:</span> <span class="no">UIImageResizingModeTile</span><span class="p">)</span></code></pre></div>
 
 <p>At this point we have this:</p>
@@ -231,6 +231,7 @@ on <a href="https://github.com/marcgg/rubymotion-custom-slider">github</a>. It i
 compiling and working as I write this article, but keep in mind that
 RubyMotion is a fast moving project and it might not be the case in a
 few months.</p>
+
 
 
       <div id="more">

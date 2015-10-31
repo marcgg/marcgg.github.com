@@ -7,14 +7,16 @@ them via Javascript."
 blog: true
 category: blog
 tag: iphone
+redirect_from:
+- /2012/11/12/webviews-javascript-ios-rubymotion/
 ---
 
-Here we go, another article on [RubyMotion](http://www.rubymotion.com/)!
+Here we go, another article on [RubyMotion][1]!
 For those of you that don't know what's that's all about, it's a
-toolchain created by [Laurent Sansonetti](https://twitter.com/lrz)
-(of [MacRuby](http://macruby.org/) fame)
+toolchain created by [Laurent Sansonetti][2]
+(of [MacRuby][3] fame)
 allowing you to create native iOS application using
-[Ruby](http://www.ruby-lang.org/).
+[Ruby][4].
 
 I like it a lot, but please keep in mind that while I have a decent knowledge of Ruby, I'm
 only using RubyMotion on a side project. I worked hard to get everything here
@@ -28,7 +30,7 @@ Right now the general feeling is that in order to get the highest level of quali
 an app, you have to go native. I'm not disputing that, but there are some cases
 where you just need to have some HTML, JS and CSS displaying. To do that,
 the best way is to use the
-[UIWebView](http://developer.apple.com/library/ios/#documentation/uikit/reference/UIWebView_Class/Reference/Reference.html)
+[UIWebView][5]
 element. It allows you to open html file and display them as if you were
 in a browser.
 
@@ -43,31 +45,31 @@ In this article I'll try to demonstrate how to:
 ## Prerequisites
 
 I won’t get into the details on how to set up a project and will assume you have basic knowledge of how this works.
-If you never created something with RubyMotion, please take a look at [this tutorial](http://rubymotion-tutorial.com/1-hello-motion/)
+If you never created something with RubyMotion, please take a look at [this tutorial][6]
  before reading the rest of this article.
 
-RubyMotion uses [Ruby](http://www.ruby-lang.org/). If you are not familiar with it, there
+RubyMotion uses [Ruby][7]. If you are not familiar with it, there
 are tons of tutorials and books on how to code with this language. I
 recommend [Learn Ruby The Hard
-Way](http://ruby.learncodethehardway.org/) by [Zed A. Shaw](http://zedshaw.com/).
+Way](http://ruby.learncodethehardway.org/) by [Zed A. Shaw][8].
 
 ## Setting up the AppDelegate
 
 This is pretty basic, we just set up a
-[controller](http://rubymotion-tutorial.com/3-controllers/)
+[controller][9]
 and assign it to be the root.
 
 {% highlight ruby %}
 class AppDelegate
   def application(application, didFinishLaunchingWithOptions:launchOptions)
-    @window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
-
-    main_controller = MainController.alloc.init
-    @window.rootViewController = main_controller
-
-    @window.rootViewController.wantsFullScreenLayout = true
-    @window.makeKeyAndVisible
-    true
+	@window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
+	
+	main_controller = MainController.alloc.init
+	@window.rootViewController = main_controller
+	
+	@window.rootViewController.wantsFullScreenLayout = true
+	@window.makeKeyAndVisible
+	true
   end
 end
 {% endhighlight %}
@@ -78,21 +80,21 @@ We'll create the structure for a basic controller and set its view to be
 a UIWebView. Then we'll build an URL and load it.
 
 {% highlight ruby %}
-class MainController < UIViewController
+class MainController \< UIViewController
 
   def initWithNibName(name, bundle: bundle)
-    super
-    self
+	super
+	self
   end
 
   def loadView
-    self.view = UIWebView.alloc.init
+	self.view = UIWebView.alloc.init
   end
 
   def viewDidLoad
-    self.view.loadRequest(
-      NSURLRequest.requestWithURL(NSURL.URLWithString("http://marcgg.com"))
-    )
+	self.view.loadRequest(
+	  NSURLRequest.requestWithURL(NSURL.URLWithString("http://marcgg.com"))
+	)
   end
 end
 {% endhighlight %}
@@ -168,7 +170,7 @@ link somewhere in my HTML that triggers something in my RubyMotion code.
 It could be a "cancel" link, a form... it doesn't matter.
 
 To do that we're going to use the logic behind `shouldStartLoadWithRequest`
-and the whole [UIWebViewDelegate](http://developer.apple.com/library/ios/#documentation/uikit/reference/UIWebViewDelegate_Protocol/Reference/Reference.html) thing. I'm not an iOS master yet, so please bear with me on
+and the whole [UIWebViewDelegate][10] thing. I'm not an iOS master yet, so please bear with me on
 the domain-specific vocabulary.
 
 First we're going to add a delegate to our view. Here I'll use the
@@ -193,14 +195,14 @@ end
 Here we have the bare minimum to get started. You'll notice we have a couple of
 parameters. In this article I'll just use the request, but know that the
 others can be usefull too. Read the
-[documentation](http://developer.apple.com/library/ios/#documentation/uikit/reference/UIWebViewDelegate_Protocol/Reference/Reference.html)
+[documentation][11]
 if you want to learn more.
 
 Now if we launch rake one more time and look at the trace, we can see the
 current path to the local file we're loading.
 
 {% highlight ruby %}
-(main)> file://your_path/to/your_project.app/index.html
+(main)\> file://your\_path/to/your\_project.app/index.html
 {% endhighlight %}
 
 This is useless, but now let's add a link in the `index.html` file. Now
@@ -218,10 +220,10 @@ but really you can do whatever.
 
 {% highlight ruby %}
 def webView(inWeb, shouldStartLoadWithRequest: inRequest, navigationType: inType)
-  if inRequest.URL.absoluteString =~ /myapp:\/\//
-    puts "Do something!"
+  if inRequest.URL.absoluteString =\~ /myapp:\/\//
+	puts "Do something!"
   else
-    puts "This is just another link"
+	puts "This is just another link"
   end
   true
 end
@@ -231,7 +233,7 @@ In the same fashion you can trigger the page change using javascript.
 This should be pretty basic stuff here.
 
 {% highlight javascript %}
-window.location = "myapp://some_awesome/message"
+window.location = "myapp://some\_awesome/message"
 {% endhighlight %}
 
 By now you should have noticed how I always return true. It's because if
@@ -248,7 +250,7 @@ execute any message you receive.
 
 {% highlight ruby %}
 def webView(inWeb, shouldStartLoadWithRequest: inRequest, navigationType: inType)
-  # I'm an Idiot
+  \# I'm an Idiot
   MyVeryImportantModel.send(inRequest.URL.absoluteString)
 end
 {% endhighlight %}
@@ -262,6 +264,19 @@ of the application using Javascript. Neat ! Of course there's a lot more you can
 this, and you should probably add some kind of cool DSL in front of it
 if you're going to do this frequently.
 
-As always, you can look up the whole project on [github](https://github.com/marcgg/rubymotion-uiwebview).
+As always, you can look up the whole project on [github][12].
 It is compiling and working as I write this article, but keep in mind that RubyMotion is a fast moving
 project and it might not be the case in a few months.
+
+[1]:	http://www.rubymotion.com/
+[2]:	https://twitter.com/lrz
+[3]:	http://macruby.org/
+[4]:	http://www.ruby-lang.org/
+[5]:	http://developer.apple.com/library/ios/#documentation/uikit/reference/UIWebView_Class/Reference/Reference.html
+[6]:	http://rubymotion-tutorial.com/1-hello-motion/
+[7]:	http://www.ruby-lang.org/
+[8]:	http://zedshaw.com/
+[9]:	http://rubymotion-tutorial.com/3-controllers/
+[10]:	http://developer.apple.com/library/ios/#documentation/uikit/reference/UIWebViewDelegate_Protocol/Reference/Reference.html
+[11]:	http://developer.apple.com/library/ios/#documentation/uikit/reference/UIWebViewDelegate_Protocol/Reference/Reference.html
+[12]:	https://github.com/marcgg/rubymotion-uiwebview

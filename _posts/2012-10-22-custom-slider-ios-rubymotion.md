@@ -7,14 +7,16 @@ element's look."
 blog: true
 category: blog
 tag: iphone
+redirect_from:
+- /2012/10/22/custom-slider-ios-rubymotion/
 ---
 
-I always liked the idea of developing mobile applications, but also found the Objective C + XCode experience not very enjoyable. I gave alternatives like [Titanium](http://www.appcelerator.com/platform/titanium-sdk/) a try, but wasn’t fully convinced. Lately I’ve been getting into [RubyMotion](http://www.rubymotion.com/) and so far I’m really impressed by the general feel of it.
+I always liked the idea of developing mobile applications, but also found the Objective C + XCode experience not very enjoyable. I gave alternatives like [Titanium][1] a try, but wasn’t fully convinced. Lately I’ve been getting into [RubyMotion][2] and so far I’m really impressed by the general feel of it.
 
 Alas it's not perfect. My main grief right now about the project
 is the terrible lack of documentation.
 The community is also still small and while you can still
-find [helpful](https://twitter.com/vacawama) [people](https://twitter.com/julienXX),
+find [helpful][3] [people][4],
 you often end up alone with your code.
 That's why I figured I would contribute my share of blog posts on the subject! Hopefully it’ll help out some people.
 
@@ -25,19 +27,19 @@ With all that in mind, let's get started shall we?
 ## Prerequisites
 
 I won’t get into the details on how to set up a project and will assume you have basic knowledge of how this works.
-If you never created something with RubyMotion, please take a look at [this tutorial](http://rubymotion-tutorial.com/1-hello-motion/)
+If you never created something with RubyMotion, please take a look at [this tutorial][5]
  before reading the rest of this article.
 
-RubyMotion uses [Ruby](http://www.ruby-lang.org/). If you are not familiar with it, there
+RubyMotion uses [Ruby][6]. If you are not familiar with it, there
 are tons of tutorials and books on how to code with this language. I
 recommend [Learn Ruby The Hard
-Way](http://ruby.learncodethehardway.org/) by [Zed A. Shaw](http://zedshaw.com/).
+Way](http://ruby.learncodethehardway.org/) by [Zed A. Shaw][7].
 
 
 ## Our Objective
 
 I’ll try to explain how to customize a
-[UISlider](http://developer.apple.com/library/ios/#documentation/uikit/reference/UISlider_Class/Reference/Reference.html)
+[UISlider][8]
  to get the look and feel matching the design of your application. 
 Here’s what’s the demo code will give you:
 
@@ -46,20 +48,20 @@ Here’s what’s the demo code will give you:
 ## Setting up the AppDelegate
 
 This is pretty basic, we just set up a
-[controller](http://rubymotion-tutorial.com/3-controllers/)
+[controller][9]
 and assign it to be the root.
 
 {% highlight ruby %}
 class AppDelegate
   def application(application, didFinishLaunchingWithOptions:launchOptions)
-    @window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
-
-    main_controller = MainController.alloc.init
-    @window.rootViewController = main_controller
-
-    @window.rootViewController.wantsFullScreenLayout = true
-    @window.makeKeyAndVisible
-    true
+	@window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
+	
+	main_controller = MainController.alloc.init
+	@window.rootViewController = main_controller
+	
+	@window.rootViewController.wantsFullScreenLayout = true
+	@window.makeKeyAndVisible
+	true
   end
 end
 {% endhighlight %}
@@ -70,19 +72,19 @@ Now we need to create the MainController. I like to put it in app/controllers,
 with the usual basic structure.
 
 {% highlight ruby %}
-class MainController < UIViewController
+class MainController \< UIViewController
   def loadView
-    self.view = UIView.new
+	self.view = UIView.new
   end
 
   def initWithNibName(name, bundle: bundle)
-    super
-    self
+	super
+	self
   end
 
   def viewDidLoad
-    super
-    # Everything is now going to go there
+	super
+	# Everything is now going to go there
   end
 end
 {% endhighlight %}
@@ -122,16 +124,16 @@ slider.value = slider.maximumValue/2
 A UISlider is composed of different elements. The sliding thingy is
 called the track and the other round thingy you grab to drag is the thumb.
 On the left of the thumb we have the minimum track, on the right the
-maximum track. The [official documentation](http://developer.apple.com/library/ios/#documentation/uikit/reference/UISlider_Class/Reference/Reference.html)
+maximum track. The [official documentation][10]
 explains that with a better display of vocabulary than I do, but you get the idea.
 
 Let's change the track image to display and image.
 
 {% highlight ruby %}
-full_image = UIImage.imageNamed("full")
-empty_image = UIImage.imageNamed("empty")
-slider.setMinimumTrackImage full_image, forState: UIControlStateNormal
-slider.setMaximumTrackImage empty_image, forState: UIControlStateNormal
+full\_image = UIImage.imageNamed("full")
+empty\_image = UIImage.imageNamed("empty")
+slider.setMinimumTrackImage full\_image, forState: UIControlStateNormal
+slider.setMaximumTrackImage empty\_image, forState: UIControlStateNormal
 {% endhighlight %}
 
 You can notice that I use two images "full" and "empty". To get them to
@@ -145,7 +147,7 @@ following code before giving the image to the slider.
 {% highlight ruby %}
 # You need an image that is the exact size of the slider
 # or else it might not look good
-full_image = full_image.resizableImageWithCapInsets(
+full\_image = full\_image.resizableImageWithCapInsets(
   UIEdgeInsetsZero, resizingMode: UIImageResizingModeTile)
 {% endhighlight %}
 
@@ -205,7 +207,19 @@ to make a slider look cooler.
 
 If you find this avalanche of code snippets not very usuable,
 you can look at the whole project
-on [github](https://github.com/marcgg/rubymotion-custom-slider). It is
+on [github][11]. It is
 compiling and working as I write this article, but keep in mind that
 RubyMotion is a fast moving project and it might not be the case in a
 few months.
+
+[1]:	http://www.appcelerator.com/platform/titanium-sdk/
+[2]:	http://www.rubymotion.com/
+[3]:	https://twitter.com/vacawama
+[4]:	https://twitter.com/julienXX
+[5]:	http://rubymotion-tutorial.com/1-hello-motion/
+[6]:	http://www.ruby-lang.org/
+[7]:	http://zedshaw.com/
+[8]:	http://developer.apple.com/library/ios/#documentation/uikit/reference/UISlider_Class/Reference/Reference.html
+[9]:	http://rubymotion-tutorial.com/3-controllers/
+[10]:	http://developer.apple.com/library/ios/#documentation/uikit/reference/UISlider_Class/Reference/Reference.html
+[11]:	https://github.com/marcgg/rubymotion-custom-slider
