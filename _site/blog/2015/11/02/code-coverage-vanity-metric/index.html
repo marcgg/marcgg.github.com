@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>
-      Game of Life Visualisations
+      Code Coverage Is A Vanity Metric
     </title>
-    <meta name="description" content="I was stuck in a plane so I started fiddling with my alternative version of Conway's Game of Life. I kind of liked the way the board looked after a while, so I decided to share.">
+    <meta name="description" content="Using code coverage tools can be helpful to find dead code or untested sections of your project, however, when used as a KPI they can do more harm than good.">
     <meta name="author" content="Marc G Gauthier">
     <meta content='user-scalable=no, width=device-width, initial-scale=1.0' name='viewport'>
     <meta name="google-site-verification" content="x2EpQdOMz-k9fP8hak9I3COaXhnQ4jNLp2GU4GYQ8jM" />
@@ -36,7 +36,7 @@
     <h1>
   <span>
     
-      Game of Life Visualisations
+      Code Coverage Is A Vanity Metric
     
     
   </span>
@@ -44,7 +44,7 @@
 
 
 <div class="published">
-  <span>01 July 2015</span>
+  <span>02 November 2015</span>
 </div>
 
 <div id="container">
@@ -52,57 +52,43 @@
     <div class="post" id="post-">
 
       
-      <p>A few days ago I was on a plane for 6 hours and we only had a shared TV screen playing terrible sitcoms and movies. What do you do in this situation? Code some weird version of <a href="https://en.wikipedia.org/wiki/Conway's_Game_of_Life">Conway’s Game of Life</a> of course!</p>
+      <p>Code coverage can be useful as a tool to find untested sections of your project. However, if used as a KPI, it can do more harm than good.</p>
 
-<h2 id="the-game">The Game</h2>
+<p>I see looking at code coverage a bit like looking at the lines of code count in a project. If there are 800 lines in a file, it’s probably a problem. However if someone uses the number of lines per file as a metric and decides to set objectives like “get every file under 50 LoC”, we’re in trouble. Developers will end up extracting the logic just for the sake of extracting. Of course there are situations where <a href="https://www.youtube.com/watch?v=f5I1iyso29U">having a messy file is the best option</a> at a given time, and judging code quality based on something as arbitrary as LoC count makes little sense.</p>
 
-<h3 id="rules">Rules</h3>
+<p>Because of that when I hear companies brag about very high coverage rates, I can’t help but wonder what kind of tests they are doing and why they are so proud of this rate… because it’s fairly simple to drive this number up and not actually improve your tests.</p>
 
-<p>I didn’t follow the usual rules and instead decided to go with these:</p>
+<p>For instance turning a condition into a one liner with the help of a <a href="https://en.wikipedia.org/wiki/%3F:">ternary operator</a> does improve test coverage in most tools, but it doesn’t improve actual testing of the app. You could also run a line of code but not make any assertions on its effects… the line ends up “covered”, but you didn’t test a thing besides syntax errors. Make this test broad enought and you could cover hundreds of lines of code while effectively testing nothing at all.</p>
 
-<ul>
-  <li>The board is randomly and entirely filled with “cells” on boot, representing the life forms</li>
-  <li>Each cell have a given number of health points</li>
-  <li>Each cell is part of a team</li>
-  <li>Each cell will attack its neighbours if they are in another team</li>
-  <li>Each cell will heal its neighbours if they are in the same team</li>
-  <li>You can’t heal more than the maximum number of health points</li>
-  <li>Once a cell reaches 0 life, it gets replaced by a new cell of the attacker’s team</li>
-  <li>Each team has given attack, health and healing stats</li>
-  <li>The board has a set height and width</li>
-</ul>
+<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/coverage.jpg" style="padding: 20px; width: 500px;" /></div>
 
-<p>For instance a Cell will have 100 health points, 10 attack, 2 healing and is part of team A. Meaning that any cell of team A next to it will be healed of 2 health points, and cell of team B next to it will loose 10 health points.</p>
+<p>Since code coverage can so easily be wrong and manipulated, it becomes impossible to efficiently act based on it, making it a vanity metric. Having a high coverage also gives you a certain sense of security, possibly making you blind to deeper issues in your testing strategy.</p>
 
-<h3 id="visualisation">Visualisation</h3>
+<p>The most important thing about tests is their ability to detect bugs, not that they improves some number on a dashboard. You can have thousands of tests, if their only purpose is to raise coverage, they are useless.</p>
 
-<p>As for visualisation, I didn’t have internet so I just sticked with what I had: my terminal. The display choices were:</p>
+<blockquote>
+  <p>The pupil went to the master programmer and said:</p>
 
-<ul>
-  <li>Each team has a given color</li>
-  <li>If a cell life’s is low, the color is lighter</li>
-  <li>If a cell health goes below 10%, it goes black to show very contested zones</li>
-</ul>
+  <p>“All my tests pass all the time. Don’t I deserve a raise?”</p>
 
-<p>It took me a couple of hours to complete, and I find the result quite enjoyable to watch. The terminal colors gives the board a kind of Atari 2600 feel.</p>
+  <p>The master slapped the pupil and replied:</p>
 
-<h2 id="end-result">End Result</h2>
+  <p>“If all your tests pass, all the time, you need to write better tests.”</p>
 
-<h3 id="everyone-has-the-same-stats">Everyone Has The Same Stats</h3>
+  <p> </p>
 
-<p>When life, attack and healing stats are the same across teams, they usually quickly reach a stalemate. Sometimes, depending on how the board started a color might have some advantage. Because of the healing rule, we see highly contested borders, but no clear movement or winner.</p>
+  <p>From “<a href="http://www.artima.com/weblogs/viewpost.jsp?thread=203994">The Way of Testivus</a>” by Alberto Savoia</p>
+</blockquote>
 
-<div class="image-wrapper" style="text-align: center"><img src="/assets/misc/life/life_game.gif" style="width: 400px;" /></div>
+<p>Thinking like this, you could stop looking at coverage as a proof of good testing and evaluate the number of regressions and other bugs introduced in production instead. This would probably give you a better sense of how well your project is tested. Then you can start thinking about why the tests already written did not catch the issues before release, and then improve your strategy.</p>
 
-<h3 id="stats-are-random">Stats Are Random</h3>
+<p>Of course don’t throw away your coverage tools, they can be useful to find dead code or sections that are not tested… just don’t use the result as some kind of <a href="https://www.youtube.com/watch?v=KOO5S4vxi0o">KPI</a> for your project and don’t assume that a “covered” line is a “tested” line.</p>
 
-<p>When stats are random, it ends up creating weird looking results after a few dozens frames. Here are these results:</p>
+<blockquote>
+  <p>“I wouldn’t have written four coverage tools if I didn’t think they’re helpful. But they’re only helpful if they’re used to enhance thought, not replace it”</p>
 
-<div class="image-wrapper" style="text-align: center"><img src="/assets/misc/life/1.jpg" style="width: 150px;" /><img src="/assets/misc/life/2.jpg" style="width: 150px;" /><img src="/assets/misc/life/3.jpg" style="width: 150px;" /><img src="/assets/misc/life/4.jpg" style="width: 150px;" /><img src="/assets/misc/life/5.jpg" style="width: 150px;" /><img src="/assets/misc/life/6.jpg" style="width: 150px;" /><img src="/assets/misc/life/7.jpg" style="width: 150px;" /><img src="/assets/misc/life/8.jpg" style="width: 150px;" /><img src="/assets/misc/life/9.jpg" style="width: 150px;" /><img src="/assets/misc/life/10.jpg" style="width: 150px;" /><img src="/assets/misc/life/11.jpg" style="width: 150px;" /><img src="/assets/misc/life/12.jpg" style="width: 150px;" /><img src="/assets/misc/life/13.jpg" style="width: 150px;" /><img src="/assets/misc/life/14.jpg" style="width: 150px;" /><img src="/assets/misc/life/15.jpg" style="width: 150px;" /><img src="/assets/misc/life/16.jpg" style="width: 150px;" /><img src="/assets/misc/life/17.jpg" style="width: 150px;" /><img src="/assets/misc/life/18.jpg" style="width: 150px;" /><img src="/assets/misc/life/19.jpg" style="width: 150px;" /><img src="/assets/misc/life/20.jpg" style="width: 150px;" /><img src="/assets/misc/life/21.jpg" style="width: 150px;" /><img src="/assets/misc/life/22.jpg" style="width: 150px;" /><img src="/assets/misc/life/23.jpg" style="width: 150px;" /><img src="/assets/misc/life/24.jpg" style="width: 150px;" /></div>
-
-<h2 id="note-on-code">Note On Code</h2>
-
-<p>I don’t think the code is worth sharing since it has been literally hacked together in two hours on a plane, but if you really really want to check it out, <a href="https://twitter.com/marcgg">ping me on Twitter</a> and I’ll send you the gist - it’s in Ruby.</p>
+  <p><a href="https://en.wikipedia.org/wiki/Brian_Marick">Brian Marick</a> in “<a href="http://www.exampler.com/testing-com/writings/coverage.pdf">How to Misuse Code Coverage</a>”</p>
+</blockquote>
 
 
 
@@ -125,31 +111,13 @@
             
           
             
-          
+              
+              <li><a href="/blog/2015/09/30/automate-repetitive-tasks">Don't Automate Tasks Only Based On Time Spent</a></li>
             
           
             
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
+              
+              <li><a href="/blog/2015/08/27/deadlines-estimates-software-startup">Deadlines And Estimates In Startups</a></li>
             
           
             
@@ -174,27 +142,7 @@
           
             
               
-              <li><a href="/blog/2013/05/20/track-link-clicks">Information About Bots & People Clicking a Link</a></li>
-            
-          
-            
-          
-            
-          
-            
-          
-            
-              
-              <li><a href="/blog/2013/01/14/html5-nodejs-websockets-games-learning">2 Days Trying To Create a Multiplayer HTML5 Game</a></li>
-            
-          
-            
-          
-            
-              
-              <li><a href="/blog/2012/12/10/angelhack-third-place-paris-hackathon">How We Made Third Place At AngelHack Paris</a></li>
-            
-          
+              <li><a href="/blog/2014/09/17/huboard-kanban-board-github">Managing Your Project With Github Issues And HuBoard</a></li>
             
           
             
@@ -209,7 +157,45 @@
           
             
               
-              <li><a href="/blog/2012/01/09/start-working-on-your-side-project">Start Working on Your Side Project Tonight</a></li>
+              <li><a href="/blog/2013/11/12/peak-productivity">The Problem With Peak</a></li>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
             
           
             
