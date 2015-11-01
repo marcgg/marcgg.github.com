@@ -1,7 +1,7 @@
 ---
 layout: post
-title: '"Work Rules" by Laszlo Bock'
-description: Review of the book about Google's approach to human ressources, from my point of view of developer working fora a startup and involved in the recruitment process.
+title: '"Work Rules!" by Laszlo Bock'
+description: "Google's approach to human ressources, which I'd recommend reading for anyone interested in the recruitment process and willing to scan through a few pages glorifying Google."
 blog: true
 category: blog
 tag: book

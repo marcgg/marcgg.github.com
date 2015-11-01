@@ -1,0 +1,38 @@
+---
+layout: page
+title : Marc G Gauthier - Book Reviews
+category: books
+description: "Startup and technology related book reviews."
+---
+
+<div id="all-posts">
+  <div id="book-review" style="margin-top: 20px;">
+    This section lists blog posts that are part of a series of book reviews and are meant
+    as a way to quickly
+    share my opinion on what I've been reading.
+    They are not to be taken as general analysis of the books.
+    If you generally enjoy my blog posts, you might share my opinion on most of them.
+  </div>
+
+  {% for post in site.posts %}
+    {% if post.tag == "book" %}
+      <div id="index-post-{% increment i %}" class="single-post">
+        <a href="{{post.booklink}}" target="_blank" class="book-cover-entry">
+          <img src="/assets/books/{{post.bookimg}}" alt="{{post.title}} book cover" />
+        </a>
+
+        <div class="title">
+          <a href="{{ BASE_PATH }}{{ post.url }}">
+            {{ post.title }}
+          </a>
+        </div>
+
+        <p class="description">
+          {{post.description}}
+          &rarr; <a href="{{page.booklink}}" target="_blank">Get this book</a>.
+        </p>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+

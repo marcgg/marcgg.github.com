@@ -210,6 +210,7 @@ blockquote p{
 .single-post{
   border-top: 1px solid #f1f1f1;
   padding: 40px 0px;
+  float: clear;
 }
 .single-post:first-child{
   border-top: none !important;
@@ -250,6 +251,16 @@ blockquote p{
 
 .single-post .title em{
   display: none;
+}
+
+/* BOOKS */
+.book-cover-entry{
+  width: 100px;
+  margin-right: 20px;
+  float: left;
+}
+.book-cover-entry img{
+  width: 100px;
 }
 
 /* BLOG SHOW */
@@ -527,6 +538,7 @@ p code{
   .single-post .title{
     font-size: 1.4em;
   }
+
   .date{
     display: none;
   }

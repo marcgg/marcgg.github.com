@@ -22,7 +22,7 @@
       <div id="logo">
         <a id='logo1' href="/">marcgg</a>
         <span id='logo2'>#</span>
-        <a id='logo3' href="/{% if page.category != 'about'%}{{page.category}}{% endif %}">
+        <a id='logo3' href="/{% if page.category != 'about'%}{{page.category}}/{% endif %}">
           {{page.category}}
         </a>
       </div>
