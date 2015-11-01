@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>
-      Information About Bots & People Clicking a Link
+      "The Pragmatic Programmer" by A. Hunt & D. Thomas
     </title>
-    <meta name="description" content="In this article I explain why I built a very basic app that lets you know who is clicking a link and I'm debating wether or not to keep on working on it.">
+    <meta name="description" content="From 'crash early' to its general pragmatic approach, I find myself quoting from this book all the time. It really is a reference for any modern programmers and a must read.">
     <meta name="author" content="Marc G Gauthier">
     <meta content='user-scalable=no, width=device-width, initial-scale=1.0' name='viewport'>
     <meta name="google-site-verification" content="x2EpQdOMz-k9fP8hak9I3COaXhnQ4jNLp2GU4GYQ8jM" />
@@ -36,15 +36,17 @@
     <h1>
   <span>
     
-      Information About Bots & People Clicking a Link
+      "The Pragmatic Programmer" by A. Hunt & D. Thomas
     
+    
+      <br><em>Book review </em>
     
   </span>
 </h1>
 
 
 <div class="published">
-  <span>20 May 2013</span>
+  <span>01 November 2015</span>
 </div>
 
 <div id="container">
@@ -52,54 +54,30 @@
     <div class="post" id="post-">
 
       
-      <p>A couple of days ago I saw
-<a href="http://www.zdnet.com/is-microsoft-reading-your-skype-instant-messages-7000015388/">articles popping around</a>
-saying that Microsoft
-<a href="http://www.h-online.com/security/news/item/Skype-with-care-Microsoft-is-reading-everything-you-write-1862870.html">is visiting links posted on Skype</a>. In my opinion it got a bit blown out of proportion, but I’m
-not writing this to discuss the matter.</p>
+        <div id="book-review" class="clearfix">
+          <a href="http://www.amazon.fr/gp/product/020161622X/ref=as li tl?ie=UTF8&camp=1642&creative=6746&creativeASIN=020161622X&linkCode=as2&tag=mg092-21" target="_blank">
+            <img src="/assets/books/pragmatic-programmer-book-cover.jpg" alt=""The Pragmatic Programmer" by A. Hunt & D. Thomas book cover" />
+          </a>
+          This post is part of
+          <a href="/books/">a series of book reviews</a> and is a way to
+          quickly share my opinion on what I've been reading, not a general
+          analysis of the book.
+          If "The Pragmatic Programmer" by A. Hunt & D. Thomas feels like something you'd like to read,
+          <a href="http://www.amazon.fr/gp/product/020161622X/ref=as li tl?ie=UTF8&camp=1642&creative=6746&creativeASIN=020161622X&linkCode=as2&tag=mg092-21" target="_blank">you can grab a copy here</a>.
+        </div>
+      
+      <p>This is one of the books I’ve heard referenced countless times by very smart people before I actually got to read it. Expectations were high, but Andrew Hunt and David Thomas delivered. This book dives into everything that a modern developer needs to aprehend in order to create good software and stay up to date. It delivers important lessons and I now find myself quoting it constantly when <a href="/blog/2014/12/16/coaching-startup-birdly-le-camping/">coaching teams</a> or <a href="/blog/2013/04/22/what-i-learned-teaching-web/">teaching junior developers</a>.</p>
 
-<p>The thing is that the first thing that came to me is that it would have
-been pretty hard for a regular user to identify such a thing.
-This is why I created a very simple project that does just that.
-You can create a link by entering a password. Then the site gives you
-two links: one to see your access logs, the other to paste around.
-If someone clicks the link it saves some info about the user.</p>
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">&quot;You can&#39;t write perfect software&quot; <a href="http://t.co/AbMbNLA7du">pic.twitter.com/AbMbNLA7du</a></p>&mdash; Marc G Gauthier (@marcgg) <a href="https://twitter.com/marcgg/status/552209764151996416">January 5, 2015</a></blockquote>
 
-<h2 id="what-it-looks-like">What It Looks Like</h2>
+<p>The book is filled with situations that every professional developers encounter in their lives: estimations requests, “programming by coincidence”, how to do design by contract or what tools to use. It also describes some best practices such as “<a href="https://twitter.com/marcgg/status/552213076666494976">crash early</a>” or ways to minimize <a href="https://en.wikipedia.org/wiki/Coupling_(computer_programming)">coupling</a>.</p>
 
-<p><img src="/assets/blog/t1.png" alt="" style="margin:20px auto; display: block" /></p>
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">FFS Fred, seriously. I thought you knew better. <a href="http://t.co/oMJv7zZRRy">pic.twitter.com/oMJv7zZRRy</a></p>&mdash; Marc G Gauthier (@marcgg) <a href="https://twitter.com/marcgg/status/552217094440640512">January 5, 2015</a></blockquote>
 
-<p><img src="/assets/blog/t2.png" alt="" style="margin:20px auto; display: block" /></p>
+<p>This book is one of my references, and I can’t recommend it enough. If you haven’t read it yet, you should!</p>
 
-<p><img src="/assets/blog/t3.png" alt="" style="margin:20px auto; display: block" /></p>
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<h2 id="its-not-good---but-it-could-be">It’s Not Good - But It Could Be</h2>
-
-<p>Right now it’s only a couple hours of work. As it is, it won’t scale.
-This is mainly because I deploy it on heroku and heroku doesn’t provide a good
-database solution for free. After 10000 people try it out I’ll run out
-of space and the server will go down.</p>
-
-<p>It also lacks features and needs a better UI.</p>
-
-<p>I could improve it a bit and open source the code for people to set up on
-their own heroku server - or whatever they like. The only thing is that
-I don’t really know if there is a point. Web developers can already
-easily set this up without my help, and I suspect others to not care about this.</p>
-
-<p>I also had feedbacks of people saying that it could be used for “evil” as
-it gives a very easy way to get the IP and referer of someone… but
-again, for anyone with a webserver this is all very basic stuff so I
-feel like this won’t be a problem.</p>
-
-<h2 id="for-now">For Now</h2>
-
-<p>Anyways, for the moment being I’ll put the link out there:
-<a href="http://tracklink.herokuapp.com">tracklink.herokuapp.com</a></p>
-
-<p>Depending on the feedbacks I’ll get - or don’t get - I’ll decide what to
-do with this! Worst case scenario I keep this as a pet project that I
-use once in a while when feeling paranoid.</p>
 
 
       <div id="more">
@@ -117,20 +95,15 @@ use once in a while when feeling paranoid.</p>
             
           
             
-          
-            
-          
-            
-          
-            
-          
+              
+              <li><a href="/blog/2015/10/19/book-review-clean-coder">"The Clean Coder" by Robert C. Martin</a></li>
             
           
             
           
             
               
-              <li><a href="/blog/2015/07/01/game-of-life-gif">Game of Life Visualisations</a></li>
+              <li><a href="/blog/2015/10/13/book-review-work-rules">"Work Rules!" by Laszlo Bock</a></li>
             
           
             
@@ -182,15 +155,9 @@ use once in a while when feeling paranoid.</p>
             
           
             
-              
-              <li><a href="/blog/2013/01/14/html5-nodejs-websockets-games-learning">2 Days Trying To Create a Multiplayer HTML5 Game</a></li>
-            
           
             
           
-            
-              
-              <li><a href="/blog/2012/12/10/angelhack-third-place-paris-hackathon">How We Made Third Place At AngelHack Paris</a></li>
             
           
             
@@ -206,8 +173,13 @@ use once in a while when feeling paranoid.</p>
             
           
             
-              
-              <li><a href="/blog/2012/01/09/start-working-on-your-side-project">Start Working on Your Side Project Tonight</a></li>
+          
+            
+          
+            
+          
+            
+          
             
           
             
@@ -217,6 +189,11 @@ use once in a while when feeling paranoid.</p>
         
             </ul>
           
+          
+            <p>
+              Get the book:
+              <a href="http://www.amazon.fr/gp/product/020161622X/ref=as li tl?ie=UTF8&camp=1642&creative=6746&creativeASIN=020161622X&linkCode=as2&tag=mg092-21" target="_blank">"The Pragmatic Programmer" by A. Hunt & D. Thomas</a>
+            </p>
           
         </div>
         <a href="https://twitter.com/marcgg" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @marcgg</a>
