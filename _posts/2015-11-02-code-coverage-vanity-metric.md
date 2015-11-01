@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Code Coverage Is A Vanity Metric"
-description: "Using code coverage tools can be helpful to find dead code or untested sections of your project, however, when used as a KPI they can do more harm than good."
+description: "Using code coverage tools can be helpful to find dead code or untested sections of your project, however, when used as a KPI it can do more harm than good."
 blog: false
 category: blog
 tag: ProjectManagement
