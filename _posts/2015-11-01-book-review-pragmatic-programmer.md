@@ -9,7 +9,9 @@ booklink: "http://www.amazon.fr/gp/product/020161622X/ref=as\_li\_tl?ie=UTF8&cam
 bookimg: "pragmatic-programmer-book-cover.jpg"
 ---
 
-This is one of the books I've heard referenced countless times by very smart people before I actually got to read it. Expectations were high, but Andrew Hunt and David Thomas delivered. This book dives into everything that a modern developer needs to aprehend in order to create good software and stay up to date. It delivers important lessons and I now find myself quoting it constantly when [coaching teams][1] or [teaching junior developers][2]. 
+This is one of the books I've heard referenced countless times by very smart people before I actually got to read it. Expectations were high, but Andrew Hunt and David Thomas delivered. This book dives into everything that a modern developer needs to aprehend in order to create good software and stay up to date. 
+
+I now find myself quoting it constantly when [coaching teams][1] or [teaching junior developers][2]. 
 
 <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">&quot;You can&#39;t write perfect software&quot; <a href="http://t.co/AbMbNLA7du">pic.twitter.com/AbMbNLA7du</a></p>&mdash; Marc G Gauthier (@marcgg) <a href="https://twitter.com/marcgg/status/552209764151996416">January 5, 2015</a></blockquote>
 

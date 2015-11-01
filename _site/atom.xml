@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2015-11-01T17:56:09+01:00</updated>
+ <updated>2015-11-01T17:58:04+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -21,7 +21,9 @@
      <updated>2015-11-01T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2015/11/01/book-review-pragmatic-programmer</id>
      <content type="html">
-       &lt;p&gt;This is one of the books I’ve heard referenced countless times by very smart people before I actually got to read it. Expectations were high, but Andrew Hunt and David Thomas delivered. This book dives into everything that a modern developer needs to aprehend in order to create good software and stay up to date. It delivers important lessons and I now find myself quoting it constantly when &lt;a href=&quot;/blog/2014/12/16/coaching-startup-birdly-le-camping/&quot;&gt;coaching teams&lt;/a&gt; or &lt;a href=&quot;/blog/2013/04/22/what-i-learned-teaching-web/&quot;&gt;teaching junior developers&lt;/a&gt;.&lt;/p&gt;
+       &lt;p&gt;This is one of the books I’ve heard referenced countless times by very smart people before I actually got to read it. Expectations were high, but Andrew Hunt and David Thomas delivered. This book dives into everything that a modern developer needs to aprehend in order to create good software and stay up to date.&lt;/p&gt;
+
+&lt;p&gt;I now find myself quoting it constantly when &lt;a href=&quot;/blog/2014/12/16/coaching-startup-birdly-le-camping/&quot;&gt;coaching teams&lt;/a&gt; or &lt;a href=&quot;/blog/2013/04/22/what-i-learned-teaching-web/&quot;&gt;teaching junior developers&lt;/a&gt;.&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;&amp;quot;You can&amp;#39;t write perfect software&amp;quot; &lt;a href=&quot;http://t.co/AbMbNLA7du&quot;&gt;pic.twitter.com/AbMbNLA7du&lt;/a&gt;&lt;/p&gt;&amp;mdash; Marc G Gauthier (@marcgg) &lt;a href=&quot;https://twitter.com/marcgg/status/552209764151996416&quot;&gt;January 5, 2015&lt;/a&gt;&lt;/blockquote&gt;
 
