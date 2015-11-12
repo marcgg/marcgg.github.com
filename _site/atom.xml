@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2015-11-01T17:58:04+01:00</updated>
+ <updated>2015-11-12T13:53:59+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -12,6 +12,55 @@
  </author>
 
  
+  
+   <entry>
+     <title>Code Coverage Is A Vanity Metric</title>
+     <link href="https://marcgg.com/blog/2015/11/03/code-coverage-vanity-metric"/>
+     <updated>2015-11-03T00:00:00+01:00</updated>
+     <id>https://marcgg.com/blog/2015/11/03/code-coverage-vanity-metric</id>
+     <content type="html">
+       &lt;p&gt;Code coverage can be a useful way to find untested sections of your project. However, if used as a KPI, it can do more harm than good.&lt;/p&gt;
+
+&lt;p&gt;I see looking at code coverage a bit the same way as looking at the lines of code count in a project. If there are 800 lines in a file, it’s probably a problem. However if someone uses the number of lines per file as a metric and decides to set objectives like “get every file under 50 LoC”, we’re in trouble. Developers will end up extracting the logic just for the sake of extracting. Of course there are situations where &lt;a href=&quot;https://www.youtube.com/watch?v=f5I1iyso29U&quot;&gt;having a messy file is the best option&lt;/a&gt; at a given time, and judging code quality based on something as arbitrary as LoC count makes little sense.&lt;/p&gt;
+
+&lt;p&gt;Because of that when I hear companies or individuals brag about very high coverage rates, I can’t help but wonder what kind of tests they are doing and why they are so proud of this particular number… because it’s fairly simple to drive this value up and not actually improve your test suite.&lt;/p&gt;
+
+&lt;p&gt;For instance turning a condition into a one liner with the help of a &lt;a href=&quot;https://en.wikipedia.org/wiki/%3F:&quot;&gt;ternary operator&lt;/a&gt; does increase test coverage in most tools, but it doesn’t improve actual testing of the app. You could also run a line of code but not make any assertions on its effects… the line ends up “covered”, but you didn’t test a thing besides syntax errors. Make this test broad enough and you could cover hundreds of lines of code while effectively testing nothing at all. It’s fair to say that, even with no malicious intent, it’s easy to end up with the coverage not really reflecting what is actually tested.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/coverage.jpg&quot; style=&quot;padding: 20px; width: 500px;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;Since code coverage can so easily be wrong and manipulated, it becomes impossible to efficiently act based on it, making it a kind of gamification of testing at best, a vanity metric at worse. Having a high coverage also gives you a certain sense of security, possibly making you blind to deeper issues in your testing strategy.&lt;/p&gt;
+
+&lt;p&gt;The most important thing about tests is their ability to detect bugs, not that they improves some number on a dashboard. You can have thousands of tests, if their only purpose is to raise coverage, they are useless.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The pupil went to the master programmer and said:&lt;/p&gt;
+
+  &lt;p&gt;“All my tests pass all the time. Don’t I deserve a raise?”&lt;/p&gt;
+
+  &lt;p&gt;The master slapped the pupil and replied:&lt;/p&gt;
+
+  &lt;p&gt;“If all your tests pass, all the time, you need to write better tests.”&lt;/p&gt;
+
+  &lt;p&gt; &lt;/p&gt;
+
+  &lt;p&gt;From “&lt;a href=&quot;http://www.artima.com/weblogs/viewpost.jsp?thread=203994&quot;&gt;The Way of Testivus&lt;/a&gt;” by Alberto Savoia&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;You could stop looking at coverage as a sign of good testing and evaluate the number of regressions and other bugs introduced in production instead. This would probably give you a better sense of how well your project is tested. Then you can start thinking about why the tests already written did not catch the issues before release and improve your strategy.&lt;/p&gt;
+
+&lt;p&gt;Of course don’t throw away your coverage tools, they can be useful to find dead code or sections that are not tested… just don’t use the result as some kind of &lt;a href=&quot;https://www.youtube.com/watch?v=KOO5S4vxi0o&quot;&gt;KPI&lt;/a&gt; for your project and don’t assume that a “covered” line is a “tested” line.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“I wouldn’t have written four coverage tools if I didn’t think they’re helpful. But they’re only helpful if they’re used to enhance thought, not replace it”&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Brian_Marick&quot;&gt;Brian Marick&lt;/a&gt; in “&lt;a href=&quot;http://www.exampler.com/testing-com/writings/coverage.pdf&quot;&gt;How to Misuse Code Coverage&lt;/a&gt;”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+       
+     </content>
+   </entry>
   
  
   
