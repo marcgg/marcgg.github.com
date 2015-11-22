@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2015-11-22T16:46:27+01:00</updated>
+ <updated>2015-11-22T22:16:38+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -534,7 +534,7 @@ Switched to branch &#39;first&#39;
 
 &lt;p&gt;I would also recommend reading &lt;a href=&quot;/blog/2015/10/19/book-review-clean-coder/&quot;&gt;The Clean Coder: A Code of Conduct for Professional Programmers&lt;/a&gt; by &lt;a href=&quot;https://twitter.com/unclebobmartin&quot;&gt;Robert C. Martin&lt;/a&gt;. It really is a great book and it goes into more details regarding the relation developers should have with deadlines and estimates. I was very inspired by the dialogues in this book when writing the ones in this article.&lt;/p&gt;
 
-&lt;p&gt;Finally, I encourage you to read &lt;a href=&quot;%5Bhttps://pragprog.com/magazines/2013-04/estimation%5D&quot;&gt;“Estimation - The Best We Can Do”&lt;/a&gt; by Jon Jeffries where he discusses the way estimates can be done in the context of agile teams. I don’t like the concept of velocity, but some points are worth reading.&lt;/p&gt;
+&lt;p&gt;Finally, I encourage you to read &lt;a href=&quot;https://pragprog.com/magazines/2013-04/estimation&quot;&gt;“Estimation - The Best We Can Do”&lt;/a&gt; by Jon Jeffries where he discusses the way estimates can be done in the context of agile teams. I don’t like the concept of velocity, but some points are worth reading.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Thanks a lot to &lt;a href=&quot;http://julienblanchard.com/&quot;&gt;Julien&lt;/a&gt; for challenging me on the very first draft of the article and helping me refine my reflexion. Thanks also to all other people who helped me make some adjustments and spelling corrections!&lt;/em&gt;&lt;/p&gt;
 
@@ -1712,7 +1712,7 @@ They also have an offer for those working with &lt;a href=&quot;https://enterpri
 
 &lt;p&gt;Sorry to break the news, but there is no way you’ll go your entire developer career without &lt;a href=&quot;/blog/2014/04/28/frame-based-layout-bad-code/&quot;&gt;leaving some legacy code behind you&lt;/a&gt;. And it’s okay. If you try to avoid leaving less than perfect code behind you, you might end up not writting anything at all. We all need to learn and hopefully your learning mistakes won’t be too bad. Having good mentors helps.&lt;/p&gt;
 
-&lt;p&gt;I really like Sandi Metz’s talk “&lt;a href=&quot;%5Bhttp://www.confreaks.com/videos/1115-gogaruco2012-go-ahead-make-a-mess%5D&quot;&gt;Go Ahead, Make A Mess&lt;/a&gt;” where she explains that you won’t reach perfection any time soon. You will have people in your team, including yourself, writting poor code at some point. Knowing that, you can focus on mitigating the risk of writting bad code - with strategies as reducing dependecies, good testing, good training and so on. Have some metrics or process (code reviews?) to spot what could become legacy and keep on refactoring.&lt;/p&gt;
+&lt;p&gt;I really like Sandi Metz’s talk “&lt;a href=&quot;http://www.confreaks.com/videos/1115-gogaruco2012-go-ahead-make-a-mess&quot;&gt;Go Ahead, Make A Mess&lt;/a&gt;” where she explains that you won’t reach perfection any time soon. You will have people in your team, including yourself, writting poor code at some point. Knowing that, you can focus on mitigating the risk of writting bad code - with strategies as reducing dependecies, good testing, good training and so on. Have some metrics or process (code reviews?) to spot what could become legacy and keep on refactoring.&lt;/p&gt;
 
 &lt;p&gt;In this whole process, learn from what you just refactored or rewrote, and always thrive to achieve better design and a cleaner coding style. It can only lead to better software and happier teammates.&lt;/p&gt;
 

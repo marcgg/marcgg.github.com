@@ -60,4 +60,4 @@ In this whole process, learn from what you just refactored or rewrote, and alway
 [1]:	http://www.goodreads.com/quotes/718460-code-without-tests-is-bad-code-it-doesn-t-matter-how
 [2]:	http://blog.codinghorror.com/the-best-code-is-no-code-at-all/
 [3]:	/blog/2014/04/28/frame-based-layout-bad-code/
-[4]:	%5Bhttp://www.confreaks.com/videos/1115-gogaruco2012-go-ahead-make-a-mess%5D
+[4]:	http://www.confreaks.com/videos/1115-gogaruco2012-go-ahead-make-a-mess

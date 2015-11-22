@@ -229,5 +229,5 @@ _Thanks a lot to [Julien][10] for challenging me on the very first draft of the 
 [6]:	https://michaelochurch.wordpress.com/2014/06/20/on-programmers-deadlines-and-agile/
 [7]:	/blog/2015/10/19/book-review-clean-coder/
 [8]:	https://twitter.com/unclebobmartin
-[9]:	%5Bhttps://pragprog.com/magazines/2013-04/estimation%5D
+[9]:	https://pragprog.com/magazines/2013-04/estimation
 [10]:	http://julienblanchard.com/
