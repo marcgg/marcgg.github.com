@@ -144,6 +144,9 @@
 		<array>
 			<string>2015-11-01-book-review-pragmatic-programmer.md</string>
 		</array>
+		<array>
+			<string>2016-02-15-rspec-on-multiple-rails-projects.md</string>
+		</array>
 	</array>
 	<key>userIconName</key>
 	<string>Notes</string>

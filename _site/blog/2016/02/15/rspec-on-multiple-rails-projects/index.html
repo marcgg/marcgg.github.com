@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      Automatically Run RSpec on Multiple Projects
+    </title>
+    <meta name="description" content="Running RSpec on more than one project is already tricky when it's just Ruby... but try to do it for dozens of different Rails project and it becomes a real headache. Here's a relatively simple solution to this using shell scripts and Ruby.">
+    <meta name="author" content="Marc G Gauthier">
+    <meta content='user-scalable=no, width=device-width, initial-scale=1.0' name='viewport'>
+    <meta name="google-site-verification" content="x2EpQdOMz-k9fP8hak9I3COaXhnQ4jNLp2GU4GYQ8jM" />
+    <link href='//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,400,700,300' rel='stylesheet' type='text/css'>
+    <link href="/assets/css/app.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/atom.xml" rel="alternate" type="application/atom+xml" title="Marcgg#Blog">
+    <link rel="shortcut icon" href="/assets/favicon.png">
+  </head>
+
+  <body>
+    <header>
+
+      <div id="logo">
+        <a id='logo1' href="/">marcgg</a>
+        <span id='logo2'>#</span>
+        <a id='logo3' href="/blog/">
+          blog
+        </a>
+      </div>
+      <div id="more-nav">
+        &rarr; <a href="/blog/" class="selected">blog</a>
+        &rarr; <a href="/photos/" class="">photos</a>
+        &rarr; <a href="/hire/" class="">hire me</a>
+      </div>
+    </header>
+
+    <h1>
+  <span>
+    
+      Automatically Run RSpec on Multiple Projects
+    
+    
+  </span>
+</h1>
+
+
+<div class="published">
+  <span>15 February 2016</span>
+</div>
+
+<div id="container">
+  <div id="content">
+    <div class="post" id="post-">
+
+      
+      <p><em>tl;dr: I had to run specs on a lot of different projects and gather results. Here’s how I did it with shell scripts and Ruby.</em></p>
+
+<p>For a couple of years now I’ve been teaching a Ruby on Rails class for approximatively 100 students. Since I believe in learning by doing, I try to get them to actually code as much as possible. To do this I usually give them automated tests that they have to get to work. I’m not a huge believer in grades, but I do have to give them one and it’s always a good incentive for the students to get to work. Therefore all these exercices go this way: 20 tests, 1 point per test passing.</p>
+
+<p>Every week, I would give them a new exercice and I try to get it corrected before the next class. Then I would adapt what I my slides according to their results. For instance if everybody failed on a particular test, I would spend more time on it. It also allows me to spot students in difficulty. Overall I think it’s a good approach and it gets everyone coding on the first day of class.</p>
+
+<p>The problem with this is that every week I would end up with close to an hundred Ruby on Rails projects on which I would need to run the specs to see how my students performed. Doing this manually would take forever, especially if you want insights like “how many students failed the 5th test?”, so obviously I had to automate this.</p>
+
+<h2 id="without-rails">Without Rails</h2>
+
+<p>Running RSpec on a simple Ruby project without Rails is the easier one because loading a few Ruby files is pretty straightforward.</p>
+
+<h3 id="using-a-formatter">Using a Formatter</h3>
+
+<p>First we need to use a <a href="https://www.relishapp.com/rspec/rspec-core/docs/formatters/json-formatter">JSON formatter</a> so that rspec’s output becomes easily usable:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">&#39;rspec&#39;</span>
+<span class="nb">require</span> <span class="s1">&#39;rspec/core/formatters/json_formatter&#39;</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="no">RSpec</span><span class="o">.</span><span class="n">configuration</span>
+<span class="n">formatter</span> <span class="o">=</span> <span class="no">RSpec</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">Formatters</span><span class="o">::</span><span class="no">JsonFormatter</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">output_stream</span><span class="p">)</span>
+<span class="n">reporter</span> <span class="o">=</span>  <span class="no">RSpec</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">Reporter</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+<span class="n">config</span><span class="o">.</span><span class="n">instance_variable_set</span><span class="p">(</span><span class="ss">:@reporter</span><span class="p">,</span> <span class="n">reporter</span><span class="p">)</span>
+<span class="n">loader</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="ss">:formatter_loader</span><span class="p">)</span>
+<span class="n">notifications</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="ss">:notifications_for</span><span class="p">,</span> <span class="no">RSpec</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">Formatters</span><span class="o">::</span><span class="no">JsonFormatter</span><span class="p">)</span>
+<span class="n">reporter</span><span class="o">.</span><span class="n">register_listener</span><span class="p">(</span><span class="n">formatter</span><span class="p">,</span> <span class="o">*</span><span class="n">notifications</span><span class="p">)</span></code></pre></div>
+
+<h3 id="running-the-specs">Running The Specs</h3>
+
+<p>Then we need to iterate over every projects with <code class="highlighter-rouge">Dir.entries</code> and each time load the implementation files:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Dir</span><span class="o">[</span><span class="s2">&quot;code_path/*.rb&quot;</span><span class="o">].</span><span class="n">each</span> <span class="p">{</span><span class="o">|</span><span class="n">file</span><span class="o">|</span> <span class="nb">require</span> <span class="n">file</span> <span class="p">}</span></code></pre></div>
+
+<p>… and then actually run the specs:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">RSpec</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">Runner</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="o">[</span><span class="n">file</span><span class="o">]</span><span class="p">)</span></code></pre></div>
+
+<p>The problem you might notice is that we don’t unload the previously loaded files, which can lead to issues. To fix this, the simplest solution is to run all this in <a href="http://ruby-doc.org/core-2.1.2/Process.html">a new process</a> and the memory encapsulation will take care of itself:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">fork</span> <span class="k">do</span>
+  <span class="no">Dir</span><span class="o">[</span><span class="s2">&quot;code_path/*.rb&quot;</span><span class="o">].</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">file</span><span class="o">|</span> <span class="nb">require</span> <span class="n">file</span> <span class="p">}</span>
+  <span class="no">RSpec</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">Runner</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="o">[</span><span class="n">file</span><span class="o">]</span><span class="p">)</span>
+<span class="k">end</span></code></pre></div>
+
+<h3 id="reading-the-results">Reading the Results</h3>
+<p>Once the specs are done running, you can just access the results via the formatter with <code class="highlighter-rouge">formatter.output_hash</code>. For instance if you want the number of failures:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">formatter</span><span class="o">.</span><span class="n">output_hash</span><span class="o">[</span><span class="ss">:summary</span><span class="o">][</span><span class="ss">:failure_count</span><span class="o">]</span></code></pre></div>
+
+<p>Once you managed to read the information you need, you can store it in a file somewhere and manipulate it easily in another process.</p>
+
+<h2 id="with-rails">With Rails</h2>
+
+<p>Getting a project ready to run rspec can get tricky as a lot of new factors are introduced (gems, databases…). Loading rails to run rspec is more complex than just looping a its file and doing a <code class="highlighter-rouge">require</code>. I tried doing it by loading Rails from a fork like before, but it turned out to be a mess and there was some cases where it would simply not work. Remember, I have to work with hundreds of different student projects, and it has to run for all of them.</p>
+
+<h3 id="shell-scripts-to-the-rescue">Shell Scripts To The Rescue!</h3>
+
+<p>After a few hours stuck on weird Rails issues, I figured it would be simpler and faster to just introduce bash and brute force my problem. Since it’s script issue, why not write shell scripts?</p>
+
+<p>So first I created a Ruby script that would generate a shell script for each project looking like this:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>  cd FULL_PATH
+  bundle install
+  rake db:drop RAILS_ENV=test
+  rake db:create RAILS_ENV=test
+  rake db:migrate RAILS_ENV=test
+  bundle exec rspec spec &gt; ../rspec_results.log
+</code></pre>
+</div>
+
+<p>Running this script would setup the environment and run the specs while outputing the results in a log file that I will be able to process later one.</p>
+
+<p>I don’t think that sharing this piece of code is as interesting since it’s a bit messy and depends on your file structure, but the idea is to create a new <code class="highlighter-rouge">.sh</code> file for each project.</p>
+
+<p>Don’t forget to set it to the appropriate access rights:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">FileUtils</span><span class="o">.</span><span class="n">chown</span><span class="p">(</span><span class="s2">&quot;youruser&quot;</span><span class="p">,</span> <span class="s2">&quot;staff&quot;</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+<span class="no">FileUtils</span><span class="o">.</span><span class="n">chmod</span><span class="p">(</span><span class="mo">0777</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span></code></pre></div>
+
+<p>If you really want to take a look at what I’ve done here, <a href="https://gist.github.com/marcgg/b1a50180d1ff239ba555">I created a gist</a>. Also note that you could have done the same thing with a bigger and more complex shell script, but I figured it would be simpler to it this way with a bunch of really small and independant files.</p>
+
+<h3 id="running-the-scripts">Running The Scripts</h3>
+
+<p>Once all the scripts are created, we just need to run them. So, for every project folder run:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Dir</span><span class="o">.</span><span class="n">entries</span><span class="p">(</span><span class="vg">$path</span><span class="p">)</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">entry</span><span class="o">|</span>
+  <span class="nb">fork</span> <span class="p">{</span> <span class="nb">exec</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">#{</span><span class="vg">$path</span><span class="si">}</span><span class="s2">/</span><span class="si">#{</span><span class="n">entry</span><span class="si">}</span><span class="s2">/run.sh&quot;</span><span class="p">)</span> <span class="p">}</span>
+<span class="k">end</span></code></pre></div>
+
+<p>Note that I run once again the code in a new process. This is mainly because I want to take advantage of the multiple cores on my machine as much as possible. Of course this will result in my computer to really slow down, as running a hundred rails processes and bundler installation is very memory heavy, but from my experience it’s faster. Using <code class="highlighter-rouge">exec</code> is nice here as it <a href="http://ruby-doc.org/core-2.3.0/Kernel.html#method-i-exec">completely replace the ruby process by the shell script</a>.</p>
+
+<h3 id="reading-the-results-1">Reading The Results</h3>
+
+<p>Once all the scripts are done running, you can just parse the multiple <code class="highlighter-rouge">rspec_results.log</code> files you ended up with. In my experience it involves a few regular expressions but it’s quite easy. You could also make the rspec output <a href="https://relishapp.com/rspec/rspec-core/v/2-6/docs/command-line/format-option">more to your taste</a> with the <code class="highlighter-rouge">--format</code> option if you’d like.</p>
+
+
+
+      <div id="more">
+        
+        
+
+        <div id="more-articles">
+          
+            <p>Since you scrolled this far, you might as well take a look at some other things I wrote !</p>
+            <ul>
+              
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              <li><a href="/blog/2015/10/18/git-checkout-minus">How To Checkout The Previous Branch In Git</a></li>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              <li><a href="/blog/2015/08/04/git-first-parent-log">Git Log's --first-parent Option</a></li>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              <li><a href="/blog/2014/07/22/in-defense-of-legacy-code">Some Respect For Legacy Code</a></li>
+            
+          
+            
+          
+            
+              
+              <li><a href="/blog/2014/04/28/frame-based-layout-bad-code">Tips on Creating a Website From When I Was 12</a></li>
+            
+          
+            
+          
+            
+          
+            
+              
+              <li><a href="/blog/2013/11/05/enough-with-the-language-trolls">Enough With The Trolls</a></li>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              <li><a href="/blog/2013/03/25/please-changelog-open-source">Please Keep a Changelog For Your Open Source Lib</a></li>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              <li><a href="/blog/2012/09/04/one-reason-to-switch-to-vim-editor">The One Thing That Made Me Switch To Vim</a></li>
+            
+          
+            
+          
+            
+          
+            
+          
+        
+            </ul>
+          
+          
+        </div>
+        <a href="https://twitter.com/marcgg" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @marcgg</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+        <a href="https://twitter.com/share" class="twitter-share-button" data-via="marcgg" data-size="large">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+      </div>
+
+      <div id="comments">
+        <style id="disqus_hide">
+          #disqus_thread{
+            display: none;
+          }
+        </style>
+        <p>
+          <span id="show-disqus-arrow">&rarr; </span>
+          <a href="#" id="show-disqus">Read the comments or contribute with your own</a>
+        </p>
+        <div id="disqus_thread"></div>
+      </div>
+      <script type="text/javascript">
+          var disqus_shortname = 'marcgg';
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+      </script>
+
+    </div>
+
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="/assets/js/comments.js"></script>
+
+
+    <footer>
+      <div>Website powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>, hosted on
+      <a href="https://github.com/marcgg/marcgg.github.com">Github</a>
+      and put together by <a href="http://twitter.com/marcgg">@marcgg</a>.</div>
+      <div>All of the <a href="/blog">blog's articles</a> are under
+      <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative commons</a> license
+      unless stated otherwise. Everything else is &copy;.</div>
+    </footer>
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-31071519-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </body>
+</html>
