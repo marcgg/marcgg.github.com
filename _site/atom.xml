@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2016-02-15T08:23:45+01:00</updated>
+ <updated>2016-02-15T08:25:40+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -80,12 +80,12 @@
 
 &lt;p&gt;First I created a Ruby script that would generate a shell script for each project looking like this:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  cd FULL_PATH
-  bundle install
-  rake db:drop RAILS_ENV=test
-  rake db:create RAILS_ENV=test
-  rake db:migrate RAILS_ENV=test
-  bundle exec rspec spec &amp;gt; ../rspec_results.log
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd FULL_PATH
+bundle install
+rake db:drop RAILS_ENV=test
+rake db:create RAILS_ENV=test
+rake db:migrate RAILS_ENV=test
+bundle exec rspec spec &amp;gt; ../rspec_results.log
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 

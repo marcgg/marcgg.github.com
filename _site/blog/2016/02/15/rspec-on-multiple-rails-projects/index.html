@@ -113,12 +113,12 @@
 
 <p>First I created a Ruby script that would generate a shell script for each project looking like this:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>  cd FULL_PATH
-  bundle install
-  rake db:drop RAILS_ENV=test
-  rake db:create RAILS_ENV=test
-  rake db:migrate RAILS_ENV=test
-  bundle exec rspec spec &gt; ../rspec_results.log
+<div class="highlighter-rouge"><pre class="highlight"><code>cd FULL_PATH
+bundle install
+rake db:drop RAILS_ENV=test
+rake db:create RAILS_ENV=test
+rake db:migrate RAILS_ENV=test
+bundle exec rspec spec &gt; ../rspec_results.log
 </code></pre>
 </div>
 

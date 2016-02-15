@@ -79,12 +79,12 @@ After a few hours stuck on weird Rails issues, I figured it would be simpler and
 
 First I created a Ruby script that would generate a shell script for each project looking like this:
 
-	  cd FULL_PATH
-	  bundle install
-	  rake db:drop RAILS_ENV=test
-	  rake db:create RAILS_ENV=test
-	  rake db:migrate RAILS_ENV=test
-	  bundle exec rspec spec > ../rspec_results.log
+	cd FULL_PATH
+	bundle install
+	rake db:drop RAILS_ENV=test
+	rake db:create RAILS_ENV=test
+	rake db:migrate RAILS_ENV=test
+	bundle exec rspec spec > ../rspec_results.log
 
 Running this script would setup the environment and run the specs while outputting the results in a log file that I will be able to process later on.
 
