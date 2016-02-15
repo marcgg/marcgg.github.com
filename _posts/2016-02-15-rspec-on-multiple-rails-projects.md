@@ -41,13 +41,13 @@ reporter.register_listener(formatter, *notifications)
 Once the formatter is setup, we need to iterate over every projects with `Dir.entries` and load the implementation files for every project:
 
 {% highlight ruby %}
-	Dir["code_path/*.rb"].each {|file| require file }
+Dir["code_path/*.rb"].each {|file| require file }
 {% endhighlight %}
 
 ... and actually run the specs right after:
 
 {% highlight ruby %}
-	RSpec::Core::Runner.run([file])
+RSpec::Core::Runner.run([file])
 {% endhighlight %}
 
 The problem here is that we don't unload the previously loaded files, which can lead to issues. To fix this, the simplest solution is to run this in [a new process][2] and the memory encapsulation will take care of itself:
@@ -64,7 +64,7 @@ end
 Once the specs are done running, you can just access the results via the formatter with `formatter.output_hash`. For instance if you want the number of failures:
 
 {% highlight ruby %}
-	formatter.output_hash[:summary][:failure_count]
+formatter.output_hash[:summary][:failure_count]
 {% endhighlight %}
 
 Once you managed to read the information you need, you can store it in a file somewhere and manipulate it easily in another process.
