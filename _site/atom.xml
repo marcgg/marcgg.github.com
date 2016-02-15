@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2016-02-14T18:23:29+01:00</updated>
+ <updated>2016-02-15T08:23:45+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -21,15 +21,15 @@
      <content type="html">
        &lt;p&gt;&lt;em&gt;tl;dr: I had to run specs on a lot of different projects and gather results. Here’s how I did it with shell scripts and Ruby.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;For a couple of years now I’ve been teaching a Ruby on Rails class for approximatively 100 students. Since I believe in learning by doing, I try to get them to actually code as much as possible. To do this I usually give them automated tests that they have to get to work. I’m not a huge believer in grades, but I do have to give them one and it’s always a good incentive for the students to get to work. Therefore all these exercices go this way: 20 tests, 1 point per test passing.&lt;/p&gt;
+&lt;p&gt;For a couple of years now I’ve been teaching a Ruby on Rails class for approximatively 100 students. Since I believe in learning by doing, I try to get them to actually write code as much as possible. To do this I usually give them automated tests that they have to get to pass. I’m not a huge believer in grades, but I do have to give them one and it’s always a good incentive for the students to get to work. Therefore all these exercices go this way: 20 tests, 1 point per test passing.&lt;/p&gt;
 
-&lt;p&gt;Every week, I would give them a new exercice and I try to get it corrected before the next class. Then I would adapt what I my slides according to their results. For instance if everybody failed on a particular test, I would spend more time on it. It also allows me to spot students in difficulty. Overall I think it’s a good approach and it gets everyone coding on the first day of class.&lt;/p&gt;
+&lt;p&gt;Every week, I would give them a new exercice and I try to get it corrected before the next class. I would then adapt my slides according to their results to focus on pain points. It also allows me to spot students in difficulty. Overall I think it’s a good approach and it gets everyone coding on the first day of class.&lt;/p&gt;
 
-&lt;p&gt;The problem with this is that every week I would end up with close to an hundred Ruby on Rails projects on which I would need to run the specs to see how my students performed. Doing this manually would take forever, especially if you want insights like “how many students failed the 5th test?”, so obviously I had to automate this.&lt;/p&gt;
+&lt;p&gt;The problem with this is that every week I would end up with close to a hundred Ruby on Rails projects on which I would need to run the specs to see how my students performed. Doing this manually would take forever, especially if I wanted insights like “how many students failed the 5th test?”, so obviously I had to automate this.&lt;/p&gt;
 
 &lt;h2 id=&quot;without-rails&quot;&gt;Without Rails&lt;/h2&gt;
 
-&lt;p&gt;Running RSpec on a simple Ruby project without Rails is the easier one because loading a few Ruby files is pretty straightforward.&lt;/p&gt;
+&lt;p&gt;Running RSpec on a simple Ruby project without Rails is easier because loading a few Ruby files is pretty straightforward and rspec comes with tooling for this situation.&lt;/p&gt;
 
 &lt;h3 id=&quot;using-a-formatter&quot;&gt;Using a Formatter&lt;/h3&gt;
 
@@ -48,15 +48,15 @@
 
 &lt;h3 id=&quot;running-the-specs&quot;&gt;Running The Specs&lt;/h3&gt;
 
-&lt;p&gt;Then we need to iterate over every projects with &lt;code class=&quot;highlighter-rouge&quot;&gt;Dir.entries&lt;/code&gt; and each time load the implementation files:&lt;/p&gt;
+&lt;p&gt;Once the formatter is setup, we need to iterate over every projects with &lt;code class=&quot;highlighter-rouge&quot;&gt;Dir.entries&lt;/code&gt; and load the implementation files for every project:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;no&quot;&gt;Dir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;code_path/*.rb&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;… and then actually run the specs:&lt;/p&gt;
+&lt;p&gt;… and actually run the specs right after:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;no&quot;&gt;RSpec&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Core&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Runner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;The problem you might notice is that we don’t unload the previously loaded files, which can lead to issues. To fix this, the simplest solution is to run all this in &lt;a href=&quot;http://ruby-doc.org/core-2.1.2/Process.html&quot;&gt;a new process&lt;/a&gt; and the memory encapsulation will take care of itself:&lt;/p&gt;
+&lt;p&gt;The problem here is that we don’t unload the previously loaded files, which can lead to issues. To fix this, the simplest solution is to run this in &lt;a href=&quot;http://ruby-doc.org/core-2.1.2/Process.html&quot;&gt;a new process&lt;/a&gt; and the memory encapsulation will take care of itself:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;nb&quot;&gt;fork&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
   &lt;span class=&quot;no&quot;&gt;Dir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;code_path/*.rb&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
@@ -72,13 +72,13 @@
 
 &lt;h2 id=&quot;with-rails&quot;&gt;With Rails&lt;/h2&gt;
 
-&lt;p&gt;Getting a project ready to run rspec can get tricky as a lot of new factors are introduced (gems, databases…). Loading rails to run rspec is more complex than just looping a its file and doing a &lt;code class=&quot;highlighter-rouge&quot;&gt;require&lt;/code&gt;. I tried doing it by loading Rails from a fork like before, but it turned out to be a mess and there was some cases where it would simply not work. Remember, I have to work with hundreds of different student projects, and it has to run for all of them.&lt;/p&gt;
+&lt;p&gt;Getting a project ready to run rspec can get tricky as a lot of new factors are introduced (gems, databases…). Loading rails to run rspec is more complex than just looping throught the project’s files and doing a &lt;code class=&quot;highlighter-rouge&quot;&gt;require&lt;/code&gt;. I tried doing it by manually loading Rails from a fork like before, but it turned out to be a mess and there was some cases where it would simply not work. Remember, I have to work with hundreds of different student projects, and it has to run for all of them.&lt;/p&gt;
 
 &lt;h3 id=&quot;shell-scripts-to-the-rescue&quot;&gt;Shell Scripts To The Rescue!&lt;/h3&gt;
 
 &lt;p&gt;After a few hours stuck on weird Rails issues, I figured it would be simpler and faster to just introduce bash and brute force my problem. Since it’s script issue, why not write shell scripts?&lt;/p&gt;
 
-&lt;p&gt;So first I created a Ruby script that would generate a shell script for each project looking like this:&lt;/p&gt;
+&lt;p&gt;First I created a Ruby script that would generate a shell script for each project looking like this:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  cd FULL_PATH
   bundle install
@@ -89,16 +89,14 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Running this script would setup the environment and run the specs while outputing the results in a log file that I will be able to process later one.&lt;/p&gt;
+&lt;p&gt;Running this script would setup the environment and run the specs while outputting the results in a log file that I will be able to process later on.&lt;/p&gt;
 
-&lt;p&gt;I don’t think that sharing this piece of code is as interesting since it’s a bit messy and depends on your file structure, but the idea is to create a new &lt;code class=&quot;highlighter-rouge&quot;&gt;.sh&lt;/code&gt; file for each project.&lt;/p&gt;
-
-&lt;p&gt;Don’t forget to set it to the appropriate access rights:&lt;/p&gt;
+&lt;p&gt;I don’t think that sharing this piece of code is as interesting since it’s a bit messy and depends on your file structure. The idea is to create a new &lt;code class=&quot;highlighter-rouge&quot;&gt;.sh&lt;/code&gt; file for each project and don’t forget to set it to the appropriate access rights:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;no&quot;&gt;FileUtils&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;chown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;youruser&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;staff&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;no&quot;&gt;FileUtils&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;chmod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mo&quot;&gt;0777&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;If you really want to take a look at what I’ve done here, &lt;a href=&quot;https://gist.github.com/marcgg/b1a50180d1ff239ba555&quot;&gt;I created a gist&lt;/a&gt;. Also note that you could have done the same thing with a bigger and more complex shell script, but I figured it would be simpler to it this way with a bunch of really small and independant files.&lt;/p&gt;
+&lt;p&gt;If you really want to take a look at what I’ve done here, &lt;a href=&quot;https://gist.github.com/marcgg/b1a50180d1ff239ba555&quot;&gt;I created a gist&lt;/a&gt;. Also note that you could have done the same thing with a bigger and more complex shell script, but I figured it would be simpler to it this way with a bunch of really small and independent files.&lt;/p&gt;
 
 &lt;h3 id=&quot;running-the-scripts&quot;&gt;Running The Scripts&lt;/h3&gt;
 
@@ -108,7 +106,7 @@
   &lt;span class=&quot;nb&quot;&gt;fork&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;vg&quot;&gt;$path&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;entry&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/run.sh&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Note that I run once again the code in a new process. This is mainly because I want to take advantage of the multiple cores on my machine as much as possible. Of course this will result in my computer to really slow down, as running a hundred rails processes and bundler installation is very memory heavy, but from my experience it’s faster. Using &lt;code class=&quot;highlighter-rouge&quot;&gt;exec&lt;/code&gt; is nice here as it &lt;a href=&quot;http://ruby-doc.org/core-2.3.0/Kernel.html#method-i-exec&quot;&gt;completely replace the ruby process by the shell script&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Note that I run once again the code in a new process. This is mainly because I want to take advantage of the multiple cores on my machine. Of course this will result in my computer to really slow down, as running a hundred rails processes and bundler installation is very memory heavy, but from my experience it always turns out to be faster - at least on my computer. Using &lt;code class=&quot;highlighter-rouge&quot;&gt;exec&lt;/code&gt; is nice here as it &lt;a href=&quot;http://ruby-doc.org/core-2.3.0/Kernel.html#method-i-exec&quot;&gt;completely replace the ruby process by the shell script&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;reading-the-results-1&quot;&gt;Reading The Results&lt;/h3&gt;
 
