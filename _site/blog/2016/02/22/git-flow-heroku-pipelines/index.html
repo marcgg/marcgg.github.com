@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      Simple Git Flow With Heroku Pipelines
+    </title>
+    <meta name="description" content="With the introduction of Heroku pipelines and the general complexity of Git Flow, we decided to change the way we work with Git.">
+    <meta name="author" content="Marc G Gauthier">
+    <meta content='user-scalable=no, width=device-width, initial-scale=1.0' name='viewport'>
+    <meta name="google-site-verification" content="x2EpQdOMz-k9fP8hak9I3COaXhnQ4jNLp2GU4GYQ8jM" />
+    <link href='//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,400,700,300' rel='stylesheet' type='text/css'>
+    <link href="/assets/css/app.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/atom.xml" rel="alternate" type="application/atom+xml" title="Marcgg#Blog">
+    <link rel="shortcut icon" href="/assets/favicon.png">
+  </head>
+
+  <body>
+    <header>
+
+      <div id="logo">
+        <a id='logo1' href="/">marcgg</a>
+        <span id='logo2'>#</span>
+        <a id='logo3' href="/blog/">
+          blog
+        </a>
+      </div>
+      <div id="more-nav">
+        &rarr; <a href="/blog/" class="selected">blog</a>
+        &rarr; <a href="/photos/" class="">photos</a>
+        &rarr; <a href="/hire/" class="">hire me</a>
+      </div>
+    </header>
+
+    <h1>
+  <span>
+    
+      Simple Git Flow With Heroku Pipelines
+    
+    
+  </span>
+</h1>
+
+
+<div class="published">
+  <span>22 February 2016</span>
+</div>
+
+<div id="container">
+  <div id="content">
+    <div class="post" id="post-">
+
+      
+      <p>At <a href="https://www.drivy.com/">Drivy</a> we’ve changed the way we work with Git from <a href="http://nvie.com/posts/a-successful-git-branching-model/">Git flow</a> to something new… and so far it’s been working pretty well and allowed us to release faster! I feel like that this new flow is way simpler than Git Flow and more pragmatic than Github’s Flow. It has some general guidelines but still accounts for how a team acts in real life. The goal and measure of success here is the team’s ability to ship stable code quickly.</p>
+
+<p>Let’s dig in!</p>
+
+<h2 id="moving-away-from-git-flow">Moving Away From Git Flow</h2>
+
+<p>For a while we used Git flow. After some time, like many, we ended up using a simplified version of it with no release branches. It worked fine and basically our release flow would go something like this:</p>
+
+<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git-flow-before.jpg" alt="Git checkout previous schema" style="padding: 20px; width: 600px;" /></div>
+
+<p>However recently Heroku released <a href="https://blog.heroku.com/archives/2015/9/3/heroku_flow_pipelines_review_apps_and_github_sync">pipelines</a>, allowing you to promote your code from an environment to another really quickly. This was great and allowed us to speed up production releases, going from a few minutes to a couple of seconds.</p>
+
+<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/heroku-pipeline.png" alt="Git checkout previous schema" style="padding: 20px; width: 600px;" /></div>
+
+<p>The problem is that at this point we wouldn’t release <code class="highlighter-rouge">develop</code> to staging and <code class="highlighter-rouge">master</code> to production… we would release <code class="highlighter-rouge">develop</code> to staging and then promote staging to production.</p>
+
+<p>In the grand scheme of things it didn’t change much but, because of this, the <code class="highlighter-rouge">master</code> branch stopped making sense since we would never actually push it to Heroku. We would still merge to to <code class="highlighter-rouge">master</code> to have this branch always releasable… but it felt weird, brought complexity to our automated scripts and confused new hires.</p>
+
+<p>We had to change something.</p>
+
+<h2 id="why-not-using-the-github-flow">Why Not Using The Github Flow?</h2>
+
+<p><a href="https://guides.github.com/introduction/flow/">This flow suggested by Github</a> looked very promising, but I’m still having doubts regarding this part:</p>
+
+<blockquote>
+  <p>Once your pull request has been reviewed and the branch passes your tests, you can deploy your changes to verify them in production. If your branch causes issues, you can roll it back by deploying the existing master into production.</p>
+</blockquote>
+
+<p>This looks nice on paper, but if you have a lot of developers wanting to push to production constantly it might slow things down as people wait to deploy their branch. You could solve this by running multiple versions of the code on different machines and load balance traffic, but that seems overkill in most of the use cases I’ve encountered - I’d much rather have only one version of the code live and use <a href="https://en.wikipedia.org/wiki/Feature_toggle">feature flippers</a>.</p>
+
+<h2 id="our-simple-git-flow">Our Simple Git Flow</h2>
+
+<p>At Drivy we emphasize small releases with a lot of tests and peer reviews. This allows us to move fast without breaking anything while keeping a high quality code base. Because of this we needed a very simple Git flow that didn’t get in the way of shipping code.</p>
+
+<h3 id="basic-guidelines">Basic Guidelines</h3>
+
+<p>Based on how we worked and our objective to be able to ship constantly and easily, we decided on these rules:</p>
+
+<ul>
+  <li>Use feature branches.</li>
+  <li><code class="highlighter-rouge">master</code>’s head is pushed to our staging environement automatically by our CI if the tests pass.</li>
+  <li>The staging environment can be promoted to production by any developer once it’s considered valid.</li>
+  <li>Promoting to production adds a tag to the latest commit being promoted.</li>
+</ul>
+
+<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git-flow-drivy.jpg" alt="Git checkout previous schema" style="padding: 20px; width: 600px;" /></div>
+
+<p><em>Note that for promoting a release from staging to production we use an internal tools to speed things up and keep this process safe. Basically a developer can just run <code class="highlighter-rouge">$ drivy release</code> in their terminal and a tool will check a bunch of things and promote the release if it’s deemed safe (checking github issues, database migrations, <a href="http://cl.ly/0D3w0N2G331v">possible manual locking</a>…). Of course you can do the same thing manually.</em></p>
+
+<h3 id="bundling-or-not-bundling">Bundling Or Not Bundling</h3>
+
+<p>In the spirit of moving fast, every developer should try to release as soon as it gets to staging to avoid slowing other down. However there might be some cases where it’s not possible, optimal, or maybe something goes wrong and you have to do it in another way.</p>
+
+<p>The great thing with this setup is that it allows for quick and small deploys of possibly multiple different commits at once if needed:</p>
+
+<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git-flow-bundling.jpg" alt="Git checkout previous schema" style="padding: 20px; width: 600px;" /></div>
+
+<p>However in some cases you don’t want your commit to be pushed as part of another release. Let’s say you merged your commit and you’re ready to push it to production, but another developer merges their commit as well:</p>
+
+<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git-flow-release-blocking-1.jpg" alt="Git checkout previous schema" style="padding: 20px; width: 600px;" /></div>
+
+<p>In this situation, no need to wait! You can simply promote the latest valid staging release to production:</p>
+
+<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git-flow-release-blocking-2.jpg" alt="Git checkout previous schema" style="padding: 20px; width: 600px;" /></div>
+
+<h3 id="hotfixing">Hotfixing</h3>
+
+<p>If there is an issue with a release and we can’t release <code class="highlighter-rouge">master</code> for any reason, we can still hotfix pretty easily. To do this we just need to checkout to the latest tag which represent the version running in production and pull a hotfix branch. Then we do the fix, release the hotfix branch and merge it back into <code class="highlighter-rouge">master</code>.</p>
+
+<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git-flow-hotfix-1.jpg" alt="Git checkout previous schema" style="padding: 20px; width: 600px;" /></div>
+
+<p>The hotfix branch will be running in production until whatever is blocking <code class="highlighter-rouge">master</code> is fixed.</p>
+
+<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git-flow-hotfix-2.jpg" alt="Git checkout previous schema" style="padding: 20px; width: 600px;" /></div>
+
+<p>Of course we should avoid as much as possible commits preventing the <code class="highlighter-rouge">master</code> branch to be released, but this kind of things can happen and thanks to the tags we are able to.</p>
+
+
+
+      <div id="more">
+        
+        
+
+        <div id="more-articles">
+          
+          <p>
+            If you liked this, feel free to <a href="/blog">browse other articles on my blog</a>.
+          </p>
+          
+          
+        </div>
+        <a href="https://twitter.com/marcgg" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @marcgg</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+        <a href="https://twitter.com/share" class="twitter-share-button" data-via="marcgg" data-size="large">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+      </div>
+
+      <div id="comments">
+        <style id="disqus_hide">
+          #disqus_thread{
+            display: none;
+          }
+        </style>
+        <p>
+          <span id="show-disqus-arrow">&rarr; </span>
+          <a href="#" id="show-disqus">Read the comments or contribute with your own</a>
+        </p>
+        <div id="disqus_thread"></div>
+      </div>
+      <script type="text/javascript">
+          var disqus_shortname = 'marcgg';
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+      </script>
+
+    </div>
+
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="/assets/js/comments.js"></script>
+
+
+    <footer>
+      <div>Website powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>, hosted on
+      <a href="https://github.com/marcgg/marcgg.github.com">Github</a>
+      and put together by <a href="http://twitter.com/marcgg">@marcgg</a>.</div>
+      <div>All of the <a href="/blog">blog's articles</a> are under
+      <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative commons</a> license
+      unless stated otherwise. Everything else is &copy;.</div>
+    </footer>
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-31071519-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </body>
+</html>

@@ -147,6 +147,9 @@
 		<array>
 			<string>2016-02-15-rspec-on-multiple-rails-projects.md</string>
 		</array>
+		<array>
+			<string>2016-02-22-git-flow-heroku-pipelines.md</string>
+		</array>
 	</array>
 	<key>userIconName</key>
 	<string>Notes</string>
