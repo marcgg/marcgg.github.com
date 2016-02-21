@@ -15,11 +15,11 @@ Let's dig in!
 
 For a while we used Git flow. After some time, like many, we ended up using a simplified version of it with no release branches. It worked fine and basically our release flow would go something like this:
 
-<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git-flow-before.jpg" alt="Git checkout previous schema" style="padding: 20px; width: 600px;"/></div>
+<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git-flow-before.jpg" alt="Basic git flow" style="padding: 20px; width: 600px;"/></div>
 
 However recently Heroku released [pipelines][3], allowing you to promote your code from an environment to another really quickly. This was great and allowed us to speed up production releases, going from a few minutes to a couple of seconds.
 
-<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/heroku-pipeline.png" alt="Git checkout previous schema" style="padding: 20px; width: 600px;"/></div>
+<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/heroku-pipeline.png" alt="Heroku pipelines example" style="padding: 20px; width: 600px;"/></div>
 
 The problem is that at this point we wouldn't release `develop` to staging and `master` to production... we would release `develop` to staging and then promote staging to production.
 
@@ -48,7 +48,7 @@ Based on how we worked and our objective to be able to ship constantly and easil
 - The staging environment can be promoted to production by any developer once it's considered valid.
 - Promoting to production adds a tag to the latest commit being promoted.
 
-<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git-flow-drivy.jpg" alt="Git checkout previous schema" style="padding: 20px; width: 600px;"/></div>
+<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git-flow-drivy.jpg" alt="New simple git flow schema" style="padding: 20px; width: 600px;"/></div>
 
 _Note that for promoting a release from staging to production we use an internal tools to speed things up and keep this process safe. Basically a developer can just run `$ drivy release` in their terminal and a tool will check a bunch of things and promote the release if it's deemed safe (checking github issues, database migrations, [possible manual locking][6]...). Of course you can do the same thing manually._
 
@@ -58,25 +58,25 @@ In the spirit of moving fast, every developer should try to release as soon as i
 
 The great thing with this setup is that it allows for quick and small deploys of possibly multiple different commits at once if needed:
 
-<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git-flow-bundling.jpg" alt="Git checkout previous schema" style="padding: 20px; width: 600px;"/></div>
+<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git-flow-bundling.jpg" alt="Git flow bundled release" style="padding: 20px; width: 600px;"/></div>
 
 However in some cases you don't want your commit to be pushed as part of another release. Let's say you merged your commit and you're ready to push it to production, but another developer merges their commit as well:
 
-<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git-flow-release-blocking-1.jpg" alt="Git checkout previous schema" style="padding: 20px; width: 600px;"/></div>
+<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git-flow-release-blocking-1.jpg" alt="Schema for blocking commit in Git" style="padding: 20px; width: 600px;"/></div>
 
 In this situation, no need to wait! You can simply promote the latest valid staging release to production:
 
-<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git-flow-release-blocking-2.jpg" alt="Git checkout previous schema" style="padding: 20px; width: 600px;"/></div>
+<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git-flow-release-blocking-2.jpg" alt="Solving blocking of master" style="padding: 20px; width: 600px;"/></div>
 
 ### Hotfixing
 
 If there is an issue with a release and we can't release `master` for any reason, we can still hotfix pretty easily. To do this we just need to checkout to the latest tag which represent the version running in production and pull a hotfix branch. Then we do the fix, release the hotfix branch and merge it back into `master`.
 
-<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git-flow-hotfix-1.jpg" alt="Git checkout previous schema" style="padding: 20px; width: 600px;"/></div>
+<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git-flow-hotfix-1.jpg" alt="Hotfixing with Git step 1" style="padding: 20px; width: 600px;"/></div>
 
 The hotfix branch will be running in production until whatever is blocking `master` is fixed.
 
-<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git-flow-hotfix-2.jpg" alt="Git checkout previous schema" style="padding: 20px; width: 600px;"/></div>
+<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git-flow-hotfix-2.jpg" alt="Hotfixing with git step 2" style="padding: 20px; width: 600px;"/></div>
 
 Of course we should avoid as much as possible commits preventing the `master` branch to be released, but this kind of things can happen and thanks to the tags we are able to.
 
