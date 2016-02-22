@@ -8,7 +8,7 @@ tag: Git
 ---
 
 At [Drivy][1] we've changed the way we work with Git from [Git flow][2] to something new... and so far it's been working pretty well and allowed us to release faster! I feel like that this new flow is way simpler than Git Flow and more pragmatic than Github's Flow. It has some general guidelines but still accounts for how a team acts in real life. The goal and measure of success here is the team's ability to ship stable code quickly.
-
+p
 Let's dig in!
 
 ## Moving Away From Git Flow
@@ -23,7 +23,7 @@ However recently Heroku released [pipelines][3], allowing you to promote your co
 
 The problem is that at this point we wouldn't release the code on `develop` to staging and the code on `master` to production like before. Instead we would release the code on `develop` to staging and then promote the staging build to production.
 
-In the grand scheme of things it didn't change much but, because of this, the `master` branch stopped making sense since we would never actually pushfl it to Heroku. We would still merge to to `master` to have this branch always releasable... but it felt weird, brought complexity to our automated scripts and confused new hires.
+In the grand scheme of things it didn't change much but, because of this, the `master` branch stopped making sense since we would never actually push it to Heroku. We would still merge to to `master` to have this branch always releasable... but it felt weird, brought complexity to our automated scripts and confused new hires.
 
 We had to change something.
 

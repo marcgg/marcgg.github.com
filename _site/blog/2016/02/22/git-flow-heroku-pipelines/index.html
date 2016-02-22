@@ -52,9 +52,9 @@
     <div class="post" id="post-">
 
       
-      <p>At <a href="https://www.drivy.com/">Drivy</a> we’ve changed the way we work with Git from <a href="http://nvie.com/posts/a-successful-git-branching-model/">Git flow</a> to something new… and so far it’s been working pretty well and allowed us to release faster! I feel like that this new flow is way simpler than Git Flow and more pragmatic than Github’s Flow. It has some general guidelines but still accounts for how a team acts in real life. The goal and measure of success here is the team’s ability to ship stable code quickly.</p>
-
-<p>Let’s dig in!</p>
+      <p>At <a href="https://www.drivy.com/">Drivy</a> we’ve changed the way we work with Git from <a href="http://nvie.com/posts/a-successful-git-branching-model/">Git flow</a> to something new… and so far it’s been working pretty well and allowed us to release faster! I feel like that this new flow is way simpler than Git Flow and more pragmatic than Github’s Flow. It has some general guidelines but still accounts for how a team acts in real life. The goal and measure of success here is the team’s ability to ship stable code quickly.
+p
+Let’s dig in!</p>
 
 <h2 id="moving-away-from-git-flow">Moving Away From Git Flow</h2>
 
@@ -66,13 +66,13 @@
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/heroku-pipeline.png" alt="Heroku pipelines example" style="padding: 20px; width: 600px;" /></div>
 
-<p>The problem is that at this point we wouldn’t release <code class="highlighter-rouge">develop</code> to staging and <code class="highlighter-rouge">master</code> to production… we would release <code class="highlighter-rouge">develop</code> to staging and then promote staging to production.</p>
+<p>The problem is that at this point we wouldn’t release the code on <code class="highlighter-rouge">develop</code> to staging and the code on <code class="highlighter-rouge">master</code> to production like before. Instead we would release the code on <code class="highlighter-rouge">develop</code> to staging and then promote the staging build to production.</p>
 
 <p>In the grand scheme of things it didn’t change much but, because of this, the <code class="highlighter-rouge">master</code> branch stopped making sense since we would never actually push it to Heroku. We would still merge to to <code class="highlighter-rouge">master</code> to have this branch always releasable… but it felt weird, brought complexity to our automated scripts and confused new hires.</p>
 
 <p>We had to change something.</p>
 
-<h2 id="why-not-using-the-github-flow">Why Not Using The Github Flow?</h2>
+<h2 id="why-not-use-the-github-flow">Why Not Use The Github Flow?</h2>
 
 <p><a href="https://guides.github.com/introduction/flow/">This flow suggested by Github</a> looked very promising, but I’m still having doubts regarding this part:</p>
 
@@ -80,30 +80,32 @@
   <p>Once your pull request has been reviewed and the branch passes your tests, you can deploy your changes to verify them in production. If your branch causes issues, you can roll it back by deploying the existing master into production.</p>
 </blockquote>
 
-<p>This looks nice on paper, but if you have a lot of developers wanting to push to production constantly it might slow things down as people wait to deploy their branch. You could solve this by running multiple versions of the code on different machines and load balance traffic, but that seems overkill in most of the use cases I’ve encountered - I’d much rather have only one version of the code live and use <a href="https://en.wikipedia.org/wiki/Feature_toggle">feature flippers</a>.</p>
+<p>This looks nice on paper, but if you have a lot of developers wanting to push to production constantly it might slow things down as people wait to deploy their branch. For instance if developer A has a branch deployed in production and developer B wants to release something, dev B has to wait until dev A decided to consider their release stable and merged their branch into master.</p>
+
+<p>You could solve this by running multiple versions of the code on different machines and load balance traffic, but that seems overkill in most of the use cases I’ve encountered - I’d much rather have only one version of the code live and use <a href="https://en.wikipedia.org/wiki/Feature_toggle">feature flippers</a>.</p>
 
 <h2 id="our-simple-git-flow">Our Simple Git Flow</h2>
 
-<p>At Drivy we emphasize small releases with a lot of tests and peer reviews. This allows us to move fast without breaking anything while keeping a high quality code base. Because of this we needed a very simple Git flow that didn’t get in the way of shipping code.</p>
+<p>At Drivy we emphasise small releases with a lot of tests and peer reviews. This allows us to move fast without breaking anything while keeping a high quality code base. Because of this we needed a very simple Git flow that didn’t get in the way of shipping code.</p>
 
 <h3 id="basic-guidelines">Basic Guidelines</h3>
 
-<p>Based on how we worked and our objective to be able to ship constantly and easily, we decided on these rules:</p>
+<p>Based on how we worked and our objective to be able to ship very frequently and easily, we decided on these rules:</p>
 
 <ul>
   <li>Use feature branches.</li>
-  <li><code class="highlighter-rouge">master</code>’s head is pushed to our staging environement automatically by our CI if the tests pass.</li>
-  <li>The staging environment can be promoted to production by any developer once it’s considered valid.</li>
+  <li>Our CI deploys <code class="highlighter-rouge">master</code>’s head to the staging environment if the tests pass.</li>
+  <li>The staging environment is promoted to production by any developer once it’s considered safe and ready.</li>
   <li>Promoting to production adds a tag to the latest commit being promoted.</li>
 </ul>
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git-flow-drivy.jpg" alt="New simple git flow schema" style="padding: 20px; width: 600px;" /></div>
 
-<p><em>Note that for promoting a release from staging to production we use an internal tools to speed things up and keep this process safe. Basically a developer can just run <code class="highlighter-rouge">$ drivy release</code> in their terminal and a tool will check a bunch of things and promote the release if it’s deemed safe (checking github issues, database migrations, <a href="http://cl.ly/0D3w0N2G331v">possible manual locking</a>…). Of course you can do the same thing manually.</em></p>
+<p><em>Note that for promoting a release from staging to production we use an internal tool to speed things up and keep this process safe. Basically a developer can just run <code class="highlighter-rouge">$ drivy release</code> in their terminal and a tool will check a bunch of things and promote the release if it’s deemed safe (checking github issues, database migrations, <a href="http://cl.ly/0D3w0N2G331v">possible manual locking</a>…). Of course you can do the same thing manually.</em></p>
 
 <h3 id="bundling-or-not-bundling">Bundling Or Not Bundling</h3>
 
-<p>In the spirit of moving fast, every developer should try to release as soon as it gets to staging to avoid slowing other down. However there might be some cases where it’s not possible, optimal, or maybe something goes wrong and you have to do it in another way.</p>
+<p>In the spirit of moving fast, every developer should try to release as soon as it gets to staging to avoid slowing the rest of the team down. However there might be some cases where it’s not possible, optimal, or maybe something goes wrong and you have to do it in some other way.</p>
 
 <p>The great thing with this setup is that it allows for quick and small deploys of possibly multiple different commits at once if needed:</p>
 
@@ -113,13 +115,13 @@
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git-flow-release-blocking-1.jpg" alt="Schema for blocking commit in Git" style="padding: 20px; width: 600px;" /></div>
 
-<p>In this situation, no need to wait! You can simply promote the latest valid staging release to production:</p>
+<p>In this situation, no need to wait! You can simply promote the latest safe staging release to production:</p>
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git-flow-release-blocking-2.jpg" alt="Solving blocking of master" style="padding: 20px; width: 600px;" /></div>
 
 <h3 id="hotfixing">Hotfixing</h3>
 
-<p>If there is an issue with a release and we can’t release <code class="highlighter-rouge">master</code> for any reason, we can still hotfix pretty easily. To do this we just need to checkout to the latest tag which represent the version running in production and pull a hotfix branch. Then we do the fix, release the hotfix branch and merge it back into <code class="highlighter-rouge">master</code>.</p>
+<p>If there is an issue with a release and we can’t release <code class="highlighter-rouge">master</code> for any reason, we can still hotfix pretty easily. To do this we just need to checkout to the latest tag which represents the version running in production and pull a hotfix branch. Then we do the fix, release the hotfix branch and merge it back into <code class="highlighter-rouge">master</code>.</p>
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git-flow-hotfix-1.jpg" alt="Hotfixing with Git step 1" style="padding: 20px; width: 600px;" /></div>
 
@@ -127,7 +129,7 @@
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git-flow-hotfix-2.jpg" alt="Hotfixing with git step 2" style="padding: 20px; width: 600px;" /></div>
 
-<p>Of course we should avoid as much as possible commits preventing the <code class="highlighter-rouge">master</code> branch to be released, but this kind of things can happen and thanks to the tags we are able to.</p>
+<p>Of course we should avoid as much as possible commits preventing the <code class="highlighter-rouge">master</code> branch to be released, but this kind of things can happen and thanks to the tags we are able to deal with it easily.</p>
 
 
 
