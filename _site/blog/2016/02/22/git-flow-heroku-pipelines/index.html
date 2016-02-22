@@ -68,7 +68,7 @@ Let’s dig in!</p>
 
 <p>The problem is that at this point we wouldn’t release the code on <code class="highlighter-rouge">develop</code> to staging and the code on <code class="highlighter-rouge">master</code> to production like before. Instead we would release the code on <code class="highlighter-rouge">develop</code> to staging and then promote the staging build to production.</p>
 
-<p>In the grand scheme of things it didn’t change much but, because of this, the <code class="highlighter-rouge">master</code> branch stopped making sense since we would never actually push it to Heroku. We would still merge to to <code class="highlighter-rouge">master</code> to have this branch always releasable… but it felt weird, brought complexity to our automated scripts and confused new hires.</p>
+<p>In the grand scheme of things it didn’t change much but, because of this, the <code class="highlighter-rouge">master</code> branch stopped making sense since we would never actually push it to Heroku. We would still merge to <code class="highlighter-rouge">master</code> to have this branch always releasable… but it felt weird, brought complexity to our automated tscripts and confused new hires.</p>
 
 <p>We had to change something.</p>
 

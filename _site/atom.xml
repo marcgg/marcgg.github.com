@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2016-02-22T11:52:59+01:00</updated>
+ <updated>2016-02-22T11:53:36+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -35,7 +35,7 @@ Let’s dig in!&lt;/p&gt;
 
 &lt;p&gt;The problem is that at this point we wouldn’t release the code on &lt;code class=&quot;highlighter-rouge&quot;&gt;develop&lt;/code&gt; to staging and the code on &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; to production like before. Instead we would release the code on &lt;code class=&quot;highlighter-rouge&quot;&gt;develop&lt;/code&gt; to staging and then promote the staging build to production.&lt;/p&gt;
 
-&lt;p&gt;In the grand scheme of things it didn’t change much but, because of this, the &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; branch stopped making sense since we would never actually push it to Heroku. We would still merge to to &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; to have this branch always releasable… but it felt weird, brought complexity to our automated scripts and confused new hires.&lt;/p&gt;
+&lt;p&gt;In the grand scheme of things it didn’t change much but, because of this, the &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; branch stopped making sense since we would never actually push it to Heroku. We would still merge to &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; to have this branch always releasable… but it felt weird, brought complexity to our automated tscripts and confused new hires.&lt;/p&gt;
 
 &lt;p&gt;We had to change something.&lt;/p&gt;
 
