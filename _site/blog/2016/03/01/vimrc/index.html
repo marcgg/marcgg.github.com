@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      Vim Configuration From Scratch in 2016
+    </title>
+    <meta name="description" content="Vim is not as hard as it seems. Here's how to set it up to be as powerful and customized as you'd like.">
+    <meta name="author" content="Marc G Gauthier">
+    <meta content='user-scalable=no, width=device-width, initial-scale=1.0' name='viewport'>
+    <meta name="google-site-verification" content="x2EpQdOMz-k9fP8hak9I3COaXhnQ4jNLp2GU4GYQ8jM" />
+    <link href='//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,400,700,300' rel='stylesheet' type='text/css'>
+    <link href="/assets/css/app.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/atom.xml" rel="alternate" type="application/atom+xml" title="Marcgg#Blog">
+    <link rel="shortcut icon" href="/assets/favicon.png">
+  </head>
+
+  <body>
+    <header>
+
+      <div id="logo">
+        <a id='logo1' href="/">marcgg</a>
+        <span id='logo2'>#</span>
+        <a id='logo3' href="/blog/">
+          blog
+        </a>
+      </div>
+      <div id="more-nav">
+        &rarr; <a href="/blog/" class="selected">blog</a>
+        &rarr; <a href="/photos/" class="">photos</a>
+        &rarr; <a href="/hire/" class="">hire me</a>
+      </div>
+    </header>
+
+    <h1>
+  <span>
+    
+      Vim Configuration From Scratch in 2016
+    
+    
+  </span>
+</h1>
+
+
+<div class="published">
+  <span>01 March 2016</span>
+</div>
+
+<div id="container">
+  <div id="content">
+    <div class="post" id="post-">
+
+      
+      <p>Started using Vim <a href="/blog/2012/09/04/one-reason-to-switch-to-vim-editor">a while ago</a> with the great distribution <a href="https://github.com/carlhuda/janus">janus</a>. Since then I made a few evolutions to my Janus config, but it never felt entirely like my own setup. There as always a few plugins I wouldn’t use, and there would be some features I couldn’t get to work because I didn’t understand the internals of my distribution.</p>
+
+<p>Because of this I decided to entirely drop the setup I’ve been working with for the past years and started from scratch, adding only what I need. If you want to see the result, my <code class="highlighter-rouge">.vim</code> <a href="https://github.com/marcgg/.vim">is available on Github</a>.</p>
+
+<p>Overall I found the experience to be way more easy and fun than expected, so I decided to share! In this article I’ll explain how to quickly setup and customize Vim without having to use a pre-made distribution, just Git and a Terminal.</p>
+
+<h2 id="basic-setup">Basic Setup</h2>
+
+<p>First of all you need to <a href="http://www.vim.org/download.php">install vim</a>, or if you don’t like to run your text editor in your console and use a mac, you can install <a href="https://github.com/b4winckler/macvim">MacVim</a>.</p>
+
+<p>Out of the box, Vim is quite worthless compared to other editors like Sublime or Atom. However, it’s more evolutive and customizable, so the first thing to do is to start setting it up to fit your prefered way of coding. I recommend versionning your configuration to share accross machines and keep track of any changes you made.</p>
+
+<p>To do this, create a <code class="highlighter-rouge">.vim</code> repository with the basic <code class="highlighter-rouge">vimrc</code> file that will be used to do most of your configuration:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ cd ~
+$ mkdir .vim
+$ cd .vim
+$ touch vimrc
+$ git init .
+</code></pre>
+</div>
+
+<p>Now you need to go back to your home directory and <a href="https://en.wikipedia.org/wiki/Symbolic_link">symlink</a> the <code class="highlighter-rouge">vimrc</code> file. This way you get to use your <code class="highlighter-rouge">.vimrc</code> file normally while still get all the advantages of versionning with Git.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ ln -s ~/.vim/vimrc ~/.vimrc
+</code></pre>
+</div>
+
+<h2 id="getting-vim-to-look-nice">Getting Vim To Look Nice</h2>
+
+<h3 id="picking-a-theme">Picking a Theme</h3>
+
+<p>There are a LOT of themes available for Vim. I’ve used <a href="http://ethanschoonover.com/solarized">Solarized</a> for quite a while, but recently I switched to the <a href="https://github.com/chriskempson/tomorrow-theme">Tomorrow Night theme</a> and I like it a lot.</p>
+
+<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/theme-example.jpg" alt="Vim Theme Installation" style="padding: 20px; width: 600px;" /></div>
+
+<p>If you don’t like this one, don’t worry there are tons out there. Just Google “Vim Themes” and browse arround.</p>
+
+<p>Once you found you favorite one, add it to your project by first creating a folder to store it:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ mkdir ~/.vim/colors
+</code></pre>
+</div>
+
+<p>Then add the theme’s <code class="highlighter-rouge">.vim</code> file to this folder. Once this is done, edit your <code class="highlighter-rouge">.vimrc</code> file and add these lines to let Vim know that you want syntax highlighting based on file names:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>filetype on
+syntax on
+colorscheme Tomorrow-Night
+</code></pre>
+</div>
+
+<h3 id="setting-fonts">Setting Fonts</h3>
+
+<p>Once you have your main theme, time to pick a font! I like my fonts readable, simple and big. So I went with Menlo Regular 18pts.</p>
+
+<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/menlo.png" alt="Menlo Font" style="padding: 20px; width: 200px;" /></div>
+
+<p>To use this, <a href="http://www.cufonfonts.com/en/font/13494/menlo">download</a> and install the font and then add this line to your <code class="highlighter-rouge">.vimrc</code></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>set guifont=Menlo\ Regular:h18
+</code></pre>
+</div>
+
+<h3 id="other-details">Other Details</h3>
+
+<p>To get Vim to open with a given size, add this to your <code class="highlighter-rouge">.vimrc</code>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>set lines=35 columns=150
+</code></pre>
+</div>
+
+<p>Add a colored column at 90 to avoid going to far to the right:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>set colorcolumn=90
+</code></pre>
+</div>
+
+<p>Add line numbering:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>set number
+</code></pre>
+</div>
+
+<h2 id="more-customization">More Customization</h2>
+
+<p>Now that your Vim starts to look better, let’s start to improve how it actually works. The great thing with Vim is that we can get it to do whatever we want!</p>
+
+<h3 id="leader-key">Leader Key</h3>
+
+<p>Before doing anything else, we need to set a Leader key.</p>
+
+<p>The Leader key is Vim’s way to reduce conflicts in configuration. The Vim user can set this key to be anything and then every command are going to be preceded by this key. By default it’s set to be backslash, however I like to change it to <code class="highlighter-rouge">,</code> like this:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>let mapleader=","
+</code></pre>
+</div>
+
+<h3 id="reload-vim-config-without-having-to-restart-everything">Reload Vim Config Without Having To Restart Everything</h3>
+
+<p>Every time you edit your <code class="highlighter-rouge">.vimrc</code> file, if you want to see the changes you have to close &amp; open it again or <a href="http://ss64.com/bash/source.html">source</a> the <code class="highlighter-rouge">.vimrc</code> file. It’s a pain, so let’s map some keys to do it automatically:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>map &lt;leader&gt;s :source ~/.vimrc&lt;CR&gt;
+</code></pre>
+</div>
+
+<p>It’s the first time we see this syntax and it might look a bit weird. It declares “please map (leader key + s) to the following command: <code class="highlighter-rouge">:source ~/.vimrc</code> and then press “Enter” which effectively reload the Vim configuration.</p>
+
+<p>Note that it only works for <code class="highlighter-rouge">.vimrc</code> changes and not for adding or removing plugins.</p>
+
+<h3 id="smart-defaults">Smart Defaults</h3>
+
+<p>Vim is pretty old and made to turn on machines with low processing power. Because of this when you install it a lot of interesting features are deactivated. Here’s what most people would want their 2016 text editor to have.</p>
+
+<p>Do not try to be compatible with very old versions of Vim:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>set nocompatible
+</code></pre>
+</div>
+
+<p>Keep more info in memory to speed things up:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>set hidden
+set history=100
+</code></pre>
+</div>
+
+<p>Have some logic when indenting. Note that this particular config is made for me and I mostly use Ruby which uses 2 spaces as tabs.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>filetype indent on
+set nowrap
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set smartindent
+set autoindent
+</code></pre>
+</div>
+
+<h3 id="dealing-with-whitespaces">Dealing With Whitespaces</h3>
+
+<p>Here’s a handy command to remove whitespaces on save.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>autocmd BufWritePre *.* :%s/\s\+$//e
+</code></pre>
+</div>
+
+<h3 id="better-search">Better Search</h3>
+
+<p>When running a search, get to Vim to highlight found words:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>set hlsearch
+</code></pre>
+</div>
+
+<p>Ability to cancel a search with <code class="highlighter-rouge">Escape</code>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>nnoremap &lt;silent&gt; &lt;Esc&gt; :nohlsearch&lt;Bar&gt;:echo&lt;CR&gt;
+</code></pre>
+</div>
+
+<h3 id="use-arrows">Use Arrows</h3>
+
+<p>People are divided on this, but I made my mind and I prefer using arrow keys instead of the default Vim mapping. If you want to do the same:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>map &lt;D-A-RIGHT&gt; &lt;C-w&gt;l
+map &lt;D-A-LEFT&gt; &lt;C-w&gt;h
+map &lt;D-A-DOWN&gt; &lt;C-w&gt;&lt;C-w&gt;
+map &lt;D-A-UP&gt; &lt;C-w&gt;W
+</code></pre>
+</div>
+
+<h3 id="re-open-previously-opened-file">Re-Open Previously Opened File</h3>
+
+<p>I find using this literrally all the time. It’s basically <code class="highlighter-rouge">cd -</code> for your current window and allows you to quickly move back and forth between two files by pressing the Leader key twice.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>nnoremap &lt;Leader&gt;&lt;Leader&gt; :e#&lt;CR&gt;
+</code></pre>
+</div>
+
+<h2 id="plugins">Plugins</h2>
+
+<p>Plugins are what make Vim great. There is basically a plugin for everything you might need, so being able to add and remove them easily.</p>
+
+<h3 id="loading-plugins-with-pathogen">Loading Plugins With Pathogen</h3>
+
+<p><a href="https://github.com/tpope/vim-pathogen">Pathogen</a> is, in my opinion, the best way to manage plugins currently available. It’s very simple and non obstrusive and really “just works”.</p>
+
+<p>To install it, you can just use the one liner below. If you don’t feel like copy and pasting <code class="highlighter-rouge">curl</code> commands, just look up their <a href="https://github.com/tpope/vim-pathogen#installation">very clear documentation</a>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>mkdir -p /.vim/autoload /.vim/bundle &amp;&amp; \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+</code></pre>
+</div>
+
+<p>Now open your <code class="highlighter-rouge">.vimrc</code> and add this line:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>execute pathogen#infect()
+</code></pre>
+</div>
+
+<p>From now on, you can just add plugins in <code class="highlighter-rouge">~.vim/bundle/</code> and they will get loaded automatically</p>
+
+<h3 id="managing-plugins-with-git">Managing Plugins With Git</h3>
+
+<p>All the Vim plugins I’m going to mention here have a Git repository somewhere. This is great, because updating to the latest version can be as easy as pulling master.</p>
+
+<p>To do this we’re going to use <a href="https://git-scm.com/docs/git-submodule">git submodules</a> to reference another repository from our main repository. It sounds weird, but it’s actually pretty straightforward and will look like this on Github:</p>
+
+<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git-submodules-example.jpg" alt="Git submodules as seen on Github" style="padding: 20px; width: 360px;" /></div>
+
+<p>For every plugin, you need to run:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ cd ~/.vim
+$ git submodule add git@source/pluginname.git bundle/pluginname
+</code></pre>
+</div>
+
+<p>For instance if you want to add <code class="highlighter-rouge">vim-ruby</code> located at <a href="https://github.com/vim-ruby/vim-ruby">https://github.com/vim-ruby/vim-ruby</a>, you’ll do:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git submodule add git@github.com:vim-ruby/vim-ruby.git bundle/vim-ruby
+</code></pre>
+</div>
+
+<p>Later on when you use your config on another machine or want to update your plugins, you’ll be able to use other commands like <code class="highlighter-rouge">git submodule init</code> or <code class="highlighter-rouge">git submodule update</code>.</p>
+
+<h3 id="list-of-must-have-vim-plugins">List Of Must Have Vim Plugins</h3>
+<p>r
+Here is a list of all the plugins I decided to include and why. I also added the advanced configuration I used and some examples when needed.</p>
+
+<h4 id="command-t">Command-T</h4>
+
+<p>Very fast fuzzy search to open files quickly without many keystrokes. <a href="https://github.com/wincent/command-t/">Get it here</a>.</p>
+
+<p>To ignore some files, you can use <code class="highlighter-rouge">wildignore</code>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>set wildignore+=*.log,*.sql,*.cache
+</code></pre>
+</div>
+
+<p>When you create a new file, it’s not indexed by default. Here a way to reindex everything by simply pressing <code class="highlighter-rouge">&lt;Leader&gt;+r</code>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>noremap &lt;Leader&gt;r :CommandTFlush&lt;CR&gt;
+</code></pre>
+</div>
+
+<h4 id="mru">MRU</h4>
+
+<p>Get the most recently opened or edited files. <a href="https://github.com/yegappan/mru">Get it here</a>.</p>
+
+<p>See the file list with <code class="highlighter-rouge">&lt;Leader&gt; + m</code>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>nnoremap &lt;silent&gt; &lt;Leader&gt;m :MRU&lt;CR&gt;
+</code></pre>
+</div>
+
+<h4 id="nerdcommenter">NerdCommenter</h4>
+
+<p>Comment / Uncomment large blocks of code easily. <a href="https://github.com/scrooloose/nerdcommenter">Get it here</a>.</p>
+
+<h4 id="nerdtree">NerdTree</h4>
+
+<p>A simple yet very useful tree explorer. <a href="https://github.com/scrooloose/nerdtree">Get it here</a>.</p>
+
+<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/nerdtree.jpg" alt="Tree navigation with Vims" style="padding: 20px; width: 300px;" /></div>
+
+<p>Hit the right arrow to open a node:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>let NERDTreeMapActivateNode='&lt;right&gt;'
+</code></pre>
+</div>
+
+<p>Display hidden files:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>let NERDTreeShowHidden=1
+</code></pre>
+</div>
+
+<p>Toggle display of the tree with <code class="highlighter-rouge">&lt;Leader&gt; + n</code>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>nmap &lt;leader&gt;n :NERDTreeToggle&lt;CR&gt;
+</code></pre>
+</div>
+
+<p>Locate the focused file in the tree with <code class="highlighter-rouge">&lt;Leader&gt; + j</code>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>nmap &lt;leader&gt;j :NERDTreeFind&lt;CR&gt;
+</code></pre>
+</div>
+
+<p>Always open the tree when booting Vim, but don’t focus it:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
+</code></pre>
+</div>
+
+<p>Do not display some useless files in the tree:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>let NERDTreeIgnore=['\.DS_Store', '\~$', '\.swp']
+</code></pre>
+</div>
+
+<h4 id="supertab">Supertab</h4>
+
+<p>Autocomplete when using <code class="highlighter-rouge">tab</code>. <a href="https://github.com/ervandew/supertab">Get it here</a>.</p>
+
+<h4 id="airline">Airline</h4>
+
+<p>Cool looking status bar that integrates well with other plugins. <a href="https://github.com/vim-airline/vim-airline">Get it here</a>.</p>
+
+<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/airline.jpg" alt="Status bar for Vim" style="padding: 20px; width: 600px;" /></div>
+
+<h4 id="fugitive">Fugitive</h4>
+
+<p>Git wrapper that I mostly use for its awesome <code class="highlighter-rouge">:Gblame</code> feature, allowing you to blame any line directly from Vim. <a href="https://github.com/tpope/vim-fugitive">Get it here</a>.</p>
+
+<h4 id="git-gutter">Git Gutter</h4>
+
+<p>Displays the diff in the gutter and allows you to do actions on it. I mostly use it to see what I’ve just modified, but I also used some of its more advanced functions. For instance you can preview a change with <code class="highlighter-rouge">&lt;Leader&gt; + hp</code> and revert any change on a line with <code class="highlighter-rouge">&lt;Leader&gt; + hr</code>. It’s great! <a href="https://github.com/airblade/vim-gitgutter">Get it here</a>.</p>
+
+<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git-gutter-example.jpg" alt="Git gutter for Vim" style="padding: 20px; width: 600px;" /></div>
+
+<p>I don’t like my editor changing size when I use it, so I chose to always display the gutter, even when there are no changes.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>let g:gitgutter_sign_column_always=1
+</code></pre>
+</div>
+
+<h4 id="vim-multiple-cursors">Vim Multiple Cursors</h4>
+
+<p>The only feature in <a href="https://www.sublimetext.com/">Sublime</a> I was jealous of was its great multi cursor support. With this plugin I don’t have to feel this way anymore! <a href="https://github.com/terryma/vim-multiple-cursors/">Get it here</a>.</p>
+
+<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/vim-multi-cursors.gif" alt="Sublime style multi cursors in Vim" style="padding: 20px; width: 320px;" /></div>
+
+<h3 id="ruby-specific-plugins">Ruby Specific Plugins</h3>
+
+<p>I mostly use Ruby and Ruby on Rails for my projects, so I also added some plugins to help me with that.</p>
+
+<h4 id="bundlervim">Bundler.vim</h4>
+
+<p>I mostly use it to get better highlighting in the <code class="highlighter-rouge">Gemfile</code>, but it also allows you to <code class="highlighter-rouge">bundle open</code> quickly. <a href="https://github.com/tpope/vim-bundler">Get it here</a>.</p>
+
+<h4 id="endwise">Endwise</h4>
+
+<p>Adds an <code class="highlighter-rouge">end</code> keyword when needed. <a href="https://github.com/tpope/vim-endwise">Get it here</a>.</p>
+
+<h4 id="vim-rails">Vim-Rails</h4>
+
+<p>Must have plugin for anyone using Rails. It just does so much it would be a shame. I particullary like how it allows you to jump from file to file with ease. You can really go from a controller to its spec, to its views and so on. <a href="https://github.com/tpope/vim-rails/">Get it here</a>.</p>
+
+<h4 id="vim-ruby">Vim-Ruby</h4>
+
+<p>Main plugin for dealing with Ruby. <a href="https://github.com/vim-ruby">Get it here</a>.</p>
+
+<h3 id="missed-one">Missed One?</h3>
+
+<p>If you have plugins you feel belong here, feel free to share them in the comments or on <a href="https://twitter.com/marcgg">twitter</a>!</p>
+
+
+
+      <div id="more">
+        
+        
+
+        <div id="more-articles">
+          
+            <p>Since you scrolled this far, you might as well take a look at some other things I wrote !</p>
+            <ul>
+              
+          
+            
+          
+            
+          
+            
+              
+              <li><a href="/blog/2016/02/15/rspec-on-multiple-rails-projects">Automatically Run RSpec on Multiple Projects</a></li>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              <li><a href="/blog/2015/10/18/git-checkout-minus">How To Checkout The Previous Branch In Git</a></li>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              <li><a href="/blog/2015/08/04/git-first-parent-log">Git Log's --first-parent Option</a></li>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              <li><a href="/blog/2014/07/22/in-defense-of-legacy-code">Some Respect For Legacy Code</a></li>
+            
+          
+            
+          
+            
+              
+              <li><a href="/blog/2014/04/28/frame-based-layout-bad-code">Tips on Creating a Website From When I Was 12</a></li>
+            
+          
+            
+          
+            
+          
+            
+              
+              <li><a href="/blog/2013/11/05/enough-with-the-language-trolls">Enough With The Trolls</a></li>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              <li><a href="/blog/2013/03/25/please-changelog-open-source">Please Keep a Changelog For Your Open Source Lib</a></li>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              <li><a href="/blog/2012/09/04/one-reason-to-switch-to-vim-editor">The One Thing That Made Me Switch To Vim</a></li>
+            
+          
+            
+          
+            
+          
+            
+          
+        
+            </ul>
+          
+          
+        </div>
+        <a href="https://twitter.com/marcgg" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @marcgg</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+        <a href="https://twitter.com/share" class="twitter-share-button" data-via="marcgg" data-size="large">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+      </div>
+
+      <div id="comments">
+        <style id="disqus_hide">
+          #disqus_thread{
+            display: none;
+          }
+        </style>
+        <p>
+          <span id="show-disqus-arrow">&rarr; </span>
+          <a href="#" id="show-disqus">Read the comments or contribute with your own</a>
+        </p>
+        <div id="disqus_thread"></div>
+      </div>
+      <script type="text/javascript">
+          var disqus_shortname = 'marcgg';
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+      </script>
+
+    </div>
+
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="/assets/js/comments.js"></script>
+
+
+    <footer>
+      <div>Website powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>, hosted on
+      <a href="https://github.com/marcgg/marcgg.github.com">Github</a>
+      and put together by <a href="http://twitter.com/marcgg">@marcgg</a>.</div>
+      <div>All of the <a href="/blog">blog's articles</a> are under
+      <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative commons</a> license
+      unless stated otherwise. Everything else is &copy;.</div>
+    </footer>
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-31071519-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </body>
+</html>
