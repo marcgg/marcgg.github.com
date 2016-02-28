@@ -5,7 +5,7 @@
     <title>
       Vim Configuration From Scratch in 2016
     </title>
-    <meta name="description" content="Vim is not as hard as it seems. Here's how to set it up to be as powerful and customized as you'd like.">
+    <meta name="description" content="Complete example to configure Vim. We'll use pathogen and git to manage plugins, add a theme... but also choose from a long list of curated plugins such as fuzzy search, auto complete, smart indentation, multi-cursors support (like Sublime) and much more!">
     <meta name="author" content="Marc G Gauthier">
     <meta content='user-scalable=no, width=device-width, initial-scale=1.0' name='viewport'>
     <meta name="google-site-verification" content="x2EpQdOMz-k9fP8hak9I3COaXhnQ4jNLp2GU4GYQ8jM" />
@@ -52,19 +52,19 @@
     <div class="post" id="post-">
 
       
-      <p>Started using Vim <a href="/blog/2012/09/04/one-reason-to-switch-to-vim-editor">a while ago</a> with the great distribution <a href="https://github.com/carlhuda/janus">janus</a>. Since then I made a few evolutions to my Janus config, but it never felt entirely like my own setup. There as always a few plugins I wouldn’t use, and there would be some features I couldn’t get to work because I didn’t understand the internals of my distribution.</p>
+      <p>I started using Vim <a href="/blog/2012/09/04/one-reason-to-switch-to-vim-editor">a while ago</a> with the great distribution <a href="https://github.com/carlhuda/janus">janus</a>. Since then I made a a lot of changes to my Janus config, but it never felt entirely like my own setup. There are always a few plugins I wouldn’t use and some features I couldn’t get to work because I didn’t understand the internals of my distribution.</p>
 
-<p>Because of this I decided to entirely drop the setup I’ve been working with for the past years and started from scratch, adding only what I need. If you want to see the result, my <code class="highlighter-rouge">.vim</code> <a href="https://github.com/marcgg/.vim">is available on Github</a>.</p>
+<p>Because of this I decided to entirely drop the setup I’ve been working with for the past years and started from scratch, adding only what I needed. If you want to see the result, my <code class="highlighter-rouge">.vim</code> <a href="https://github.com/marcgg/.vim">is available on Github</a>.</p>
 
 <p>Overall I found the experience to be way more easy and fun than expected, so I decided to share! In this article I’ll explain how to quickly setup and customize Vim without having to use a pre-made distribution, just Git and a Terminal.</p>
 
 <h2 id="basic-setup">Basic Setup</h2>
 
-<p>First of all you need to <a href="http://www.vim.org/download.php">install vim</a>, or if you don’t like to run your text editor in your console and use a mac, you can install <a href="https://github.com/b4winckler/macvim">MacVim</a>.</p>
+<p>First of all you need to <a href="http://www.vim.org/download.php">install vim</a>, or, if you don’t like to run your text editor in your console and use a mac, you can install <a href="https://github.com/b4winckler/macvim">MacVim</a>.</p>
 
-<p>Out of the box, Vim is quite worthless compared to other editors like Sublime or Atom. However, it’s more evolutive and customizable, so the first thing to do is to start setting it up to fit your prefered way of coding. I recommend versionning your configuration to share accross machines and keep track of any changes you made.</p>
+<p>Out of the box, Vim is quite worthless compared to other editors like Sublime or Atom. However, it’s more evolutive and customizable, so the first thing to do is to start setting it up to fit your prefered way of coding. I recommend versionning your configuration to share accross machines while keeping track of any changes you made.</p>
 
-<p>To do this, create a <code class="highlighter-rouge">.vim</code> repository with the basic <code class="highlighter-rouge">vimrc</code> file that will be used to do most of your configuration:</p>
+<p>To do this, create a <code class="highlighter-rouge">.vim</code> repository with a <code class="highlighter-rouge">vimrc</code> file that will contain most of your configuration:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>$ cd ~
 $ mkdir .vim
@@ -88,7 +88,7 @@ $ git init .
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/theme-example.jpg" alt="Vim Theme Installation" style="padding: 20px; width: 600px;" /></div>
 
-<p>If you don’t like this one, don’t worry there are tons out there. Just Google “Vim Themes” and browse arround.</p>
+<p>If you don’t like this one, don’t worry: there are tons out there. Just Google “Vim Themes” and browse arround.</p>
 
 <p>Once you found you favorite one, add it to your project by first creating a folder to store it:</p>
 
@@ -96,7 +96,7 @@ $ git init .
 </code></pre>
 </div>
 
-<p>Then add the theme’s <code class="highlighter-rouge">.vim</code> file to this folder. Once this is done, edit your <code class="highlighter-rouge">.vimrc</code> file and add these lines to let Vim know that you want syntax highlighting based on file names:</p>
+<p>Add the theme’s <code class="highlighter-rouge">.vim</code> file to this folder. Once this is done, edit your <code class="highlighter-rouge">.vimrc</code> file and add these lines to let Vim know that you want syntax highlighting based on file names:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>filetype on
 syntax on
@@ -130,7 +130,7 @@ colorscheme Tomorrow-Night
 </code></pre>
 </div>
 
-<p>Add line numbering:</p>
+<p>I’m not quite sure why this isn’t by default, but here’s how to add line numbering:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>set number
 </code></pre>
@@ -138,33 +138,33 @@ colorscheme Tomorrow-Night
 
 <h2 id="more-customization">More Customization</h2>
 
-<p>Now that your Vim starts to look better, let’s start to improve how it actually works. The great thing with Vim is that we can get it to do whatever we want!</p>
+<p>Now that your Vim starts to look better, let’s start to improve how it actually functions. The great thing with Vim is that we can get it to do whatever we want… it might be overwhelming at first, but it’s really not that hard.</p>
 
 <h3 id="leader-key">Leader Key</h3>
 
-<p>Before doing anything else, we need to set a Leader key.</p>
+<p>Before doing anything else, we need to set a <a href="http://stackoverflow.com/a/1764336">Leader key</a>.</p>
 
-<p>The Leader key is Vim’s way to reduce conflicts in configuration. The Vim user can set this key to be anything and then every command are going to be preceded by this key. By default it’s set to be backslash, however I like to change it to <code class="highlighter-rouge">,</code> like this:</p>
+<p>The Leader key is Vim’s way to reduce conflicts in configuration. The Vim user can set this key to be anything and then every command are going to be preceded by this key. By default it’s set to be backslash, but I like to change it to <code class="highlighter-rouge">,</code>.</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>let mapleader=","
 </code></pre>
 </div>
 
-<h3 id="reload-vim-config-without-having-to-restart-everything">Reload Vim Config Without Having To Restart Everything</h3>
+<h3 id="reload-vim-config-without-having-to-restart-editor">Reload Vim Config Without Having To Restart Editor</h3>
 
-<p>Every time you edit your <code class="highlighter-rouge">.vimrc</code> file, if you want to see the changes you have to close &amp; open it again or <a href="http://ss64.com/bash/source.html">source</a> the <code class="highlighter-rouge">.vimrc</code> file. It’s a pain, so let’s map some keys to do it automatically:</p>
+<p>Every time you edit your <code class="highlighter-rouge">.vimrc</code> file, if you want to see the changes you have to close &amp; open it again or <a href="http://ss64.com/bash/source.html">source</a> the <code class="highlighter-rouge">.vimrc</code> file manually. It’s a pain, so let’s map some keys to do it automatically:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>map &lt;leader&gt;s :source ~/.vimrc&lt;CR&gt;
 </code></pre>
 </div>
 
-<p>It’s the first time we see this syntax and it might look a bit weird. It declares “please map (leader key + s) to the following command: <code class="highlighter-rouge">:source ~/.vimrc</code> and then press “Enter” which effectively reload the Vim configuration.</p>
+<p>It’s the first time we see this syntax and it might look a bit weird. Basically it declares “please map (<code class="highlighter-rouge">Leader key + s</code>) to the following command: <code class="highlighter-rouge">:source ~/.vimrc</code> and then press <code class="highlighter-rouge">Enter</code>” which effectively reload the Vim configuration. Once I add this to my configuration, pressing <code class="highlighter-rouge">,</code> followed by <code class="highlighter-rouge">s</code> will run the command.</p>
 
-<p>Note that it only works for <code class="highlighter-rouge">.vimrc</code> changes and not for adding or removing plugins.</p>
+<p><em>Note that it only works for <code class="highlighter-rouge">.vimrc</code> changes and not for adding or removing plugins.</em></p>
 
 <h3 id="smart-defaults">Smart Defaults</h3>
 
-<p>Vim is pretty old and made to turn on machines with low processing power. Because of this when you install it a lot of interesting features are deactivated. Here’s what most people would want their 2016 text editor to have.</p>
+<p>Vim is pretty old and made to run on machines with low processing power. Because of this, when you install Vim a lot of interesting features are deactivated by default. Here’s what most people would want their 2016 text editor to have.</p>
 
 <p>Do not try to be compatible with very old versions of Vim:</p>
 
@@ -179,7 +179,7 @@ set history=100
 </code></pre>
 </div>
 
-<p>Have some logic when indenting. Note that this particular config is made for me and I mostly use Ruby which uses 2 spaces as tabs.</p>
+<p>Have some logic when indenting:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>filetype indent on
 set nowrap
@@ -191,6 +191,8 @@ set autoindent
 </code></pre>
 </div>
 
+<p><em> Note that this particular config is made for myself and I mostly use Ruby which uses 2 spaces as tabs.</em></p>
+
 <h3 id="dealing-with-whitespaces">Dealing With Whitespaces</h3>
 
 <p>Here’s a handy command to remove whitespaces on save.</p>
@@ -201,7 +203,7 @@ set autoindent
 
 <h3 id="better-search">Better Search</h3>
 
-<p>When running a search, get to Vim to highlight found words:</p>
+<p>When running a search, get Vim to highlight found words:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>set hlsearch
 </code></pre>
@@ -215,7 +217,7 @@ set autoindent
 
 <h3 id="use-arrows">Use Arrows</h3>
 
-<p>People are divided on this, but I made my mind and I prefer using arrow keys instead of the default Vim mapping. If you want to do the same:</p>
+<p>People are divided on this, but I have made my mind and I prefer using arrow keys instead of the default Vim mapping. If you want to do the same:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>map &lt;D-A-RIGHT&gt; &lt;C-w&gt;l
 map &lt;D-A-LEFT&gt; &lt;C-w&gt;h
@@ -226,7 +228,7 @@ map &lt;D-A-UP&gt; &lt;C-w&gt;W
 
 <h3 id="re-open-previously-opened-file">Re-Open Previously Opened File</h3>
 
-<p>I find using this literrally all the time. It’s basically <code class="highlighter-rouge">cd -</code> for your current window and allows you to quickly move back and forth between two files by pressing the Leader key twice.</p>
+<p>I find myself using this literrally all the time. It’s basically <code class="highlighter-rouge">cd -</code> for your current window and allows you to quickly move back and forth between two files by pressing the Leader key twice.</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>nnoremap &lt;Leader&gt;&lt;Leader&gt; :e#&lt;CR&gt;
 </code></pre>
@@ -234,32 +236,32 @@ map &lt;D-A-UP&gt; &lt;C-w&gt;W
 
 <h2 id="plugins">Plugins</h2>
 
-<p>Plugins are what make Vim great. There is basically a plugin for everything you might need, so being able to add and remove them easily.</p>
+<p>Plugins are what make Vim great. There is a plugin for everything you might need, so being able to add and remove them easily is important.</p>
 
 <h3 id="loading-plugins-with-pathogen">Loading Plugins With Pathogen</h3>
 
-<p><a href="https://github.com/tpope/vim-pathogen">Pathogen</a> is, in my opinion, the best way to manage plugins currently available. It’s very simple and non obstrusive and really “just works”.</p>
+<p><a href="https://github.com/tpope/vim-pathogen">Pathogen</a> is, in my opinion, the best way to manage plugins currently available. It’s very simple, non obstrusive and really “just works”.</p>
 
-<p>To install it, you can just use the one liner below. If you don’t feel like copy and pasting <code class="highlighter-rouge">curl</code> commands, just look up their <a href="https://github.com/tpope/vim-pathogen#installation">very clear documentation</a>.</p>
+<p>To install it, you can simply use the one liner below. If you don’t feel like copy and pasting <code class="highlighter-rouge">curl</code> commands, just look up their <a href="https://github.com/tpope/vim-pathogen#installation">very clear documentation</a>.</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>mkdir -p /.vim/autoload /.vim/bundle &amp;&amp; \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 </code></pre>
 </div>
 
-<p>Now open your <code class="highlighter-rouge">.vimrc</code> and add this line:</p>
+<p>Now open your <code class="highlighter-rouge">.vimrc</code> and add this line at the top:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>execute pathogen#infect()
 </code></pre>
 </div>
 
-<p>From now on, you can just add plugins in <code class="highlighter-rouge">~.vim/bundle/</code> and they will get loaded automatically</p>
+<p>From now on, you can add plugins in <code class="highlighter-rouge">~.vim/bundle/</code> and they will get loaded automatically!</p>
 
 <h3 id="managing-plugins-with-git">Managing Plugins With Git</h3>
 
-<p>All the Vim plugins I’m going to mention here have a Git repository somewhere. This is great, because updating to the latest version can be as easy as pulling master.</p>
+<p>All the Vim plugins I’m going to mention here have a Git repository somewhere. This is great, because updating to the latest version can become as easy as pulling master.</p>
 
-<p>To do this we’re going to use <a href="https://git-scm.com/docs/git-submodule">git submodules</a> to reference another repository from our main repository. It sounds weird, but it’s actually pretty straightforward and will look like this on Github:</p>
+<p>To do this we’re going to use <a href="https://git-scm.com/docs/git-submodule">git submodules</a> to reference another repository from our main repository. It’s actually pretty straightforward and will look like this on Github:</p>
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git-submodules-example.jpg" alt="Git submodules as seen on Github" style="padding: 20px; width: 360px;" /></div>
 
@@ -279,8 +281,8 @@ $ git submodule add git@source/pluginname.git bundle/pluginname
 <p>Later on when you use your config on another machine or want to update your plugins, you’ll be able to use other commands like <code class="highlighter-rouge">git submodule init</code> or <code class="highlighter-rouge">git submodule update</code>.</p>
 
 <h3 id="list-of-must-have-vim-plugins">List Of Must Have Vim Plugins</h3>
-<p>r
-Here is a list of all the plugins I decided to include and why. I also added the advanced configuration I used and some examples when needed.</p>
+
+<p>Here is a list of all the plugins I decided to include and why. I also added the advanced configuration I used and some examples when needed.</p>
 
 <h4 id="command-t">Command-T</h4>
 
@@ -367,7 +369,7 @@ autocmd VimEnter * wincmd p
 
 <h4 id="fugitive">Fugitive</h4>
 
-<p>Git wrapper that I mostly use for its awesome <code class="highlighter-rouge">:Gblame</code> feature, allowing you to blame any line directly from Vim. <a href="https://github.com/tpope/vim-fugitive">Get it here</a>.</p>
+<p>Git wrapper that I mostly use for its useful <code class="highlighter-rouge">:Gblame</code> feature, allowing you to blame any line directly from Vim. <a href="https://github.com/tpope/vim-fugitive">Get it here</a>.</p>
 
 <h4 id="git-gutter">Git Gutter</h4>
 
@@ -375,7 +377,7 @@ autocmd VimEnter * wincmd p
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git-gutter-example.jpg" alt="Git gutter for Vim" style="padding: 20px; width: 600px;" /></div>
 
-<p>I don’t like my editor changing size when I use it, so I chose to always display the gutter, even when there are no changes.</p>
+<p>I don’t like my editor changing size while I’m using it, so I chose to always display the gutter - even when there are no changes.</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>let g:gitgutter_sign_column_always=1
 </code></pre>
