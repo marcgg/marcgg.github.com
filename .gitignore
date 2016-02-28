@@ -6,3 +6,4 @@ tmp/
 .DS_Store
 _site/Gemfile
 _site/Gemfile.lock
+*.swp
