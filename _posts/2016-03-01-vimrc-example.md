@@ -87,7 +87,7 @@ The Leader key is Vim's way to reduce conflicts in configuration. The Vim user c
 
 	let mapleader=","
 
-_Note that mapping it to `,` removes a feature from Vim that can be useful and that some people prefere remapping it to `space` instead._
+_Note that mapping it to `,` removes a feature from Vim that can be useful and that some people prefer remapping it to `Space` instead._
 
 ### Reload Vim Config Without Having To Restart Editor
 

@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2016-03-01T14:23:05+01:00</updated>
+ <updated>2016-03-01T14:33:24+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -117,7 +117,7 @@ colorscheme Tomorrow-Night
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;&lt;em&gt;Note that mapping it to &lt;code class=&quot;highlighter-rouge&quot;&gt;,&lt;/code&gt; removes a feature from Vim that can be useful and that some people prefere remapping it to &lt;code class=&quot;highlighter-rouge&quot;&gt;space&lt;/code&gt; instead.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note that mapping it to &lt;code class=&quot;highlighter-rouge&quot;&gt;,&lt;/code&gt; removes a feature from Vim that can be useful and that some people prefer remapping it to &lt;code class=&quot;highlighter-rouge&quot;&gt;Space&lt;/code&gt; instead.&lt;/em&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;reload-vim-config-without-having-to-restart-editor&quot;&gt;Reload Vim Config Without Having To Restart Editor&lt;/h3&gt;
 
