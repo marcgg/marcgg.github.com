@@ -199,7 +199,7 @@ set autoindent
 
 <p>Here’s a handy command to remove whitespaces on save.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>autocmd BufWritePre *.* :%s/\s\+$//e
+<div class="highlighter-rouge"><pre class="highlight"><code>autocmd BufWritePre * :%s/\s\+$//e
 </code></pre>
 </div>
 
@@ -361,15 +361,11 @@ autocmd VimEnter * wincmd p
 </code></pre>
 </div>
 
+<p><em>Note that NERDTree is a project drawer and because of this has some limits when working with splits <a href="http://vimcasts.org/blog/2013/01/oil-and-vinegar-split-windows-and-project-drawer/">as explained in this article</a>.</em></p>
+
 <h4 id="supertab">Supertab</h4>
 
 <p>Autocomplete when using <code class="highlighter-rouge">tab</code>. <a href="https://github.com/ervandew/supertab">Get it here</a>.</p>
-
-<h4 id="airline">Airline</h4>
-
-<p>Cool looking status bar that integrates well with other plugins. <a href="https://github.com/vim-airline/vim-airline">Get it here</a>.</p>
-
-<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/airline.jpg" alt="Status bar for Vim" style="padding: 20px; width: 600px;" /></div>
 
 <h4 id="fugitive">Fugitive</h4>
 
@@ -392,6 +388,11 @@ autocmd VimEnter * wincmd p
 <p>The only feature in <a href="https://www.sublimetext.com/">Sublime</a> I was jealous of was its great multi cursor support. With this plugin I don’t have to feel this way anymore! <a href="https://github.com/terryma/vim-multiple-cursors/">Get it here</a>.</p>
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/vim-multi-cursors.gif" alt="Sublime style multi cursors in Vim" style="padding: 20px; width: 320px;" /></div>
+
+<h4 id="note-on-status-line">Note on Status Line</h4>
+
+<p>Right now I’m using <a href="https://github.com/vim-airline/vim-airline">Airline</a>, a cool looking status bar that integrates well with other plugins. However I might throw away this plugin and use Vim’s <code class="highlighter-rouge">statusline</code> that can be more set in a way fitting what I need as explained <a href="http://learnvimscriptthehardway.stevelosh.com/chapters/17.html">here</a>._ </p>
+<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/airline.jpg" alt="Status bar for Vim" style="padding: 20px; width: 600px;" /></div>
 
 <h3 id="ruby-specific-plugins">Ruby Specific Plugins</h3>
 

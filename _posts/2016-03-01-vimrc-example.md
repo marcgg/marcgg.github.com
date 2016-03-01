@@ -128,7 +128,7 @@ _ Note that this particular config is made for myself and I mostly use Ruby whi
 
 Here's a handy command to remove whitespaces on save.
 
-	autocmd BufWritePre *.* :%s/\s\+$//e
+	autocmd BufWritePre * :%s/\s\+$//e
 
 ### Better Search
 
@@ -254,15 +254,11 @@ Do not display some useless files in the tree:
 
 	let NERDTreeIgnore=['\.DS_Store', '\~$', '\.swp']
 
+_Note that NERDTree is a project drawer and because of this has some limits when working with splits [as explained in this article][20]._
+
 #### Supertab
 
-Autocomplete when using `tab`. [Get it here][20].
-
-#### Airline
-
-Cool looking status bar that integrates well with other plugins. [Get it here][21].
-
-<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/airline.jpg" alt="Status bar for Vim" style="padding: 20px; width: 600px;"/></div>
+Autocomplete when using `tab`. [Get it here][21].
 
 #### Fugitive
 
@@ -284,29 +280,34 @@ The only feature in [Sublime][24] I was jealous of was its great multi cursor su
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/vim-multi-cursors.gif" alt="Sublime style multi cursors in Vim" style="padding: 20px; width: 320px;"/></div>
 
+#### Note on Status Line
+
+Right now I'm using [Airline][26], a cool looking status bar that integrates well with other plugins. However I might throw away this plugin and use Vim's `statusline` that can be more set in a way fitting what I need as explained [here][27]._ 
+<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/airline.jpg" alt="Status bar for Vim" style="padding: 20px; width: 600px;"/></div>
+
 ### Ruby Specific Plugins
 
 I mostly use Ruby and Ruby on Rails for my projects, so I also added some plugins to help me with that.
 
 #### Bundler.vim
 
-I mostly use it to get better highlighting in the `Gemfile`, but it also allows you to `bundle open` quickly. [Get it here][26].
+I mostly use it to get better highlighting in the `Gemfile`, but it also allows you to `bundle open` quickly. [Get it here][28].
 
 #### Endwise
 
-Adds an `end` keyword when needed. [Get it here][27].
+Adds an `end` keyword when needed. [Get it here][29].
 
 #### Vim-Rails
 
-Must have plugin for anyone using Rails. It just does so much it would be a shame. I particullary like how it allows you to jump from file to file with ease. You can really go from a controller to its spec, to its views and so on. [Get it here][28].
+Must have plugin for anyone using Rails. It just does so much it would be a shame. I particullary like how it allows you to jump from file to file with ease. You can really go from a controller to its spec, to its views and so on. [Get it here][30].
 
 #### Vim-Ruby
 
-Main plugin for dealing with Ruby. [Get it here][29].
+Main plugin for dealing with Ruby. [Get it here][31].
 
 ### Missed One?
 
-If you have plugins you feel belong here, feel free to share them in the comments or on [twitter][30]!
+If you have plugins you feel belong here, feel free to share them in the comments or on [twitter][32]!
 
 [1]:	/blog/2012/09/04/one-reason-to-switch-to-vim-editor
 [2]:	https://github.com/carlhuda/janus
@@ -327,14 +328,16 @@ If you have plugins you feel belong here, feel free to share them in the comment
 [17]:	https://github.com/yegappan/mru
 [18]:	https://github.com/scrooloose/nerdcommenter
 [19]:	https://github.com/scrooloose/nerdtree
-[20]:	https://github.com/ervandew/supertab
-[21]:	https://github.com/vim-airline/vim-airline
+[20]:	http://vimcasts.org/blog/2013/01/oil-and-vinegar-split-windows-and-project-drawer/
+[21]:	https://github.com/ervandew/supertab
 [22]:	https://github.com/tpope/vim-fugitive
 [23]:	https://github.com/airblade/vim-gitgutter
 [24]:	https://www.sublimetext.com/
 [25]:	https://github.com/terryma/vim-multiple-cursors/
-[26]:	https://github.com/tpope/vim-bundler
-[27]:	https://github.com/tpope/vim-endwise
-[28]:	https://github.com/tpope/vim-rails/
-[29]:	https://github.com/vim-ruby
-[30]:	https://twitter.com/marcgg
+[26]:	https://github.com/vim-airline/vim-airline
+[27]:	http://learnvimscriptthehardway.stevelosh.com/chapters/17.html
+[28]:	https://github.com/tpope/vim-bundler
+[29]:	https://github.com/tpope/vim-endwise
+[30]:	https://github.com/tpope/vim-rails/
+[31]:	https://github.com/vim-ruby
+[32]:	https://twitter.com/marcgg

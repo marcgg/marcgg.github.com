@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2016-03-01T14:33:24+01:00</updated>
+ <updated>2016-03-01T15:46:53+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -166,7 +166,7 @@ set autoindent
 
 &lt;p&gt;Here’s a handy command to remove whitespaces on save.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;autocmd BufWritePre *.* :%s/\s\+$//e
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;autocmd BufWritePre * :%s/\s\+$//e
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -328,15 +328,11 @@ autocmd VimEnter * wincmd p
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
+&lt;p&gt;&lt;em&gt;Note that NERDTree is a project drawer and because of this has some limits when working with splits &lt;a href=&quot;http://vimcasts.org/blog/2013/01/oil-and-vinegar-split-windows-and-project-drawer/&quot;&gt;as explained in this article&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
 &lt;h4 id=&quot;supertab&quot;&gt;Supertab&lt;/h4&gt;
 
 &lt;p&gt;Autocomplete when using &lt;code class=&quot;highlighter-rouge&quot;&gt;tab&lt;/code&gt;. &lt;a href=&quot;https://github.com/ervandew/supertab&quot;&gt;Get it here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h4 id=&quot;airline&quot;&gt;Airline&lt;/h4&gt;
-
-&lt;p&gt;Cool looking status bar that integrates well with other plugins. &lt;a href=&quot;https://github.com/vim-airline/vim-airline&quot;&gt;Get it here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/airline.jpg&quot; alt=&quot;Status bar for Vim&quot; style=&quot;padding: 20px; width: 600px;&quot; /&gt;&lt;/div&gt;
 
 &lt;h4 id=&quot;fugitive&quot;&gt;Fugitive&lt;/h4&gt;
 
@@ -359,6 +355,11 @@ autocmd VimEnter * wincmd p
 &lt;p&gt;The only feature in &lt;a href=&quot;https://www.sublimetext.com/&quot;&gt;Sublime&lt;/a&gt; I was jealous of was its great multi cursor support. With this plugin I don’t have to feel this way anymore! &lt;a href=&quot;https://github.com/terryma/vim-multiple-cursors/&quot;&gt;Get it here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/vim-multi-cursors.gif&quot; alt=&quot;Sublime style multi cursors in Vim&quot; style=&quot;padding: 20px; width: 320px;&quot; /&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;note-on-status-line&quot;&gt;Note on Status Line&lt;/h4&gt;
+
+&lt;p&gt;Right now I’m using &lt;a href=&quot;https://github.com/vim-airline/vim-airline&quot;&gt;Airline&lt;/a&gt;, a cool looking status bar that integrates well with other plugins. However I might throw away this plugin and use Vim’s &lt;code class=&quot;highlighter-rouge&quot;&gt;statusline&lt;/code&gt; that can be more set in a way fitting what I need as explained &lt;a href=&quot;http://learnvimscriptthehardway.stevelosh.com/chapters/17.html&quot;&gt;here&lt;/a&gt;._ &lt;/p&gt;
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/airline.jpg&quot; alt=&quot;Status bar for Vim&quot; style=&quot;padding: 20px; width: 600px;&quot; /&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;ruby-specific-plugins&quot;&gt;Ruby Specific Plugins&lt;/h3&gt;
 
