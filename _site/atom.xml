@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2016-03-01T15:46:53+01:00</updated>
+ <updated>2016-03-01T16:09:15+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -24,6 +24,8 @@
 &lt;p&gt;Because of this I decided to entirely drop the setup I’ve been working with for the past years and started from scratch, adding only what I needed. If you want to see the result, my &lt;code class=&quot;highlighter-rouge&quot;&gt;.vim&lt;/code&gt; &lt;a href=&quot;https://github.com/marcgg/.vim&quot;&gt;is available on Github&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Overall I found the experience to be way more easy and fun than expected, so I decided to share! In this article I’ll explain how to quickly setup and customize Vim without having to use a pre-made distribution, just Git and a Terminal.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Disclaimer: All the choices made here reflect my opinion, the way I use Vim and the tools and languages I generally use. Obviously if you’re using an &lt;a href=&quot;http://images.anandtech.com/doci/7245/ErgoDox%20(1).jpg&quot;&gt;ergodox&lt;/a&gt; and only code in &lt;a href=&quot;http://marcgg.com/blog/2015/02/02/grace-murray-hopper-technical&quot;&gt;Flow-Matic &lt;/a&gt; we will have very different opinions on what is best.&lt;/em&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;basic-setup&quot;&gt;Basic Setup&lt;/h2&gt;
 

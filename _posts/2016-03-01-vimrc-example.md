@@ -13,9 +13,11 @@ Because of this I decided to entirely drop the setup I've been working with for 
 
 Overall I found the experience to be way more easy and fun than expected, so I decided to share! In this article I'll explain how to quickly setup and customize Vim without having to use a pre-made distribution, just Git and a Terminal.
 
+_Disclaimer: All the choices made here reflect my opinion, the way I use Vim and the tools and languages I generally use. Obviously if you're using an [ergodox][4] and only code in [Flow-Matic ][5] we will have very different opinions on what is best._
+
 ## Basic Setup
 
-First of all you need to [install vim][4], or, if you don't like to run your text editor in your console and use a mac, you can install [MacVim][5].
+First of all you need to [install vim][6], or, if you don't like to run your text editor in your console and use a mac, you can install [MacVim][7].
 
 Out of the box, Vim is quite worthless compared to other editors like Sublime or Atom. However, it's more evolutive and customizable, so the first thing to do is to start setting it up to fit your prefered way of coding. I recommend versionning your configuration to share accross machines while keeping track of any changes you made.
 
@@ -27,7 +29,7 @@ To do this, create a `.vim` repository with a `vimrc` file that will contain mos
 	$ touch vimrc
 	$ git init .
 
-Now you need to go back to your home directory and [symlink][6] the `vimrc` file. This way you get to use your `.vimrc` file normally while still get all the advantages of versionning with Git. 
+Now you need to go back to your home directory and [symlink][8] the `vimrc` file. This way you get to use your `.vimrc` file normally while still get all the advantages of versionning with Git. 
 
 	$ ln -s ~/.vim/vimrc ~/.vimrc
 
@@ -35,7 +37,7 @@ Now you need to go back to your home directory and [symlink][6] the `vimrc` file
 
 ### Picking a Theme
 
-There are a LOT of themes available for Vim. I've used [Solarized][7] for quite a while, but recently I switched to the [Tomorrow Night theme][8] and I like it a lot.
+There are a LOT of themes available for Vim. I've used [Solarized][9] for quite a while, but recently I switched to the [Tomorrow Night theme][10] and I like it a lot.
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/theme-example.jpg" alt="Vim Theme Installation" style="padding: 20px; width: 600px;"/></div>
 
@@ -57,7 +59,7 @@ Once you have your main theme, time to pick a font! I like my fonts readable, si
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/menlo.png" alt="Menlo Font" style="padding: 20px; width: 200px;"/></div>
 
-To use this, [download][9] and install the font and then add this line to your `.vimrc`
+To use this, [download][11] and install the font and then add this line to your `.vimrc`
 
 	set guifont=Menlo\ Regular:h18
 
@@ -81,7 +83,7 @@ Now that your Vim starts to look better, let's start to improve how it actually 
 
 ### Leader Key
 
-Before doing anything else, we need to set a [Leader key][10].
+Before doing anything else, we need to set a [Leader key][12].
 
 The Leader key is Vim's way to reduce conflicts in configuration. The Vim user can set this key to be anything and then every command are going to be preceded by this key. By default it's set to be backslash, but I like to change it to `,`.
 
@@ -91,7 +93,7 @@ _Note that mapping it to `,` removes a feature from Vim that can be useful and t
 
 ### Reload Vim Config Without Having To Restart Editor
 
-Every time you edit your `.vimrc` file, if you want to see the changes you have to close & open it again or [source][11] the `.vimrc` file manually. It's a pain, so let's map some keys to do it automatically:
+Every time you edit your `.vimrc` file, if you want to see the changes you have to close & open it again or [source][13] the `.vimrc` file manually. It's a pain, so let's map some keys to do it automatically:
 
 	map <leader>s :source ~/.vimrc<CR>
 
@@ -163,9 +165,9 @@ Plugins are what make Vim great. There is a plugin for everything you might need
 
 ### Loading Plugins With Pathogen
 
-[Pathogen][12] is, in my opinion, the best way to manage plugins currently available. It's very simple, non obstrusive and really "just works".
+[Pathogen][14] is, in my opinion, the best way to manage plugins currently available. It's very simple, non obstrusive and really "just works".
 
-To install it, you can simply use the one liner below. If you don't feel like copy and pasting `curl` commands, just look up their [very clear documentation][13].
+To install it, you can simply use the one liner below. If you don't feel like copy and pasting `curl` commands, just look up their [very clear documentation][15].
 
 	mkdir -p /.vim/autoload /.vim/bundle && \
 	curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
@@ -180,7 +182,7 @@ From now on, you can add plugins in `~.vim/bundle/` and they will get loaded aut
 
 All the Vim plugins I'm going to mention here have a Git repository somewhere. This is great, because updating to the latest version can become as easy as pulling master.
 
-To do this we're going to use [git submodules][14] to reference another repository from our main repository. It's actually pretty straightforward and will look like this on Github:
+To do this we're going to use [git submodules][16] to reference another repository from our main repository. It's actually pretty straightforward and will look like this on Github:
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git-submodules-example.jpg" alt="Git submodules as seen on Github" style="padding: 20px; width: 360px;"/></div>
 
@@ -189,7 +191,7 @@ For every plugin, you need to run:
 	$ cd ~/.vim
 	$ git submodule add git@source/pluginname.git bundle/pluginname
 
-For instance if you want to add `vim-ruby` located at [https://github.com/vim-ruby/vim-ruby][15], you'll do:
+For instance if you want to add `vim-ruby` located at [https://github.com/vim-ruby/vim-ruby][17], you'll do:
 
 	$ git submodule add git@github.com:vim-ruby/vim-ruby.git bundle/vim-ruby
 
@@ -201,7 +203,7 @@ Here is a list of all the plugins I decided to include and why. I also added the
 
 #### Command-T
 
-Very fast fuzzy search to open files quickly without many keystrokes. [Get it here][16].
+Very fast fuzzy search to open files quickly without many keystrokes. [Get it here][18].
 
 To ignore some files, you can use `wildignore`:
 
@@ -213,7 +215,7 @@ When you create a new file, it's not indexed by default. Here a way to reindex e
 
 #### MRU
 
-Get the most recently opened or edited files. [Get it here][17].
+Get the most recently opened or edited files. [Get it here][19].
 
 See the file list with `<Leader> + m`:
 
@@ -221,11 +223,11 @@ See the file list with `<Leader> + m`:
 
 #### NerdCommenter
 
-Comment / Uncomment large blocks of code easily. [Get it here][18].
+Comment / Uncomment large blocks of code easily. [Get it here][20].
 
 #### NerdTree
 
-A simple yet very useful tree explorer. [Get it here][19].
+A simple yet very useful tree explorer. [Get it here][21].
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/nerdtree.jpg" alt="Tree navigation with Vims" style="padding: 20px; width: 300px;"/></div>
 
@@ -254,19 +256,19 @@ Do not display some useless files in the tree:
 
 	let NERDTreeIgnore=['\.DS_Store', '\~$', '\.swp']
 
-_Note that NERDTree is a project drawer and because of this has some limits when working with splits [as explained in this article][20]._
+_Note that NERDTree is a project drawer and because of this has some limits when working with splits [as explained in this article][22]._
 
 #### Supertab
 
-Autocomplete when using `tab`. [Get it here][21].
+Autocomplete when using `tab`. [Get it here][23].
 
 #### Fugitive
 
-Git wrapper that I mostly use for its useful `:Gblame` feature, allowing you to blame any line directly from Vim. [Get it here][22].
+Git wrapper that I mostly use for its useful `:Gblame` feature, allowing you to blame any line directly from Vim. [Get it here][24].
 
 #### Git Gutter
 
-Displays the diff in the gutter and allows you to do actions on it. I mostly use it to see what I've just modified, but I also used some of its more advanced functions. For instance you can preview a change with `<Leader> + hp` and revert any change on a line with `<Leader> + hr`. It's great! [Get it here][23].
+Displays the diff in the gutter and allows you to do actions on it. I mostly use it to see what I've just modified, but I also used some of its more advanced functions. For instance you can preview a change with `<Leader> + hp` and revert any change on a line with `<Leader> + hr`. It's great! [Get it here][25].
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git-gutter-example.jpg" alt="Git gutter for Vim" style="padding: 20px; width: 600px;"/></div>
 
@@ -276,13 +278,13 @@ I don't like my editor changing size while I'm using it, so I chose to always di
 
 #### Vim Multiple Cursors
 
-The only feature in [Sublime][24] I was jealous of was its great multi cursor support. With this plugin I don't have to feel this way anymore! [Get it here][25].
+The only feature in [Sublime][26] I was jealous of was its great multi cursor support. With this plugin I don't have to feel this way anymore! [Get it here][27].
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/vim-multi-cursors.gif" alt="Sublime style multi cursors in Vim" style="padding: 20px; width: 320px;"/></div>
 
 #### Note on Status Line
 
-Right now I'm using [Airline][26], a cool looking status bar that integrates well with other plugins. However I might throw away this plugin and use Vim's `statusline` that can be more set in a way fitting what I need as explained [here][27]._ 
+Right now I'm using [Airline][28], a cool looking status bar that integrates well with other plugins. However I might throw away this plugin and use Vim's `statusline` that can be more set in a way fitting what I need as explained [here][29]._ 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/airline.jpg" alt="Status bar for Vim" style="padding: 20px; width: 600px;"/></div>
 
 ### Ruby Specific Plugins
@@ -291,53 +293,55 @@ I mostly use Ruby and Ruby on Rails for my projects, so I also added some plugin
 
 #### Bundler.vim
 
-I mostly use it to get better highlighting in the `Gemfile`, but it also allows you to `bundle open` quickly. [Get it here][28].
+I mostly use it to get better highlighting in the `Gemfile`, but it also allows you to `bundle open` quickly. [Get it here][30].
 
 #### Endwise
 
-Adds an `end` keyword when needed. [Get it here][29].
+Adds an `end` keyword when needed. [Get it here][31].
 
 #### Vim-Rails
 
-Must have plugin for anyone using Rails. It just does so much it would be a shame. I particullary like how it allows you to jump from file to file with ease. You can really go from a controller to its spec, to its views and so on. [Get it here][30].
+Must have plugin for anyone using Rails. It just does so much it would be a shame. I particullary like how it allows you to jump from file to file with ease. You can really go from a controller to its spec, to its views and so on. [Get it here][32].
 
 #### Vim-Ruby
 
-Main plugin for dealing with Ruby. [Get it here][31].
+Main plugin for dealing with Ruby. [Get it here][33].
 
 ### Missed One?
 
-If you have plugins you feel belong here, feel free to share them in the comments or on [twitter][32]!
+If you have plugins you feel belong here, feel free to share them in the comments or on [twitter][34]!
 
 [1]:	/blog/2012/09/04/one-reason-to-switch-to-vim-editor
 [2]:	https://github.com/carlhuda/janus
 [3]:	https://github.com/marcgg/.vim
-[4]:	http://www.vim.org/download.php
-[5]:	https://github.com/b4winckler/macvim
-[6]:	https://en.wikipedia.org/wiki/Symbolic_link
-[7]:	http://ethanschoonover.com/solarized
-[8]:	https://github.com/chriskempson/tomorrow-theme
-[9]:	http://www.cufonfonts.com/en/font/13494/menlo
-[10]:	http://stackoverflow.com/a/1764336
-[11]:	http://ss64.com/bash/source.html
-[12]:	https://github.com/tpope/vim-pathogen
-[13]:	https://github.com/tpope/vim-pathogen#installation
-[14]:	https://git-scm.com/docs/git-submodule
-[15]:	https://github.com/vim-ruby/vim-ruby
-[16]:	https://github.com/wincent/command-t/
-[17]:	https://github.com/yegappan/mru
-[18]:	https://github.com/scrooloose/nerdcommenter
-[19]:	https://github.com/scrooloose/nerdtree
-[20]:	http://vimcasts.org/blog/2013/01/oil-and-vinegar-split-windows-and-project-drawer/
-[21]:	https://github.com/ervandew/supertab
-[22]:	https://github.com/tpope/vim-fugitive
-[23]:	https://github.com/airblade/vim-gitgutter
-[24]:	https://www.sublimetext.com/
-[25]:	https://github.com/terryma/vim-multiple-cursors/
-[26]:	https://github.com/vim-airline/vim-airline
-[27]:	http://learnvimscriptthehardway.stevelosh.com/chapters/17.html
-[28]:	https://github.com/tpope/vim-bundler
-[29]:	https://github.com/tpope/vim-endwise
-[30]:	https://github.com/tpope/vim-rails/
-[31]:	https://github.com/vim-ruby
-[32]:	https://twitter.com/marcgg
+[4]:	http://images.anandtech.com/doci/7245/ErgoDox%20(1).jpg
+[5]:	http://marcgg.com/blog/2015/02/02/grace-murray-hopper-technical
+[6]:	http://www.vim.org/download.php
+[7]:	https://github.com/b4winckler/macvim
+[8]:	https://en.wikipedia.org/wiki/Symbolic_link
+[9]:	http://ethanschoonover.com/solarized
+[10]:	https://github.com/chriskempson/tomorrow-theme
+[11]:	http://www.cufonfonts.com/en/font/13494/menlo
+[12]:	http://stackoverflow.com/a/1764336
+[13]:	http://ss64.com/bash/source.html
+[14]:	https://github.com/tpope/vim-pathogen
+[15]:	https://github.com/tpope/vim-pathogen#installation
+[16]:	https://git-scm.com/docs/git-submodule
+[17]:	https://github.com/vim-ruby/vim-ruby
+[18]:	https://github.com/wincent/command-t/
+[19]:	https://github.com/yegappan/mru
+[20]:	https://github.com/scrooloose/nerdcommenter
+[21]:	https://github.com/scrooloose/nerdtree
+[22]:	http://vimcasts.org/blog/2013/01/oil-and-vinegar-split-windows-and-project-drawer/
+[23]:	https://github.com/ervandew/supertab
+[24]:	https://github.com/tpope/vim-fugitive
+[25]:	https://github.com/airblade/vim-gitgutter
+[26]:	https://www.sublimetext.com/
+[27]:	https://github.com/terryma/vim-multiple-cursors/
+[28]:	https://github.com/vim-airline/vim-airline
+[29]:	http://learnvimscriptthehardway.stevelosh.com/chapters/17.html
+[30]:	https://github.com/tpope/vim-bundler
+[31]:	https://github.com/tpope/vim-endwise
+[32]:	https://github.com/tpope/vim-rails/
+[33]:	https://github.com/vim-ruby
+[34]:	https://twitter.com/marcgg
