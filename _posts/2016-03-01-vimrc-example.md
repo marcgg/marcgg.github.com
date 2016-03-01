@@ -2,12 +2,12 @@
 layout: post
 title: "Vim Configuration From Scratch in 2016"
 description: "Complete example to configure Vim. We'll use pathogen and git to manage plugins, add a theme... but also choose from a long list of curated plugins such as fuzzy search, auto complete, smart indentation, multi-cursors support (like Sublime) and much more!"
-blog: false
+blog: true
 category: blog
 tag: Dev
 ---
 
-I started using Vim [a while ago][1] with the great distribution [janus][2]. Since then I made a a lot of changes to my Janus config, but it never felt entirely like my own setup. There are always a few plugins I wouldn't use and some features I couldn't get to work because I didn't understand the internals of my distribution.
+I started using Vim [a while ago][1] with the great distribution [Janus][2]. Since then I made a a lot of changes to my config, but it never felt entirely like my own setup. There always were a few plugins I wouldn't use and some features I couldn't get to work because I didn't understand the internals of my distribution.
 
 Because of this I decided to entirely drop the setup I've been working with for the past years and started from scratch, adding only what I needed. If you want to see the result, my `.vim` [is available on Github][3].
 
