@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2016-03-01T08:59:32+01:00</updated>
+ <updated>2016-03-01T14:23:05+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -117,6 +117,8 @@ colorscheme Tomorrow-Night
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
+&lt;p&gt;&lt;em&gt;Note that mapping it to &lt;code class=&quot;highlighter-rouge&quot;&gt;,&lt;/code&gt; removes a feature from Vim that can be useful and that some people prefere remapping it to &lt;code class=&quot;highlighter-rouge&quot;&gt;space&lt;/code&gt; instead.&lt;/em&gt;&lt;/p&gt;
+
 &lt;h3 id=&quot;reload-vim-config-without-having-to-restart-editor&quot;&gt;Reload Vim Config Without Having To Restart Editor&lt;/h3&gt;
 
 &lt;p&gt;Every time you edit your &lt;code class=&quot;highlighter-rouge&quot;&gt;.vimrc&lt;/code&gt; file, if you want to see the changes you have to close &amp;amp; open it again or &lt;a href=&quot;http://ss64.com/bash/source.html&quot;&gt;source&lt;/a&gt; the &lt;code class=&quot;highlighter-rouge&quot;&gt;.vimrc&lt;/code&gt; file manually. It’s a pain, so let’s map some keys to do it automatically:&lt;/p&gt;
@@ -195,11 +197,13 @@ map &amp;lt;D-A-UP&amp;gt; &amp;lt;C-w&amp;gt;W
 
 &lt;h3 id=&quot;re-open-previously-opened-file&quot;&gt;Re-Open Previously Opened File&lt;/h3&gt;
 
-&lt;p&gt;I find myself using this literrally all the time. It’s basically &lt;code class=&quot;highlighter-rouge&quot;&gt;cd -&lt;/code&gt; for your current window and allows you to quickly move back and forth between two files by pressing the Leader key twice.&lt;/p&gt;
+&lt;p&gt;I find myself using this literally all the time. It’s basically &lt;code class=&quot;highlighter-rouge&quot;&gt;cd -&lt;/code&gt; for your current window and allows you to quickly move back and forth between two files by pressing the Leader key twice.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nnoremap &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt; :e#&amp;lt;CR&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;Note that there’s already a way of doing it by pressiong &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl + ^&lt;/code&gt;, but I like &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt; a lot more.&lt;/em&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;plugins&quot;&gt;Plugins&lt;/h2&gt;
 
@@ -249,7 +253,7 @@ $ git submodule add git@source/pluginname.git bundle/pluginname
 
 &lt;h3 id=&quot;list-of-must-have-vim-plugins&quot;&gt;List Of Must Have Vim Plugins&lt;/h3&gt;
 
-&lt;p&gt;Here is a list of all the plugins I decided to include and why. I also added the advanced configuration I used and some examples when needed.&lt;/p&gt;
+&lt;p&gt;Here is a list of all the plugins I decided to include and why. I also added the advanced configuration I used and some examples when needed. This list is, of course, very subjective and will depend on what you expect your editor to do for you, but I feel like it’s a good starting point.&lt;/p&gt;
 
 &lt;h4 id=&quot;command-t&quot;&gt;Command-T&lt;/h4&gt;
 

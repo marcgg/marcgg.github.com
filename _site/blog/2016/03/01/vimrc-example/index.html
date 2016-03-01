@@ -150,6 +150,8 @@ colorscheme Tomorrow-Night
 </code></pre>
 </div>
 
+<p><em>Note that mapping it to <code class="highlighter-rouge">,</code> removes a feature from Vim that can be useful and that some people prefere remapping it to <code class="highlighter-rouge">space</code> instead.</em></p>
+
 <h3 id="reload-vim-config-without-having-to-restart-editor">Reload Vim Config Without Having To Restart Editor</h3>
 
 <p>Every time you edit your <code class="highlighter-rouge">.vimrc</code> file, if you want to see the changes you have to close &amp; open it again or <a href="http://ss64.com/bash/source.html">source</a> the <code class="highlighter-rouge">.vimrc</code> file manually. It’s a pain, so let’s map some keys to do it automatically:</p>
@@ -228,11 +230,13 @@ map &lt;D-A-UP&gt; &lt;C-w&gt;W
 
 <h3 id="re-open-previously-opened-file">Re-Open Previously Opened File</h3>
 
-<p>I find myself using this literrally all the time. It’s basically <code class="highlighter-rouge">cd -</code> for your current window and allows you to quickly move back and forth between two files by pressing the Leader key twice.</p>
+<p>I find myself using this literally all the time. It’s basically <code class="highlighter-rouge">cd -</code> for your current window and allows you to quickly move back and forth between two files by pressing the Leader key twice.</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>nnoremap &lt;Leader&gt;&lt;Leader&gt; :e#&lt;CR&gt;
 </code></pre>
 </div>
+
+<p><em>Note that there’s already a way of doing it by pressiong <code class="highlighter-rouge">Ctrl + ^</code>, but I like &lt;Leader&gt;&lt;Leader&gt; a lot more.</em></p>
 
 <h2 id="plugins">Plugins</h2>
 
@@ -282,7 +286,7 @@ $ git submodule add git@source/pluginname.git bundle/pluginname
 
 <h3 id="list-of-must-have-vim-plugins">List Of Must Have Vim Plugins</h3>
 
-<p>Here is a list of all the plugins I decided to include and why. I also added the advanced configuration I used and some examples when needed.</p>
+<p>Here is a list of all the plugins I decided to include and why. I also added the advanced configuration I used and some examples when needed. This list is, of course, very subjective and will depend on what you expect your editor to do for you, but I feel like it’s a good starting point.</p>
 
 <h4 id="command-t">Command-T</h4>
 

@@ -87,6 +87,8 @@ The Leader key is Vim's way to reduce conflicts in configuration. The Vim user c
 
 	let mapleader=","
 
+_Note that mapping it to `,` removes a feature from Vim that can be useful and that some people prefere remapping it to `space` instead._
+
 ### Reload Vim Config Without Having To Restart Editor
 
 Every time you edit your `.vimrc` file, if you want to see the changes you have to close & open it again or [source][11] the `.vimrc` file manually. It's a pain, so let's map some keys to do it automatically:
@@ -149,9 +151,11 @@ People are divided on this, but I have made my mind and I prefer using arrow key
 
 ### Re-Open Previously Opened File
 
-I find myself using this literrally all the time. It's basically `cd -` for your current window and allows you to quickly move back and forth between two files by pressing the Leader key twice.
+I find myself using this literally all the time. It's basically `cd -` for your current window and allows you to quickly move back and forth between two files by pressing the Leader key twice.
 
 	nnoremap <Leader><Leader> :e#<CR>
+
+_Note that there's already a way of doing it by pressiong `Ctrl + ^`, but I like \<Leader\>\<Leader\> a lot more._
 
 ## Plugins
 
@@ -193,7 +197,7 @@ Later on when you use your config on another machine or want to update your plug
 
 ### List Of Must Have Vim Plugins
 
-Here is a list of all the plugins I decided to include and why. I also added the advanced configuration I used and some examples when needed.
+Here is a list of all the plugins I decided to include and why. I also added the advanced configuration I used and some examples when needed. This list is, of course, very subjective and will depend on what you expect your editor to do for you, but I feel like it's a good starting point.
 
 #### Command-T
 
