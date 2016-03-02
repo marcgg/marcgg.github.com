@@ -144,7 +144,7 @@ Ability to cancel a search with `Escape`:
 
 ### Use Arrows
 
-People are divided on this, but I have made my mind and I prefer using arrow keys instead of the default Vim mapping. If you want to do the same:
+People are divided on this, but I have made my mind and I prefer using arrow keys instead of the default Vim mapping. If you want to do the samme:
 
 	map <D-A-RIGHT> <C-w>l
 	map <D-A-LEFT> <C-w>h
@@ -197,7 +197,7 @@ For instance if you want to add `vim-ruby` located at [https://github.com/vim-ru
 
 Later on when you use your config on another machine or want to update your plugins, you'll be able to use other commands like `git submodule init` or `git submodule update`.
 
-### List Of Must Have Vim Plugins
+### Vim Plugins I Used
 
 Here is a list of all the plugins I decided to include and why. I also added the advanced configuration I used and some examples when needed. This list is, of course, very subjective and will depend on what you expect your editor to do for you, but I feel like it's a good starting point.
 
@@ -220,7 +220,7 @@ Get the most recently opened or edited files. [Get it here][19].
 See the file list with `<Leader> + m`:
 
 	nnoremap <silent> <Leader>m :MRU<CR>
-
+a
 #### NerdCommenter
 
 Comment / Uncomment large blocks of code easily. [Get it here][20].
@@ -282,34 +282,29 @@ The only feature in [Sublime][26] I was jealous of was its great multi cursor su
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/vim-multi-cursors.gif" alt="Sublime style multi cursors in Vim" style="padding: 20px; width: 320px;"/></div>
 
-#### Note on Status Line
-
-Right now I'm using [Airline][28], a cool looking status bar that integrates well with other plugins. However I might throw away this plugin and use Vim's `statusline` that can be more set in a way fitting what I need as explained [here][29]._ 
-<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/airline.jpg" alt="Status bar for Vim" style="padding: 20px; width: 600px;"/></div>
-
 ### Ruby Specific Plugins
 
 I mostly use Ruby and Ruby on Rails for my projects, so I also added some plugins to help me with that.
 
 #### Bundler.vim
 
-I mostly use it to get better highlighting in the `Gemfile`, but it also allows you to `bundle open` quickly. [Get it here][30].
+I mostly use it to get better highlighting in the `Gemfile`, but it also allows you to `bundle open` quickly. [Get it here][28].
 
 #### Endwise
 
-Adds an `end` keyword when needed. [Get it here][31].
+Adds an `end` keyword when needed. [Get it here][29].
 
 #### Vim-Rails
 
-Must have plugin for anyone using Rails. It just does so much it would be a shame. I particullary like how it allows you to jump from file to file with ease. You can really go from a controller to its spec, to its views and so on. [Get it here][32].
+Must have plugin for anyone using Rails. It just does so much it would be a shame. I particullary like how it allows you to jump from file to file with ease. You can really go from a controller to its spec, to its views and so on. [Get it here][30].
 
 #### Vim-Ruby
 
-Main plugin for dealing with Ruby. [Get it here][33].
+Main plugin for dealing with Ruby. [Get it here][31].
 
 ### Missed One?
 
-If you have plugins you feel belong here, feel free to share them in the comments or on [twitter][34]!
+If you have plugins you feel belong here, feel free to share them in the comments or on [twitter][32]!
 
 [1]:	/blog/2012/09/04/one-reason-to-switch-to-vim-editor
 [2]:	https://github.com/carlhuda/janus
@@ -338,10 +333,8 @@ If you have plugins you feel belong here, feel free to share them in the comment
 [25]:	https://github.com/airblade/vim-gitgutter
 [26]:	https://www.sublimetext.com/
 [27]:	https://github.com/terryma/vim-multiple-cursors/
-[28]:	https://github.com/vim-airline/vim-airline
-[29]:	http://learnvimscriptthehardway.stevelosh.com/chapters/17.html
-[30]:	https://github.com/tpope/vim-bundler
-[31]:	https://github.com/tpope/vim-endwise
-[32]:	https://github.com/tpope/vim-rails/
-[33]:	https://github.com/vim-ruby
-[34]:	https://twitter.com/marcgg
+[28]:	https://github.com/tpope/vim-bundler
+[29]:	https://github.com/tpope/vim-endwise
+[30]:	https://github.com/tpope/vim-rails/
+[31]:	https://github.com/vim-ruby
+[32]:	https://twitter.com/marcgg

@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2016-03-01T16:09:15+01:00</updated>
+ <updated>2016-03-02T10:40:05+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -188,7 +188,7 @@ set autoindent
 
 &lt;h3 id=&quot;use-arrows&quot;&gt;Use Arrows&lt;/h3&gt;
 
-&lt;p&gt;People are divided on this, but I have made my mind and I prefer using arrow keys instead of the default Vim mapping. If you want to do the same:&lt;/p&gt;
+&lt;p&gt;People are divided on this, but I have made my mind and I prefer using arrow keys instead of the default Vim mapping. If you want to do the samme:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;map &amp;lt;D-A-RIGHT&amp;gt; &amp;lt;C-w&amp;gt;l
 map &amp;lt;D-A-LEFT&amp;gt; &amp;lt;C-w&amp;gt;h
@@ -253,7 +253,7 @@ $ git submodule add git@source/pluginname.git bundle/pluginname
 
 &lt;p&gt;Later on when you use your config on another machine or want to update your plugins, you’ll be able to use other commands like &lt;code class=&quot;highlighter-rouge&quot;&gt;git submodule init&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;git submodule update&lt;/code&gt;.&lt;/p&gt;
 
-&lt;h3 id=&quot;list-of-must-have-vim-plugins&quot;&gt;List Of Must Have Vim Plugins&lt;/h3&gt;
+&lt;h3 id=&quot;vim-plugins-i-used&quot;&gt;Vim Plugins I Used&lt;/h3&gt;
 
 &lt;p&gt;Here is a list of all the plugins I decided to include and why. I also added the advanced configuration I used and some examples when needed. This list is, of course, very subjective and will depend on what you expect your editor to do for you, but I feel like it’s a good starting point.&lt;/p&gt;
 
@@ -279,11 +279,9 @@ $ git submodule add git@source/pluginname.git bundle/pluginname
 
 &lt;p&gt;See the file list with &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;Leader&amp;gt; + m&lt;/code&gt;:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nnoremap &amp;lt;silent&amp;gt; &amp;lt;Leader&amp;gt;m :MRU&amp;lt;CR&amp;gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nnoremap &amp;lt;silent&amp;gt; &amp;lt;Leader&amp;gt;m :MRU&amp;lt;CR&amp;gt; a #### NerdCommenter
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-
-&lt;h4 id=&quot;nerdcommenter&quot;&gt;NerdCommenter&lt;/h4&gt;
 
 &lt;p&gt;Comment / Uncomment large blocks of code easily. &lt;a href=&quot;https://github.com/scrooloose/nerdcommenter&quot;&gt;Get it here&lt;/a&gt;.&lt;/p&gt;
 
@@ -357,11 +355,6 @@ autocmd VimEnter * wincmd p
 &lt;p&gt;The only feature in &lt;a href=&quot;https://www.sublimetext.com/&quot;&gt;Sublime&lt;/a&gt; I was jealous of was its great multi cursor support. With this plugin I don’t have to feel this way anymore! &lt;a href=&quot;https://github.com/terryma/vim-multiple-cursors/&quot;&gt;Get it here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/vim-multi-cursors.gif&quot; alt=&quot;Sublime style multi cursors in Vim&quot; style=&quot;padding: 20px; width: 320px;&quot; /&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;note-on-status-line&quot;&gt;Note on Status Line&lt;/h4&gt;
-
-&lt;p&gt;Right now I’m using &lt;a href=&quot;https://github.com/vim-airline/vim-airline&quot;&gt;Airline&lt;/a&gt;, a cool looking status bar that integrates well with other plugins. However I might throw away this plugin and use Vim’s &lt;code class=&quot;highlighter-rouge&quot;&gt;statusline&lt;/code&gt; that can be more set in a way fitting what I need as explained &lt;a href=&quot;http://learnvimscriptthehardway.stevelosh.com/chapters/17.html&quot;&gt;here&lt;/a&gt;._ &lt;/p&gt;
-&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/airline.jpg&quot; alt=&quot;Status bar for Vim&quot; style=&quot;padding: 20px; width: 600px;&quot; /&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;ruby-specific-plugins&quot;&gt;Ruby Specific Plugins&lt;/h3&gt;
 

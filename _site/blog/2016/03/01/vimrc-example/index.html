@@ -221,7 +221,7 @@ set autoindent
 
 <h3 id="use-arrows">Use Arrows</h3>
 
-<p>People are divided on this, but I have made my mind and I prefer using arrow keys instead of the default Vim mapping. If you want to do the same:</p>
+<p>People are divided on this, but I have made my mind and I prefer using arrow keys instead of the default Vim mapping. If you want to do the samme:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>map &lt;D-A-RIGHT&gt; &lt;C-w&gt;l
 map &lt;D-A-LEFT&gt; &lt;C-w&gt;h
@@ -286,7 +286,7 @@ $ git submodule add git@source/pluginname.git bundle/pluginname
 
 <p>Later on when you use your config on another machine or want to update your plugins, you’ll be able to use other commands like <code class="highlighter-rouge">git submodule init</code> or <code class="highlighter-rouge">git submodule update</code>.</p>
 
-<h3 id="list-of-must-have-vim-plugins">List Of Must Have Vim Plugins</h3>
+<h3 id="vim-plugins-i-used">Vim Plugins I Used</h3>
 
 <p>Here is a list of all the plugins I decided to include and why. I also added the advanced configuration I used and some examples when needed. This list is, of course, very subjective and will depend on what you expect your editor to do for you, but I feel like it’s a good starting point.</p>
 
@@ -312,11 +312,9 @@ $ git submodule add git@source/pluginname.git bundle/pluginname
 
 <p>See the file list with <code class="highlighter-rouge">&lt;Leader&gt; + m</code>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>nnoremap &lt;silent&gt; &lt;Leader&gt;m :MRU&lt;CR&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>nnoremap &lt;silent&gt; &lt;Leader&gt;m :MRU&lt;CR&gt; a #### NerdCommenter
 </code></pre>
 </div>
-
-<h4 id="nerdcommenter">NerdCommenter</h4>
 
 <p>Comment / Uncomment large blocks of code easily. <a href="https://github.com/scrooloose/nerdcommenter">Get it here</a>.</p>
 
@@ -390,11 +388,6 @@ autocmd VimEnter * wincmd p
 <p>The only feature in <a href="https://www.sublimetext.com/">Sublime</a> I was jealous of was its great multi cursor support. With this plugin I don’t have to feel this way anymore! <a href="https://github.com/terryma/vim-multiple-cursors/">Get it here</a>.</p>
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/vim-multi-cursors.gif" alt="Sublime style multi cursors in Vim" style="padding: 20px; width: 320px;" /></div>
-
-<h4 id="note-on-status-line">Note on Status Line</h4>
-
-<p>Right now I’m using <a href="https://github.com/vim-airline/vim-airline">Airline</a>, a cool looking status bar that integrates well with other plugins. However I might throw away this plugin and use Vim’s <code class="highlighter-rouge">statusline</code> that can be more set in a way fitting what I need as explained <a href="http://learnvimscriptthehardway.stevelosh.com/chapters/17.html">here</a>._ </p>
-<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/airline.jpg" alt="Status bar for Vim" style="padding: 20px; width: 600px;" /></div>
 
 <h3 id="ruby-specific-plugins">Ruby Specific Plugins</h3>
 
