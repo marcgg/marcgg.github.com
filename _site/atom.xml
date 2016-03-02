@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2016-03-02T10:57:20+01:00</updated>
+ <updated>2016-03-02T17:49:11+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -127,7 +127,7 @@ colorscheme Tomorrow-Night
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;It’s the first time we see this syntax and it might look a bit weird. Basically it declares “please map (&lt;code class=&quot;highlighter-rouge&quot;&gt;Leader key + s&lt;/code&gt;) to the following command: &lt;code class=&quot;highlighter-rouge&quot;&gt;:source ~/.vimrc&lt;/code&gt; and then press &lt;code class=&quot;highlighter-rouge&quot;&gt;Enter&lt;/code&gt;” which effectively reload the Vim configuration. Once I add this to my configuration, pressing &lt;code class=&quot;highlighter-rouge&quot;&gt;,&lt;/code&gt; followed by &lt;code class=&quot;highlighter-rouge&quot;&gt;s&lt;/code&gt; will run the command.&lt;/p&gt;
+&lt;p&gt;It’s the first time we see this syntax and it might look a bit weird. Basically it declares “please map (&lt;code class=&quot;highlighter-rouge&quot;&gt;Leader key + s&lt;/code&gt;) to the following command: &lt;code class=&quot;highlighter-rouge&quot;&gt;:source ~/.vimrc&lt;/code&gt; and then press &lt;code class=&quot;highlighter-rouge&quot;&gt;Enter&lt;/code&gt;” which effectively reload the Vim configuration. Once I add this to my configuration, pressing the leader key followed by &lt;code class=&quot;highlighter-rouge&quot;&gt;s&lt;/code&gt; will run the command above.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Note that it only works for &lt;code class=&quot;highlighter-rouge&quot;&gt;.vimrc&lt;/code&gt; changes and not for adding or removing plugins.&lt;/em&gt;&lt;/p&gt;
 

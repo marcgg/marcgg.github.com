@@ -95,7 +95,7 @@ Every time you edit your `.vimrc` file, if you want to see the changes you have 
 
 	map <leader>s :source ~/.vimrc<CR>
 
-It's the first time we see this syntax and it might look a bit weird. Basically it declares "please map (`Leader key + s`) to the following command: `:source ~/.vimrc` and then press `Enter`" which effectively reload the Vim configuration. Once I add this to my configuration, pressing `,` followed by `s` will run the command.
+It's the first time we see this syntax and it might look a bit weird. Basically it declares "please map (`Leader key + s`) to the following command: `:source ~/.vimrc` and then press `Enter`" which effectively reload the Vim configuration. Once I add this to my configuration, pressing the leader key followed by `s` will run the command above.
 
 _Note that it only works for `.vimrc` changes and not for adding or removing plugins._
 
