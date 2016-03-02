@@ -146,13 +146,11 @@ colorscheme Tomorrow-Night
 
 <p>Before doing anything else, we need to set a <a href="http://stackoverflow.com/a/1764336">Leader key</a>.</p>
 
-<p>The Leader key is Vim’s way to reduce conflicts in configuration. The Vim user can set this key to be anything and then every command are going to be preceded by this key. By default it’s set to be backslash, but I like to change it to <code class="highlighter-rouge">,</code>.</p>
+<p>The Leader key is Vim’s way to reduce conflicts in configuration. The Vim user can set this key to be anything and then every command are going to be preceded by this key. By default it’s set to be backslash, but I like to change it to <code class="highlighter-rouge">space</code>.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>let mapleader=","
+<div class="highlighter-rouge"><pre class="highlight"><code>let mapleader=" "
 </code></pre>
 </div>
-
-<p><em>Note that mapping it to <code class="highlighter-rouge">,</code> removes a feature from Vim that can be useful and that some people prefer remapping it to <code class="highlighter-rouge">Space</code> instead.</em></p>
 
 <h3 id="reload-vim-config-without-having-to-restart-editor">Reload Vim Config Without Having To Restart Editor</h3>
 
@@ -169,12 +167,6 @@ colorscheme Tomorrow-Night
 <h3 id="smart-defaults">Smart Defaults</h3>
 
 <p>Vim is pretty old and made to run on machines with low processing power. Because of this, when you install Vim a lot of interesting features are deactivated by default. Here’s what most people would want their 2016 text editor to have.</p>
-
-<p>Do not try to be compatible with very old versions of Vim:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>set nocompatible
-</code></pre>
-</div>
 
 <p>Keep more info in memory to speed things up:</p>
 
@@ -221,7 +213,7 @@ set autoindent
 
 <h3 id="use-arrows">Use Arrows</h3>
 
-<p>People are divided on this, but I have made my mind and I prefer using arrow keys instead of the default Vim mapping. If you want to do the samme:</p>
+<p>People are divided on this, but I have made my mind and I prefer using arrow keys instead of the default Vim mapping. If you want to do the same:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>map &lt;D-A-RIGHT&gt; &lt;C-w&gt;l
 map &lt;D-A-LEFT&gt; &lt;C-w&gt;h
@@ -318,6 +310,12 @@ $ git submodule add git@source/pluginname.git bundle/pluginname
 
 <p>Comment / Uncomment large blocks of code easily. <a href="https://github.com/scrooloose/nerdcommenter">Get it here</a>.</p>
 
+<h4 id="lightline">Lightline</h4>
+
+<p>After trying different plugins such as Airline, I decided on Lightline. This plugin gives you a light a configurable status line without too many pre-made decisions. <a href="https://github.com/itchyny/lightline.vim">Get it here</a>.</p>
+
+<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/lightline.jpg" alt="Status bar in vim" style="padding: 20px; width: 500px;" /></div>
+
 <h4 id="nerdtree">NerdTree</h4>
 
 <p>A simple yet very useful tree explorer. <a href="https://github.com/scrooloose/nerdtree">Get it here</a>.</p>
@@ -388,6 +386,8 @@ autocmd VimEnter * wincmd p
 <p>The only feature in <a href="https://www.sublimetext.com/">Sublime</a> I was jealous of was its great multi cursor support. With this plugin I don’t have to feel this way anymore! <a href="https://github.com/terryma/vim-multiple-cursors/">Get it here</a>.</p>
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/vim-multi-cursors.gif" alt="Sublime style multi cursors in Vim" style="padding: 20px; width: 320px;" /></div>
+
+<p>Of course if you wanted to, <a href="https://medium.com/@schtoeffel/you-don-t-need-more-than-one-cursor-in-vim-2c44117d51db#.ufvrj7yug">you could have the same feature with native Vim features</a>, but for now this plugin is really helpful to me.</p>
 
 <h3 id="ruby-specific-plugins">Ruby Specific Plugins</h3>
 

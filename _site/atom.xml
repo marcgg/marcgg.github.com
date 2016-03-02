@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2016-03-02T10:40:05+01:00</updated>
+ <updated>2016-03-02T10:57:20+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -113,13 +113,11 @@ colorscheme Tomorrow-Night
 
 &lt;p&gt;Before doing anything else, we need to set a &lt;a href=&quot;http://stackoverflow.com/a/1764336&quot;&gt;Leader key&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;The Leader key is Vim’s way to reduce conflicts in configuration. The Vim user can set this key to be anything and then every command are going to be preceded by this key. By default it’s set to be backslash, but I like to change it to &lt;code class=&quot;highlighter-rouge&quot;&gt;,&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The Leader key is Vim’s way to reduce conflicts in configuration. The Vim user can set this key to be anything and then every command are going to be preceded by this key. By default it’s set to be backslash, but I like to change it to &lt;code class=&quot;highlighter-rouge&quot;&gt;space&lt;/code&gt;.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let mapleader=&quot;,&quot;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let mapleader=&quot; &quot;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-
-&lt;p&gt;&lt;em&gt;Note that mapping it to &lt;code class=&quot;highlighter-rouge&quot;&gt;,&lt;/code&gt; removes a feature from Vim that can be useful and that some people prefer remapping it to &lt;code class=&quot;highlighter-rouge&quot;&gt;Space&lt;/code&gt; instead.&lt;/em&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;reload-vim-config-without-having-to-restart-editor&quot;&gt;Reload Vim Config Without Having To Restart Editor&lt;/h3&gt;
 
@@ -136,12 +134,6 @@ colorscheme Tomorrow-Night
 &lt;h3 id=&quot;smart-defaults&quot;&gt;Smart Defaults&lt;/h3&gt;
 
 &lt;p&gt;Vim is pretty old and made to run on machines with low processing power. Because of this, when you install Vim a lot of interesting features are deactivated by default. Here’s what most people would want their 2016 text editor to have.&lt;/p&gt;
-
-&lt;p&gt;Do not try to be compatible with very old versions of Vim:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;set nocompatible
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;Keep more info in memory to speed things up:&lt;/p&gt;
 
@@ -188,7 +180,7 @@ set autoindent
 
 &lt;h3 id=&quot;use-arrows&quot;&gt;Use Arrows&lt;/h3&gt;
 
-&lt;p&gt;People are divided on this, but I have made my mind and I prefer using arrow keys instead of the default Vim mapping. If you want to do the samme:&lt;/p&gt;
+&lt;p&gt;People are divided on this, but I have made my mind and I prefer using arrow keys instead of the default Vim mapping. If you want to do the same:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;map &amp;lt;D-A-RIGHT&amp;gt; &amp;lt;C-w&amp;gt;l
 map &amp;lt;D-A-LEFT&amp;gt; &amp;lt;C-w&amp;gt;h
@@ -285,6 +277,12 @@ $ git submodule add git@source/pluginname.git bundle/pluginname
 
 &lt;p&gt;Comment / Uncomment large blocks of code easily. &lt;a href=&quot;https://github.com/scrooloose/nerdcommenter&quot;&gt;Get it here&lt;/a&gt;.&lt;/p&gt;
 
+&lt;h4 id=&quot;lightline&quot;&gt;Lightline&lt;/h4&gt;
+
+&lt;p&gt;After trying different plugins such as Airline, I decided on Lightline. This plugin gives you a light a configurable status line without too many pre-made decisions. &lt;a href=&quot;https://github.com/itchyny/lightline.vim&quot;&gt;Get it here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/lightline.jpg&quot; alt=&quot;Status bar in vim&quot; style=&quot;padding: 20px; width: 500px;&quot; /&gt;&lt;/div&gt;
+
 &lt;h4 id=&quot;nerdtree&quot;&gt;NerdTree&lt;/h4&gt;
 
 &lt;p&gt;A simple yet very useful tree explorer. &lt;a href=&quot;https://github.com/scrooloose/nerdtree&quot;&gt;Get it here&lt;/a&gt;.&lt;/p&gt;
@@ -355,6 +353,8 @@ autocmd VimEnter * wincmd p
 &lt;p&gt;The only feature in &lt;a href=&quot;https://www.sublimetext.com/&quot;&gt;Sublime&lt;/a&gt; I was jealous of was its great multi cursor support. With this plugin I don’t have to feel this way anymore! &lt;a href=&quot;https://github.com/terryma/vim-multiple-cursors/&quot;&gt;Get it here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/vim-multi-cursors.gif&quot; alt=&quot;Sublime style multi cursors in Vim&quot; style=&quot;padding: 20px; width: 320px;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;Of course if you wanted to, &lt;a href=&quot;https://medium.com/@schtoeffel/you-don-t-need-more-than-one-cursor-in-vim-2c44117d51db#.ufvrj7yug&quot;&gt;you could have the same feature with native Vim features&lt;/a&gt;, but for now this plugin is really helpful to me.&lt;/p&gt;
 
 &lt;h3 id=&quot;ruby-specific-plugins&quot;&gt;Ruby Specific Plugins&lt;/h3&gt;
 

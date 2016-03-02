@@ -85,11 +85,9 @@ Now that your Vim starts to look better, let's start to improve how it actually 
 
 Before doing anything else, we need to set a [Leader key][12].
 
-The Leader key is Vim's way to reduce conflicts in configuration. The Vim user can set this key to be anything and then every command are going to be preceded by this key. By default it's set to be backslash, but I like to change it to `,`.
+The Leader key is Vim's way to reduce conflicts in configuration. The Vim user can set this key to be anything and then every command are going to be preceded by this key. By default it's set to be backslash, but I like to change it to `space`.
 
-	let mapleader=","
-
-_Note that mapping it to `,` removes a feature from Vim that can be useful and that some people prefer remapping it to `Space` instead._
+	let mapleader=" "
 
 ### Reload Vim Config Without Having To Restart Editor
 
@@ -104,10 +102,6 @@ _Note that it only works for `.vimrc` changes and not for adding or removing plu
 ### Smart Defaults
 
 Vim is pretty old and made to run on machines with low processing power. Because of this, when you install Vim a lot of interesting features are deactivated by default. Here's what most people would want their 2016 text editor to have.
-
-Do not try to be compatible with very old versions of Vim:
-
-	set nocompatible
 
 Keep more info in memory to speed things up:
 
@@ -144,7 +138,7 @@ Ability to cancel a search with `Escape`:
 
 ### Use Arrows
 
-People are divided on this, but I have made my mind and I prefer using arrow keys instead of the default Vim mapping. If you want to do the samme:
+People are divided on this, but I have made my mind and I prefer using arrow keys instead of the default Vim mapping. If you want to do the same:
 
 	map <D-A-RIGHT> <C-w>l
 	map <D-A-LEFT> <C-w>h
@@ -225,9 +219,15 @@ a
 
 Comment / Uncomment large blocks of code easily. [Get it here][20].
 
+#### Lightline
+
+After trying different plugins such as Airline, I decided on Lightline. This plugin gives you a light a configurable status line without too many pre-made decisions. [Get it here][21].
+
+<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/lightline.jpg" alt="Status bar in vim" style="padding: 20px; width: 500px;"/></div>
+
 #### NerdTree
 
-A simple yet very useful tree explorer. [Get it here][21].
+A simple yet very useful tree explorer. [Get it here][22].
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/nerdtree.jpg" alt="Tree navigation with Vims" style="padding: 20px; width: 300px;"/></div>
 
@@ -256,19 +256,19 @@ Do not display some useless files in the tree:
 
 	let NERDTreeIgnore=['\.DS_Store', '\~$', '\.swp']
 
-_Note that NERDTree is a project drawer and because of this has some limits when working with splits [as explained in this article][22]._
+_Note that NERDTree is a project drawer and because of this has some limits when working with splits [as explained in this article][23]._
 
 #### Supertab
 
-Autocomplete when using `tab`. [Get it here][23].
+Autocomplete when using `tab`. [Get it here][24].
 
 #### Fugitive
 
-Git wrapper that I mostly use for its useful `:Gblame` feature, allowing you to blame any line directly from Vim. [Get it here][24].
+Git wrapper that I mostly use for its useful `:Gblame` feature, allowing you to blame any line directly from Vim. [Get it here][25].
 
 #### Git Gutter
 
-Displays the diff in the gutter and allows you to do actions on it. I mostly use it to see what I've just modified, but I also used some of its more advanced functions. For instance you can preview a change with `<Leader> + hp` and revert any change on a line with `<Leader> + hr`. It's great! [Get it here][25].
+Displays the diff in the gutter and allows you to do actions on it. I mostly use it to see what I've just modified, but I also used some of its more advanced functions. For instance you can preview a change with `<Leader> + hp` and revert any change on a line with `<Leader> + hr`. It's great! [Get it here][26].
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git-gutter-example.jpg" alt="Git gutter for Vim" style="padding: 20px; width: 600px;"/></div>
 
@@ -278,9 +278,11 @@ I don't like my editor changing size while I'm using it, so I chose to always di
 
 #### Vim Multiple Cursors
 
-The only feature in [Sublime][26] I was jealous of was its great multi cursor support. With this plugin I don't have to feel this way anymore! [Get it here][27].
+The only feature in [Sublime][27] I was jealous of was its great multi cursor support. With this plugin I don't have to feel this way anymore! [Get it here][28].
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/vim-multi-cursors.gif" alt="Sublime style multi cursors in Vim" style="padding: 20px; width: 320px;"/></div>
+
+Of course if you wanted to, [you could have the same feature with native Vim features][29], but for now this plugin is really helpful to me.
 
 ### Ruby Specific Plugins
 
@@ -288,23 +290,23 @@ I mostly use Ruby and Ruby on Rails for my projects, so I also added some plugin
 
 #### Bundler.vim
 
-I mostly use it to get better highlighting in the `Gemfile`, but it also allows you to `bundle open` quickly. [Get it here][28].
+I mostly use it to get better highlighting in the `Gemfile`, but it also allows you to `bundle open` quickly. [Get it here][30].
 
 #### Endwise
 
-Adds an `end` keyword when needed. [Get it here][29].
+Adds an `end` keyword when needed. [Get it here][31].
 
 #### Vim-Rails
 
-Must have plugin for anyone using Rails. It just does so much it would be a shame. I particullary like how it allows you to jump from file to file with ease. You can really go from a controller to its spec, to its views and so on. [Get it here][30].
+Must have plugin for anyone using Rails. It just does so much it would be a shame. I particullary like how it allows you to jump from file to file with ease. You can really go from a controller to its spec, to its views and so on. [Get it here][32].
 
 #### Vim-Ruby
 
-Main plugin for dealing with Ruby. [Get it here][31].
+Main plugin for dealing with Ruby. [Get it here][33].
 
 ### Missed One?
 
-If you have plugins you feel belong here, feel free to share them in the comments or on [twitter][32]!
+If you have plugins you feel belong here, feel free to share them in the comments or on [twitter][34]!
 
 [1]:	/blog/2012/09/04/one-reason-to-switch-to-vim-editor
 [2]:	https://github.com/carlhuda/janus
@@ -326,15 +328,17 @@ If you have plugins you feel belong here, feel free to share them in the comment
 [18]:	https://github.com/wincent/command-t/
 [19]:	https://github.com/yegappan/mru
 [20]:	https://github.com/scrooloose/nerdcommenter
-[21]:	https://github.com/scrooloose/nerdtree
-[22]:	http://vimcasts.org/blog/2013/01/oil-and-vinegar-split-windows-and-project-drawer/
-[23]:	https://github.com/ervandew/supertab
-[24]:	https://github.com/tpope/vim-fugitive
-[25]:	https://github.com/airblade/vim-gitgutter
-[26]:	https://www.sublimetext.com/
-[27]:	https://github.com/terryma/vim-multiple-cursors/
-[28]:	https://github.com/tpope/vim-bundler
-[29]:	https://github.com/tpope/vim-endwise
-[30]:	https://github.com/tpope/vim-rails/
-[31]:	https://github.com/vim-ruby
-[32]:	https://twitter.com/marcgg
+[21]:	https://github.com/itchyny/lightline.vim
+[22]:	https://github.com/scrooloose/nerdtree
+[23]:	http://vimcasts.org/blog/2013/01/oil-and-vinegar-split-windows-and-project-drawer/
+[24]:	https://github.com/ervandew/supertab
+[25]:	https://github.com/tpope/vim-fugitive
+[26]:	https://github.com/airblade/vim-gitgutter
+[27]:	https://www.sublimetext.com/
+[28]:	https://github.com/terryma/vim-multiple-cursors/
+[29]:	https://medium.com/@schtoeffel/you-don-t-need-more-than-one-cursor-in-vim-2c44117d51db#.ufvrj7yug
+[30]:	https://github.com/tpope/vim-bundler
+[31]:	https://github.com/tpope/vim-endwise
+[32]:	https://github.com/tpope/vim-rails/
+[33]:	https://github.com/vim-ruby
+[34]:	https://twitter.com/marcgg
