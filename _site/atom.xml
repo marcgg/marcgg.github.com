@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2016-03-02T17:49:11+01:00</updated>
+ <updated>2016-03-03T07:50:21+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -265,15 +265,7 @@ $ git submodule add git@source/pluginname.git bundle/pluginname
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;h4 id=&quot;mru&quot;&gt;MRU&lt;/h4&gt;
-
-&lt;p&gt;Get the most recently opened or edited files. &lt;a href=&quot;https://github.com/yegappan/mru&quot;&gt;Get it here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;See the file list with &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;Leader&amp;gt; + m&lt;/code&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nnoremap &amp;lt;silent&amp;gt; &amp;lt;Leader&amp;gt;m :MRU&amp;lt;CR&amp;gt; a #### NerdCommenter
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;h4 id=&quot;nerdcommenter&quot;&gt;NerdCommenter&lt;/h4&gt;
 
 &lt;p&gt;Comment / Uncomment large blocks of code easily. &lt;a href=&quot;https://github.com/scrooloose/nerdcommenter&quot;&gt;Get it here&lt;/a&gt;.&lt;/p&gt;
 
@@ -285,7 +277,7 @@ $ git submodule add git@source/pluginname.git bundle/pluginname
 
 &lt;h4 id=&quot;nerdtree&quot;&gt;NerdTree&lt;/h4&gt;
 
-&lt;p&gt;A simple yet very useful tree explorer. &lt;a href=&quot;https://github.com/scrooloose/nerdtree&quot;&gt;Get it here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;A simple yet very useful tree explorer. Note that this is a project drawer and because of this has some limits when working with splits &lt;a href=&quot;http://vimcasts.org/blog/2013/01/oil-and-vinegar-split-windows-and-project-drawer/&quot;&gt;as explained in this article&lt;/a&gt;, however it fits the way I work and is an easy transition for anyone using an editor like Sublime or Textmate. &lt;a href=&quot;https://github.com/scrooloose/nerdtree&quot;&gt;Get it here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/nerdtree.jpg&quot; alt=&quot;Tree navigation with Vims&quot; style=&quot;padding: 20px; width: 300px;&quot; /&gt;&lt;/div&gt;
 
@@ -326,8 +318,6 @@ autocmd VimEnter * wincmd p
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;&lt;em&gt;Note that NERDTree is a project drawer and because of this has some limits when working with splits &lt;a href=&quot;http://vimcasts.org/blog/2013/01/oil-and-vinegar-split-windows-and-project-drawer/&quot;&gt;as explained in this article&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-
 &lt;h4 id=&quot;supertab&quot;&gt;Supertab&lt;/h4&gt;
 
 &lt;p&gt;Autocomplete when using &lt;code class=&quot;highlighter-rouge&quot;&gt;tab&lt;/code&gt;. &lt;a href=&quot;https://github.com/ervandew/supertab&quot;&gt;Get it here&lt;/a&gt;.&lt;/p&gt;
@@ -338,7 +328,7 @@ autocmd VimEnter * wincmd p
 
 &lt;h4 id=&quot;git-gutter&quot;&gt;Git Gutter&lt;/h4&gt;
 
-&lt;p&gt;Displays the diff in the gutter and allows you to do actions on it. I mostly use it to see what I’ve just modified, but I also used some of its more advanced functions. For instance you can preview a change with &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;Leader&amp;gt; + hp&lt;/code&gt; and revert any change on a line with &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;Leader&amp;gt; + hr&lt;/code&gt;. It’s great! &lt;a href=&quot;https://github.com/airblade/vim-gitgutter&quot;&gt;Get it here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Displays the diff in the gutter and allows you to do actions on it. I use it to see what I’ve just modified, but some some of its more advanced functions are also very good. For instance you can preview a change with &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;Leader&amp;gt; + hp&lt;/code&gt; and revert any change on a line with &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;Leader&amp;gt; + hr&lt;/code&gt;. It’s great! &lt;a href=&quot;https://github.com/airblade/vim-gitgutter&quot;&gt;Get it here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/git-gutter-example.jpg&quot; alt=&quot;Git gutter for Vim&quot; style=&quot;padding: 20px; width: 600px;&quot; /&gt;&lt;/div&gt;
 
