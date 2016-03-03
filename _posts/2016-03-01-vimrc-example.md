@@ -153,6 +153,12 @@ I find myself using this literally all the time. It's basically `cd -` for your 
 
 _Note that there's already a way of doing it by pressiong `Ctrl + ^`, but I like \<Leader\>\<Leader\> a lot more._
 
+### Show Matching Parenthesis
+
+When selecting a parenthesis it will highlight the one matching:
+
+	set showmatch
+
 ## Plugins
 
 Plugins are what make Vim great. There is a plugin for everything you might need, so being able to add and remove them easily is important.

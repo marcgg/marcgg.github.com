@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2016-03-03T07:50:21+01:00</updated>
+ <updated>2016-03-03T08:12:55+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -198,6 +198,14 @@ map &amp;lt;D-A-UP&amp;gt; &amp;lt;C-w&amp;gt;W
 &lt;/div&gt;
 
 &lt;p&gt;&lt;em&gt;Note that there’s already a way of doing it by pressiong &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl + ^&lt;/code&gt;, but I like &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt; a lot more.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;show-matching-parenthesis&quot;&gt;Show Matching Parenthesis&lt;/h3&gt;
+
+&lt;p&gt;When selecting a parenthesis it will highlight the one matching:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;set showmatch
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;plugins&quot;&gt;Plugins&lt;/h2&gt;
 
