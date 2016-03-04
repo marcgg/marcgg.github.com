@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Vim Configuration From Scratch in 2016"
-description: "Complete example to configure Vim. We'll use pathogen and git to manage plugins, add a theme... but also choose from a long list of curated plugins such as fuzzy search, auto complete, smart indentation, multi-cursors support (like Sublime) and much more!"
+description: "Complete example to configure Vim. We'll use pathogen and git to manage plugins, add a theme... but also set upfuzzy search, auto complete, smart indentation, multi-cursors support (like Sublime) and much more thanks to a long list of curated plugins."
 blog: true
 category: blog
 tag: Dev
