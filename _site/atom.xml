@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2016-03-04T11:29:22+01:00</updated>
+ <updated>2016-03-07T14:02:28+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -23,7 +23,7 @@
 
 &lt;p&gt;Because of this I decided to entirely drop the setup I’ve been working with for the past years and started from scratch, adding only what I needed. If you want to see the result, my &lt;code class=&quot;highlighter-rouge&quot;&gt;.vim&lt;/code&gt; &lt;a href=&quot;https://github.com/marcgg/.vim&quot;&gt;is available on Github&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Overall I found the experience to be way more easy and fun than expected, so I decided to share! In this article I’ll explain how to quickly setup and customize Vim without having to use a pre-made distribution, just Git and a Terminal.&lt;/p&gt;
+&lt;p&gt;Overall I found the experience to be way more easy and fun than expected, so I decided to share! In this article I’ll explain how to quickly setup and customise Vim without having to use a pre-made distribution, just Git and a Terminal.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Disclaimer: All the choices made here reflect my opinion, the way I use Vim and the tools and languages I generally use. Obviously if you’re using an &lt;a href=&quot;http://images.anandtech.com/doci/7245/ErgoDox%20(1).jpg&quot;&gt;ergodox&lt;/a&gt; and only code in &lt;a href=&quot;http://marcgg.com/blog/2015/02/02/grace-murray-hopper-technical&quot;&gt;Flow-Matic &lt;/a&gt; we will have very different opinions on what is best.&lt;/em&gt;&lt;/p&gt;
 
@@ -31,7 +31,7 @@
 
 &lt;p&gt;First of all you need to &lt;a href=&quot;http://www.vim.org/download.php&quot;&gt;install vim&lt;/a&gt;, or, if you don’t like to run your text editor in your console and use a mac, you can install &lt;a href=&quot;https://github.com/b4winckler/macvim&quot;&gt;MacVim&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Out of the box, Vim is quite worthless compared to other editors like Sublime or Atom. However, it’s more evolutive and customizable, so the first thing to do is to start setting it up to fit your prefered way of coding. I recommend versionning your configuration to share accross machines while keeping track of any changes you made.&lt;/p&gt;
+&lt;p&gt;Out of the box, Vim is very hard on the eyes and doesn’t have a lot of feature we’ve come to expect from other editors like Sublime or Atom. However, it’s more evolutive and customisable, so the first thing to do is to start setting it up to fit your preferred way of coding. I recommend versioning your configuration to share across machines while keeping track of any changes you made.&lt;/p&gt;
 
 &lt;p&gt;To do this, create a &lt;code class=&quot;highlighter-rouge&quot;&gt;.vim&lt;/code&gt; repository with a &lt;code class=&quot;highlighter-rouge&quot;&gt;vimrc&lt;/code&gt; file that will contain most of your configuration:&lt;/p&gt;
 
@@ -43,7 +43,7 @@ $ git init .
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Now you need to go back to your home directory and &lt;a href=&quot;https://en.wikipedia.org/wiki/Symbolic_link&quot;&gt;symlink&lt;/a&gt; the &lt;code class=&quot;highlighter-rouge&quot;&gt;vimrc&lt;/code&gt; file. This way you get to use your &lt;code class=&quot;highlighter-rouge&quot;&gt;.vimrc&lt;/code&gt; file normally while still get all the advantages of versionning with Git.&lt;/p&gt;
+&lt;p&gt;Now you need to go back to your home directory and &lt;a href=&quot;https://en.wikipedia.org/wiki/Symbolic_link&quot;&gt;symlink&lt;/a&gt; the &lt;code class=&quot;highlighter-rouge&quot;&gt;vimrc&lt;/code&gt; file. This way you get to use your &lt;code class=&quot;highlighter-rouge&quot;&gt;.vimrc&lt;/code&gt; file normally while still get all the advantages of versioning with Git.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ ln -s ~/.vim/vimrc ~/.vimrc
 &lt;/code&gt;&lt;/pre&gt;
@@ -57,7 +57,7 @@ $ git init .
 
 &lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/theme-example.jpg&quot; alt=&quot;Vim Theme Installation&quot; style=&quot;padding: 20px; width: 600px;&quot; /&gt;&lt;/div&gt;
 
-&lt;p&gt;If you don’t like this one, don’t worry: there are tons out there. Just Google “Vim Themes” and browse arround.&lt;/p&gt;
+&lt;p&gt;If you don’t like this one, don’t worry: there are tons out there. Just Google “Vim Themes” and browse around.&lt;/p&gt;
 
 &lt;p&gt;Once you found you favorite one, add it to your project by first creating a folder to store it:&lt;/p&gt;
 
@@ -105,7 +105,7 @@ colorscheme Tomorrow-Night
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&quot;more-customization&quot;&gt;More Customization&lt;/h2&gt;
+&lt;h2 id=&quot;more-customisation&quot;&gt;More Customisation&lt;/h2&gt;
 
 &lt;p&gt;Now that your Vim starts to look better, let’s start to improve how it actually functions. The great thing with Vim is that we can get it to do whatever we want… it might be overwhelming at first, but it’s really not that hard.&lt;/p&gt;
 
@@ -197,7 +197,7 @@ map &amp;lt;D-A-UP&amp;gt; &amp;lt;C-w&amp;gt;W
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;&lt;em&gt;Note that there’s already a way of doing it by pressiong &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl + ^&lt;/code&gt;, but I like &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt; a lot more.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note that there’s already a way of doing it by pressing &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl + ^&lt;/code&gt;, but I like &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt; a lot more.&lt;/em&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;show-matching-parenthesis&quot;&gt;Show Matching Parenthesis&lt;/h3&gt;
 
@@ -213,7 +213,7 @@ map &amp;lt;D-A-UP&amp;gt; &amp;lt;C-w&amp;gt;W
 
 &lt;h3 id=&quot;loading-plugins-with-pathogen&quot;&gt;Loading Plugins With Pathogen&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/tpope/vim-pathogen&quot;&gt;Pathogen&lt;/a&gt; is, in my opinion, the best way to manage plugins currently available. It’s very simple, non obstrusive and really “just works”.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/tpope/vim-pathogen&quot;&gt;Pathogen&lt;/a&gt; is, in my opinion, the best way to manage plugins currently available. It’s very simple, non obtrusive and really “just works”.&lt;/p&gt;
 
 &lt;p&gt;To install it, you can simply use the one liner below. If you don’t feel like copy and pasting &lt;code class=&quot;highlighter-rouge&quot;&gt;curl&lt;/code&gt; commands, just look up their &lt;a href=&quot;https://github.com/tpope/vim-pathogen#installation&quot;&gt;very clear documentation&lt;/a&gt;.&lt;/p&gt;
 
@@ -368,7 +368,7 @@ autocmd VimEnter * wincmd p
 
 &lt;h4 id=&quot;vim-rails&quot;&gt;Vim-Rails&lt;/h4&gt;
 
-&lt;p&gt;Must have plugin for anyone using Rails. It just does so much it would be a shame. I particullary like how it allows you to jump from file to file with ease. You can really go from a controller to its spec, to its views and so on. &lt;a href=&quot;https://github.com/tpope/vim-rails/&quot;&gt;Get it here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Must have plugin for anyone using Rails. It just does so much it would be a shame. I particularly like how it allows you to jump from file to file with ease. You can really go from a controller to its spec, to its views and so on. &lt;a href=&quot;https://github.com/tpope/vim-rails/&quot;&gt;Get it here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h4 id=&quot;vim-ruby&quot;&gt;Vim-Ruby&lt;/h4&gt;
 

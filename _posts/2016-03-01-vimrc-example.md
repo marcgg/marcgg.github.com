@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Vim Configuration From Scratch in 2016"
-description: "Complete example to configure Vim. We'll use pathogen and git to manage plugins, add a theme... but also set upfuzzy search, auto complete, smart indentation, multi-cursors support (like Sublime) and much more thanks to a long list of curated plugins."
+description: "Complete example to configure Vim. We'll use pathogen and git to manage plugins, add a theme... but also set up fuzzy search, auto complete, smart indentation, multi-cursors support (like Sublime) and much more thanks to a long list of curated plugins."
 blog: true
 category: blog
 tag: Dev
@@ -11,7 +11,7 @@ I started using Vim [a while ago][1] with the great distribution [Janus][2]. Sin
 
 Because of this I decided to entirely drop the setup I've been working with for the past years and started from scratch, adding only what I needed. If you want to see the result, my `.vim` [is available on Github][3].
 
-Overall I found the experience to be way more easy and fun than expected, so I decided to share! In this article I'll explain how to quickly setup and customize Vim without having to use a pre-made distribution, just Git and a Terminal.
+Overall I found the experience to be way more easy and fun than expected, so I decided to share! In this article I'll explain how to quickly setup and customise Vim without having to use a pre-made distribution, just Git and a Terminal.
 
 _Disclaimer: All the choices made here reflect my opinion, the way I use Vim and the tools and languages I generally use. Obviously if you're using an [ergodox][4] and only code in [Flow-Matic ][5] we will have very different opinions on what is best._
 
@@ -19,7 +19,7 @@ _Disclaimer: All the choices made here reflect my opinion, the way I use Vim and
 
 First of all you need to [install vim][6], or, if you don't like to run your text editor in your console and use a mac, you can install [MacVim][7].
 
-Out of the box, Vim is quite worthless compared to other editors like Sublime or Atom. However, it's more evolutive and customizable, so the first thing to do is to start setting it up to fit your prefered way of coding. I recommend versionning your configuration to share accross machines while keeping track of any changes you made.
+Out of the box, Vim is very hard on the eyes and doesn't have a lot of feature we've come to expect from other editors like Sublime or Atom. However, it's more evolutive and customisable, so the first thing to do is to start setting it up to fit your preferred way of coding. I recommend versioning your configuration to share across machines while keeping track of any changes you made.
 
 To do this, create a `.vim` repository with a `vimrc` file that will contain most of your configuration:
 
@@ -29,7 +29,7 @@ To do this, create a `.vim` repository with a `vimrc` file that will contain mos
 	$ touch vimrc
 	$ git init .
 
-Now you need to go back to your home directory and [symlink][8] the `vimrc` file. This way you get to use your `.vimrc` file normally while still get all the advantages of versionning with Git. 
+Now you need to go back to your home directory and [symlink][8] the `vimrc` file. This way you get to use your `.vimrc` file normally while still get all the advantages of versioning with Git. 
 
 	$ ln -s ~/.vim/vimrc ~/.vimrc
 
@@ -41,7 +41,7 @@ There are a LOT of themes available for Vim. I've used [Solarized][9] for quite 
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/theme-example.jpg" alt="Vim Theme Installation" style="padding: 20px; width: 600px;"/></div>
 
-If you don't like this one, don't worry: there are tons out there. Just Google "Vim Themes" and browse arround.
+If you don't like this one, don't worry: there are tons out there. Just Google "Vim Themes" and browse around.
 
 Once you found you favorite one, add it to your project by first creating a folder to store it:
 
@@ -77,7 +77,7 @@ I'm not quite sure why this isn't by default, but here's how to add line numberi
 
 	set number
 
-## More Customization
+## More Customisation
 
 Now that your Vim starts to look better, let's start to improve how it actually functions. The great thing with Vim is that we can get it to do whatever we want... it might be overwhelming at first, but it's really not that hard.
 
@@ -151,7 +151,7 @@ I find myself using this literally all the time. It's basically `cd -` for your 
 
 	nnoremap <Leader><Leader> :e#<CR>
 
-_Note that there's already a way of doing it by pressiong `Ctrl + ^`, but I like \<Leader\>\<Leader\> a lot more._
+_Note that there's already a way of doing it by pressing `Ctrl + ^`, but I like \<Leader\>\<Leader\> a lot more._
 
 ### Show Matching Parenthesis
 
@@ -165,7 +165,7 @@ Plugins are what make Vim great. There is a plugin for everything you might need
 
 ### Loading Plugins With Pathogen
 
-[Pathogen][14] is, in my opinion, the best way to manage plugins currently available. It's very simple, non obstrusive and really "just works".
+[Pathogen][14] is, in my opinion, the best way to manage plugins currently available. It's very simple, non obtrusive and really "just works".
 
 To install it, you can simply use the one liner below. If you don't feel like copy and pasting `curl` commands, just look up their [very clear documentation][15].
 
@@ -294,7 +294,7 @@ Adds an `end` keyword when needed. [Get it here][30].
 
 #### Vim-Rails
 
-Must have plugin for anyone using Rails. It just does so much it would be a shame. I particullary like how it allows you to jump from file to file with ease. You can really go from a controller to its spec, to its views and so on. [Get it here][31].
+Must have plugin for anyone using Rails. It just does so much it would be a shame. I particularly like how it allows you to jump from file to file with ease. You can really go from a controller to its spec, to its views and so on. [Get it here][31].
 
 #### Vim-Ruby
 

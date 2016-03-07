@@ -5,7 +5,7 @@
     <title>
       Vim Configuration From Scratch in 2016
     </title>
-    <meta name="description" content="Complete example to configure Vim. We'll use pathogen and git to manage plugins, add a theme... but also set upfuzzy search, auto complete, smart indentation, multi-cursors support (like Sublime) and much more thanks to a long list of curated plugins.">
+    <meta name="description" content="Complete example to configure Vim. We'll use pathogen and git to manage plugins, add a theme... but also set up fuzzy search, auto complete, smart indentation, multi-cursors support (like Sublime) and much more thanks to a long list of curated plugins.">
     <meta name="author" content="Marc G Gauthier">
     <meta content='user-scalable=no, width=device-width, initial-scale=1.0' name='viewport'>
     <meta name="google-site-verification" content="x2EpQdOMz-k9fP8hak9I3COaXhnQ4jNLp2GU4GYQ8jM" />
@@ -56,7 +56,7 @@
 
 <p>Because of this I decided to entirely drop the setup I’ve been working with for the past years and started from scratch, adding only what I needed. If you want to see the result, my <code class="highlighter-rouge">.vim</code> <a href="https://github.com/marcgg/.vim">is available on Github</a>.</p>
 
-<p>Overall I found the experience to be way more easy and fun than expected, so I decided to share! In this article I’ll explain how to quickly setup and customize Vim without having to use a pre-made distribution, just Git and a Terminal.</p>
+<p>Overall I found the experience to be way more easy and fun than expected, so I decided to share! In this article I’ll explain how to quickly setup and customise Vim without having to use a pre-made distribution, just Git and a Terminal.</p>
 
 <p><em>Disclaimer: All the choices made here reflect my opinion, the way I use Vim and the tools and languages I generally use. Obviously if you’re using an <a href="http://images.anandtech.com/doci/7245/ErgoDox%20(1).jpg">ergodox</a> and only code in <a href="http://marcgg.com/blog/2015/02/02/grace-murray-hopper-technical">Flow-Matic </a> we will have very different opinions on what is best.</em></p>
 
@@ -64,7 +64,7 @@
 
 <p>First of all you need to <a href="http://www.vim.org/download.php">install vim</a>, or, if you don’t like to run your text editor in your console and use a mac, you can install <a href="https://github.com/b4winckler/macvim">MacVim</a>.</p>
 
-<p>Out of the box, Vim is quite worthless compared to other editors like Sublime or Atom. However, it’s more evolutive and customizable, so the first thing to do is to start setting it up to fit your prefered way of coding. I recommend versionning your configuration to share accross machines while keeping track of any changes you made.</p>
+<p>Out of the box, Vim is very hard on the eyes and doesn’t have a lot of feature we’ve come to expect from other editors like Sublime or Atom. However, it’s more evolutive and customisable, so the first thing to do is to start setting it up to fit your preferred way of coding. I recommend versioning your configuration to share across machines while keeping track of any changes you made.</p>
 
 <p>To do this, create a <code class="highlighter-rouge">.vim</code> repository with a <code class="highlighter-rouge">vimrc</code> file that will contain most of your configuration:</p>
 
@@ -76,7 +76,7 @@ $ git init .
 </code></pre>
 </div>
 
-<p>Now you need to go back to your home directory and <a href="https://en.wikipedia.org/wiki/Symbolic_link">symlink</a> the <code class="highlighter-rouge">vimrc</code> file. This way you get to use your <code class="highlighter-rouge">.vimrc</code> file normally while still get all the advantages of versionning with Git.</p>
+<p>Now you need to go back to your home directory and <a href="https://en.wikipedia.org/wiki/Symbolic_link">symlink</a> the <code class="highlighter-rouge">vimrc</code> file. This way you get to use your <code class="highlighter-rouge">.vimrc</code> file normally while still get all the advantages of versioning with Git.</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>$ ln -s ~/.vim/vimrc ~/.vimrc
 </code></pre>
@@ -90,7 +90,7 @@ $ git init .
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/theme-example.jpg" alt="Vim Theme Installation" style="padding: 20px; width: 600px;" /></div>
 
-<p>If you don’t like this one, don’t worry: there are tons out there. Just Google “Vim Themes” and browse arround.</p>
+<p>If you don’t like this one, don’t worry: there are tons out there. Just Google “Vim Themes” and browse around.</p>
 
 <p>Once you found you favorite one, add it to your project by first creating a folder to store it:</p>
 
@@ -138,7 +138,7 @@ colorscheme Tomorrow-Night
 </code></pre>
 </div>
 
-<h2 id="more-customization">More Customization</h2>
+<h2 id="more-customisation">More Customisation</h2>
 
 <p>Now that your Vim starts to look better, let’s start to improve how it actually functions. The great thing with Vim is that we can get it to do whatever we want… it might be overwhelming at first, but it’s really not that hard.</p>
 
@@ -230,7 +230,7 @@ map &lt;D-A-UP&gt; &lt;C-w&gt;W
 </code></pre>
 </div>
 
-<p><em>Note that there’s already a way of doing it by pressiong <code class="highlighter-rouge">Ctrl + ^</code>, but I like &lt;Leader&gt;&lt;Leader&gt; a lot more.</em></p>
+<p><em>Note that there’s already a way of doing it by pressing <code class="highlighter-rouge">Ctrl + ^</code>, but I like &lt;Leader&gt;&lt;Leader&gt; a lot more.</em></p>
 
 <h3 id="show-matching-parenthesis">Show Matching Parenthesis</h3>
 
@@ -246,7 +246,7 @@ map &lt;D-A-UP&gt; &lt;C-w&gt;W
 
 <h3 id="loading-plugins-with-pathogen">Loading Plugins With Pathogen</h3>
 
-<p><a href="https://github.com/tpope/vim-pathogen">Pathogen</a> is, in my opinion, the best way to manage plugins currently available. It’s very simple, non obstrusive and really “just works”.</p>
+<p><a href="https://github.com/tpope/vim-pathogen">Pathogen</a> is, in my opinion, the best way to manage plugins currently available. It’s very simple, non obtrusive and really “just works”.</p>
 
 <p>To install it, you can simply use the one liner below. If you don’t feel like copy and pasting <code class="highlighter-rouge">curl</code> commands, just look up their <a href="https://github.com/tpope/vim-pathogen#installation">very clear documentation</a>.</p>
 
@@ -401,7 +401,7 @@ autocmd VimEnter * wincmd p
 
 <h4 id="vim-rails">Vim-Rails</h4>
 
-<p>Must have plugin for anyone using Rails. It just does so much it would be a shame. I particullary like how it allows you to jump from file to file with ease. You can really go from a controller to its spec, to its views and so on. <a href="https://github.com/tpope/vim-rails/">Get it here</a>.</p>
+<p>Must have plugin for anyone using Rails. It just does so much it would be a shame. I particularly like how it allows you to jump from file to file with ease. You can really go from a controller to its spec, to its views and so on. <a href="https://github.com/tpope/vim-rails/">Get it here</a>.</p>
 
 <h4 id="vim-ruby">Vim-Ruby</h4>
 
