@@ -5,6 +5,8 @@ description: In a team, you’re bound to create some structuring processes. But
 blog: true
 category: blog
 tag: Startup
+redirect\_from:
+- /2014/07/28/company-process-red-tape/
 ---
 
 To me, a formal process is just like code. A way to solve a problem. I’m not talking about best practices or common sense but real formalized ways of doing things. For instance if a team constantly have problem communicating, it could be interesting to set and enforce some kind of recurring meeting to facilitate discussions - let’s say every monday, 1 hour, all hands.
