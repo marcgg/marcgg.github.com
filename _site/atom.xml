@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2016-03-08T08:06:13+01:00</updated>
+ <updated>2016-03-13T15:59:50+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -15,7 +15,7 @@
   
    <entry>
      <title>Vim Configuration From Scratch in 2016</title>
-     <link href="https://marcgg.com/blog/2016/03/01/vimrc-example"/>
+     <link href="https://marcgg.com/blog/2016/03/01/vimrc-example/"/>
      <updated>2016-03-01T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2016/03/01/vimrc-example</id>
      <content type="html">
@@ -387,7 +387,7 @@ autocmd VimEnter * wincmd p
   
    <entry>
      <title>Simple Git Flow With Heroku Pipelines</title>
-     <link href="https://marcgg.com/blog/2016/02/22/git-flow-heroku-pipelines"/>
+     <link href="https://marcgg.com/blog/2016/02/22/git-flow-heroku-pipelines/"/>
      <updated>2016-02-22T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2016/02/22/git-flow-heroku-pipelines</id>
      <content type="html">
@@ -479,7 +479,7 @@ Let’s dig in!&lt;/p&gt;
   
    <entry>
      <title>Automatically Run RSpec on Multiple Projects</title>
-     <link href="https://marcgg.com/blog/2016/02/15/rspec-on-multiple-rails-projects"/>
+     <link href="https://marcgg.com/blog/2016/02/15/rspec-on-multiple-rails-projects/"/>
      <updated>2016-02-15T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2016/02/15/rspec-on-multiple-rails-projects</id>
      <content type="html">
@@ -585,7 +585,7 @@ bundle exec rspec spec &amp;gt; ../rspec_results.log
   
    <entry>
      <title>Code Coverage Is A Vanity Metric</title>
-     <link href="https://marcgg.com/blog/2015/11/03/code-coverage-vanity-metric"/>
+     <link href="https://marcgg.com/blog/2015/11/03/code-coverage-vanity-metric/"/>
      <updated>2015-11-03T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2015/11/03/code-coverage-vanity-metric</id>
      <content type="html">
@@ -636,7 +636,7 @@ bundle exec rspec spec &amp;gt; ../rspec_results.log
   
    <entry>
      <title>&quot;The Pragmatic Programmer&quot; by A. Hunt &amp; D. Thomas</title>
-     <link href="https://marcgg.com/blog/2015/11/01/book-review-pragmatic-programmer"/>
+     <link href="https://marcgg.com/blog/2015/11/01/book-review-pragmatic-programmer/"/>
      <updated>2015-11-01T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2015/11/01/book-review-pragmatic-programmer</id>
      <content type="html">
@@ -668,7 +668,7 @@ bundle exec rspec spec &amp;gt; ../rspec_results.log
   
    <entry>
      <title>&quot;The Clean Coder&quot; by Robert C. Martin</title>
-     <link href="https://marcgg.com/blog/2015/10/19/book-review-clean-coder"/>
+     <link href="https://marcgg.com/blog/2015/10/19/book-review-clean-coder/"/>
      <updated>2015-10-19T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2015/10/19/book-review-clean-coder</id>
      <content type="html">
@@ -706,7 +706,7 @@ bundle exec rspec spec &amp;gt; ../rspec_results.log
   
    <entry>
      <title>How To Checkout The Previous Branch In Git</title>
-     <link href="https://marcgg.com/blog/2015/10/18/git-checkout-minus"/>
+     <link href="https://marcgg.com/blog/2015/10/18/git-checkout-minus/"/>
      <updated>2015-10-18T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2015/10/18/git-checkout-minus</id>
      <content type="html">
@@ -768,7 +768,7 @@ Switched to branch &#39;first&#39;
   
    <entry>
      <title>&quot;Work Rules!&quot; by Laszlo Bock</title>
-     <link href="https://marcgg.com/blog/2015/10/13/book-review-work-rules"/>
+     <link href="https://marcgg.com/blog/2015/10/13/book-review-work-rules/"/>
      <updated>2015-10-13T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2015/10/13/book-review-work-rules</id>
      <content type="html">
@@ -804,7 +804,7 @@ Switched to branch &#39;first&#39;
   
    <entry>
      <title>Don&#39;t Automate Tasks Only Based On Time Spent</title>
-     <link href="https://marcgg.com/blog/2015/09/30/automate-repetitive-tasks"/>
+     <link href="https://marcgg.com/blog/2015/09/30/automate-repetitive-tasks/"/>
      <updated>2015-09-30T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2015/09/30/automate-repetitive-tasks</id>
      <content type="html">
@@ -876,7 +876,7 @@ Switched to branch &#39;first&#39;
   
    <entry>
      <title>Deadlines And Estimates In Startups</title>
-     <link href="https://marcgg.com/blog/2015/08/27/deadlines-estimates-software-startup"/>
+     <link href="https://marcgg.com/blog/2015/08/27/deadlines-estimates-software-startup/"/>
      <updated>2015-08-27T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2015/08/27/deadlines-estimates-software-startup</id>
      <content type="html">
@@ -1117,7 +1117,7 @@ Switched to branch &#39;first&#39;
   
    <entry>
      <title>Git Log&#39;s --first-parent Option</title>
-     <link href="https://marcgg.com/blog/2015/08/04/git-first-parent-log"/>
+     <link href="https://marcgg.com/blog/2015/08/04/git-first-parent-log/"/>
      <updated>2015-08-04T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2015/08/04/git-first-parent-log</id>
      <content type="html">
@@ -1207,7 +1207,7 @@ Switched to branch &#39;first&#39;
   
    <entry>
      <title>Game of Life Visualisations</title>
-     <link href="https://marcgg.com/blog/2015/07/01/game-of-life-gif"/>
+     <link href="https://marcgg.com/blog/2015/07/01/game-of-life-gif/"/>
      <updated>2015-07-01T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2015/07/01/game-of-life-gif</id>
      <content type="html">
@@ -1272,7 +1272,7 @@ Switched to branch &#39;first&#39;
   
    <entry>
      <title>Getting Started With Elixir Processes</title>
-     <link href="https://marcgg.com/blog/2015/06/04/getting-started-with-elixir-processes"/>
+     <link href="https://marcgg.com/blog/2015/06/04/getting-started-with-elixir-processes/"/>
      <updated>2015-06-04T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2015/06/04/getting-started-with-elixir-processes</id>
      <content type="html">
@@ -1478,7 +1478,7 @@ Switched to branch &#39;first&#39;
   
    <entry>
      <title>Real Life A/B Testing With Universal Analytics</title>
-     <link href="https://marcgg.com/blog/2015/05/26/ab-testing-in-real-life-google-analytics"/>
+     <link href="https://marcgg.com/blog/2015/05/26/ab-testing-in-real-life-google-analytics/"/>
      <updated>2015-05-26T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2015/05/26/ab-testing-in-real-life-google-analytics</id>
      <content type="html">
@@ -1651,7 +1651,7 @@ Switched to branch &#39;first&#39;
   
    <entry>
      <title>Benchmarking Deployment Speed on Heroku</title>
-     <link href="https://marcgg.com/blog/2015/02/26/heroku-deploy-speed"/>
+     <link href="https://marcgg.com/blog/2015/02/26/heroku-deploy-speed/"/>
      <updated>2015-02-26T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2015/02/26/heroku-deploy-speed</id>
      <content type="html">
@@ -1700,7 +1700,7 @@ Switched to branch &#39;first&#39;
   
    <entry>
      <title>The Technical Accomplishments of Grace Murray Hopper</title>
-     <link href="https://marcgg.com/blog/2015/02/02/grace-murray-hopper-technical"/>
+     <link href="https://marcgg.com/blog/2015/02/02/grace-murray-hopper-technical/"/>
      <updated>2015-02-02T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2015/02/02/grace-murray-hopper-technical</id>
      <content type="html">
@@ -1860,7 +1860,7 @@ Switched to branch &#39;first&#39;
   
    <entry>
      <title>New Website Design!</title>
-     <link href="https://marcgg.com/blog/2015/01/22/new-design"/>
+     <link href="https://marcgg.com/blog/2015/01/22/new-design/"/>
      <updated>2015-01-22T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2015/01/22/new-design</id>
      <content type="html">
@@ -1922,7 +1922,7 @@ Switched to branch &#39;first&#39;
   
    <entry>
      <title>How CSS Animations Can Break Your Tests</title>
-     <link href="https://marcgg.com/blog/2015/01/05/css-animations-failing-capybara-specs"/>
+     <link href="https://marcgg.com/blog/2015/01/05/css-animations-failing-capybara-specs/"/>
      <updated>2015-01-05T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2015/01/05/css-animations-failing-capybara-specs</id>
      <content type="html">
@@ -2024,7 +2024,7 @@ Switched to branch &#39;first&#39;
   
    <entry>
      <title>Coaching A Young Team Creating a Startup (And Helping Them Get Accepted at Le Camping)</title>
-     <link href="https://marcgg.com/blog/2014/12/16/coaching-startup-birdly-le-camping"/>
+     <link href="https://marcgg.com/blog/2014/12/16/coaching-startup-birdly-le-camping/"/>
      <updated>2014-12-16T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2014/12/16/coaching-startup-birdly-le-camping</id>
      <content type="html">
@@ -2061,7 +2061,7 @@ Switched to branch &#39;first&#39;
   
    <entry>
      <title>A Script To Benchmark MySQL Indexes</title>
-     <link href="https://marcgg.com/blog/2014/10/13/mysql-try-all-indexes-combinations-script"/>
+     <link href="https://marcgg.com/blog/2014/10/13/mysql-try-all-indexes-combinations-script/"/>
      <updated>2014-10-13T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2014/10/13/mysql-try-all-indexes-combinations-script</id>
      <content type="html">
@@ -2116,7 +2116,7 @@ Switched to branch &#39;first&#39;
   
    <entry>
      <title>Managing Your Project With Github Issues And HuBoard</title>
-     <link href="https://marcgg.com/blog/2014/09/17/huboard-kanban-board-github"/>
+     <link href="https://marcgg.com/blog/2014/09/17/huboard-kanban-board-github/"/>
      <updated>2014-09-17T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2014/09/17/huboard-kanban-board-github</id>
      <content type="html">
@@ -2191,7 +2191,7 @@ They also have an offer for those working with &lt;a href=&quot;https://enterpri
   
    <entry>
      <title>Thoughts On Company Procedures</title>
-     <link href="https://marcgg.com/blog/2014/07/28/company-process-red-tape"/>
+     <link href="https://marcgg.com/blog/2014/07/28/company-process-red-tape/"/>
      <updated>2014-07-28T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2014/07/28/company-process-red-tape</id>
      <content type="html">
@@ -2236,7 +2236,7 @@ They also have an offer for those working with &lt;a href=&quot;https://enterpri
   
    <entry>
      <title>Some Respect For Legacy Code</title>
-     <link href="https://marcgg.com/blog/2014/07/22/in-defense-of-legacy-code"/>
+     <link href="https://marcgg.com/blog/2014/07/22/in-defense-of-legacy-code/"/>
      <updated>2014-07-22T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2014/07/22/in-defense-of-legacy-code</id>
      <content type="html">
@@ -2295,7 +2295,7 @@ They also have an offer for those working with &lt;a href=&quot;https://enterpri
   
    <entry>
      <title>My Problem With Apps To Track Your Life (and Why I Created My Own)</title>
-     <link href="https://marcgg.com/blog/2014/05/06/quantified-self-iphone-app-track-mood-day"/>
+     <link href="https://marcgg.com/blog/2014/05/06/quantified-self-iphone-app-track-mood-day/"/>
      <updated>2014-05-06T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2014/05/06/quantified-self-iphone-app-track-mood-day</id>
      <content type="html">
@@ -2382,7 +2382,7 @@ They also have an offer for those working with &lt;a href=&quot;https://enterpri
   
    <entry>
      <title>Tips on Creating a Website From When I Was 12</title>
-     <link href="https://marcgg.com/blog/2014/04/28/frame-based-layout-bad-code"/>
+     <link href="https://marcgg.com/blog/2014/04/28/frame-based-layout-bad-code/"/>
      <updated>2014-04-28T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2014/04/28/frame-based-layout-bad-code</id>
      <content type="html">
@@ -2529,7 +2529,7 @@ still learning - you were making the same mistakes at some point !&lt;/p&gt;
   
    <entry>
      <title>Tips &amp; Tricks Learned Releasing an Hybrid App Using&amp;nbsp;Steroids.js</title>
-     <link href="https://marcgg.com/blog/2014/04/09/phonegap-steroids-hybrid-native-app-tips"/>
+     <link href="https://marcgg.com/blog/2014/04/09/phonegap-steroids-hybrid-native-app-tips/"/>
      <updated>2014-04-09T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2014/04/09/phonegap-steroids-hybrid-native-app-tips</id>
      <content type="html">
@@ -3111,7 +3111,7 @@ apps we’ll be creating in a few years!&lt;/p&gt;
   
    <entry>
      <title>The Problem With Peak</title>
-     <link href="https://marcgg.com/blog/2013/11/12/peak-productivity"/>
+     <link href="https://marcgg.com/blog/2013/11/12/peak-productivity/"/>
      <updated>2013-11-12T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2013/11/12/peak-productivity</id>
      <content type="html">
@@ -3332,7 +3332,7 @@ create value and protect employees from interruptions) and not evil
   
    <entry>
      <title>Enough With The Trolls</title>
-     <link href="https://marcgg.com/blog/2013/11/05/enough-with-the-language-trolls"/>
+     <link href="https://marcgg.com/blog/2013/11/05/enough-with-the-language-trolls/"/>
      <updated>2013-11-05T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2013/11/05/enough-with-the-language-trolls</id>
      <content type="html">
@@ -3412,7 +3412,7 @@ adapt.&lt;/p&gt;
   
    <entry>
      <title>Mixing Languages</title>
-     <link href="https://marcgg.com/blog/2013/10/29/mixing-languages"/>
+     <link href="https://marcgg.com/blog/2013/10/29/mixing-languages/"/>
      <updated>2013-10-29T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2013/10/29/mixing-languages</id>
      <content type="html">
@@ -3551,7 +3551,7 @@ I don’t see why I couldn’t either!&lt;/p&gt;
   
    <entry>
      <title>My First Impressions of AppGyver&#39;s Steroids.js</title>
-     <link href="https://marcgg.com/blog/2013/08/29/appgyver-steroids-iphone-hybrid-javascript"/>
+     <link href="https://marcgg.com/blog/2013/08/29/appgyver-steroids-iphone-hybrid-javascript/"/>
      <updated>2013-08-29T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2013/08/29/appgyver-steroids-iphone-hybrid-javascript</id>
      <content type="html">
@@ -3868,7 +3868,7 @@ questions, I’m not sure to be able to answer all of them - but I’ll try!&lt;
   
    <entry>
      <title>J&#39;ai Passé Un Deuxième Bac. Pour Voir.</title>
-     <link href="https://marcgg.com/blog/2013/07/09/passer-deuxieme-bac"/>
+     <link href="https://marcgg.com/blog/2013/07/09/passer-deuxieme-bac/"/>
      <updated>2013-07-09T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2013/07/09/passer-deuxieme-bac</id>
      <content type="html">
@@ -4142,7 +4142,7 @@ recruteurs qui le liront!&lt;/p&gt;
   
    <entry>
      <title>Why I&#39;m Not Proud To Be French</title>
-     <link href="https://marcgg.com/blog/2013/06/24/not-proud-to-be-french"/>
+     <link href="https://marcgg.com/blog/2013/06/24/not-proud-to-be-french/"/>
      <updated>2013-06-24T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2013/06/24/not-proud-to-be-french</id>
      <content type="html">
@@ -4222,7 +4222,7 @@ most talented fellow countryman.&lt;/p&gt;
   
    <entry>
      <title>Information About Bots &amp; People Clicking a Link</title>
-     <link href="https://marcgg.com/blog/2013/05/20/track-link-clicks"/>
+     <link href="https://marcgg.com/blog/2013/05/20/track-link-clicks/"/>
      <updated>2013-05-20T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2013/05/20/track-link-clicks</id>
      <content type="html">
@@ -4283,7 +4283,7 @@ use once in a while when feeling paranoid.&lt;/p&gt;
   
    <entry>
      <title>What I Learned While Teaching</title>
-     <link href="https://marcgg.com/blog/2013/04/22/what-i-learned-teaching-web"/>
+     <link href="https://marcgg.com/blog/2013/04/22/what-i-learned-teaching-web/"/>
      <updated>2013-04-22T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2013/04/22/what-i-learned-teaching-web</id>
      <content type="html">
@@ -4420,7 +4420,7 @@ I got some very positive feedbacks. I think that I’ll do it again sometimes!&l
   
    <entry>
      <title>Please Keep a Changelog For Your Open Source Lib</title>
-     <link href="https://marcgg.com/blog/2013/03/25/please-changelog-open-source"/>
+     <link href="https://marcgg.com/blog/2013/03/25/please-changelog-open-source/"/>
      <updated>2013-03-25T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2013/03/25/please-changelog-open-source</id>
      <content type="html">
@@ -4590,7 +4590,7 @@ random version numbers with no explanations.&lt;/p&gt;
   
    <entry>
      <title>Developers, Share Your Technical Knowledge</title>
-     <link href="https://marcgg.com/blog/2013/02/04/developers-teach-non-tech-startup"/>
+     <link href="https://marcgg.com/blog/2013/02/04/developers-teach-non-tech-startup/"/>
      <updated>2013-02-04T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2013/02/04/developers-teach-non-tech-startup</id>
      <content type="html">
@@ -4763,7 +4763,7 @@ and if I can, I’ll happily take a few minutes to help you out!&lt;/p&gt;
   
    <entry>
      <title>2 Days Trying To Create a Multiplayer HTML5 Game</title>
-     <link href="https://marcgg.com/blog/2013/01/14/html5-nodejs-websockets-games-learning"/>
+     <link href="https://marcgg.com/blog/2013/01/14/html5-nodejs-websockets-games-learning/"/>
      <updated>2013-01-14T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2013/01/14/html5-nodejs-websockets-games-learning</id>
      <content type="html">
@@ -4941,7 +4941,7 @@ that’s another story.&lt;/p&gt;
   
    <entry>
      <title>I Left Tigerlily</title>
-     <link href="https://marcgg.com/blog/2013/01/06/left-tigerlily-job"/>
+     <link href="https://marcgg.com/blog/2013/01/06/left-tigerlily-job/"/>
      <updated>2013-01-06T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2013/01/06/left-tigerlily-job</id>
      <content type="html">
@@ -4970,7 +4970,7 @@ that’s another story.&lt;/p&gt;
   
    <entry>
      <title>How We Made Third Place At AngelHack Paris</title>
-     <link href="https://marcgg.com/blog/2012/12/10/angelhack-third-place-paris-hackathon"/>
+     <link href="https://marcgg.com/blog/2012/12/10/angelhack-third-place-paris-hackathon/"/>
      <updated>2012-12-10T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2012/12/10/angelhack-third-place-paris-hackathon</id>
      <content type="html">
@@ -5102,7 +5102,7 @@ teammates on the spot, it’ll be great.&lt;/p&gt;
   
    <entry>
      <title>Web Views &amp;amp; RubyMotion</title>
-     <link href="https://marcgg.com/blog/2012/11/12/webviews-javascript-ios-rubymotion"/>
+     <link href="https://marcgg.com/blog/2012/11/12/webviews-javascript-ios-rubymotion/"/>
      <updated>2012-11-12T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2012/11/12/webviews-javascript-ios-rubymotion</id>
      <content type="html">
@@ -5349,7 +5349,7 @@ project and it might not be the case in a few months.&lt;/p&gt;
   
    <entry>
      <title>Create a Custom Slider With RubyMotion</title>
-     <link href="https://marcgg.com/blog/2012/10/22/custom-slider-ios-rubymotion"/>
+     <link href="https://marcgg.com/blog/2012/10/22/custom-slider-ios-rubymotion/"/>
      <updated>2012-10-22T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2012/10/22/custom-slider-ios-rubymotion</id>
      <content type="html">
@@ -5542,7 +5542,7 @@ few months.&lt;/p&gt;
   
    <entry>
      <title>Don’t Accept Brokenness</title>
-     <link href="https://marcgg.com/blog/2012/10/15/dont-accept-brokeness-deal-with-annoyances"/>
+     <link href="https://marcgg.com/blog/2012/10/15/dont-accept-brokeness-deal-with-annoyances/"/>
      <updated>2012-10-15T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2012/10/15/dont-accept-brokeness-deal-with-annoyances</id>
      <content type="html">
@@ -5576,7 +5576,7 @@ few months.&lt;/p&gt;
   
    <entry>
      <title>How I Avoid Thumb Pain From Too Much Coding</title>
-     <link href="https://marcgg.com/blog/2012/10/01/thumb-pain-developer-keyboard"/>
+     <link href="https://marcgg.com/blog/2012/10/01/thumb-pain-developer-keyboard/"/>
      <updated>2012-10-01T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2012/10/01/thumb-pain-developer-keyboard</id>
      <content type="html">
@@ -5612,7 +5612,7 @@ few months.&lt;/p&gt;
   
    <entry>
      <title>The Risks of Working With Another Company&#39;s API</title>
-     <link href="https://marcgg.com/blog/2012/09/24/working-with-apis-facebook"/>
+     <link href="https://marcgg.com/blog/2012/09/24/working-with-apis-facebook/"/>
      <updated>2012-09-24T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2012/09/24/working-with-apis-facebook</id>
      <content type="html">
@@ -5718,7 +5718,7 @@ few months.&lt;/p&gt;
   
    <entry>
      <title>The One Thing That Made Me Switch To Vim</title>
-     <link href="https://marcgg.com/blog/2012/09/04/one-reason-to-switch-to-vim-editor"/>
+     <link href="https://marcgg.com/blog/2012/09/04/one-reason-to-switch-to-vim-editor/"/>
      <updated>2012-09-04T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2012/09/04/one-reason-to-switch-to-vim-editor</id>
      <content type="html">
@@ -5751,7 +5751,7 @@ few months.&lt;/p&gt;
   
    <entry>
      <title>Start Working on Your Side Project Tonight</title>
-     <link href="https://marcgg.com/blog/2012/01/09/start-working-on-your-side-project"/>
+     <link href="https://marcgg.com/blog/2012/01/09/start-working-on-your-side-project/"/>
      <updated>2012-01-09T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2012/01/09/start-working-on-your-side-project</id>
      <content type="html">
@@ -5821,7 +5821,7 @@ few months.&lt;/p&gt;
   
    <entry>
      <title>Outsourcing In A Startup</title>
-     <link href="https://marcgg.com/blog/2011/12/21/startup-outsourcing"/>
+     <link href="https://marcgg.com/blog/2011/12/21/startup-outsourcing/"/>
      <updated>2011-12-21T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2011/12/21/startup-outsourcing</id>
      <content type="html">
@@ -5896,7 +5896,7 @@ few months.&lt;/p&gt;
   
    <entry>
      <title>Developers, Go From SSII To Startup</title>
-     <link href="https://marcgg.com/blog/2011/12/12/developer-from-ssii-to-startup"/>
+     <link href="https://marcgg.com/blog/2011/12/12/developer-from-ssii-to-startup/"/>
      <updated>2011-12-12T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2011/12/12/developer-from-ssii-to-startup</id>
      <content type="html">
