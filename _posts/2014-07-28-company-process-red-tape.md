@@ -5,7 +5,7 @@ description: In a team, you’re bound to create some structuring processes. But
 blog: true
 category: blog
 tag: Startup
-redirect\_from:
+redirect_from:
 - /2014/07/28/company-process-red-tape/
 ---
 

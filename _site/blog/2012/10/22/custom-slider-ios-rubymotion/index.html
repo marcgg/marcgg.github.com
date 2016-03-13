@@ -91,30 +91,30 @@ Here’s what’s the demo code will give you:</p>
 <a href="http://rubymotion-tutorial.com/3-controllers/">controller</a>
 and assign it to be the root.</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">AppDelegate</span>
-  <span class="k">def</span> <span class="nf">application</span><span class="p">(</span><span class="n">application</span><span class="p">,</span> <span class="ss">didFinishLaunchingWithOptions</span><span class="p">:</span><span class="n">launchOptions</span><span class="p">)</span>
-	<span class="vi">@window</span> <span class="o">=</span> <span class="no">UIWindow</span><span class="o">.</span><span class="n">alloc</span><span class="o">.</span><span class="n">initWithFrame</span><span class="p">(</span><span class="no">UIScreen</span><span class="o">.</span><span class="n">mainScreen</span><span class="o">.</span><span class="n">bounds</span><span class="p">)</span>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">AppDelegate</span>
+  <span class="k">def</span> <span class="nf">application</span><span class="p">(</span><span class="n">application</span><span class="p">,</span> <span class="n">didFinishLaunchingWithOptions</span><span class="ss">:launchOptions</span><span class="p">)</span>
+	<span class="vi">@window</span> <span class="o">=</span> <span class="no">UIWindow</span><span class="p">.</span><span class="nf">alloc</span><span class="p">.</span><span class="nf">initWithFrame</span><span class="p">(</span><span class="no">UIScreen</span><span class="p">.</span><span class="nf">mainScreen</span><span class="p">.</span><span class="nf">bounds</span><span class="p">)</span>
 	
-	<span class="n">main_controller</span> <span class="o">=</span> <span class="no">MainController</span><span class="o">.</span><span class="n">alloc</span><span class="o">.</span><span class="n">init</span>
-	<span class="vi">@window</span><span class="o">.</span><span class="n">rootViewController</span> <span class="o">=</span> <span class="n">main_controller</span>
+	<span class="n">main_controller</span> <span class="o">=</span> <span class="no">MainController</span><span class="p">.</span><span class="nf">alloc</span><span class="p">.</span><span class="nf">init</span>
+	<span class="vi">@window</span><span class="p">.</span><span class="nf">rootViewController</span> <span class="o">=</span> <span class="n">main_controller</span>
 	
-	<span class="vi">@window</span><span class="o">.</span><span class="n">rootViewController</span><span class="o">.</span><span class="n">wantsFullScreenLayout</span> <span class="o">=</span> <span class="kp">true</span>
-	<span class="vi">@window</span><span class="o">.</span><span class="n">makeKeyAndVisible</span>
+	<span class="vi">@window</span><span class="p">.</span><span class="nf">rootViewController</span><span class="p">.</span><span class="nf">wantsFullScreenLayout</span> <span class="o">=</span> <span class="kp">true</span>
+	<span class="vi">@window</span><span class="p">.</span><span class="nf">makeKeyAndVisible</span>
 	<span class="kp">true</span>
   <span class="k">end</span>
-<span class="k">end</span></code></pre></div>
+<span class="k">end</span></code></pre></figure>
 
 <h2 id="displaying-a-uislider">Displaying a UISlider</h2>
 
 <p>Now we need to create the MainController. I like to put it in app/controllers,
 with the usual basic structure.</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">MainController</span> <span class="p">\</span><span class="o">&lt;</span> <span class="no">UIViewController</span>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">MainController</span> <span class="p">\</span><span class="o">&lt;</span> <span class="no">UIViewController</span>
   <span class="k">def</span> <span class="nf">loadView</span>
-	<span class="nb">self</span><span class="o">.</span><span class="n">view</span> <span class="o">=</span> <span class="no">UIView</span><span class="o">.</span><span class="n">new</span>
+	<span class="nb">self</span><span class="p">.</span><span class="nf">view</span> <span class="o">=</span> <span class="no">UIView</span><span class="p">.</span><span class="nf">new</span>
   <span class="k">end</span>
 
-  <span class="k">def</span> <span class="nf">initWithNibName</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="ss">bundle</span><span class="p">:</span> <span class="n">bundle</span><span class="p">)</span>
+  <span class="k">def</span> <span class="nf">initWithNibName</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="ss">bundle: </span><span class="n">bundle</span><span class="p">)</span>
 	<span class="k">super</span>
 	<span class="nb">self</span>
   <span class="k">end</span>
@@ -123,7 +123,7 @@ with the usual basic structure.</p>
 	<span class="k">super</span>
 	<span class="c1"># Everything is now going to go there</span>
   <span class="k">end</span>
-<span class="k">end</span></code></pre></div>
+<span class="k">end</span></code></pre></figure>
 
 <p>Now you can run the application with rake and it’ll display a black
 screen. This means we’re all set up and it’s time to actually start
@@ -132,13 +132,13 @@ viewDidLoad method.</p>
 
 <p>First, the slider:</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">slider</span> <span class="o">=</span> <span class="no">UISlider</span><span class="o">.</span><span class="n">alloc</span><span class="o">.</span><span class="n">initWithFrame</span><span class="p">(</span><span class="o">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">200</span><span class="o">]</span><span class="p">,</span> <span class="o">[</span><span class="mi">320</span><span class="p">,</span> <span class="mi">40</span><span class="o">]]</span><span class="p">)</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">slider</span> <span class="o">=</span> <span class="no">UISlider</span><span class="p">.</span><span class="nf">alloc</span><span class="p">.</span><span class="nf">initWithFrame</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">200</span><span class="p">],</span> <span class="p">[</span><span class="mi">320</span><span class="p">,</span> <span class="mi">40</span><span class="p">]])</span></code></pre></figure>
 
 <p>This will create a slider taking the whole width of the screen and position it
 more or less in the center. Once it’s created, we need add it to the
 view so it’ll display correctly.</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">view</span><span class="o">.</span><span class="n">addSubview</span><span class="p">(</span><span class="n">slider</span><span class="p">)</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">view</span><span class="p">.</span><span class="nf">addSubview</span><span class="p">(</span><span class="n">slider</span><span class="p">)</span></code></pre></figure>
 
 <p>Run rake again, and you should see something like this:</p>
 
@@ -146,8 +146,8 @@ view so it’ll display correctly.</p>
 
 <p>If you want, you can set the maximum and default values:</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">slider</span><span class="o">.</span><span class="n">maximumValue</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="n">slider</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">slider</span><span class="o">.</span><span class="n">maximumValue</span><span class="o">/</span><span class="mi">2</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">slider</span><span class="p">.</span><span class="nf">maximumValue</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">slider</span><span class="p">.</span><span class="nf">value</span> <span class="o">=</span> <span class="n">slider</span><span class="p">.</span><span class="nf">maximumValue</span><span class="o">/</span><span class="mi">2</span></code></pre></figure>
 
 <h2 id="setting-track-images">Setting Track Images</h2>
 
@@ -159,10 +159,10 @@ explains that with a better display of vocabulary than I do, but you get the ide
 
 <p>Let’s change the track image to display and image.</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">full</span><span class="p">\</span><span class="n">_image</span> <span class="o">=</span> <span class="no">UIImage</span><span class="o">.</span><span class="n">imageNamed</span><span class="p">(</span><span class="s2">&quot;full&quot;</span><span class="p">)</span>
-<span class="n">empty</span><span class="p">\</span><span class="n">_image</span> <span class="o">=</span> <span class="no">UIImage</span><span class="o">.</span><span class="n">imageNamed</span><span class="p">(</span><span class="s2">&quot;empty&quot;</span><span class="p">)</span>
-<span class="n">slider</span><span class="o">.</span><span class="n">setMinimumTrackImage</span> <span class="n">full</span><span class="p">\</span><span class="n">_image</span><span class="p">,</span> <span class="ss">forState</span><span class="p">:</span> <span class="no">UIControlStateNormal</span>
-<span class="n">slider</span><span class="o">.</span><span class="n">setMaximumTrackImage</span> <span class="n">empty</span><span class="p">\</span><span class="n">_image</span><span class="p">,</span> <span class="ss">forState</span><span class="p">:</span> <span class="no">UIControlStateNormal</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">full</span><span class="p">\</span><span class="n">_image</span> <span class="o">=</span> <span class="no">UIImage</span><span class="p">.</span><span class="nf">imageNamed</span><span class="p">(</span><span class="s2">"full"</span><span class="p">)</span>
+<span class="n">empty</span><span class="p">\</span><span class="n">_image</span> <span class="o">=</span> <span class="no">UIImage</span><span class="p">.</span><span class="nf">imageNamed</span><span class="p">(</span><span class="s2">"empty"</span><span class="p">)</span>
+<span class="n">slider</span><span class="p">.</span><span class="nf">setMinimumTrackImage</span> <span class="n">full</span><span class="p">\</span><span class="n">_image</span><span class="p">,</span> <span class="ss">forState: </span><span class="no">UIControlStateNormal</span>
+<span class="n">slider</span><span class="p">.</span><span class="nf">setMaximumTrackImage</span> <span class="n">empty</span><span class="p">\</span><span class="n">_image</span><span class="p">,</span> <span class="ss">forState: </span><span class="no">UIControlStateNormal</span></code></pre></figure>
 
 <p>You can notice that I use two images “full” and “empty”. To get them to
 load correctly, put them in the resources folder of your rubymotion
@@ -172,10 +172,10 @@ project. If they are PNGs you don’t need to specify the format.</p>
 It might be what you want, but that’s not my case so let’s add the
 following code before giving the image to the slider.</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1"># You need an image that is the exact size of the slider</span>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1"># You need an image that is the exact size of the slider</span>
 <span class="c1"># or else it might not look good</span>
-<span class="n">full</span><span class="p">\</span><span class="n">_image</span> <span class="o">=</span> <span class="n">full</span><span class="p">\</span><span class="n">_image</span><span class="o">.</span><span class="n">resizableImageWithCapInsets</span><span class="p">(</span>
-  <span class="no">UIEdgeInsetsZero</span><span class="p">,</span> <span class="ss">resizingMode</span><span class="p">:</span> <span class="no">UIImageResizingModeTile</span><span class="p">)</span></code></pre></div>
+<span class="n">full</span><span class="p">\</span><span class="n">_image</span> <span class="o">=</span> <span class="n">full</span><span class="p">\</span><span class="n">_image</span><span class="p">.</span><span class="nf">resizableImageWithCapInsets</span><span class="p">(</span>
+  <span class="no">UIEdgeInsetsZero</span><span class="p">,</span> <span class="ss">resizingMode: </span><span class="no">UIImageResizingModeTile</span><span class="p">)</span></code></pre></figure>
 
 <p>At this point we have this:</p>
 
@@ -190,7 +190,7 @@ belongs. Let’s fix that.</p>
 same logic as what we did with the tracks. Personnally I prefer removing
 the thumb entirely, so here’s how to do that:</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">slider</span><span class="o">.</span><span class="n">setThumbImage</span> <span class="no">UIImage</span><span class="o">.</span><span class="n">alloc</span><span class="p">,</span> <span class="ss">forState</span><span class="p">:</span> <span class="no">UIControlStateNormal</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">slider</span><span class="p">.</span><span class="nf">setThumbImage</span> <span class="no">UIImage</span><span class="p">.</span><span class="nf">alloc</span><span class="p">,</span> <span class="ss">forState: </span><span class="no">UIControlStateNormal</span></code></pre></figure>
 
 <p>This gives you:</p>
 
@@ -198,8 +198,8 @@ the thumb entirely, so here’s how to do that:</p>
 
 <p>Of course you could have done something like:</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">whatever</span> <span class="o">=</span> <span class="no">UIImage</span><span class="o">.</span><span class="n">imageNamed</span><span class="p">(</span><span class="s2">&quot;whatever&quot;</span><span class="p">)</span>
-<span class="n">slider</span><span class="o">.</span><span class="n">setThumbImage</span> <span class="n">whatever</span><span class="p">,</span> <span class="ss">forState</span><span class="p">:</span> <span class="no">UIControlStateNormal</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">whatever</span> <span class="o">=</span> <span class="no">UIImage</span><span class="p">.</span><span class="nf">imageNamed</span><span class="p">(</span><span class="s2">"whatever"</span><span class="p">)</span>
+<span class="n">slider</span><span class="p">.</span><span class="nf">setThumbImage</span> <span class="n">whatever</span><span class="p">,</span> <span class="ss">forState: </span><span class="no">UIControlStateNormal</span></code></pre></figure>
 
 <h2 id="making-the-slider-easier-to-slide">Making The Slider Easier to Slide</h2>
 
@@ -212,8 +212,8 @@ in the middle of your new slider in order to grab it.</p>
 <p>That’s not good UX. I order to avoid this we can enlarge the size of the area that
 is selectable:</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">slider</span><span class="o">.</span><span class="n">trackRectForBounds</span><span class="p">(</span>
-  <span class="no">CGRect</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">CGPoint</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">),</span> <span class="no">CGSize</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">)))</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">slider</span><span class="p">.</span><span class="nf">trackRectForBounds</span><span class="p">(</span>
+  <span class="no">CGRect</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="no">CGPoint</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">),</span> <span class="no">CGSize</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">)))</span></code></pre></figure>
 
 <p>Depending on the size of your images and the general feeling you want to
 get, play around with this area you’re defining.</p>
@@ -243,8 +243,6 @@ few months.</p>
             <p>Since you scrolled this far, you might as well take a look at some other things I wrote !</p>
             <ul>
               
-          
-            
           
             
           
@@ -395,7 +393,7 @@ few months.</p>
 
 
     <footer>
-      <div>Website powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>, hosted on
+      <div>Website powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a>, hosted on
       <a href="https://github.com/marcgg/marcgg.github.com">Github</a>
       and put together by <a href="http://twitter.com/marcgg">@marcgg</a>.</div>
       <div>All of the <a href="/blog">blog's articles</a> are under

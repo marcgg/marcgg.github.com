@@ -118,12 +118,12 @@ in order to get it to run. The thing is that nvm creates a
 automatically as promised. Moving the concerned code to .zshrc fixed
 that.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[[</span> -s /Users/marcgg/.nvm/nvm.sh <span class="o">]]</span> <span class="o">&amp;&amp;</span> . /Users/marcgg/.nvm/nvm.sh <span class="c"># This loads NVM</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[[</span> -s /Users/marcgg/.nvm/nvm.sh <span class="o">]]</span> <span class="o">&amp;&amp;</span> . /Users/marcgg/.nvm/nvm.sh <span class="c"># This loads NVM</span></code></pre></figure>
 
 <p>nvm requires that you specify the version you need in order for you to
 access the steroids command. It’s similar to what rvm does, but you still have to think about it.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">nvm use 0.8.0</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">nvm use 0.8.0</code></pre></figure>
 
 <h2 id="first-impression">First Impression</h2>
 
@@ -136,7 +136,7 @@ working.</p>
 <p>By the way, if you run the Steroids connect script with the watch option it will reload the app
 automatically on every device connected for maximum effect.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">steroids connect --watch</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">steroids connect --watch</code></pre></figure>
 
 <h2 id="organizing-files">Organizing Files</h2>
 
@@ -159,14 +159,14 @@ that got me excited so I decided that my app would have a drawer!</p>
 
 <p>Getting it to work was almost as simple as going:</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">drawer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">steroids</span><span class="p">.</span><span class="nx">views</span><span class="p">.</span><span class="nx">WebView</span><span class="p">(</span><span class="s2">&quot;/views/drawer/show.html&quot;</span><span class="p">);</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">drawer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">steroids</span><span class="p">.</span><span class="nx">views</span><span class="p">.</span><span class="nx">WebView</span><span class="p">(</span><span class="s2">"/views/drawer/show.html"</span><span class="p">);</span>
 <span class="kd">function</span> <span class="nx">openDrawer</span><span class="p">()</span> <span class="p">{</span>
   <span class="nx">steroids</span><span class="p">.</span><span class="nx">drawers</span><span class="p">.</span><span class="nx">show</span><span class="p">(</span><span class="nx">drawer</span><span class="p">);</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span></code></pre></figure>
 
 <p>And then create a webview with a link to open it.</p>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">ontouchend=</span><span class="s">&quot;openDrawer()&quot;</span><span class="nt">&gt;</span>Open<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">ontouchend=</span><span class="s">"openDrawer()"</span><span class="nt">&gt;</span>Open<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <p>Doing this will work, but you’d prefer to have a gesture to open and
 close the drawer. This is handled by Steroids as well, but this
@@ -186,24 +186,24 @@ actually pretty straightforward to do with Steroids.</p>
 
 <p>Adding the following in a controller gives you a nav bar:</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">steroids</span><span class="p">.</span><span class="nx">view</span><span class="p">.</span><span class="nx">navigationBar</span><span class="p">.</span><span class="nx">show</span><span class="p">(</span><span class="s2">&quot;My Nav Bar&quot;</span><span class="p">)</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">steroids</span><span class="p">.</span><span class="nx">view</span><span class="p">.</span><span class="nx">navigationBar</span><span class="p">.</span><span class="nx">show</span><span class="p">(</span><span class="s2">"My Nav Bar"</span><span class="p">)</span></code></pre></figure>
 
 <p>This added in the config gives you a tab menu:</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">steroids</span><span class="p">.</span><span class="nx">config</span><span class="p">.</span><span class="nx">statusBar</span><span class="p">.</span><span class="nx">enabled</span> <span class="o">=</span> <span class="kc">false</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">steroids</span><span class="p">.</span><span class="nx">config</span><span class="p">.</span><span class="nx">statusBar</span><span class="p">.</span><span class="nx">enabled</span> <span class="o">=</span> <span class="kc">false</span>
 
 <span class="nx">steroids</span><span class="p">.</span><span class="nx">config</span><span class="p">.</span><span class="nx">tabBar</span><span class="p">.</span><span class="nx">tabs</span> <span class="o">=</span> <span class="p">[</span>
  <span class="p">{</span>
-   <span class="nx">title</span><span class="o">:</span> <span class="s2">&quot;Fun&quot;</span>
-   <span class="nx">icon</span><span class="o">:</span> <span class="s2">&quot;icons/myicon@2x.png&quot;</span>
-   <span class="nx">location</span><span class="o">:</span> <span class="s2">&quot;http://localhost/views/fun/have_it.html&quot;</span>
+   <span class="na">title</span><span class="p">:</span> <span class="s2">"Fun"</span>
+   <span class="na">icon</span><span class="p">:</span> <span class="s2">"icons/myicon@2x.png"</span>
+   <span class="na">location</span><span class="p">:</span> <span class="s2">"http://localhost/views/fun/have_it.html"</span>
  <span class="p">},</span>
  <span class="p">{</span>
-   <span class="nx">title</span><span class="o">:</span> <span class="s2">&quot;Excitement&quot;</span>
-   <span class="nx">icon</span><span class="o">:</span> <span class="s2">&quot;icons/myothericon@2x.png&quot;</span>
-   <span class="nx">location</span><span class="o">:</span> <span class="s2">&quot;http://localhost/views/excitement/amazing.html&quot;</span>
+   <span class="na">title</span><span class="p">:</span> <span class="s2">"Excitement"</span>
+   <span class="na">icon</span><span class="p">:</span> <span class="s2">"icons/myothericon@2x.png"</span>
+   <span class="na">location</span><span class="p">:</span> <span class="s2">"http://localhost/views/excitement/amazing.html"</span>
  <span class="p">}</span>
-<span class="p">]</span></code></pre></div>
+<span class="p">]</span></code></pre></figure>
 
 <p>You then get access to ways to customize colors for everything as
 explained <a href="http://academy.appgyver.com/courses/4/lessons/50">here</a>,
@@ -231,12 +231,12 @@ connected mode, but it got complicated because of the tab menu… so in
 the end I just put a modal window that pops up when the user is not
 logged in. It’s not perfect but it gets the job done for now.</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">webView</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">steroids</span><span class="p">.</span><span class="nx">views</span><span class="p">.</span><span class="nx">WebView</span><span class="p">(</span><span class="s2">&quot;../views/login/show.html&quot;</span><span class="p">);</span>
-<span class="nx">steroids</span><span class="p">.</span><span class="nx">modal</span><span class="p">.</span><span class="nx">show</span><span class="p">(</span><span class="nx">webView</span><span class="p">);</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">webView</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">steroids</span><span class="p">.</span><span class="nx">views</span><span class="p">.</span><span class="nx">WebView</span><span class="p">(</span><span class="s2">"../views/login/show.html"</span><span class="p">);</span>
+<span class="nx">steroids</span><span class="p">.</span><span class="nx">modal</span><span class="p">.</span><span class="nx">show</span><span class="p">(</span><span class="nx">webView</span><span class="p">);</span></code></pre></figure>
 
 <p>Hiding it is pretty simple as well:</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">steroids</span><span class="p">.</span><span class="nx">modal</span><span class="p">.</span><span class="nx">hide</span><span class="p">()</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">steroids</span><span class="p">.</span><span class="nx">modal</span><span class="p">.</span><span class="nx">hide</span><span class="p">()</span></code></pre></figure>
 
 <h3 id="the-layer-stack">The Layer Stack</h3>
 
@@ -260,17 +260,17 @@ and
 wasn’t sure how to go about it, so I quickly hacked something based on
 cookies.</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">window</span><span class="p">.</span><span class="nx">User</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">setSession</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">val</span><span class="p">){</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">createCookie</span><span class="p">(</span><span class="s2">&quot;my_session&quot;</span><span class="p">,</span> <span class="nx">val</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">window</span><span class="p">.</span><span class="nx">User</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">setSession</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">val</span><span class="p">){</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">createCookie</span><span class="p">(</span><span class="s2">"my_session"</span><span class="p">,</span> <span class="nx">val</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
   <span class="p">},</span>
 
-  <span class="nx">logout</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">eraseCookie</span><span class="p">(</span><span class="s2">&quot;my_session&quot;</span><span class="p">);</span>
+  <span class="nx">logout</span><span class="err">:</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">eraseCookie</span><span class="p">(</span><span class="s2">"my_session"</span><span class="p">);</span>
   <span class="p">}</span>
 
   <span class="c1">// And so on ...</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span></code></pre></figure>
 
 <p>It works well, but I don’t think this is the best way to go.</p>
 
@@ -288,12 +288,12 @@ for the calls to work.</p>
 <a href="https://github.com/cyu/rack-cors">rack-cors gem</a>
 and set it up as such:</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">config</span><span class="o">.</span><span class="n">middleware</span><span class="o">.</span><span class="n">use</span> <span class="no">Rack</span><span class="o">::</span><span class="no">Cors</span> <span class="k">do</span>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">config</span><span class="p">.</span><span class="nf">middleware</span><span class="p">.</span><span class="nf">use</span> <span class="no">Rack</span><span class="o">::</span><span class="no">Cors</span> <span class="k">do</span>
   <span class="n">allow</span> <span class="k">do</span>
-    <span class="n">origins</span> <span class="s1">&#39;*&#39;</span>
-    <span class="n">resource</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="ss">headers</span><span class="p">:</span> <span class="ss">:any</span><span class="p">,</span> <span class="nb">methods</span><span class="p">:</span> <span class="o">[</span><span class="ss">:get</span><span class="p">,</span> <span class="ss">:post</span><span class="p">,</span> <span class="ss">:options</span><span class="o">]</span>
+    <span class="n">origins</span> <span class="s1">'*'</span>
+    <span class="n">resource</span> <span class="s1">'*'</span><span class="p">,</span> <span class="ss">headers: :any</span><span class="p">,</span> <span class="ss">methods: </span><span class="p">[</span><span class="ss">:get</span><span class="p">,</span> <span class="ss">:post</span><span class="p">,</span> <span class="ss">:options</span><span class="p">]</span>
   <span class="k">end</span>
-<span class="k">end</span></code></pre></div>
+<span class="k">end</span></code></pre></figure>
 
 <h2 id="workflow">Workflow</h2>
 
@@ -367,8 +367,6 @@ questions, I’m not sure to be able to answer all of them - but I’ll try!</p>
             <p>Since you scrolled this far, you might as well take a look at some other things I wrote !</p>
             <ul>
               
-          
-            
           
             
           
@@ -519,7 +517,7 @@ questions, I’m not sure to be able to answer all of them - but I’ll try!</p>
 
 
     <footer>
-      <div>Website powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>, hosted on
+      <div>Website powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a>, hosted on
       <a href="https://github.com/marcgg/marcgg.github.com">Github</a>
       and put together by <a href="http://twitter.com/marcgg">@marcgg</a>.</div>
       <div>All of the <a href="/blog">blog's articles</a> are under

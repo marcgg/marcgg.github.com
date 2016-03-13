@@ -92,13 +92,13 @@ app as it feels slow and/or broken.</p>
 <p>For some browsers you can just
 <a href="http://updates.html5rocks.com/2013/12/300ms-tap-delay-gone-away">specify a viewport and it’ll go away</a>:</p>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;width=device-width, user-scalable=no&quot;</span><span class="nt">&gt;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, user-scalable=no"</span><span class="nt">&gt;</span></code></pre></figure>
 
 <p>If this solution doesn’t work, for instance if your code runs on Safari, use <a href="https://github.com/ftlabs/fastclick">FastClick</a>:</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;load&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'load'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">FastClick</span><span class="p">.</span><span class="nx">attach</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
-<span class="p">},</span> <span class="kc">false</span><span class="p">);</span></code></pre></div>
+<span class="p">},</span> <span class="kc">false</span><span class="p">);</span></code></pre></figure>
 
 <h3 id="disable-selectioncopy-when-long-tapping">Disable Selection/Copy When Long Tapping</h3>
 
@@ -108,35 +108,35 @@ app as it feels slow and/or broken.</p>
 
 <p>Fixing this one is pretty easy. For webkit you add this in your CSS:</p>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">-webkit-user-select</span><span class="o">:</span> <span class="nt">none</span><span class="o">;</span>
-<span class="nt">-webkit-touch-callout</span><span class="o">:</span> <span class="nt">none</span><span class="o">;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">-webkit-user-select</span><span class="o">:</span> <span class="nt">none</span><span class="o">;</span>
+<span class="nt">-webkit-touch-callout</span><span class="o">:</span> <span class="nt">none</span><span class="o">;</span></code></pre></figure>
 
 <h3 id="disable-double-tap">Disable Double Tap</h3>
 
 <p>If you don’t like double tapping and use jQuery, try <a href="http://stackoverflow.com/a/9728511">this stackoverflow answer</a>.
 Just in case this answer disapears, here’s what it looks like:</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// jQuery no-double-tap-zoom plugin</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// jQuery no-double-tap-zoom plugin</span>
 <span class="c1">// Triple-licensed: Public Domain, MIT and WTFPL license - share and enjoy!</span>
 
 <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">$</span><span class="p">)</span> <span class="p">{</span>
   <span class="kd">var</span> <span class="nx">IS_IOS</span> <span class="o">=</span> <span class="sr">/iphone|ipad/i</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">userAgent</span><span class="p">);</span>
   <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">nodoubletapzoom</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="nx">IS_IOS</span><span class="p">)</span>
-      <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">bind</span><span class="p">(</span><span class="s1">&#39;touchstart&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="nx">preventZoom</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">bind</span><span class="p">(</span><span class="s1">'touchstart'</span><span class="p">,</span> <span class="kd">function</span> <span class="nx">preventZoom</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
         <span class="kd">var</span> <span class="nx">t2</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">timeStamp</span>
-          <span class="p">,</span> <span class="nx">t1</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">data</span><span class="p">(</span><span class="s1">&#39;lastTouch&#39;</span><span class="p">)</span> <span class="o">||</span> <span class="nx">t2</span>
+          <span class="p">,</span> <span class="nx">t1</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">data</span><span class="p">(</span><span class="s1">'lastTouch'</span><span class="p">)</span> <span class="o">||</span> <span class="nx">t2</span>
           <span class="p">,</span> <span class="nx">dt</span> <span class="o">=</span> <span class="nx">t2</span> <span class="o">-</span> <span class="nx">t1</span>
           <span class="p">,</span> <span class="nx">fingers</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">originalEvent</span><span class="p">.</span><span class="nx">touches</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
-        <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">data</span><span class="p">(</span><span class="s1">&#39;lastTouch&#39;</span><span class="p">,</span> <span class="nx">t2</span><span class="p">);</span>
+        <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">data</span><span class="p">(</span><span class="s1">'lastTouch'</span><span class="p">,</span> <span class="nx">t2</span><span class="p">);</span>
         <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">dt</span> <span class="o">||</span> <span class="nx">dt</span> <span class="o">&gt;</span> <span class="mi">500</span> <span class="o">||</span> <span class="nx">fingers</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span> <span class="c1">// not double-tap</span>
 
         <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span> <span class="c1">// double tap - prevent the zoom</span>
         <span class="c1">// also synthesize click events we just swallowed up</span>
-        <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">trigger</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">).</span><span class="nx">trigger</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">);</span>
+        <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">trigger</span><span class="p">(</span><span class="s1">'click'</span><span class="p">).</span><span class="nx">trigger</span><span class="p">(</span><span class="s1">'click'</span><span class="p">);</span>
       <span class="p">});</span>
   <span class="p">};</span>
-<span class="p">})(</span><span class="nx">jQuery</span><span class="p">);</span></code></pre></div>
+<span class="p">})(</span><span class="nx">jQuery</span><span class="p">);</span></code></pre></figure>
 
 <h3 id="disable-overscroll">Disable Overscroll</h3>
 
@@ -146,11 +146,11 @@ specific cases you might need to disable this behavior. There are many ways of d
 this one from
 <a href="http://stackoverflow.com/questions/10238084/ios-safari-how-to-disable-overscroll-but-allow-scrollable-divs-to-scroll-norma">stackoverflow</a>:</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">disallowOverscroll</span><span class="p">(){</span>
-  <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;touchmove&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">disallowOverscroll</span><span class="p">(){</span>
+  <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'touchmove'</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span>
     <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
   <span class="p">});</span>
-  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;body&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;touchstart&#39;</span><span class="p">,</span><span class="s1">&#39;.scrollable&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s1">'body'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'touchstart'</span><span class="p">,</span><span class="s1">'.scrollable'</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">currentTarget</span><span class="p">.</span><span class="nx">scrollTop</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
       <span class="nx">e</span><span class="p">.</span><span class="nx">currentTarget</span><span class="p">.</span><span class="nx">scrollTop</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
     <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">currentTarget</span><span class="p">.</span><span class="nx">scrollHeight</span>
@@ -159,10 +159,10 @@ this one from
       <span class="nx">e</span><span class="p">.</span><span class="nx">currentTarget</span><span class="p">.</span><span class="nx">scrollTop</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
     <span class="p">}</span>
   <span class="p">});</span>
-  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;body&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;touchmove&#39;</span><span class="p">,</span><span class="s1">&#39;.scrollable&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s1">'body'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'touchmove'</span><span class="p">,</span><span class="s1">'.scrollable'</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">e</span><span class="p">.</span><span class="nx">stopPropagation</span><span class="p">();</span>
   <span class="p">});</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span></code></pre></figure>
 
 <h3 id="higcharts">Higcharts</h3>
 
@@ -176,7 +176,7 @@ the user touches the graphs. This gist might help:
 the text in your inputs as you’d like. You can fix this using
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/user-select">user-select</a></p>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">-webkit-user-select</span><span class="o">:</span> <span class="nt">text</span><span class="o">;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">-webkit-user-select</span><span class="o">:</span> <span class="nt">text</span><span class="o">;</span></code></pre></figure>
 
 <h3 id="better-looking-text">Better Looking Text</h3>
 
@@ -185,7 +185,7 @@ the text in your inputs as you’d like. You can fix this using
 option gets things to look better. The trade-off is performance, but if you don’t have
 huge chunks of text you’ll be fine.</p>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">text-rendering</span><span class="o">:</span> <span class="nt">optimizeLegibility</span><span class="o">;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">text-rendering</span><span class="o">:</span> <span class="nt">optimizeLegibility</span><span class="o">;</span></code></pre></figure>
 
 <h3 id="remove-glossy-looking-buttons-in-safari">Remove Glossy Looking Buttons in Safari</h3>
 
@@ -196,15 +196,15 @@ easier to update button (right)?</p>
 
 <p>Easy!</p>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">-webkit-appearance</span><span class="o">:</span> <span class="nt">carret</span><span class="o">;</span>
-<span class="nt">-webkit-appearance</span><span class="o">:</span> <span class="nt">none</span><span class="o">;</span> <span class="c">/* alernatively */</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">-webkit-appearance</span><span class="o">:</span> <span class="nt">carret</span><span class="o">;</span>
+<span class="nt">-webkit-appearance</span><span class="o">:</span> <span class="nt">none</span><span class="o">;</span> <span class="c">/* alernatively */</span></code></pre></figure>
 
 <p>You can read more about this <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/-moz-appearance">here</a>.
 I also found that changing box sizing could help in the “undesign” process. Smarter people than me explained
 <a href="http://www.paulirish.com/2012/box-sizing-border-box-ftw/">how it works</a>,
 you can <a href="http://quirksmode.org/css/user-interface/boxsizing.html">read about it</a> or try it out like this:</p>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">-webkit-box-sizing</span><span class="o">:</span> <span class="nt">border-box</span><span class="o">;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">-webkit-box-sizing</span><span class="o">:</span> <span class="nt">border-box</span><span class="o">;</span></code></pre></figure>
 
 <h3 id="removing-gray-highlight-when-tapping-links">Removing Gray Highlight When Tapping Links</h3>
 
@@ -212,8 +212,8 @@ you can <a href="http://quirksmode.org/css/user-interface/boxsizing.html">read a
 doesn’t look very “native” once embeded in a Steroids JS webview. This is especialy true
 for images. Change this using:</p>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">-webkit-tap-highlight-color</span><span class="o">:</span> <span class="nf">#123456</span><span class="o">;</span> <span class="c">/* To change it */</span>
-<span class="nt">-webkit-tap-highlight-color</span><span class="o">:</span> <span class="nt">transparent</span><span class="o">;</span> <span class="c">/* To remove it */</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">-webkit-tap-highlight-color</span><span class="o">:</span> <span class="nf">#123456</span><span class="o">;</span> <span class="c">/* To change it */</span>
+<span class="nt">-webkit-tap-highlight-color</span><span class="o">:</span> <span class="nt">transparent</span><span class="o">;</span> <span class="c">/* To remove it */</span></code></pre></figure>
 
 <p>I found that changing the color feels better than removing it.</p>
 
@@ -223,7 +223,7 @@ for images. Change this using:</p>
 might feel that the scrolling itself doesn’t “feel right”. I suggest
 looking in this direction:</p>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">-webkit-overflow-scrolling</span><span class="o">:</span> <span class="nt">touch</span><span class="o">;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"> <span class="nt">-webkit-overflow-scrolling</span><span class="o">:</span> <span class="nt">touch</span><span class="o">;</span></code></pre></figure>
 
 <h3 id="on-fluid-layouts">On Fluid Layouts</h3>
 
@@ -249,8 +249,8 @@ individual pixels at a typical viewing distance.</p>
 <p>The short version of how to deal with it is pretty straightforward: create images twice as big, call them
 my_image@2x.jpg and resize them in CSS.</p>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">background</span><span class="o">:</span> <span class="nt">url</span><span class="o">(</span><span class="nt">my_image</span><span class="nc">.jpg</span><span class="o">);</span>
-<span class="nt">background-size</span><span class="o">:</span> <span class="nt">100px</span> <span class="nt">100px</span><span class="o">;</span> <span class="c">/* with my_image.jpg being 200x200 px */</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">background</span><span class="o">:</span> <span class="nt">url</span><span class="o">(</span><span class="nt">my_image</span><span class="nc">.jpg</span><span class="o">);</span>
+<span class="nt">background-size</span><span class="o">:</span> <span class="nt">100px</span> <span class="nt">100px</span><span class="o">;</span> <span class="c">/* with my_image.jpg being 200x200 px */</span></code></pre></figure>
 
 <h3 id="dont-bother-with-normal-size">Don’t Bother With Normal Size</h3>
 
@@ -273,15 +273,15 @@ There are a lot of ways to try to get this to work.</p>
 <a href="https://excellenteasy.com/devblog/posts/how-to-target-physical-pixels-on-retina-screens-with-css/">Stephan Bönnemann’s solution</a>
 simpler, and I ended adding a DOM element and styling it like this:</p>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;physical_1px&quot;</span><span class="nt">&gt;&lt;/div&gt;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"physical_1px"</span><span class="nt">&gt;&lt;/div&gt;</span></code></pre></figure>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.physical_1px</span><span class="p">{</span>
-  <span class="k">background-image</span><span class="o">:</span> <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="m">0</span><span class="n">deg</span><span class="o">,</span> <span class="m">#DFDFDF</span><span class="o">,</span> <span class="m">#DFDFDF</span> <span class="m">50%</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">50%</span><span class="p">);</span>
-  <span class="k">background</span><span class="o">-</span><span class="k">size</span><span class="o">:</span> <span class="m">100%</span> <span class="m">1px</span><span class="p">;</span>
-  <span class="k">background-repeat</span><span class="o">:</span> <span class="k">no-repeat</span><span class="p">;</span>
-  <span class="k">background-position</span><span class="o">:</span> <span class="k">bottom</span><span class="p">;</span>
-  <span class="k">height</span><span class="o">:</span> <span class="m">1px</span><span class="p">;</span>
-<span class="p">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.physical_1px</span><span class="p">{</span>
+  <span class="nl">background-image</span><span class="p">:</span> <span class="n">linear-gradient</span><span class="p">(</span><span class="m">0deg</span><span class="p">,</span> <span class="m">#DFDFDF</span><span class="p">,</span> <span class="m">#DFDFDF</span> <span class="m">50%</span><span class="p">,</span> <span class="nb">transparent</span> <span class="m">50%</span><span class="p">);</span>
+  <span class="nl">background-size</span><span class="p">:</span> <span class="m">100%</span> <span class="m">1px</span><span class="p">;</span>
+  <span class="nl">background-repeat</span><span class="p">:</span> <span class="nb">no-repeat</span><span class="p">;</span>
+  <span class="nl">background-position</span><span class="p">:</span> <span class="nb">bottom</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">1px</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
 
 <p>This is not ideal, but I wasn’t a fan of the alternatives either. Check
 them out and make an opinion for yourself:</p>
@@ -404,7 +404,7 @@ would interact with what.</p>
 <p>If you’re in need of a touch slider, I recommend using <a href="https://github.com/thebird/Swipe">Swipe.Js</a>.
 It’s both simple, effective and very customizable.</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">window</span><span class="p">.</span><span class="nx">mySwipe</span> <span class="o">=</span> <span class="nx">Swipe</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;slider&#39;</span><span class="p">));</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">window</span><span class="p">.</span><span class="nx">mySwipe</span> <span class="o">=</span> <span class="nx">Swipe</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'slider'</span><span class="p">));</span></code></pre></figure>
 
 <p>The only gotcha is that you won’t be able to put inputs in a slide
 because text edition (long press on iOS) will not work properly.</p>
@@ -431,46 +431,46 @@ look like this:</p>
 
 <div style="text-align: center"><img src="/assets/misc/loader.jpg" /></div>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;loader&quot;</span> <span class="na">class=</span><span class="s">&quot;loader&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;text_load&quot;</span> <span class="na">class=</span><span class="s">&quot;loader_content&quot;</span> <span class="na">data-t=</span><span class="s">&quot;loading&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;retry_load&quot;</span> <span class="na">class=</span><span class="s">&quot;loader_content&quot;</span> <span class="na">data-t=</span><span class="s">&quot;retry&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"loader"</span> <span class="na">class=</span><span class="s">"loader"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"text_load"</span> <span class="na">class=</span><span class="s">"loader_content"</span> <span class="na">data-t=</span><span class="s">"loading"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"retry_load"</span> <span class="na">class=</span><span class="s">"loader_content"</span> <span class="na">data-t=</span><span class="s">"retry"</span><span class="nt">&gt;&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;loader&quot;</span> <span class="na">id=</span><span class="s">&quot;loader_overlay&quot;</span><span class="nt">&gt;&lt;/div&gt;</span></code></pre></div>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"loader"</span> <span class="na">id=</span><span class="s">"loader_overlay"</span><span class="nt">&gt;&lt;/div&gt;</span></code></pre></figure>
 
 <p>The loader overlay is to prevent any clicking to happened while the
 loader is present on the screen. The retry_load and text_load are the
 elements displayed when it succeeds or fails.</p>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nf">#loader</span><span class="p">{</span>
-  <span class="k">position</span><span class="o">:</span> <span class="k">absolute</span><span class="p">;</span>
-  <span class="k">top</span><span class="o">:</span> <span class="m">130px</span><span class="p">;</span>
-  <span class="k">left</span><span class="o">:</span> <span class="m">70px</span><span class="p">;</span>
-  <span class="k">background-color</span><span class="o">:</span> <span class="m">#000</span><span class="p">;</span>
-  <span class="k">z-index</span><span class="o">:</span> <span class="m">9999</span><span class="p">;</span>
-  <span class="k">width</span><span class="o">:</span> <span class="m">190px</span><span class="p">;</span>
-  <span class="k">font-size</span><span class="o">:</span> <span class="m">1.2em</span><span class="p">;</span>
-  <span class="k">opacity</span><span class="o">:</span> <span class="m">0</span><span class="o">.</span><span class="m">8</span><span class="p">;</span>
-  <span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">10px</span><span class="p">;</span>
-  <span class="k">color</span><span class="o">:</span> <span class="m">#fff</span><span class="p">;</span>
-  <span class="k">text-align</span><span class="o">:</span> <span class="k">center</span><span class="p">;</span>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nf">#loader</span><span class="p">{</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+  <span class="nl">top</span><span class="p">:</span> <span class="m">130px</span><span class="p">;</span>
+  <span class="nl">left</span><span class="p">:</span> <span class="m">70px</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#000</span><span class="p">;</span>
+  <span class="nl">z-index</span><span class="p">:</span> <span class="m">9999</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">190px</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">1.2em</span><span class="p">;</span>
+  <span class="nl">opacity</span><span class="p">:</span> <span class="m">0.8</span><span class="p">;</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#fff</span><span class="p">;</span>
+  <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="nf">#retry_load</span><span class="p">{</span>
-  <span class="k">display</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="nc">.loader_content</span><span class="p">{</span>
-  <span class="k">display</span><span class="o">:</span> <span class="k">block</span><span class="p">;</span>
-  <span class="k">padding</span><span class="o">:</span> <span class="m">70px</span> <span class="m">0px</span><span class="p">;</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">70px</span> <span class="m">0px</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="nf">#loader_overlay</span><span class="p">{</span>
-  <span class="k">position</span><span class="o">:</span> <span class="k">absolute</span><span class="p">;</span>
-  <span class="k">top</span><span class="o">:</span> <span class="m">0px</span><span class="p">;</span>
-  <span class="k">height</span><span class="o">:</span> <span class="m">620px</span><span class="p">;</span>
-  <span class="k">width</span><span class="o">:</span> <span class="m">320px</span><span class="p">;</span>
-  <span class="k">background-color</span><span class="o">:</span> <span class="m">#000</span><span class="p">;</span>
-  <span class="k">opacity</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-  <span class="k">z-index</span><span class="o">:</span> <span class="m">500</span><span class="p">;</span>
-<span class="p">}</span></code></pre></div>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+  <span class="nl">top</span><span class="p">:</span> <span class="m">0px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">620px</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">320px</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#000</span><span class="p">;</span>
+  <span class="nl">opacity</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">z-index</span><span class="p">:</span> <span class="m">500</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
 
 <p>As you can see, the CSS is very simple. Again, not claiming to provide the definitive
 solution here, just some guidance. Feel free to improve on it and add a
@@ -496,18 +496,18 @@ to get it to work perfectly within my app.</p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Storage#localStorage">localStorage API</a>
 for persistence.</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">window</span><span class="p">.</span><span class="nx">User</span> <span class="o">=</span> <span class="p">{</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">window</span><span class="p">.</span><span class="nx">User</span> <span class="o">=</span> <span class="p">{</span>
 
-  <span class="nx">id</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
-    <span class="k">return</span> <span class="nb">window</span><span class="p">.</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s2">&quot;liff_id&quot;</span><span class="p">)</span>
+  <span class="na">id</span><span class="p">:</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="k">return</span> <span class="nb">window</span><span class="p">.</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s2">"liff_id"</span><span class="p">)</span>
   <span class="p">}</span>
 
-  <span class="nx">setStatsMode</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">val</span><span class="p">){</span>
-    <span class="nb">window</span><span class="p">.</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s2">&quot;liff_stats_mode&quot;</span><span class="p">,</span> <span class="nx">val</span><span class="p">)</span>
+  <span class="nl">setStatsMode</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">val</span><span class="p">){</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s2">"liff_stats_mode"</span><span class="p">,</span> <span class="nx">val</span><span class="p">)</span>
   <span class="p">}</span>
 
   <span class="c1">// Way more things go here</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span></code></pre></figure>
 
 <p>If I were to complexify my data model, I would consider using
 <a href="https://github.com/AppGyver/steroids-plugins/tree/master/sqlite">SQLite</a>.</p>
@@ -525,25 +525,25 @@ further below).</p>
 <p>Working with SteroidsJS means working with Cordova/PhoneGap. In this case the
 <a href="http://docs.phonegap.com/en/2.2.0/cordova_globalization_globalization.md.html">globalization API</a>.</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;deviceready&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
   <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
     <span class="nx">navigator</span><span class="p">.</span><span class="nx">globalization</span><span class="p">.</span><span class="nx">getPreferredLanguage</span><span class="p">(</span>
       <span class="kd">function</span> <span class="p">(</span><span class="nx">language</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">localize</span><span class="p">(</span><span class="nx">language</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span>
       <span class="p">},</span>
       <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-        <span class="nx">localize</span><span class="p">(</span><span class="s2">&quot;en&quot;</span><span class="p">)</span>
+        <span class="nx">localize</span><span class="p">(</span><span class="s2">"en"</span><span class="p">)</span>
       <span class="p">}</span>
     <span class="p">)</span>
   <span class="p">})</span>
 <span class="p">})</span>
 
 <span class="kd">function</span> <span class="nx">localize</span><span class="p">(</span><span class="nx">language</span><span class="p">){</span>
-  <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;body&quot;</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="nx">language</span><span class="p">)</span>
-  <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;*[data-t]&quot;</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
-    <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">I18n</span><span class="p">[</span><span class="nx">language</span><span class="p">][</span><span class="nx">$this</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span><span class="s2">&quot;t&quot;</span><span class="p">)])</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s2">"body"</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">"id"</span><span class="p">,</span> <span class="nx">language</span><span class="p">)</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s2">"*[data-t]"</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">I18n</span><span class="p">[</span><span class="nx">language</span><span class="p">][</span><span class="nx">$this</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span><span class="s2">"t"</span><span class="p">)])</span>
   <span class="p">})</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span></code></pre></figure>
 
 <p>… meaning it will use my I18n object (very basic JSON) and replace the
 content of any HTML element with a data-t attribute. The body ID is set
@@ -559,19 +559,19 @@ too much text displayed.</p>
 <p>As explained above, I internationalized my whole app. Because of this I’d have a couple of miliseconds blink before the text appears.
 Preloading views fixed this.</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">someView</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">steroids</span><span class="p">.</span><span class="nx">views</span><span class="p">.</span><span class="nx">WebView</span><span class="p">(</span><span class="s2">&quot;/views/settings/some_view.html&quot;</span><span class="p">);</span>
-<span class="kd">var</span> <span class="nx">anotherView</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">steroids</span><span class="p">.</span><span class="nx">views</span><span class="p">.</span><span class="nx">WebView</span><span class="p">(</span><span class="s2">&quot;/views/settings/another_view.html&quot;</span><span class="p">);</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">someView</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">steroids</span><span class="p">.</span><span class="nx">views</span><span class="p">.</span><span class="nx">WebView</span><span class="p">(</span><span class="s2">"/views/settings/some_view.html"</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">anotherView</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">steroids</span><span class="p">.</span><span class="nx">views</span><span class="p">.</span><span class="nx">WebView</span><span class="p">(</span><span class="s2">"/views/settings/another_view.html"</span><span class="p">);</span>
 
 <span class="kd">function</span> <span class="nx">preload</span><span class="p">(){</span>
   <span class="nx">someView</span><span class="p">.</span><span class="nx">preload</span><span class="p">()</span>
   <span class="nx">anotherView</span><span class="p">.</span><span class="nx">preload</span><span class="p">()</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span></code></pre></figure>
 
 <p>I also wait a bit before actually preloading the views, so the first app load
 time is reduced. I think it’s better to only preload when you really need
 it in order to preserve ressources.</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">setTimeout</span><span class="p">(</span><span class="nx">preload</span><span class="p">,</span> <span class="mi">3000</span><span class="p">)</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">setTimeout</span><span class="p">(</span><span class="nx">preload</span><span class="p">,</span> <span class="mi">3000</span><span class="p">)</span></code></pre></figure>
 
 <p>Learn more about it on <a href="http://academy.appgyver.com/categories/3/contents/19">AppGyver’s website</a>.</p>
 
@@ -585,23 +585,23 @@ blinking in some internal setting screens. It will be fixed soon :)</em></p>
 <p>You might want to do something when the user reopens the app after
 putting it in the background. Here’s how to do it:</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;resume&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"resume"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
   <span class="c1">// Do things</span>
-<span class="p">},</span> <span class="kc">false</span><span class="p">);</span></code></pre></div>
+<span class="p">},</span> <span class="kc">false</span><span class="p">);</span></code></pre></figure>
 
 <h3 id="communicate-between-views">Communicate Between Views</h3>
 
 <p>Using <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window.postMessage">the postMessage API</a>
 to communicate between views is the way to go.</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="cm">/* In the first view */</span>
-<span class="nb">window</span><span class="p">.</span><span class="nx">postMessage</span><span class="p">({</span> <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;something_happened&quot;</span> <span class="p">},</span> <span class="s2">&quot;*&quot;</span><span class="p">)</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="cm">/* In the first view */</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">postMessage</span><span class="p">({</span> <span class="na">type</span><span class="p">:</span> <span class="s2">"something_happened"</span> <span class="p">},</span> <span class="s2">"*"</span><span class="p">)</span>
 
 <span class="cm">/* In the second view */</span>
-<span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;message&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">msg</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span><span class="p">(</span><span class="nx">msg</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">type</span> <span class="o">==</span> <span class="s2">&quot;something_happened&quot;</span><span class="p">){</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"message"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">msg</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span><span class="p">(</span><span class="nx">msg</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">type</span> <span class="o">==</span> <span class="s2">"something_happened"</span><span class="p">){</span>
   <span class="p">}</span>
-<span class="p">})</span></code></pre></div>
+<span class="p">})</span></code></pre></figure>
 
 <p><em>Right now there is an open issue when adding alerts in the event listener
 as discussed [on the forum)[http://forums.appgyver.com/#!/steroids:sometimes-alerts-block-th)</em>.</p>
@@ -632,8 +632,6 @@ apps we’ll be creating in a few years!</p>
             <p>Since you scrolled this far, you might as well take a look at some other things I wrote !</p>
             <ul>
               
-          
-            
           
             
           
@@ -784,7 +782,7 @@ apps we’ll be creating in a few years!</p>
 
 
     <footer>
-      <div>Website powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>, hosted on
+      <div>Website powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a>, hosted on
       <a href="https://github.com/marcgg/marcgg.github.com">Github</a>
       and put together by <a href="http://twitter.com/marcgg">@marcgg</a>.</div>
       <div>All of the <a href="/blog">blog's articles</a> are under

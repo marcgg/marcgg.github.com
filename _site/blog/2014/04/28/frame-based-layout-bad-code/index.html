@@ -85,19 +85,19 @@ After some fiddling around with the UI, I got it to work.</p>
 
 <p>So first you want to create your main page:</p>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;HTML&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;HTML&gt;</span>
 <span class="nt">&lt;HEAD&gt;</span>
 <span class="nt">&lt;TITLE&gt;</span>INTERNET!<span class="nt">&lt;/TITLE&gt;</span>
 <span class="nt">&lt;/HEAD&gt;</span>
-<span class="nt">&lt;FRAMESET</span> <span class="na">cols=</span><span class="s">&quot;20%, 80%&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">&quot;f1.html&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">&quot;f2.html&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;FRAMESET</span> <span class="na">cols=</span><span class="s">"20%, 80%"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">"f1.html"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">"f2.html"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/FRAMESET&gt;</span>
-<span class="nt">&lt;/HTML&gt;</span></code></pre></div>
+<span class="nt">&lt;/HTML&gt;</span></code></pre></figure>
 
 <p>Let’s add some sweet design in each frame file:</p>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;BODY</span> <span class="na">bgcolor=</span><span class="s">&quot;orange&quot;</span><span class="nt">&gt;</span>Content!<span class="nt">&lt;/BODY&gt;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;BODY</span> <span class="na">bgcolor=</span><span class="s">"orange"</span><span class="nt">&gt;</span>Content!<span class="nt">&lt;/BODY&gt;</span></code></pre></figure>
 
 <p>Right away it starts looking good:</p>
 
@@ -106,24 +106,24 @@ After some fiddling around with the UI, I got it to work.</p>
 <p>That’s nice, but I want to have more than 1 element in my left menu, so how can I do that ?
 You could very much do this:</p>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;BODY</span> <span class="na">bgcolor=</span><span class="s">&quot;orange&quot;</span><span class="nt">&gt;</span>Menu 1<span class="nt">&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;</span>Menu 2<span class="nt">&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;</span>Menu 3<span class="nt">&lt;/BODY&gt;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;BODY</span> <span class="na">bgcolor=</span><span class="s">"orange"</span><span class="nt">&gt;</span>Menu 1<span class="nt">&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;</span>Menu 2<span class="nt">&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;</span>Menu 3<span class="nt">&lt;/BODY&gt;</span></code></pre></figure>
 
 <p>The problem is that then you won’t have colors on your menu items ! That’s when my very clever trick
 comes in. You just need… more frames !</p>
 
 <p>Change f1.html to look like this:</p>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;HTML&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;HTML&gt;</span>
 <span class="nt">&lt;HEAD&gt;</span>
 <span class="nt">&lt;TITLE&gt;</span>INTERNET!<span class="nt">&lt;/TITLE&gt;</span>
 <span class="nt">&lt;/HEAD&gt;</span>
-<span class="nt">&lt;FRAMESET</span> <span class="na">rows=</span><span class="s">&quot;25%, 25%, 25%, 25%&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">&quot;menu1.html&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">&quot;menu2.html&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">&quot;menu3.html&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">&quot;menu4.html&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;FRAMESET</span> <span class="na">rows=</span><span class="s">"25%, 25%, 25%, 25%"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">"menu1.html"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">"menu2.html"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">"menu3.html"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">"menu4.html"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/FRAMESET&gt;</span>
-<span class="nt">&lt;/HTML&gt;</span></code></pre></div>
+<span class="nt">&lt;/HTML&gt;</span></code></pre></figure>
 
 <p>Wow. Such color. Much design.</p>
 
@@ -132,7 +132,7 @@ comes in. You just need… more frames !</p>
 <p>You can even create some impressive gradients with only a few more lines of code and
 knowledge of <em>advanced colors in HTML</em>.</p>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;BODY</span> <span class="na">bgcolor=</span><span class="s">&quot;black&quot;</span> <span class="na">text=</span><span class="s">&quot;white&quot;</span><span class="nt">&gt;</span>Menu 1<span class="nt">&lt;/BODY&gt;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;BODY</span> <span class="na">bgcolor=</span><span class="s">"black"</span> <span class="na">text=</span><span class="s">"white"</span><span class="nt">&gt;</span>Menu 1<span class="nt">&lt;/BODY&gt;</span></code></pre></figure>
 
 <div style="text-align: center"><img src="/assets/blog/frames/page3.png" /></div>
 
@@ -142,15 +142,15 @@ knowledge of <em>advanced colors in HTML</em>.</p>
 
 <p>You only need to change menu.html like this:</p>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;HTML&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;HTML&gt;</span>
 <span class="nt">&lt;HEAD&gt;</span>
 <span class="nt">&lt;TITLE&gt;</span>INTERNET!<span class="nt">&lt;/TITLE&gt;</span>
 <span class="nt">&lt;/HEAD&gt;</span>
-<span class="nt">&lt;FRAMESET</span> <span class="na">cols=</span><span class="s">&quot;20%, 80%&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">&quot;new.gif&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">&quot;menu1_text.html&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;FRAMESET</span> <span class="na">cols=</span><span class="s">"20%, 80%"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">"new.gif"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">"menu1_text.html"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/FRAMESET&gt;</span>
-<span class="nt">&lt;/HTML&gt;</span></code></pre></div>
+<span class="nt">&lt;/HTML&gt;</span></code></pre></figure>
 
 <div style="text-align: center"><img src="/assets/blog/frames/page4.png" /></div>
 
@@ -159,15 +159,15 @@ knowledge of <em>advanced colors in HTML</em>.</p>
 <p>Now for the protip. If you want your website to look perfect, you want to hide the construction
 lines that are the frame borders. To do this, add a frameborder set to 0.</p>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;HTML&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;HTML&gt;</span>
 <span class="nt">&lt;HEAD&gt;</span>
 <span class="nt">&lt;TITLE&gt;</span>INTERNET!<span class="nt">&lt;/TITLE&gt;</span>
 <span class="nt">&lt;/HEAD&gt;</span>
-<span class="nt">&lt;FRAMESET</span> <span class="na">cols=</span><span class="s">&quot;20%, 80%&quot;</span> <span class="na">frameborder=</span><span class="s">&quot;0&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">&quot;f1.html&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">&quot;f2.html&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;FRAMESET</span> <span class="na">cols=</span><span class="s">"20%, 80%"</span> <span class="na">frameborder=</span><span class="s">"0"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">"f1.html"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;FRAME</span> <span class="na">src=</span><span class="s">"f2.html"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/FRAMESET&gt;</span>
-<span class="nt">&lt;/HTML&gt;</span></code></pre></div>
+<span class="nt">&lt;/HTML&gt;</span></code></pre></figure>
 
 <p>Now you have a professional looking website.</p>
 
@@ -199,8 +199,6 @@ still learning - you were making the same mistakes at some point !</p>
               
           
             
-          
-            
               
               <li><a href="/blog/2016/03/01/vimrc-example/">Vim Configuration From Scratch in 2016</a></li>
             
@@ -219,9 +217,6 @@ still learning - you were making the same mistakes at some point !</p>
             
           
             
-              
-              <li><a href="/blog/2015/10/18/git-checkout-minus/">How To Checkout The Previous Branch In Git</a></li>
-            
           
             
           
@@ -229,9 +224,6 @@ still learning - you were making the same mistakes at some point !</p>
           
             
           
-            
-              
-              <li><a href="/blog/2015/08/04/git-first-parent-log/">Git Log's --first-parent Option</a></li>
             
           
             
@@ -364,7 +356,7 @@ still learning - you were making the same mistakes at some point !</p>
 
 
     <footer>
-      <div>Website powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>, hosted on
+      <div>Website powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a>, hosted on
       <a href="https://github.com/marcgg/marcgg.github.com">Github</a>
       and put together by <a href="http://twitter.com/marcgg">@marcgg</a>.</div>
       <div>All of the <a href="/blog">blog's articles</a> are under

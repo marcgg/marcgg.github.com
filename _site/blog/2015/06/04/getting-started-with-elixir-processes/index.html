@@ -78,20 +78,20 @@
 
 <p>Let’s start a process:</p>
 
-<div class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="n">pid</span> <span class="p">=</span> <span class="n">spawn</span><span class="p">(</span>
- <span class="k">fn</span> <span class="p">-&gt;</span>
-   <span class="nc">IO</span><span class="p">.</span><span class="n">puts</span> <span class="s2">&quot;Starting Process&quot;</span>
+<figure class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="n">pid</span> <span class="o">=</span> <span class="n">spawn</span><span class="p">(</span>
+ <span class="k">fn</span> <span class="o">-&gt;</span>
+   <span class="no">IO</span><span class="o">.</span><span class="n">puts</span> <span class="sd">"</span><span class="s2">Starting Process"</span>
  <span class="k">end</span>
 <span class="p">)</span>
-<span class="ss">:timer</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
-<span class="nc">IO</span><span class="p">.</span><span class="n">puts</span> <span class="nc">Process</span><span class="p">.</span><span class="n">alive?</span><span class="p">(</span><span class="n">pid</span><span class="p">)</span></code></pre></div>
+<span class="ss">:timer</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="m">1000</span><span class="p">)</span>
+<span class="no">IO</span><span class="o">.</span><span class="n">puts</span> <span class="no">Process</span><span class="o">.</span><span class="n">alive?</span><span class="p">(</span><span class="n">pid</span><span class="p">)</span></code></pre></figure>
 
 <p>In this example I added a timer just to make sure that the IO has no chance to be run at the same time as the recently spawned process. This way we’ll get a consistent behaviour, wherever you execute this code.</p>
 
 <p>If we run this piece of code, we get:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">Starting Process
- <span class="nb">false</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> Starting Process
+ <span class="nb">false</span></code></pre></figure>
 
 <p>This is because the process dies once it has done its job. Pretty straightforward, right? Now let’s see how to ask it to wait for a message a bit.</p>
 
@@ -99,40 +99,40 @@
 
 <p>Now let’s add a way to receive a message. Here I’ll spawn the process in the same way, except I’ll store its PID. Note that this is an Elixir PID, and is unrelated to UNIX PIDs.</p>
 
-<div class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="n">pid</span> <span class="p">=</span> <span class="n">spawn</span><span class="p">(</span>
-  <span class="k">fn</span> <span class="p">-&gt;</span>
-    <span class="nc">IO</span><span class="p">.</span><span class="n">puts</span> <span class="s2">&quot;Starting Process&quot;</span>
+<figure class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="n">pid</span> <span class="o">=</span> <span class="n">spawn</span><span class="p">(</span>
+  <span class="k">fn</span> <span class="o">-&gt;</span>
+    <span class="no">IO</span><span class="o">.</span><span class="n">puts</span> <span class="sd">"</span><span class="s2">Starting Process"</span>
     <span class="k">receive</span> <span class="k">do</span>
-      <span class="p">{</span><span class="ss">:first</span><span class="p">,</span> <span class="n">message</span><span class="p">}</span> <span class="p">-&gt;</span>
-	 <span class="s2">&quot;Received first: &quot;</span> <span class="o">&lt;&gt;</span> <span class="n">message</span>
+      <span class="p">{</span><span class="ss">:first</span><span class="p">,</span> <span class="n">message</span><span class="p">}</span> <span class="o">-&gt;</span>
+	 <span class="sd">"</span><span class="s2">Received first: "</span> <span class="o">&lt;&gt;</span> <span class="n">message</span>
     <span class="k">end</span>
   <span class="k">end</span>
 <span class="p">)</span>
 
-<span class="ss">:timer</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
-<span class="n">send</span> <span class="n">pid</span><span class="p">,</span> <span class="p">{</span><span class="ss">:first</span><span class="p">,</span> <span class="s2">&quot;Amazing first message!&quot;</span><span class="p">}</span></code></pre></div>
+<span class="ss">:timer</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="m">1000</span><span class="p">)</span>
+<span class="n">send</span> <span class="n">pid</span><span class="p">,</span> <span class="p">{</span><span class="ss">:first</span><span class="p">,</span> <span class="sd">"</span><span class="s2">Amazing first message!"</span><span class="p">}</span></code></pre></figure>
 
 <p>Which gives us:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">Starting Process
- Received first: Amazing first message!</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> Starting Process
+ Received first: Amazing first message!</code></pre></figure>
 
 <h4 id="note-on-process-lifecycle">Note On Process Lifecycle</h4>
 
 <p>Zooming in a bit on the way we send the message, if I do this on my machine:</p>
 
-<div class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="ss">:timer</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
- <span class="n">send</span> <span class="n">pid</span><span class="p">,</span> <span class="p">{</span><span class="ss">:first</span><span class="p">,</span> <span class="s2">&quot;Amazing first message!&quot;</span><span class="p">}</span>
- <span class="nc">IO</span><span class="p">.</span><span class="n">puts</span> <span class="nc">Process</span><span class="p">.</span><span class="n">alive?</span><span class="p">(</span><span class="n">pid</span><span class="p">)</span>
-<span class="ss">:timer</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
- <span class="nc">IO</span><span class="p">.</span><span class="n">puts</span> <span class="nc">Process</span><span class="p">.</span><span class="n">alive?</span><span class="p">(</span><span class="n">pid</span><span class="p">)</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="ss">:timer</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="m">1000</span><span class="p">)</span>
+ <span class="n">send</span> <span class="n">pid</span><span class="p">,</span> <span class="p">{</span><span class="ss">:first</span><span class="p">,</span> <span class="sd">"</span><span class="s2">Amazing first message!"</span><span class="p">}</span>
+ <span class="no">IO</span><span class="o">.</span><span class="n">puts</span> <span class="no">Process</span><span class="o">.</span><span class="n">alive?</span><span class="p">(</span><span class="n">pid</span><span class="p">)</span>
+<span class="ss">:timer</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="m">1000</span><span class="p">)</span>
+ <span class="no">IO</span><span class="o">.</span><span class="n">puts</span> <span class="no">Process</span><span class="o">.</span><span class="n">alive?</span><span class="p">(</span><span class="n">pid</span><span class="p">)</span></code></pre></figure>
 
 <p>I get:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">Starting Process
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> Starting Process
  Received first: Amazing first message!
- <span class="nb">true</span>
-<span class="nb"> false</span></code></pre></div>
+ <span class="nb">true
+ false</span></code></pre></figure>
 
 <p>Notice how the process is still alive right after the call to send, but dies shortly after. This can be a bit surprising at first, but you can see how it makes sense as the spawned process needs some time to actually execute, and once it is done responding it just shuts down because it has done what it was supposed to do.</p>
 
@@ -146,19 +146,19 @@
 
 <p>This is because it gives us better error handling, among other things.</p>
 
-<div class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="n">spawn</span><span class="p">(</span>
-  <span class="k">fn</span> <span class="p">-&gt;</span>
-    <span class="k">raise</span> <span class="s2">&quot;Ouch&quot;</span>
-    <span class="nc">IO</span><span class="p">.</span><span class="n">puts</span> <span class="s2">&quot;Starting Process&quot;</span>
+<figure class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="n">spawn</span><span class="p">(</span>
+  <span class="k">fn</span> <span class="o">-&gt;</span>
+    <span class="k">raise</span> <span class="sd">"</span><span class="s2">Ouch"</span>
+    <span class="no">IO</span><span class="o">.</span><span class="n">puts</span> <span class="sd">"</span><span class="s2">Starting Process"</span>
   <span class="k">end</span>
-<span class="p">)</span></code></pre></div>
+<span class="p">)</span></code></pre></figure>
 
 <p>Running this outputs absolutely nothing. However, the version with “spawn_link” instead of “spawn” gives us:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">08:37:20.422 error Error in process &lt;0.51.0&gt; with <span class="nb">exit </span>value: ...
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> 08:37:20.422 error Error <span class="k">in </span>process &lt;0.51.0&gt; with <span class="nb">exit </span>value: ...
  <span class="o">(</span>EXIT from <span class="c">#PID&lt;0.48.0&gt;) an exception was raised:</span>
  <span class="o">(</span>RuntimeError<span class="o">)</span> Ouch
-	main.exs:3: anonymous fn/0 in :elixircompiler0.FILE/1</code></pre></div>
+	main.exs:3: anonymous fn/0 <span class="k">in</span> :elixircompiler0.FILE/1</code></pre></figure>
 
 <p>Note that, in this article, I will not use <a href="http://elixir-lang.org/docs/v1.0/elixir/Task.html">Elixir Tasks</a> to avoid manipulating too many concepts, even if it would lead to even better error messages, as explained in the official <a href="http://elixir-lang.org/getting-started/processes.html#tasks">documentation</a>:</p>
 
@@ -172,25 +172,25 @@
 
 <p>When I first got my hands on Elixir I wanted to send multiple messages to a process, so I did this:</p>
 
-<div class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="n">pid</span> <span class="p">=</span> <span class="n">spawn</span><span class="p">(</span>
-  <span class="k">fn</span> <span class="p">-&gt;</span>
-    <span class="nc">IO</span><span class="p">.</span><span class="n">puts</span> <span class="s2">&quot;Starting Process&quot;</span>
+<figure class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="n">pid</span> <span class="o">=</span> <span class="n">spawn</span><span class="p">(</span>
+  <span class="k">fn</span> <span class="o">-&gt;</span>
+    <span class="no">IO</span><span class="o">.</span><span class="n">puts</span> <span class="sd">"</span><span class="s2">Starting Process"</span>
     <span class="k">receive</span> <span class="k">do</span>
-      <span class="p">{</span><span class="ss">:first</span><span class="p">,</span> <span class="n">message</span><span class="p">}</span> <span class="p">-&gt;</span>
-	 <span class="nc">IO</span><span class="p">.</span><span class="n">puts</span> <span class="nc">Enum</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;Received first: &quot;</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
-      <span class="p">{</span><span class="ss">:second</span><span class="p">,</span> <span class="n">message</span><span class="p">}</span> <span class="p">-&gt;</span>
-	 <span class="nc">IO</span><span class="p">.</span><span class="n">puts</span> <span class="nc">Enum</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;Received second: &quot;</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
+      <span class="p">{</span><span class="ss">:first</span><span class="p">,</span> <span class="n">message</span><span class="p">}</span> <span class="o">-&gt;</span>
+	 <span class="no">IO</span><span class="o">.</span><span class="n">puts</span> <span class="no">Enum</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sd">"</span><span class="s2">Received first: "</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
+      <span class="p">{</span><span class="ss">:second</span><span class="p">,</span> <span class="n">message</span><span class="p">}</span> <span class="o">-&gt;</span>
+	 <span class="no">IO</span><span class="o">.</span><span class="n">puts</span> <span class="no">Enum</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sd">"</span><span class="s2">Received second: "</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
     <span class="k">end</span>
   <span class="k">end</span>
 <span class="p">)</span>
 
-<span class="n">send</span> <span class="n">pid</span><span class="p">,</span> <span class="p">{</span><span class="ss">:first</span><span class="p">,</span> <span class="s2">&quot;Amazing first message!&quot;</span><span class="p">}</span>
-<span class="n">send</span> <span class="n">pid</span><span class="p">,</span> <span class="p">{</span><span class="ss">:second</span><span class="p">,</span> <span class="s2">&quot;Disappointing second message.&quot;</span><span class="p">}</span></code></pre></div>
+<span class="n">send</span> <span class="n">pid</span><span class="p">,</span> <span class="p">{</span><span class="ss">:first</span><span class="p">,</span> <span class="sd">"</span><span class="s2">Amazing first message!"</span><span class="p">}</span>
+<span class="n">send</span> <span class="n">pid</span><span class="p">,</span> <span class="p">{</span><span class="ss">:second</span><span class="p">,</span> <span class="sd">"</span><span class="s2">Disappointing second message."</span><span class="p">}</span></code></pre></figure>
 
 <p>However, running this would only give me:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">Starting Process
- Received first: Amazing first message!</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> Starting Process
+ Received first: Amazing first message!</code></pre></figure>
 
 <p>This makes sense since the process shuts down once it received a message, as we saw before. To achieve this, we need to maintain some state.</p>
 
@@ -202,40 +202,40 @@
 
 <p>I left a few debugging messages so what happens is even clearer when looking at the output.</p>
 
-<div class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="kd">defmodule</span> <span class="nc">Receiver</span> <span class="k">do</span>
-  <span class="kd">def</span> <span class="n">start</span> <span class="k">do</span>
-    <span class="nc">IO</span><span class="p">.</span><span class="n">puts</span> <span class="s2">&quot;Starting Process&quot;</span>
-    <span class="n">spawn_link</span><span class="p">(</span><span class="k">fn</span> <span class="p">-&gt;</span> <span class="n">loop</span> <span class="k">end</span><span class="p">)</span>
+<figure class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="k">defmodule</span> <span class="no">Receiver</span> <span class="k">do</span>
+  <span class="k">def</span> <span class="n">start</span> <span class="k">do</span>
+    <span class="no">IO</span><span class="o">.</span><span class="n">puts</span> <span class="sd">"</span><span class="s2">Starting Process"</span>
+    <span class="n">spawn_link</span><span class="p">(</span><span class="k">fn</span> <span class="o">-&gt;</span> <span class="k">loop</span> <span class="k">end</span><span class="p">)</span>
   <span class="k">end</span>
 
-  <span class="kd">defp</span> <span class="n">loop</span> <span class="k">do</span>
-    <span class="nc">IO</span><span class="p">.</span><span class="n">puts</span> <span class="s2">&quot;Looping&quot;</span>
+  <span class="k">defp</span> <span class="k">loop</span> <span class="k">do</span>
+    <span class="no">IO</span><span class="o">.</span><span class="n">puts</span> <span class="sd">"</span><span class="s2">Looping"</span>
     <span class="k">receive</span> <span class="k">do</span>
-      <span class="p">{</span><span class="ss">:first</span><span class="p">,</span> <span class="n">message</span><span class="p">}</span> <span class="p">-&gt;</span>
-	 <span class="nc">IO</span><span class="p">.</span><span class="n">puts</span> <span class="s2">&quot;Received first: &quot;</span> <span class="o">&lt;&gt;</span> <span class="n">message</span>
-	 <span class="n">loop</span>
-      <span class="p">{</span><span class="ss">:second</span><span class="p">,</span> <span class="n">message</span><span class="p">}</span> <span class="p">-&gt;</span>
-	 <span class="nc">IO</span><span class="p">.</span><span class="n">puts</span> <span class="s2">&quot;Received second: &quot;</span> <span class="o">&lt;&gt;</span> <span class="n">message</span>
-	 <span class="n">loop</span>
+      <span class="p">{</span><span class="ss">:first</span><span class="p">,</span> <span class="n">message</span><span class="p">}</span> <span class="o">-&gt;</span>
+	 <span class="no">IO</span><span class="o">.</span><span class="n">puts</span> <span class="sd">"</span><span class="s2">Received first: "</span> <span class="o">&lt;&gt;</span> <span class="n">message</span>
+	 <span class="k">loop</span>
+      <span class="p">{</span><span class="ss">:second</span><span class="p">,</span> <span class="n">message</span><span class="p">}</span> <span class="o">-&gt;</span>
+	 <span class="no">IO</span><span class="o">.</span><span class="n">puts</span> <span class="sd">"</span><span class="s2">Received second: "</span> <span class="o">&lt;&gt;</span> <span class="n">message</span>
+	 <span class="k">loop</span>
     <span class="k">end</span>
   <span class="k">end</span>
 <span class="k">end</span>
 
-<span class="n">pid</span> <span class="p">=</span> <span class="nc">Receiver</span><span class="p">.</span><span class="n">start</span>
-<span class="n">send</span> <span class="n">pid</span><span class="p">,</span> <span class="p">{</span><span class="ss">:first</span><span class="p">,</span> <span class="s2">&quot;Amazing first message!&quot;</span><span class="p">}</span>
-<span class="n">send</span> <span class="n">pid</span><span class="p">,</span> <span class="p">{</span><span class="ss">:second</span><span class="p">,</span> <span class="s2">&quot;Disappointing second message.&quot;</span><span class="p">}</span>
-<span class="n">send</span> <span class="n">pid</span><span class="p">,</span> <span class="p">{</span><span class="ss">:first</span><span class="p">,</span> <span class="s2">&quot;Amazing first message again!&quot;</span><span class="p">}</span></code></pre></div>
+<span class="n">pid</span> <span class="o">=</span> <span class="no">Receiver</span><span class="o">.</span><span class="n">start</span>
+<span class="n">send</span> <span class="n">pid</span><span class="p">,</span> <span class="p">{</span><span class="ss">:first</span><span class="p">,</span> <span class="sd">"</span><span class="s2">Amazing first message!"</span><span class="p">}</span>
+<span class="n">send</span> <span class="n">pid</span><span class="p">,</span> <span class="p">{</span><span class="ss">:second</span><span class="p">,</span> <span class="sd">"</span><span class="s2">Disappointing second message."</span><span class="p">}</span>
+<span class="n">send</span> <span class="n">pid</span><span class="p">,</span> <span class="p">{</span><span class="ss">:first</span><span class="p">,</span> <span class="sd">"</span><span class="s2">Amazing first message again!"</span><span class="p">}</span></code></pre></figure>
 
 <p>Running the code above gives us:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">Starting Process
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> Starting Process
  Looping
  Received first: Amazing first message!
  Looping
  Received second: Disapointing second message.
  Looping
  Received first: Amazing first message again!
- Looping</code></pre></div>
+ Looping</code></pre></figure>
 
 <p>This gives us a lot of possibilities. For instane we could have some kind of argument passed to loop and incremented so we can store the number of time it was called.</p>
 
@@ -298,7 +298,7 @@
 
 
     <footer>
-      <div>Website powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>, hosted on
+      <div>Website powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a>, hosted on
       <a href="https://github.com/marcgg/marcgg.github.com">Github</a>
       and put together by <a href="http://twitter.com/marcgg">@marcgg</a>.</div>
       <div>All of the <a href="/blog">blog's articles</a> are under

@@ -68,38 +68,38 @@
 
 <p>First we need to use a <a href="https://www.relishapp.com/rspec/rspec-core/docs/formatters/json-formatter">JSON formatter</a> so that rspec’s output becomes easily usable:</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">&#39;rspec&#39;</span>
-<span class="nb">require</span> <span class="s1">&#39;rspec/core/formatters/json_formatter&#39;</span>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">'rspec'</span>
+<span class="nb">require</span> <span class="s1">'rspec/core/formatters/json_formatter'</span>
 
-<span class="n">config</span> <span class="o">=</span> <span class="no">RSpec</span><span class="o">.</span><span class="n">configuration</span>
-<span class="n">formatter</span> <span class="o">=</span> <span class="no">RSpec</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">Formatters</span><span class="o">::</span><span class="no">JsonFormatter</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">output_stream</span><span class="p">)</span>
-<span class="n">reporter</span> <span class="o">=</span>  <span class="no">RSpec</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">Reporter</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
-<span class="n">config</span><span class="o">.</span><span class="n">instance_variable_set</span><span class="p">(</span><span class="ss">:@reporter</span><span class="p">,</span> <span class="n">reporter</span><span class="p">)</span>
-<span class="n">loader</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="ss">:formatter_loader</span><span class="p">)</span>
-<span class="n">notifications</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="ss">:notifications_for</span><span class="p">,</span> <span class="no">RSpec</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">Formatters</span><span class="o">::</span><span class="no">JsonFormatter</span><span class="p">)</span>
-<span class="n">reporter</span><span class="o">.</span><span class="n">register_listener</span><span class="p">(</span><span class="n">formatter</span><span class="p">,</span> <span class="o">*</span><span class="n">notifications</span><span class="p">)</span></code></pre></div>
+<span class="n">config</span> <span class="o">=</span> <span class="no">RSpec</span><span class="p">.</span><span class="nf">configuration</span>
+<span class="n">formatter</span> <span class="o">=</span> <span class="no">RSpec</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">Formatters</span><span class="o">::</span><span class="no">JsonFormatter</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">config</span><span class="p">.</span><span class="nf">output_stream</span><span class="p">)</span>
+<span class="n">reporter</span> <span class="o">=</span>  <span class="no">RSpec</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">Reporter</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+<span class="n">config</span><span class="p">.</span><span class="nf">instance_variable_set</span><span class="p">(</span><span class="ss">:@reporter</span><span class="p">,</span> <span class="n">reporter</span><span class="p">)</span>
+<span class="n">loader</span> <span class="o">=</span> <span class="n">config</span><span class="p">.</span><span class="nf">send</span><span class="p">(</span><span class="ss">:formatter_loader</span><span class="p">)</span>
+<span class="n">notifications</span> <span class="o">=</span> <span class="n">loader</span><span class="p">.</span><span class="nf">send</span><span class="p">(</span><span class="ss">:notifications_for</span><span class="p">,</span> <span class="no">RSpec</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">Formatters</span><span class="o">::</span><span class="no">JsonFormatter</span><span class="p">)</span>
+<span class="n">reporter</span><span class="p">.</span><span class="nf">register_listener</span><span class="p">(</span><span class="n">formatter</span><span class="p">,</span> <span class="o">*</span><span class="n">notifications</span><span class="p">)</span></code></pre></figure>
 
 <h3 id="running-the-specs">Running The Specs</h3>
 
 <p>Once the formatter is setup, we need to iterate over every projects with <code class="highlighter-rouge">Dir.entries</code> and load the implementation files for every project:</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Dir</span><span class="o">[</span><span class="s2">&quot;code_path/*.rb&quot;</span><span class="o">].</span><span class="n">each</span> <span class="p">{</span><span class="o">|</span><span class="n">file</span><span class="o">|</span> <span class="nb">require</span> <span class="n">file</span> <span class="p">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Dir</span><span class="p">[</span><span class="s2">"code_path/*.rb"</span><span class="p">].</span><span class="nf">each</span> <span class="p">{</span><span class="o">|</span><span class="n">file</span><span class="o">|</span> <span class="nb">require</span> <span class="n">file</span> <span class="p">}</span></code></pre></figure>
 
 <p>… and actually run the specs right after:</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">RSpec</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">Runner</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="o">[</span><span class="n">file</span><span class="o">]</span><span class="p">)</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">RSpec</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">Runner</span><span class="p">.</span><span class="nf">run</span><span class="p">([</span><span class="n">file</span><span class="p">])</span></code></pre></figure>
 
 <p>The problem here is that we don’t unload the previously loaded files, which can lead to issues. To fix this, the simplest solution is to run this in <a href="http://ruby-doc.org/core-2.1.2/Process.html">a new process</a> and the memory encapsulation will take care of itself:</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">fork</span> <span class="k">do</span>
-  <span class="no">Dir</span><span class="o">[</span><span class="s2">&quot;code_path/*.rb&quot;</span><span class="o">].</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">file</span><span class="o">|</span> <span class="nb">require</span> <span class="n">file</span> <span class="p">}</span>
-  <span class="no">RSpec</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">Runner</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="o">[</span><span class="n">file</span><span class="o">]</span><span class="p">)</span>
-<span class="k">end</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">fork</span> <span class="k">do</span>
+  <span class="no">Dir</span><span class="p">[</span><span class="s2">"code_path/*.rb"</span><span class="p">].</span><span class="nf">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">file</span><span class="o">|</span> <span class="nb">require</span> <span class="n">file</span> <span class="p">}</span>
+  <span class="no">RSpec</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">Runner</span><span class="p">.</span><span class="nf">run</span><span class="p">([</span><span class="n">file</span><span class="p">])</span>
+<span class="k">end</span></code></pre></figure>
 
 <h3 id="reading-the-results">Reading the Results</h3>
 <p>Once the specs are done running, you can just access the results via the formatter with <code class="highlighter-rouge">formatter.output_hash</code>. For instance if you want the number of failures:</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">formatter</span><span class="o">.</span><span class="n">output_hash</span><span class="o">[</span><span class="ss">:summary</span><span class="o">][</span><span class="ss">:failure_count</span><span class="o">]</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">formatter</span><span class="p">.</span><span class="nf">output_hash</span><span class="p">[</span><span class="ss">:summary</span><span class="p">][</span><span class="ss">:failure_count</span><span class="p">]</span></code></pre></figure>
 
 <p>Once you managed to read the information you need, you can store it in a file somewhere and manipulate it easily in another process.</p>
 
@@ -126,8 +126,8 @@ bundle exec rspec spec &gt; ../rspec_results.log
 
 <p>I don’t think that sharing this piece of code is as interesting since it’s a bit messy and depends on your file structure. The idea is to create a new <code class="highlighter-rouge">.sh</code> file for each project and don’t forget to set it to the appropriate access rights:</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">FileUtils</span><span class="o">.</span><span class="n">chown</span><span class="p">(</span><span class="s2">&quot;youruser&quot;</span><span class="p">,</span> <span class="s2">&quot;staff&quot;</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
-<span class="no">FileUtils</span><span class="o">.</span><span class="n">chmod</span><span class="p">(</span><span class="mo">0777</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">FileUtils</span><span class="p">.</span><span class="nf">chown</span><span class="p">(</span><span class="s2">"youruser"</span><span class="p">,</span> <span class="s2">"staff"</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+<span class="no">FileUtils</span><span class="p">.</span><span class="nf">chmod</span><span class="p">(</span><span class="mo">0777</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span></code></pre></figure>
 
 <p>If you really want to take a look at what I’ve done here, <a href="https://gist.github.com/marcgg/b1a50180d1ff239ba555">I created a gist</a>. Also note that you could have done the same thing with a bigger and more complex shell script, but I figured it would be simpler to it this way with a bunch of really small and independent files.</p>
 
@@ -135,9 +135,9 @@ bundle exec rspec spec &gt; ../rspec_results.log
 
 <p>Once all the scripts are created, we just need to run them. So, for every project folder run:</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Dir</span><span class="o">.</span><span class="n">entries</span><span class="p">(</span><span class="vg">$path</span><span class="p">)</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">entry</span><span class="o">|</span>
-  <span class="nb">fork</span> <span class="p">{</span> <span class="nb">exec</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">#{</span><span class="vg">$path</span><span class="si">}</span><span class="s2">/</span><span class="si">#{</span><span class="n">entry</span><span class="si">}</span><span class="s2">/run.sh&quot;</span><span class="p">)</span> <span class="p">}</span>
-<span class="k">end</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Dir</span><span class="p">.</span><span class="nf">entries</span><span class="p">(</span><span class="vg">$path</span><span class="p">).</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">entry</span><span class="o">|</span>
+  <span class="nb">fork</span> <span class="p">{</span> <span class="nb">exec</span><span class="p">(</span><span class="s2">"</span><span class="si">#{</span><span class="vg">$path</span><span class="si">}</span><span class="s2">/</span><span class="si">#{</span><span class="n">entry</span><span class="si">}</span><span class="s2">/run.sh"</span><span class="p">)</span> <span class="p">}</span>
+<span class="k">end</span></code></pre></figure>
 
 <p>Note that I run once again the code in a new process. This is mainly because I want to take advantage of the multiple cores on my machine. Of course this will result in my computer to really slow down, as running a hundred rails processes and bundler installation is very memory heavy, but from my experience it always turns out to be faster - at least on my computer. Using <code class="highlighter-rouge">exec</code> is nice here as it <a href="http://ruby-doc.org/core-2.3.0/Kernel.html#method-i-exec">completely replace the ruby process by the shell script</a>.</p>
 
@@ -158,8 +158,6 @@ bundle exec rspec spec &gt; ../rspec_results.log
               
           
             
-          
-            
               
               <li><a href="/blog/2016/03/01/vimrc-example/">Vim Configuration From Scratch in 2016</a></li>
             
@@ -175,9 +173,6 @@ bundle exec rspec spec &gt; ../rspec_results.log
             
           
             
-              
-              <li><a href="/blog/2015/10/18/git-checkout-minus/">How To Checkout The Previous Branch In Git</a></li>
-            
           
             
           
@@ -185,9 +180,6 @@ bundle exec rspec spec &gt; ../rspec_results.log
           
             
           
-            
-              
-              <li><a href="/blog/2015/08/04/git-first-parent-log/">Git Log's --first-parent Option</a></li>
             
           
             
@@ -323,7 +315,7 @@ bundle exec rspec spec &gt; ../rspec_results.log
 
 
     <footer>
-      <div>Website powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>, hosted on
+      <div>Website powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a>, hosted on
       <a href="https://github.com/marcgg/marcgg.github.com">Github</a>
       and put together by <a href="http://twitter.com/marcgg">@marcgg</a>.</div>
       <div>All of the <a href="/blog">blog's articles</a> are under
