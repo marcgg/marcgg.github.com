@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>
-      The One Thing That Made Me Switch To Vim
+      Trailing Slashes, Github Pages & Jekyll 3
     </title>
-    <meta name="description" content="This is the one reason that got me to switch to vim after experimenting for years with a lot of different editors. Promised, it won't be about emacs vs vim.">
+    <meta name="description" content="Because of Github Pages' change from Jekyll 2 to 3, it broke my website and many others because of a change in trailing slashes behavior.">
     <meta name="author" content="Marc G Gauthier">
     <meta content='user-scalable=no, width=device-width, initial-scale=1.0' name='viewport'>
     <meta name="google-site-verification" content="x2EpQdOMz-k9fP8hak9I3COaXhnQ4jNLp2GU4GYQ8jM" />
@@ -36,7 +36,7 @@
     <h1>
   <span>
     
-      The One Thing That Made Me Switch To Vim
+      Trailing Slashes, Github Pages & Jekyll 3
     
     
   </span>
@@ -44,7 +44,7 @@
 
 
 <div class="published">
-  <span>04 September 2012</span>
+  <span>14 March 2016</span>
 </div>
 
 <div id="container">
@@ -52,25 +52,49 @@
     <div class="post" id="post-">
 
       
-      <p>I know, I know, this has been done to death, but stay with me for a second. I’m not here to tell you that Vim is the best editor out there, just to tell you the one reason that got me to switch.</p>
+      <p>A month ago Github <a href="https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0">announced</a> that it was now running Jekyll 3. At this point I already tried to upgrade but ran into so many issues I gave up, so I was still building my site with Jekyll 2… but looking at the announcement I figured that it was no big deal since every major deprecations would only occur in May.</p>
 
-<p>Like every developer with some curiosity, I tried a ridiculous amount of text editors and IDEs. I started with Notepad at first, but quickly discovered that some text editors would actually help you. I downloaded <a href="http://download.cnet.com/Amiasoft-SiteAid/3000-10247_4-10015046.html">SiteAid</a> and enjoyed the gain of productivity. Then I quickly moved on to Scite, Eclipse, Netbeans, Notepad++, Emacs, Text Edit, Rad Rails, Kate, Rubymine, TextMate, Sublime… the list goes on.</p>
+<p>Big mistake.</p>
 
-<p>At some point I realized that I was wasting my time learning slightly different shortcuts and ways of setting up a project. I began to consider Vim seriously because it stood the test of time and seemed cool for some reason, but really the one thing that convinced me was a problem I had at my job.</p>
+<h2 id="the-symptoms">The Symptoms</h2>
 
-<p>One day something went wrong on a server running Debian. The sysadmin was not around and I ended up being the one that had to go on there and fix it. It was linked to some config files that were not properly set up, and the only editor available was Vim.</p>
+<p>A few weeks later, while checking my analytics, I noticed that my view count was dropping slowly:</p>
 
-<p>Back then I had almost <a href="http://vimdoc.sourceforge.net/htmldoc/intro.html">no clue</a> on how to use it.</p>
+<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/analytics-drop.jpg" alt="Google analytics drop" style="padding: 20px; width: 600px;" /></div>
 
-<p>It resulted in me editing the files as a 70 years old guy that just discovered what a keyboard is. It was painful to watch to say the least. Of course while this was going on, the server was more or less down. Pure joy if you ask me!</p>
+<p>I thought that there was some algorithm change and didn’t bother digging more into it until I later checked Google Webmaster tools and saw a large increase in crawling errors arround the same time:</p>
 
-<p>Even before this incident, more than a couple of times I had to inject some debug lines on the code deployed on our staging server to figure out a very environment-specific bug, but it wasn’t as stressful as this time.</p>
+<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/webmaster-tools.jpg" alt="Google webmaster tools drop" style="padding: 20px; width: 600px;" /></div>
 
-<p><strong>It felt terrible to be so lost with a task as simple as editing a file.</strong></p>
+<h2 id="the-issue--how-to-solve-it">The Issue &amp; How To Solve It</h2>
 
-<p>This is why I decided to use Vim as my primary editor. It already had enough qualities to be a good choice, but the fact that it is set up on most servers was the final selling point for me.</p>
+<p>Since this site is not my main focus, I could only investigate a bit later on, but I found that this was due to a major change in Jekyll 3 regarding trailing slashes as explained in the <a href="https://jekyllrb.com/docs/upgrading/2-to-3/">migration guide</a>.</p>
 
-<p>Sometimes you just need to be able to fire up Vim and be very fast using it. You don’t even have to <a href="http://yehudakatz.com/2010/07/29/everyone-who-tried-to-convince-me-to-use-vim-was-wrong/">be snob while doing it</a>.</p>
+<blockquote>
+  <p>In Jekyll 2, any URL constructed from the permalink: field had a trailing slash (/) added to it automatically. Jekyll 3 no longer adds a trailing slash automatically to permalink: URLs. This can potentially result in old links to pages returning a 404 error.</p>
+</blockquote>
+
+<p>At this point my configuration at the time looked like this:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>permalink: /:categories/:year/:month/:day/:title
+</code></pre>
+</div>
+
+<p>A lot of my inbound links had a trailing slash but I never really paid any attention to this since it was working properly until then. Once this trailing slash logic stopped working on Github Pages, I lost a lot of links, dropped terribly in SEO and lost all my traffic in the course of a few weeks.</p>
+
+<p>Ouch.</p>
+
+<p>This only occured mid febuary and not right when Github started using Jekyll 3 because this was the moment when I published <a href="/blog/2016/02/15/rspec-on-multiple-rails-projects/">a new article</a> and rebuilt my site, busted my cache and so on.</p>
+
+<p>I fixed the issue by adding explicitely the trailing slash to the <code class="highlighter-rouge">permalink</code> configuration, and I’m started to see my stats going back up again.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>permalink: /:categories/:year/:month/:day/:title/
+</code></pre>
+</div>
+
+<p>It’s a bit of a shame that such a breaking change was released somewhat under the radar, and I’m wondering how many websites are now returning 404s because of it. The positive side of this is that the Jekyll team did take this <a href="https://github.com/jekyll/jekyll/issues/4440">into account</a> and <a href="https://talk.jekyllrb.com/t/github-pages-with-jekyll3-blog-posts-with-trailing-slash-no-longer-work/1877/3">updated their documentation</a>.</p>
+
+<p>The only sure thing is that from now on I’ll try to pay more attention to my blog’s analytics!</p>
 
 
 
@@ -194,6 +218,9 @@
           
             
           
+            
+              
+              <li><a href="/blog/2012/09/04/one-reason-to-switch-to-vim-editor/">The One Thing That Made Me Switch To Vim</a></li>
             
           
             
