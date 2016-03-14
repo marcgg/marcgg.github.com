@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Trailing Slashes, Github Pages, Jekyll 3 & 404s"
-description: "Because of Github Pages' change from Jekyll 2 to 3, it broke my website and many others because of a change in trailing slashes behaviour."
+description: "Github Pages' change from Jekyll 2 to 3 broke my website and many others because of a change in trailing slashes behaviour."
 blog: true
 category: blog
 tag: Dev
