@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2016-03-14T08:56:54+01:00</updated>
+ <updated>2016-03-14T09:14:24+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -12,6 +12,63 @@
  </author>
 
  
+  
+   <entry>
+     <title>Trailing Slashes, Github Pages, Jekyll 3 &amp; 404s</title>
+     <link href="https://marcgg.com/blog/2016/03/14/github-pages-jekyll/"/>
+     <updated>2016-03-14T00:00:00+01:00</updated>
+     <id>https://marcgg.com/blog/2016/03/14/github-pages-jekyll</id>
+     <content type="html">
+       &lt;p&gt;A month ago Github &lt;a href=&quot;https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0&quot;&gt;announced&lt;/a&gt; that they was now running Jekyll 3. At this point I already tried to upgrade but ran into so many issues I gave up, so I was still building my site with Jekyll 2.&lt;/p&gt;
+
+&lt;p&gt;Looking at the announcement I figured that it was no big deal since every major deprecations would only occur in May. It really felt safe to stay with Jekyll 2 and migrate in a month or two.&lt;/p&gt;
+
+&lt;p&gt;Big mistake.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-symptoms&quot;&gt;The Symptoms&lt;/h2&gt;
+
+&lt;p&gt;A few weeks later, while checking my analytics, I noticed that my view count was dropping slowly but surely:&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/analytics-drop.jpg&quot; alt=&quot;Google analytics drop&quot; style=&quot;padding: 20px; width: 600px;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;I thought that there was some algorithm change on Google’s side and didn’t bother digging more into it… until I later checked Google Webmaster tools and saw a large increase in crawling errors around the same time!&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/webmaster-tools.jpg&quot; alt=&quot;Google webmaster tools drop&quot; style=&quot;padding: 20px; width: 600px;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;Note that this only occurred mid February and not right when Github started using Jekyll 3 because this was the moment when I published &lt;a href=&quot;/blog/2016/02/15/rspec-on-multiple-rails-projects/&quot;&gt;a new article&lt;/a&gt;. This lead me to rebuild my site, bust my cache and so on. This made the whole experience even more confusing.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;the-issue--how-to-solve-it&quot;&gt;The Issue &amp;amp; How To Solve It&lt;/h2&gt;
+
+&lt;p&gt;Since this site is not my main focus, I could only investigate later on. Once I found some time to spend on it, I understood that this was due to a major change in Jekyll 3 regarding trailing slashes as explained in the &lt;a href=&quot;https://jekyllrb.com/docs/upgrading/2-to-3/&quot;&gt;migration guide&lt;/a&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;In Jekyll 2, any URL constructed from the permalink: field had a trailing slash (/) added to it automatically. Jekyll 3 no longer adds a trailing slash automatically to permalink: URLs. This can potentially result in old links to pages returning a 404 error.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;My configuration at the time looked like this, with no trailing slash explicitly mentioned:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;permalink: /:categories/:year/:month/:day/:title
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;A lot of external links pointing to my blog had trailing slashes but I never paid any attention to this since it was working properly. Once this trailing slash redirect logic stopped working on Github Pages, I lost a lot of links, dropped terribly in SEO and lost most of my traffic in the course of a few weeks.&lt;/p&gt;
+
+&lt;p&gt;Ouch.&lt;/p&gt;
+
+&lt;p&gt;I fixed the issue by adding explicitly the trailing slash to the &lt;code class=&quot;highlighter-rouge&quot;&gt;permalink&lt;/code&gt; configuration. Once it was done I started to see my stats slowly going back up again.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;permalink: /:categories/:year/:month/:day/:title/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;It’s a bit of a shame that such a breaking change was released somewhat under the radar. I’m wondering how many websites are now returning 404s because of it… The positive side of this is that the Jekyll team did take this &lt;a href=&quot;https://github.com/jekyll/jekyll/issues/4440&quot;&gt;into account&lt;/a&gt; and &lt;a href=&quot;https://talk.jekyllrb.com/t/github-pages-with-jekyll3-blog-posts-with-trailing-slash-no-longer-work/1877/3&quot;&gt;updated their documentation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The only sure thing is that from now on I’ll try to pay more attention to my blog’s analytics!&lt;/p&gt;
+
+
+       
+     </content>
+   </entry>
   
  
   
