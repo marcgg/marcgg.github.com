@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2016-03-13T20:25:57+01:00</updated>
+ <updated>2016-03-14T08:56:54+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -14,6 +14,50 @@
  
   
  
+  
+   <entry>
+     <title>My Role As Tech Advisor At Birdly (YCombinator W16)</title>
+     <link href="https://marcgg.com/blog/2016/03/14/birdly-ycombinator/"/>
+     <updated>2016-03-14T00:00:00+01:00</updated>
+     <id>https://marcgg.com/blog/2016/03/14/birdly-ycombinator</id>
+     <content type="html">
+       &lt;p&gt;&lt;a href=&quot;https://www.getbirdly.com/&quot;&gt;Birdly&lt;/a&gt;, the company &lt;a href=&quot;/blog/2014/12/16/coaching-startup-birdly-le-camping/&quot;&gt;I helped getting accepted into a famous Parisian accelerator&lt;/a&gt; more than a year ago, has been accepted to take part in the &lt;a href=&quot;https://www.ycombinator.com/&quot;&gt;Y Combinator program&lt;/a&gt;. It’s a good opportunity for them and I figured I’d take the opportunity to share what has been my relationship with their team up to this point.&lt;/p&gt;
+
+&lt;p&gt;After Birdly’s first accelerator experience we kept working together to solidify the expense management mobile app they built. The goal was to get them to be better and faster at building quality software while doing maintenance on what they already released.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/birdly-stage.jpg&quot; alt=&quot;Birdly on stage&quot; style=&quot;padding: 20px; width: 600px;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;After a few months iterating, they decided to change their approach and dropped their mobile app to focus on building a &lt;a href=&quot;https://twitter.com/getbirdly/status/669541869848629249&quot;&gt;Slack bot instead&lt;/a&gt;. This decision was very well explained in this Venture Beats article by &lt;a href=&quot;https://twitter.com/jb_coger&quot;&gt;Birdly’s CPO&lt;/a&gt;: “&lt;a href=&quot;http://venturebeat.com/2015/12/13/dont-build-a-mobile-app-a-message-from-the-app-graveyard/&quot;&gt;Don’t build a mobile app (a message from the app graveyard)&lt;/a&gt;”. This turned out to be a great business decision as it gave them a lot of visibility and leads. They quickly launched their first Slack related product with great success, counting around &lt;a href=&quot;https://www.producthunt.com/tech/birdly-for-slack-2&quot;&gt;700 upvotes on Product Hunt&lt;/a&gt; and some paying customers.&lt;/p&gt;
+
+&lt;p&gt;As tech advisor I helped them transition from their iOS/Android + API approach to something more fitting for a bot, including all the pains that come with working &lt;a href=&quot;/blog/2012/09/24/working-with-apis-facebook/&quot;&gt;with a third party API&lt;/a&gt;. Of course we also had to keep the transition smooth enough for end users and the team’s developers. Really quickly, because of the bot’s success, the Birdly API also had to face performance and general scaling issues which had to be solved in a timely manner. With the user base growing, reliability also became an important subject and we had to create recovery plans and fallback strategies in case the bot went down for a reason or another.&lt;/p&gt;
+
+&lt;p&gt;Overall the team of 4 developers managed to work through all the major issues and got some good feedback from the public, including Slack’s founder &lt;a href=&quot;https://twitter.com/stewart&quot;&gt;Stewart Butterfield&lt;/a&gt; at the &lt;a href=&quot;/assets/blog/slack-founder.jpg&quot;&gt;2015 Web Summit&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; data-cards=&quot;hidden&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Wow! &lt;a href=&quot;https://twitter.com/stewart&quot;&gt;@stewart&lt;/a&gt; just quoted &lt;a href=&quot;https://twitter.com/getbirdly&quot;&gt;@getbirdly&lt;/a&gt; as a great way of using &lt;a href=&quot;https://twitter.com/hashtag/Slack?src=hash&quot;&gt;#Slack&lt;/a&gt; on the main stage of &lt;a href=&quot;https://twitter.com/hashtag/websummit?src=hash&quot;&gt;#websummit&lt;/a&gt; &lt;a href=&quot;https://twitter.com/NUMAparis&quot;&gt;@NUMAparis&lt;/a&gt; &lt;a href=&quot;https://t.co/2J948sMUYB&quot;&gt;pic.twitter.com/2J948sMUYB&lt;/a&gt;&lt;/p&gt;&amp;mdash; Claudio Vandi (@vandicla) &lt;a href=&quot;https://twitter.com/vandicla/status/661486743028375552&quot;&gt;November 3, 2015&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;From this good start the team worked on adding even more interactions that could be done through Slack. This lead to important software architecture and organisational decisions to make sure everything would be as effective as possible for their current team. For instance we decided on the bases for every interactions users could have with the bot or worked on an efficient Git workflow that would fit the way the team worked.&lt;/p&gt;
+
+&lt;p&gt;At this point, &lt;a href=&quot;https://slackhq.com/the-slack-platform-launch-7a3feb5a423a#.fy3rel5hx&quot;&gt;Slack released their app platform&lt;/a&gt; while featuring Birdly in the process. This improved traction and comforted everyone that Slack could become a reliable ecosystem.&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;A treasury of apps, a fund to help you build your own: Hello Slack Platform. &lt;a href=&quot;https://t.co/P77HyWl7Xp&quot;&gt;https://t.co/P77HyWl7Xp&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/changelog?src=hash&quot;&gt;#changelog&lt;/a&gt; &lt;a href=&quot;https://t.co/QMJLRZ886E&quot;&gt;pic.twitter.com/QMJLRZ886E&lt;/a&gt;&lt;/p&gt;&amp;mdash; Slack (@SlackHQ) &lt;a href=&quot;https://twitter.com/SlackHQ/status/676949968528232449&quot;&gt;December 16, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;It’s also around this time that Birdly got accepted at &lt;a href=&quot;http://blog.ycombinator.com/birdly-yc-w16-lets-you-use-slack-to-easily-access-data-from-other-enterprise-apps&quot;&gt;Y Combinator&lt;/a&gt; and relocated to San Francisco to focus on their product.&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Birdly is funded by &lt;a href=&quot;https://twitter.com/ycombinator&quot;&gt;@ycombinator&lt;/a&gt; via &lt;a href=&quot;https://twitter.com/TechCrunch&quot;&gt;@techcrunch&lt;/a&gt; &lt;a href=&quot;https://t.co/qpRuetBtka&quot;&gt;https://t.co/qpRuetBtka&lt;/a&gt; &lt;a href=&quot;https://t.co/PyRPSsx4Lu&quot;&gt;pic.twitter.com/PyRPSsx4Lu&lt;/a&gt;&lt;/p&gt;&amp;mdash; Birdly (@getbirdly) &lt;a href=&quot;https://twitter.com/getbirdly/status/703270215287615488&quot;&gt;February 26, 2016&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Nowadays the product offered by Birdly gives users access to third party software (Stripe, Zendesk, SalesForce…) via Slack. At this date &lt;a href=&quot;https://slack.com/apps/A07NETE1X-birdly&quot;&gt;the bot&lt;/a&gt; is featured in the “&lt;a href=&quot;http://cl.ly/1s141k2c0E0G&quot;&gt;brilliant bots&lt;/a&gt;” list by Slack, was recently &lt;a href=&quot;http://techcrunch.com/2016/02/26/birdly-wants-to-help-call-your-customer-data-by-talking-to-a-slack-bot/&quot;&gt;featured on TechCrunch&lt;/a&gt; and encounters &lt;a href=&quot;http://cl.ly/0Y1h1D1t3s2P&quot;&gt;great success&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Personally I’m still involved in Birdly’s development as a tech advisor. We meet once a week to discuss the current issues, brainstorm technical questions, review code or clear specific roadblocks. I also join them sometimes during longer hackathons where I’d pair program with the team to build a specific feature (the last one was integrating the SaleForce API).&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Know a cooler Slack app than &lt;a href=&quot;https://twitter.com/getbirdly&quot;&gt;@getbirdly&lt;/a&gt; ? Looks up people in both &lt;a href=&quot;https://twitter.com/intercom&quot;&gt;@intercom&lt;/a&gt; and &lt;a href=&quot;https://twitter.com/stripe&quot;&gt;@stripe&lt;/a&gt; AND keeps track of my expenses. &lt;a href=&quot;https://twitter.com/hashtag/win?src=hash&quot;&gt;#win&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/productivity?src=hash&quot;&gt;#productivity&lt;/a&gt;&lt;/p&gt;&amp;mdash; Henric Malmberg (@hankTard) &lt;a href=&quot;https://twitter.com/hankTard/status/701404674126176256&quot;&gt;February 21, 2016&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Fair to say that I’m looking forward to the next challenges the company is going to encounter as they scale!&lt;/p&gt;
+
+
+       
+     </content>
+   </entry>
   
  
   
