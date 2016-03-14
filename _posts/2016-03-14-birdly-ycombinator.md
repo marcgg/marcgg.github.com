@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "My Role As Tech Advisor At Birdly (YCombinator W16)"
+title: "My Tech Advisor Role At Birdly (YCombinator W16)"
 description: "I've been helping a team of young entrepreneurs for a couple of years and they made it to San Francisco where they're currently taking part of the Winter 2016 batch."
 blog: true
 category: blog
