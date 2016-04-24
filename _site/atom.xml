@@ -4,13 +4,142 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2016-03-14T09:24:53+01:00</updated>
+ <updated>2016-04-24T21:42:51+02:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
    <email>marcg.gauthier@gmail.com</email>
  </author>
 
+ 
+  
+   <entry>
+     <title>Pushing To Both Bitbucket And Github</title>
+     <link href="https://marcgg.com/blog/2016/04/25/git-multiple-remotes/"/>
+     <updated>2016-04-25T00:00:00+02:00</updated>
+     <id>https://marcgg.com/blog/2016/04/25/git-multiple-remotes</id>
+     <content type="html">
+       &lt;p&gt;The great thing with Git is that it’s distributed. However in many projects we end up with a single point of failure, which kind of defeats the point. For instance a lot of people use Github and when it goes down, they can’t push code and collaborate with their team. From this observation, I decided to mess arround with ideas on how to work on the same code base with both Github and Bitbucket.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Disclaimer:&lt;/strong&gt; I didn’t really find a usable solution for my issue, but still ended up having some fun with git push urls and git aliases so I figured I’d share those.&lt;/p&gt;
+
+&lt;h2 id=&quot;pushing-explicitely-to-two-different-remotes&quot;&gt;Pushing Explicitely To Two Different Remotes&lt;/h2&gt;
+
+&lt;p&gt;Let’s imagine we set up two entirely different remotes for the same project:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$  git remote add bitbucket git@bitbucket.org:marcgg/multiple-origins.git
+$ git remote add github git@github.com:marcgg/multiple-origins.git
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now I can explicitely push to either project, which is quite convenient:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git push github master
+$ git push bitbucket master
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;using-git-aliases&quot;&gt;Using Git Aliases&lt;/h3&gt;
+
+&lt;p&gt;We can also create an alias to make it easier to push to both remotes. We’ll be using the &lt;code class=&quot;highlighter-rouge&quot;&gt;!&lt;/code&gt; (bang) &lt;a href=&quot;http://blogs.atlassian.com/2014/10/advanced-git-aliases/&quot;&gt;to create a more advanced alias&lt;/a&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git config alias.pushall &#39;!git push bitbucket master &amp;amp;&amp;amp; git push github master&#39;
+$ git pushall
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/bitbucket_github.jpg&quot; alt=&quot;Github and Bitbucket push&quot; style=&quot;padding: 20px; width: 600px;&quot; /&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;using-bash-aliases&quot;&gt;Using Bash Aliases&lt;/h3&gt;
+
+&lt;p&gt;We can also use bash to do this with a simple loop:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ alias pushall=&#39;for i in git remote; do git push $i; done;&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;You can then take this and push it back into a Git alias because why not, this time wrapping it in an anonymous bash function:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git config alias.loopush &#39;!f(){ for i in git remote; do git push $i; done; };f&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;If  you enjoy this kind of stuff, you should take a look at “&lt;a href=&quot;http://blogs.atlassian.com/2014/10/advanced-git-aliases/&quot;&gt;One weird trick for powerful Git aliases&lt;/a&gt;”  on the Atlassian blog.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;using-multiple-git-push-urls&quot;&gt;Using Multiple Git Push URLs&lt;/h2&gt;
+
+&lt;p&gt;You might not know that, when you add a remote, it actually adds both a fetch and a push URL. So for my exemple, it looks like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git remote -v
+bitbucket	git@bitbucket.org:marcgg/multiple-origins.git (fetch)
+bitbucket	git@bitbucket.org:marcgg/multiple-origins.git (push)
+
+github	git@github.com:marcgg/multiple-origins.git (fetch)
+github	git@github.com:marcgg/multiple-origins.git (push)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The interesting thing to know here is that you can have multiple push urls. To demo this, let’s add a new remote pointing to Bitbucket and then add another push url. Note that I have to re-add the bitbuck push url, because Git will first replace the default push url before adding new ones.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git remote add origin git@bitbucket.org:marcgg/multiple-origins.git
+$ git remote set-url --add --push origin git@github.com:marcgg/multiple-origins.git
+$ git remote set-url --add --push origin git@bitbucket.org:marcgg/multiple-origins.git 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;And now if I list my remotes I get this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git remote -v
+bitbucket	git@bitbucket.org:marcgg/multiple-origins.git (push)
+bitbucket	git@bitbucket.org:marcgg/multiple-origins.git (fetch)
+
+github	git@github.com:marcgg/multiple-origins.git (push)
+github	git@github.com:marcgg/multiple-origins.git (fetch)
+
+origin	git@bitbucket.org:marcgg/multiple-origins.git (fetch)
+origin	git@github.com:marcgg/multiple-origins.git (push)
+origin	git@bitbucket.org:marcgg/multiple-origins.git (push)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I don’t know why, but I think that it looks pretty cool! I find it very peculiar to have this kind of output when simply running a &lt;code class=&quot;highlighter-rouge&quot;&gt;push&lt;/code&gt; command:&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/bitbucket_github_2.jpg&quot; alt=&quot;Github and Bitbucket push&quot; style=&quot;padding: 20px; width: 600px;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;Of course there are a lot of problems with this approach. For instance a push could fail while the other one succeeds, and since the operation is not wrapped in a transaction it might leave you in some weird state:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git push origin master
+To git@github.com:marcgg/multiple-origins.git
+! [rejected]        master -&amp;gt; master (non-fast-forward)
+error: failed to push some refs to &#39;git@github.com:marcgg/multiple-origins.git&#39;
+Writing objects: 100% (2/2), 271 bytes | 0 bytes/s, done.
+To git@bitbucket.org:marcgg/multiple-origins.git
+  1cdea23..a4959f9  master -&amp;gt; master
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;fetching&quot;&gt;Fetching&lt;/h3&gt;
+
+&lt;p&gt;The problem is that now we have an &lt;code class=&quot;highlighter-rouge&quot;&gt;origin&lt;/code&gt; remote that points to Bitbucket and Github for pushing, but only to Bitbucket for fetching. It would feel right to have multiple fetch urls on the same remote. Soooo I guess we can just make it crash ?&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git remote set-url origin cant-do-that
+$ git fetch origin
+fatal: &#39;cant-do-that&#39; does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+¯\_(ツ)_/¯
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;There are some complications when working with multiple remotes, but they mostly occur when you are pulling, not really when you are pushing. Overall it feels like the naive approach of pushing and pulling explicitely from a specific remote is a decent way to dealing with your main remote being down.&lt;/p&gt;
+
+
+       
+     </content>
+   </entry>
+  
  
   
    <entry>
