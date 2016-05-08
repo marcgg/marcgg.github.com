@@ -4,13 +4,170 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2016-04-25T10:14:44+02:00</updated>
+ <updated>2016-05-08T11:05:07+02:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
    <email>marcg.gauthier@gmail.com</email>
  </author>
 
+ 
+  
+   <entry>
+     <title>First Impressions: Rails 5 on Google App Engine</title>
+     <link href="https://marcgg.com/blog/2016/05/09/rails-app-engine/"/>
+     <updated>2016-05-09T00:00:00+02:00</updated>
+     <id>https://marcgg.com/blog/2016/05/09/rails-app-engine</id>
+     <content type="html">
+       &lt;p&gt;The past week had two great news: &lt;a href=&quot;https://cloudplatform.googleblog.com/2016/05/Ruby-on-Google-App-Engine-goes-betaruntime.html&quot;&gt;Ruby on Google App Engine went beta&lt;/a&gt; and &lt;a href=&quot;https://rubygems.org/gems/rails/versions/5.0.0.rc1&quot;&gt;Rails 5.0.0.rc1 was released&lt;/a&gt;. I decided it was a good opportunity to try both!&lt;/p&gt;
+
+&lt;p&gt;This article relates my experience trying to run a very basic Rails 5.0.0.rc1 application on the Google App Engine. As a reference, I’m fairly experienced with Rails but I never really used the Google App Engine before. It’s also worth mentionning that I’m used to platforms like Heroku, but I used Amazon solutions as well.&lt;/p&gt;
+
+&lt;h2 id=&quot;basic-setup&quot;&gt;Basic Setup&lt;/h2&gt;
+
+&lt;h3 id=&quot;account-creation&quot;&gt;Account Creation&lt;/h3&gt;
+
+&lt;p&gt;I don’t want to spend any money for this test, so I digged into &lt;a href=&quot;[https://cloud.google.com/appengine/docs/quotas]&quot;&gt;Google’s pricing structure&lt;/a&gt; and they do announce a free tier with limited instance hours. Creating a “free trial” account does require a credit card, which worries me a bit, but they do say “Don’t worry, you will not be billed for the free trial”, so hopefuly I’ll be ok.&lt;/p&gt;
+
+&lt;h3 id=&quot;setting-up-the-instance&quot;&gt;Setting Up The Instance&lt;/h3&gt;
+
+&lt;p&gt;Right away they send me into a tutorial with some &lt;a href=&quot;http://cl.ly/1H2J2y2J461W&quot;&gt;UI issues&lt;/a&gt; but quite helpful nonetheless. First I need to create a VM instance and to do it I get to use a surprisingly simple UI. I also appreciate that I don’t need to dig into &lt;a href=&quot;https://en.wikipedia.org/wiki/Identity_management&quot;&gt;IAM&lt;/a&gt; right now which is great, I can just keep moving forward and don’t worry about it just yet.&lt;/p&gt;
+
+&lt;p&gt;There is a lot of choices to be made, from the instance type, to the boot disk and boot disk type. It’s pretty great!&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/app_engine_instances.jpg&quot; alt=&quot;&quot; style=&quot;padding: 20px; width: 310px;&quot; /&gt;&lt;img src=&quot;/assets/blog/app_engine_disk.jpg&quot; alt=&quot;&quot; style=&quot;padding: 20px; width: 310px;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;I decide to go on a micro instance running a stable version of Ubuntu on a SSD.&lt;/p&gt;
+
+&lt;p&gt;At this point in the tutorial, they’re pushing me toward creating a separate frontend instance. That’s not really what I had in mind since I’m more a &lt;a href=&quot;http://martinfowler.com/bliki/MonolithFirst.html&quot;&gt;Start With A Monolith&lt;/a&gt; / &lt;a href=&quot;https://m.signalvnoise.com/the-majestic-monolith-29166d022228#.513x0buqb&quot;&gt;The Majestic Monolith&lt;/a&gt; kind of person. I therefore leave the guided tutorial and now I’m on my own.&lt;/p&gt;
+
+&lt;p&gt;Browsing around the different admin pages makes me think that the UI goes from very clear to kind of bloated. The dashboard in particular is really intense at first, but it’s also customizable so I’m not really complaining.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/app_engine_dashboard.jpg&quot; alt=&quot;&quot; style=&quot;padding: 20px; width: 600px;&quot; /&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;building-the-app&quot;&gt;Building The App&lt;/h3&gt;
+
+&lt;p&gt;Now that I have an instance seemingly running (some graphs are moving - that’s usually a good sign), I need to push some code to it! I quickly create a basic Rails 5 app on the current &lt;a href=&quot;https://twitter.com/schneems/status/728588592470052864&quot;&gt;release candidate&lt;/a&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ rails _5.0.0.rc1_ new demo-rails-5
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I then add a simple controller with an action and that’s it. No need to get fancy at this point.&lt;/p&gt;
+
+&lt;h2 id=&quot;deploying&quot;&gt;Deploying&lt;/h2&gt;
+
+&lt;h3 id=&quot;the-google-cloud-sdk&quot;&gt;The Google Cloud SDK&lt;/h3&gt;
+
+&lt;p&gt;To do anything from there I need to install the SDK. The &lt;a href=&quot;https://cloud.google.com/sdk/docs/&quot;&gt;documentation&lt;/a&gt; is clear, but the installation is not as smooth as other projects like the &lt;a href=&quot;https://toolbelt.heroku.com/&quot;&gt;Heroku Toolbelt&lt;/a&gt;. It does seem more powerful, so it feels more like they traded off usability for customizability, which can make sense since Google’s offer is supposed to do a lot.&lt;/p&gt;
+
+&lt;p&gt;Once all the configuration is over, including linking my Google account to my SDK, I can finally run the deploy command:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gcloud preview app deploy
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I like this part very much because they really take you by the hand and guide you through the things you need to be doing before releasing:&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/app_engine_sdk.jpg&quot; alt=&quot;&quot; style=&quot;padding: 20px; width: 600px;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;It goes as far as creating an &lt;code class=&quot;highlighter-rouge&quot;&gt;app.yaml&lt;/code&gt; configuration file for you, with smart defaults based on your environment:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;api_version: 1
+entrypoint: bundle exec rackup -p $PORT
+runtime: ruby
+vm: true
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Once this is done, the deploy really happens… and it’s very slow. To be fair they do warn that the first deploy is supposed to be slower, so we’ll see if it’s better later on.&lt;/p&gt;
+
+&lt;p&gt;After a bit I get a success message. My app is on Google App Engine, and I even have a nice custom URL: &lt;a href=&quot;https://rails-5-test.appspot.com/&quot;&gt;https://rails-5-test.appspot.com/&lt;/a&gt; !&lt;/p&gt;
+
+&lt;p&gt;Great! Let’s check it out!&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/app_engine_sdk.jpg&quot; alt=&quot;&quot; style=&quot;padding: 20px; width: 600px;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;“An unhandled lowlevel error occurred. The application logs may have details.” &lt;a href=&quot;https://s3.amazonaws.com/f.cl.ly/items/2a3y0e090f2P1Y1s1a31/Youre_tearing_me_apart_lisa-36704.gif?v=7a6cf7f4&quot;&gt;…&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;debugging-production&quot;&gt;Debugging Production&lt;/h3&gt;
+
+&lt;h4 id=&quot;reading-logs&quot;&gt;Reading Logs&lt;/h4&gt;
+
+&lt;p&gt;I have to find how to read my logs to figure out what’s going on, so I start looking.&lt;/p&gt;
+
+&lt;p&gt;I first run into the &lt;a href=&quot;%20[https://cloud.google.com/sdk/gcloud/reference/preview/app/modules/get-logs]&quot;&gt;gets-log&lt;/a&gt; command, but it feels a bit complicated since I’m not sure exactly what logs are going to help me debug. I then find the &lt;code class=&quot;highlighter-rouge&quot;&gt;gcloud beta logging logs&lt;/code&gt; command that is supposed to list all the logs available, which is pretty great. To run it I have to install gcloud Beta Commands, so I install this as well. The command works, but I’m still a bit confused by what I’m supposed to do here and how I could find a way to stream my server’s output to my console.&lt;/p&gt;
+
+&lt;p&gt;After a few minutes running in circles, I take a step back and find another ressource that was way more helpful: &lt;a href=&quot;https://cloud.google.com/appengine/articles/logging&quot;&gt;Using Cloud logging in App Engine apps&lt;/a&gt;. Apparently I can use a service called the &lt;a href=&quot;https://cloud.google.com/appengine/articles/logging#using_the_logs_viewer&quot;&gt;Logs Viewer&lt;/a&gt; to access my logs directly from the UI, so I decide to try it out.&lt;/p&gt;
+
+&lt;p&gt;My first impression is that there are a LOT of things going on there. I thought that I only had one instance, but apparently there’s all kind of processes running on my account like a firewall or an autoscaler:&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/app_engine_confused.jpg&quot; alt=&quot;&quot; style=&quot;padding: 20px; width: 600px;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;After fiddling with the various filters I end up finding the “just show me everything” setup:&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/app_engine_logs.jpg&quot; alt=&quot;&quot; style=&quot;padding: 20px; width: 600px;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;At this point I see hits, so it’s a good start.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/app_engine_hits.jpg&quot; alt=&quot;&quot; style=&quot;padding: 20px; width: 600px;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;As it turns out I have a configuration issue:  &lt;code class=&quot;highlighter-rouge&quot;&gt;#&amp;lt;RuntimeError: Missing &#39;secret_key_base&#39; for &#39;production&#39; environment, set this value in &#39;config/secrets.yml&#39;&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;environment-variables&quot;&gt;Environment Variables&lt;/h4&gt;
+
+&lt;p&gt;Right now the problematic section of our &lt;code class=&quot;highlighter-rouge&quot;&gt;secrets.yml&lt;/code&gt; file looks like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;production:
+  secret_key_base: &amp;lt;%= ENV[&quot;SECRET_KEY_BASE&quot;] %&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;For obvious security reasons I don’t want to just change the &lt;code class=&quot;highlighter-rouge&quot;&gt;secrets.yml&lt;/code&gt; to add the secret key and then commit it, so I have to figure out how to set an environment variable.&lt;/p&gt;
+
+&lt;p&gt;Once again the &lt;a href=&quot;https://cloud.google.com/appengine/docs/flexible/ruby/runtime#environment_variables&quot;&gt;documentation&lt;/a&gt; is well done and easy to find. As it turns out &lt;a href=&quot;https://cloud.google.com/appengine/docs/flexible/ruby/configuring-your-app-with-app-yaml#Ruby_app_yaml_Defining_environment_variables&quot;&gt;I have to define them&lt;/a&gt; in the &lt;code class=&quot;highlighter-rouge&quot;&gt;app.yaml&lt;/code&gt; file… that’s fine but I honestly would have prefered a solution that didn’t require me to mix code and production variables, but that’ll do for now.&lt;/p&gt;
+
+&lt;h4 id=&quot;releasing-again&quot;&gt;Releasing (again)&lt;/h4&gt;
+
+&lt;p&gt;I update the &lt;code class=&quot;highlighter-rouge&quot;&gt;app.yaml&lt;/code&gt; file and do another release.&lt;/p&gt;
+
+&lt;p&gt;This time it does feel faster than before, and the logs seem to indicate that they’re leveraging some kind of cache which is great. However it still gets stuck on “Updating service default…” for what seemed like an excessive amount of time.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/app_engine_cache.jpg&quot; alt=&quot;&quot; style=&quot;padding: 20px; width: 300px;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;I go to the URL once again and … it works this time!!&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/app_engine_success.jpg&quot; alt=&quot;&quot; style=&quot;padding: 20px; width: 500px;&quot; /&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;comparing-heroku-and-google-app-engine&quot;&gt;Comparing Heroku and Google App Engine&lt;/h2&gt;
+
+&lt;p&gt;I’m really not going to get into running a serious performance review, but for the fun of it I wanted to see how my micro instance would compare with Heroku’s free tier on this very basic Rails 5 application.&lt;/p&gt;
+
+&lt;p&gt;To do this I pushed the same app to &lt;a href=&quot;https://rails-5-test-mgg.herokuapp.com/&quot;&gt;https://rails-5-test-mgg.herokuapp.com/&lt;/a&gt; and just hit the refresh button a bunch of times and looked at results, because who needs proper methodology?&lt;/p&gt;
+
+&lt;p&gt;Google App Engine (micro, 1CPU, 0.6GB RAM) seems to respond this way (give or take 5ms):&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center; &quot;&gt;&lt;img src=&quot;/assets/blog/app_engine_perf.jpg&quot; alt=&quot;&quot; style=&quot;padding: 5px; width: 100%;margin-left: 0px !important;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;On the other side Heroku (free tier, 1CPU, 512MB RAM) responded this way (give or take 5ms):&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center; &quot;&gt;&lt;img src=&quot;/assets/blog/app_engine_heroku.jpg&quot; alt=&quot;&quot; style=&quot;padding: 5px; width: 100%;margin-left: 0px !important;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;Overall Heroku seems just a bit faster than App Engine. There’s an overhead in term of network for Heroku because Google made it really easy to pick a region, so my app is running in Europe, right next to me, whereas the Heroku app has to cross the Atlantic.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Overall I was very pleasantly suprised by what Google had to offer and how quick it was to get something running even with absolutely no experience in the platform. Documentation is very well written and, in my opinion, it felt less disorienting than setting up an &lt;a href=&quot;https://aws.amazon.com/ec2/&quot;&gt;EC2&lt;/a&gt; instance for the first time.&lt;/p&gt;
+
+&lt;p&gt;The integration with Ruby and Rails is well done, deploying is simple and besides the &lt;code class=&quot;highlighter-rouge&quot;&gt;secrets.yml&lt;/code&gt; gotcha, it went smoothly. Sinatra integration is supposed to be as good but I haven’t tried it yet.&lt;/p&gt;
+
+&lt;p&gt;I might pick this over &lt;a href=&quot;https://aws.amazon.com/&quot;&gt;AWS&lt;/a&gt; for a pet project at some point to try it out some more.&lt;/p&gt;
+
+
+       
+     </content>
+   </entry>
+  
  
   
    <entry>
