@@ -24,7 +24,7 @@ etc
 
 ## The Script
 
-Here’s the script. Note that I use a simple HH:MM:SS formating in this example, but feel free to use what [makes sense][1] depending on your setup and preferences.
+Here’s the script. Note that I use a simple HH:MM:SS formating in this example, but feel free to use what makes sense depending on your setup and preferences.
 
 {% highlight bash %}
 # !/usr/bin/env bash
@@ -46,5 +46,3 @@ The tricky part here is to know that git push is actually sending its output to 
 	$ git push heroku master 2>&1 | timestp
 
 Hopefully this will help you pinpoint with more accuracy the problem in your deployment.
-
-[1]:	http://unixhelp.ed.ac.uk/CGI/man-cgi?date

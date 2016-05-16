@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2016-05-09T08:59:17+02:00</updated>
+ <updated>2016-05-16T15:22:06+02:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -2061,7 +2061,7 @@ Switched to branch &#39;first&#39;
 
 &lt;h2 id=&quot;the-script&quot;&gt;The Script&lt;/h2&gt;
 
-&lt;p&gt;Here’s the script. Note that I use a simple HH:MM:SS formating in this example, but feel free to use what &lt;a href=&quot;http://unixhelp.ed.ac.uk/CGI/man-cgi?date&quot;&gt;makes sense&lt;/a&gt; depending on your setup and preferences.&lt;/p&gt;
+&lt;p&gt;Here’s the script. Note that I use a simple HH:MM:SS formating in this example, but feel free to use what makes sense depending on your setup and preferences.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# !/usr/bin/env bash&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;while &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;read &lt;/span&gt;line; &lt;span class=&quot;k&quot;&gt;do
@@ -2081,7 +2081,6 @@ Switched to branch &#39;first&#39;
 &lt;/div&gt;
 
 &lt;p&gt;Hopefully this will help you pinpoint with more accuracy the problem in your deployment.&lt;/p&gt;
-
 
        
      </content>
