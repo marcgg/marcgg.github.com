@@ -530,6 +530,16 @@
 					<integer>9</integer>
 				</dict>
 			</dict>
+			<key>2016-06-26-wip.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>488658442.77125698</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>21</integer>
+				</dict>
+			</dict>
 		</dict>
 		<key>userIconName</key>
 		<real>479587521</real>
@@ -692,6 +702,9 @@
 		<array>
 			<string>2016-05-09-rails-app-engine.md</string>
 		</array>
+		<array>
+			<string>2016-06-26-wip.md</string>
+		</array>
 	</array>
 	<key>storeFormatVersion</key>
 	<integer>1</integer>
@@ -707,7 +720,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-			<integer>10</integer>
+			<integer>22</integer>
 		</dict>
 		<key>userIconName</key>
 		<dict>
