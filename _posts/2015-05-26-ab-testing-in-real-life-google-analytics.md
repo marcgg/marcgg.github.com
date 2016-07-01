@@ -4,7 +4,7 @@ title: Real Life A/B Testing With Universal Analytics
 description: Split testing... everyone is talking about it, but how do you actually run experiments on an actual website and not just a landing page? Here is a realistic approach to A/B testing based on real life experiences.
 blog: true
 category: blog
-tag: Performance
+tag: Monitoring
 ---
 
 I've been enthusiastic about the concept of A/B testing for a very long time, but I only got to implement it for the first time about two years ago. At the time I thought it would be easy. So many companies are talking about it, there must be a clear path to do it, right?
@@ -66,7 +66,7 @@ First of all, don't start doing any split testing if you don't have identified K
 Based on this, try to define a clear conversion funnel. If you're not familiar with the concept, allow me to quote [Wikipedia][3]:
 
 > Conversion funnel is a technical term used in e-commerce operations to describe the track a consumer takes through an Internet advertising or search system, navigating an e-commerce website and finally converting to a sale.
->
+> 
 > The metaphor of a funnel is used to describe the decrease in numbers that occurs at each step of the process.
 
 For instance, in the case of the hat website:
@@ -77,9 +77,9 @@ For instance, in the case of the hat website:
 - 3) User sees the payment form
 - 4) User pays and enjoys their hat
 
-Like this, once you are A/B testing, you will be able to say "by changing X, we saw a increase in (1) -> (2), but a decrease in (3) -> (4) and an overall improvement on (1) -> (4)". This way you'll get way more interesting insights.
+Like this, once you are A/B testing, you will be able to say "by changing X, we saw a increase in (1) -\> (2), but a decrease in (3) -\> (4) and an overall improvement on (1) -\> (4)". This way you'll get way more interesting insights.
 
-If you decide to change the hat ranking algorithm to display only hat with HD pictures, you could get an increase in (1) -> (2) because the search results looks prettier. However it could decrease global conversion (1) -> (4) because even if the search results look better, users don't want to buy the hats with HD pictures. The solution here would be to add HD pictures for all hats and keep the old ranking algorithm.
+If you decide to change the hat ranking algorithm to display only hat with HD pictures, you could get an increase in (1) -\> (2) because the search results looks prettier. However it could decrease global conversion (1) -\> (4) because even if the search results look better, users don't want to buy the hats with HD pictures. The solution here would be to add HD pictures for all hats and keep the old ranking algorithm.
 
 #### Track Your KPIs
 
@@ -129,13 +129,13 @@ Of course, try to do it in a way that is easy to revert. At Drivy we use a simpl
 
 {% highlight ruby %}
 -# Sets up tracking
-- start_experiment(:welcome_message)
+- start\_experiment(:welcome\_message)
 
 -# Displays things
-= render_experiment do |e|
-  = e.first_variation do
+= render\_experiment do |e|
+  = e.first\_variation do
  Hello!
-  = e.second_variation do
+  = e.second\_variation do
  Hello all!
   = e.original do
  Welcome.
