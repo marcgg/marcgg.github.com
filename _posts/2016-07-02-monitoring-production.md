@@ -3,7 +3,7 @@ layout: post
 title: "Bugmastery"
 titlehtml: Bugmastery <br /><em>The art of making sure you catch every bugs in production</em>
 description: "Desc"
-blog: true
+blog: false
 category: blog
 tag: Monitoring
 ---
@@ -138,7 +138,7 @@ The important thing here is that once a bug appears we make sure someone is awar
 
 Because of this objective of triaging every crash in the product app, the bugmaster's objective is to always be at inbox zero on bugs. Usually the site is stable so that's not too much of a burden, but if there are issues we are willing to spend time on this subject.
 
-#### Note On Not Reacting Right Away 
+#### Note On Not Reacting Right Away
 
 This might sound counter intuitive: if there is a bug, why not spend time right away to fix it?
 
@@ -146,11 +146,11 @@ Well, firstly, we do not "snooze" every single exception without giving it some 
 
 Here are some examples where we think that snoozing can be appropriate:
 
-- Very weird exception happening for the first time on a non critical page. e.g.: UTF8 Encoding error from a bot on a SEO page  
+- Very weird exception happening for the first time on a non critical page. e.g.: UTF8 Encoding error from a bot on a SEO page
 
-- There was a deploy and a race condition occurred. e.g.: Missing attribute 'name' because a migration was still running  
+- There was a deploy and a race condition occurred. e.g.: Missing attribute 'name' because a migration was still running
 
-- There is a known issue that is considered hard or time consuming to fix. Everybody knows about it and we're going to get to it eventually.  
+- There is a known issue that is considered hard or time consuming to fix. Everybody knows about it and we're going to get to it eventually.
 
 ## Fixing Bugs
 
