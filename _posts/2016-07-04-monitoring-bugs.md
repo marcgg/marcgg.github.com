@@ -52,7 +52,7 @@ We use [Universal Analytics][8] for a lot of different things, including [A/B te
 
 #### re:dash
 
-We also use [re:dash][11] to easily pull data from our[replica database][12] and create dashboards. This is used mainly for business KPIs, but it can also be used to build graphs used by developers in order to monitor a particular part of the app.
+We also use [re:dash][11] to easily pull data from our [replica database][12] and create dashboards. This is used mainly for business KPIs, but it can also be used to build graphs used by developers in order to monitor a particular part of the app.
 
 For instance if the volume of a certain event changes or takes a new pattern, it can be detected at a glance.
 

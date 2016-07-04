@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2016-07-04T10:35:32+02:00</updated>
+ <updated>2016-07-04T10:40:05+02:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -63,7 +63,7 @@
 
 &lt;h4 id=&quot;redash&quot;&gt;re:dash&lt;/h4&gt;
 
-&lt;p&gt;We also use &lt;a href=&quot;http://redash.io/&quot;&gt;re:dash&lt;/a&gt; to easily pull data from our&lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.Replication.html&quot;&gt;replica database&lt;/a&gt; and create dashboards. This is used mainly for business KPIs, but it can also be used to build graphs used by developers in order to monitor a particular part of the app.&lt;/p&gt;
+&lt;p&gt;We also use &lt;a href=&quot;http://redash.io/&quot;&gt;re:dash&lt;/a&gt; to easily pull data from our &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.Replication.html&quot;&gt;replica database&lt;/a&gt; and create dashboards. This is used mainly for business KPIs, but it can also be used to build graphs used by developers in order to monitor a particular part of the app.&lt;/p&gt;
 
 &lt;p&gt;For instance if the volume of a certain event changes or takes a new pattern, it can be detected at a glance.&lt;/p&gt;
 
