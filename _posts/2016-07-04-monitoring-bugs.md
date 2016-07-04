@@ -14,17 +14,17 @@ In this article I'll try to explain how we handle bug monitoring at [Drivy][1], 
 
 ## Detecting Bugs
 
-The first step of fixing bug is knowing that they exist. The worst kind of problems are the ones that goes undetected for a long time!
+The first step of fixing bugs is knowing that they exist. The worst kind of problems are the ones that goes undetected for a long time!
 
 ### User Reports
 
-If you only rely on user reports to find bug, you're going to have a bad time. However it's important to keep an eye out for user reports.
+If you only rely on user reports to find bugs, you're going to have a bad time. However it's important to keep an eye out for user reports.
 
-At Drivy we have a team dedicated to customer support, but they handle all kind of calls. In some occasions there will be reports of problems, so we created a Slack channel called #ask-a-tech where they can tell the development team about possible bugs. 
+At Drivy we have a team dedicated to customer support, but they handle all kind of calls. On some occasions there will be reports of problems, so we created a Slack channel called #ask-a-tech where they can tell the development team about possible bugs. 
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/ask_a_tech.png" alt="Bug report on slack" style="padding: 20px; width: 600px;"/></div>
 
-This is a simpler, lighter process than creating Jira or [Fogbugz][2] and it allows us to be quicker to respond while getting more information from the person in contact with the user. We're still a somewhat small team so it still scales well. 
+This is a simpler, lighter process than creating Jira or [Fogbugz][2] to discuss between departments and it allows us to be quicker to respond while getting more information from the person in contact with the user. We're still a somewhat small team so it still scales well.
 
 Of course we also worked on a frequently asked questions and known bugs section in our internal wiki:
 
@@ -48,11 +48,11 @@ When possible, we try to get bugs to either crash or notify us. Still, we can ne
 
 #### Universal Analytics
 
-We use [Universal Analytics][8] for a lot of different things, including [A/B tests][9] and some monitoring. With [custom alerts][10], we are alerted if some important business KPIs go under a certain level that indicate a bug.
+We use [Universal Analytics][8] for a lot of different things, including [A/B tests][9] and custom event monitoring. With [custom alerts][10], we are alerted if some important business KPIs go under a certain level that indicate a bug.
 
 #### re:dash
 
-We also use [re:dash][11] that allows us to easily pull data from our [replica database][12] and create dashboards. This is used mainly for business KPIs, but it can also be used to build graphs used by developers in order to monitor a particular part of the app.
+We also use [re:dash][11] to easily pull data from our[replica database][12] and create dashboards. This is used mainly for business KPIs, but it can also be used to build graphs used by developers in order to monitor a particular part of the app.
 
 For instance if the volume of a certain event changes or takes a new pattern, it can be detected at a glance.
 
@@ -60,15 +60,15 @@ For instance if the volume of a certain event changes or takes a new pattern, it
 
 #### Tracking Logs With Logmatic
 
-In the past year we went from [Logentries][13] to [Logmatic][14] and never looked back. Not only this is a great tool to debug production issues, but it is also allows us to create very detailed dashboards based on logs.
+In the past year we went from [Logentries][13] to [Logmatic][14] and never looked back. Not only it is a great tool to debug production issues, but it is also allows us to create very detailed dashboards based on logs.
 
-For instance we use it to track how much time a given [Sidekiq][15] job takes. This, in addition with their alerts feature allows us to make sure there isn't some weird performance issue sneaking into a job.
+For instance we use it to track how much time a given [Sidekiq][15] job takes. This, in addition to their alerts feature allows us to make sure there isn't some weird performance issue sneaking into a job.
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/sidekiq_tracking.jpg" alt="Sidekiq tracking" style="padding: 20px; width: 300px;"/></div>
 
 #### Time Based Metrics
 
-We're getting more and more into unifying time based dashboard with [Telegraf][16], [Influxdb][17] and [Grafana][18]. This way it reduces the number of dashboards one has to look at.
+We're getting more and more into unifying time based dashboards with [Telegraf][16], [Influxdb][17] and [Grafana][18]. This way it reduces the number of dashboards one has to look at.
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/monitoring_grafana.jpg" alt="New Relic tracking" style="padding: 20px; width: 700px;"/></div>
 
@@ -85,9 +85,9 @@ I won't get too much into general performance monitoring, because it's another s
 
 ## Monitoring Bugs
 
-Having nice dashboards and solid tracking is one thing, but if you don't look at them they're pretty much worthless. On the other hand if you have too much information it becomes noise. You also have to make decisions regarding how much monitoring you want to be doing versus building new things.
+Having nice dashboards and robust tracking is one thing, but if you don't look at them they're pretty much worthless. On the other hand if you have too much information it becomes noise. You also have to make decisions regarding how much monitoring you want to be doing versus building new things.
 
-### Alerts
+### AlertsUsually
 
 #### PagerDuty
 
@@ -115,7 +115,7 @@ This is why every week a developer is in charge of making sure that every crash 
 
 When a 500 appears, it is sent to Bugsnag. The bugmaster then needs to check it out and decide what to do. They can spend a few minutes trying to reproduce the bug or discover the section of the codebase impacted.
 
-Then they can either take care of the bug themselves or assign it to someone else that knows more about it. To do this, Bugsnag has a convenient assignation feature and various filters to see every errors associated to you. While the bug is unassigned, we built a bot to send reminders to the bugmaster.
+Then they can either take care of the bug themselves or assign it to someone else that knows more about it. To do this, Bugsnag has a convenient assignation feature and various filters to see every errors associated to you. We also built a bot to send reminders to the bugmaster for as long as the bug is unassigned.
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/notif_assign.jpg" alt="Slack assigning bug notif" style="padding: 20px; width: 600px;"/></div>
 
@@ -136,13 +136,13 @@ If they decide to fix it later, they can "snooze" the bug. Snoozing means that t
 
 The important thing here is that once a bug appears we make sure someone is aware of it and took some actions to make sure it's under control.
 
-Because of this objective of triaging every crash in the product app, the bugmaster's objective is to always be at inbox zero on bugs. Usually the site is stable so that's not too much of a burden, but if there are issues we are willing to spend time on this subject.
+Because of this objective of triaging every crash in the product app, the bugmaster's objective is to always be at inbox zero on bugs.
 
 #### Note On Not Reacting Right Away
 
 This might sound counter intuitive: if there is a bug, why not spend time right away to fix it?
 
-Well, firstly, we do not "snooze" every single exception without giving it some thought first. The decision do this is a matter of criticality and focus. Any complex production site with enough traffic is going to raises 500s, it's pretty much inevitable. However these exceptions are not equals and it's up to a developer to decide what to do.
+Well, firstly, we do not "snooze" every single exception without giving it some thought first. The decision to do this is a matter of criticality and focus. Any complex production site with enough traffic is going to raises 500s, it's pretty much inevitable. However these exceptions are not equal and it's up to a developer to decide what to do.
 
 Here are some examples where we think that snoozing can be appropriate:
 
@@ -158,7 +158,7 @@ Now for the fun part! I'm not going to go too much in depth here however, but it
 
 ### Shipping Quickly
 
-If you reduce the code of shipping code to production, you'll do it more often and it'll be easy to ship bug fixes and make users happy.
+If you reduce the cost of shipping code to production, you'll do it more often and it'll be easy to ship bug fixes and make users happy.
 
 For instance at Drivy we worked a lot on our deployment pipeline and nowadays we use a command line tool to release. Of course since we love Slack, everything is plugged into it:
 
@@ -168,15 +168,15 @@ In general, I recommend to read "[How to deploy software: Make your team’s dep
 
 ### Preventing Regressions
 
-Once a bugfix has been made, it's important to make sure it doesn't happen again in slightly different circonstances. This is why every piece of code fixing a bug is usually paired with a few automated tests.
+Once a bugfix has been made, it's important to make sure it doesn't happen again in slightly different circumstances. This is why every piece of code fixing a bug is usually paired with a few automated tests.
 
 ## Avoiding Bugs
 
 Of course the best way to handle bugs is to not have them in the first place!
 
-To do so we have a lot of automated tests running on a CI server, small and very frequent deployments, code reviews, emphasis on code quality, [a solid yet simple Git flow][25], [feature flags][26]... as well as a team of people that want to ship code with as little bugs as possible.
+To do so we have a lot of automated tests running on a CI server, small and very frequent deployments, code reviews, emphasis on code quality, [an efficient yet simple Git flow][25], [feature flags][26]... as well as a team of people that want to ship code with as little bugs as possible.
 
-Overall I feel like the way we do things has evolved a lot over the years, but it is quite solid and it's very rare when we are caught off guard by a serious bug. This gives an overall better end user experience, but it is also great to work on a project that feels stable and under control.
+Overall I feel like the way we do things has evolved a lot over the years, but it is quite robust and it's very rare when we are caught off guard by a serious bug. This gives an overall better end user experience, but it is also great to work on a project that feels stable and under control.
 
 [1]:	https://www.drivy.com/
 [2]:	http://www.fogcreek.com/fogbugz/
