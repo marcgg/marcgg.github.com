@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2016-07-04T10:28:46+02:00</updated>
+ <updated>2016-07-04T10:32:56+02:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -45,7 +45,7 @@
 
 &lt;p&gt;More and more people use tools like &lt;a href=&quot;https://getsentry.com/welcome/&quot;&gt;Sentry&lt;/a&gt;,  &lt;a href=&quot;https://rollbar.com/&quot;&gt;Rollbar&lt;/a&gt; or &lt;a href=&quot;https://bugsnag.com/&quot;&gt;Bugsnag&lt;/a&gt;, to detect &lt;a href=&quot;https://developer.mozilla.org/en/docs/Web/HTTP/Response_codes&quot;&gt;500s&lt;/a&gt;. If you’re not using one, I highly encourage you to try it out. Most of them are very quick to setup and you’ll instantly get a better view over what’s going on in your app.&lt;/p&gt;
 
-&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/bugsnag.png&quot; alt=&quot;Bugsnag&quot; style=&quot;padding: 20px; width: 700px;&quot; /&gt;&lt;/div&gt;
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/bugsnag_blur.png&quot; alt=&quot;Bugsnag&quot; style=&quot;padding: 20px; width: 700px;&quot; /&gt;&lt;/div&gt;
 
 &lt;p&gt;At Drivy we’ve been using Bugsnag and are quite happy with it. Before that we were using Exceptionnal (now &lt;a href=&quot;https://airbrake.io/&quot;&gt;Airbreak&lt;/a&gt;), but I really wouldn’t recommend it. I’ve also had a good experience with Sentry in the past.&lt;/p&gt;
 

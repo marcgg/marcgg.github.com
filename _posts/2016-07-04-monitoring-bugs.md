@@ -34,7 +34,7 @@ Of course we also worked on a frequently asked questions and known bugs section 
 
 More and more people use tools like [Sentry][3],  [Rollbar][4] or [Bugsnag][5], to detect [500s][6]. If you're not using one, I highly encourage you to try it out. Most of them are very quick to setup and you'll instantly get a better view over what's going on in your app.
 
-<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/bugsnag.png" alt="Bugsnag" style="padding: 20px; width: 700px;"/></div>
+<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/bugsnag_blur.png" alt="Bugsnag" style="padding: 20px; width: 700px;"/></div>
 
 At Drivy we've been using Bugsnag and are quite happy with it. Before that we were using Exceptionnal (now [Airbreak][7]), but I really wouldn't recommend it. I've also had a good experience with Sentry in the past.
 
