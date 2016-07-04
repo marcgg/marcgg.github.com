@@ -1,20 +1,20 @@
 ---
 layout: post
-title: "Bugmastery"
+title: "Bugmastery: The art of making sure you catch every bugs in production"
 titlehtml: Bugmastery <br /><em>The art of making sure you catch every bugs in production</em>
-description: "Desc"
-blog: false
+description: "Identifying and monitoring production issues is hard. Here's what's been successful at my company, meaning the general workflow and tools like Bugsnag,  re:dash, Universal Analytics, New Relic, PagerDuty, Grafana, Logmatic, Slack and more."
+blog: true
 category: blog
 tag: Monitoring
 ---
 
 No one wants bugs in their app. Developers, end users, product owners... everybody agree on this one. However I'm always surprised by the number of companies that don't pay much attention to production bugs.
 
-In this article I'll try to explain how we handle bug monitoring at [Drivy][1], the company I'm currently working for. Of course, it's not perfect: we've iterated quite a bit over the years, and we'll continue doing so.
+In this article I'll try to explain how we handle bug monitoring at [Drivy][1], the company I'm currently working for. Of course, it's not perfect: we've iterated quite a bit over the years, and we'll continue doing so. If you see improvements we can make, please leave a comment!
 
 ## Detecting Bugs
 
-The first step of fixing bug is knowing that they exist. The worse kind of problems are the ones that goes undetected for a long time!
+The first step of fixing bug is knowing that they exist. The worst kind of problems are the ones that goes undetected for a long time!
 
 ### User Reports
 
@@ -24,7 +24,7 @@ At Drivy we have a team dedicated to customer support, but they handle all kind 
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/ask_a_tech.png" alt="Bug report on slack" style="padding: 20px; width: 600px;"/></div>
 
-This is a simpler, lighter process than creating Jira or [Fogbugz][2] and it allows us to be quicker to respond while getting more informations from the person in contact with the user. We're still a somewhat small team so it still scales well. 
+This is a simpler, lighter process than creating Jira or [Fogbugz][2] and it allows us to be quicker to respond while getting more information from the person in contact with the user. We're still a somewhat small team so it still scales well. 
 
 Of course we also worked on a frequently asked questions and known bugs section in our internal wiki:
 
@@ -40,7 +40,7 @@ At Drivy we've been using Bugsnag and are quite happy with it. Before that we we
 
 ### Tracking Metrics
 
-Sometimes a bug won't simply cause a page to break, raising an easily catchable 500. Instead, they will drive away traffic over time, inconvenience users, lower conversion or corrupt data.
+Sometimes a bug won't simply cause a page to break, raising an easily catchable 500. Instead, they will drive away traffic over time, lower conversion, corrupt data or generally be an inconvenience to users.
 
 These bugs are way harder to detect.
 
