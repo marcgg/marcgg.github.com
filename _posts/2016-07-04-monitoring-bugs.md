@@ -44,7 +44,7 @@ Sometimes a bug won't simply cause a page to break, raising an easily catchable 
 
 These bugs are way harder to detect.
 
-When possible, we try to get bugs to either crash or notify us. Still, we can never be sure we caught every edge cases. In order to be more confident, we monitor metrics that would be impacted by these problems. For instance if you have a bug in your Facebook login integration, you will see less successful users logging in from Facebook, but the site might not return a 500 on the login endpoint.
+When possible, we try to get bugs to either crash or, at least, notify us. Still, we can never be sure we caught every edge cases. In order to be more confident, we monitor metrics that would be impacted by these problems. For instance if you have a bug in your Facebook login integration, you will see less successful users logging in from Facebook, but the site might not return a 500 on the login endpoint.
 
 #### Universal Analytics
 

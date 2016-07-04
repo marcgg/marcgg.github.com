@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2016-07-04T10:32:56+02:00</updated>
+ <updated>2016-07-04T10:35:32+02:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -55,7 +55,7 @@
 
 &lt;p&gt;These bugs are way harder to detect.&lt;/p&gt;
 
-&lt;p&gt;When possible, we try to get bugs to either crash or notify us. Still, we can never be sure we caught every edge cases. In order to be more confident, we monitor metrics that would be impacted by these problems. For instance if you have a bug in your Facebook login integration, you will see less successful users logging in from Facebook, but the site might not return a 500 on the login endpoint.&lt;/p&gt;
+&lt;p&gt;When possible, we try to get bugs to either crash or, at least, notify us. Still, we can never be sure we caught every edge cases. In order to be more confident, we monitor metrics that would be impacted by these problems. For instance if you have a bug in your Facebook login integration, you will see less successful users logging in from Facebook, but the site might not return a 500 on the login endpoint.&lt;/p&gt;
 
 &lt;h4 id=&quot;universal-analytics&quot;&gt;Universal Analytics&lt;/h4&gt;
 
