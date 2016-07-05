@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2016-07-04T10:40:48+02:00</updated>
+ <updated>2016-07-05T14:28:14+02:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -14,7 +14,7 @@
  
   
    <entry>
-     <title>Bugmastery: The art of making sure you catch every bugs in production</title>
+     <title>Bugmastery: The art of making sure you catch every bug in production</title>
      <link href="https://marcgg.com/blog/2016/07/04/monitoring-bugs/"/>
      <updated>2016-07-04T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2016/07/04/monitoring-bugs</id>

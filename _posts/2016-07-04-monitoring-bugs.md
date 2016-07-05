@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Bugmastery: The art of making sure you catch every bugs in production"
+title: "Bugmastery: The art of making sure you catch every bug in production"
 titlehtml: Bugmastery <br /><em>The art of making sure you catch every bugs in production</em>
 description: "Identifying and monitoring production issues is hard. Here's what's been successful at my company: the general workflow and tools like Bugsnag, re:dash, Universal Analytics, New Relic, PagerDuty, Grafana, Logmatic, Slack and more."
 blog: true
