@@ -4,13 +4,115 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2016-07-05T14:28:14+02:00</updated>
+ <updated>2016-08-01T22:45:34+02:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
    <email>marcg.gauthier@gmail.com</email>
  </author>
 
+ 
+  
+   <entry>
+     <title>Why Resumes Are Actually Helpful</title>
+     <link href="https://marcgg.com/blog/2016/08/02/developer-resume/"/>
+     <updated>2016-08-02T00:00:00+02:00</updated>
+     <id>https://marcgg.com/blog/2016/08/02/developer-resume</id>
+     <content type="html">
+       &lt;p&gt;I’m a developer, but I’ve always spent time helping with recruitment for the various companies I’ve been a part of. I’m even doing that to a lesser extend as a consultant. Based on this experience, I think I can say that we should stop saying that a developer doesn’t need a resume of any kind and that Github alone is enough. I thought this was a closed subject, that we stopped believing that &lt;a href=&quot;http://anti-pattern.com/github-is-your-resume-now&quot;&gt;Github is your developer portfolio&lt;/a&gt;, but I still see people applying with a Github account and almost getting offended if I ask if they have at least a Linkedin profile.&lt;/p&gt;
+
+&lt;p&gt;I’m not going into details regarding why not having something ressembling a resume is a poor idea on general. James Coglan already did it in the great article “&lt;a href=&quot;https://blog.jcoglan.com/2013/11/15/why-github-is-not-your-cv/&quot;&gt;Why GitHub is not your CV&lt;/a&gt;”, that can be summed up with this quote:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;So really, your GitHub profile displays two things: how ‘influential’ you are, and how easily you can be coerced into constantly working. It’s honestly about as relevant to a decent hiring decision as your Klout score.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;I also recommend Ashe Dryden’s article: “&lt;a href=&quot;https://www.ashedryden.com/blog/the-ethics-of-unpaid-labor-and-the-oss-community&quot;&gt;The Ethics of Unpaid Labor And The OSS Community&lt;/a&gt;“.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Instead in this article I’ll focus on why, if you apply to a job without something resembling a resume, you’re making the life of the person in front of you harder and generally make the whole process more painful than it needs to be.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-a-resume-is-useful-to-me&quot;&gt;Why A Resume Is Useful To Me&lt;/h2&gt;
+
+&lt;p&gt;Of course, standing on the recruiter side, I can do without a perfectly formatted resume. However I do need a place to look up what you did before contacting me. A Linkedin page is fine, but it needs to be somewhat up to date and with more than just the company names. I don’t need this to be annoying, but because of multiple small problems that occurs when I don’t have this document.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Note: from now on if I mention “resume”, I really mean “something resembling a resume, meaning a timeline of experiences and list of skills with basic descriptions”. Linkedin is fine, so is a personnal website with a decent about me section.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;memory&quot;&gt;Memory&lt;/h3&gt;
+
+&lt;p&gt;I can end up talking to a lot of people about a position, and my memory is not perfect. It’s great to have a document that I can check to remember if you spent 1 year or 2 at company X, or if you do speak fluent german or not.&lt;/p&gt;
+
+&lt;p&gt;I have my notes, of course, but if I have to write down every single detail the interview process is going to be painful for the both of us. I’d rather listen to you and ask meaningful questions than write down the number of years you spent in a given company.&lt;/p&gt;
+
+&lt;h3 id=&quot;multiple-interviewers&quot;&gt;Multiple Interviewers&lt;/h3&gt;
+
+&lt;p&gt;I never hired a developer without having them see at least a couple more people than myself. In this case I often brief the other interviewers in order to not have the candidate repeat over and over their previous experiences. If I don’t have something resembling a resume, this becomes an more tedious task.&lt;/p&gt;
+
+&lt;p&gt;Later, if you have a few interviewers seeing a few candidates, having a resume to look at when discussing is also more convevient. It’s a clearer starting point for discussion than just a name and our respective notes.&lt;/p&gt;
+
+&lt;h3 id=&quot;better-interviews&quot;&gt;Better Interviews&lt;/h3&gt;
+
+&lt;p&gt;Having a timeline of a candidate’sy experiences is also a great way to guide a first interview. It’s easy to follow along when the candidate is explaining their background and previous positions. It also makes going back to something that was said earlier simpler, as company names, technologies, dates and projects are written down in front of me as we speak.&lt;/p&gt;
+
+&lt;p&gt;Having a resume can also lead to better conversations. For instance I could notice a past experience in a company that I know about, or a piece of technology you used that I’m interested in. Candidates without this would have to mention their whole work experience out loud in order to get the same effect.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-github-often-wastes-my-time&quot;&gt;Why Github Often Wastes My Time&lt;/h2&gt;
+
+&lt;p&gt;If you look at &lt;a href=&quot;https://github.com/marcgg?tab=repositories&quot;&gt;my github account&lt;/a&gt;, you’ll see that it’s a mess.&lt;/p&gt;
+
+&lt;p&gt;There’s all kinds of randomness going on: my dotfiles, this site, a very old but somewhat popular jQuery plugin, terrible hackaton code, a few backups, a couple of forks that were merged (or not), projects I gave up on, projects still running, demo repositories for when I give classes…&lt;/p&gt;
+
+&lt;p&gt;I don’t really mind though, because I wouldn’t apply to a job with this. Most developers are just like me in this, most of our best work is private… but still, why so many people send their Github account when there is nothing relevant on there?&lt;/p&gt;
+
+&lt;p&gt;To be honest, I totally gave up on looking at Github unless the candidate explicitely points to a given repository. If I do browse the code on my own, it will &lt;em&gt;always&lt;/em&gt; ends in a discusion like this one:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;span class=&quot;dpm&quot;&gt;Me&lt;/span&gt;: I’ve looked at your Github account, and on project Y I wondered why you made this choice…?&lt;/p&gt;
+
+  &lt;p&gt;&lt;span class=&quot;ddev&quot;&gt;Candidate&lt;/span&gt;: That’s an old project I don’t even remember.&lt;/p&gt;
+
+  &lt;p&gt;&lt;span class=&quot;dpm&quot;&gt;Me&lt;/span&gt;:  Okay, well on project Z I found a couple of situations where I felt like the code was subpar. What lead you to write it this way?&lt;/p&gt;
+
+  &lt;p&gt;&lt;span class=&quot;ddev&quot;&gt;Candidate&lt;/span&gt;: This project was done during a weekend, it’s hacked together so the code is terrible. I’d rather not talk about this one.&lt;/p&gt;
+
+  &lt;p&gt;&lt;span class=&quot;dpm&quot;&gt;Me&lt;/span&gt;: Is there a repository I could look at?&lt;/p&gt;
+
+  &lt;p&gt;&lt;span class=&quot;ddev&quot;&gt;Candidate&lt;/span&gt;: Not really, most of my best work is private.&lt;/p&gt;
+
+  &lt;p&gt;&lt;span class=&quot;dpm&quot;&gt;Me&lt;/span&gt;:  (ಠ_ಠ)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;looking-at-code&quot;&gt;Looking At Code&lt;/h2&gt;
+
+&lt;p&gt;To make it clear, I do want to look at code a candidate wrote. I value that way more than what they could do “on paper”, their past experiences and the university they attended 5 years ago.&lt;/p&gt;
+
+&lt;p&gt;That’s why I like to be able to look at relevant code rather than whatever is on the candidate’s Github. For instance, here’s what I usually ask a candidate to bring:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Code written during a previous job&lt;/li&gt;
+  &lt;li&gt;Maintained open source code&lt;/li&gt;
+  &lt;li&gt;Pet project actually running in production&lt;/li&gt;
+  &lt;li&gt;Freelance work&lt;/li&gt;
+  &lt;li&gt;A homemade technical test done before the interview&lt;/li&gt;
+  &lt;li&gt;Technical tests made for other companies&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;From this starting point, we can then discuss tradeoffs, architecture choices, their understanding of the codebase, how they maintained it over time and so on.&lt;/p&gt;
+
+&lt;p&gt;I also value code written in a context closer to their future day job more than what I could ask the candidate to write on the spot. That’s why I don’t make developers write code in front of me, under pressure or ask them to write actual code on whiteboards…&lt;/p&gt;
+
+&lt;p&gt;I’d much rather discuss what they wrote in the past and other interesting technical topics. I feel like it makes for a more interesting interviewing experience and allows me to better judge how the candidate is going to perform in real situations:  someone can be very good at interview riddles and coding puzzles under pressure, but still be a terrible developer.&lt;/p&gt;
+
+&lt;h2 id=&quot;experience-and-code&quot;&gt;Experience And Code&lt;/h2&gt;
+
+&lt;p&gt;So really there are two subjects: past experiences and actual work accomplished. When I’m looking for a person to join my team, I want to know about about the two.&lt;/p&gt;
+
+&lt;p&gt;If you’re a prolific open source developer or a very junior programmer, I might find both on your Github. However, if you’re like most people, it’s better to stick to a resume or update your Linkedin.&lt;/p&gt;
+
+
+       
+     </content>
+   </entry>
+  
  
   
    <entry>
@@ -200,8 +302,6 @@
        
      </content>
    </entry>
-  
- 
   
  
   
