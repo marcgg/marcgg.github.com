@@ -39,7 +39,7 @@ Later, if you have a few interviewers seeing a few candidates, having a resume t
 
 ### Better Interviews
 
-Having a timeline of a candidate'sy experiences is also a great way to guide a first interview. It's easy to follow along when the candidate is explaining their background and previous positions. It also makes going back to something that was said earlier simpler, as company names, technologies, dates and projects are written down in front of me as we speak.
+Having a timeline of a candidate's experiences is also a great way to guide a first interview. It's easy to follow along when the candidate is explaining their background and previous positions. It also makes going back to something that was said earlier simpler, as company names, technologies, dates and projects are written down in front of me as we speak.
 
 Having a resume can also lead to better conversations. For instance I could notice a past experience in a company that I know about, or a piece of technology you used that I'm interested in. Candidates without this would have to mention their whole work experience out loud in order to get the same effect.
 
