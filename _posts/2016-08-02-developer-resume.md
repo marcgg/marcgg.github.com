@@ -2,7 +2,7 @@
 layout: post
 title: "Why Resumes Are Actually Helpful"
 description: "There are still developers thinking resumes are not useful, when really they can help simplifying the recruitment process and be generally very helpful for all parties involved."
-blog: true	
+blog: true  
 cssscope: deadlines
 category: blog
 tag: Recruitment
@@ -53,7 +53,7 @@ I don't really mind though, because I wouldn't apply to a job with this. Most de
 
 To be honest, I totally gave up on looking at Github unless the candidate explicitely points to a given repository. If I do browse the code on my own, it will _always_ ends in a discusion like this one:
 
-> <span class='dpm'>Me</span>: I've looked at your Github account, and on project Y I wondered why you made this choice...?
+> <span class='dpm'>Me</span>: I've looked at your Github account since you sent it with your application. On project Y I wondered why you made this choice...?
 > 
 >  <span class='ddev'>Candidate</span>: That's an old project I don't even remember.
 > 
@@ -65,7 +65,7 @@ To be honest, I totally gave up on looking at Github unless the candidate explic
 > 
 > <span class='ddev'>Candidate</span>: Not really, most of my best work is private.
 > 
->  <span class='dpm'>Me</span>:  (ಠ_ಠ)
+>  <span class='dpm'>Me</span>:  (ಠ\_ಠ)
 
 ## Looking At Code
 
