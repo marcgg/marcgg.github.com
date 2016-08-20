@@ -13,5 +13,8 @@ author :
 
 production_url : https://marcgg.com
 
+collections:
+  - books
+
 gems:
   - jekyll-redirect-from

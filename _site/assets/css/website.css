@@ -227,7 +227,7 @@ blockquote p{
   border-top: none !important;
 }
 
-.single-post .date{
+.single-post .date, .single-post .author{
   color: #cdcdcd;
   margin-top: 10px;
   float: right;
@@ -266,13 +266,27 @@ blockquote p{
 
 /* BOOKS */
 .book-cover-entry{
-  width: 100px;
+  width: 120px;
   margin-right: 20px;
   float: left;
+  font-size: 12px;
+  text-decoration: none !important;
+}
+.buy-book{
+  text-decoration: underline;
 }
 .book-cover-entry img{
-  width: 100px;
+  width: 120px;
 }
+.book-rating .icon {
+  display: inline-block;
+  padding-right: 5px;
+}
+.book-rating .top .icon{ color: #1CED00; }
+.book-rating .good .icon{ color: #82ED00; }
+.book-rating .medium .icon{ color: #EDD100; }
+.book-rating .low .icon{ color: #EDAE00; }
+.book-rating .poor .icon{ color: #ED3B00; }
 
 /* BLOG SHOW */
 

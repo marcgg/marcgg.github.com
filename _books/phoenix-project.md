@@ -1,0 +1,12 @@
+---
+layout: page
+title: "The Phoenix Project"
+author: "G. Kim, K. Behr & G. Spafford "
+link: "https://www.amazon.fr/gp/product/0988262509/ref=as\_li\_tl?ie=UTF8&camp=1642&creative=6746&creativeASIN=0988262509&linkCode=as2&tag=mg092-21"
+img: "phoenix-cover.jpg"
+score: 18
+---
+
+This book is a novel describing a group of characters discovering the DevOps ideas on theirselves. The first chapters are all about discovering all the horrifying ways in which IT operations can fail and it's a lot of fun. The rest of the book is spent in interesting explainations on how to fix and improve the situation. Being used to work in somewhat small companies, it made me rethink how I saw the [DevOps][1] movement as I never really understood before how distant development & operations can be in larger groups.
+
+[1]:	https://en.wikipedia.org/wiki/DevOps
