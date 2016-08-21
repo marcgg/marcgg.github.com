@@ -7,4 +7,4 @@ img: "herding-cover.jpg"
 score: 12
 ---
 
-This book, subtitled "A Primer for Programmers Who Lead Programmers", was actually the first book related to my profession that wasn't technical. It was a few years back and I didn't lead programmers, but it was very instructive and gave me perspective and what my boss was doing. There are a lot of over simplifications and stereotypes, but the book gives interesting pointers that - of course - need to be analysed and not blindly applied.
+This book, subtitled "A Primer for Programmers Who Lead Programmers", was actually the first book I read related to my profession that wasn't technical. It was a few years back and I didn't lead programmers at this point, but it was very instructive and gave me a new view on what my boss was doing. There are a lot of over simplifications and stereotypes, but the book still gives interesting pointers that - of course - need to be analysed and not blindly applied.

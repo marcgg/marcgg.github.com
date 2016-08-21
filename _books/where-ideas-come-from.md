@@ -7,7 +7,7 @@ img: "ideas-cover.jpg"
 score: 7
 ---
 
-I once saw Steven Johnson's [TED talk][1] a while back about the content of this book. I really enjoyed it so I decided to buy it and give it a read... and I was completely disapointed. Some people might enjoy it, but personnally I only saw one idea: "all ideas are derivative". This is great for a talk, but after a few hundred pages of just repeating the same idea with different examples I grew tired and gave up. 
+I once saw Steven Johnson's [TED talk][1] about the content of this book. I really enjoyed it so I decided to buy it and give it a read... and I was completely disapointed. Some people might enjoy it, but personnally I only saw one concept: "all ideas are derivative". This is great for a talk, but after a few hundred pages of just repeating the same basic idea with different examples I grew tired and gave up. 
 
 
 [1]:	http://www.ted.com/talks/steven_johnson_where_good_ideas_come_from?language=en

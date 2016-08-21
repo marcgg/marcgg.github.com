@@ -7,4 +7,4 @@ img: "poodr-cover.jpg"
 score: 19
 ---
 
-A really in depth look at how to be more efficient when writting object oriented code. Reading concrete examples that you can actually apply at your day job is refreshing compared to the countless impractical books. Here Sandi Metz explain how to write good code if you don't have time, if the system is evolving and so on. Note that this book is focused on Ruby, but I think that it can interest every developer.
+An in depth look at how to be more efficient and future proof when writting object oriented code. Reading concrete examples that you can actually apply at your day job is refreshing compared to the countless impractical books out there. Here Sandi Metz explains how to write good and maintainable code if you don't have time, if the system is evolving and so on. Note that this book is focused on Ruby, but I think that it can interest every developer.

@@ -7,6 +7,6 @@ img: "the-goal-cover.jpg"
 score: 15
 ---
 
-This one is actually a novel about management, focused arround a manufacturing plant in the 1980s. The style is not great, the hero felt a bit antipatic to me, but the lessons learned through the book are very interesting. The story format works very well to explain the complex ideas behind the author's  [Theory Of Constraints][1]. It's also surprising to see how some concepts can very much apply to software engineering and operations.
+This one is actually a novel about management, focused on a manufacturing plant in the 1980s. The style is not great, the hero is a bit antipatic to me, but the lessons learned through the book are very interesting. The story format works very well to explain the complex ideas behind the author's  [Theory Of Constraints][1]. It's also surprising to see how some concepts can very much apply to software engineering and operations.
 
 [1]:	https://en.wikipedia.org/wiki/Theory_of_constraints

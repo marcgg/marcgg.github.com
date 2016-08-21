@@ -7,4 +7,4 @@ img: "facts-cover.jpg"
 score: 14
 ---
 
-This books doesn't bring something radically new to the table, but it succeeds in giving a good state of the art. Here the author presents a wide variety of facts and myths (most well known, but not all of them),  and tries to analyse them. All facts are layed out in the same way and this simple format makes the book really easy and fun to read as you can skip from fact to fact or just go back to one later on.
+This books doesn't bring something radically new to the table, but it succeeds in giving a good state of the art. Here the author presents a wide variety of facts and myths (most well known, but not all of them),  and tries to analyse them. All facts are layed out in the same way and this simple format makes the book really easy and fun to read as you can skip from fact to fact.

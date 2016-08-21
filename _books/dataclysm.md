@@ -7,6 +7,6 @@ img: "dataclysm-cover.jpg"
 score: 15
 ---
 
-I was a big fan of the [OkCupid data blog][1] so I bought this book, which is basically a longer, printed version of the blog. In it, the author analyse huge datasets about online dating in a funny yet interesting way. The writting is surprisingly good, and the information is neatly presented.
+I was a big fan of the [OkCupid data blog][1] so I was happy to get a hold of this book, which is basically a longer and printed version of the blog. In it, the author analyses huge datasets about online dating in a funny yet interesting way. The writting is surprisingly good, and the information is neatly presented.
 
 [1]:	http://oktrends.okcupid.com/

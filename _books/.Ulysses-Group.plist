@@ -208,12 +208,16 @@
 			</dict>
 			<key>template.md</key>
 			<dict>
+				<key>explicitUnassignment</key>
+				<true/>
+				<key>firstUnassignment</key>
+				<real>493480597.03290498</real>
 				<key>lastModification</key>
-				<real>493468097.05040598</real>
+				<real>493480597.03290498</real>
 				<key>version</key>
 				<dict>
 					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-					<integer>92</integer>
+					<integer>105</integer>
 				</dict>
 			</dict>
 			<key>the-goal.md</key>
@@ -343,7 +347,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-			<integer>104</integer>
+			<integer>105</integer>
 		</dict>
 	</dict>
 </dict>

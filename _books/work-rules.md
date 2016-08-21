@@ -7,6 +7,6 @@ img: "work-rules-book-cover.jpg"
 score: 14
 ---
 
-Google's approach to human ressources, which I'd recommend reading for anyone interested in the recruitment process and willing to scan through a significant number of pages glorifying Google. While far from perfect, I consider it to be the best ressource I've read on recruitment since Joel Spolsky's [Guerilla Guide To Interviewing][1] from 2006.
+Google's approach to human ressources, which I'd recommend reading to anyone interested in the recruitment process and willing to scan through a significant number of pages glorifying Google. While far from perfect, I consider it to be the best ressource I've read on recruitment since Joel Spolsky's [Guerilla Guide To Interviewing][1] from 2006.
 
 [1]:	http://joelonsoftware.com/articles/GuerrillaInterviewing3.html
