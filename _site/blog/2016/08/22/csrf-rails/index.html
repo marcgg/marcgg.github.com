@@ -5,7 +5,7 @@
     <title>
       Understanding Rails' Forgery Protection Strategies
     </title>
-    <meta name="description" content="lol">
+    <meta name="description" content="Rails protects you against CSRF attacks, but it gives you a lot of customisation on how you want to react to them. It can be a great thing as you can have your own strategies, but it can also lead to security issues.">
     <meta name="author" content="Marc G Gauthier">
     <meta content='user-scalable=no, width=device-width, initial-scale=1.0' name='viewport'>
     <meta name="google-site-verification" content="x2EpQdOMz-k9fP8hak9I3COaXhnQ4jNLp2GU4GYQ8jM" />
@@ -53,15 +53,13 @@
     <div class="post" id="post-">
 
       
-      <p>Cross-site request forgery or <a href="https://en.wikipedia.org/wiki/Cross-site_request_forgery">CSRF</a> is a well known attack that has been <a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet">vastly documented</a>. To deal with this, Rails has the <code class="highlighter-rouge">ActionController::RequestForgeryProtection</code> that gives access to <code class="highlighter-rouge">protect_from_forgery</code>.</p>
+      <p>Cross-site request forgery or <a href="https://en.wikipedia.org/wiki/Cross-site_request_forgery">CSRF</a> is a well known attack that has been <a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet">vastly documented</a>.</p>
 
-<p>It’s now setup by default when you create a new Rails project and takes the form of a single line of code in the main controller:</p>
+<p>To deal with this, Rails has the <code class="highlighter-rouge">RequestForgeryProtection</code> module that gives access to <code class="highlighter-rouge">protect_from_forgery</code>. It’s now set by default when you create a new Rails project and takes the form of a single line of code in the application controller:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>class ApplicationController &lt; ActionController::Base
-  protect_from_forgery with: :exception
-end
-</code></pre>
-</div>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">ApplicationController</span> <span class="o">&lt;</span> <span class="no">ActionController</span><span class="o">::</span><span class="no">Base</span>
+  <span class="n">protect_from_forgery</span> <span class="ss">with: :exception</span>
+<span class="k">end</span></code></pre></figure>
 
 <p>This <code class="highlighter-rouge">with</code> parameter is actually the <code class="highlighter-rouge">forgery_protection_strategy</code> parameter, it tells Rails how to behave when a CSRF attack is identified.</p>
 
@@ -75,9 +73,7 @@ end
 
 <p>This is the one Rails 5 sets up by default. It will raise an exception if a CSRF attack occurs:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>  protect_from_forgery with: :exception
-</code></pre>
-</div>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">protect_from_forgery</span> <span class="ss">with: :exception</span></code></pre></figure>
 
 <p>This strategy ensures that the execution stops right after the <code class="highlighter-rouge">verify_authenticity_token</code> check if the request is fraudulent.</p>
 
@@ -85,29 +81,38 @@ end
 
 <p>This strategy will not cause the app to crash but will instead <a href="https://github.com/rails/rails/blob/v5.0.0/actionpack/lib/action_controller/metal/request_forgery_protection.rb#L147-L153">nullify the session for the duration of the request</a>.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>  protect_from_forgery
-</code></pre>
-</div>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">protect_from_forgery</span>
+<span class="c1"># or</span>
+<span class="n">protect_from_forgery</span> <span class="ss">with: :null_session</span></code></pre></figure>
 
-<p>Note that while this is now the default, Rails 3 didn’t generate the <code class="highlighter-rouge">ApplicationController</code> file with the <code class="highlighter-rouge">with: :exception</code> parameter, so you didn’t touch a thing and have an old app, you might have the <code class="highlighter-rouge">null_session</code> strategy setup.</p>
+<p>Note that while this is now the default, Rails 3 didn’t generate the <code class="highlighter-rouge">ApplicationController</code> file with the <code class="highlighter-rouge">with: :exception</code> parameter, so you didn’t touch a thing and have an old app that you kept on updating, you might have the <code class="highlighter-rouge">null_session</code> strategy set up and not even know it.</p>
 
 <h3 id="reset-session">Reset Session</h3>
 
 <p>The third strategy, <code class="highlighter-rouge">reset_session</code>, simply calls the <code class="highlighter-rouge">reset_session</code> of <code class="highlighter-rouge">@controller</code> as you can see <a href="https://github.com/rails/rails/blob/v5.0.0/actionpack/lib/action_controller/metal/request_forgery_protection.rb#L179-L187">here</a>.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>  protect_from_forgery with: :reset_session
-</code></pre>
-</div>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">protect_from_forgery</span> <span class="ss">with: :reset_session</span></code></pre></figure>
 
 <h3 id="important-note-on-security">Important Note On Security</h3>
 
-<p>It’s very important to note that a fraudulent request will go through with the <code class="highlighter-rouge">null_session</code> and <code class="highlighter-rouge">reset_session</code> strategies, the only action taken there is to make sure the session is empty during the request. This might cause security concerns depending on your implementation and it is quite counter intuitive.</p>
+<p>It is very important to keep in mind that <strong>fraudulent requests will go through</strong> with the <code class="highlighter-rouge">null_session</code> and <code class="highlighter-rouge">reset_session</code> strategies. The only action taken by these strategies is to make sure the session is empty during the request.</p>
 
-<p>This scenario has been explained in depth by Jason Yeo in his great article, “<a href="https://blog.srcclr.com/when-rails-protect_from_forgery-fails/">When Rails’ protect from forgery Fails</a>”.</p>
+<p>As an illustration here are the logs for a fraudulent request:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Started POST "/posts"
+Processing by PostsController#create as */*
+Can't verify CSRF token authenticity.
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+</code></pre>
+</div>
+
+<p>I think that it is quite counter intuitive and might cause serious security concerns depending on your implementation. Brakeman even considers using other strategies <a href="https://github.com/presidentbeef/brakeman/pull/648">to be an issue</a>.</p>
+
+<p>If you want to learn more about this, Jason Yeo explains it in depth in his great article, “<a href="https://blog.srcclr.com/when-rails-protect_from_forgery-fails/">When Rails’ protect from forgery Fails</a>”. If you’re unsure of your implementation, the safe approach is to use the <code class="highlighter-rouge">exception</code> strategy.</p>
 
 <h2 id="building-a-custom-strategy">Building A Custom Strategy</h2>
 
-<p>In some cases it can be interesting to build your own. For instance, let’s say you don’t want to return 500s when your application when a CSRF attack occurs, but you still want to be warned or at least have better logs.</p>
+<p>In some cases it can be interesting to build your own strategy. Let’s say you don’t want to return 500s when a CSRF attack occurs, but you still want to be warned or at least have better logs.</p>
 
 <h3 id="how-it-works">How It Works</h3>
 
@@ -141,53 +146,47 @@ ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticit
 
 <p>Any forgery propection strategy needs to be initalized with a controller and respond to <code class="highlighter-rouge">handle_unverified_request</code>. So the bare minimum here is:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>class MyStrategy
-  def initialize(controller)
-  end
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">MyStrategy</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">controller</span><span class="p">)</span>
+  <span class="k">end</span>
 
-  def handle_unverified_request
-  end
-end
-</code></pre>
-</div>
+  <span class="k">def</span> <span class="nf">handle_unverified_request</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></figure>
 
 <p>Then you can use it by changing your controller code:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>class ApplicationController &lt; ActionController::Base
- protect_from_forgery with: MyStrategy
-end
-</code></pre>
-</div>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">ApplicationController</span> <span class="o">&lt;</span> <span class="no">ActionController</span><span class="o">::</span><span class="no">Base</span>
+ <span class="n">protect_from_forgery</span> <span class="ss">with: </span><span class="no">MyStrategy</span>
+<span class="k">end</span></code></pre></figure>
 
 <p>Now you can get your strategy to do whatever you’d like and check the result by running the curl command. To give you ideas, here’s what I implemented on a project to get a bit more logs while still falling back on the <code class="highlighter-rouge">null_session</code> strategy:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>class LoggingCsrfStrategy
-  def initialize(controller)
-    @controller = controller
-  end
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">LoggingForgeryStrategy</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">controller</span><span class="p">)</span>
+    <span class="vi">@controller</span> <span class="o">=</span> <span class="n">controller</span>
+  <span class="k">end</span>
 
-  def handle_unverified_request
-    Rails.logger.warn [
-      "handle_unverified_request",
-      "#{@controller.controller_name}##{@controller.action_name}",
-      "params=#{request.params}"
-    ].join(" - ")
+  <span class="k">def</span> <span class="nf">handle_unverified_request</span>
+    <span class="no">Rails</span><span class="p">.</span><span class="nf">logger</span><span class="p">.</span><span class="nf">warn</span> <span class="p">[</span>
+      <span class="s2">"handle_unverified_request"</span><span class="p">,</span>
+      <span class="s2">"</span><span class="si">#{</span><span class="vi">@controller</span><span class="p">.</span><span class="nf">controller_name</span><span class="si">}</span><span class="s2">#</span><span class="si">#{</span><span class="vi">@controller</span><span class="p">.</span><span class="nf">action_name</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span>
+      <span class="s2">"params=</span><span class="si">#{</span><span class="n">request</span><span class="p">.</span><span class="nf">params</span><span class="si">}</span><span class="s2">"</span>
+    <span class="p">].</span><span class="nf">join</span><span class="p">(</span><span class="s2">" - "</span><span class="p">)</span>
 
-    null_session.handle_unverified_request
-  end
+    <span class="n">null_session</span><span class="p">.</span><span class="nf">handle_unverified_request</span>
+  <span class="k">end</span>
 
-  private
+  <span class="kp">private</span>
 
-  def request
-    @request ||= @controller.request
-  end
+  <span class="k">def</span> <span class="nf">request</span>
+    <span class="vi">@request</span> <span class="o">||=</span> <span class="vi">@controller</span><span class="p">.</span><span class="nf">request</span>
+  <span class="k">end</span>
 
-  def null_session
-   ActionController::RequestForgeryProtection::ProtectionMethods::NullSession.new(@controller)
-  end
-end
-</code></pre>
-</div>
+  <span class="k">def</span> <span class="nf">null_session</span>
+   <span class="no">ActionController</span><span class="o">::</span><span class="no">RequestForgeryProtection</span><span class="o">::</span><span class="no">ProtectionMethods</span><span class="o">::</span><span class="no">NullSession</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="vi">@controller</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></figure>
 
 
 
@@ -215,15 +214,9 @@ end
             
           
             
-              
-              <li><a href="/blog/2016/03/14/github-pages-jekyll/">Trailing Slashes, Github Pages, Jekyll 3 & 404s</a></li>
-            
           
             
           
-            
-              
-              <li><a href="/blog/2016/03/01/vimrc-example/">Vim Configuration From Scratch in 2016</a></li>
             
           
             
@@ -266,24 +259,9 @@ end
             
           
             
-              
-              <li><a href="/blog/2014/07/22/in-defense-of-legacy-code/">Some Respect For Legacy Code</a></li>
-            
           
             
           
-            
-              
-              <li><a href="/blog/2014/04/28/frame-based-layout-bad-code/">Tips on Creating a Website From When I Was 12</a></li>
-            
-          
-            
-          
-            
-          
-            
-              
-              <li><a href="/blog/2013/11/05/enough-with-the-language-trolls/">Enough With The Trolls</a></li>
             
           
             
@@ -299,8 +277,7 @@ end
             
           
             
-              
-              <li><a href="/blog/2013/03/25/please-changelog-open-source/">Please Keep a Changelog For Your Open Source Lib</a></li>
+          
             
           
             
@@ -322,8 +299,9 @@ end
             
           
             
-              
-              <li><a href="/blog/2012/09/04/one-reason-to-switch-to-vim-editor/">The One Thing That Made Me Switch To Vim</a></li>
+          
+            
+          
             
           
             

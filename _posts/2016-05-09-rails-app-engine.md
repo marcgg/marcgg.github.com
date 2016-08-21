@@ -4,7 +4,7 @@ title: "First Impressions: Rails 5 on Google App Engine"
 description: "In this post I've been playing around with Google App Engine, trying to release a simple Rails 5 app, reading logs or setting environment variables. I also attempted a very non-scientific performance benchmark to compare Heroku with the App Engine."
 blog: true
 category: blog
-tag: Dev
+tag: Ruby
 ---
 
 The past week had two great news: [Ruby on Google App Engine went beta][1] and [Rails 5.0.0.rc1 was released][2]. I decided it was a good opportunity to try both!
