@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      Understanding Rails' Forgery Protection Strategies
+    </title>
+    <meta name="description" content="lol">
+    <meta name="author" content="Marc G Gauthier">
+    <meta content='user-scalable=no, width=device-width, initial-scale=1.0' name='viewport'>
+    <meta name="google-site-verification" content="x2EpQdOMz-k9fP8hak9I3COaXhnQ4jNLp2GU4GYQ8jM" />
+    <link href='//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,400,700,300' rel='stylesheet' type='text/css'>
+    <link href="/assets/css/app.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/atom.xml" rel="alternate" type="application/atom+xml" title="Marcgg#Blog">
+    <link rel="shortcut icon" href="/assets/favicon.png">
+  </head>
+
+  <body>
+    <div id="gradient"></div>
+    <header>
+
+      <div id="logo">
+        <a id='logo1' href="/">marcgg</a>
+        <span id='logo2'>#</span>
+        <a id='logo3' href="/blog/">
+          blog
+        </a>
+      </div>
+      <div id="more-nav">
+        &rarr; <a href="/blog/" class="selected">blog</a>
+        &rarr; <a href="/photos/" class="">photos</a>
+        &rarr; <a href="/hire/" class="">hire me</a>
+      </div>
+    </header>
+
+    <h1>
+  <span>
+    
+      Understanding Rails' Forgery Protection Strategies
+    
+    
+  </span>
+</h1>
+
+
+<div class="published">
+  <span>22 August 2016</span>
+</div>
+
+<div id="container">
+  <div id="content">
+    <div class="post" id="post-">
+
+      
+      <p>Cross-site request forgery or <a href="https://en.wikipedia.org/wiki/Cross-site_request_forgery">CSRF</a> is a well known attack that has been <a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet">vastly documented</a>. To deal with this, Rails has the <code class="highlighter-rouge">ActionController::RequestForgeryProtection</code> that gives access to <code class="highlighter-rouge">protect_from_forgery</code>.</p>
+
+<p>It’s now setup by default when you create a new Rails project and takes the form of a single line of code in the main controller:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>class ApplicationController &lt; ActionController::Base
+  protect_from_forgery with: :exception
+end
+</code></pre>
+</div>
+
+<p>This <code class="highlighter-rouge">with</code> parameter is actually the <code class="highlighter-rouge">forgery_protection_strategy</code> parameter, it tells Rails how to behave when a CSRF attack is identified.</p>
+
+<h2 id="the-different-forgery-protection-strategies">The Different Forgery Protection Strategies</h2>
+
+<p>There are <a href="https://github.com/rails/rails/blob/v5.0.0/actionpack/lib/action_controller/metal/request_forgery_protection.rb#L140-L198">3 strategies</a> currently built into the  <code class="highlighter-rouge">RequestForgeryProtection ::ProtectionMethods</code> module of <code class="highlighter-rouge">ActionController</code>: <code class="highlighter-rouge">exception</code>, <code class="highlighter-rouge">null_session</code> and <code class="highlighter-rouge">reset_session</code>.</p>
+
+<p>The <code class="highlighter-rouge">null_session</code> strategy is the default one. The gotcha here is that by default Rails 5 generates the <code class="highlighter-rouge">ApplicationController</code> file with the <code class="highlighter-rouge">exception</code> strategy, but the default strategy <a href="https://github.com/rails/rails/blob/v5.0.0/actionpack/lib/action_controller/metal/request_forgery_protection.rb#L125">inside ActionPack</a> is actually the <code class="highlighter-rouge">null_session</code> one, which can be confusing.</p>
+
+<h3 id="exception">Exception</h3>
+
+<p>This is the one Rails 5 sets up by default. It will raise an exception if a CSRF attack occurs:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>  protect_from_forgery with: :exception
+</code></pre>
+</div>
+
+<p>This strategy ensures that the execution stops right after the <code class="highlighter-rouge">verify_authenticity_token</code> check if the request is fraudulent.</p>
+
+<h3 id="null-session">Null Session</h3>
+
+<p>This strategy will not cause the app to crash but will instead <a href="https://github.com/rails/rails/blob/v5.0.0/actionpack/lib/action_controller/metal/request_forgery_protection.rb#L147-L153">nullify the session for the duration of the request</a>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>  protect_from_forgery
+</code></pre>
+</div>
+
+<p>Note that while this is now the default, Rails 3 didn’t generate the <code class="highlighter-rouge">ApplicationController</code> file with the <code class="highlighter-rouge">with: :exception</code> parameter, so you didn’t touch a thing and have an old app, you might have the <code class="highlighter-rouge">null_session</code> strategy setup.</p>
+
+<h3 id="reset-session">Reset Session</h3>
+
+<p>The third strategy, <code class="highlighter-rouge">reset_session</code>, simply calls the <code class="highlighter-rouge">reset_session</code> of <code class="highlighter-rouge">@controller</code> as you can see <a href="https://github.com/rails/rails/blob/v5.0.0/actionpack/lib/action_controller/metal/request_forgery_protection.rb#L179-L187">here</a>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>  protect_from_forgery with: :reset_session
+</code></pre>
+</div>
+
+<h3 id="important-note-on-security">Important Note On Security</h3>
+
+<p>It’s very important to note that a fraudulent request will go through with the <code class="highlighter-rouge">null_session</code> and <code class="highlighter-rouge">reset_session</code> strategies, the only action taken there is to make sure the session is empty during the request. This might cause security concerns depending on your implementation and it is quite counter intuitive.</p>
+
+<p>This scenario has been explained in depth by Jason Yeo in his great article, “<a href="https://blog.srcclr.com/when-rails-protect_from_forgery-fails/">When Rails’ protect from forgery Fails</a>”.</p>
+
+<h2 id="building-a-custom-strategy">Building A Custom Strategy</h2>
+
+<p>In some cases it can be interesting to build your own. For instance, let’s say you don’t want to return 500s when your application when a CSRF attack occurs, but you still want to be warned or at least have better logs.</p>
+
+<h3 id="how-it-works">How It Works</h3>
+
+<p>First, let’s take a look at how all this works:</p>
+
+<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/csrf_rails.jpg" alt="Google analytics drop" style="padding: 20px; width: 600px;" /></div>
+
+<p>The requests goes through <code class="highlighter-rouge">verify_authenticity_token</code>. If there is an issue, it then logs a warning and then calls the <code class="highlighter-rouge">handle_unverified_request</code> method of the <code class="highlighter-rouge">forgery_protection_strategy</code>.</p>
+
+<h3 id="getting-an-exception">Getting An Exception</h3>
+
+<p>First, let’s get a <code class="highlighter-rouge">InvalidAuthenticityToken</code> exception. If you want to do it properly, you probably want to do this writing tests, but to demonstrate this I’ll be using <a href="https://curl.haxx.se/">curl</a>.</p>
+
+<p>Start your server and call a POST action that has <code class="highlighter-rouge">protect_from_forgery</code> activated using curl. This way you’re sure that you don’t have the proper <a href="http://guides.rubyonrails.org/security.html#cross-site-request-forgery-csrf">authenticity token</a>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ curl -X POST -I http://localhost:3000/secure_post_action
+</code></pre>
+</div>
+
+<p>You should see this in your logs:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken)
+</code></pre>
+</div>
+
+<h3 id="adding-a-custom-forgery-protection-strategy">Adding A Custom Forgery Protection Strategy</h3>
+
+<p>Now that we know how to quickly test, let’s add our new strategy.</p>
+
+<p>Any forgery propection strategy needs to be initalized with a controller and respond to <code class="highlighter-rouge">handle_unverified_request</code>. So the bare minimum here is:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>class MyStrategy
+  def initialize(controller)
+  end
+
+  def handle_unverified_request
+  end
+end
+</code></pre>
+</div>
+
+<p>Then you can use it by changing your controller code:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>class ApplicationController &lt; ActionController::Base
+ protect_from_forgery with: MyStrategy
+end
+</code></pre>
+</div>
+
+<p>Now you can get your strategy to do whatever you’d like and check the result by running the curl command. To give you ideas, here’s what I implemented on a project to get a bit more logs while still falling back on the <code class="highlighter-rouge">null_session</code> strategy:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>class LoggingCsrfStrategy
+  def initialize(controller)
+    @controller = controller
+  end
+
+  def handle_unverified_request
+    Rails.logger.warn [
+      "handle_unverified_request",
+      "#{@controller.controller_name}##{@controller.action_name}",
+      "params=#{request.params}"
+    ].join(" - ")
+
+    null_session.handle_unverified_request
+  end
+
+  private
+
+  def request
+    @request ||= @controller.request
+  end
+
+  def null_session
+   ActionController::RequestForgeryProtection::ProtectionMethods::NullSession.new(@controller)
+  end
+end
+</code></pre>
+</div>
+
+
+
+      <div id="more">
+        
+        
+
+        <div id="more-articles">
+          
+            <p>Since you scrolled this far, you might as well take a look at some other things I wrote !</p>
+            <ul>
+              
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              <li><a href="/blog/2016/05/09/rails-app-engine/">First Impressions: Rails 5 on Google App Engine</a></li>
+            
+          
+            
+          
+            
+              
+              <li><a href="/blog/2016/03/14/github-pages-jekyll/">Trailing Slashes, Github Pages, Jekyll 3 & 404s</a></li>
+            
+          
+            
+          
+            
+              
+              <li><a href="/blog/2016/03/01/vimrc-example/">Vim Configuration From Scratch in 2016</a></li>
+            
+          
+            
+          
+            
+              
+              <li><a href="/blog/2016/02/15/rspec-on-multiple-rails-projects/">Automatically Run RSpec on Multiple Projects</a></li>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              <li><a href="/blog/2014/07/22/in-defense-of-legacy-code/">Some Respect For Legacy Code</a></li>
+            
+          
+            
+          
+            
+              
+              <li><a href="/blog/2014/04/28/frame-based-layout-bad-code/">Tips on Creating a Website From When I Was 12</a></li>
+            
+          
+            
+          
+            
+          
+            
+              
+              <li><a href="/blog/2013/11/05/enough-with-the-language-trolls/">Enough With The Trolls</a></li>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              <li><a href="/blog/2013/03/25/please-changelog-open-source/">Please Keep a Changelog For Your Open Source Lib</a></li>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              <li><a href="/blog/2012/09/04/one-reason-to-switch-to-vim-editor/">The One Thing That Made Me Switch To Vim</a></li>
+            
+          
+            
+          
+            
+          
+            
+          
+        
+            </ul>
+          
+          
+        </div>
+        <a href="https://twitter.com/marcgg" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @marcgg</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+        <a href="https://twitter.com/share" class="twitter-share-button" data-via="marcgg" data-size="large">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+      </div>
+
+      <div id="comments">
+        <style id="disqus_hide">
+          #disqus_thread{
+            display: none;
+          }
+        </style>
+        <p>
+          <span id="show-disqus-arrow">&rarr; </span>
+          <a href="#" id="show-disqus">Read the comments or contribute with your own</a>
+        </p>
+        <div id="disqus_thread"></div>
+      </div>
+      <script type="text/javascript">
+          var disqus_shortname = 'marcgg';
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+      </script>
+
+    </div>
+
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="/assets/js/comments.js"></script>
+
+
+    <footer>
+      <div>Website powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a>, hosted on
+      <a href="https://github.com/marcgg/marcgg.github.com">Github</a>
+      and put together by <a href="http://twitter.com/marcgg">@marcgg</a>.</div>
+      <div>All of the <a href="/blog">blog's articles</a> are under
+      <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative commons</a> license
+      unless stated otherwise. Everything else is &copy;.</div>
+    </footer>
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-31071519-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </body>
+</html>

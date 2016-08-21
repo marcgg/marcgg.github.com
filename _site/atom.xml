@@ -4,13 +4,162 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2016-08-21T15:56:53+02:00</updated>
+ <updated>2016-08-21T18:24:53+02:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
    <email>marcg.gauthier@gmail.com</email>
  </author>
 
+ 
+  
+   <entry>
+     <title>Understanding Rails&#39; Forgery Protection Strategies</title>
+     <link href="https://marcgg.com/blog/2016/08/22/csrf-rails/"/>
+     <updated>2016-08-22T00:00:00+02:00</updated>
+     <id>https://marcgg.com/blog/2016/08/22/csrf-rails</id>
+     <content type="html">
+       &lt;p&gt;Cross-site request forgery or &lt;a href=&quot;https://en.wikipedia.org/wiki/Cross-site_request_forgery&quot;&gt;CSRF&lt;/a&gt; is a well known attack that has been &lt;a href=&quot;https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet&quot;&gt;vastly documented&lt;/a&gt;. To deal with this, Rails has the &lt;code class=&quot;highlighter-rouge&quot;&gt;ActionController::RequestForgeryProtection&lt;/code&gt; that gives access to &lt;code class=&quot;highlighter-rouge&quot;&gt;protect_from_forgery&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;It’s now setup by default when you create a new Rails project and takes the form of a single line of code in the main controller:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class ApplicationController &amp;lt; ActionController::Base
+  protect_from_forgery with: :exception
+end
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This &lt;code class=&quot;highlighter-rouge&quot;&gt;with&lt;/code&gt; parameter is actually the &lt;code class=&quot;highlighter-rouge&quot;&gt;forgery_protection_strategy&lt;/code&gt; parameter, it tells Rails how to behave when a CSRF attack is identified.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-different-forgery-protection-strategies&quot;&gt;The Different Forgery Protection Strategies&lt;/h2&gt;
+
+&lt;p&gt;There are &lt;a href=&quot;https://github.com/rails/rails/blob/v5.0.0/actionpack/lib/action_controller/metal/request_forgery_protection.rb#L140-L198&quot;&gt;3 strategies&lt;/a&gt; currently built into the  &lt;code class=&quot;highlighter-rouge&quot;&gt;RequestForgeryProtection ::ProtectionMethods&lt;/code&gt; module of &lt;code class=&quot;highlighter-rouge&quot;&gt;ActionController&lt;/code&gt;: &lt;code class=&quot;highlighter-rouge&quot;&gt;exception&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;null_session&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;reset_session&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;null_session&lt;/code&gt; strategy is the default one. The gotcha here is that by default Rails 5 generates the &lt;code class=&quot;highlighter-rouge&quot;&gt;ApplicationController&lt;/code&gt; file with the &lt;code class=&quot;highlighter-rouge&quot;&gt;exception&lt;/code&gt; strategy, but the default strategy &lt;a href=&quot;https://github.com/rails/rails/blob/v5.0.0/actionpack/lib/action_controller/metal/request_forgery_protection.rb#L125&quot;&gt;inside ActionPack&lt;/a&gt; is actually the &lt;code class=&quot;highlighter-rouge&quot;&gt;null_session&lt;/code&gt; one, which can be confusing.&lt;/p&gt;
+
+&lt;h3 id=&quot;exception&quot;&gt;Exception&lt;/h3&gt;
+
+&lt;p&gt;This is the one Rails 5 sets up by default. It will raise an exception if a CSRF attack occurs:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  protect_from_forgery with: :exception
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This strategy ensures that the execution stops right after the &lt;code class=&quot;highlighter-rouge&quot;&gt;verify_authenticity_token&lt;/code&gt; check if the request is fraudulent.&lt;/p&gt;
+
+&lt;h3 id=&quot;null-session&quot;&gt;Null Session&lt;/h3&gt;
+
+&lt;p&gt;This strategy will not cause the app to crash but will instead &lt;a href=&quot;https://github.com/rails/rails/blob/v5.0.0/actionpack/lib/action_controller/metal/request_forgery_protection.rb#L147-L153&quot;&gt;nullify the session for the duration of the request&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  protect_from_forgery
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Note that while this is now the default, Rails 3 didn’t generate the &lt;code class=&quot;highlighter-rouge&quot;&gt;ApplicationController&lt;/code&gt; file with the &lt;code class=&quot;highlighter-rouge&quot;&gt;with: :exception&lt;/code&gt; parameter, so you didn’t touch a thing and have an old app, you might have the &lt;code class=&quot;highlighter-rouge&quot;&gt;null_session&lt;/code&gt; strategy setup.&lt;/p&gt;
+
+&lt;h3 id=&quot;reset-session&quot;&gt;Reset Session&lt;/h3&gt;
+
+&lt;p&gt;The third strategy, &lt;code class=&quot;highlighter-rouge&quot;&gt;reset_session&lt;/code&gt;, simply calls the &lt;code class=&quot;highlighter-rouge&quot;&gt;reset_session&lt;/code&gt; of &lt;code class=&quot;highlighter-rouge&quot;&gt;@controller&lt;/code&gt; as you can see &lt;a href=&quot;https://github.com/rails/rails/blob/v5.0.0/actionpack/lib/action_controller/metal/request_forgery_protection.rb#L179-L187&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  protect_from_forgery with: :reset_session
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;important-note-on-security&quot;&gt;Important Note On Security&lt;/h3&gt;
+
+&lt;p&gt;It’s very important to note that a fraudulent request will go through with the &lt;code class=&quot;highlighter-rouge&quot;&gt;null_session&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;reset_session&lt;/code&gt; strategies, the only action taken there is to make sure the session is empty during the request. This might cause security concerns depending on your implementation and it is quite counter intuitive.&lt;/p&gt;
+
+&lt;p&gt;This scenario has been explained in depth by Jason Yeo in his great article, “&lt;a href=&quot;https://blog.srcclr.com/when-rails-protect_from_forgery-fails/&quot;&gt;When Rails’ protect from forgery Fails&lt;/a&gt;”.&lt;/p&gt;
+
+&lt;h2 id=&quot;building-a-custom-strategy&quot;&gt;Building A Custom Strategy&lt;/h2&gt;
+
+&lt;p&gt;In some cases it can be interesting to build your own. For instance, let’s say you don’t want to return 500s when your application when a CSRF attack occurs, but you still want to be warned or at least have better logs.&lt;/p&gt;
+
+&lt;h3 id=&quot;how-it-works&quot;&gt;How It Works&lt;/h3&gt;
+
+&lt;p&gt;First, let’s take a look at how all this works:&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/csrf_rails.jpg&quot; alt=&quot;Google analytics drop&quot; style=&quot;padding: 20px; width: 600px;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;The requests goes through &lt;code class=&quot;highlighter-rouge&quot;&gt;verify_authenticity_token&lt;/code&gt;. If there is an issue, it then logs a warning and then calls the &lt;code class=&quot;highlighter-rouge&quot;&gt;handle_unverified_request&lt;/code&gt; method of the &lt;code class=&quot;highlighter-rouge&quot;&gt;forgery_protection_strategy&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;getting-an-exception&quot;&gt;Getting An Exception&lt;/h3&gt;
+
+&lt;p&gt;First, let’s get a &lt;code class=&quot;highlighter-rouge&quot;&gt;InvalidAuthenticityToken&lt;/code&gt; exception. If you want to do it properly, you probably want to do this writing tests, but to demonstrate this I’ll be using &lt;a href=&quot;https://curl.haxx.se/&quot;&gt;curl&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Start your server and call a POST action that has &lt;code class=&quot;highlighter-rouge&quot;&gt;protect_from_forgery&lt;/code&gt; activated using curl. This way you’re sure that you don’t have the proper &lt;a href=&quot;http://guides.rubyonrails.org/security.html#cross-site-request-forgery-csrf&quot;&gt;authenticity token&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ curl -X POST -I http://localhost:3000/secure_post_action
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;You should see this in your logs:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Can&#39;t verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;adding-a-custom-forgery-protection-strategy&quot;&gt;Adding A Custom Forgery Protection Strategy&lt;/h3&gt;
+
+&lt;p&gt;Now that we know how to quickly test, let’s add our new strategy.&lt;/p&gt;
+
+&lt;p&gt;Any forgery propection strategy needs to be initalized with a controller and respond to &lt;code class=&quot;highlighter-rouge&quot;&gt;handle_unverified_request&lt;/code&gt;. So the bare minimum here is:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class MyStrategy
+  def initialize(controller)
+  end
+
+  def handle_unverified_request
+  end
+end
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Then you can use it by changing your controller code:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class ApplicationController &amp;lt; ActionController::Base
+ protect_from_forgery with: MyStrategy
+end
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now you can get your strategy to do whatever you’d like and check the result by running the curl command. To give you ideas, here’s what I implemented on a project to get a bit more logs while still falling back on the &lt;code class=&quot;highlighter-rouge&quot;&gt;null_session&lt;/code&gt; strategy:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class LoggingCsrfStrategy
+  def initialize(controller)
+    @controller = controller
+  end
+
+  def handle_unverified_request
+    Rails.logger.warn [
+      &quot;handle_unverified_request&quot;,
+      &quot;#{@controller.controller_name}##{@controller.action_name}&quot;,
+      &quot;params=#{request.params}&quot;
+    ].join(&quot; - &quot;)
+
+    null_session.handle_unverified_request
+  end
+
+  private
+
+  def request
+    @request ||= @controller.request
+  end
+
+  def null_session
+   ActionController::RequestForgeryProtection::ProtectionMethods::NullSession.new(@controller)
+  end
+end
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+       
+     </content>
+   </entry>
+  
  
   
    <entry>
