@@ -6,6 +6,26 @@
 	<dict>
 		<key>sheetClusters</key>
 		<dict>
+			<key>4-rules.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>493467275.50323403</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>84</integer>
+				</dict>
+			</dict>
+			<key>agile-web.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>493469075.592655</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>99</integer>
+				</dict>
+			</dict>
 			<key>agile.md</key>
 			<dict>
 				<key>lastModification</key>
@@ -46,6 +66,16 @@
 					<integer>56</integer>
 				</dict>
 			</dict>
+			<key>facts.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>493420135.55734199</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>80</integer>
+				</dict>
+			</dict>
 			<key>herding.md</key>
 			<dict>
 				<key>lastModification</key>
@@ -76,6 +106,16 @@
 					<integer>46</integer>
 				</dict>
 			</dict>
+			<key>non-violent.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>493468103.62987399</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>93</integer>
+				</dict>
+			</dict>
 			<key>peopleware.md</key>
 			<dict>
 				<key>lastModification</key>
@@ -94,6 +134,16 @@
 				<dict>
 					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
 					<integer>11</integer>
+				</dict>
+			</dict>
+			<key>poignant.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>493469083.73637301</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>103</integer>
 				</dict>
 			</dict>
 			<key>poodr.md</key>
@@ -159,11 +209,11 @@
 			<key>template.md</key>
 			<dict>
 				<key>lastModification</key>
-				<real>493418679.40581399</real>
+				<real>493468097.05040598</real>
 				<key>version</key>
 				<dict>
 					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-					<integer>75</integer>
+					<integer>92</integer>
 				</dict>
 			</dict>
 			<key>the-goal.md</key>
@@ -268,6 +318,21 @@
 			<string>prize.md</string>
 		</array>
 		<array>
+			<string>facts.md</string>
+		</array>
+		<array>
+			<string>4-rules.md</string>
+		</array>
+		<array>
+			<string>non-violent.md</string>
+		</array>
+		<array>
+			<string>agile-web.md</string>
+		</array>
+		<array>
+			<string>poignant.md</string>
+		</array>
+		<array>
 			<string>template.md</string>
 		</array>
 	</array>
@@ -278,7 +343,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-			<integer>77</integer>
+			<integer>104</integer>
 		</dict>
 	</dict>
 </dict>

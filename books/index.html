@@ -7,10 +7,11 @@ description: "Startup and technology related book reviews."
 ---
 <div id="all-posts">
   <div id="book-review" style="margin-top: 20px;">
-    Here I share my opinion on what I've been reading,
-    and should not be taken as a general analysis of the books.
+    Here I share my opinion on what I've been reading.
     If you generally enjoy my blog posts,
-    you might share my opinion on most of them.
+    you might share my opinion on most of them, but again,
+    this is just what I thought and this
+    isn't at all an analysis of these books.
   </div>
 
   {% assign sorted = site.books | sort:"score" | reverse %}
@@ -34,11 +35,11 @@ description: "Startup and technology related book reviews."
             <span class="top"><span class="icon">✓✓✓</span>Amazing book, everybody should read it</span>
           {% elsif book.score >= 16 %}
             <span class="top"><span class="icon">✓✓</span>A must read</span>
-          {% elsif book.score >= 14 %}
+          {% elsif book.score >= 13 %}
             <span class="good"><span class="icon">✓</span>Good read if you enjoy the subject</span>
-          {% elsif book.score >= 12 %}
-            <span class="medium"><span class="icon">~</span>Interesting book, but don't go out of your way to read it</span>
           {% elsif book.score >= 10 %}
+            <span class="medium"><span class="icon">~</span>Interesting book, but don't go out of your way to read it</span>
+          {% elsif book.score >= 8 %}
             <span class="low"><span class="icon">×</span>Don't pick it up unless you really like the topic</span>
           {% else %}
             <span class="poor"><span class="icon">××</span>Not really worth checking</span>

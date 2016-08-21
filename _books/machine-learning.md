@@ -4,7 +4,7 @@ title: "Machine Learning for Hackers"
 author: "D. Conway & J. M. White"
 link: "https://www.amazon.fr/gp/product/1449303714/ref=as\_li\_tl?ie=UTF8&camp=1642&creative=6746&creativeASIN=1449303714&linkCode=as2&tag=mg092-21"
 img: "ml-cover.jpg"
-score: 14
+score: 13
 ---
 
 This interesting book takes an "action oriented" approach to machine learning. It gives a lot of examples and gets you writing code quickly with [R][1], and doesn't get too mathematical on the reader. Overall I enjoyed it as a good introduction to machine learning, but it's probably a bit too simplified for any hardcore data scientist.
