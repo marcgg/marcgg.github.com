@@ -46,6 +46,16 @@
 					<integer>2</integer>
 				</dict>
 			</dict>
+			<key>creativity.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>495319042.61601698</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>129</integer>
+				</dict>
+			</dict>
 			<key>dataclysm.md</key>
 			<dict>
 				<key>lastModification</key>
@@ -54,6 +64,16 @@
 				<dict>
 					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
 					<integer>42</integer>
+				</dict>
+			</dict>
+			<key>deception.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>495319175.89687401</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>143</integer>
 				</dict>
 			</dict>
 			<key>elixir.md</key>
@@ -84,6 +104,26 @@
 				<dict>
 					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
 					<integer>37</integer>
+				</dict>
+			</dict>
+			<key>high-output.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>495319298.91055</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>160</integer>
+				</dict>
+			</dict>
+			<key>holacraty.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>495319272.37629497</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>154</integer>
 				</dict>
 			</dict>
 			<key>humans.md</key>
@@ -166,6 +206,16 @@
 					<integer>7</integer>
 				</dict>
 			</dict>
+			<key>power.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>495319966.63712502</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>164</integer>
+				</dict>
+			</dict>
 			<key>pragmatic-programmer.md</key>
 			<dict>
 				<key>lastModification</key>
@@ -184,6 +234,16 @@
 				<dict>
 					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
 					<integer>76</integer>
+				</dict>
+			</dict>
+			<key>psychology.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>495318273.53146702</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>112</integer>
 				</dict>
 			</dict>
 			<key>rework.md</key>
@@ -216,6 +276,40 @@
 					<integer>70</integer>
 				</dict>
 			</dict>
+			<key>ted.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>495319183.80948699</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>147</integer>
+				</dict>
+			</dict>
+			<key>text-processing - 2.md</key>
+			<dict>
+				<key>explicitUnassignment</key>
+				<true/>
+				<key>firstUnassignment</key>
+				<real>495319194.00194597</real>
+				<key>lastModification</key>
+				<real>495319213.63280702</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>151</integer>
+				</dict>
+			</dict>
+			<key>text-processing.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>495319066.26387298</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>133</integer>
+				</dict>
+			</dict>
 			<key>the-goal.md</key>
 			<dict>
 				<key>lastModification</key>
@@ -226,6 +320,20 @@
 					<integer>3</integer>
 				</dict>
 			</dict>
+			<key>w.md</key>
+			<dict>
+				<key>explicitUnassignment</key>
+				<true/>
+				<key>firstUnassignment</key>
+				<real>495318989.919842</real>
+				<key>lastModification</key>
+				<real>495319058.26043701</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>132</integer>
+				</dict>
+			</dict>
 			<key>where-ideas-come-from.md</key>
 			<dict>
 				<key>lastModification</key>
@@ -234,6 +342,16 @@
 				<dict>
 					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
 					<integer>16</integer>
+				</dict>
+			</dict>
+			<key>who-gets-what.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>495318981.18469</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>124</integer>
 				</dict>
 			</dict>
 			<key>win-friends.md</key>
@@ -335,6 +453,39 @@
 		<array>
 			<string>humans.md</string>
 		</array>
+		<array>
+			<string>psychology.md</string>
+		</array>
+		<array>
+			<string>who-gets-what.md</string>
+		</array>
+		<array>
+			<string>creativity.md</string>
+		</array>
+		<array>
+			<string>w.md</string>
+		</array>
+		<array>
+			<string>text-processing.md</string>
+		</array>
+		<array>
+			<string>deception.md</string>
+		</array>
+		<array>
+			<string>ted.md</string>
+		</array>
+		<array>
+			<string>text-processing - 2.md</string>
+		</array>
+		<array>
+			<string>holacraty.md</string>
+		</array>
+		<array>
+			<string>high-output.md</string>
+		</array>
+		<array>
+			<string>power.md</string>
+		</array>
 	</array>
 	<key>storeFormatVersion</key>
 	<integer>1</integer>
@@ -343,7 +494,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-			<integer>109</integer>
+			<integer>165</integer>
 		</dict>
 	</dict>
 </dict>

@@ -316,6 +316,22 @@ blockquote p{
   color: #ed5252;
 }
 
+#upcoming-books{
+  padding-top: 20px;
+}
+#upcoming-books img{
+  height: 90px;
+  margin-right: 10px;
+  border: 1px solid #fff;
+}
+
+#upcoming-books a{
+  text-decoration: none;
+}
+#upcoming-books img:hover{
+  border: 1px solid #ed5252;
+}
+
 /* BLOG SHOW */
 
 .post{
@@ -391,13 +407,6 @@ p code{
   margin-bottom: 20px;
   opacity: 0.7;
   font-style: italic;
-}
-#book-review img{
-  width: 60px;
-  float: left;
-  margin: 0px 20px 0px 0px !important;
-  border: 0px !important;
-  padding: 0px !important;
 }
 
 /* PHOTOS */

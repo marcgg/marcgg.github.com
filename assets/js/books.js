@@ -3,7 +3,7 @@ $(document).ready(function(){
     e.preventDefault()
 
     $popin = $("#buy-popin")
-    $book = $(e.target).parents(".single-post")
+    $book = $(e.target).parents(".master-book-data")
 
     $popin.find("#buy-title").html(
         "\"" +
