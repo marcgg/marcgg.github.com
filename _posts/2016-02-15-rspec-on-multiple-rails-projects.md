@@ -25,15 +25,15 @@ First we need to use a [JSON formatter][1] so that rspec's output becomes easily
 
 {% highlight ruby %}
 require 'rspec'
-require 'rspec/core/formatters/json\_formatter'
+require 'rspec/core/formatters/json_formatter'
 
 config = RSpec.configuration
-formatter = RSpec::Core::Formatters::JsonFormatter.new(config.output\_stream)
+formatter = RSpec::Core::Formatters::JsonFormatter.new(config.output_stream)
 reporter =  RSpec::Core::Reporter.new(config)
-config.instance\_variable\_set(:@reporter, reporter)
-loader = config.send(:formatter\_loader)
-notifications = loader.send(:notifications\_for, RSpec::Core::Formatters::JsonFormatter)
-reporter.register\_listener(formatter, \*notifications)
+config.instance_variable_set(:@reporter, reporter)
+loader = config.send(:formatter_loader)
+notifications = loader.send(:notifications_for, RSpec::Core::Formatters::JsonFormatter)
+reporter.register_listener(formatter, *notifications)
 {% endhighlight %}
 
 ### Running The Specs
@@ -41,7 +41,7 @@ reporter.register\_listener(formatter, \*notifications)
 Once the formatter is setup, we need to iterate over every projects with `Dir.entries` and load the implementation files for every project:
 
 {% highlight ruby %}
-Dir["code\_path/\*.rb"].each {|file| require file }
+Dir["code_path/*.rb"].each {|file| require file }
 {% endhighlight %}
 
 ... and actually run the specs right after:
@@ -54,8 +54,8 @@ The problem here is that we don't unload the previously loaded files, which can 
 
 {% highlight ruby %}
 fork do
-  Dir["code\_path/\*.rb"].each { |file| require file }
-  RSpec::Core::Runner.run([file])
+ Dir["code_path/*.rb"].each { |file| require file }
+ RSpec::Core::Runner.run([file])
 end
 {% endhighlight %}
 
@@ -64,7 +64,7 @@ end
 Once the specs are done running, you can just access the results via the formatter with `formatter.output_hash`. For instance if you want the number of failures:
 
 {% highlight ruby %}
-formatter.output\_hash[:summary][:failure\_count]
+formatter.output_hash[:summary][:failure_count]
 {% endhighlight %}
 
 Once you managed to read the information you need, you can store it in a file somewhere and manipulate it easily in another process.

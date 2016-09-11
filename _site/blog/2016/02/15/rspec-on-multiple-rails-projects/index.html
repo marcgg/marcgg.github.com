@@ -70,21 +70,21 @@
 <p>First we need to use a <a href="https://www.relishapp.com/rspec/rspec-core/docs/formatters/json-formatter">JSON formatter</a> so that rspec’s output becomes easily usable:</p>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">'rspec'</span>
-<span class="nb">require</span> <span class="s1">'rspec/core/formatters/json\_formatter'</span>
+<span class="nb">require</span> <span class="s1">'rspec/core/formatters/json_formatter'</span>
 
 <span class="n">config</span> <span class="o">=</span> <span class="no">RSpec</span><span class="p">.</span><span class="nf">configuration</span>
-<span class="n">formatter</span> <span class="o">=</span> <span class="no">RSpec</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">Formatters</span><span class="o">::</span><span class="no">JsonFormatter</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">config</span><span class="p">.</span><span class="nf">output</span><span class="p">\</span><span class="n">_stream</span><span class="p">)</span>
+<span class="n">formatter</span> <span class="o">=</span> <span class="no">RSpec</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">Formatters</span><span class="o">::</span><span class="no">JsonFormatter</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">config</span><span class="p">.</span><span class="nf">output_stream</span><span class="p">)</span>
 <span class="n">reporter</span> <span class="o">=</span>  <span class="no">RSpec</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">Reporter</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
-<span class="n">config</span><span class="p">.</span><span class="nf">instance</span><span class="p">\</span><span class="n">_variable</span><span class="p">\</span><span class="n">_set</span><span class="p">(</span><span class="ss">:@reporter</span><span class="p">,</span> <span class="n">reporter</span><span class="p">)</span>
-<span class="n">loader</span> <span class="o">=</span> <span class="n">config</span><span class="p">.</span><span class="nf">send</span><span class="p">(</span><span class="ss">:formatter</span><span class="p">\</span><span class="n">_loader</span><span class="p">)</span>
-<span class="n">notifications</span> <span class="o">=</span> <span class="n">loader</span><span class="p">.</span><span class="nf">send</span><span class="p">(</span><span class="ss">:notifications</span><span class="p">\</span><span class="n">_for</span><span class="p">,</span> <span class="no">RSpec</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">Formatters</span><span class="o">::</span><span class="no">JsonFormatter</span><span class="p">)</span>
-<span class="n">reporter</span><span class="p">.</span><span class="nf">register</span><span class="p">\</span><span class="n">_listener</span><span class="p">(</span><span class="n">formatter</span><span class="p">,</span> <span class="p">\</span><span class="o">*</span><span class="n">notifications</span><span class="p">)</span></code></pre></figure>
+<span class="n">config</span><span class="p">.</span><span class="nf">instance_variable_set</span><span class="p">(</span><span class="ss">:@reporter</span><span class="p">,</span> <span class="n">reporter</span><span class="p">)</span>
+<span class="n">loader</span> <span class="o">=</span> <span class="n">config</span><span class="p">.</span><span class="nf">send</span><span class="p">(</span><span class="ss">:formatter_loader</span><span class="p">)</span>
+<span class="n">notifications</span> <span class="o">=</span> <span class="n">loader</span><span class="p">.</span><span class="nf">send</span><span class="p">(</span><span class="ss">:notifications_for</span><span class="p">,</span> <span class="no">RSpec</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">Formatters</span><span class="o">::</span><span class="no">JsonFormatter</span><span class="p">)</span>
+<span class="n">reporter</span><span class="p">.</span><span class="nf">register_listener</span><span class="p">(</span><span class="n">formatter</span><span class="p">,</span> <span class="o">*</span><span class="n">notifications</span><span class="p">)</span></code></pre></figure>
 
 <h3 id="running-the-specs">Running The Specs</h3>
 
 <p>Once the formatter is setup, we need to iterate over every projects with <code class="highlighter-rouge">Dir.entries</code> and load the implementation files for every project:</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Dir</span><span class="p">[</span><span class="s2">"code</span><span class="se">\_</span><span class="s2">path/</span><span class="se">\*</span><span class="s2">.rb"</span><span class="p">].</span><span class="nf">each</span> <span class="p">{</span><span class="o">|</span><span class="n">file</span><span class="o">|</span> <span class="nb">require</span> <span class="n">file</span> <span class="p">}</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Dir</span><span class="p">[</span><span class="s2">"code_path/*.rb"</span><span class="p">].</span><span class="nf">each</span> <span class="p">{</span><span class="o">|</span><span class="n">file</span><span class="o">|</span> <span class="nb">require</span> <span class="n">file</span> <span class="p">}</span></code></pre></figure>
 
 <p>… and actually run the specs right after:</p>
 
@@ -93,14 +93,14 @@
 <p>The problem here is that we don’t unload the previously loaded files, which can lead to issues. To fix this, the simplest solution is to run this in <a href="http://ruby-doc.org/core-2.1.2/Process.html">a new process</a> and the memory encapsulation will take care of itself:</p>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">fork</span> <span class="k">do</span>
-  <span class="no">Dir</span><span class="p">[</span><span class="s2">"code</span><span class="se">\_</span><span class="s2">path/</span><span class="se">\*</span><span class="s2">.rb"</span><span class="p">].</span><span class="nf">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">file</span><span class="o">|</span> <span class="nb">require</span> <span class="n">file</span> <span class="p">}</span>
-  <span class="no">RSpec</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">Runner</span><span class="p">.</span><span class="nf">run</span><span class="p">([</span><span class="n">file</span><span class="p">])</span>
+ <span class="no">Dir</span><span class="p">[</span><span class="s2">"code_path/*.rb"</span><span class="p">].</span><span class="nf">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">file</span><span class="o">|</span> <span class="nb">require</span> <span class="n">file</span> <span class="p">}</span>
+ <span class="no">RSpec</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">Runner</span><span class="p">.</span><span class="nf">run</span><span class="p">([</span><span class="n">file</span><span class="p">])</span>
 <span class="k">end</span></code></pre></figure>
 
 <h3 id="reading-the-results">Reading the Results</h3>
 <p>Once the specs are done running, you can just access the results via the formatter with <code class="highlighter-rouge">formatter.output_hash</code>. For instance if you want the number of failures:</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">formatter</span><span class="p">.</span><span class="nf">output</span><span class="p">\</span><span class="n">_hash</span><span class="p">[</span><span class="ss">:summary</span><span class="p">][</span><span class="ss">:failure</span><span class="p">\</span><span class="n">_count</span><span class="p">]</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">formatter</span><span class="p">.</span><span class="nf">output_hash</span><span class="p">[</span><span class="ss">:summary</span><span class="p">][</span><span class="ss">:failure_count</span><span class="p">]</span></code></pre></figure>
 
 <p>Once you managed to read the information you need, you can store it in a file somewhere and manipulate it easily in another process.</p>
 
