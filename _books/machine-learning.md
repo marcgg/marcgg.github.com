@@ -6,6 +6,7 @@ linkfr: "https://www.amazon.fr/gp/product/1449303714/ref=as\_li\_tl?ie=UTF8&camp
 linkus: "http://amzn.to/2co8r6d" 
 img: "ml-cover.jpg"
 score: 13
+read: true
 ---
 
 This interesting book takes an "action oriented" approach to machine learning. It gives a lot of examples and gets you writing code quickly with [R][1]. It also doesn't get too mathematical on the reader. Overall I enjoyed it as a good introduction to machine learning, but it's probably a bit too simplified for any hardcore data scientist.

@@ -6,6 +6,7 @@ linkfr: "https://www.amazon.fr/gp/product/1439199191/ref=as\_li\_tl?ie=UTF8&camp
 linkus: "http://amzn.to/2cvZPfr" 
 img: "win-friends-cover.jpg"
 score: 17
+read: true
 ---
 
 This must be one of the worse title for a book I've ever seen. Actually, only based on this terrible title, I avoided this book and considered it to be a cheesy self help book at best, a pile of ideas to manipulate people at worse.

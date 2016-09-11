@@ -30,7 +30,7 @@ description: "Startup and technology related book reviews."
     <a href="https://twitter.com/marcgg">let me know</a>!
 
     <div id="upcoming-books">
-      {% assign sorted = site.books | where:"score", "0" %}
+      {% assign sorted = site.books | where:"read", false %}
       {% for book in sorted %}
         <span class="master-book-data" data-author="{{ book.author }}" data-title="{{ book.title }}" data-link="{{book.link}}" data-linkfr="{{book.linkfr}}" data-linkus="{{book.linkus}}">
           <a href="#" class="buy-popin">
@@ -42,7 +42,7 @@ description: "Startup and technology related book reviews."
   </div>
 
 
-  {% assign sorted = site.books | sort:"score" | reverse | where_exp:"book", "book.score > 0" %}
+  {% assign sorted = site.books | sort:"score" | reverse | where:"read", true %}
 
   {% for book in sorted %}
     <div class="single-post master-book-data" data-author="{{ book.author }}" data-title="{{ book.title }}" data-link="{{book.link}}" data-linkfr="{{book.linkfr}}" data-linkus="{{book.linkus}}">

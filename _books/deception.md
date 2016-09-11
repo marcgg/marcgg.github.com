@@ -6,6 +6,7 @@ linkfr: "http://amzn.to/2c2hw0B"
 linkus: "http://amzn.to/2cOxdul" 
 img: "deception-cover.jpg"
 score: 0
+read: false
 ---
 
 ?

@@ -6,6 +6,8 @@ linkfr: "http://amzn.to/2ccgjd9"
 linkus: "http://amzn.to/2ccgDZt" 
 img: "power-cover.jpg"
 score: 0
+read: false
+read: false
 ---
 
 ?
