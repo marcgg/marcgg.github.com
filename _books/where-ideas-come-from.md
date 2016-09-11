@@ -2,7 +2,8 @@
 layout: page
 title: "Where Good Ideas Come From"
 author: "Steven Johnson"
-link: "https://www.amazon.fr/gp/product/1594485380/ref=as\\\_li\\\_tl?ie=UTF8&camp=1642&creative=6746&creativeASIN=1594485380&linkCode=as2&tag=mg092-21"
+linkfr: "https://www.amazon.fr/gp/product/1594485380/ref=as\\\_li\\\_tl?ie=UTF8&camp=1642&creative=6746&creativeASIN=1594485380&linkCode=as2&tag=mg092-21"
+linkus: "http://amzn.to/2cjXceg" 
 img: "ideas-cover.jpg"
 score: 7
 ---

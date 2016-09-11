@@ -5,6 +5,15 @@ category: books
 rank: 5
 description: "Startup and technology related book reviews."
 ---
+<div style="display: none;">
+  <div id="buy-popin">
+    <h3 id="buy-title"></h3>
+    <a id="store-us" target="_blank" class="store" href="#">→ 🇺🇸  Get it from Amazon US</a>
+    <a id="store-fr" target="_blank" class="store" href="#">→ 🇫🇷  L'obtenir depuis Amazon France</a>
+    <a id="store-other" target="_blank" class="store" href="#">→ This book is not available on Amazon. Get it now from this external website.</a>
+  </div>
+</div>
+
 <div id="all-posts">
   <div id="book-review" style="margin-top: 20px;">
     Here I share my opinion on what I've been reading.
@@ -17,14 +26,14 @@ description: "Startup and technology related book reviews."
   {% assign sorted = site.books | sort:"score" | reverse %}
 
   {% for book in sorted %}
-    <div class="single-post">
+    <div class="single-post" data-author="{{ book.author }}" data-title="{{ book.title }}" data-link="{{book.link}}" data-linkfr="{{book.linkfr}}" data-linkus="{{book.linkus}}">
       <div class="author">by {{ book.author }}</div>
       <div class="title">
-        <a href="{{book.link}}">{{ book.title }}</a>
+        <a href="#" class="buy-popin">{{ book.title }}</a>
       </div>
 
       <p class="description">
-        <a href="{{book.link}}" target="_blank" class="book-cover-entry">
+        <a href="#" class="book-cover-entry buy-popin">
           <img src="/assets/books/{{book.img}}" alt="{{book.title}} book cover" />
           <br>
           &rarr; <span class="buy-book">Buy this book</span>
@@ -50,4 +59,8 @@ description: "Startup and technology related book reviews."
     </div>
   {% endfor %}
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="//cdn.rawgit.com/noelboss/featherlight/1.5.0/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/assets/js/books.js"></script>
 

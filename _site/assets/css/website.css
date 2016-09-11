@@ -288,6 +288,27 @@ blockquote p{
 .book-rating .low .icon{ color: #EDAE00; }
 .book-rating .poor .icon{ color: #ED3B00; }
 
+#buy-title{
+  padding: 0px 0px 25px 0px;
+}
+#buy-title span{
+  font-size: 0.8em !important;
+  color: #cdcdcd;
+}
+#buy-popin{
+  padding: 50px 25px;
+}
+
+.store{
+  display: block;
+  padding: 15px 5px;
+  text-decoration: none;
+}
+
+.store:hover{
+  color: #ed5252;
+}
+
 /* BLOG SHOW */
 
 .post{

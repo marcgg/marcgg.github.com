@@ -2,7 +2,8 @@
 layout: page
 title: "The Phoenix Project"
 author: "G. Kim, K. Behr & G. Spafford "
-link: "https://www.amazon.fr/gp/product/0988262509/ref=as\_li\_tl?ie=UTF8&camp=1642&creative=6746&creativeASIN=0988262509&linkCode=as2&tag=mg092-21"
+linkfr: "https://www.amazon.fr/gp/product/0988262509/ref=as\_li\_tl?ie=UTF8&camp=1642&creative=6746&creativeASIN=0988262509&linkCode=as2&tag=mg092-21"
+linkus: "http://amzn.to/2cPmxzD" 
 img: "phoenix-cover.jpg"
 score: 18
 ---

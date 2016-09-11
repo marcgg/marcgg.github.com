@@ -2,7 +2,8 @@
 layout: page
 title: "Nonviolent Communication: A Language of Life"
 author: " Marshall B. Rosenberg"
-link: "https://www.amazon.fr/gp/product/189200528X/ref=as\_li\_tl?ie=UTF8&camp=1642&creative=6746&creativeASIN=189200528X&linkCode=as2&tag=mg092-21"
+linkfr: "https://www.amazon.fr/gp/product/189200528X/ref=as\_li\_tl?ie=UTF8&camp=1642&creative=6746&creativeASIN=189200528X&linkCode=as2&tag=mg092-21"
+linkus: "http://amzn.to/2cR7W5v" 
 img: "non-violent-cover.jpg"
 score: 11
 ---

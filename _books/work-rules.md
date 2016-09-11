@@ -2,7 +2,8 @@
 layout: page
 title: "Work Rules!"
 author: "Laszlo Bock"
-link: "http://www.amazon.fr/gp/product/1444792369/ref=as\_li\_tl?ie=UTF8&camp=1642&creative=6746&creativeASIN=1444792369&linkCode=as2&tag=mg092-21"
+linkfr: "http://www.amazon.fr/gp/product/1444792369/ref=as\_li\_tl?ie=UTF8&camp=1642&creative=6746&creativeASIN=1444792369&linkCode=as2&tag=mg092-21"
+linkus: "http://amzn.to/2cPm5S7" 
 img: "work-rules-book-cover.jpg"
 score: 14
 ---

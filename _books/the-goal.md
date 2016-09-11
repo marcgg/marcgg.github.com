@@ -2,7 +2,8 @@
 layout: page
 title: "The Goal: A Process of Ongoing Improvement"
 author: " Eliyahu M. Goldratt"
-link: "https://www.amazon.fr/gp/product/0884271951/ref=as\_li\_tl?ie=UTF8&camp=1642&creative=6746&creativeASIN=0884271951&linkCode=as2&tag=mg092-21"
+linkfr: "https://www.amazon.fr/gp/product/0884271951/ref=as\_li\_tl?ie=UTF8&camp=1642&creative=6746&creativeASIN=0884271951&linkCode=as2&tag=mg092-21"
+linkus: "http://amzn.to/2cmWMkC" 
 img: "the-goal-cover.jpg"
 score: 15
 ---

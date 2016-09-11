@@ -2,7 +2,8 @@
 layout: page
 title: "Agile Web Development with Rails"
 author: "D. Thomas & D. Heinemeier Hansson"
-link: "https://pragprog.com/book/rails5/agile-web-development-with-rails-5"
+linkus: "http://amzn.to/2cOnlAB"
+linkfr: "http://amzn.to/2cF3TWy"
 img: "agile-rails-cover.jpg"
 score: 15
 ---

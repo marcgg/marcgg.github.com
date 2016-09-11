@@ -2,7 +2,8 @@
 layout: page
 title: "Machine Learning for Hackers"
 author: "D. Conway & J. M. White"
-link: "https://www.amazon.fr/gp/product/1449303714/ref=as\_li\_tl?ie=UTF8&camp=1642&creative=6746&creativeASIN=1449303714&linkCode=as2&tag=mg092-21"
+linkfr: "https://www.amazon.fr/gp/product/1449303714/ref=as\_li\_tl?ie=UTF8&camp=1642&creative=6746&creativeASIN=1449303714&linkCode=as2&tag=mg092-21"
+linkus: "http://amzn.to/2co8r6d" 
 img: "ml-cover.jpg"
 score: 13
 ---

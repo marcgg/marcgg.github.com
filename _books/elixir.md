@@ -2,7 +2,8 @@
 layout: page
 title: "Programming Elixir"
 author: "Dave Thomas"
-link: "https://www.amazon.fr/gp/product/1680501666/ref=as\_li\_tl?ie=UTF8&camp=1642&creative=6746&creativeASIN=1680501666&linkCode=as2&tag=mg092-21"
+linkfr: "https://www.amazon.fr/gp/product/1680501666/ref=as\_li\_tl?ie=UTF8&camp=1642&creative=6746&creativeASIN=1680501666&linkCode=as2&tag=mg092-21"
+linkus: "http://amzn.to/2cR6sbl" 
 img: "elixir-cover.jpg"
 score: 16
 ---

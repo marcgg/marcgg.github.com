@@ -2,7 +2,8 @@
 layout: page
 title: "Managing Humans"
 author: " Michael Lopp"
-link: "http://amzn.to/2chWpJI"
+linkfr: "http://amzn.to/2chWpJI"
+linkus: "http://amzn.to/2cc6Xyg" 
 img: "humans-cover.jpg"
 score: 18
 ---

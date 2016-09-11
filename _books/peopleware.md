@@ -2,7 +2,8 @@
 layout: page
 title: "Peopleware: Productive Projects and Teams"
 author: "Bertrand Meyer"
-link: "https://www.amazon.fr/gp/product/0321934113/ref=as\_li\_tl?ie=UTF8&camp=1642&creative=6746&creativeASIN=0321934113&linkCode=as2&tag=mg092-21"
+linkfr: "https://www.amazon.fr/gp/product/0321934113/ref=as\_li\_tl?ie=UTF8&camp=1642&creative=6746&creativeASIN=0321934113&linkCode=as2&tag=mg092-21"
+linkus: "http://amzn.to/2cmX8HV" 
 img: "peopleware-cover.jpg"
 score: 14
 ---

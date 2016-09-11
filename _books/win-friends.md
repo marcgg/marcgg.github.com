@@ -2,7 +2,8 @@
 layout: page
 title: "How To Win Friends And Influence People"
 author: "Dale Carnegie"
-link: "https://www.amazon.fr/gp/product/1439199191/ref=as\_li\_tl?ie=UTF8&camp=1642&creative=6746&creativeASIN=1439199191&linkCode=as2&tag=mg092-21"
+linkfr: "https://www.amazon.fr/gp/product/1439199191/ref=as\_li\_tl?ie=UTF8&camp=1642&creative=6746&creativeASIN=1439199191&linkCode=as2&tag=mg092-21"
+linkus: "http://amzn.to/2cvZPfr" 
 img: "win-friends-cover.jpg"
 score: 17
 ---
