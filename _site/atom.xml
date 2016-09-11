@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2016-09-11T19:08:27+02:00</updated>
+ <updated>2016-09-11T19:23:45+02:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -1048,7 +1048,7 @@ map &amp;lt;D-A-UP&amp;gt; &amp;lt;C-w&amp;gt;W
 
 &lt;p&gt;To install it, you can simply use the one liner below. If you don’t feel like copy and pasting &lt;code class=&quot;highlighter-rouge&quot;&gt;curl&lt;/code&gt; commands, just look up their &lt;a href=&quot;https://github.com/tpope/vim-pathogen#installation&quot;&gt;very clear documentation&lt;/a&gt;.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mkdir -p /.vim/autoload /.vim/bundle &amp;amp;&amp;amp; \
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mkdir -p ~/.vim/autoload /.vim/bundle &amp;amp;&amp;amp; \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
