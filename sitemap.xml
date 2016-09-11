@@ -10,6 +10,10 @@ title : Sitemap
   </url>
 
   <url>
+    <loc>{{site.production_url}}/books/</loc>
+  </url>
+
+  <url>
     <loc>{{site.production_url}}/hire/</loc>
   </url>
 
