@@ -86,6 +86,16 @@
 					<integer>37</integer>
 				</dict>
 			</dict>
+			<key>humans.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>495304727.63237798</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>108</integer>
+				</dict>
+			</dict>
 			<key>machine-learning.md</key>
 			<dict>
 				<key>lastModification</key>
@@ -206,20 +216,6 @@
 					<integer>70</integer>
 				</dict>
 			</dict>
-			<key>template.md</key>
-			<dict>
-				<key>explicitUnassignment</key>
-				<true/>
-				<key>firstUnassignment</key>
-				<real>493480597.03290498</real>
-				<key>lastModification</key>
-				<real>493480597.03290498</real>
-				<key>version</key>
-				<dict>
-					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-					<integer>105</integer>
-				</dict>
-			</dict>
 			<key>the-goal.md</key>
 			<dict>
 				<key>lastModification</key>
@@ -337,7 +333,7 @@
 			<string>poignant.md</string>
 		</array>
 		<array>
-			<string>template.md</string>
+			<string>humans.md</string>
 		</array>
 	</array>
 	<key>storeFormatVersion</key>
@@ -347,7 +343,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-			<integer>105</integer>
+			<integer>109</integer>
 		</dict>
 	</dict>
 </dict>
