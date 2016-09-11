@@ -227,11 +227,18 @@ blockquote p{
   border-top: none !important;
 }
 
-.single-post .date, .single-post .author{
+.single-post .date{
   color: #cdcdcd;
   margin-top: 10px;
   float: right;
 }
+
+.single-post .author{
+  color: #cdcdcd;
+  float: right;
+  font-size: 0.7em;
+}
+
 .single-post .title{
   font-family: 'Open Sans', sans-serif;
   font-size: 1.6em;
@@ -559,6 +566,11 @@ p code{
 
 /************************ MOBILE LAYOUT *********************/
 @media all and (max-width: 800px) {
+
+  .author{
+    float: none !important;
+    display: inline;
+  }
 
   header{
     width: 94%;
