@@ -13,7 +13,7 @@ So what's the perfect time to show up at your interview?
 
 ## Arriving Too Early Gives A Bad First Impression
 
-If you arrive more than 15 minutes early, it makes your first contact with the company awkward and disturbing. The person you're supposed to meet with will be working on something else and you're interupting them... but they will feel obligated to come and say hello, find a way to entertain you and make sure you are confortable while you wait.
+If you arrive more than 15 minutes early, there's a good chance that it will make your first contact with the company awkward and disturbing. The person you're supposed to meet with will be working on something else and you're interupting them... but they will feel obligated to come and say hello, find a way to entertain you and make sure you are confortable while you wait.
 
 This is especially true in a startup environement where there aren't many people in the company. Everyone is often working in the same open space, right next to the sofa where you'll be waiting. There's also a good chance that your interviewer will be a couple of meters from you, rushing through their task to begin the interview earlier. The whole situation is just painful for every person involved.
 
