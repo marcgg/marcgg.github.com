@@ -21,7 +21,7 @@ Your first chance to make a good impression is now tainted with awkwardness and 
 
 ## On Time Is Almost Too Late
 
-Arriving late is the worst way to begin an interview. If this happens to you, even if you're only two minutes late, you should apologize profusely and hope this isn't an eliminating factor for the person you'll be talking to. Note that "it took longer than expected" is not a valid answer, you should have planned better. You should also send send a quick email stating that you'll be a few minutes late.
+Arriving late is the worst way to begin an interview. If this happens to you, even if you're only two minutes late, you should apologize profusely and hope this isn't an eliminating factor for the person you'll be talking to. Note that "it took longer than expected" is not a valid answer, you should have planned better. You should also send a quick email stating that you'll be a few minutes late.
 
 However, if you arrive at the exact time scheduled, then it's almost the same as if you were late. You will probably have to take an elevator, talk to a receptionist, be guided to a meeting room and so on. 
 
