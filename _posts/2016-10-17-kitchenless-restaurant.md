@@ -15,7 +15,7 @@ If you really look at it, running a restaurant takes two vastely different sets 
 
 We know caterers, but they are often related to large scales orders such as weddings. Lately we are starting to see companies that only prepare food but have no place to actually eat it. They can rely on services like Deliveroo, Foodora, Uber Eats, Stuart and others to send their product to the customer and are able to reach more people by focusing on cooking. It really separates the food from the eating experience: less control on the presentation and general atmosphere. Deliveroo is even [opening kitchen spaces][1] to help restaurants [in areas with reduced supply][2].
 
-Looking at this trend, it's fair to wonder if we will see a significant number of places where you could eat but that wouldn't have an onsite kitchen.
+Looking at this trend, it's fair to wonder if we will see a significant number of places where you could eat but that wouldn't have an onsite kitchen. Think of it as a modern food court.
 
 ## Possible Experience
 
@@ -25,11 +25,11 @@ When you show up at the place, it looks particularly nice and is more roomy than
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/restaurant.jpg" alt="Kitchenless restaurant" style="padding: 20px; width: 670px;"/></div>
 
-To monetize, the place takes a fee on every dish you order, but there is also a minimum spending fee on alcool or soft drinks because. Since this is the only way for them to make money, the place works hard to increase how often you visit, sending you push notifications when they organize special events for instance.
+To monetize, the place takes a fee on every dish you order, but there is also a minimum spending fee on alcool or soft drinks and various partnerships with external kitchens. Since this is the only way for them to make money, the place works hard to increase how often you visit, sending you push notifications when they organize special events for instance.
 
 You are taken to your seat and order a bottle of wine. You then look at the menu, presented on a tablet: it's a list of all the possible delivery options in this neighborhood and maybe a couple others that are exclusive to this kind of kitchenless restaurants. You pick delicious looking pasta and your date decides on sushi, and you are both pretty happy that you both could eat the kind of food you wanted this evening. You enter your order on the ipad and hand it back to the waiter.
 
-The place has a different entrance for deliveries, where a couple of persons welcome a constant flux of young people on bikes carrying the meals. They then store everything until they have a table's full order given table. Once all the food has arrived, they place it on dishes, re-heat if needed thanks to an over and a few micro waves, then take it to the customer.
+The place has a different entrance for deliveries, where a couple of persons welcome a constant flux of young people on bikes carrying the meals. They then store everything until they have a table's full order. Once all the food has arrived, they place it on dishes, re-heat if needed thanks to an oven and a few micro waves, then take it to the customer.
 
 You don't see any of this, and suddently both of your orders arrive at the same time. It's a bit slower than in a traditionnal restaurant, but expectations changed and you were drinking wine while waiting, so you don't really mind - especially since the place is a pleasure to stay at.
 
