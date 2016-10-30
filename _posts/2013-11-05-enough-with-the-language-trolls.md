@@ -30,7 +30,7 @@ use a lot of memory... so in the end it's a mater of picking what would
 work.
 
 <div style="width:560px; margin: auto">
-<object width="560" height="315"><param name="movie" value="http://www.youtube.com/v/b2F-DItXtZs?version=3&amp;hl=fr_FR&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/b2F-DItXtZs?version=3&amp;hl=fr_FR&amp;rel=0" type="application/x-shockwave-flash" width="560" height="315" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+<object width="560" height="315"><param name="movie" value="http://www.youtube.com/v/b2F-DItXtZs?version=3&amp;hl=fr_FR&amp;rel=0"><embed src="http://www.youtube.com/v/b2F-DItXtZs?version=3&amp;hl=fr_FR&amp;rel=0" type="application/x-shockwave-flash" width="560" height="315" allowscriptaccess="always" allowfullscreen="true"></object>
 </div>
 
 
@@ -62,7 +62,7 @@ using Rails instead of Django, then Rails was a bad choice.
 
 There is never a definitive answer to what technology one should use, just different situations.
 
-If I start a [side project](/blog/2012/01/09/start-working-on-your-side-project/) to
+If I start a [side project][1] to
 learn cool new stuff, then it wouldn't make sense to use what I already know.
 In this case my whole technical knowledge is a bad choice for this project.
 
@@ -72,5 +72,9 @@ adapt.
 ## To Sum It Up
 
 > &quot;Don&#39;t define yourself by hating other things. Define yourself by building cool stuff.&quot;
->
-> [Steve Klabnik](http://twitter.com/steveklabnik) at [DotRB](http://www.dotrb.eu/)
+> 
+> [Steve Klabnik][2] at [DotRB][3]
+
+[1]:	/blog/2012/01/09/start-working-on-your-side-project/
+[2]:	http://twitter.com/steveklabnik
+[3]:	http://www.dotrb.eu/

@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2016-10-30T13:08:50+01:00</updated>
+ <updated>2016-10-30T17:27:13+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -110,7 +110,7 @@
  
   
    <entry>
-     <title>Understanding Rails&#39; Forgery Protection Strategies</title>
+     <title>Understanding Rails' Forgery Protection Strategies</title>
      <link href="https://marcgg.com/blog/2016/08/22/csrf-rails/"/>
      <updated>2016-08-22T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2016/08/22/csrf-rails</id>
@@ -163,7 +163,7 @@
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Started POST &quot;/posts&quot;
 Processing by PostsController#create as */*
-Can&#39;t verify CSRF token authenticity.
+Can't verify CSRF token authenticity.
 Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -196,7 +196,7 @@ Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms)
 
 &lt;p&gt;You should see this in your logs:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Can&#39;t verify CSRF token authenticity.
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Can't verify CSRF token authenticity.
 Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
 ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken)
 &lt;/code&gt;&lt;/pre&gt;
@@ -648,7 +648,7 @@ vm: true
 
 &lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/app_engine_hits.jpg&quot; alt=&quot;&quot; style=&quot;padding: 20px; width: 600px;&quot; /&gt;&lt;/div&gt;
 
-&lt;p&gt;As it turns out I have a configuration issue:  &lt;code class=&quot;highlighter-rouge&quot;&gt;#&amp;lt;RuntimeError: Missing &#39;secret_key_base&#39; for &#39;production&#39; environment, set this value in &#39;config/secrets.yml&#39;&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;As it turns out I have a configuration issue:  &lt;code class=&quot;highlighter-rouge&quot;&gt;#&amp;lt;RuntimeError: Missing 'secret_key_base' for 'production' environment, set this value in 'config/secrets.yml'&amp;gt;&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h4 id=&quot;environment-variables&quot;&gt;Environment Variables&lt;/h4&gt;
 
@@ -736,7 +736,7 @@ $ git push bitbucket master
 
 &lt;p&gt;We can also create an alias to make it easier to push to both remotes. We’ll be using the &lt;code class=&quot;highlighter-rouge&quot;&gt;!&lt;/code&gt; (bang) &lt;a href=&quot;http://blogs.atlassian.com/2014/10/advanced-git-aliases/&quot;&gt;to create a more advanced alias&lt;/a&gt;:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git config alias.pushall &#39;!git push bitbucket master &amp;amp;&amp;amp; git push github master&#39;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git config alias.pushall '!git push bitbucket master &amp;amp;&amp;amp; git push github master'
 $ git pushall
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -747,13 +747,13 @@ $ git pushall
 
 &lt;p&gt;We can also use bash to do this with a simple loop:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ alias pushall=&#39;for i in git remote; do git push $i; done;&#39;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ alias pushall='for i in git remote; do git push $i; done;'
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;You can then take this and push it back into a Git alias because why not, this time wrapping it in an anonymous bash function:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git config alias.loopush &#39;!f(){ for i in git remote; do git push $i; done; };f&#39;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git config alias.loopush '!f(){ for i in git remote; do git push $i; done; };f'
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -804,7 +804,7 @@ origin	git@bitbucket.org:marcgg/multiple-origins.git (push)
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git push origin master
 To git@github.com:marcgg/multiple-origins.git
 ! [rejected]        master -&amp;gt; master (non-fast-forward)
-error: failed to push some refs to &#39;git@github.com:marcgg/multiple-origins.git&#39;
+error: failed to push some refs to 'git@github.com:marcgg/multiple-origins.git'
 Writing objects: 100% (2/2), 271 bytes | 0 bytes/s, done.
 To git@bitbucket.org:marcgg/multiple-origins.git
   1cdea23..a4959f9  master -&amp;gt; master
@@ -817,7 +817,7 @@ To git@bitbucket.org:marcgg/multiple-origins.git
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git remote set-url origin cant-do-that
 $ git fetch origin
-fatal: &#39;cant-do-that&#39; does not appear to be a git repository
+fatal: 'cant-do-that' does not appear to be a git repository
 fatal: Could not read from remote repository.
 
 ¯\_(ツ)_/¯
@@ -1218,7 +1218,7 @@ $ git submodule add git@source/pluginname.git bundle/pluginname
 
 &lt;p&gt;Hit the right arrow to open a node:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let NERDTreeMapActivateNode=&#39;&amp;lt;right&amp;gt;&#39;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let NERDTreeMapActivateNode='&amp;lt;right&amp;gt;'
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -1249,7 +1249,7 @@ autocmd VimEnter * wincmd p
 
 &lt;p&gt;Do not display some useless files in the tree:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let NERDTreeIgnore=[&#39;\.DS_Store&#39;, &#39;\~$&#39;, &#39;\.swp&#39;]
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let NERDTreeIgnore=['\.DS_Store', '\~$', '\.swp']
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -1426,8 +1426,8 @@ Let’s dig in!&lt;/p&gt;
 
 &lt;p&gt;First we need to use a &lt;a href=&quot;https://www.relishapp.com/rspec/rspec-core/docs/formatters/json-formatter&quot;&gt;JSON formatter&lt;/a&gt; so that rspec’s output becomes easily usable:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;rspec&#39;&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;rspec/core/formatters/json_formatter&#39;&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'rspec'&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'rspec/core/formatters/json_formatter'&lt;/span&gt;
 
 &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;RSpec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;configuration&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;formatter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;RSpec&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Core&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Formatters&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;JsonFormatter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;output_stream&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -1586,15 +1586,15 @@ bundle exec rspec spec &amp;gt; ../rspec_results.log
 &lt;p&gt;Now with an example:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git checkout master
-Switched to branch &#39;master&#39;
+Switched to branch 'master'
 $ git checkout -b first
-Switched to a new branch &#39;first&#39;
+Switched to a new branch 'first'
 $ git checkout -b second
-Switched to a new branch &#39;second&#39;
+Switched to a new branch 'second'
 $ git checkout -b third
-Switched to a new branch &#39;third&#39;
+Switched to a new branch 'third'
 $ git checkout &quot;@{-2}&quot;
-Switched to branch &#39;first&#39;
+Switched to branch 'first'
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -1612,7 +1612,7 @@ Switched to branch &#39;first&#39;
 
 &lt;p&gt;As a quick note, if you’re into command line aliases, I use this one and it’s pretty rad:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;alias g-=&#39;git checkout -&#39;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;alias g-='git checkout -'
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -1624,7 +1624,7 @@ Switched to branch &#39;first&#39;
  
   
    <entry>
-     <title>Don&#39;t Automate Tasks Only Based On Time Spent</title>
+     <title>Don't Automate Tasks Only Based On Time Spent</title>
      <link href="https://marcgg.com/blog/2015/09/30/automate-repetitive-tasks/"/>
      <updated>2015-09-30T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2015/09/30/automate-repetitive-tasks</id>
@@ -1643,7 +1643,7 @@ Switched to branch &#39;first&#39;
 
 &lt;p&gt;Personally, I think that the following graph by &lt;a href=&quot;http://blog.jonudell.net/2012/01/09/another-way-to-think-about-geeks-and-repetitive-tasks/&quot;&gt;Jon Udell&lt;/a&gt; is closer to a real life and effective way of thinking of the link between automation and etime. Of course it’s also less funny than the xkcd one but that’s fine.&lt;/p&gt;
 
-&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/automation-real-win.png&quot; alt=&quot;Agility and iterating on automating tasks&quot; style=&quot;padding: 20px; width: 420px;&quot; /&gt;&lt;/div&gt;
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/automation-real-win.png&quot; alt=&quot;Agility and iterating on automating tasks&quot; style=&quot;padding: 20px; width: 420px;&quot; /&gt;&amp;lt;/em&amp;gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;the-missing-factors&quot;&gt;The Missing Factors&lt;/h2&gt;
 
@@ -1937,7 +1937,7 @@ Switched to branch &#39;first&#39;
  
   
    <entry>
-     <title>Git Log&#39;s --first-parent Option</title>
+     <title>Git Log's --first-parent Option</title>
      <link href="https://marcgg.com/blog/2015/08/04/git-first-parent-log/"/>
      <updated>2015-08-04T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2015/08/04/git-first-parent-log</id>
@@ -2032,7 +2032,7 @@ Switched to branch &#39;first&#39;
      <updated>2015-07-01T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2015/07/01/game-of-life-gif</id>
      <content type="html">
-       &lt;p&gt;A few days ago I was on a plane for 6 hours and we only had a shared TV screen playing terrible sitcoms and movies. What do you do in this situation? Code some weird version of &lt;a href=&quot;https://en.wikipedia.org/wiki/Conway&#39;s_Game_of_Life&quot;&gt;Conway’s Game of Life&lt;/a&gt; of course!&lt;/p&gt;
+       &lt;p&gt;A few days ago I was on a plane for 6 hours and we only had a shared TV screen playing terrible sitcoms and movies. What do you do in this situation? Code some weird version of &lt;a href=&quot;https://en.wikipedia.org/wiki/Conway's_Game_of_Life&quot;&gt;Conway’s Game of Life&lt;/a&gt; of course!&lt;/p&gt;
 
 &lt;h2 id=&quot;the-game&quot;&gt;The Game&lt;/h2&gt;
 
@@ -3397,7 +3397,7 @@ app as it feels slow and/or broken.&lt;/p&gt;
 
 &lt;p&gt;If this solution doesn’t work, for instance if your code runs on Safari, use &lt;a href=&quot;https://github.com/ftlabs/fastclick&quot;&gt;FastClick&lt;/a&gt;:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;load&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'load'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;nx&quot;&gt;FastClick&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
@@ -3424,17 +3424,17 @@ Just in case this answer disapears, here’s what it looks like:&lt;/p&gt;
   &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;IS_IOS&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/iphone|ipad/i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;navigator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;userAgent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
   &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nodoubletapzoom&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;IS_IOS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;bind&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;touchstart&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;preventZoom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;bind&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'touchstart'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;preventZoom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;t2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;timeStamp&lt;/span&gt;
-          &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;t1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;lastTouch&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;t2&lt;/span&gt;
+          &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;t1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'lastTouch'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;t2&lt;/span&gt;
           &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;dt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;t2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;t1&lt;/span&gt;
           &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fingers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;originalEvent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;touches&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;lastTouch&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;t2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'lastTouch'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;t2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;dt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fingers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// not double-tap&lt;/span&gt;
 
         &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;preventDefault&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// double tap - prevent the zoom&lt;/span&gt;
         &lt;span class=&quot;c1&quot;&gt;// also synthesize click events we just swallowed up&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;trigger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;click&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;trigger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;click&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;trigger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'click'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;trigger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'click'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
       &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;})(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;jQuery&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
@@ -3448,10 +3448,10 @@ this one from
 &lt;a href=&quot;http://stackoverflow.com/questions/10238084/ios-safari-how-to-disable-overscroll-but-allow-scrollable-divs-to-scroll-norma&quot;&gt;stackoverflow&lt;/a&gt;:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;disallowOverscroll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;touchmove&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'touchmove'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
     &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;preventDefault&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;body&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;touchstart&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;.scrollable&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'body'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'touchstart'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'.scrollable'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;currentTarget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;scrollTop&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
       &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;currentTarget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;scrollTop&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;currentTarget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;scrollHeight&lt;/span&gt;
@@ -3460,7 +3460,7 @@ this one from
       &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;currentTarget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;scrollTop&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;body&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;touchmove&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;.scrollable&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'body'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'touchmove'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'.scrollable'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stopPropagation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
@@ -3705,7 +3705,7 @@ would interact with what.&lt;/p&gt;
 &lt;p&gt;If you’re in need of a touch slider, I recommend using &lt;a href=&quot;https://github.com/thebird/Swipe&quot;&gt;Swipe.Js&lt;/a&gt;.
 It’s both simple, effective and very customizable.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mySwipe&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Swipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;slider&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mySwipe&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Swipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'slider'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;The only gotcha is that you won’t be able to put inputs in a slide
 because text edition (long press on iOS) will not work properly.&lt;/p&gt;
@@ -4178,7 +4178,7 @@ use a lot of memory… so in the end it’s a mater of picking what would
 work.&lt;/p&gt;
 
 &lt;div style=&quot;width:560px; margin: auto&quot;&gt;
-&lt;object width=&quot;560&quot; height=&quot;315&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://www.youtube.com/v/b2F-DItXtZs?version=3&amp;amp;hl=fr_FR&amp;amp;rel=0&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot; /&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; /&gt;&lt;embed src=&quot;http://www.youtube.com/v/b2F-DItXtZs?version=3&amp;amp;hl=fr_FR&amp;amp;rel=0&quot; type=&quot;application/x-shockwave-flash&quot; width=&quot;560&quot; height=&quot;315&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; /&gt;&lt;/object&gt;
+&lt;object width=&quot;560&quot; height=&quot;315&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://www.youtube.com/v/b2F-DItXtZs?version=3&amp;amp;hl=fr_FR&amp;amp;rel=0&quot; /&gt;&lt;embed src=&quot;http://www.youtube.com/v/b2F-DItXtZs?version=3&amp;amp;hl=fr_FR&amp;amp;rel=0&quot; type=&quot;application/x-shockwave-flash&quot; width=&quot;560&quot; height=&quot;315&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; /&gt;&lt;/object&gt;
 &lt;/div&gt;
 
 &lt;h2 id=&quot;creating-a-new-product&quot;&gt;Creating A New Product&lt;/h2&gt;
@@ -4219,10 +4219,11 @@ adapt.&lt;/p&gt;
 &lt;h2 id=&quot;to-sum-it-up&quot;&gt;To Sum It Up&lt;/h2&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;&quot;Don&#39;t define yourself by hating other things. Define yourself by building cool stuff.&quot;&lt;/p&gt;
+  &lt;p&gt;&quot;Don't define yourself by hating other things. Define yourself by building cool stuff.&quot;&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://twitter.com/steveklabnik&quot;&gt;Steve Klabnik&lt;/a&gt; at &lt;a href=&quot;http://www.dotrb.eu/&quot;&gt;DotRB&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
+
 
        
      </content>
@@ -4370,7 +4371,7 @@ I don’t see why I couldn’t either!&lt;/p&gt;
  
   
    <entry>
-     <title>My First Impressions of AppGyver&#39;s Steroids.js</title>
+     <title>My First Impressions of AppGyver's Steroids.js</title>
      <link href="https://marcgg.com/blog/2013/08/29/appgyver-steroids-iphone-hybrid-javascript/"/>
      <updated>2013-08-29T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2013/08/29/appgyver-steroids-iphone-hybrid-javascript</id>
@@ -4588,7 +4589,7 @@ cookies.&lt;/p&gt;
     &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createCookie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;my_session&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
 
-  &lt;span class=&quot;nx&quot;&gt;logout&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;logout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;eraseCookie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;my_session&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
@@ -4613,8 +4614,8 @@ and set it up as such:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;middleware&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Rack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Cors&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
   &lt;span class=&quot;n&quot;&gt;allow&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;origins&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;*&#39;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;resource&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;*&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;headers: :any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;methods: &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;origins&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'*'&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;resource&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'*'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;headers: :any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;methods: &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
@@ -4687,7 +4688,7 @@ questions, I’m not sure to be able to answer all of them - but I’ll try!&lt;
  
   
    <entry>
-     <title>J&#39;ai Passé Un Deuxième Bac. Pour Voir.</title>
+     <title>J'ai Passé Un Deuxième Bac. Pour Voir.</title>
      <link href="https://marcgg.com/blog/2013/07/09/passer-deuxieme-bac/"/>
      <updated>2013-07-09T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2013/07/09/passer-deuxieme-bac</id>
@@ -4961,7 +4962,7 @@ recruteurs qui le liront!&lt;/p&gt;
  
   
    <entry>
-     <title>Why I&#39;m Not Proud To Be French</title>
+     <title>Why I'm Not Proud To Be French</title>
      <link href="https://marcgg.com/blog/2013/06/24/not-proud-to-be-french/"/>
      <updated>2013-06-24T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2013/06/24/not-proud-to-be-french</id>
@@ -5031,7 +5032,7 @@ did something great, I would have the exact same feeling even though I’m not C
 most talented fellow countryman.&lt;/p&gt;
 
 &lt;div style=&quot;width:560px; margin: auto&quot;&gt;
-&lt;object width=&quot;560&quot; height=&quot;315&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://www.youtube.com/v/RSJmN-Mg978?version=3&amp;amp;hl=fr_FR&amp;amp;rel=0&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot; /&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; /&gt;&lt;embed src=&quot;http://www.youtube.com/v/RSJmN-Mg978?version=3&amp;amp;hl=fr_FR&amp;amp;rel=0&quot; type=&quot;application/x-shockwave-flash&quot; width=&quot;560&quot; height=&quot;315&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; /&gt;&lt;/object&gt;
+&lt;object width=&quot;560&quot; height=&quot;315&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://www.youtube.com/v/RSJmN-Mg978?version=3&amp;amp;hl=fr_FR&amp;amp;rel=0&quot; /&gt;&amp;lt;/param&amp;gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot; /&gt;&amp;lt;/param&amp;gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; /&gt;&amp;lt;/param&amp;gt;&lt;embed src=&quot;http://www.youtube.com/v/RSJmN-Mg978?version=3&amp;amp;hl=fr_FR&amp;amp;rel=0&quot; type=&quot;application/x-shockwave-flash&quot; width=&quot;560&quot; height=&quot;315&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; /&gt;&amp;lt;/embed&amp;gt;&lt;/object&gt;
 &lt;/div&gt;
 
        
@@ -6047,7 +6048,7 @@ similar to know if the file loaded properly.&lt;/p&gt;
 &lt;p&gt;Once it’s done, tweak the controller so that it knows what’s up.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;viewDidLoad&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;NSBundle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;mainBundle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;pathForResource&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;index&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;ofType: &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;html&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;NSBundle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;mainBundle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;pathForResource&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'index'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;ofType: &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'html'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;NSURL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;fileURLWithPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;loadRequest&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;NSURLRequest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;requestWithURL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
@@ -6144,7 +6145,7 @@ any website sending funky signals to your app. Make sure you don’t
 execute any message you receive.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;webView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inWeb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;shouldStartLoadWithRequest: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inRequest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;navigationType: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# I&#39;m an Idiot&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# I'm an Idiot&lt;/span&gt;
   &lt;span class=&quot;no&quot;&gt;MyVeryImportantModel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inRequest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;absoluteString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
@@ -6416,7 +6417,7 @@ few months.&lt;/p&gt;
 &lt;p&gt;Turns out that the movement of pressing a combination of keys was the thing causing the pain. Of course doing it every once in a while has no consequence, but as a web developer I spend my day opening browser tabs (cmd+T), refreshing pages (cmd+R) and copy and pasting (cmd+C, cmd+V).&lt;/p&gt;
 
 &lt;div style=&quot;width:560px; margin: auto&quot;&gt;
-&lt;object width=&quot;560&quot; height=&quot;315&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://www.youtube.com/v/tCJSJBV85cw?version=3&amp;amp;hl=fr_FR&amp;amp;rel=0&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot; /&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; /&gt;&lt;embed src=&quot;http://www.youtube.com/v/tCJSJBV85cw?version=3&amp;amp;hl=fr_FR&amp;amp;rel=0&quot; type=&quot;application/x-shockwave-flash&quot; width=&quot;560&quot; height=&quot;315&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; /&gt;&lt;/object&gt;
+&lt;object width=&quot;560&quot; height=&quot;315&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://www.youtube.com/v/tCJSJBV85cw?version=3&amp;amp;hl=fr_FR&amp;amp;rel=0&quot; /&gt;&amp;lt;/param&amp;gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot; /&gt;&amp;lt;/param&amp;gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; /&gt;&amp;lt;/param&amp;gt;&lt;embed src=&quot;http://www.youtube.com/v/tCJSJBV85cw?version=3&amp;amp;hl=fr_FR&amp;amp;rel=0&quot; type=&quot;application/x-shockwave-flash&quot; width=&quot;560&quot; height=&quot;315&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; /&gt;&amp;lt;/embed&amp;gt;&lt;/object&gt;
 &lt;/div&gt;
 
 &lt;p&gt;As you can see on this terribly filmed video, I tend to twist a bit the thumb to press both keys at the same time. It’s not much but because it’s not a natural position, the repetition of this hundreds of times a day would cause pain.&lt;/p&gt;
@@ -6432,7 +6433,7 @@ few months.&lt;/p&gt;
  
   
    <entry>
-     <title>The Risks of Working With Another Company&#39;s API</title>
+     <title>The Risks of Working With Another Company's API</title>
      <link href="https://marcgg.com/blog/2012/09/24/working-with-apis-facebook/"/>
      <updated>2012-09-24T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2012/09/24/working-with-apis-facebook</id>
@@ -6454,7 +6455,7 @@ few months.&lt;/p&gt;
 &lt;p&gt;It’s all about understanding that &lt;a href=&quot;http://gettingreal.37signals.com/ch05_Start_With_No.php&quot;&gt;the real cost of the feature&lt;/a&gt; is not the time it’s going to take to develop it. You also have to take into account the time you’re going to spend maintaining it, and the friction it’s going to have with other components of your system. I like how &lt;a href=&quot;https://twitter.com/tenderlove&quot;&gt;Aaron Patterson&lt;/a&gt; describes this feeling as the lower tolerance for technical debt experienced developers have.&lt;/p&gt;
 
 &lt;div style=&quot;width:560px; margin: auto&quot;&gt;
-&lt;object width=&quot;560&quot; height=&quot;315&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://www.youtube.com/v/8kSfGgiFk48?version=3&amp;amp;hl=fr_FR&amp;amp;rel=0&amp;amp;start=1075&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot; /&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; /&gt;&lt;embed src=&quot;http://www.youtube.com/v/8kSfGgiFk48?version=3&amp;amp;hl=fr_FR&amp;amp;rel=0&amp;amp;start=1075&quot; type=&quot;application/x-shockwave-flash&quot; width=&quot;560&quot; height=&quot;315&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; /&gt;&lt;/object&gt;
+&lt;object width=&quot;560&quot; height=&quot;315&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://www.youtube.com/v/8kSfGgiFk48?version=3&amp;amp;hl=fr_FR&amp;amp;rel=0&amp;amp;start=1075&quot; /&gt;&amp;lt;/param&amp;gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot; /&gt;&amp;lt;/param&amp;gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; /&gt;&amp;lt;/param&amp;gt;&lt;embed src=&quot;http://www.youtube.com/v/8kSfGgiFk48?version=3&amp;amp;hl=fr_FR&amp;amp;rel=0&amp;amp;start=1075&quot; type=&quot;application/x-shockwave-flash&quot; width=&quot;560&quot; height=&quot;315&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; /&gt;&amp;lt;/embed&amp;gt;&lt;/object&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Let’s say you want to add a Facebook or Twitter connect to your website. Implementing it is &lt;a href=&quot;http://developers.facebook.com/docs/guides/web/#login&quot;&gt;dead simple&lt;/a&gt;… but what if Facebook is down for a while, or if it glitches out and your users can’t log in? What if they totally revamp their login system and this time it takes months to fix it? What if you want to handle users in a specific way and this connect feature is now getting in the way?&lt;/p&gt;
