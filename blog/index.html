@@ -6,10 +6,6 @@ description: "Blog with articles about Ruby, startups, teaching, Elixir, MySQL, 
 ---
 
 <div id="all-posts">
-  <div id="book-review" style="margin-top: 20px;">
-    I also write quick book reviews,
-    <a href="/books/">go this way</a> to check them out.
-  </div>
   {% for post in site.posts %}
     {%if post.tag != "book" %}
     {% if post.blog == true %}

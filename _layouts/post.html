@@ -24,19 +24,6 @@ layout: default
   <div id="content">
     <div class="post" id="post-{{page.cssscope}}">
 
-      {% if page.tag == "book" %}
-        <div id="book-review" class="clearfix">
-          <a href="{{page.booklink}}" target="_blank">
-            <img src="/assets/books/{{page.bookimg}}" alt="{{page.title}} book cover" />
-          </a>
-          This post is part of
-          <a href="/books/">a series of book reviews</a> and is a way to
-          quickly share my opinion on what I've been reading, not a general
-          analysis of the book.
-          If {{page.title}} feels like something you'd like to read,
-          <a href="{{page.booklink}}" target="_blank">you can grab a copy here</a>.
-        </div>
-      {% endif %}
       {{ content }}
 
       <div id="more">
@@ -52,20 +39,17 @@ layout: default
 
         <div id="more-articles">
           {% if has_res %}
-            <p>Since you scrolled this far, you might as well take a look at some other things I wrote !</p>
+            <p>Since you scrolled this far, you might be interested in some other things I wrote!</p>
             <ul>
               {{ res }}
+              <li><a href="/books/">Startup & Tech Book Reviews</a>
             </ul>
           {% else %}
           <p>
             If you liked this, feel free to <a href="/blog">browse other articles on my blog</a>.
+            or take a look at my quick
+            <a href="/books/">book reviews</a>.
           </p>
-          {% endif %}
-          {% if page.tag == "book" %}
-            <p>
-              Get the book:
-              <a href="{{page.booklink}}" target="_blank">{{ page.title }}</a>
-            </p>
           {% endif %}
         </div>
         <a href="https://twitter.com/marcgg" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @marcgg</a>
