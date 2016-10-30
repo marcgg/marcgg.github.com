@@ -118,7 +118,7 @@ I'm very proud of what we accomplished during this weekend. The team was
 awesome as everybody had complementary skills and each team member had a major impact on the
 result. This left me with the feeling that with the right group of people
 and a good mindset you can really create great things.
-
+I
 
 Overall I'd advise anyone that like [starting projects][19]
 to participate in events like these. Gather a group of people or just find

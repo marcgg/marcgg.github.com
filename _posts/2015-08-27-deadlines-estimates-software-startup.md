@@ -221,13 +221,13 @@ Finally, I encourage you to read ["Estimation - The Best We Can Do"][9] by Jon J
 _Thanks a lot to [Julien][10] for challenging me on the very first draft of the article and helping me refine my reflexion. Thanks also to all other people who helped me make some adjustments and spelling corrections!_
 
 
-[1]:	https://twitter.com/search?q=%23noestimates&src=typd
+[1]:	https://twitter.com/search?q=#noestimates&src=typd
 [2]:	https://en.wikipedia.org/wiki/Planning_poker
 [3]:	http://www.amazon.com/Practical-Object-Oriented-Design-Ruby-Addison-Wesley/dp/0321721330
 [4]:	http://agilemanifesto.org/principles.html
 [5]:	https://twitter.com/michaelochurch
 [6]:	https://michaelochurch.wordpress.com/2014/06/20/on-programmers-deadlines-and-agile/
-[7]:	/blog/2015/10/19/book-review-clean-coder/
+[7]:	/books/
 [8]:	https://twitter.com/unclebobmartin
 [9]:	https://pragprog.com/magazines/2013-04/estimation
 [10]:	http://julienblanchard.com/

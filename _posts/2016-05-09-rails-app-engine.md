@@ -145,7 +145,7 @@ I might pick this over [AWS][20] for a pet project at some point to try it out s
 
 [1]:	https://cloudplatform.googleblog.com/2016/05/Ruby-on-Google-App-Engine-goes-betaruntime.html
 [2]:	https://rubygems.org/gems/rails/versions/5.0.0.rc1
-[3]:	[https://cloud.google.com/appengine/docs/quotas]
+[3]:	https://cloud.google.com/appengine/docs/quotas
 [4]:	http://cl.ly/1H2J2y2J461W
 [5]:	https://en.wikipedia.org/wiki/Identity_management
 [6]:	http://martinfowler.com/bliki/MonolithFirst.html
@@ -155,7 +155,7 @@ I might pick this over [AWS][20] for a pet project at some point to try it out s
 [10]:	https://toolbelt.heroku.com/
 [11]:	https://rails-5-test.appspot.com/
 [12]:	https://s3.amazonaws.com/f.cl.ly/items/2a3y0e090f2P1Y1s1a31/Youre_tearing_me_apart_lisa-36704.gif?v=7a6cf7f4
-[13]:	%20[https://cloud.google.com/sdk/gcloud/reference/preview/app/modules/get-logs]
+[13]:	https://cloud.google.com/sdk/gcloud/reference/preview/app/modules/get-logs
 [14]:	https://cloud.google.com/appengine/articles/logging
 [15]:	https://cloud.google.com/appengine/articles/logging#using_the_logs_viewer
 [16]:	https://cloud.google.com/appengine/docs/flexible/ruby/runtime#environment_variables

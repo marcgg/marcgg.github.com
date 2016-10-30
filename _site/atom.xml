@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2016-10-30T12:45:29+01:00</updated>
+ <updated>2016-10-30T13:01:25+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -563,7 +563,7 @@ ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticit
 
 &lt;h3 id=&quot;account-creation&quot;&gt;Account Creation&lt;/h3&gt;
 
-&lt;p&gt;I don’t want to spend any money for this test, so I digged into &lt;a href=&quot;[https://cloud.google.com/appengine/docs/quotas]&quot;&gt;Google’s pricing structure&lt;/a&gt; and they do announce a free tier with limited instance hours. Creating a “free trial” account does require a credit card, which worries me a bit, but they do say “Don’t worry, you will not be billed for the free trial”, so hopefuly I’ll be ok.&lt;/p&gt;
+&lt;p&gt;I don’t want to spend any money for this test, so I digged into &lt;a href=&quot;https://cloud.google.com/appengine/docs/quotas&quot;&gt;Google’s pricing structure&lt;/a&gt; and they do announce a free tier with limited instance hours. Creating a “free trial” account does require a credit card, which worries me a bit, but they do say “Don’t worry, you will not be billed for the free trial”, so hopefuly I’ll be ok.&lt;/p&gt;
 
 &lt;h3 id=&quot;setting-up-the-instance&quot;&gt;Setting Up The Instance&lt;/h3&gt;
 
@@ -632,7 +632,7 @@ vm: true
 
 &lt;p&gt;I have to find how to read my logs to figure out what’s going on, so I start looking.&lt;/p&gt;
 
-&lt;p&gt;I first run into the &lt;a href=&quot;%20[https://cloud.google.com/sdk/gcloud/reference/preview/app/modules/get-logs]&quot;&gt;gets-log&lt;/a&gt; command, but it feels a bit complicated since I’m not sure exactly what logs are going to help me debug. I then find the &lt;code class=&quot;highlighter-rouge&quot;&gt;gcloud beta logging logs&lt;/code&gt; command that is supposed to list all the logs available, which is pretty great. To run it I have to install gcloud Beta Commands, so I install this as well. The command works, but I’m still a bit confused by what I’m supposed to do here and how I could find a way to stream my server’s output to my console.&lt;/p&gt;
+&lt;p&gt;I first run into the &lt;a href=&quot;https://cloud.google.com/sdk/gcloud/reference/preview/app/modules/get-logs&quot;&gt;gets-log&lt;/a&gt; command, but it feels a bit complicated since I’m not sure exactly what logs are going to help me debug. I then find the &lt;code class=&quot;highlighter-rouge&quot;&gt;gcloud beta logging logs&lt;/code&gt; command that is supposed to list all the logs available, which is pretty great. To run it I have to install gcloud Beta Commands, so I install this as well. The command works, but I’m still a bit confused by what I’m supposed to do here and how I could find a way to stream my server’s output to my console.&lt;/p&gt;
 
 &lt;p&gt;After a few minutes running in circles, I take a step back and find another ressource that was way more helpful: &lt;a href=&quot;https://cloud.google.com/appengine/articles/logging&quot;&gt;Using Cloud logging in App Engine apps&lt;/a&gt;. Apparently I can use a service called the &lt;a href=&quot;https://cloud.google.com/appengine/articles/logging#using_the_logs_viewer&quot;&gt;Logs Viewer&lt;/a&gt; to access my logs directly from the UI, so I decide to try it out.&lt;/p&gt;
 
@@ -1701,7 +1701,7 @@ Switched to branch &#39;first&#39;
      <updated>2015-08-27T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2015/08/27/deadlines-estimates-software-startup</id>
      <content type="html">
-       &lt;p&gt;A lot of developers in startups are against deadlines and estimates. There’s even a whole “&lt;a href=&quot;https://twitter.com/search?q=%23noestimates&amp;amp;src=typd&quot;&gt;#NoEstimates&lt;/a&gt;” movement that appeared recently.&lt;/p&gt;
+       &lt;p&gt;A lot of developers in startups are against deadlines and estimates. There’s even a whole “&lt;a href=&quot;https://twitter.com/search?q=#noestimates&amp;amp;src=typd&quot;&gt;#NoEstimates&lt;/a&gt;” movement that appeared recently.&lt;/p&gt;
 
 &lt;p&gt;This fact is usually hard to understand for project owners, and it leads to incomprehensions on both sides. Product owners feel like developers don’t want to commit and act unprofessionally, developers feel like management don’t trust them and set unrealistic goals… it’s a mess, and it’s not helpful for the company nor the well being of the employees.&lt;/p&gt;
 
@@ -1923,7 +1923,7 @@ Switched to branch &#39;first&#39;
 
 &lt;p&gt;If you want to keep reading about deadlines, I find the article by &lt;a href=&quot;https://twitter.com/michaelochurch&quot;&gt;Michael O. Church&lt;/a&gt;, &lt;a href=&quot;https://michaelochurch.wordpress.com/2014/06/20/on-programmers-deadlines-and-agile/&quot;&gt;On programmers, deadlines, and “Agile”&lt;/a&gt;, very interesting even if I don’t agree with all of it.&lt;/p&gt;
 
-&lt;p&gt;I would also recommend reading &lt;a href=&quot;/blog/2015/10/19/book-review-clean-coder/&quot;&gt;The Clean Coder: A Code of Conduct for Professional Programmers&lt;/a&gt; by &lt;a href=&quot;https://twitter.com/unclebobmartin&quot;&gt;Robert C. Martin&lt;/a&gt;. It really is a great book and it goes into more details regarding the relation developers should have with deadlines and estimates. I was very inspired by the dialogues in this book when writing the ones in this article.&lt;/p&gt;
+&lt;p&gt;I would also recommend reading &lt;a href=&quot;/books/&quot;&gt;The Clean Coder: A Code of Conduct for Professional Programmers&lt;/a&gt; by &lt;a href=&quot;https://twitter.com/unclebobmartin&quot;&gt;Robert C. Martin&lt;/a&gt;. It really is a great book and it goes into more details regarding the relation developers should have with deadlines and estimates. I was very inspired by the dialogues in this book when writing the ones in this article.&lt;/p&gt;
 
 &lt;p&gt;Finally, I encourage you to read &lt;a href=&quot;https://pragprog.com/magazines/2013-04/estimation&quot;&gt;“Estimation - The Best We Can Do”&lt;/a&gt; by Jon Jeffries where he discusses the way estimates can be done in the context of agile teams. I don’t like the concept of velocity, but some points are worth reading.&lt;/p&gt;
 
@@ -5903,7 +5903,8 @@ something from the ground up quickly and get instantly feedbacks on it.&lt;/p&gt
 &lt;p&gt;I’m very proud of what we accomplished during this weekend. The team was
 awesome as everybody had complementary skills and each team member had a major impact on the
 result. This left me with the feeling that with the right group of people
-and a good mindset you can really create great things.&lt;/p&gt;
+and a good mindset you can really create great things.
+I&lt;/p&gt;
 
 &lt;p&gt;Overall I’d advise anyone that like &lt;a href=&quot;/blog/2012/01/09/start-working-on-your-side-project/&quot;&gt;starting projects&lt;/a&gt;
 to participate in events like these. Gather a group of people or just find
