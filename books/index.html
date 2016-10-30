@@ -22,23 +22,6 @@ description: "Startup and technology related book reviews."
     you might share my view on most of them, but again,
     this is just what I thought and this
     isn't at all an analysis of these books.
-    <br/>
-    <br/>
-
-    Below is what's next on my reading list. If you have
-    more recommendations,
-    <a href="https://twitter.com/marcgg">let me know</a>!
-
-    <div id="upcoming-books">
-      {% assign sorted = site.books | where:"read", false %}
-      {% for book in sorted %}
-        <span class="master-book-data" data-author="{{ book.author }}" data-title="{{ book.title }}" data-link="{{book.link}}" data-linkfr="{{book.linkfr}}" data-linkus="{{book.linkus}}">
-          <a href="#" class="buy-popin">
-            <img src="/assets/books/{{book.img}}" alt="{{book.title}}" />
-          </a>
-        </span>
-      {% endfor %}
-    </div>
   </div>
 
 
