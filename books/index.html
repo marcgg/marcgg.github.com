@@ -28,10 +28,10 @@ description: "Startup and technology related book reviews."
   {% assign sorted = site.books | sort:"score" | reverse | where:"read", true %}
 
   {% for book in sorted %}
-    <div class="single-post master-book-data" data-author="{{ book.author }}" data-title="{{ book.title }}" data-link="{{book.link}}" data-linkfr="{{book.linkfr}}" data-linkus="{{book.linkus}}">
+    <div class="single-post master-book-data" data-author="{{book.author}}" data-title="{{ book.title }}" data-link="{{book.link}}" data-linkfr="{{book.linkfr}}" data-linkus="{{book.linkus}}">
       <div class="title">
-        <a href="#" class="buy-popin">{{ book.title }}</a>
-        <div class="author">by {{ book.author }}</div>
+        <a href="#" class="buy-popin">{{book.title}}</a>
+        <div class="author">by {{book.author}}</div>
       </div>
 
       <p class="description">
