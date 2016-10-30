@@ -551,6 +551,24 @@ p code{
   font-size: 13px;
 }
 
+/* Music */
+
+.js_play_sound, .js_stop_sound{
+  display: inline-block;
+  padding: 4px 10px 2px 10px;
+  border: 1px solid #efefef;
+  background-color: #efefef;
+  margin-right: 10px;
+  text-decoration: none;
+  border-radius: 3px;
+  font-family: 'anonymousregular';
+  font-size: 12px;
+}
+
+.js_play_sound:hover, .js_stop_sound:hover{
+  background-color: #dedede;
+}
+
 /* Comments */
 
 #comments{
@@ -710,3 +728,4 @@ p code{
   }
 
 }
+

@@ -550,6 +550,16 @@
 					<integer>36</integer>
 				</dict>
 			</dict>
+			<key>2016-10-31-javascript-audio.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>499544428.722004</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>42</integer>
+				</dict>
+			</dict>
 		</dict>
 		<key>userIconName</key>
 		<real>493490997</real>
@@ -718,6 +728,9 @@
 		<array>
 			<string>2016-10-17-kitchenless-restaurant.md</string>
 		</array>
+		<array>
+			<string>2016-10-31-javascript-audio.md</string>
+		</array>
 	</array>
 	<key>storeFormatVersion</key>
 	<integer>1</integer>
@@ -733,7 +746,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-			<integer>37</integer>
+			<integer>43</integer>
 		</dict>
 		<key>userIconName</key>
 		<dict>
