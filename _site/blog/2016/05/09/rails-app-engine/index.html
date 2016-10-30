@@ -130,7 +130,7 @@ vm: true
 
 <p>I have to find how to read my logs to figure out what’s going on, so I start looking.</p>
 
-<p>I first run into the <a href="https://cloud.google.com/sdk/gcloud/reference/preview/app/modules/get-logs">gets-log</a> command, but it feels a bit complicated since I’m not sure exactly what logs are going to help me debug. I then find the <code class="highlighter-rouge">gcloud beta logging logs</code> command that is supposed to list all the logs available, which is pretty great. To run it I have to install gcloud Beta Commands, so I install this as well. The command works, but I’m still a bit confused by what I’m supposed to do here and how I could find a way to stream my server’s output to my console.</p>
+<p>I first run into the <code class="highlighter-rouge">gets-log</code> command, but it feels a bit complicated since I’m not sure exactly what logs are going to help me debug. I then find the <code class="highlighter-rouge">gcloud beta logging logs</code> command that is supposed to list all the logs available, which is pretty great. To run it I have to install gcloud Beta Commands, so I install this as well. The command works, but I’m still a bit confused by what I’m supposed to do here and how I could find a way to stream my server’s output to my console.</p>
 
 <p>After a few minutes running in circles, I take a step back and find another ressource that was way more helpful: <a href="https://cloud.google.com/appengine/articles/logging">Using Cloud logging in App Engine apps</a>. Apparently I can use a service called the <a href="https://cloud.google.com/appengine/articles/logging#using_the_logs_viewer">Logs Viewer</a> to access my logs directly from the UI, so I decide to try it out.</p>
 

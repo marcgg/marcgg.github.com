@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2016-10-30T13:01:25+01:00</updated>
+ <updated>2016-10-30T13:08:50+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -632,7 +632,7 @@ vm: true
 
 &lt;p&gt;I have to find how to read my logs to figure out what’s going on, so I start looking.&lt;/p&gt;
 
-&lt;p&gt;I first run into the &lt;a href=&quot;https://cloud.google.com/sdk/gcloud/reference/preview/app/modules/get-logs&quot;&gt;gets-log&lt;/a&gt; command, but it feels a bit complicated since I’m not sure exactly what logs are going to help me debug. I then find the &lt;code class=&quot;highlighter-rouge&quot;&gt;gcloud beta logging logs&lt;/code&gt; command that is supposed to list all the logs available, which is pretty great. To run it I have to install gcloud Beta Commands, so I install this as well. The command works, but I’m still a bit confused by what I’m supposed to do here and how I could find a way to stream my server’s output to my console.&lt;/p&gt;
+&lt;p&gt;I first run into the &lt;code class=&quot;highlighter-rouge&quot;&gt;gets-log&lt;/code&gt; command, but it feels a bit complicated since I’m not sure exactly what logs are going to help me debug. I then find the &lt;code class=&quot;highlighter-rouge&quot;&gt;gcloud beta logging logs&lt;/code&gt; command that is supposed to list all the logs available, which is pretty great. To run it I have to install gcloud Beta Commands, so I install this as well. The command works, but I’m still a bit confused by what I’m supposed to do here and how I could find a way to stream my server’s output to my console.&lt;/p&gt;
 
 &lt;p&gt;After a few minutes running in circles, I take a step back and find another ressource that was way more helpful: &lt;a href=&quot;https://cloud.google.com/appengine/articles/logging&quot;&gt;Using Cloud logging in App Engine apps&lt;/a&gt;. Apparently I can use a service called the &lt;a href=&quot;https://cloud.google.com/appengine/articles/logging#using_the_logs_viewer&quot;&gt;Logs Viewer&lt;/a&gt; to access my logs directly from the UI, so I decide to try it out.&lt;/p&gt;
 

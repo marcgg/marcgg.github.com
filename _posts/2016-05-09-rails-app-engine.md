@@ -78,9 +78,9 @@ Great! Let's check it out!
 
 I have to find how to read my logs to figure out what's going on, so I start looking. 
 
-I first run into the [gets-log][13] command, but it feels a bit complicated since I'm not sure exactly what logs are going to help me debug. I then find the `gcloud beta logging logs` command that is supposed to list all the logs available, which is pretty great. To run it I have to install gcloud Beta Commands, so I install this as well. The command works, but I'm still a bit confused by what I'm supposed to do here and how I could find a way to stream my server's output to my console.
+I first run into the `gets-log` command, but it feels a bit complicated since I'm not sure exactly what logs are going to help me debug. I then find the `gcloud beta logging logs` command that is supposed to list all the logs available, which is pretty great. To run it I have to install gcloud Beta Commands, so I install this as well. The command works, but I'm still a bit confused by what I'm supposed to do here and how I could find a way to stream my server's output to my console.
 
-After a few minutes running in circles, I take a step back and find another ressource that was way more helpful: [Using Cloud logging in App Engine apps][14]. Apparently I can use a service called the [Logs Viewer][15] to access my logs directly from the UI, so I decide to try it out.
+After a few minutes running in circles, I take a step back and find another ressource that was way more helpful: [Using Cloud logging in App Engine apps][13]. Apparently I can use a service called the [Logs Viewer][14] to access my logs directly from the UI, so I decide to try it out.
 
 My first impression is that there are a LOT of things going on there. I thought that I only had one instance, but apparently there's all kind of processes running on my account like a firewall or an autoscaler:
 
@@ -105,7 +105,7 @@ Right now the problematic section of our `secrets.yml` file looks like this:
 
 For obvious security reasons I don't want to just change the `secrets.yml` to add the secret key and then commit it, so I have to figure out how to set an environment variable.
 
-Once again the [documentation][16] is well done and easy to find. As it turns out [I have to define them][17] in the `app.yaml` file... that's fine but I honestly would have prefered a solution that didn't require me to mix code and production variables, but that'll do for now.
+Once again the [documentation][15] is well done and easy to find. As it turns out [I have to define them][16] in the `app.yaml` file... that's fine but I honestly would have prefered a solution that didn't require me to mix code and production variables, but that'll do for now.
 
 #### Releasing (again)
 
@@ -123,7 +123,7 @@ I go to the URL once again and ... it works this time!!
 
 I'm really not going to get into running a serious performance review, but for the fun of it I wanted to see how my micro instance would compare with Heroku's free tier on this very basic Rails 5 application.
 
-To do this I pushed the same app to [https://rails-5-test-mgg.herokuapp.com/][18] and just hit the refresh button a bunch of times and looked at results, because who needs proper methodology?
+To do this I pushed the same app to [https://rails-5-test-mgg.herokuapp.com/][17] and just hit the refresh button a bunch of times and looked at results, because who needs proper methodology?
 
 Google App Engine (micro, 1CPU, 0.6GB RAM) seems to respond this way (give or take 5ms):
 
@@ -137,11 +137,11 @@ Overall Heroku seems just a bit faster than App Engine. There's an overhead in t
 
 ## Conclusion
 
-Overall I was very pleasantly suprised by what Google had to offer and how quick it was to get something running even with absolutely no experience in the platform. Documentation is very well written and, in my opinion, it felt less disorienting than setting up an [EC2][19] instance for the first time.
+Overall I was very pleasantly suprised by what Google had to offer and how quick it was to get something running even with absolutely no experience in the platform. Documentation is very well written and, in my opinion, it felt less disorienting than setting up an [EC2][18] instance for the first time.
 
 The integration with Ruby and Rails is well done, deploying is simple and besides the `secrets.yml` gotcha, it went smoothly. Sinatra integration is supposed to be as good but I haven't tried it yet.
 
-I might pick this over [AWS][20] for a pet project at some point to try it out some more.
+I might pick this over [AWS][19] for a pet project at some point to try it out some more.
 
 [1]:	https://cloudplatform.googleblog.com/2016/05/Ruby-on-Google-App-Engine-goes-betaruntime.html
 [2]:	https://rubygems.org/gems/rails/versions/5.0.0.rc1
@@ -155,11 +155,10 @@ I might pick this over [AWS][20] for a pet project at some point to try it out s
 [10]:	https://toolbelt.heroku.com/
 [11]:	https://rails-5-test.appspot.com/
 [12]:	https://s3.amazonaws.com/f.cl.ly/items/2a3y0e090f2P1Y1s1a31/Youre_tearing_me_apart_lisa-36704.gif?v=7a6cf7f4
-[13]:	https://cloud.google.com/sdk/gcloud/reference/preview/app/modules/get-logs
-[14]:	https://cloud.google.com/appengine/articles/logging
-[15]:	https://cloud.google.com/appengine/articles/logging#using_the_logs_viewer
-[16]:	https://cloud.google.com/appengine/docs/flexible/ruby/runtime#environment_variables
-[17]:	https://cloud.google.com/appengine/docs/flexible/ruby/configuring-your-app-with-app-yaml#Ruby_app_yaml_Defining_environment_variables
-[18]:	https://rails-5-test-mgg.herokuapp.com/
-[19]:	https://aws.amazon.com/ec2/
-[20]:	https://aws.amazon.com/
+[13]:	https://cloud.google.com/appengine/articles/logging
+[14]:	https://cloud.google.com/appengine/articles/logging#using_the_logs_viewer
+[15]:	https://cloud.google.com/appengine/docs/flexible/ruby/runtime#environment_variables
+[16]:	https://cloud.google.com/appengine/docs/flexible/ruby/configuring-your-app-with-app-yaml#Ruby_app_yaml_Defining_environment_variables
+[17]:	https://rails-5-test-mgg.herokuapp.com/
+[18]:	https://aws.amazon.com/ec2/
+[19]:	https://aws.amazon.com/
