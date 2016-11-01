@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2016-11-01T12:15:30+01:00</updated>
+ <updated>2016-11-01T12:17:53+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -25,7 +25,7 @@
 
 &lt;p&gt;In this article I’ll give some pointers with usable code. I’ve also added examples that you can actually run &lt;a href=&quot;http://caniuse.com/#feat=audio-api&quot;&gt;if your browser supports it&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&quot;simple-beep&quot;&gt;Simple Beep&lt;/h2&gt;
+&lt;h2 id=&quot;produce-a-simple-beep&quot;&gt;Produce a Simple Beep&lt;/h2&gt;
 
 &lt;p&gt;First let’s create a very basic beep using a &lt;a href=&quot;https://en.wikipedia.org/wiki/Sine_wave&quot;&gt;sinusoid&lt;/a&gt;. We’ll initiate an &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/AudioContext&quot;&gt;audio context&lt;/a&gt;, which is the central object for generating sound. Then we’ll create an &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode&quot;&gt;oscillator&lt;/a&gt; producing the sine wave. Finally we connect the oscillator to the context and start.&lt;/p&gt;
 
@@ -71,7 +71,7 @@
 
 &lt;p&gt;As you can hear, the clicking sound is gone! But that’s not the only interesting thing that you can do with this exponential ramp down.&lt;/p&gt;
 
-&lt;h2 id=&quot;set-a-ringing-noise&quot;&gt;Set A Ringing Noise&lt;/h2&gt;
+&lt;h2 id=&quot;set-a-ringing-effect&quot;&gt;Set A Ringing Effect&lt;/h2&gt;
 
 &lt;p&gt;In the example above, we decided to stop the sound really quickly, in &lt;code class=&quot;highlighter-rouge&quot;&gt;0.04&lt;/code&gt; seconds. But what happens when we change this &lt;code class=&quot;highlighter-rouge&quot;&gt;X&lt;/code&gt; value?&lt;/p&gt;
 

@@ -13,7 +13,7 @@ During a recent hackathon, I decided to build [a multiplayer 8 bits sequencer][1
 
 In this article I'll give some pointers with usable code. I've also added examples that you can actually run [if your browser supports it][3].
 
-## Simple Beep
+## Produce a Simple Beep
 
 First let's create a very basic beep using a [sinusoid][4]. We'll initiate an [audio context][5], which is the central object for generating sound. Then we'll create an [oscillator][6] producing the sine wave. Finally we connect the oscillator to the context and start.
 
@@ -65,7 +65,7 @@ g.gain.exponentialRampToValueAtTime(
 
 As you can hear, the clicking sound is gone! But that's not the only interesting thing that you can do with this exponential ramp down.
 
-## Set A Ringing Noise
+## Set A Ringing Effect
 
 In the example above, we decided to stop the sound really quickly, in `0.04` seconds. But what happens when we change this `X` value?
 

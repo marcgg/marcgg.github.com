@@ -59,7 +59,7 @@
 
 <p>In this article I’ll give some pointers with usable code. I’ve also added examples that you can actually run <a href="http://caniuse.com/#feat=audio-api">if your browser supports it</a>.</p>
 
-<h2 id="simple-beep">Simple Beep</h2>
+<h2 id="produce-a-simple-beep">Produce a Simple Beep</h2>
 
 <p>First let’s create a very basic beep using a <a href="https://en.wikipedia.org/wiki/Sine_wave">sinusoid</a>. We’ll initiate an <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext">audio context</a>, which is the central object for generating sound. Then we’ll create an <a href="https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode">oscillator</a> producing the sine wave. Finally we connect the oscillator to the context and start.</p>
 
@@ -105,7 +105,7 @@
 
 <p>As you can hear, the clicking sound is gone! But that’s not the only interesting thing that you can do with this exponential ramp down.</p>
 
-<h2 id="set-a-ringing-noise">Set A Ringing Noise</h2>
+<h2 id="set-a-ringing-effect">Set A Ringing Effect</h2>
 
 <p>In the example above, we decided to stop the sound really quickly, in <code class="highlighter-rouge">0.04</code> seconds. But what happens when we change this <code class="highlighter-rouge">X</code> value?</p>
 
