@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2016-10-30T20:30:09+01:00</updated>
+ <updated>2016-11-01T12:15:30+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -12,6 +12,160 @@
  </author>
 
  
+  
+   <entry>
+     <title>Generate Notes Programmatically With Javascript</title>
+     <link href="https://marcgg.com/blog/2016/11/01/javascript-audio/"/>
+     <updated>2016-11-01T00:00:00+01:00</updated>
+     <id>https://marcgg.com/blog/2016/11/01/javascript-audio</id>
+     <content type="html">
+       &lt;script src=&quot;/assets/js/posts/music.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;During a recent hackathon, I decided to build &lt;a href=&quot;https://warm-escarpment-32217.herokuapp.com/&quot;&gt;a multiplayer 8 bits sequencer&lt;/a&gt; using sounds generated programatically with the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API&quot;&gt;Web Audio API&lt;/a&gt;. I didn’t want to only use the HTML 5 &lt;code class=&quot;highlighter-rouge&quot;&gt;audio&lt;/code&gt; tag because I found it too limiting… but the first thing I discovered is that getting the right kind of sound is not straightforward at all, especially if you only have a very basic musical background like myself. So how exactly do you create a clear, ringing and nice sounding note?&lt;/p&gt;
+
+&lt;p&gt;In this article I’ll give some pointers with usable code. I’ve also added examples that you can actually run &lt;a href=&quot;http://caniuse.com/#feat=audio-api&quot;&gt;if your browser supports it&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;simple-beep&quot;&gt;Simple Beep&lt;/h2&gt;
+
+&lt;p&gt;First let’s create a very basic beep using a &lt;a href=&quot;https://en.wikipedia.org/wiki/Sine_wave&quot;&gt;sinusoid&lt;/a&gt;. We’ll initiate an &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/AudioContext&quot;&gt;audio context&lt;/a&gt;, which is the central object for generating sound. Then we’ll create an &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode&quot;&gt;oscillator&lt;/a&gt; producing the sine wave. Finally we connect the oscillator to the context and start.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;context&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;AudioContext&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;o&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createOscillator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;sine&quot;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;destination&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;js_play_sound&quot; data-source=&quot;example1()&quot;&gt;Play&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;js_stop_sound&quot;&gt;Stop&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;You’ll notice that the sound produced here is not great. It seems like you let a phone off the hook and when you stop it, you hear a “click” and it’s not pleasant at all. This is because the human hear reacts this way as explained in this &lt;a href=&quot;http://alemangui.github.io/blog//2015/12/26/ramp-to-value.html&quot;&gt;great article&lt;/a&gt;. Basically when you stop the sound anywhere else than the zero crossing point, you’ll hear this clicking sound.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/audio_click.jpg&quot; alt=&quot;Clicking noise on a sine curve&quot; style=&quot;padding: 20px; width: 600px;&quot; /&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;getting-rid-of-the-clicking-sound&quot;&gt;Getting Rid Of The Clicking Sound&lt;/h2&gt;
+
+&lt;p&gt;The best solution to get rid of this click is to ramp the sine wave down with an exponentional function, using &lt;code class=&quot;highlighter-rouge&quot;&gt;AudioParam.exponentialRampToValueAtTime()&lt;/code&gt; as &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/exponentialRampToValueAtTime&quot;&gt;documented here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This time we need to add a &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/GainNode&quot;&gt;gain node&lt;/a&gt; to our oscillator. A gain node allows us to change the volume of a signal as explained in this schema from the documentation:&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/gain.jpg&quot; alt=&quot;Gain node&quot; style=&quot;padding: 20px; width: 600px;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;The code to start the sound now looks like this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;context&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;AudioContext&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;o&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createOscillator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt;  &lt;span class=&quot;nx&quot;&gt;g&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createGain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;destination&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;js_play_sound&quot; data-source=&quot;example2()&quot;&gt;Play&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;In order to stop the sound we change the gain value, effectively reducing the volume. Note that we don’t ramp down to 0 since there is a limitation in this function where the value has to be positive.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;gain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exponentialRampToValueAtTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;mf&quot;&gt;0.00001&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;currentTime&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.04&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;js_play_sound&quot; data-source=&quot;example2Stop(0.04)&quot;&gt;Stop&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;As you can hear, the clicking sound is gone! But that’s not the only interesting thing that you can do with this exponential ramp down.&lt;/p&gt;
+
+&lt;h2 id=&quot;set-a-ringing-noise&quot;&gt;Set A Ringing Noise&lt;/h2&gt;
+
+&lt;p&gt;In the example above, we decided to stop the sound really quickly, in &lt;code class=&quot;highlighter-rouge&quot;&gt;0.04&lt;/code&gt; seconds. But what happens when we change this &lt;code class=&quot;highlighter-rouge&quot;&gt;X&lt;/code&gt; value?&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;gain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exponentialRampToValueAtTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.00001&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;currentTime&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;js_play_sound&quot; data-source=&quot;example2()&quot;&gt;Play&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;js_play_sound&quot; data-source=&quot;example2Stop(0.1)&quot;&gt;Stop (X=0.1)&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;js_play_sound&quot; data-source=&quot;example2Stop(1)&quot;&gt;Stop (X=1)&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;js_play_sound&quot; data-source=&quot;example2Stop(5)&quot;&gt;Stop (X=5)&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;hitting-notes&quot;&gt;Hitting Notes&lt;/h3&gt;
+
+&lt;p&gt;Giving more time to the sound to fade out gives it a totally different feel. It gets more visible when we start and stop the signal right away:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;js_play_sound&quot; data-source=&quot;example3('sine', 0.08)&quot;&gt;Start and stop quickly&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;js_play_sound&quot; data-source=&quot;example3('sine', 1.5)&quot;&gt;Start and stop slowly&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The first one sounds like a ticking noise when the other sounds like an actual note played on an instrument.&lt;/p&gt;
+
+&lt;h3 id=&quot;various-oscilators&quot;&gt;Various Oscilators&lt;/h3&gt;
+
+&lt;p&gt;So far we’ve been using a sine wave for our main signal, but we have other options:&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/signals.png&quot; alt=&quot;Types of oscilators&quot; style=&quot;padding: 20px; width: 400px;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;It’s enven more interesting when we start playing around with the type of oscilators by setting &lt;code class=&quot;highlighter-rouge&quot;&gt;o.type = type&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;js_play_sound&quot; data-source=&quot;example3('sine', 1.5)&quot;&gt;Sine&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;js_play_sound&quot; data-source=&quot;example3('square', 1.5)&quot;&gt;Square&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;js_play_sound&quot; data-source=&quot;example3('triangle', 1.5)&quot;&gt;Triangle&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;js_play_sound&quot; data-source=&quot;example3('sawtooth', 1.5)&quot;&gt;Sawtooth&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;playing-actual-notes&quot;&gt;Playing Actual Notes&lt;/h2&gt;
+
+&lt;p&gt;With the previous code, it becomes fairly simple to have a nice sounding note, but what exactly were we playing? That’s when you have to take frequency into account. For instance, the one people know is that A4 is 440Hz, but there are others.&lt;/p&gt;
+
+&lt;h3 id=&quot;note-frequencies-in-hz&quot;&gt;Note Frequencies in Hz&lt;/h3&gt;
+
+&lt;p&gt;With this table, you can easily create a mapping in your code to play any given note using its . For the hackathon I used a simple hash mapping that is available in this &lt;a href=&quot;https://gist.github.com/marcgg/94e97def0e8694f906443ed5262e9cbb&quot;&gt;gist&lt;/a&gt;.&lt;/p&gt;
+
+&lt;table class=&quot;data_table&quot;&gt;
+	&lt;tr&gt;
+		&lt;td&gt;&lt;/td&gt;&lt;th&gt;C&lt;/th&gt;&lt;th&gt;C#&lt;/th&gt;&lt;th&gt;D&lt;/th&gt;&lt;th&gt;Eb&lt;/th&gt;&lt;th&gt;E&lt;/th&gt;&lt;th&gt;F&lt;/th&gt;&lt;th&gt;F#&lt;/th&gt;&lt;th&gt;G&lt;/th&gt;&lt;th&gt;G#&lt;/th&gt;&lt;th&gt;A&lt;/th&gt;&lt;th&gt;Bb&lt;/th&gt;&lt;th&gt;B&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;th&gt;0&lt;/th&gt;&lt;td&gt;16.35&lt;/td&gt;&lt;td&gt;17.32&lt;/td&gt;&lt;td&gt;18.35&lt;/td&gt;&lt;td&gt;19.45&lt;/td&gt;&lt;td&gt;20.60&lt;/td&gt;&lt;td&gt;21.83&lt;/td&gt;&lt;td&gt;23.12&lt;/td&gt;&lt;td&gt;24.50&lt;/td&gt;&lt;td&gt;25.96&lt;/td&gt;&lt;td&gt;27.50&lt;/td&gt;&lt;td&gt;29.14&lt;/td&gt;&lt;td&gt;30.87&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;th&gt;1&lt;/th&gt;&lt;td&gt;32.70&lt;/td&gt;&lt;td&gt;34.65&lt;/td&gt;&lt;td&gt;36.71&lt;/td&gt;&lt;td&gt;38.89&lt;/td&gt;&lt;td&gt;41.20&lt;/td&gt;&lt;td&gt;43.65&lt;/td&gt;&lt;td&gt;46.25&lt;/td&gt;&lt;td&gt;49.00&lt;/td&gt;&lt;td&gt;51.91&lt;/td&gt;&lt;td&gt;55.00&lt;/td&gt;&lt;td&gt;58.27&lt;/td&gt;&lt;td&gt;61.74&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;th&gt;2&lt;/th&gt;&lt;td&gt;65.41&lt;/td&gt;&lt;td&gt;69.30&lt;/td&gt;&lt;td&gt;73.42&lt;/td&gt;&lt;td&gt;77.78&lt;/td&gt;&lt;td&gt;82.41&lt;/td&gt;&lt;td&gt;87.31&lt;/td&gt;&lt;td&gt;92.50&lt;/td&gt;&lt;td&gt;98.00&lt;/td&gt;&lt;td&gt;103.8&lt;/td&gt;&lt;td&gt;110.0&lt;/td&gt;&lt;td&gt;116.5&lt;/td&gt;&lt;td&gt;123.5&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;th&gt;3&lt;/th&gt;&lt;td&gt;130.8&lt;/td&gt;&lt;td&gt;138.6&lt;/td&gt;&lt;td&gt;146.8&lt;/td&gt;&lt;td&gt;155.6&lt;/td&gt;&lt;td&gt;164.8&lt;/td&gt;&lt;td&gt;174.6&lt;/td&gt;&lt;td&gt;185.0&lt;/td&gt;&lt;td&gt;196.0&lt;/td&gt;&lt;td&gt;207.7&lt;/td&gt;&lt;td&gt;220.0&lt;/td&gt;&lt;td&gt;233.1&lt;/td&gt;&lt;td&gt;246.9&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;th&gt;4&lt;/th&gt;&lt;td&gt;261.6&lt;/td&gt;&lt;td&gt;277.2&lt;/td&gt;&lt;td&gt;293.7&lt;/td&gt;&lt;td&gt;311.1&lt;/td&gt;&lt;td&gt;329.6&lt;/td&gt;&lt;td&gt;349.2&lt;/td&gt;&lt;td&gt;370.0&lt;/td&gt;&lt;td&gt;392.0&lt;/td&gt;&lt;td&gt;415.3&lt;/td&gt;&lt;td&gt;440.0&lt;/td&gt;&lt;td&gt;466.2&lt;/td&gt;&lt;td&gt;493.9&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;th&gt;5&lt;/th&gt;&lt;td&gt;523.3&lt;/td&gt;&lt;td&gt;554.4&lt;/td&gt;&lt;td&gt;587.3&lt;/td&gt;&lt;td&gt;622.3&lt;/td&gt;&lt;td&gt;659.3&lt;/td&gt;&lt;td&gt;698.5&lt;/td&gt;&lt;td&gt;740.0&lt;/td&gt;&lt;td&gt;784.0&lt;/td&gt;&lt;td&gt;830.6&lt;/td&gt;&lt;td&gt;880.0&lt;/td&gt;&lt;td&gt;932.3&lt;/td&gt;&lt;td&gt;987.8&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;th&gt;6&lt;/th&gt;&lt;td&gt;1047&lt;/td&gt;&lt;td&gt;1109&lt;/td&gt;&lt;td&gt;1175&lt;/td&gt;&lt;td&gt;1245&lt;/td&gt;&lt;td&gt;1319&lt;/td&gt;&lt;td&gt;1397&lt;/td&gt;&lt;td&gt;1480&lt;/td&gt;&lt;td&gt;1568&lt;/td&gt;&lt;td&gt;1661&lt;/td&gt;&lt;td&gt;1760&lt;/td&gt;&lt;td&gt;1865&lt;/td&gt;&lt;td&gt;1976&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;th&gt;7&lt;/th&gt;&lt;td&gt;2093&lt;/td&gt;&lt;td&gt;2217&lt;/td&gt;&lt;td&gt;2349&lt;/td&gt;&lt;td&gt;2489&lt;/td&gt;&lt;td&gt;2637&lt;/td&gt;&lt;td&gt;2794&lt;/td&gt;&lt;td&gt;2960&lt;/td&gt;&lt;td&gt;3136&lt;/td&gt;&lt;td&gt;3322&lt;/td&gt;&lt;td&gt;3520&lt;/td&gt;&lt;td&gt;3729&lt;/td&gt;&lt;td&gt;3951&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;th&gt;8&lt;/th&gt;&lt;td&gt;4186&lt;/td&gt;&lt;td&gt;4435&lt;/td&gt;&lt;td&gt;4699&lt;/td&gt;&lt;td&gt;4978&lt;/td&gt;&lt;td&gt;5274&lt;/td&gt;&lt;td&gt;5588&lt;/td&gt;&lt;td&gt;5920&lt;/td&gt;&lt;td&gt;6272&lt;/td&gt;&lt;td&gt;6645&lt;/td&gt;&lt;td&gt;7040&lt;/td&gt;&lt;td&gt;7459&lt;/td&gt;&lt;td&gt;7902&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;To implement this, we just need to add a frequency to our oscilator:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;frequency&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;440.0&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;frequency&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;frequency&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;If we change with the value of &lt;code class=&quot;highlighter-rouge&quot;&gt;frequency&lt;/code&gt;, we can play any note. For instance:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;js_play_sound&quot; data-source=&quot;example4(261.6, 'sine')&quot;&gt;261.6Hz (C4)&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;js_play_sound&quot; data-source=&quot;example4(440.0, 'sine')&quot;&gt;440Hz (A4)&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;js_play_sound&quot; data-source=&quot;example4(830.6, 'sine')&quot;&gt;830.6Hz (G#5)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Mix this with the ramp down timings and different signals, and you start to be able to create more interesting sounds.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;js_play_sound&quot; data-source=&quot;example4(261.6, 'square')&quot;&gt;174.6Hz (F3) - Square&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;js_play_sound&quot; data-source=&quot;example4(1109, 'sawtooth')&quot;&gt;1109Hz (C#6) - Sawtooth&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;js_play_sound&quot; data-source=&quot;example4(87.31, 'triangle')&quot;&gt;87.31 Hz (F2) - Triangle&lt;/a&gt;&lt;/p&gt;
+
+
+       
+     </content>
+   </entry>
   
  
   
