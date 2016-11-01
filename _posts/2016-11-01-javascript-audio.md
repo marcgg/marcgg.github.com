@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Generate Sounds Programmatically With Javascript"
-description: "The Web Audio API is a great option to create notes and music using pure javascript. In this article I'll explain how to get a clearer sound and add some very simple  audio effects to a note."
+description: "The Web Audio API is a great option to create notes and music using pure javascript. In this simple tutorial article I'll explain how to get a clearer sound and add some very simple  audio effects to a note."
 blog: true
 category: blog
 tag: Dev
