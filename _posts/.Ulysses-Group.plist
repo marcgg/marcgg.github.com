@@ -560,6 +560,16 @@
 					<integer>44</integer>
 				</dict>
 			</dict>
+			<key>2016-11-21-chiptune-sequencer-multiplayer.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>501344878.615762</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>50</integer>
+				</dict>
+			</dict>
 		</dict>
 		<key>userIconName</key>
 		<real>493490997</real>
@@ -731,6 +741,9 @@
 		<array>
 			<string>2016-11-01-javascript-audio.md</string>
 		</array>
+		<array>
+			<string>2016-11-21-chiptune-sequencer-multiplayer.md</string>
+		</array>
 	</array>
 	<key>storeFormatVersion</key>
 	<integer>1</integer>
@@ -746,7 +759,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-			<integer>45</integer>
+			<integer>51</integer>
 		</dict>
 		<key>userIconName</key>
 		<dict>
