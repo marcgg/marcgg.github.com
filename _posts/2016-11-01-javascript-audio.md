@@ -109,36 +109,36 @@ With the previous code, it becomes fairly simple to have a nice sounding note, b
 With this table, you can easily create a mapping in your code to play any given note using its . For the hackathon I used a simple hash mapping that is available in this [gist][10].
 
 <table class="data_table">
-	<tr>
-		<td></td><th>C</th><th>C#</th><th>D</th><th>Eb</th><th>E</th><th>F</th><th>F#</th><th>G</th><th>G#</th><th>A</th><th>Bb</th><th>B</th>
-	</tr>
-	<tr>
-		<th>0</th><td>16.35</td><td>17.32</td><td>18.35</td><td>19.45</td><td>20.60</td><td>21.83</td><td>23.12</td><td>24.50</td><td>25.96</td><td>27.50</td><td>29.14</td><td>30.87</td>
-	</tr>
-	<tr>
-		<th>1</th><td>32.70</td><td>34.65</td><td>36.71</td><td>38.89</td><td>41.20</td><td>43.65</td><td>46.25</td><td>49.00</td><td>51.91</td><td>55.00</td><td>58.27</td><td>61.74</td>
-	</tr>
-	<tr>
-		<th>2</th><td>65.41</td><td>69.30</td><td>73.42</td><td>77.78</td><td>82.41</td><td>87.31</td><td>92.50</td><td>98.00</td><td>103.8</td><td>110.0</td><td>116.5</td><td>123.5</td>
-	</tr>
-	<tr>
-		<th>3</th><td>130.8</td><td>138.6</td><td>146.8</td><td>155.6</td><td>164.8</td><td>174.6</td><td>185.0</td><td>196.0</td><td>207.7</td><td>220.0</td><td>233.1</td><td>246.9</td>
-	</tr>
-	<tr>
-		<th>4</th><td>261.6</td><td>277.2</td><td>293.7</td><td>311.1</td><td>329.6</td><td>349.2</td><td>370.0</td><td>392.0</td><td>415.3</td><td>440.0</td><td>466.2</td><td>493.9</td>
-	</tr>
-	<tr>
-		<th>5</th><td>523.3</td><td>554.4</td><td>587.3</td><td>622.3</td><td>659.3</td><td>698.5</td><td>740.0</td><td>784.0</td><td>830.6</td><td>880.0</td><td>932.3</td><td>987.8</td>
-	</tr>
-	<tr>
-		<th>6</th><td>1047</td><td>1109</td><td>1175</td><td>1245</td><td>1319</td><td>1397</td><td>1480</td><td>1568</td><td>1661</td><td>1760</td><td>1865</td><td>1976</td>
-	</tr>
-	<tr>
-		<th>7</th><td>2093</td><td>2217</td><td>2349</td><td>2489</td><td>2637</td><td>2794</td><td>2960</td><td>3136</td><td>3322</td><td>3520</td><td>3729</td><td>3951</td>
-	</tr>
-	<tr>
-		<th>8</th><td>4186</td><td>4435</td><td>4699</td><td>4978</td><td>5274</td><td>5588</td><td>5920</td><td>6272</td><td>6645</td><td>7040</td><td>7459</td><td>7902</td>
-	</tr>
+    <tr>
+        <td></td><th>C</th><th>C#</th><th>D</th><th>Eb</th><th>E</th><th>F</th><th>F#</th><th>G</th><th>G#</th><th>A</th><th>Bb</th><th>B</th>
+    </tr>
+    <tr>
+        <th>0</th><td>16.35</td><td>17.32</td><td>18.35</td><td>19.45</td><td>20.60</td><td>21.83</td><td>23.12</td><td>24.50</td><td>25.96</td><td>27.50</td><td>29.14</td><td>30.87</td>
+    </tr>
+    <tr>
+        <th>1</th><td>32.70</td><td>34.65</td><td>36.71</td><td>38.89</td><td>41.20</td><td>43.65</td><td>46.25</td><td>49.00</td><td>51.91</td><td>55.00</td><td>58.27</td><td>61.74</td>
+    </tr>
+    <tr>
+        <th>2</th><td>65.41</td><td>69.30</td><td>73.42</td><td>77.78</td><td>82.41</td><td>87.31</td><td>92.50</td><td>98.00</td><td>103.8</td><td>110.0</td><td>116.5</td><td>123.5</td>
+    </tr>
+    <tr>
+        <th>3</th><td>130.8</td><td>138.6</td><td>146.8</td><td>155.6</td><td>164.8</td><td>174.6</td><td>185.0</td><td>196.0</td><td>207.7</td><td>220.0</td><td>233.1</td><td>246.9</td>
+    </tr>
+    <tr>
+        <th>4</th><td>261.6</td><td>277.2</td><td>293.7</td><td>311.1</td><td>329.6</td><td>349.2</td><td>370.0</td><td>392.0</td><td>415.3</td><td>440.0</td><td>466.2</td><td>493.9</td>
+    </tr>
+    <tr>
+        <th>5</th><td>523.3</td><td>554.4</td><td>587.3</td><td>622.3</td><td>659.3</td><td>698.5</td><td>740.0</td><td>784.0</td><td>830.6</td><td>880.0</td><td>932.3</td><td>987.8</td>
+    </tr>
+    <tr>
+        <th>6</th><td>1047</td><td>1109</td><td>1175</td><td>1245</td><td>1319</td><td>1397</td><td>1480</td><td>1568</td><td>1661</td><td>1760</td><td>1865</td><td>1976</td>
+    </tr>
+    <tr>
+        <th>7</th><td>2093</td><td>2217</td><td>2349</td><td>2489</td><td>2637</td><td>2794</td><td>2960</td><td>3136</td><td>3322</td><td>3520</td><td>3729</td><td>3951</td>
+    </tr>
+    <tr>
+        <th>8</th><td>4186</td><td>4435</td><td>4699</td><td>4978</td><td>5274</td><td>5588</td><td>5920</td><td>6272</td><td>6645</td><td>7040</td><td>7459</td><td>7902</td>
+    </tr>
 </table>
 
 
@@ -161,7 +161,7 @@ Mix this with the ramp down timings and different signals, and you start to be a
 <a href="#" class="js_play_sound" data-source="example4(1109, 'sawtooth')">1109Hz (C#6) - Sawtooth</a>
 <a href="#" class="js_play_sound" data-source="example4(87.31, 'triangle')">87.31 Hz (F2) - Triangle</a>
 
-[1]:	https://warm-escarpment-32217.herokuapp.com/
+[1]:	/blog/2016/11/21/chiptune-sequencer-multiplayer/
 [2]:	https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API
 [3]:	http://caniuse.com/#feat=audio-api
 [4]:	https://en.wikipedia.org/wiki/Sine_wave

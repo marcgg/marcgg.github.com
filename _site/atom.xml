@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2016-11-20T15:30:53+01:00</updated>
+ <updated>2016-11-20T19:39:20+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -19,48 +19,62 @@
      <updated>2016-11-21T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2016/11/21/chiptune-sequencer-multiplayer</id>
      <content type="html">
-       &lt;p&gt;During this year &lt;a href=&quot;https://www.rubyrampage.com/&quot;&gt;Ruby Rampage&lt;/a&gt; hackathon, I decided to build something using the new features of Rails 5 and the Web Audio API. A few years ago I tried to build &lt;a href=&quot;/blog/2013/01/14/html5-nodejs-websockets-games-learning/&quot;&gt;a multiplayer HTML 5 game in two days&lt;/a&gt;, but I had to use NodeJS… now was the time to see if &lt;a href=&quot;http://edgeguides.rubyonrails.org/action_cable_overview.html&quot;&gt;ActionCable&lt;/a&gt;  was any better!&lt;/p&gt;
+       &lt;p&gt;For this year &lt;a href=&quot;https://www.rubyrampage.com/&quot;&gt;Ruby Rampage&lt;/a&gt; (previously called Rails Rumble) hackathon I really wanted to build something using the new features of Rails 5. A few years ago I tried to build &lt;a href=&quot;/blog/2013/01/14/html5-nodejs-websockets-games-learning/&quot;&gt;a multiplayer HTML 5 game in two days&lt;/a&gt;, but I had to use NodeJS… now was the time to see if &lt;a href=&quot;http://edgeguides.rubyonrails.org/action_cable_overview.html&quot;&gt;ActionCable&lt;/a&gt;  was any better! I also was curious about the new improvements of the Web Audio API ever since I’ve read articles about it.&lt;/p&gt;
 
-&lt;p&gt;After two days of work I managed to get a working site and deployed it on Heroku. You can try it out for yourself &lt;a href=&quot;https://warm-escarpment-32217.herokuapp.com/&quot;&gt;online&lt;/a&gt; or take a look at this quick demo video:&lt;/p&gt;
+&lt;p&gt;I went ahead and after two days of work I managed to get a working site and deployed it on Heroku. You can &lt;a href=&quot;https://warm-escarpment-32217.herokuapp.com/&quot;&gt;try it out for yourself online&lt;/a&gt; or take a look at this quick demo video:&lt;/p&gt;
 
 &lt;center&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/JZlsbC-7GZY&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;It only works on Chrome and run on a free Heroku server, but it still handles a decent number of connexions.&lt;/p&gt;
+&lt;p&gt;It only works on Chrome and run on a free Heroku server, but it still handles a decent number of concurent connexions.&lt;/p&gt;
 
 &lt;h2 id=&quot;building-the-sequencer&quot;&gt;Building The Sequencer&lt;/h2&gt;
 
-&lt;p&gt;Since it was a hackathon, I had to cut some corners in term of test coverage and general code quality. However, I was aiming to build a stable project, meaning the site should handle gracefully any bugs or server restarts.&lt;/p&gt;
+&lt;p&gt;Since it was a hackathon, I had to cut some corners in term of test coverage and general code quality. However I was always aiming to build a stable enough project, meaning the site should handle gracefully any bugs, timeouts or server restarts.&lt;/p&gt;
 
 &lt;h3 id=&quot;action-cable--websockets&quot;&gt;Action Cable &amp;amp; Websockets&lt;/h3&gt;
 
-&lt;p&gt;Action Cable gives a simple way to deal with real-time features in a Rails application. It uses &lt;a href=&quot;http://redis.io/&quot;&gt;Redis&lt;/a&gt; a lot, so I had to use a free &lt;a href=&quot;https://redislabs.com/redis-cloud&quot;&gt;Redis Cloud&lt;/a&gt; instance. I also set up &lt;a href=&quot;http://puma.io/&quot;&gt;Puma&lt;/a&gt; since a threaded server is really the way to go when dealing with real-time.&lt;/p&gt;
+&lt;p&gt;Action Cable provides a simple way to deal with real-time features in a Rails application. It uses &lt;a href=&quot;http://redis.io/&quot;&gt;Redis&lt;/a&gt; a lot, so I had to use a free &lt;a href=&quot;https://redislabs.com/redis-cloud&quot;&gt;Redis Cloud&lt;/a&gt; instance. I also set up &lt;a href=&quot;http://puma.io/&quot;&gt;Puma&lt;/a&gt; since a threaded server is really the way to go when dealing with real-time.&lt;/p&gt;
 
-&lt;p&gt;Overall the experience was nicer than what I used to with NodeJS and in a few hours I had a somewhat working multiplayer snake game that looked terrible:&lt;/p&gt;
+&lt;p&gt;Overall the experience was nicer than what I used to with NodeJS and in a few hours I had a somewhat working multiplayer snake “game” that looked terrible:&lt;/p&gt;
 
 &lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/chiptune_step1.jpg&quot; alt=&quot;&quot; style=&quot;padding: 20px; width: 400px;&quot; /&gt;&lt;/div&gt;
 
-&lt;p&gt;After a bit I realized that it was very hard to maintain the list of connected players and update it when they leave, get disconnected or just stop responding . It’s at this point that I started investing more time into getting a stable way of handling players, with a dedicated model. I &lt;a href=&quot;https://gist.github.com/marcgg/1f376b58ddca8ef45f47ee831dbc3c37&quot;&gt;shared its code here &lt;/a&gt;if you’re interested - but keep in mind that it’s “hackathon code” :) The big challenge was to link a request signature to a player, and make sure the link was properly persisted and updated at the right time.&lt;/p&gt;
+&lt;p&gt;After a bit I realized that it was very hard to maintain the list of connected players and update it when they leave, get disconnected or just stop responding. It’s at this point that I started investing more time into getting a stable way of handling players, with a dedicated model and better integration with Redis. One challenge there was to link a request signature to a player, and make sure the link was properly persisted and updated at the right time.&lt;/p&gt;
+
+&lt;p&gt;I &lt;a href=&quot;https://gist.github.com/marcgg/1f376b58ddca8ef45f47ee831dbc3c37&quot;&gt;shared some Ruby code here&lt;/a&gt; if you’re interested - but keep in mind that it’s “hackathon code”, so don’t go and just use this :)&lt;/p&gt;
 
 &lt;h3 id=&quot;broadcasting&quot;&gt;Broadcasting&lt;/h3&gt;
 
-&lt;p&gt;An error I made in the past with my adventures with real-time multiplayer HTML 5 games was passing arround too much information. In this setup, the network access can be a real problem as any milisecond lost is felt in the UI.&lt;/p&gt;
+&lt;p&gt;An error I made in the past when building a simple real-time multiplayer HTML 5 game was passing arround too much information. In this situation, any network access can be a real problem as any miliseconds lost is felt in the UI.&lt;/p&gt;
 
-&lt;p&gt;This time I decided to only broadcast the changes and not the whole world, making the site way more responsive. I also made sure to clean up what was not used anymore, mostly using the very usefull &lt;a href=&quot;http://www.redis.io/commands/expire&quot;&gt;EXPIRE&lt;/a&gt; method provided by Redis.&lt;/p&gt;
+&lt;p&gt;This time I decided to only broadcast the changes and not the whole world, making the site way more responsive but complexifying the &lt;code class=&quot;highlighter-rouge&quot;&gt;draw&lt;/code&gt; method. I also made sure to clean up what was not used anymore, mostly using the very usefull &lt;a href=&quot;http://www.redis.io/commands/expire&quot;&gt;EXPIRE&lt;/a&gt; method provided by Redis.&lt;/p&gt;
 
 &lt;p&gt;Here’s a simple example with the &lt;code class=&quot;highlighter-rouge&quot;&gt;Note&lt;/code&gt; model, representing an active note in the sequencer:&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/marcgg/47233a6ca0fe8cc126685bc2a635460c.js&quot;&gt;&lt;/script&gt;
 
-&lt;h3 id=&quot;making-music&quot;&gt;Making Music&lt;/h3&gt;
+&lt;p&gt;And here is the very simplified version of the client side code handling broadcasts:&lt;/p&gt;
 
-&lt;p&gt;Once I had a somewhat working server connection, I had to get it to produce sound. The first version was very simple and used a sine wave to produce random bleeps and boops.&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;room&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;subscriptions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;channel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;RoomChannel&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;room.js&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;received&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// Routing&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;note&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;music&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addNote&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;player_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;making-music-using-javascript&quot;&gt;Making Music Using Javascript&lt;/h3&gt;
+
+&lt;p&gt;Once I had a somewhat working server connection, I had to get the client to actually produce sounds. The first version was very simple and used a sine wave to produce random bleeps and boops.&lt;/p&gt;
 
 &lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/chiptune_step2.jpg&quot; alt=&quot;&quot; style=&quot;padding: 20px; width: 400px;&quot; /&gt;&lt;/div&gt;
 
 &lt;p&gt;During the rest of the hackathon I kept on tweaking this until I got the sound and timings I wanted. I talked more about it in this article: &lt;a href=&quot;/blog/2016/11/01/javascript-audio/&quot;&gt;Generate Sounds Programmatically With Javascript&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Overall, getting the music to sound good was pretty hard, because there was the double challenge of understanding the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API&quot;&gt;Web Audio API&lt;/a&gt; while picking notes that would fit with one another. I ended with 3 instruments plus a kick and a snare. The instruments have a full &lt;a href=&quot;https://en.wikipedia.org/wiki/Octave&quot;&gt;octave&lt;/a&gt; and play on complementary scales, meaning that even if people play totally random notes, it won’t be dissonant.&lt;/p&gt;
+&lt;p&gt;Overall, getting the different notes to sound good was the hardest part of this project, because there was the double challenge of understanding both the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API&quot;&gt;Web Audio API&lt;/a&gt; and picking notes that would fit with one another.&lt;/p&gt;
+
+&lt;p&gt;I ended up with 3 instruments plus a kick and a snare. Each instrument is based on a simple signal (sawtooth, square and triangle) that is modified to give a better sound.  They are then given a full &lt;a href=&quot;https://en.wikipedia.org/wiki/Octave&quot;&gt;octave&lt;/a&gt; on complementary &lt;a href=&quot;https://youtu.be/TfDmVwz24lE?t=2m12s&quot;&gt;scales&lt;/a&gt;, meaning that even if people play totally random notes, it won’t be &lt;a href=&quot;https://youtu.be/fabeLu4-Ja0?t=23s&quot;&gt;dissonant&lt;/a&gt;.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;highScale&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;D6&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;C6&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;B5&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;A5&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;G5&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;F#5&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;E5&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;D5&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;midScale&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;F#4&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;E4&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;D4&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;C4&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;B3&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;A3&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;G3&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;F#3&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
@@ -68,21 +82,21 @@
 
 &lt;h3 id=&quot;stability&quot;&gt;Stability&lt;/h3&gt;
 
-&lt;p&gt;Running a real-time service on a free Heroku server that restarts randomly is challenging. I tried different approaches and ended with a simple yet effective way of dealing with this &lt;a href=&quot;https://cl.ly/1H0C3m2h123H&quot;&gt;as demonstrated in this screen recording&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Running a real-time service on a free Heroku server that restarts randomly is challenging, but doable. I tried different approaches and ended with a simple yet effective way of dealing with this &lt;a href=&quot;https://cl.ly/1H0C3m2h123H&quot;&gt;as demonstrated in this screen recording&lt;/a&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/chiptune_reconnect.jpg&quot; alt=&quot;&quot; style=&quot;padding: 20px; width: 400px;&quot; /&gt;&lt;/div&gt;
 
-&lt;p&gt;Basically I would detect on the client side any sign that the server was poorly responding. If it was the case, the client would then retry, and if it failed again, the browser would simply reload the page. There was a couple of places in the flow where this could happen, so I had to handle all of them with custom messages to make the app feel responsive and stable. Of course all this is just an approximation for real stability, but from a user perspective it gave the impression that everything was running smoothly.&lt;/p&gt;
+&lt;p&gt;Basically I would detect on the client side any sign that the server was poorly responding. If it was the case, the client would then retry and, if it failed again, the browser would simply reload the page after a delay. There was a couple of places in the flow where this could happen, so I had to handle all of them with custom messages to make the app feel responsive and stable. Of course all this is just an approximation for “real stability”, but from a user perspective it gave the impression that everything was running smoothly.&lt;/p&gt;
 
-&lt;p&gt;Later on &lt;a href=&quot;https://twitter.com/marcgg/status/790187628859650048&quot;&gt;I tried with more clients connected&lt;/a&gt; and more random restarts and dropped connections and it worked fine.&lt;/p&gt;
+&lt;p&gt;Later on &lt;a href=&quot;https://twitter.com/marcgg/status/790187628859650048&quot;&gt;I tried with more clients connected&lt;/a&gt; and more random restarts / dropped connections and it worked fine.&lt;/p&gt;
 
 &lt;h3 id=&quot;designing&quot;&gt;Designing&lt;/h3&gt;
 
-&lt;p&gt;I decided to go for an old school design because it would match the 8 bits sound the project was producing. It was hard to get something that looked decent since design is really not my strong suite, but the result turned out ok in my opinon:&lt;/p&gt;
+&lt;p&gt;I decided to go for an old school design to match the 8 bits sound the project was producing. It was hard to get something that looked decent since design is really not my strong suit, but the result turned out ok in my opinon:&lt;/p&gt;
 
 &lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/chiptune_home.jpg&quot; alt=&quot;&quot; style=&quot;padding: 20px; width: 400px;&quot; /&gt;&lt;/div&gt;
 
-&lt;p&gt;I also had fun &lt;a href=&quot;https://twitter.com/marcgg/status/790161693204705281&quot;&gt;designing a favicon&lt;/a&gt; and picking colors that kind of matched together.&lt;/p&gt;
+&lt;p&gt;I also had fun &lt;a href=&quot;https://twitter.com/marcgg/status/790161693204705281&quot;&gt;designing a favicon&lt;/a&gt; and using &lt;a href=&quot;http://www.color-hex.com/color-palette/165&quot;&gt;palettes&lt;/a&gt; to pick colors that kind of matched together.&lt;/p&gt;
 
 &lt;h3 id=&quot;playing&quot;&gt;Playing&lt;/h3&gt;
 
@@ -92,7 +106,9 @@
 
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
 
-&lt;p&gt;Overall it was a very interesting project that was fun to build and is still fun to use every once in a while. When there is a lot of people playing it’s a real mess, but it was expected and is also very funny to watch.&lt;/p&gt;
+&lt;p&gt;Overall it was a very interesting project that was fun to build and is also fun to use every once in a while. When there is a lot of people playing it’s a real mess, but it was expected and is also very funny to watch.&lt;/p&gt;
+
+&lt;p&gt;Something I didn’t anticipate was that, while I love coding with music, for this project I absolutely couldn’t. Instead I spent a couple of days listening to beepings and sine waves. The worse was when I introduced bugs and a piercing noise would destroy my ears.&lt;/p&gt;
 
 &lt;p&gt;It’s also worth mentioning that I won the &lt;a href=&quot;https://twitter.com/rbrampage/status/795007525733023744&quot;&gt;popularity prize&lt;/a&gt; of the hackathon, so I’d say the whole experience was a success!&lt;/p&gt;
 
@@ -111,7 +127,7 @@
      <content type="html">
        &lt;script src=&quot;/assets/js/posts/music.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;During a recent hackathon, I decided to build &lt;a href=&quot;https://warm-escarpment-32217.herokuapp.com/&quot;&gt;a multiplayer 8 bits sequencer&lt;/a&gt; using sounds generated programatically with the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API&quot;&gt;Web Audio API&lt;/a&gt;. I didn’t want to only use the HTML 5 &lt;code class=&quot;highlighter-rouge&quot;&gt;audio&lt;/code&gt; tag because I found it too limiting… but the first thing I discovered is that getting the right kind of sound is not straightforward at all, especially if you only have a very basic musical background like myself. So how exactly do you create a clear, ringing and nice sounding note?&lt;/p&gt;
+&lt;p&gt;During a recent hackathon, I decided to build &lt;a href=&quot;/blog/2016/11/21/chiptune-sequencer-multiplayer/&quot;&gt;a multiplayer 8 bits sequencer&lt;/a&gt; using sounds generated programatically with the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API&quot;&gt;Web Audio API&lt;/a&gt;. I didn’t want to only use the HTML 5 &lt;code class=&quot;highlighter-rouge&quot;&gt;audio&lt;/code&gt; tag because I found it too limiting… but the first thing I discovered is that getting the right kind of sound is not straightforward at all, especially if you only have a very basic musical background like myself. So how exactly do you create a clear, ringing and nice sounding note?&lt;/p&gt;
 
 &lt;p&gt;In this article I’ll give some pointers with usable code. I’ve also added examples that you can actually run &lt;a href=&quot;http://caniuse.com/#feat=audio-api&quot;&gt;if your browser supports it&lt;/a&gt;.&lt;/p&gt;
 
@@ -203,36 +219,36 @@
 &lt;p&gt;With this table, you can easily create a mapping in your code to play any given note using its . For the hackathon I used a simple hash mapping that is available in this &lt;a href=&quot;https://gist.github.com/marcgg/94e97def0e8694f906443ed5262e9cbb&quot;&gt;gist&lt;/a&gt;.&lt;/p&gt;
 
 &lt;table class=&quot;data_table&quot;&gt;
-	&lt;tr&gt;
-		&lt;td&gt;&lt;/td&gt;&lt;th&gt;C&lt;/th&gt;&lt;th&gt;C#&lt;/th&gt;&lt;th&gt;D&lt;/th&gt;&lt;th&gt;Eb&lt;/th&gt;&lt;th&gt;E&lt;/th&gt;&lt;th&gt;F&lt;/th&gt;&lt;th&gt;F#&lt;/th&gt;&lt;th&gt;G&lt;/th&gt;&lt;th&gt;G#&lt;/th&gt;&lt;th&gt;A&lt;/th&gt;&lt;th&gt;Bb&lt;/th&gt;&lt;th&gt;B&lt;/th&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;th&gt;0&lt;/th&gt;&lt;td&gt;16.35&lt;/td&gt;&lt;td&gt;17.32&lt;/td&gt;&lt;td&gt;18.35&lt;/td&gt;&lt;td&gt;19.45&lt;/td&gt;&lt;td&gt;20.60&lt;/td&gt;&lt;td&gt;21.83&lt;/td&gt;&lt;td&gt;23.12&lt;/td&gt;&lt;td&gt;24.50&lt;/td&gt;&lt;td&gt;25.96&lt;/td&gt;&lt;td&gt;27.50&lt;/td&gt;&lt;td&gt;29.14&lt;/td&gt;&lt;td&gt;30.87&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;th&gt;1&lt;/th&gt;&lt;td&gt;32.70&lt;/td&gt;&lt;td&gt;34.65&lt;/td&gt;&lt;td&gt;36.71&lt;/td&gt;&lt;td&gt;38.89&lt;/td&gt;&lt;td&gt;41.20&lt;/td&gt;&lt;td&gt;43.65&lt;/td&gt;&lt;td&gt;46.25&lt;/td&gt;&lt;td&gt;49.00&lt;/td&gt;&lt;td&gt;51.91&lt;/td&gt;&lt;td&gt;55.00&lt;/td&gt;&lt;td&gt;58.27&lt;/td&gt;&lt;td&gt;61.74&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;th&gt;2&lt;/th&gt;&lt;td&gt;65.41&lt;/td&gt;&lt;td&gt;69.30&lt;/td&gt;&lt;td&gt;73.42&lt;/td&gt;&lt;td&gt;77.78&lt;/td&gt;&lt;td&gt;82.41&lt;/td&gt;&lt;td&gt;87.31&lt;/td&gt;&lt;td&gt;92.50&lt;/td&gt;&lt;td&gt;98.00&lt;/td&gt;&lt;td&gt;103.8&lt;/td&gt;&lt;td&gt;110.0&lt;/td&gt;&lt;td&gt;116.5&lt;/td&gt;&lt;td&gt;123.5&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;th&gt;3&lt;/th&gt;&lt;td&gt;130.8&lt;/td&gt;&lt;td&gt;138.6&lt;/td&gt;&lt;td&gt;146.8&lt;/td&gt;&lt;td&gt;155.6&lt;/td&gt;&lt;td&gt;164.8&lt;/td&gt;&lt;td&gt;174.6&lt;/td&gt;&lt;td&gt;185.0&lt;/td&gt;&lt;td&gt;196.0&lt;/td&gt;&lt;td&gt;207.7&lt;/td&gt;&lt;td&gt;220.0&lt;/td&gt;&lt;td&gt;233.1&lt;/td&gt;&lt;td&gt;246.9&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;th&gt;4&lt;/th&gt;&lt;td&gt;261.6&lt;/td&gt;&lt;td&gt;277.2&lt;/td&gt;&lt;td&gt;293.7&lt;/td&gt;&lt;td&gt;311.1&lt;/td&gt;&lt;td&gt;329.6&lt;/td&gt;&lt;td&gt;349.2&lt;/td&gt;&lt;td&gt;370.0&lt;/td&gt;&lt;td&gt;392.0&lt;/td&gt;&lt;td&gt;415.3&lt;/td&gt;&lt;td&gt;440.0&lt;/td&gt;&lt;td&gt;466.2&lt;/td&gt;&lt;td&gt;493.9&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;th&gt;5&lt;/th&gt;&lt;td&gt;523.3&lt;/td&gt;&lt;td&gt;554.4&lt;/td&gt;&lt;td&gt;587.3&lt;/td&gt;&lt;td&gt;622.3&lt;/td&gt;&lt;td&gt;659.3&lt;/td&gt;&lt;td&gt;698.5&lt;/td&gt;&lt;td&gt;740.0&lt;/td&gt;&lt;td&gt;784.0&lt;/td&gt;&lt;td&gt;830.6&lt;/td&gt;&lt;td&gt;880.0&lt;/td&gt;&lt;td&gt;932.3&lt;/td&gt;&lt;td&gt;987.8&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;th&gt;6&lt;/th&gt;&lt;td&gt;1047&lt;/td&gt;&lt;td&gt;1109&lt;/td&gt;&lt;td&gt;1175&lt;/td&gt;&lt;td&gt;1245&lt;/td&gt;&lt;td&gt;1319&lt;/td&gt;&lt;td&gt;1397&lt;/td&gt;&lt;td&gt;1480&lt;/td&gt;&lt;td&gt;1568&lt;/td&gt;&lt;td&gt;1661&lt;/td&gt;&lt;td&gt;1760&lt;/td&gt;&lt;td&gt;1865&lt;/td&gt;&lt;td&gt;1976&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;th&gt;7&lt;/th&gt;&lt;td&gt;2093&lt;/td&gt;&lt;td&gt;2217&lt;/td&gt;&lt;td&gt;2349&lt;/td&gt;&lt;td&gt;2489&lt;/td&gt;&lt;td&gt;2637&lt;/td&gt;&lt;td&gt;2794&lt;/td&gt;&lt;td&gt;2960&lt;/td&gt;&lt;td&gt;3136&lt;/td&gt;&lt;td&gt;3322&lt;/td&gt;&lt;td&gt;3520&lt;/td&gt;&lt;td&gt;3729&lt;/td&gt;&lt;td&gt;3951&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;th&gt;8&lt;/th&gt;&lt;td&gt;4186&lt;/td&gt;&lt;td&gt;4435&lt;/td&gt;&lt;td&gt;4699&lt;/td&gt;&lt;td&gt;4978&lt;/td&gt;&lt;td&gt;5274&lt;/td&gt;&lt;td&gt;5588&lt;/td&gt;&lt;td&gt;5920&lt;/td&gt;&lt;td&gt;6272&lt;/td&gt;&lt;td&gt;6645&lt;/td&gt;&lt;td&gt;7040&lt;/td&gt;&lt;td&gt;7459&lt;/td&gt;&lt;td&gt;7902&lt;/td&gt;
-	&lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;/td&gt;&lt;th&gt;C&lt;/th&gt;&lt;th&gt;C#&lt;/th&gt;&lt;th&gt;D&lt;/th&gt;&lt;th&gt;Eb&lt;/th&gt;&lt;th&gt;E&lt;/th&gt;&lt;th&gt;F&lt;/th&gt;&lt;th&gt;F#&lt;/th&gt;&lt;th&gt;G&lt;/th&gt;&lt;th&gt;G#&lt;/th&gt;&lt;th&gt;A&lt;/th&gt;&lt;th&gt;Bb&lt;/th&gt;&lt;th&gt;B&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th&gt;0&lt;/th&gt;&lt;td&gt;16.35&lt;/td&gt;&lt;td&gt;17.32&lt;/td&gt;&lt;td&gt;18.35&lt;/td&gt;&lt;td&gt;19.45&lt;/td&gt;&lt;td&gt;20.60&lt;/td&gt;&lt;td&gt;21.83&lt;/td&gt;&lt;td&gt;23.12&lt;/td&gt;&lt;td&gt;24.50&lt;/td&gt;&lt;td&gt;25.96&lt;/td&gt;&lt;td&gt;27.50&lt;/td&gt;&lt;td&gt;29.14&lt;/td&gt;&lt;td&gt;30.87&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th&gt;1&lt;/th&gt;&lt;td&gt;32.70&lt;/td&gt;&lt;td&gt;34.65&lt;/td&gt;&lt;td&gt;36.71&lt;/td&gt;&lt;td&gt;38.89&lt;/td&gt;&lt;td&gt;41.20&lt;/td&gt;&lt;td&gt;43.65&lt;/td&gt;&lt;td&gt;46.25&lt;/td&gt;&lt;td&gt;49.00&lt;/td&gt;&lt;td&gt;51.91&lt;/td&gt;&lt;td&gt;55.00&lt;/td&gt;&lt;td&gt;58.27&lt;/td&gt;&lt;td&gt;61.74&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th&gt;2&lt;/th&gt;&lt;td&gt;65.41&lt;/td&gt;&lt;td&gt;69.30&lt;/td&gt;&lt;td&gt;73.42&lt;/td&gt;&lt;td&gt;77.78&lt;/td&gt;&lt;td&gt;82.41&lt;/td&gt;&lt;td&gt;87.31&lt;/td&gt;&lt;td&gt;92.50&lt;/td&gt;&lt;td&gt;98.00&lt;/td&gt;&lt;td&gt;103.8&lt;/td&gt;&lt;td&gt;110.0&lt;/td&gt;&lt;td&gt;116.5&lt;/td&gt;&lt;td&gt;123.5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th&gt;3&lt;/th&gt;&lt;td&gt;130.8&lt;/td&gt;&lt;td&gt;138.6&lt;/td&gt;&lt;td&gt;146.8&lt;/td&gt;&lt;td&gt;155.6&lt;/td&gt;&lt;td&gt;164.8&lt;/td&gt;&lt;td&gt;174.6&lt;/td&gt;&lt;td&gt;185.0&lt;/td&gt;&lt;td&gt;196.0&lt;/td&gt;&lt;td&gt;207.7&lt;/td&gt;&lt;td&gt;220.0&lt;/td&gt;&lt;td&gt;233.1&lt;/td&gt;&lt;td&gt;246.9&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th&gt;4&lt;/th&gt;&lt;td&gt;261.6&lt;/td&gt;&lt;td&gt;277.2&lt;/td&gt;&lt;td&gt;293.7&lt;/td&gt;&lt;td&gt;311.1&lt;/td&gt;&lt;td&gt;329.6&lt;/td&gt;&lt;td&gt;349.2&lt;/td&gt;&lt;td&gt;370.0&lt;/td&gt;&lt;td&gt;392.0&lt;/td&gt;&lt;td&gt;415.3&lt;/td&gt;&lt;td&gt;440.0&lt;/td&gt;&lt;td&gt;466.2&lt;/td&gt;&lt;td&gt;493.9&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th&gt;5&lt;/th&gt;&lt;td&gt;523.3&lt;/td&gt;&lt;td&gt;554.4&lt;/td&gt;&lt;td&gt;587.3&lt;/td&gt;&lt;td&gt;622.3&lt;/td&gt;&lt;td&gt;659.3&lt;/td&gt;&lt;td&gt;698.5&lt;/td&gt;&lt;td&gt;740.0&lt;/td&gt;&lt;td&gt;784.0&lt;/td&gt;&lt;td&gt;830.6&lt;/td&gt;&lt;td&gt;880.0&lt;/td&gt;&lt;td&gt;932.3&lt;/td&gt;&lt;td&gt;987.8&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th&gt;6&lt;/th&gt;&lt;td&gt;1047&lt;/td&gt;&lt;td&gt;1109&lt;/td&gt;&lt;td&gt;1175&lt;/td&gt;&lt;td&gt;1245&lt;/td&gt;&lt;td&gt;1319&lt;/td&gt;&lt;td&gt;1397&lt;/td&gt;&lt;td&gt;1480&lt;/td&gt;&lt;td&gt;1568&lt;/td&gt;&lt;td&gt;1661&lt;/td&gt;&lt;td&gt;1760&lt;/td&gt;&lt;td&gt;1865&lt;/td&gt;&lt;td&gt;1976&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th&gt;7&lt;/th&gt;&lt;td&gt;2093&lt;/td&gt;&lt;td&gt;2217&lt;/td&gt;&lt;td&gt;2349&lt;/td&gt;&lt;td&gt;2489&lt;/td&gt;&lt;td&gt;2637&lt;/td&gt;&lt;td&gt;2794&lt;/td&gt;&lt;td&gt;2960&lt;/td&gt;&lt;td&gt;3136&lt;/td&gt;&lt;td&gt;3322&lt;/td&gt;&lt;td&gt;3520&lt;/td&gt;&lt;td&gt;3729&lt;/td&gt;&lt;td&gt;3951&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th&gt;8&lt;/th&gt;&lt;td&gt;4186&lt;/td&gt;&lt;td&gt;4435&lt;/td&gt;&lt;td&gt;4699&lt;/td&gt;&lt;td&gt;4978&lt;/td&gt;&lt;td&gt;5274&lt;/td&gt;&lt;td&gt;5588&lt;/td&gt;&lt;td&gt;5920&lt;/td&gt;&lt;td&gt;6272&lt;/td&gt;&lt;td&gt;6645&lt;/td&gt;&lt;td&gt;7040&lt;/td&gt;&lt;td&gt;7459&lt;/td&gt;&lt;td&gt;7902&lt;/td&gt;
+    &lt;/tr&gt;
 &lt;/table&gt;
 
 &lt;p&gt;To implement this, we just need to add a frequency to our oscilator:&lt;/p&gt;
