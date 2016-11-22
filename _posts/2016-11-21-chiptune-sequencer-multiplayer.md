@@ -18,7 +18,7 @@ It only works on Chrome and runs on a free Heroku server, but it still handles a
 
 ## Building The Sequencer
 
-Since it was a hackathon, I had to cut some corners in terms of test coverage and general code quality. However I was always aiming to build a stable enough project, meaning the site should handle gracefully any bugs, timeouts or server restarts.
+Since it was a hackathon, I had to cut some corners in terms of test coverage and general code quality. However I was always aiming to build a stable enough project, meaning the site should handle gracefully any bug, timeout or server restart.
 
 ### Action Cable & Websockets
 
