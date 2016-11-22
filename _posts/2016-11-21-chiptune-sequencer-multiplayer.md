@@ -34,7 +34,7 @@ I [shared some Ruby code here][8] if you're interested - but keep in mind that i
 
 ### Broadcasting
 
-An error I made in the past when building a simple real-time multiplayer HTML 5 game was passing arround too much information. In this situation, any network access can be a real problem as any millisecond lost is felt in the UI.
+An error I made in the past when building a simple real-time multiplayer HTML 5 game was passing around too much information. In this situation, any network access can be a real problem as any millisecond lost is felt in the UI.
 
 This time I decided to only broadcast the changes and not the whole world, making the site way more responsive but complexifying the `draw` method. I also made sure to clean up what was not used anymore, mostly using the very useful [EXPIRE][9] method provided by Redis.
 
