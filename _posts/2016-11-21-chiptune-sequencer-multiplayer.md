@@ -14,11 +14,11 @@ I went ahead and after two days of work I managed to get a working site and depl
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/JZlsbC-7GZY" frameborder="0" allowfullscreen></iframe></center><br>
 
-It only works on Chrome and run on a free Heroku server, but it still handles a decent number of concurent connexions.  
+It only works on Chrome and runs on a free Heroku server, but it still handles a decent number of concurrent connections.  
 
 ## Building The Sequencer
 
-Since it was a hackathon, I had to cut some corners in term of test coverage and general code quality. However I was always aiming to build a stable enough project, meaning the site should handle gracefully any bugs, timeouts or server restarts.
+Since it was a hackathon, I had to cut some corners in terms of test coverage and general code quality. However I was always aiming to build a stable enough project, meaning the site should handle gracefully any bug, timeout or server restart.
 
 ### Action Cable & Websockets
 
@@ -34,9 +34,9 @@ I [shared some Ruby code here][8] if you're interested - but keep in mind that i
 
 ### Broadcasting
 
-An error I made in the past when building a simple real-time multiplayer HTML 5 game was passing arround too much information. In this situation, any network access can be a real problem as any miliseconds lost is felt in the UI.
+An error I made in the past when building a simple real-time multiplayer HTML 5 game was passing around too much information. In this situation, any network access can be a real problem as any millisecond lost is felt in the UI.
 
-This time I decided to only broadcast the changes and not the whole world, making the site way more responsive but complexifying the `draw` method. I also made sure to clean up what was not used anymore, mostly using the very usefull [EXPIRE][9] method provided by Redis.
+This time I decided to only broadcast the changes and not the whole world, making the site way more responsive but complexifying the `draw` method. I also made sure to clean up what was not used anymore, mostly using the very useful [EXPIRE][9] method provided by Redis.
 
 Here's a simple example with the `Note` model, representing an active note in the sequencer:
 
