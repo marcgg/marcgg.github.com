@@ -169,7 +169,7 @@ Plugins are what make Vim great. There is a plugin for everything you might need
 
 To install it, you can simply use the one liner below. If you don't feel like copy and pasting `curl` commands, just look up their [very clear documentation][15].
 
-	mkdir -p ~/.vim/autoload /.vim/bundle && \
+	mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 	curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 Now open your `.vimrc` and add this line at the top:

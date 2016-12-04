@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2016-11-20T19:39:20+01:00</updated>
+ <updated>2016-12-04T13:59:37+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -26,11 +26,11 @@
 &lt;center&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/JZlsbC-7GZY&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;It only works on Chrome and run on a free Heroku server, but it still handles a decent number of concurent connexions.&lt;/p&gt;
+&lt;p&gt;It only works on Chrome and runs on a free Heroku server, but it still handles a decent number of concurrent connections.&lt;/p&gt;
 
 &lt;h2 id=&quot;building-the-sequencer&quot;&gt;Building The Sequencer&lt;/h2&gt;
 
-&lt;p&gt;Since it was a hackathon, I had to cut some corners in term of test coverage and general code quality. However I was always aiming to build a stable enough project, meaning the site should handle gracefully any bugs, timeouts or server restarts.&lt;/p&gt;
+&lt;p&gt;Since it was a hackathon, I had to cut some corners in terms of test coverage and general code quality. However I was always aiming to build a stable enough project, meaning the site should handle gracefully any bug, timeout or server restart.&lt;/p&gt;
 
 &lt;h3 id=&quot;action-cable--websockets&quot;&gt;Action Cable &amp;amp; Websockets&lt;/h3&gt;
 
@@ -46,9 +46,9 @@
 
 &lt;h3 id=&quot;broadcasting&quot;&gt;Broadcasting&lt;/h3&gt;
 
-&lt;p&gt;An error I made in the past when building a simple real-time multiplayer HTML 5 game was passing arround too much information. In this situation, any network access can be a real problem as any miliseconds lost is felt in the UI.&lt;/p&gt;
+&lt;p&gt;An error I made in the past when building a simple real-time multiplayer HTML 5 game was passing around too much information. In this situation, any network access can be a real problem as any millisecond lost is felt in the UI.&lt;/p&gt;
 
-&lt;p&gt;This time I decided to only broadcast the changes and not the whole world, making the site way more responsive but complexifying the &lt;code class=&quot;highlighter-rouge&quot;&gt;draw&lt;/code&gt; method. I also made sure to clean up what was not used anymore, mostly using the very usefull &lt;a href=&quot;http://www.redis.io/commands/expire&quot;&gt;EXPIRE&lt;/a&gt; method provided by Redis.&lt;/p&gt;
+&lt;p&gt;This time I decided to only broadcast the changes and not the whole world, making the site way more responsive but complexifying the &lt;code class=&quot;highlighter-rouge&quot;&gt;draw&lt;/code&gt; method. I also made sure to clean up what was not used anymore, mostly using the very useful &lt;a href=&quot;http://www.redis.io/commands/expire&quot;&gt;EXPIRE&lt;/a&gt; method provided by Redis.&lt;/p&gt;
 
 &lt;p&gt;Here’s a simple example with the &lt;code class=&quot;highlighter-rouge&quot;&gt;Note&lt;/code&gt; model, representing an active note in the sequencer:&lt;/p&gt;
 
@@ -1406,7 +1406,7 @@ map &amp;lt;D-A-UP&amp;gt; &amp;lt;C-w&amp;gt;W
 
 &lt;p&gt;To install it, you can simply use the one liner below. If you don’t feel like copy and pasting &lt;code class=&quot;highlighter-rouge&quot;&gt;curl&lt;/code&gt; commands, just look up their &lt;a href=&quot;https://github.com/tpope/vim-pathogen#installation&quot;&gt;very clear documentation&lt;/a&gt;.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mkdir -p ~/.vim/autoload /.vim/bundle &amp;amp;&amp;amp; \
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mkdir -p ~/.vim/autoload ~/.vim/bundle &amp;amp;&amp;amp; \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
