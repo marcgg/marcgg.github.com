@@ -286,20 +286,6 @@
 					<integer>147</integer>
 				</dict>
 			</dict>
-			<key>text-processing - 2.md</key>
-			<dict>
-				<key>explicitUnassignment</key>
-				<true/>
-				<key>firstUnassignment</key>
-				<real>495319194.00194597</real>
-				<key>lastModification</key>
-				<real>495319213.63280702</real>
-				<key>version</key>
-				<dict>
-					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-					<integer>151</integer>
-				</dict>
-			</dict>
 			<key>text-processing.md</key>
 			<dict>
 				<key>lastModification</key>
@@ -320,18 +306,14 @@
 					<integer>3</integer>
 				</dict>
 			</dict>
-			<key>w.md</key>
+			<key>tipping.md</key>
 			<dict>
-				<key>explicitUnassignment</key>
-				<true/>
-				<key>firstUnassignment</key>
-				<real>495318989.919842</real>
 				<key>lastModification</key>
-				<real>495319058.26043701</real>
+				<real>506184694.46243203</real>
 				<key>version</key>
 				<dict>
 					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-					<integer>132</integer>
+					<integer>168</integer>
 				</dict>
 			</dict>
 			<key>where-ideas-come-from.md</key>
@@ -463,9 +445,6 @@
 			<string>creativity.md</string>
 		</array>
 		<array>
-			<string>w.md</string>
-		</array>
-		<array>
 			<string>text-processing.md</string>
 		</array>
 		<array>
@@ -473,9 +452,6 @@
 		</array>
 		<array>
 			<string>ted.md</string>
-		</array>
-		<array>
-			<string>text-processing - 2.md</string>
 		</array>
 		<array>
 			<string>holacraty.md</string>
@@ -486,6 +462,9 @@
 		<array>
 			<string>power.md</string>
 		</array>
+		<array>
+			<string>tipping.md</string>
+		</array>
 	</array>
 	<key>storeFormatVersion</key>
 	<integer>1</integer>
@@ -494,7 +473,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-			<integer>165</integer>
+			<integer>169</integer>
 		</dict>
 	</dict>
 </dict>
