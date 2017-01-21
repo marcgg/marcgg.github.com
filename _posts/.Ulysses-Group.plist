@@ -570,6 +570,16 @@
 					<integer>50</integer>
 				</dict>
 			</dict>
+			<key>2017-01-22-job-interview-questions.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>506711179.31755698</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>59</integer>
+				</dict>
+			</dict>
 		</dict>
 		<key>userIconName</key>
 		<real>493490997</real>
@@ -744,6 +754,9 @@
 		<array>
 			<string>2016-11-21-chiptune-sequencer-multiplayer.md</string>
 		</array>
+		<array>
+			<string>2017-01-22-job-interview-questions.md</string>
+		</array>
 	</array>
 	<key>storeFormatVersion</key>
 	<integer>1</integer>
@@ -759,7 +772,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-			<integer>51</integer>
+			<integer>60</integer>
 		</dict>
 		<key>userIconName</key>
 		<dict>
