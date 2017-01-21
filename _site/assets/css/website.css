@@ -77,7 +77,16 @@ header{
 #more-nav a{
   padding: 0px 2px;
   text-decoration: none;
+  color: #545454;
 }
+#more-nav a:hover{
+  transition: 0s;
+  background-image: linear-gradient(to bottom, #fff 30%, rgba(200, 200, 200, 0.4) 50%);
+  background-repeat: repeat-x;
+  background-size: 2px 2px;
+  background-position: 0px 100%;
+}
+
 #more-nav .selected{
   color: #ed5252;
   font-weight: bold;
@@ -111,15 +120,21 @@ header{
 h1, h2, h3, h4, h5{
   font-family: 'Open Sans', sans-serif;
   color: #1c1c1c;
+  text-transform: capitalize;
 }
 
 a:hover{
-  color: #8E5454;
-  text-decoration: none;
+  color: #ed5252;
+  transition-duration:0.2s;
 }
 
-a{
-  color: #545454;
+p a, ul a{
+  color: #763232;
+  text-decoration: none;
+  background-image: linear-gradient(to bottom, #fff 30%, rgba(200, 200, 200, 0.4) 50%);
+  background-repeat: repeat-x;
+  background-size: 2px 2px;
+  background-position: 0px 100%;
 }
 
 p{
@@ -211,6 +226,23 @@ blockquote p{
   margin: 5px 20px !important;
 }
 
+
+ul{
+  padding-left: 40px;
+  line-height: 25px;
+  list-style: square;
+  margin-bottom: 20px;
+}
+li{
+  display: list-item;
+}
+
+ol{
+  padding-left: 40px;
+  line-height: 25px;
+  margin-bottom: 20px;
+  list-style-type: decimal;
+}
 
 /* BLOG INDEX */
 #all-posts{
@@ -365,22 +397,6 @@ p code{
   padding: 5px;
   margin: 0px 0px 20px 20px;
 }
-.post ul{
-  padding-left: 40px;
-  line-height: 25px;
-  list-style: circle;
-  margin-bottom: 20px;
-}
-.post li{
-  display: list-item;
-}
-
-.post ol{
-  padding-left: 40px;
-  line-height: 25px;
-  margin-bottom: 20px;
-  list-style-type: decimal;
-}
 
 .published span{
   border-top: 1px solid #e6e6e6;
@@ -471,17 +487,6 @@ p code{
 
 
 /* HIRE */
-
-#hire ul{
-  padding-left: 40px;
-  line-height: 25px;
-  list-style: circle;
-  margin-bottom: 20px;
-}
-
-#hire li{
-  display: list-item;
-}
 
 #hire h2{
   margin: 40px 0px 0px 0px !important;

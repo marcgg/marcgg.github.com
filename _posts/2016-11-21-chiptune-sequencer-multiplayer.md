@@ -50,7 +50,7 @@ App.room = App.cable.subscriptions.create({
   from: "room.js",
 }, received: function(data) {
   // Routing
-  if(data.type == "note"){App.music.addNote(data.player_id, data.x, data.y)}
+  if(data.type == "note"){App.music.addNote(data.player\_id, data.x, data.y)}
 })
 {% endhighlight %}
 

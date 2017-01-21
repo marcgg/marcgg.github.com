@@ -6,16 +6,17 @@ local storage, performances, i18n ... After lot of work and an app released, I'm
 a long list of solutions to problems I ran into while developing an hybrid app."
 blog: true
 category: blog
+featured: true
 tag: iphone
 ---
 
-A while ago I [wrote about AppGyver's SteroidsJS](/blog/2013/08/29/appgyver-steroids-iphone-hybrid-javascript/)
+A while ago I [wrote about AppGyver's SteroidsJS][1]
 and its interesting take on hybrid app development. If you haven't read it, basically they add the ability
 to use native UI elements in PhoneGap applications.
 
 Since then I've teamed up
-with [Kevin Tunc](http://dribbble.com/kevintunc), worked a lot, managed to actually release something
-[on the appstore](https://itunes.apple.com/app/liff-understand-your-life/id834944345) and
+with [Kevin Tunc][2], worked a lot, managed to actually release something
+[on the appstore][3] and
 won AppGyver's app of the month!
 
 <div style="text-align: center"><img src="/assets/misc/win_app_month.jpg" /></div>
@@ -26,38 +27,38 @@ I know it's a longer article than what I use to post, but really this is what I 
 working on my app.
 
 Of course, like any other things I write here,
-[I don't claim to know everything](/blog/2013/11/05/enough-with-the-language-trolls/).
+[I don't claim to know everything][4].
 Please take this as it is: some tips I learned making mistakes and wasting time.
 I'm no JavaScript guru master ninja 2.0 rock star,
-[ain't nobody got time for that](https://www.youtube.com/watch?v=Nh7UgAprdpM)!
+[ain't nobody got time for that][5]!
 I'll also focus on iOS because I built an iOS app, but a lot of this
 applies to Android phones as well. Also note that some parts of the article are just as
 true for any kind of hybrid app development, be it with PhoneGap or something else.
 
 ## Getting The Device To Leave You Alone
 
-You probably know all about using a [reset.css file](http://meyerweb.com/eric/tools/css/reset/), but
+You probably know all about using a [reset.css file][6], but
 for a webview trying to pass for a native view, it's not enough.
 
 ### 300ms Tap Delay
 
 Mobile browsers implement a delay on tap to check if you tried to double
-tap or not. Overall it goes: touchstart -> touchend -> wait 300ms ->
+tap or not. Overall it goes: touchstart -\> touchend -\> wait 300ms -\>
 send click. This results in a terrible experience when navigating your
 app as it feels slow and/or broken.
 
 For some browsers you can just
-[specify a viewport and it'll go away](http://updates.html5rocks.com/2013/12/300ms-tap-delay-gone-away):
+[specify a viewport and it'll go away][7]:
 
 {% highlight html %}
 <meta name="viewport" content="width=device-width, user-scalable=no">
 {% endhighlight %}
 
-If this solution doesn't work, for instance if your code runs on Safari, use [FastClick](https://github.com/ftlabs/fastclick):
+If this solution doesn't work, for instance if your code runs on Safari, use [FastClick][8]:
 
 {% highlight javascript %}
 window.addEventListener('load', function() {
-    FastClick.attach(document.body);
+	FastClick.attach(document.body);
 }, false);
 {% endhighlight %}
 
@@ -76,7 +77,7 @@ Fixing this one is pretty easy. For webkit you add this in your CSS:
 
 ### Disable Double Tap
 
-If you don't like double tapping and use jQuery, try [this stackoverflow answer](http://stackoverflow.com/a/9728511).
+If you don't like double tapping and use jQuery, try [this stackoverflow answer][9].
 Just in case this answer disapears, here's what it looks like:
 
 {% highlight javascript %}
@@ -85,21 +86,21 @@ Just in case this answer disapears, here's what it looks like:
 // Triple-licensed: Public Domain, MIT and WTFPL license - share and enjoy!
 
 (function($) {
-  var IS_IOS = /iphone|ipad/i.test(navigator.userAgent);
+  var IS\_IOS = /iphone|ipad/i.test(navigator.userAgent);
   $.fn.nodoubletapzoom = function() {
-    if (IS_IOS)
-      $(this).bind('touchstart', function preventZoom(e) {
-        var t2 = e.timeStamp
-          , t1 = $(this).data('lastTouch') || t2
-          , dt = t2 - t1
-          , fingers = e.originalEvent.touches.length;
-        $(this).data('lastTouch', t2);
-        if (!dt || dt > 500 || fingers > 1) return; // not double-tap
-
-        e.preventDefault(); // double tap - prevent the zoom
-        // also synthesize click events we just swallowed up
-        $(this).trigger('click').trigger('click');
-      });
+	if (IS_IOS)
+	  $(this).bind('touchstart', function preventZoom(e) {
+	    var t2 = e.timeStamp
+	      , t1 = $(this).data('lastTouch') || t2
+	      , dt = t2 - t1
+	      , fingers = e.originalEvent.touches.length;
+	    $(this).data('lastTouch', t2);
+	    if (!dt || dt > 500 || fingers > 1) return; // not double-tap
+	
+	    e.preventDefault(); // double tap - prevent the zoom
+	    // also synthesize click events we just swallowed up
+	    $(this).trigger('click').trigger('click');
+	  });
   };
 })(jQuery);
 {% endhighlight %}
@@ -111,39 +112,39 @@ I think that you want the "bounce" effect when you scroll out of a
 webview. It actually feels better for the end user. However in some
 specific cases you might need to disable this behavior. There are many ways of doing this and I personnaly used
 this one from
-[stackoverflow](http://stackoverflow.com/questions/10238084/ios-safari-how-to-disable-overscroll-but-allow-scrollable-divs-to-scroll-norma):
+[stackoverflow][10]:
 
 {% highlight javascript %}
 function disallowOverscroll(){
   $(document).on('touchmove',function(e){
-    e.preventDefault();
+	e.preventDefault();
   });
   $('body').on('touchstart','.scrollable',function(e) {
-    if (e.currentTarget.scrollTop === 0) {
-      e.currentTarget.scrollTop = 1;
-    } else if (e.currentTarget.scrollHeight
-              === e.currentTarget.scrollTop
-                  + e.currentTarget.offsetHeight) {
-      e.currentTarget.scrollTop -= 1;
-    }
+	if (e.currentTarget.scrollTop === 0) {
+	  e.currentTarget.scrollTop = 1;
+	} else if (e.currentTarget.scrollHeight
+	          === e.currentTarget.scrollTop
+	              + e.currentTarget.offsetHeight) {
+	  e.currentTarget.scrollTop -= 1;
+	}
   });
   $('body').on('touchmove','.scrollable',function(e) {
-    e.stopPropagation();
+	e.stopPropagation();
   });
 }
 {% endhighlight %}
 
 ### Higcharts
 
-If you use [highcharts](http://www.highcharts.com/), you could run into some scrolling trouble when
+If you use [highcharts][11], you could run into some scrolling trouble when
 the user touches the graphs. This gist might help:
-[https://gist.github.com/skarface/2994906](https://gist.github.com/skarface/2994906)
+[https://gist.github.com/skarface/2994906][12]
 
 ### Allow Text Selection For Input
 
 This is an iOS issue. In some cases you won't be able to select and edit
 the text in your inputs as you'd like. You can fix this using
-[user-select](https://developer.mozilla.org/en-US/docs/Web/CSS/user-select)
+[user-select][13]
 
 {% highlight css %}
 -webkit-user-select: text;
@@ -152,7 +153,7 @@ the text in your inputs as you'd like. You can fix this using
 ### Better Looking Text
 
 I noticed that changing the
-[text-rendering](https://developer.mozilla.org/en-US/docs/Web/CSS/text-rendering)
+[text-rendering][14]
 option gets things to look better. The trade-off is performance, but if you don't have
 huge chunks of text you'll be fine.
 
@@ -171,13 +172,13 @@ Easy!
 
 {% highlight css %}
 -webkit-appearance: carret;
--webkit-appearance: none; /* alernatively */
+-webkit-appearance: none; /\* alernatively \*/
 {% endhighlight %}
 
-You can read more about this [here](https://developer.mozilla.org/en-US/docs/Web/CSS/-moz-appearance).
+You can read more about this [here][15].
 I also found that changing box sizing could help in the "undesign" process. Smarter people than me explained
-[how it works](http://www.paulirish.com/2012/box-sizing-border-box-ftw/),
-you can [read about it](http://quirksmode.org/css/user-interface/boxsizing.html) or try it out like this:
+[how it works][16],
+you can [read about it][17] or try it out like this:
 
 {% highlight css %}
 -webkit-box-sizing: border-box;
@@ -190,8 +191,8 @@ doesn't look very "native" once embeded in a Steroids JS webview. This is especi
 for images. Change this using:
 
 {% highlight css %}
--webkit-tap-highlight-color: #123456; /* To change it */
--webkit-tap-highlight-color: transparent; /* To remove it */
+-webkit-tap-highlight-color: #123456; /\* To change it \*/
+-webkit-tap-highlight-color: transparent; /\* To remove it \*/
 {% endhighlight %}
 
 I found that changing the color feels better than removing it.
@@ -209,7 +210,7 @@ looking in this direction:
 ### On Fluid Layouts
 
 Using percentages for size can be a good option to handle different screen sizes.
-Just know that there is a [known issue](https://github.com/twbs/bootstrap/issues/9282) where Safari
+Just know that there is a [known issue][18] where Safari
 rounds up percentages that can cause for weird behaviors when using fluid layouts.
 
 
@@ -226,15 +227,15 @@ it's a pain.
 > Retina Display is a brand name used by Apple for liquid crystal displays
 > that have a pixel density high enough that the human eye is unable to discern
 > individual pixels at a typical viewing distance.
->
-> [wikipedia](http://en.wikipedia.org/wiki/Retina_Display)
+> 
+> [wikipedia][19]
 
 The short version of how to deal with it is pretty straightforward: create images twice as big, call them
-my_image@2x.jpg and resize them in CSS.
+my\_image@2x.jpg and resize them in CSS.
 
 {% highlight css %}
-background: url(my_image.jpg);
-background-size: 100px 100px; /* with my_image.jpg being 200x200 px */
+background: url(my\_image.jpg);
+background-size: 100px 100px; /\* with my\_image.jpg being 200x200 px \*/
 {% endhighlight %}
 
 ### Don't Bother With Normal Size
@@ -246,7 +247,7 @@ the 1x image will only increase your build's size and complexify the way you man
 ### Background Position
 
 Be careful when using background positions with background sizes as they
-sometimes [don't play well together](http://stackoverflow.com/questions/17033806/background-size-with-background-position-doesnt-scale-the-position).
+sometimes [don't play well together][20].
 
 ### 1px Border
 
@@ -255,7 +256,7 @@ on retina displays. Yeah, this is pretty unituitive and a major pain.
 There are a lot of ways to try to get this to work.
 
 This might not be best for you but, for my use case, I found
-[Stephan Bönnemann's solution](https://excellenteasy.com/devblog/posts/how-to-target-physical-pixels-on-retina-screens-with-css/)
+[Stephan Bönnemann's solution][21]
 simpler, and I ended adding a DOM element and styling it like this:
 
 {% highlight html %}
@@ -263,7 +264,7 @@ simpler, and I ended adding a DOM element and styling it like this:
 {% endhighlight %}
 
 {% highlight css %}
-.physical_1px{
+.physical\_1px{
   background-image: linear-gradient(0deg, #DFDFDF, #DFDFDF 50%, transparent 50%);
   background-size: 100% 1px;
   background-repeat: no-repeat;
@@ -275,9 +276,9 @@ simpler, and I ended adding a DOM element and styling it like this:
 This is not ideal, but I wasn't a fan of the alternatives either. Check
 them out and make an opinion for yourself:
 
-- [Yes We Can Do Fraction Of A Pixel](http://atirip.com/2013/09/22/yes-we-can-do-fraction-of-a-pixel/)
-- [CSS, Retina, and Physical Pixels](http://n12v.com/css-retina-and-physical-pixels/)
-- [CSS: Emulate borders with inset box shadows](http://makandracards.com/makandra/12019-css-emulate-borders-with-inset-box-shadows)
+- [Yes We Can Do Fraction Of A Pixel][22]
+- [CSS, Retina, and Physical Pixels][23]
+- [CSS: Emulate borders with inset box shadows][24]
 
 
 
@@ -298,9 +299,9 @@ I used jQuery. There, I said it.
 
 I knew it would degrade performances, but I benchmarked it a bit versus Vanilla JS and the
 difference was not really noticable for my use cases, so I kept it because I'm used to the
-syntax and it [gets the job done](/blog/2013/11/05/enough-with-the-language-trolls/).
+syntax and it [gets the job done][25].
 
-Of course I followed [the usual performances tips](http://www.artzstudio.com/2009/04/jquery-performance-rules/),
+Of course I followed [the usual performances tips][26],
 not too much DOM manipulation, do not reselect the same element over and
 over etc.
 
@@ -323,11 +324,11 @@ This happened when I tried to apply an animation to a div with a linear-gradient
 > and drawing tools can be a hassle. However, using CSS for those tasks moves that
 > hassle from the designer's computer to the target's CPU. Gradients, shadows,
 > and other decorations in CSS should be used only when necessary
-> (e.g. when the shape is dynamic based on the content) - **otherwise, static images
-> are always faster**. On very low-end platforms, it's even advised to use static images
+> (e.g. when the shape is dynamic based on the content) - \*\*otherwise, static images
+> are always faster\*\*. On very low-end platforms, it's even advised to use static images
 > for some of the text if possible.
->
-> [webkit.org](https://trac.webkit.org/wiki/QtWebKitGraphics#Usestaticimages)
+> 
+> [webkit.org][27]
 
 The solution here is to prefer using images as background images rather
 than CSS gradients. This is irritating, but I never found a way
@@ -337,7 +338,7 @@ around this performance issue.
 
 I'm not going to explain everything about JS performances. This could be
 a serie of articles in itself. It could even be a book.
-Actually, it is a book! [Go check it out](http://shop.oreilly.com/product/9780596802806.do)!
+Actually, it is a book! [Go check it out][28]!
 
 To sum it up: reuse objects, do not lock processes, be evented, large
 arrays will slow everything down.
@@ -356,16 +357,16 @@ HTML 5 / CSS 3 app, but what about SteroidsJS itself?
 Like any new libraries there will be problems, bugs and API changes.
 It is important to keep up to date, I'd suggest:
 
-- Following what goes on in the [forums](http://forums.appgyver.com)
-- Keep an eye on the [changelog](http://blog.appgyver.com/changelog/)
-  and the [blog](http://blog.appgyver.com/)
+- Following what goes on in the [forums][29]
+- Keep an eye on the [changelog][30]
+  and the [blog][31]
 
 For documentation and tips on how to code:
 
-- Use [the API documentation](http://docs.appgyver.com/en/edge/index.html) which is quite
+- Use [the API documentation][32] which is quite
   extensive. Be aware that it is very poorly referenced on Google right now so
   you'll have to be precise in your searches.
-- Reading [the tutorials](http://academy.appgyver.com/)
+- Reading [the tutorials][33]
   is a must. They are well done and give a good overview of what the technology can do.
   There are also a lot of good step by step examples.
 
@@ -376,9 +377,9 @@ what I tried to achieve. I also didn't like the MVC solution proposed by
 basic steroids scaffolding. In the end what worked for me was quite
 view-centric approach that looked like this:
 
-- /app/views/my_scope/action.html (a view in a separate webview)
-- /app/controllers/my_scope/action.js (all the JS related to a view)
-- /app/models/data_persistence.js (everything that is transversal and
+- /app/views/my\_scope/action.html (a view in a separate webview)
+- /app/controllers/my\_scope/action.js (all the JS related to a view)
+- /app/models/data\_persistence.js (everything that is transversal and
   relates to data)
 - /www/javascripts/application.js (shared code between all views)
 
@@ -393,7 +394,7 @@ would interact with what.
 
 ### Slider
 
-If you're in need of a touch slider, I recommend using [Swipe.Js](https://github.com/thebird/Swipe).
+If you're in need of a touch slider, I recommend using [Swipe.Js][34].
 It's both simple, effective and very customizable.
 
 {% highlight javascript %}
@@ -405,7 +406,7 @@ because text edition (long press on iOS) will not work properly.
 
 ### Hammer.js
 
-[Hammer](http://eightmedia.github.io/hammer.js/) ships with Steroids JS, so I gave it a try.
+[Hammer][35] ships with Steroids JS, so I gave it a try.
 Overall it works fine for some events such as tap or release, but the
 way it handles clicks seemed buggy. I can't quite put my finger on it,
 but in some cases I was better of just using jQuery for click events.
@@ -434,11 +435,11 @@ look like this:
 {% endhighlight %}
 
 The loader overlay is to prevent any clicking to happened while the
-loader is present on the screen. The retry_load and text_load are the
+loader is present on the screen. The retry\_load and text\_load are the
 elements displayed when it succeeds or fails.
 
 {% highlight css %}
-#loader{
+# loader{
   position: absolute;
   top: 130px;
   left: 70px;
@@ -451,15 +452,15 @@ elements displayed when it succeeds or fails.
   color: #fff;
   text-align: center;
 }
-#retry_load{
+# retry\_load{
   display: none;
 }
-.loader_content{
+.loader\_content{
   display: block;
   padding: 70px 0px;
 }
 
-#loader_overlay{
+# loader\_overlay{
   position: absolute;
   top: 0px;
   height: 620px;
@@ -483,26 +484,26 @@ find anything that would do it out of the box. Here's a screenshot:
 
 I'm not perfectly happy with the way I had to do it, so I won't share it even if it does look fine.
 However you can take a look at what I used for the checkbox
-[here](http://www.cyberantics.net/toggle.html). I found it in a comment
-on [a very interesting article](http://www.designcouch.com/home/why/2013/09/19/ios7-style-pure-css-toggle/).
+[here][36]. I found it in a comment
+on [a very interesting article][37].
 Based on this I only had to change a couple of things (webkit-appearance, mostly)
 to get it to work perfectly within my app.
 
 ### Local Storage
 
 Here is a quick extract of my User model using the
-[localStorage API](https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Storage#localStorage)
+[localStorage API][38]
 for persistence.
 
 {% highlight javascript %}
 window.User = {
 
   id: function(){
-    return window.localStorage.getItem("liff_id")
+	return window.localStorage.getItem("liff_id")
   }
 
   setStatsMode: function(val){
-    window.localStorage.setItem("liff_stats_mode", val)
+	window.localStorage.setItem("liff_stats_mode", val)
   }
 
   // Way more things go here
@@ -511,7 +512,7 @@ window.User = {
 
 
 If I were to complexify my data model, I would consider using
-[SQLite](https://github.com/AppGyver/steroids-plugins/tree/master/sqlite).
+[SQLite][39].
 
 
 
@@ -527,26 +528,26 @@ performance problem was a non issue thanks to preloading (as explained
 further below).
 
 Working with SteroidsJS means working with Cordova/PhoneGap. In this case the
-[globalization API](http://docs.phonegap.com/en/2.2.0/cordova_globalization_globalization.md.html).
+[globalization API][40].
 
 {% highlight javascript %}
 document.addEventListener("deviceready", function(){
   $(document).ready(function(){
-    navigator.globalization.getPreferredLanguage(
-      function (language) {
-        localize(language.value)
-      },
-      function () {
-        localize("en")
-      }
-    )
+	navigator.globalization.getPreferredLanguage(
+	  function (language) {
+	    localize(language.value)
+	  },
+	  function () {
+	    localize("en")
+	  }
+	)
   })
 })
 
 function localize(language){
   $("body").attr("id", language)
-  $("*[data-t]").each(function(){
-    $(this).html(I18n[language][$this.data("t")])
+  $("\*[data-t]").each(function(){
+	$(this).html(I18n[language][$this.data("t")])
   })
 }
 {% endhighlight %}
@@ -566,8 +567,8 @@ As explained above, I internationalized my whole app. Because of this I'd have a
 Preloading views fixed this.
 
 {% highlight javascript %}
-var someView = new steroids.views.WebView("/views/settings/some_view.html");
-var anotherView = new steroids.views.WebView("/views/settings/another_view.html");
+var someView = new steroids.views.WebView("/views/settings/some\_view.html");
+var anotherView = new steroids.views.WebView("/views/settings/another\_view.html");
 
 function preload(){
   someView.preload()
@@ -583,12 +584,12 @@ it in order to preserve ressources.
 setTimeout(preload, 3000)
 {% endhighlight %}
 
-Learn more about it on [AppGyver's website](http://academy.appgyver.com/categories/3/contents/19).
+Learn more about it on [AppGyver's website][41].
 
-_Note that this not fully functional in production on my app because of
+\_Note that this not fully functional in production on my app because of
 an issue in Steroids JS where loading the navigation bar in a certain
 way disrupts preloading. Because of this you will see some minor
-blinking in some internal setting screens. It will be fixed soon :)_
+blinking in some internal setting screens. It will be fixed soon :)\_
 
 
 ### Getting Out Of The Background
@@ -605,22 +606,22 @@ document.addEventListener("resume", function(){
 
 ### Communicate Between Views
 
-Using [the postMessage API](https://developer.mozilla.org/en-US/docs/Web/API/Window.postMessage)
+Using [the postMessage API][42]
 to communicate between views is the way to go.
 
 {% highlight javascript %}
-/* In the first view */
-window.postMessage({ type: "something_happened" }, "*")
+/\* In the first view \*/
+window.postMessage({ type: "something\_happened" }, "\*")
 
-/* In the second view */
+/\* In the second view \*/
 window.addEventListener("message", function(msg) {
-  if(msg.data.type == "something_happened"){
+  if(msg.data.type == "something\_happened"){
   }
 })
 {% endhighlight %}
 
-_Right now there is an open issue when adding alerts in the event listener
-as discussed [on the forum)[http://forums.appgyver.com/#!/steroids:sometimes-alerts-block-th)_.
+\_Right now there is an open issue when adding alerts in the event listener
+as discussed [on the forum)[http://forums.appgyver.com/#!/steroids:sometimes-alerts-block-th)\_.
 
 
 
@@ -631,8 +632,8 @@ as discussed [on the forum)[http://forums.appgyver.com/#!/steroids:sometimes-ale
 Of course you don't have to take my word for it, give my application a try !
 
 It's called Liff and is
-[available on the appstore](https://itunes.apple.com/en/app/liff-understand-your-life/id834944345).
-The goal is to give a [relevant way to get insights on ones day](http://liffapp.io) and
+[available on the appstore][43].
+The goal is to give a [relevant way to get insights on ones day][44] and
 we put in extra efforts in order to create a pleasant experience with a solid design.
 
 <div style="text-align: center"><img src="/assets/misc/liff_screen.jpg" /></div>
@@ -641,3 +642,48 @@ Clearly creating an hybrid app is easier than ever, but there is still a
 lot of things to keep in mind when doing so. Projects like PhoneGap push
 the ball in the right direction and I can't wait to see what kind of
 apps we'll be creating in a few years!
+
+[1]:	/blog/2013/08/29/appgyver-steroids-iphone-hybrid-javascript/
+[2]:	http://dribbble.com/kevintunc
+[3]:	https://itunes.apple.com/app/liff-understand-your-life/id834944345
+[4]:	/blog/2013/11/05/enough-with-the-language-trolls/
+[5]:	https://www.youtube.com/watch?v=Nh7UgAprdpM
+[6]:	http://meyerweb.com/eric/tools/css/reset/
+[7]:	http://updates.html5rocks.com/2013/12/300ms-tap-delay-gone-away
+[8]:	https://github.com/ftlabs/fastclick
+[9]:	http://stackoverflow.com/a/9728511
+[10]:	http://stackoverflow.com/questions/10238084/ios-safari-how-to-disable-overscroll-but-allow-scrollable-divs-to-scroll-norma
+[11]:	http://www.highcharts.com/
+[12]:	https://gist.github.com/skarface/2994906
+[13]:	https://developer.mozilla.org/en-US/docs/Web/CSS/user-select
+[14]:	https://developer.mozilla.org/en-US/docs/Web/CSS/text-rendering
+[15]:	https://developer.mozilla.org/en-US/docs/Web/CSS/-moz-appearance
+[16]:	http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+[17]:	http://quirksmode.org/css/user-interface/boxsizing.html
+[18]:	https://github.com/twbs/bootstrap/issues/9282
+[19]:	http://en.wikipedia.org/wiki/Retina_Display
+[20]:	http://stackoverflow.com/questions/17033806/background-size-with-background-position-doesnt-scale-the-position
+[21]:	https://excellenteasy.com/devblog/posts/how-to-target-physical-pixels-on-retina-screens-with-css/
+[22]:	http://atirip.com/2013/09/22/yes-we-can-do-fraction-of-a-pixel/
+[23]:	http://n12v.com/css-retina-and-physical-pixels/
+[24]:	http://makandracards.com/makandra/12019-css-emulate-borders-with-inset-box-shadows
+[25]:	/blog/2013/11/05/enough-with-the-language-trolls/
+[26]:	http://www.artzstudio.com/2009/04/jquery-performance-rules/
+[27]:	https://trac.webkit.org/wiki/QtWebKitGraphics#Usestaticimages
+[28]:	http://shop.oreilly.com/product/9780596802806.do
+[29]:	http://forums.appgyver.com
+[30]:	http://blog.appgyver.com/changelog/
+[31]:	http://blog.appgyver.com/
+[32]:	http://docs.appgyver.com/en/edge/index.html
+[33]:	http://academy.appgyver.com/
+[34]:	https://github.com/thebird/Swipe
+[35]:	http://eightmedia.github.io/hammer.js/
+[36]:	http://www.cyberantics.net/toggle.html
+[37]:	http://www.designcouch.com/home/why/2013/09/19/ios7-style-pure-css-toggle/
+[38]:	https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Storage#localStorage
+[39]:	https://github.com/AppGyver/steroids-plugins/tree/master/sqlite
+[40]:	http://docs.phonegap.com/en/2.2.0/cordova_globalization_globalization.md.html
+[41]:	http://academy.appgyver.com/categories/3/contents/19
+[42]:	https://developer.mozilla.org/en-US/docs/Web/API/Window.postMessage
+[43]:	https://itunes.apple.com/en/app/liff-understand-your-life/id834944345
+[44]:	http://liffapp.io

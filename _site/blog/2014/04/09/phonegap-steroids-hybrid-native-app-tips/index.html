@@ -98,7 +98,7 @@ app as it feels slow and/or broken.</p>
 <p>If this solution doesn’t work, for instance if your code runs on Safari, use <a href="https://github.com/ftlabs/fastclick">FastClick</a>:</p>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'load'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">FastClick</span><span class="p">.</span><span class="nx">attach</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
+	<span class="nx">FastClick</span><span class="p">.</span><span class="nx">attach</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
 <span class="p">},</span> <span class="kc">false</span><span class="p">);</span></code></pre></figure>
 
 <h3 id="disable-selectioncopy-when-long-tapping">Disable Selection/Copy When Long Tapping</h3>
@@ -121,21 +121,21 @@ Just in case this answer disapears, here’s what it looks like:</p>
 <span class="c1">// Triple-licensed: Public Domain, MIT and WTFPL license - share and enjoy!</span>
 
 <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">$</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kd">var</span> <span class="nx">IS_IOS</span> <span class="o">=</span> <span class="sr">/iphone|ipad/i</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">userAgent</span><span class="p">);</span>
+  <span class="kd">var</span> <span class="nx">IS</span><span class="err">\</span><span class="nx">_IOS</span> <span class="o">=</span> <span class="sr">/iphone|ipad/i</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">userAgent</span><span class="p">);</span>
   <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">nodoubletapzoom</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">IS_IOS</span><span class="p">)</span>
-      <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">bind</span><span class="p">(</span><span class="s1">'touchstart'</span><span class="p">,</span> <span class="kd">function</span> <span class="nx">preventZoom</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">t2</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">timeStamp</span>
-          <span class="p">,</span> <span class="nx">t1</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">data</span><span class="p">(</span><span class="s1">'lastTouch'</span><span class="p">)</span> <span class="o">||</span> <span class="nx">t2</span>
-          <span class="p">,</span> <span class="nx">dt</span> <span class="o">=</span> <span class="nx">t2</span> <span class="o">-</span> <span class="nx">t1</span>
-          <span class="p">,</span> <span class="nx">fingers</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">originalEvent</span><span class="p">.</span><span class="nx">touches</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
-        <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">data</span><span class="p">(</span><span class="s1">'lastTouch'</span><span class="p">,</span> <span class="nx">t2</span><span class="p">);</span>
-        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">dt</span> <span class="o">||</span> <span class="nx">dt</span> <span class="o">&gt;</span> <span class="mi">500</span> <span class="o">||</span> <span class="nx">fingers</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span> <span class="c1">// not double-tap</span>
-
-        <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span> <span class="c1">// double tap - prevent the zoom</span>
-        <span class="c1">// also synthesize click events we just swallowed up</span>
-        <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">trigger</span><span class="p">(</span><span class="s1">'click'</span><span class="p">).</span><span class="nx">trigger</span><span class="p">(</span><span class="s1">'click'</span><span class="p">);</span>
-      <span class="p">});</span>
+	<span class="k">if</span> <span class="p">(</span><span class="nx">IS_IOS</span><span class="p">)</span>
+	  <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">bind</span><span class="p">(</span><span class="s1">'touchstart'</span><span class="p">,</span> <span class="kd">function</span> <span class="nx">preventZoom</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+	    <span class="kd">var</span> <span class="nx">t2</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">timeStamp</span>
+	      <span class="p">,</span> <span class="nx">t1</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">data</span><span class="p">(</span><span class="s1">'lastTouch'</span><span class="p">)</span> <span class="o">||</span> <span class="nx">t2</span>
+	      <span class="p">,</span> <span class="nx">dt</span> <span class="o">=</span> <span class="nx">t2</span> <span class="o">-</span> <span class="nx">t1</span>
+	      <span class="p">,</span> <span class="nx">fingers</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">originalEvent</span><span class="p">.</span><span class="nx">touches</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+	    <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">data</span><span class="p">(</span><span class="s1">'lastTouch'</span><span class="p">,</span> <span class="nx">t2</span><span class="p">);</span>
+	    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">dt</span> <span class="o">||</span> <span class="nx">dt</span> <span class="o">&gt;</span> <span class="mi">500</span> <span class="o">||</span> <span class="nx">fingers</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span> <span class="c1">// not double-tap</span>
+	
+	    <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span> <span class="c1">// double tap - prevent the zoom</span>
+	    <span class="c1">// also synthesize click events we just swallowed up</span>
+	    <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">trigger</span><span class="p">(</span><span class="s1">'click'</span><span class="p">).</span><span class="nx">trigger</span><span class="p">(</span><span class="s1">'click'</span><span class="p">);</span>
+	  <span class="p">});</span>
   <span class="p">};</span>
 <span class="p">})(</span><span class="nx">jQuery</span><span class="p">);</span></code></pre></figure>
 
@@ -149,19 +149,19 @@ this one from
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">disallowOverscroll</span><span class="p">(){</span>
   <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'touchmove'</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span>
-    <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+	<span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
   <span class="p">});</span>
   <span class="nx">$</span><span class="p">(</span><span class="s1">'body'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'touchstart'</span><span class="p">,</span><span class="s1">'.scrollable'</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">currentTarget</span><span class="p">.</span><span class="nx">scrollTop</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nx">e</span><span class="p">.</span><span class="nx">currentTarget</span><span class="p">.</span><span class="nx">scrollTop</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">currentTarget</span><span class="p">.</span><span class="nx">scrollHeight</span>
-              <span class="o">===</span> <span class="nx">e</span><span class="p">.</span><span class="nx">currentTarget</span><span class="p">.</span><span class="nx">scrollTop</span>
-                  <span class="o">+</span> <span class="nx">e</span><span class="p">.</span><span class="nx">currentTarget</span><span class="p">.</span><span class="nx">offsetHeight</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nx">e</span><span class="p">.</span><span class="nx">currentTarget</span><span class="p">.</span><span class="nx">scrollTop</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="p">}</span>
+	<span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">currentTarget</span><span class="p">.</span><span class="nx">scrollTop</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+	  <span class="nx">e</span><span class="p">.</span><span class="nx">currentTarget</span><span class="p">.</span><span class="nx">scrollTop</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+	<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">currentTarget</span><span class="p">.</span><span class="nx">scrollHeight</span>
+	          <span class="o">===</span> <span class="nx">e</span><span class="p">.</span><span class="nx">currentTarget</span><span class="p">.</span><span class="nx">scrollTop</span>
+	              <span class="o">+</span> <span class="nx">e</span><span class="p">.</span><span class="nx">currentTarget</span><span class="p">.</span><span class="nx">offsetHeight</span><span class="p">)</span> <span class="p">{</span>
+	  <span class="nx">e</span><span class="p">.</span><span class="nx">currentTarget</span><span class="p">.</span><span class="nx">scrollTop</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
+	<span class="p">}</span>
   <span class="p">});</span>
   <span class="nx">$</span><span class="p">(</span><span class="s1">'body'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'touchmove'</span><span class="p">,</span><span class="s1">'.scrollable'</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">e</span><span class="p">.</span><span class="nx">stopPropagation</span><span class="p">();</span>
+	<span class="nx">e</span><span class="p">.</span><span class="nx">stopPropagation</span><span class="p">();</span>
   <span class="p">});</span>
 <span class="p">}</span></code></pre></figure>
 
@@ -198,7 +198,7 @@ easier to update button (right)?</p>
 <p>Easy!</p>
 
 <figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">-webkit-appearance</span><span class="o">:</span> <span class="nt">carret</span><span class="o">;</span>
-<span class="nt">-webkit-appearance</span><span class="o">:</span> <span class="nt">none</span><span class="o">;</span> <span class="c">/* alernatively */</span></code></pre></figure>
+<span class="nt">-webkit-appearance</span><span class="o">:</span> <span class="nt">none</span><span class="o">;</span> <span class="o">/</span><span class="err">\</span><span class="o">*</span> <span class="nt">alernatively</span> <span class="err">\</span><span class="o">*/</span></code></pre></figure>
 
 <p>You can read more about this <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/-moz-appearance">here</a>.
 I also found that changing box sizing could help in the “undesign” process. Smarter people than me explained
@@ -213,8 +213,8 @@ you can <a href="http://quirksmode.org/css/user-interface/boxsizing.html">read a
 doesn’t look very “native” once embeded in a Steroids JS webview. This is especialy true
 for images. Change this using:</p>
 
-<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">-webkit-tap-highlight-color</span><span class="o">:</span> <span class="nf">#123456</span><span class="o">;</span> <span class="c">/* To change it */</span>
-<span class="nt">-webkit-tap-highlight-color</span><span class="o">:</span> <span class="nt">transparent</span><span class="o">;</span> <span class="c">/* To remove it */</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">-webkit-tap-highlight-color</span><span class="o">:</span> <span class="nf">#123456</span><span class="o">;</span> <span class="o">/</span><span class="err">\</span><span class="o">*</span> <span class="nt">To</span> <span class="nt">change</span> <span class="nt">it</span> <span class="err">\</span><span class="o">*/</span>
+<span class="nt">-webkit-tap-highlight-color</span><span class="o">:</span> <span class="nt">transparent</span><span class="o">;</span> <span class="o">/</span><span class="err">\</span><span class="o">*</span> <span class="nt">To</span> <span class="nt">remove</span> <span class="nt">it</span> <span class="err">\</span><span class="o">*/</span></code></pre></figure>
 
 <p>I found that changing the color feels better than removing it.</p>
 
@@ -250,8 +250,8 @@ individual pixels at a typical viewing distance.</p>
 <p>The short version of how to deal with it is pretty straightforward: create images twice as big, call them
 my_image@2x.jpg and resize them in CSS.</p>
 
-<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">background</span><span class="o">:</span> <span class="nt">url</span><span class="o">(</span><span class="nt">my_image</span><span class="nc">.jpg</span><span class="o">);</span>
-<span class="nt">background-size</span><span class="o">:</span> <span class="nt">100px</span> <span class="nt">100px</span><span class="o">;</span> <span class="c">/* with my_image.jpg being 200x200 px */</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">background</span><span class="o">:</span> <span class="nt">url</span><span class="o">(</span><span class="nt">my</span><span class="err">\</span><span class="nt">_image</span><span class="nc">.jpg</span><span class="o">);</span>
+<span class="nt">background-size</span><span class="o">:</span> <span class="nt">100px</span> <span class="nt">100px</span><span class="o">;</span> <span class="o">/</span><span class="err">\</span><span class="o">*</span> <span class="nt">with</span> <span class="nt">my</span><span class="err">\</span><span class="nt">_image</span><span class="nc">.jpg</span> <span class="nt">being</span> <span class="nt">200x200</span> <span class="nt">px</span> <span class="err">\</span><span class="o">*/</span></code></pre></figure>
 
 <h3 id="dont-bother-with-normal-size">Don’t Bother With Normal Size</h3>
 
@@ -276,7 +276,7 @@ simpler, and I ended adding a DOM element and styling it like this:</p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"physical_1px"</span><span class="nt">&gt;&lt;/div&gt;</span></code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.physical_1px</span><span class="p">{</span>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.physical</span><span class="err">\</span><span class="nt">_1px</span><span class="p">{</span>
   <span class="nl">background-image</span><span class="p">:</span> <span class="n">linear-gradient</span><span class="p">(</span><span class="m">0deg</span><span class="p">,</span> <span class="m">#DFDFDF</span><span class="p">,</span> <span class="m">#DFDFDF</span> <span class="m">50%</span><span class="p">,</span> <span class="nb">transparent</span> <span class="m">50%</span><span class="p">);</span>
   <span class="nl">background-size</span><span class="p">:</span> <span class="m">100%</span> <span class="m">1px</span><span class="p">;</span>
   <span class="nl">background-repeat</span><span class="p">:</span> <span class="nb">no-repeat</span><span class="p">;</span>
@@ -333,8 +333,8 @@ when it’s not actually necessary - maintaining images and dealing with Photosh
 and drawing tools can be a hassle. However, using CSS for those tasks moves that
 hassle from the designer’s computer to the target’s CPU. Gradients, shadows,
 and other decorations in CSS should be used only when necessary
-(e.g. when the shape is dynamic based on the content) - <strong>otherwise, static images
-are always faster</strong>. On very low-end platforms, it’s even advised to use static images
+(e.g. when the shape is dynamic based on the content) - **otherwise, static images
+are always faster**. On very low-end platforms, it’s even advised to use static images
 for some of the text if possible.</p>
 
   <p><a href="https://trac.webkit.org/wiki/QtWebKitGraphics#Usestaticimages">webkit.org</a></p>
@@ -442,7 +442,7 @@ look like this:</p>
 loader is present on the screen. The retry_load and text_load are the
 elements displayed when it succeeds or fails.</p>
 
-<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nf">#loader</span><span class="p">{</span>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="err">#</span> <span class="nt">loader</span><span class="p">{</span>
   <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
   <span class="nl">top</span><span class="p">:</span> <span class="m">130px</span><span class="p">;</span>
   <span class="nl">left</span><span class="p">:</span> <span class="m">70px</span><span class="p">;</span>
@@ -455,15 +455,15 @@ elements displayed when it succeeds or fails.</p>
   <span class="nl">color</span><span class="p">:</span> <span class="m">#fff</span><span class="p">;</span>
   <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nf">#retry_load</span><span class="p">{</span>
+<span class="err">#</span> <span class="nt">retry</span><span class="err">\</span><span class="nt">_load</span><span class="p">{</span>
   <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nc">.loader_content</span><span class="p">{</span>
+<span class="nc">.loader</span><span class="err">\</span><span class="nt">_content</span><span class="p">{</span>
   <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
   <span class="nl">padding</span><span class="p">:</span> <span class="m">70px</span> <span class="m">0px</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="nf">#loader_overlay</span><span class="p">{</span>
+<span class="err">#</span> <span class="nt">loader</span><span class="err">\</span><span class="nt">_overlay</span><span class="p">{</span>
   <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
   <span class="nl">top</span><span class="p">:</span> <span class="m">0px</span><span class="p">;</span>
   <span class="nl">height</span><span class="p">:</span> <span class="m">620px</span><span class="p">;</span>
@@ -500,11 +500,11 @@ for persistence.</p>
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">window</span><span class="p">.</span><span class="nx">User</span> <span class="o">=</span> <span class="p">{</span>
 
   <span class="na">id</span><span class="p">:</span> <span class="kd">function</span><span class="p">(){</span>
-    <span class="k">return</span> <span class="nb">window</span><span class="p">.</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s2">"liff_id"</span><span class="p">)</span>
+	<span class="k">return</span> <span class="nb">window</span><span class="p">.</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s2">"liff_id"</span><span class="p">)</span>
   <span class="p">}</span>
 
   <span class="nl">setStatsMode</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">val</span><span class="p">){</span>
-    <span class="nb">window</span><span class="p">.</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s2">"liff_stats_mode"</span><span class="p">,</span> <span class="nx">val</span><span class="p">)</span>
+	<span class="nb">window</span><span class="p">.</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s2">"liff_stats_mode"</span><span class="p">,</span> <span class="nx">val</span><span class="p">)</span>
   <span class="p">}</span>
 
   <span class="c1">// Way more things go here</span>
@@ -528,21 +528,21 @@ further below).</p>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"deviceready"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
   <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
-    <span class="nx">navigator</span><span class="p">.</span><span class="nx">globalization</span><span class="p">.</span><span class="nx">getPreferredLanguage</span><span class="p">(</span>
-      <span class="kd">function</span> <span class="p">(</span><span class="nx">language</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">localize</span><span class="p">(</span><span class="nx">language</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span>
-      <span class="p">},</span>
-      <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-        <span class="nx">localize</span><span class="p">(</span><span class="s2">"en"</span><span class="p">)</span>
-      <span class="p">}</span>
-    <span class="p">)</span>
+	<span class="nx">navigator</span><span class="p">.</span><span class="nx">globalization</span><span class="p">.</span><span class="nx">getPreferredLanguage</span><span class="p">(</span>
+	  <span class="kd">function</span> <span class="p">(</span><span class="nx">language</span><span class="p">)</span> <span class="p">{</span>
+	    <span class="nx">localize</span><span class="p">(</span><span class="nx">language</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span>
+	  <span class="p">},</span>
+	  <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+	    <span class="nx">localize</span><span class="p">(</span><span class="s2">"en"</span><span class="p">)</span>
+	  <span class="p">}</span>
+	<span class="p">)</span>
   <span class="p">})</span>
 <span class="p">})</span>
 
 <span class="kd">function</span> <span class="nx">localize</span><span class="p">(</span><span class="nx">language</span><span class="p">){</span>
   <span class="nx">$</span><span class="p">(</span><span class="s2">"body"</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">"id"</span><span class="p">,</span> <span class="nx">language</span><span class="p">)</span>
-  <span class="nx">$</span><span class="p">(</span><span class="s2">"*[data-t]"</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
-    <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">I18n</span><span class="p">[</span><span class="nx">language</span><span class="p">][</span><span class="nx">$this</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span><span class="s2">"t"</span><span class="p">)])</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s2">"\*[data-t]"</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+	<span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">I18n</span><span class="p">[</span><span class="nx">language</span><span class="p">][</span><span class="nx">$this</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span><span class="s2">"t"</span><span class="p">)])</span>
   <span class="p">})</span>
 <span class="p">}</span></code></pre></figure>
 
@@ -560,8 +560,8 @@ too much text displayed.</p>
 <p>As explained above, I internationalized my whole app. Because of this I’d have a couple of miliseconds blink before the text appears.
 Preloading views fixed this.</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">someView</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">steroids</span><span class="p">.</span><span class="nx">views</span><span class="p">.</span><span class="nx">WebView</span><span class="p">(</span><span class="s2">"/views/settings/some_view.html"</span><span class="p">);</span>
-<span class="kd">var</span> <span class="nx">anotherView</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">steroids</span><span class="p">.</span><span class="nx">views</span><span class="p">.</span><span class="nx">WebView</span><span class="p">(</span><span class="s2">"/views/settings/another_view.html"</span><span class="p">);</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">someView</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">steroids</span><span class="p">.</span><span class="nx">views</span><span class="p">.</span><span class="nx">WebView</span><span class="p">(</span><span class="s2">"/views/settings/some\_view.html"</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">anotherView</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">steroids</span><span class="p">.</span><span class="nx">views</span><span class="p">.</span><span class="nx">WebView</span><span class="p">(</span><span class="s2">"/views/settings/another\_view.html"</span><span class="p">);</span>
 
 <span class="kd">function</span> <span class="nx">preload</span><span class="p">(){</span>
   <span class="nx">someView</span><span class="p">.</span><span class="nx">preload</span><span class="p">()</span>
@@ -576,10 +576,10 @@ it in order to preserve ressources.</p>
 
 <p>Learn more about it on <a href="http://academy.appgyver.com/categories/3/contents/19">AppGyver’s website</a>.</p>
 
-<p><em>Note that this not fully functional in production on my app because of
+<p>_Note that this not fully functional in production on my app because of
 an issue in Steroids JS where loading the navigation bar in a certain
 way disrupts preloading. Because of this you will see some minor
-blinking in some internal setting screens. It will be fixed soon :)</em></p>
+blinking in some internal setting screens. It will be fixed soon :)_</p>
 
 <h3 id="getting-out-of-the-background">Getting Out Of The Background</h3>
 
@@ -595,17 +595,17 @@ putting it in the background. Here’s how to do it:</p>
 <p>Using <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window.postMessage">the postMessage API</a>
 to communicate between views is the way to go.</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="cm">/* In the first view */</span>
-<span class="nb">window</span><span class="p">.</span><span class="nx">postMessage</span><span class="p">({</span> <span class="na">type</span><span class="p">:</span> <span class="s2">"something_happened"</span> <span class="p">},</span> <span class="s2">"*"</span><span class="p">)</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">/</span><span class="err">\</span><span class="o">*</span> <span class="nx">In</span> <span class="nx">the</span> <span class="nx">first</span> <span class="nx">view</span> <span class="err">\</span><span class="o">*</span><span class="sr">/</span><span class="err">
+</span><span class="nb">window</span><span class="p">.</span><span class="nx">postMessage</span><span class="p">({</span> <span class="na">type</span><span class="p">:</span> <span class="s2">"something\_happened"</span> <span class="p">},</span> <span class="s2">"\*"</span><span class="p">)</span>
 
-<span class="cm">/* In the second view */</span>
+<span class="sr">/</span><span class="se">\*</span><span class="sr"> In the second view </span><span class="se">\*</span><span class="sr">/</span>
 <span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"message"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">msg</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span><span class="p">(</span><span class="nx">msg</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">type</span> <span class="o">==</span> <span class="s2">"something_happened"</span><span class="p">){</span>
+  <span class="k">if</span><span class="p">(</span><span class="nx">msg</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">type</span> <span class="o">==</span> <span class="s2">"something\_happened"</span><span class="p">){</span>
   <span class="p">}</span>
 <span class="p">})</span></code></pre></figure>
 
-<p><em>Right now there is an open issue when adding alerts in the event listener
-as discussed [on the forum)[http://forums.appgyver.com/#!/steroids:sometimes-alerts-block-th)</em>.</p>
+<p>_Right now there is an open issue when adding alerts in the event listener
+as discussed [on the forum)[http://forums.appgyver.com/#!/steroids:sometimes-alerts-block-th)_.</p>
 
 <h2 id="check-out-the-result">Check Out The Result!</h2>
 
@@ -622,6 +622,7 @@ we put in extra efforts in order to create a pleasant experience with a solid de
 lot of things to keep in mind when doing so. Projects like PhoneGap push
 the ball in the right direction and I can’t wait to see what kind of
 apps we’ll be creating in a few years!</p>
+
 
 
       <div id="more">

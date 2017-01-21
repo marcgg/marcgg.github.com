@@ -6,6 +6,7 @@ teach them a bit about how your software works can be a good idea with
 joy for all."
 blog: true
 category: blog
+featured: true
 tag: Startup
 ---
 
@@ -22,7 +23,7 @@ anything about coding - and I'm not here to blame them.
 
 ## No need to learn how to code
 
-I'm personnaly not an advocate of the concept of [getting everybody to code](http://www.codeyear.com/).
+I'm personnaly not an advocate of the concept of [getting everybody to code][1].
 Of course I love this field, but I wouldn't say that it is a
 required skill to live a successful life, no matter how big technology is today.
 
@@ -56,7 +57,7 @@ step by step.
 
 I'm absolutely not saying take them for idiots. They are not. They just
 do not have the same vocabulary and the same background as me. Imagine a
-marketing guy showing up and starting to talk about [4Ps](http://en.wikipedia.org/wiki/Marketing_mix)
+marketing guy showing up and starting to talk about [4Ps][2]
 without giving you any indication of what all those Ps are about.
 
 ## What everyone should know
@@ -79,7 +80,7 @@ Here we go.
   than a CSS alignment issue or a word change!
 - How to report a bug and understand that developers are not wizards that can
   guess the steps to reproduce it (if only).
-- What [software regression](http://en.wikipedia.org/wiki/Software_regression) is,
+- What [software regression][3] is,
   or why sometimes a feature working yesterday is broken today.
 - What a server is.
 - Understand that something can be really complicated even if it seems
@@ -92,7 +93,7 @@ Here we go.
 It's not much, but knowing all this will help a lot communication between the development
 team and everyone else. To an extent it will also help the team be more
 efficient. Obviously it's easier when everyone within a team
-can have a [common vocabulary](http://martinfowler.com/bliki/UbiquitousLanguage.html)
+can have a [common vocabulary][4]
 to talk about what occurs during development.
 
 Going further, there are some subjects that can be very interesting if
@@ -101,7 +102,7 @@ working on the product or selling it. Knowing more gives a better insight on wha
 the app _could_ do based on what is already there.
 
 - Databases. How things are stored, how the data can be used.
-- What are the possibilities and [risks](/blog/2012/09/24/working-with-apis-facebook/)
+- What are the possibilities and [risks][5]
   of using third party APIs.
 - Performances. What can make a site slow. Understand what asynchronous means.
 - Code reusability and its limit. Why it's good to have a consistent product.
@@ -149,10 +150,10 @@ Of course if the person wants to know more, go crazy.
 To help you be clear in your explanations, it's convenient to have some graphs,
 simple flow charts or even drawings that you can refer to when discussing a subject.
 Also, remember that
-[metaphors](http://programmers.stackexchange.com/questions/2410/whats-a-good-programming-metaphor)
-can go a [long way](http://xenia.media.mit.edu/~mt/thesis/mt-thesis-2.2.html). Extrem programming
-even lists this as [a good practice](http://en.wikipedia.org/wiki/Extreme_programming_practices#System_metaphor)
-that can [have positive results](http://reports-archive.adm.cs.cmu.edu/anon/isri/CMU-ISRI-03-103.pdf).
+[metaphors][6]
+can go a [long way][7]. Extrem programming
+even lists this as [a good practice][8]
+that can [have positive results][9].
 
 Personnaly, I like talking about robots walking around a warehouse doing tasks while
 I'm yelling orders from afar... and now that I'm writing that, I think I might pass for someone with a very odd job!
@@ -164,5 +165,16 @@ If you agree that this is important and you're a developer,
 go ahead and start explaining what you're doing to others!
 
 If you are on the non technical side of things, ask your colleagues writing code what's up. Most of them
-would be happy to explain. If they aren't, drop me a line [on twitter](http://twitter.com/marcgg)
+would be happy to explain. If they aren't, drop me a line [on twitter][10]
 and if I can, I'll happily take a few minutes to help you out!
+
+[1]:	http://www.codeyear.com/
+[2]:	http://en.wikipedia.org/wiki/Marketing_mix
+[3]:	http://en.wikipedia.org/wiki/Software_regression
+[4]:	http://martinfowler.com/bliki/UbiquitousLanguage.html
+[5]:	/blog/2012/09/24/working-with-apis-facebook/
+[6]:	http://programmers.stackexchange.com/questions/2410/whats-a-good-programming-metaphor
+[7]:	http://xenia.media.mit.edu/~mt/thesis/mt-thesis-2.2.html
+[8]:	http://en.wikipedia.org/wiki/Extreme_programming_practices#System_metaphor
+[9]:	http://reports-archive.adm.cs.cmu.edu/anon/isri/CMU-ISRI-03-103.pdf
+[10]:	http://twitter.com/marcgg
