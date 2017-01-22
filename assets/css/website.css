@@ -131,7 +131,7 @@ a:hover{
   transition-duration:0.2s;
 }
 
-p a, ul a{
+p a, ul a, .review a{
   color: #763232;
   text-decoration: none;
   background-image: linear-gradient(to bottom, #fff 30%, rgba(200, 200, 200, 0.4) 50%);
@@ -539,14 +539,14 @@ p code, li code{
 }
 
 #references_logo img{
-  width: 130px;
+  width: 100px;
   float: left;
   margin: 20px 20px;
   border: 1px solid #ddd;
 }
 
 #references_logo .minor{
-  width: 65px;
+  width: 69px;
   margin: 20px 15px;
 }
 
