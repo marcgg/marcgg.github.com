@@ -5,7 +5,7 @@
     <title>
       The Difference Between to&#95;s & to&#95;str In Ruby
     </title>
-    <meta name="description" content="">
+    <meta name="description" content="A lot of people assume that to_s and `to_str` are the same methods, but the difference between them is actually quite major.">
     <meta name="author" content="Marc G Gauthier">
     <meta content='user-scalable=no, width=device-width, initial-scale=1.0' name='viewport'>
     <meta name="google-site-verification" content="x2EpQdOMz-k9fP8hak9I3COaXhnQ4jNLp2GU4GYQ8jM" />
@@ -53,15 +53,15 @@
   <div id="content">
     <div class="post" id="post-">
 
-      <p>If you ever looked at the available methods on some objects in Ruby, you might have noticed that there seems to be two difference ways to cast to string: <code class="highlighter-rouge">to_s</code> and <code class="highlighter-rouge">to_str</code>. However, most people only use <code class="highlighter-rouge">to_s</code>… is it because it’s shorter or is <code class="highlighter-rouge">to_str</code> functionnally different?</p>
+      <p>If you ever looked at the available methods on some objects in Ruby, you might have noticed that there seems to be two difference ways to cast an object to string: <code class="highlighter-rouge">to_s</code> and <code class="highlighter-rouge">to_str</code>. However, most people only use <code class="highlighter-rouge">to_s</code>… is it because it’s shorter or is <code class="highlighter-rouge">to_str</code> functionnally different?</p>
 
 <p>Short answer: they are indeed different.</p>
 
-<p><em>Note that this article focuses on <code class="highlighter-rouge">to_s</code> vs  <code class="highlighter-rouge">to_str</code>, but the logic applies as well to <code class="highlighter-rouge">to_str</code>, <code class="highlighter-rouge">to_int</code>, <code class="highlighter-rouge">to_ary</code>, <code class="highlighter-rouge">to_hash</code> and <code class="highlighter-rouge">to_sym</code>.</em></p>
+<p><em>Note that this article focuses on <code class="highlighter-rouge">to_s</code> vs  <code class="highlighter-rouge">to_str</code>, but the logic applies as well to <code class="highlighter-rouge">to_int</code>, <code class="highlighter-rouge">to_ary</code>, <code class="highlighter-rouge">to_hash</code> and <code class="highlighter-rouge">to_sym</code>.</em></p>
 
 <h2 id="difference-in-scope-of-definition">Difference In Scope Of Definition</h2>
 
-<p>First of, <code class="highlighter-rouge">to_s</code> is defined on <code class="highlighter-rouge">BasicObject</code> and that’s quite a big deal since <code class="highlighter-rouge">BasicObject</code> is the <a href="https://ruby-doc.org/core-2.2.0/BasicObject.html">parent class of all classes in Ruby</a>. This means that all classes in Ruby implement <code class="highlighter-rouge">to_s</code>.</p>
+<p>First of, <code class="highlighter-rouge">to_s</code> is defined on <code class="highlighter-rouge">BasicObject</code> which is quite a big deal since <code class="highlighter-rouge">BasicObject</code> is the <a href="https://ruby-doc.org/core-2.2.0/BasicObject.html">parent class of all classes in Ruby</a>. This means that all classes in Ruby implement <code class="highlighter-rouge">to_s</code>.</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>&gt; BasicObject.to_s
  =&gt; "BasicObject"
@@ -83,7 +83,7 @@
 
 <p>We could also call <code class="highlighter-rouge">to_s</code> directly on the class and get a valid result as well since the <code class="highlighter-rouge">Class</code> <a href="https://ruby-doc.org/core-2.2.0/Class.html">class is also an object</a>.</p>
 
-<p>However if we try to do the same with <code class="highlighter-rouge">to_str</code> then it doesn’t work because it’s not defined on a higher level class:</p>
+<p>However if we try to do the same with <code class="highlighter-rouge">to_str</code>, it won’t work because it’s not defined on a higher level class:</p>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">puts</span> <span class="no">Demo</span><span class="p">.</span><span class="nf">new</span><span class="p">.</span><span class="nf">to_str</span></code></pre></figure>
 
@@ -91,7 +91,7 @@
 
 <h2 id="difference-in-behavior">Difference In Behavior</h2>
 
-<p>Okay so the methods are not defined in the same way, but this is just a minor detail compaired to the main difference between the two:</p>
+<p>Alright, so the methods are not defined in the same way… but this is just a minor detail compaired to the main difference between the two:</p>
 
 <ul>
   <li><code class="highlighter-rouge">to_s</code> returns a string representation of an object</li>
@@ -102,7 +102,9 @@
 
 <h3 id="string-representation-of-an-object">String Representation Of An Object</h3>
 
-<p>When calling <code class="highlighter-rouge">to_s</code>, it will return some form of string representation of the object. When creating a new class you can keep the default behaviour or build your own. For instance here’s how <code class="highlighter-rouge">to_s</code> behaves on an integer:</p>
+<p>When calling <code class="highlighter-rouge">to_s</code>, it will return some form of string representation of the object. Something easy to display.</p>
+
+<p>When creating a new class you can keep the default behaviour or build your own. For instance here’s how <code class="highlighter-rouge">to_s</code> behaves on an integer:</p>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="mi">100</span><span class="p">.</span><span class="nf">to_s</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># returns "1100100"</span>
 <span class="mi">100</span><span class="p">.</span><span class="nf">to_s</span> <span class="c1"># returns "100"</span>
@@ -122,7 +124,7 @@
 
 <p>It’s basically just a way to have a quick and nice way to display your objects that is going to be called when needed, for instance when using <code class="highlighter-rouge">puts</code> or concatenating with  <code class="highlighter-rouge">#{}</code>:</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">puts</span> <span class="s2">"Here is </span><span class="si">#{</span><span class="no">User</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"Bob"</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span> <span class="c1"># Returns "Here is &lt;User:Bob&gt;"</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">puts</span> <span class="s2">"Here is </span><span class="si">#{</span><span class="no">User</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"Bob"</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span> <span class="c1"># Returns "Here is &lt;User: Bob&gt;"</span></code></pre></figure>
 
 <h3 id="behaving-like-a-string">Behaving Like A String</h3>
 
@@ -135,12 +137,12 @@
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">rb_str_to_s</span><span class="p">(</span><span class="n">VALUE</span> <span class="n">str</span><span class="p">)</span>
 <span class="p">{</span>
  <span class="k">if</span> <span class="p">(</span><span class="n">rb_obj_class</span><span class="p">(</span><span class="n">str</span><span class="p">)</span> <span class="o">!=</span> <span class="n">rb_cString</span><span class="p">)</span> <span class="p">{</span>
-     <span class="k">return</span> <span class="n">str_duplicate</span><span class="p">(</span><span class="n">rb_cString</span><span class="p">,</span> <span class="n">str</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">str_duplicate</span><span class="p">(</span><span class="n">rb_cString</span><span class="p">,</span> <span class="n">str</span><span class="p">);</span>
  <span class="p">}</span>
  <span class="k">return</span> <span class="n">str</span><span class="p">;</span>
 <span class="p">}</span></code></pre></figure>
 
-<p><a href="http://apidock.com/ruby/Exception/to_str">Exception</a> used to implement <code class="highlighter-rouge">to_str</code> as well but is was removed in Ruby 1.9, which is why it’s often mentionned as an example.</p>
+<p><a href="http://apidock.com/ruby/Exception/to_str">Exception</a> used to implement <code class="highlighter-rouge">to_str</code> as well but is was removed in Ruby 1.9, which is why it’s often mentionned as an example. The Ruby documentation was even wrong at the time of writing this article, so I wrote <a href="https://github.com/ruby/ruby/pull/1517">a PR to fix it</a> that was merged.</p>
 
 <p>There are a lot of discussions regarding if a class should implement <code class="highlighter-rouge">to_str</code> or not,  since it’s a strong signal that the class is really similar to a string and should behave as such. If this sounds interesting, you should take a look at this <a href="https://bugs.ruby-lang.org/issues/7849">Symbol#to_str</a> discussion on the Ruby core tracker, or at <a href="https://github.com/rails/rails/commit/188cc90af9b29d5520564af7bd7bbcdc647953ca">this example in Rails</a> of when <code class="highlighter-rouge">to_str</code> is usefull by <a href="https://twitter.com/tenderlove">Aaron Patterson</a>.</p>
 
@@ -150,21 +152,20 @@
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">puts</span> <span class="s2">"150"</span> <span class="o">+</span> <span class="mi">42</span></code></pre></figure>
 
-<p>We get <code class="highlighter-rouge">'+': no implicit conversion of Fixnum into String (TypeError)</code>. This makes sense, but what if we define <code class="highlighter-rouge">to_str</code> on the <code class="highlighter-rouge">Fixnum</code> class?</p>
+<p>We get <code class="highlighter-rouge">'+': no implicit conversion of Fixnum into String (TypeError)</code>. This makes sense, but what would happen if we were to define <code class="highlighter-rouge">to_str</code> on the <code class="highlighter-rouge">Fixnum</code> class?</p>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Fixnum</span>
   <span class="k">def</span> <span class="nf">to_str</span>
-    <span class="nb">self</span><span class="p">.</span><span class="nf">to_s</span>
+   <span class="nb">self</span><span class="p">.</span><span class="nf">to_s</span>
   <span class="k">end</span>
 <span class="k">end</span>
  </code></pre></figure>
 
 <p>The when we call:</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">puts</span> <span class="s2">"150"</span> <span class="o">+</span> <span class="mi">42</span>
- </code></pre></figure>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">puts</span> <span class="s2">"150"</span> <span class="o">+</span> <span class="mi">42</span></code></pre></figure>
 
-<p>We get <code class="highlighter-rouge">"15042"</code>, which is quite surprising!</p>
+<p>We get <code class="highlighter-rouge">"15042"</code>, which is quite surprising! It’s because <code class="highlighter-rouge">42</code> was implicitely converted to a <code class="highlighter-rouge">String</code>.</p>
 
 <h4 id="example-2-user">Example 2: User</h4>
 
@@ -172,7 +173,7 @@
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">User</span>
   <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-    <span class="vi">@name</span> <span class="o">=</span> <span class="nb">name</span>
+   <span class="vi">@name</span> <span class="o">=</span> <span class="nb">name</span>
   <span class="k">end</span>
 
   <span class="k">def</span> <span class="nf">to_str</span>
@@ -187,7 +188,7 @@
 <p>That’s a lot of information, but let me sum it up quickly before finishing the article:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">to_s</code> and <code class="highlighter-rouge">to_str</code> are <strong>very different</strong></li>
+  <li><code class="highlighter-rouge">to_s</code> and <code class="highlighter-rouge">to_str</code> are <strong>very different</strong>.</li>
   <li><code class="highlighter-rouge">to_s</code> is defined on most objects and returns a string representation of this object.</li>
   <li>Defining <code class="highlighter-rouge">to_str</code> on an object is very much like saying “this object behaves like a string”.</li>
   <li>Calling <code class="highlighter-rouge">to_str</code> should return a string-like object, not juste a representation of the object as a string.</li>
