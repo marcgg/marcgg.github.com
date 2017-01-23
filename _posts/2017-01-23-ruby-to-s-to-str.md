@@ -105,7 +105,7 @@ rb_str_to_s(VALUE str)
 
 [Exception][3] used to implement `to_str` as well but is was removed in Ruby 1.9, which is why it's often mentionned as an example. The Ruby documentation was even wrong at the time of writing this article, so I wrote [a PR to fix it][4] that was merged.
 
-There are a lot of discussions regarding if a class should implement `to_str` or not,  since it's a strong signal that the class is really similar to a string and should behave as such. If this sounds interesting, you should take a look at this [Symbol#to_str][5] discussion on the Ruby core tracker, or at [this example in Rails][6] of when `to_str` is usefull by [Aaron Patterson][7].
+There are a lot of discussions regarding if a class should implement `to_str` or not,  since it's a strong signal that the class is really similar to a string and should behave as such. If this sounds interesting, you should take a look at this [Symbol#to_str][5] discussion on the Ruby core tracker, or at [this example in Rails][6] of when `to_str` is useful by [Aaron Patterson][7].
 
 #### Example 1: Fixnum
 
