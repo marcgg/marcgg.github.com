@@ -57,7 +57,7 @@
 
 <p>Short answer: they are indeed different.</p>
 
-<p><em>Note that this article focuses on <code class="highlighter-rouge">to_s</code> vs  <code class="highlighter-rouge">to_str</code>, but the logic applies as well to <code class="highlighter-rouge">to_int</code>, <code class="highlighter-rouge">to_ary</code>, <code class="highlighter-rouge">to_hash</code> and <code class="highlighter-rouge">to_sym</code>.</em></p>
+<p><em>Note that this article focuses on <code class="highlighter-rouge">to_s</code> vs  <code class="highlighter-rouge">to_str</code>, but the logic applies as well to <code class="highlighter-rouge">to_int</code>, <code class="highlighter-rouge">to_ary</code>, <code class="highlighter-rouge">to_hash</code>, <code class="highlighter-rouge">to_regexp</code> and <code class="highlighter-rouge">to_sym</code>.</em></p>
 
 <h2 id="difference-in-scope-of-definition">Difference In Scope Of Definition</h2>
 
@@ -97,8 +97,6 @@
   <li><code class="highlighter-rouge">to_s</code> returns a string representation of an object</li>
   <li><code class="highlighter-rouge">to_str</code> is actually stating that the object behaves like a string!</li>
 </ul>
-
-<p><em>Note that both <code class="highlighter-rouge">to_s</code> and <code class="highlighter-rouge">to_str</code> will return an instance of <code class="highlighter-rouge">String</code>, even when subclassing <code class="highlighter-rouge">String</code>.</em></p>
 
 <h3 id="string-representation-of-an-object">String Representation Of An Object</h3>
 
@@ -183,6 +181,20 @@
 
 <span class="nb">puts</span> <span class="s2">"Say hello to "</span> <span class="o">+</span> <span class="no">User</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"Bob"</span><span class="p">)</span> <span class="c1"># Displays "Say hello to Bob"</span></code></pre></figure>
 
+<h2 id="note-on-implicit--explicit-conversion">Note On Implicit / Explicit Conversion</h2>
+
+<p>We can also say that <code class="highlighter-rouge">to_s</code> is an explicit conversion and <code class="highlighter-rouge">to_str</code> is an implicit conversion. I’m not going into the details of this, if you’d like to get more information I recommend reading <a href="http://amzn.to/2iV2Ngq">Confident Ruby</a>.</p>
+
+<p>Quoting directly from the book:</p>
+
+<blockquote>
+  <p><code class="highlighter-rouge">to_s</code> is an explicit conversion method. Explicit conversions represent conversions from classes which are mostly or entirely unrelated to the target class.</p>
+
+  <p><code class="highlighter-rouge">to_str</code>, on the other hand, is an implicit conversion method. Implicit conversions represent conversions from a class that is closely related to the target class.</p>
+
+  <p><em><a href="http://amzn.to/2iV2Ngq">Confident Ruby by Avdi Grimm</a></em></p>
+</blockquote>
+
 <h2 id="summing-it-up">Summing It Up</h2>
 
 <p>That’s a lot of information, but let me sum it up quickly before finishing the article:</p>
@@ -193,6 +205,8 @@
   <li>Defining <code class="highlighter-rouge">to_str</code> on an object is very much like saying “this object behaves like a string”.</li>
   <li>Calling <code class="highlighter-rouge">to_str</code> should return a string-like object, not juste a representation of the object as a string.</li>
 </ul>
+
+<p><em>Note that both <code class="highlighter-rouge">to_s</code> and <code class="highlighter-rouge">to_str</code> should return an instance of <code class="highlighter-rouge">String</code>, even when subclassing <code class="highlighter-rouge">String</code>.</em></p>
 
 
 

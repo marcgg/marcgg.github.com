@@ -11,7 +11,7 @@ If you ever looked at the available methods on some objects in Ruby, you might h
 
 Short answer: they are indeed different.
 
-_Note that this article focuses on `to_s` vs  `to_str`, but the logic applies as well to `to_int`, `to_ary`, `to_hash` and `to_sym`._
+_Note that this article focuses on `to_s` vs  `to_str`, but the logic applies as well to `to_int`, `to_ary`, `to_hash`, `to_regexp` and `to_sym`._
 
 ## Difference In Scope Of Definition
 
@@ -49,8 +49,6 @@ Alright, so the methods are not defined in the same way... but this is just a mi
 
 - `to_s` returns a string representation of an object
 - `to_str` is actually stating that the object behaves like a string!
-
-_Note that both `to_s` and `to_str` will return an instance of `String`, even when subclassing `String`._
 
 ### String Representation Of An Object
 
@@ -107,6 +105,7 @@ rb_str_to_s(VALUE str)
 
 There are a lot of discussions regarding if a class should implement `to_str` or not,  since it's a strong signal that the class is really similar to a string and should behave as such. If this sounds interesting, you should take a look at this [Symbol#to_str][5] discussion on the Ruby core tracker, or at [this example in Rails][6] of when `to_str` is usefull by [Aaron Patterson][7].
 
+
 #### Example 1: Fixnum
 
 `Fixnum` does not define `to_str`, so when we do this:
@@ -151,6 +150,19 @@ end
 puts "Say hello to " + User.new("Bob") # Displays "Say hello to Bob"
 {% endhighlight %}
 
+## Note On Implicit / Explicit Conversion
+
+We can also say that `to_s` is an explicit conversion and `to_str` is an implicit conversion. I'm not going into the details of this, if you'd like to get more information I recommend reading [Confident Ruby][8].
+
+Quoting directly from the book:
+
+> `to_s` is an explicit conversion method. Explicit conversions represent conversions from classes which are mostly or entirely unrelated to the target class.
+> 
+> `to_str`, on the other hand, is an implicit conversion method. Implicit conversions represent conversions from a class that is closely related to the target class.
+> 
+> _[Confident Ruby by Avdi Grimm][9]_
+
+
 ## Summing It Up
 
 That's a lot of information, but let me sum it up quickly before finishing the article:
@@ -160,6 +172,7 @@ That's a lot of information, but let me sum it up quickly before finishing the a
 - Defining `to_str` on an object is very much like saying "this object behaves like a string".
 - Calling `to_str` should return a string-like object, not juste a representation of the object as a string.
 
+_Note that both `to_s` and `to_str` should return an instance of `String`, even when subclassing `String`._
 
 [1]:	https://ruby-doc.org/core-2.2.0/BasicObject.html
 [2]:	https://ruby-doc.org/core-2.2.0/Class.html
@@ -168,3 +181,5 @@ That's a lot of information, but let me sum it up quickly before finishing the a
 [5]:	https://bugs.ruby-lang.org/issues/7849
 [6]:	https://github.com/rails/rails/commit/188cc90af9b29d5520564af7bd7bbcdc647953ca
 [7]:	https://twitter.com/tenderlove
+[8]:	http://amzn.to/2iV2Ngq
+[9]:	http://amzn.to/2iV2Ngq

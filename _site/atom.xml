@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2017-01-23T09:25:32+01:00</updated>
+ <updated>2017-01-23T13:32:53+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -23,7 +23,7 @@
 
 &lt;p&gt;Short answer: they are indeed different.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Note that this article focuses on &lt;code class=&quot;highlighter-rouge&quot;&gt;to_s&lt;/code&gt; vs  &lt;code class=&quot;highlighter-rouge&quot;&gt;to_str&lt;/code&gt;, but the logic applies as well to &lt;code class=&quot;highlighter-rouge&quot;&gt;to_int&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;to_ary&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;to_hash&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;to_sym&lt;/code&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note that this article focuses on &lt;code class=&quot;highlighter-rouge&quot;&gt;to_s&lt;/code&gt; vs  &lt;code class=&quot;highlighter-rouge&quot;&gt;to_str&lt;/code&gt;, but the logic applies as well to &lt;code class=&quot;highlighter-rouge&quot;&gt;to_int&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;to_ary&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;to_hash&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;to_regexp&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;to_sym&lt;/code&gt;.&lt;/em&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;difference-in-scope-of-definition&quot;&gt;Difference In Scope Of Definition&lt;/h2&gt;
 
@@ -63,8 +63,6 @@
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;to_s&lt;/code&gt; returns a string representation of an object&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;to_str&lt;/code&gt; is actually stating that the object behaves like a string!&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;&lt;em&gt;Note that both &lt;code class=&quot;highlighter-rouge&quot;&gt;to_s&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;to_str&lt;/code&gt; will return an instance of &lt;code class=&quot;highlighter-rouge&quot;&gt;String&lt;/code&gt;, even when subclassing &lt;code class=&quot;highlighter-rouge&quot;&gt;String&lt;/code&gt;.&lt;/em&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;string-representation-of-an-object&quot;&gt;String Representation Of An Object&lt;/h3&gt;
 
@@ -149,6 +147,20 @@
 
 &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Say hello to &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Bob&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Displays &quot;Say hello to Bob&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
+&lt;h2 id=&quot;note-on-implicit--explicit-conversion&quot;&gt;Note On Implicit / Explicit Conversion&lt;/h2&gt;
+
+&lt;p&gt;We can also say that &lt;code class=&quot;highlighter-rouge&quot;&gt;to_s&lt;/code&gt; is an explicit conversion and &lt;code class=&quot;highlighter-rouge&quot;&gt;to_str&lt;/code&gt; is an implicit conversion. I’m not going into the details of this, if you’d like to get more information I recommend reading &lt;a href=&quot;http://amzn.to/2iV2Ngq&quot;&gt;Confident Ruby&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Quoting directly from the book:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;to_s&lt;/code&gt; is an explicit conversion method. Explicit conversions represent conversions from classes which are mostly or entirely unrelated to the target class.&lt;/p&gt;
+
+  &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;to_str&lt;/code&gt;, on the other hand, is an implicit conversion method. Implicit conversions represent conversions from a class that is closely related to the target class.&lt;/p&gt;
+
+  &lt;p&gt;&lt;em&gt;&lt;a href=&quot;http://amzn.to/2iV2Ngq&quot;&gt;Confident Ruby by Avdi Grimm&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
 &lt;h2 id=&quot;summing-it-up&quot;&gt;Summing It Up&lt;/h2&gt;
 
 &lt;p&gt;That’s a lot of information, but let me sum it up quickly before finishing the article:&lt;/p&gt;
@@ -159,6 +171,8 @@
   &lt;li&gt;Defining &lt;code class=&quot;highlighter-rouge&quot;&gt;to_str&lt;/code&gt; on an object is very much like saying “this object behaves like a string”.&lt;/li&gt;
   &lt;li&gt;Calling &lt;code class=&quot;highlighter-rouge&quot;&gt;to_str&lt;/code&gt; should return a string-like object, not juste a representation of the object as a string.&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Note that both &lt;code class=&quot;highlighter-rouge&quot;&gt;to_s&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;to_str&lt;/code&gt; should return an instance of &lt;code class=&quot;highlighter-rouge&quot;&gt;String&lt;/code&gt;, even when subclassing &lt;code class=&quot;highlighter-rouge&quot;&gt;String&lt;/code&gt;.&lt;/em&gt;&lt;/p&gt;
 
 
        
