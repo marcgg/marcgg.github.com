@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2017-01-23T13:32:53+01:00</updated>
+ <updated>2017-01-27T15:15:38+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -19,7 +19,7 @@
      <updated>2017-01-23T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2017/01/23/ruby-to-s-to-str</id>
      <content type="html">
-       &lt;p&gt;If you ever looked at the available methods on some objects in Ruby, you might have noticed that there seems to be two difference ways to cast an object to string: &lt;code class=&quot;highlighter-rouge&quot;&gt;to_s&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;to_str&lt;/code&gt;. However, most people only use &lt;code class=&quot;highlighter-rouge&quot;&gt;to_s&lt;/code&gt;… is it because it’s shorter or is &lt;code class=&quot;highlighter-rouge&quot;&gt;to_str&lt;/code&gt; functionnally different?&lt;/p&gt;
+       &lt;p&gt;If you ever looked at the available methods on some objects in Ruby, you might have noticed that there seems to be two different ways to cast an object to string: &lt;code class=&quot;highlighter-rouge&quot;&gt;to_s&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;to_str&lt;/code&gt;. However, most people only use &lt;code class=&quot;highlighter-rouge&quot;&gt;to_s&lt;/code&gt;… is it because it’s shorter or is &lt;code class=&quot;highlighter-rouge&quot;&gt;to_str&lt;/code&gt; functionally different?&lt;/p&gt;
 
 &lt;p&gt;Short answer: they are indeed different.&lt;/p&gt;
 
@@ -57,7 +57,7 @@
 
 &lt;h2 id=&quot;difference-in-behavior&quot;&gt;Difference In Behavior&lt;/h2&gt;
 
-&lt;p&gt;Alright, so the methods are not defined in the same way… but this is just a minor detail compaired to the main difference between the two:&lt;/p&gt;
+&lt;p&gt;Alright, so the methods are not defined in the same way… but this is just a minor detail compared to the main difference between the two:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;to_s&lt;/code&gt; returns a string representation of an object&lt;/li&gt;
@@ -86,7 +86,7 @@
   &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;It’s basically just a way to have a quick and nice way to display your objects that is going to be called when needed, for instance when using &lt;code class=&quot;highlighter-rouge&quot;&gt;puts&lt;/code&gt; or concatenating with  &lt;code class=&quot;highlighter-rouge&quot;&gt;#{}&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;It’s basically just a way to have a quick and nice way to display your objects that is going to be called when needed, for instance when using &lt;code class=&quot;highlighter-rouge&quot;&gt;puts&lt;/code&gt; or when interpolating with &lt;code class=&quot;highlighter-rouge&quot;&gt;#{}&lt;/code&gt;:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Here is &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Bob&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Returns &quot;Here is &amp;lt;User: Bob&amp;gt;&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
@@ -94,7 +94,7 @@
 
 &lt;p&gt;Calling &lt;code class=&quot;highlighter-rouge&quot;&gt;to_str&lt;/code&gt; should return a string-like object, behaving just like a &lt;code class=&quot;highlighter-rouge&quot;&gt;String&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;On the other hand when an object implements &lt;code class=&quot;highlighter-rouge&quot;&gt;to_str&lt;/code&gt;, it has way more consequences as it means that it will return something that behaves like a string. It’s basically saying that the class is not necesseraly a &lt;code class=&quot;highlighter-rouge&quot;&gt;String&lt;/code&gt;, but it can be used in the same way.&lt;/p&gt;
+&lt;p&gt;On the other hand when an object implements &lt;code class=&quot;highlighter-rouge&quot;&gt;to_str&lt;/code&gt;, it has way more consequences as it means that it will return something that behaves like a string. It’s basically saying that the class is not necessarily a &lt;code class=&quot;highlighter-rouge&quot;&gt;String&lt;/code&gt;, but it can be used in the same way.&lt;/p&gt;
 
 &lt;p&gt;Because of this, the only class in Ruby core implementing &lt;code class=&quot;highlighter-rouge&quot;&gt;to_str&lt;/code&gt; is &lt;code class=&quot;highlighter-rouge&quot;&gt;String&lt;/code&gt;:&lt;/p&gt;
 
@@ -106,9 +106,9 @@
  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://apidock.com/ruby/Exception/to_str&quot;&gt;Exception&lt;/a&gt; used to implement &lt;code class=&quot;highlighter-rouge&quot;&gt;to_str&lt;/code&gt; as well but is was removed in Ruby 1.9, which is why it’s often mentionned as an example. The Ruby documentation was even wrong at the time of writing this article, so I wrote &lt;a href=&quot;https://github.com/ruby/ruby/pull/1517&quot;&gt;a PR to fix it&lt;/a&gt; that was merged.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://apidock.com/ruby/Exception/to_str&quot;&gt;Exception&lt;/a&gt; used to implement &lt;code class=&quot;highlighter-rouge&quot;&gt;to_str&lt;/code&gt; as well but is was removed in Ruby 1.9, which is why it’s often mentioned as an example. The Ruby documentation was even wrong at the time of writing this article, so I wrote &lt;a href=&quot;https://github.com/ruby/ruby/pull/1517&quot;&gt;a PR to fix it&lt;/a&gt; that was merged.&lt;/p&gt;
 
-&lt;p&gt;There are a lot of discussions regarding if a class should implement &lt;code class=&quot;highlighter-rouge&quot;&gt;to_str&lt;/code&gt; or not,  since it’s a strong signal that the class is really similar to a string and should behave as such. If this sounds interesting, you should take a look at this &lt;a href=&quot;https://bugs.ruby-lang.org/issues/7849&quot;&gt;Symbol#to_str&lt;/a&gt; discussion on the Ruby core tracker, or at &lt;a href=&quot;https://github.com/rails/rails/commit/188cc90af9b29d5520564af7bd7bbcdc647953ca&quot;&gt;this example in Rails&lt;/a&gt; of when &lt;code class=&quot;highlighter-rouge&quot;&gt;to_str&lt;/code&gt; is usefull by &lt;a href=&quot;https://twitter.com/tenderlove&quot;&gt;Aaron Patterson&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;There are a lot of discussions regarding if a class should implement &lt;code class=&quot;highlighter-rouge&quot;&gt;to_str&lt;/code&gt; or not,  since it’s a strong signal that the class is really similar to a string and should behave as such. If this sounds interesting, you should take a look at this &lt;a href=&quot;https://bugs.ruby-lang.org/issues/7849&quot;&gt;Symbol#to_str&lt;/a&gt; discussion on the Ruby core tracker, or at &lt;a href=&quot;https://github.com/rails/rails/commit/188cc90af9b29d5520564af7bd7bbcdc647953ca&quot;&gt;this example in Rails&lt;/a&gt; of when &lt;code class=&quot;highlighter-rouge&quot;&gt;to_str&lt;/code&gt; is useful by &lt;a href=&quot;https://twitter.com/tenderlove&quot;&gt;Aaron Patterson&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h4 id=&quot;example-1-fixnum&quot;&gt;Example 1: Fixnum&lt;/h4&gt;
 
@@ -129,7 +129,7 @@
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;150&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;42&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;We get &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;15042&quot;&lt;/code&gt;, which is quite surprising! It’s because &lt;code class=&quot;highlighter-rouge&quot;&gt;42&lt;/code&gt; was implicitely converted to a &lt;code class=&quot;highlighter-rouge&quot;&gt;String&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;We get &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;15042&quot;&lt;/code&gt;, which is quite surprising! It’s because &lt;code class=&quot;highlighter-rouge&quot;&gt;42&lt;/code&gt; was implicitly converted to a &lt;code class=&quot;highlighter-rouge&quot;&gt;String&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h4 id=&quot;example-2-user&quot;&gt;Example 2: User&lt;/h4&gt;
 

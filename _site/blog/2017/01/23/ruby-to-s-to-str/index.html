@@ -53,7 +53,7 @@
   <div id="content">
     <div class="post" id="post-">
 
-      <p>If you ever looked at the available methods on some objects in Ruby, you might have noticed that there seems to be two difference ways to cast an object to string: <code class="highlighter-rouge">to_s</code> and <code class="highlighter-rouge">to_str</code>. However, most people only use <code class="highlighter-rouge">to_s</code>… is it because it’s shorter or is <code class="highlighter-rouge">to_str</code> functionnally different?</p>
+      <p>If you ever looked at the available methods on some objects in Ruby, you might have noticed that there seems to be two different ways to cast an object to string: <code class="highlighter-rouge">to_s</code> and <code class="highlighter-rouge">to_str</code>. However, most people only use <code class="highlighter-rouge">to_s</code>… is it because it’s shorter or is <code class="highlighter-rouge">to_str</code> functionally different?</p>
 
 <p>Short answer: they are indeed different.</p>
 
@@ -91,7 +91,7 @@
 
 <h2 id="difference-in-behavior">Difference In Behavior</h2>
 
-<p>Alright, so the methods are not defined in the same way… but this is just a minor detail compaired to the main difference between the two:</p>
+<p>Alright, so the methods are not defined in the same way… but this is just a minor detail compared to the main difference between the two:</p>
 
 <ul>
   <li><code class="highlighter-rouge">to_s</code> returns a string representation of an object</li>
@@ -120,7 +120,7 @@
   <span class="k">end</span>
 <span class="k">end</span></code></pre></figure>
 
-<p>It’s basically just a way to have a quick and nice way to display your objects that is going to be called when needed, for instance when using <code class="highlighter-rouge">puts</code> or concatenating with  <code class="highlighter-rouge">#{}</code>:</p>
+<p>It’s basically just a way to have a quick and nice way to display your objects that is going to be called when needed, for instance when using <code class="highlighter-rouge">puts</code> or when interpolating with <code class="highlighter-rouge">#{}</code>:</p>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">puts</span> <span class="s2">"Here is </span><span class="si">#{</span><span class="no">User</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"Bob"</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span> <span class="c1"># Returns "Here is &lt;User: Bob&gt;"</span></code></pre></figure>
 
@@ -128,7 +128,7 @@
 
 <p>Calling <code class="highlighter-rouge">to_str</code> should return a string-like object, behaving just like a <code class="highlighter-rouge">String</code>.</p>
 
-<p>On the other hand when an object implements <code class="highlighter-rouge">to_str</code>, it has way more consequences as it means that it will return something that behaves like a string. It’s basically saying that the class is not necesseraly a <code class="highlighter-rouge">String</code>, but it can be used in the same way.</p>
+<p>On the other hand when an object implements <code class="highlighter-rouge">to_str</code>, it has way more consequences as it means that it will return something that behaves like a string. It’s basically saying that the class is not necessarily a <code class="highlighter-rouge">String</code>, but it can be used in the same way.</p>
 
 <p>Because of this, the only class in Ruby core implementing <code class="highlighter-rouge">to_str</code> is <code class="highlighter-rouge">String</code>:</p>
 
@@ -140,9 +140,9 @@
  <span class="k">return</span> <span class="n">str</span><span class="p">;</span>
 <span class="p">}</span></code></pre></figure>
 
-<p><a href="http://apidock.com/ruby/Exception/to_str">Exception</a> used to implement <code class="highlighter-rouge">to_str</code> as well but is was removed in Ruby 1.9, which is why it’s often mentionned as an example. The Ruby documentation was even wrong at the time of writing this article, so I wrote <a href="https://github.com/ruby/ruby/pull/1517">a PR to fix it</a> that was merged.</p>
+<p><a href="http://apidock.com/ruby/Exception/to_str">Exception</a> used to implement <code class="highlighter-rouge">to_str</code> as well but is was removed in Ruby 1.9, which is why it’s often mentioned as an example. The Ruby documentation was even wrong at the time of writing this article, so I wrote <a href="https://github.com/ruby/ruby/pull/1517">a PR to fix it</a> that was merged.</p>
 
-<p>There are a lot of discussions regarding if a class should implement <code class="highlighter-rouge">to_str</code> or not,  since it’s a strong signal that the class is really similar to a string and should behave as such. If this sounds interesting, you should take a look at this <a href="https://bugs.ruby-lang.org/issues/7849">Symbol#to_str</a> discussion on the Ruby core tracker, or at <a href="https://github.com/rails/rails/commit/188cc90af9b29d5520564af7bd7bbcdc647953ca">this example in Rails</a> of when <code class="highlighter-rouge">to_str</code> is usefull by <a href="https://twitter.com/tenderlove">Aaron Patterson</a>.</p>
+<p>There are a lot of discussions regarding if a class should implement <code class="highlighter-rouge">to_str</code> or not,  since it’s a strong signal that the class is really similar to a string and should behave as such. If this sounds interesting, you should take a look at this <a href="https://bugs.ruby-lang.org/issues/7849">Symbol#to_str</a> discussion on the Ruby core tracker, or at <a href="https://github.com/rails/rails/commit/188cc90af9b29d5520564af7bd7bbcdc647953ca">this example in Rails</a> of when <code class="highlighter-rouge">to_str</code> is useful by <a href="https://twitter.com/tenderlove">Aaron Patterson</a>.</p>
 
 <h4 id="example-1-fixnum">Example 1: Fixnum</h4>
 
@@ -163,7 +163,7 @@
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">puts</span> <span class="s2">"150"</span> <span class="o">+</span> <span class="mi">42</span></code></pre></figure>
 
-<p>We get <code class="highlighter-rouge">"15042"</code>, which is quite surprising! It’s because <code class="highlighter-rouge">42</code> was implicitely converted to a <code class="highlighter-rouge">String</code>.</p>
+<p>We get <code class="highlighter-rouge">"15042"</code>, which is quite surprising! It’s because <code class="highlighter-rouge">42</code> was implicitly converted to a <code class="highlighter-rouge">String</code>.</p>
 
 <h4 id="example-2-user">Example 2: User</h4>
 

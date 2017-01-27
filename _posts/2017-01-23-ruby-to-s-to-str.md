@@ -7,7 +7,7 @@ category: blog
 tag: Ruby
 ---
 
-If you ever looked at the available methods on some objects in Ruby, you might have noticed that there seems to be two difference ways to cast an object to string: `to_s` and `to_str`. However, most people only use `to_s`... is it because it's shorter or is `to_str` functionnally different?
+If you ever looked at the available methods on some objects in Ruby, you might have noticed that there seems to be two different ways to cast an object to string: `to_s` and `to_str`. However, most people only use `to_s`... is it because it's shorter or is `to_str` functionally different?
 
 Short answer: they are indeed different.
 
@@ -15,7 +15,7 @@ _Note that this article focuses on `to_s` vs  `to_str`, but the logic applies as
 
 ## Difference In Scope Of Definition
 
-First of, `to_s` is defined on `BasicObject` which is quite a big deal since `BasicObject` is the [parent class of all classes in Ruby][1]. This means that all classes in Ruby implement `to_s`. 
+First of, `to_s` is defined on `BasicObject` which is quite a big deal since `BasicObject` is the [parent class of all classes in Ruby][1]. This means that all classes in Ruby implement `to_s`.
 
 	> BasicObject.to_s
 	 => "BasicObject"
@@ -45,7 +45,7 @@ This will return `undefined method to_str for #<Demo:0x007fea8204e290> (NoMethod
 
 ## Difference In Behavior
 
-Alright, so the methods are not defined in the same way... but this is just a minor detail compaired to the main difference between the two: 
+Alright, so the methods are not defined in the same way... but this is just a minor detail compared to the main difference between the two:
 
 - `to_s` returns a string representation of an object
 - `to_str` is actually stating that the object behaves like a string!
@@ -76,7 +76,7 @@ class User
 end
 {% endhighlight %}
 
-It's basically just a way to have a quick and nice way to display your objects that is going to be called when needed, for instance when using `puts` or concatenating with  `#{}`:
+It's basically just a way to have a quick and nice way to display your objects that is going to be called when needed, for instance when using `puts` or when interpolating with `#{}`:
 
 {% highlight ruby %}
 puts "Here is #{User.new("Bob")}" # Returns "Here is <User: Bob>"
@@ -86,7 +86,7 @@ puts "Here is #{User.new("Bob")}" # Returns "Here is <User: Bob>"
 
 Calling `to_str` should return a string-like object, behaving just like a `String`.
 
-On the other hand when an object implements `to_str`, it has way more consequences as it means that it will return something that behaves like a string. It's basically saying that the class is not necesseraly a `String`, but it can be used in the same way. 
+On the other hand when an object implements `to_str`, it has way more consequences as it means that it will return something that behaves like a string. It's basically saying that the class is not necessarily a `String`, but it can be used in the same way.
 
 
 Because of this, the only class in Ruby core implementing `to_str` is `String`:
@@ -101,9 +101,9 @@ rb_str_to_s(VALUE str)
 }
 {% endhighlight %}
 
-[Exception][3] used to implement `to_str` as well but is was removed in Ruby 1.9, which is why it's often mentionned as an example. The Ruby documentation was even wrong at the time of writing this article, so I wrote [a PR to fix it][4] that was merged.
+[Exception][3] used to implement `to_str` as well but is was removed in Ruby 1.9, which is why it's often mentioned as an example. The Ruby documentation was even wrong at the time of writing this article, so I wrote [a PR to fix it][4] that was merged.
 
-There are a lot of discussions regarding if a class should implement `to_str` or not,  since it's a strong signal that the class is really similar to a string and should behave as such. If this sounds interesting, you should take a look at this [Symbol#to_str][5] discussion on the Ruby core tracker, or at [this example in Rails][6] of when `to_str` is usefull by [Aaron Patterson][7].
+There are a lot of discussions regarding if a class should implement `to_str` or not,  since it's a strong signal that the class is really similar to a string and should behave as such. If this sounds interesting, you should take a look at this [Symbol#to_str][5] discussion on the Ruby core tracker, or at [this example in Rails][6] of when `to_str` is useful by [Aaron Patterson][7].
 
 
 #### Example 1: Fixnum
@@ -130,7 +130,7 @@ The when we call:
 puts "150" + 42
 {% endhighlight %}
 
-We get `"15042"`, which is quite surprising! It's because `42` was implicitely converted to a `String`.
+We get `"15042"`, which is quite surprising! It's because `42` was implicitly converted to a `String`.
 
 #### Example 2: User
 
@@ -157,9 +157,9 @@ We can also say that `to_s` is an explicit conversion and `to_str` is an implici
 Quoting directly from the book:
 
 > `to_s` is an explicit conversion method. Explicit conversions represent conversions from classes which are mostly or entirely unrelated to the target class.
-> 
+>
 > `to_str`, on the other hand, is an implicit conversion method. Implicit conversions represent conversions from a class that is closely related to the target class.
-> 
+>
 > _[Confident Ruby by Avdi Grimm][9]_
 
 
