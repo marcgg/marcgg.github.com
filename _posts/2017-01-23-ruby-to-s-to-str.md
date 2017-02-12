@@ -15,12 +15,9 @@ _Note that this article focuses on `to_s` vs  `to_str`, but the logic applies as
 
 ## Difference In Scope Of Definition
 
-First of, `to_s` is defined on `BasicObject` which is quite a big deal since `BasicObject` is the [parent class of all classes in Ruby][1]. This means that all classes in Ruby implement `to_s`.
-
-	> BasicObject.to_s
-	 => "BasicObject"
-
-To demonstrate this, let's create a new class `Demo` and call `to_s` on a new instance of this class:
+First of, `to_s` is defined on a lot of elements.
+To demonstrate this, let's create a new class `Demo` and call `to_s`
+on a new instance of this class:
 
 {% highlight ruby %}
 class Demo
@@ -33,7 +30,12 @@ This returns:
 
 	#<Demo:0x007fc49b05a408>
 
-We could also call `to_s` directly on the class and get a valid result as well since the `Class` [class is also an object][2].
+We could also call `to_s` directly on the class and get a valid result as well since the `Class` [class is also an object][2]:
+
+    > Class.to_s
+    => "Class"
+    > Class.new.to_s
+    => "#<Class:0x007f8f5c02f5b0>"
 
 However if we try to do the same with `to_str`, it won't work because it's not defined on a higher level class:
 

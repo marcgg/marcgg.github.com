@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2017-01-27T15:15:38+01:00</updated>
+ <updated>2017-02-12T20:38:21+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -27,14 +27,9 @@
 
 &lt;h2 id=&quot;difference-in-scope-of-definition&quot;&gt;Difference In Scope Of Definition&lt;/h2&gt;
 
-&lt;p&gt;First of, &lt;code class=&quot;highlighter-rouge&quot;&gt;to_s&lt;/code&gt; is defined on &lt;code class=&quot;highlighter-rouge&quot;&gt;BasicObject&lt;/code&gt; which is quite a big deal since &lt;code class=&quot;highlighter-rouge&quot;&gt;BasicObject&lt;/code&gt; is the &lt;a href=&quot;https://ruby-doc.org/core-2.2.0/BasicObject.html&quot;&gt;parent class of all classes in Ruby&lt;/a&gt;. This means that all classes in Ruby implement &lt;code class=&quot;highlighter-rouge&quot;&gt;to_s&lt;/code&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; BasicObject.to_s
- =&amp;gt; &quot;BasicObject&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;To demonstrate this, let’s create a new class &lt;code class=&quot;highlighter-rouge&quot;&gt;Demo&lt;/code&gt; and call &lt;code class=&quot;highlighter-rouge&quot;&gt;to_s&lt;/code&gt; on a new instance of this class:&lt;/p&gt;
+&lt;p&gt;First of, &lt;code class=&quot;highlighter-rouge&quot;&gt;to_s&lt;/code&gt; is defined on a lot of elements.
+To demonstrate this, let’s create a new class &lt;code class=&quot;highlighter-rouge&quot;&gt;Demo&lt;/code&gt; and call &lt;code class=&quot;highlighter-rouge&quot;&gt;to_s&lt;/code&gt;
+on a new instance of this class:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Demo&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
@@ -47,7 +42,14 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;We could also call &lt;code class=&quot;highlighter-rouge&quot;&gt;to_s&lt;/code&gt; directly on the class and get a valid result as well since the &lt;code class=&quot;highlighter-rouge&quot;&gt;Class&lt;/code&gt; &lt;a href=&quot;https://ruby-doc.org/core-2.2.0/Class.html&quot;&gt;class is also an object&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We could also call &lt;code class=&quot;highlighter-rouge&quot;&gt;to_s&lt;/code&gt; directly on the class and get a valid result as well since the &lt;code class=&quot;highlighter-rouge&quot;&gt;Class&lt;/code&gt; &lt;a href=&quot;https://ruby-doc.org/core-2.2.0/Class.html&quot;&gt;class is also an object&lt;/a&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; Class.to_s
+=&amp;gt; &quot;Class&quot;
+&amp;gt; Class.new.to_s
+=&amp;gt; &quot;#&amp;lt;Class:0x007f8f5c02f5b0&amp;gt;&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;However if we try to do the same with &lt;code class=&quot;highlighter-rouge&quot;&gt;to_str&lt;/code&gt;, it won’t work because it’s not defined on a higher level class:&lt;/p&gt;
 

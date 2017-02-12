@@ -61,14 +61,9 @@
 
 <h2 id="difference-in-scope-of-definition">Difference In Scope Of Definition</h2>
 
-<p>First of, <code class="highlighter-rouge">to_s</code> is defined on <code class="highlighter-rouge">BasicObject</code> which is quite a big deal since <code class="highlighter-rouge">BasicObject</code> is the <a href="https://ruby-doc.org/core-2.2.0/BasicObject.html">parent class of all classes in Ruby</a>. This means that all classes in Ruby implement <code class="highlighter-rouge">to_s</code>.</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>&gt; BasicObject.to_s
- =&gt; "BasicObject"
-</code></pre>
-</div>
-
-<p>To demonstrate this, let’s create a new class <code class="highlighter-rouge">Demo</code> and call <code class="highlighter-rouge">to_s</code> on a new instance of this class:</p>
+<p>First of, <code class="highlighter-rouge">to_s</code> is defined on a lot of elements.
+To demonstrate this, let’s create a new class <code class="highlighter-rouge">Demo</code> and call <code class="highlighter-rouge">to_s</code>
+on a new instance of this class:</p>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Demo</span>
 <span class="k">end</span>
@@ -81,7 +76,14 @@
 </code></pre>
 </div>
 
-<p>We could also call <code class="highlighter-rouge">to_s</code> directly on the class and get a valid result as well since the <code class="highlighter-rouge">Class</code> <a href="https://ruby-doc.org/core-2.2.0/Class.html">class is also an object</a>.</p>
+<p>We could also call <code class="highlighter-rouge">to_s</code> directly on the class and get a valid result as well since the <code class="highlighter-rouge">Class</code> <a href="https://ruby-doc.org/core-2.2.0/Class.html">class is also an object</a>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&gt; Class.to_s
+=&gt; "Class"
+&gt; Class.new.to_s
+=&gt; "#&lt;Class:0x007f8f5c02f5b0&gt;"
+</code></pre>
+</div>
 
 <p>However if we try to do the same with <code class="highlighter-rouge">to_str</code>, it won’t work because it’s not defined on a higher level class:</p>
 
