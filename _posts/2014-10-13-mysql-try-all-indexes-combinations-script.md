@@ -4,8 +4,8 @@ title: A Script To Benchmark MySQL Indexes
 description: Sometimes finding the right index for a really complex SQL query can be hard and time consuming. That’s why I wrote a script trying all possible combinations of indexes and benchmark each one!
 blog: true
 category: blog
-tag: Performance
-redirect_from:
+tag: MySQL
+redirect\_from:
 - /blog/2014/10/14/mysql-try-all-indexes-combinations-script/
 ---
 

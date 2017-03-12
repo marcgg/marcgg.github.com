@@ -590,6 +590,16 @@
 					<integer>63</integer>
 				</dict>
 			</dict>
+			<key>2017-03-13-mysql-viewport-gis.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>511022367.382195</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>67</integer>
+				</dict>
+			</dict>
 		</dict>
 		<key>userIconName</key>
 		<real>493490997</real>
@@ -770,6 +780,9 @@
 		<array>
 			<string>2017-01-23-ruby-to-s-to-str.md</string>
 		</array>
+		<array>
+			<string>2017-03-13-mysql-viewport-gis.md</string>
+		</array>
 	</array>
 	<key>storeFormatVersion</key>
 	<integer>1</integer>
@@ -785,7 +798,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-			<integer>64</integer>
+			<integer>68</integer>
 		</dict>
 		<key>userIconName</key>
 		<dict>
