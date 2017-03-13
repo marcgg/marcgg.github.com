@@ -108,7 +108,7 @@ Brooklyn    8500637.22140377
 <p>The distance returned is in metters, so everything checks out. If we want to see all points that are less than 10km from the Louvre, we can do:</p>
 
 <figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">SELECT</span> <span class="n">name</span> <span class="k">FROM</span> <span class="n">places</span>
-<span class="k">WHERE</span> <span class="n">ST_Distance_Sphere</span><span class="p">(</span><span class="n">coordinates</span><span class="p">,</span> <span class="n">POINT</span><span class="p">(</span><span class="mi">48</span><span class="p">.</span><span class="mi">861105</span><span class="p">,</span> <span class="mi">2</span><span class="p">.</span><span class="mi">335337</span><span class="p">))</span> <span class="err">\</span><span class="o">&lt;</span> <span class="mi">10000</span></code></pre></figure>
+<span class="k">WHERE</span> <span class="n">ST_Distance_Sphere</span><span class="p">(</span><span class="n">coordinates</span><span class="p">,</span> <span class="n">POINT</span><span class="p">(</span><span class="mi">48</span><span class="p">.</span><span class="mi">861105</span><span class="p">,</span> <span class="mi">2</span><span class="p">.</span><span class="mi">335337</span><span class="p">))</span> <span class="o">&lt;</span> <span class="mi">10000</span></code></pre></figure>
 
 <p>This is a pretty good approximation to being in Paris, but that’s not perfect. What if I wanted to know if a point was really in Paris and not just close to the center of Paris?</p>
 

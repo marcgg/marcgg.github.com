@@ -65,7 +65,7 @@ The distance returned is in metters, so everything checks out. If we want to see
 
 {% highlight sql %}
 SELECT name FROM places
-WHERE ST_Distance_Sphere(coordinates, POINT(48.861105, 2.335337)) \< 10000
+WHERE ST_Distance_Sphere(coordinates, POINT(48.861105, 2.335337)) < 10000
 {% endhighlight %}
 
 This is a pretty good approximation to being in Paris, but that's not perfect. What if I wanted to know if a point was really in Paris and not just close to the center of Paris?
