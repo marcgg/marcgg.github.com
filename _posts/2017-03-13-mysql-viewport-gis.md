@@ -1,23 +1,23 @@
 ---
 layout: post
 title: "How To Find Points Contained in a Polygon Using MySQL"
-description: "MySQL 5.7 brought a lot of new interesting features. It's now easier to find elements contained within a polygon and compute distances. Here I'll explain how to do a viewport search using MySQL."
+description: "MySQL 5.7 brought a lot of new interesting geospatial features. It's now easier to find elements contained within a polygon and compute distances using latitude and logitude. In this article I'll explain how to do a viewport search using MySQL."
 blog: true
 category: blog
 tag: MySQL
 ---
 
-MySQL was a bit late to the Geospatial party compared to other databases like Postgres, but with the [5.6][1] and then the [5.7][2] versions a lot of new [GIS][3] features were finally implemented. For instance in 5.7 we got, among other:
+MySQL was a bit late to the geospatial party compared to other databases like Postgres, but with the [5.6][1] and then the [5.7][2] releases a lot of new [GIS][3] features were finally implemented. For instance in 5.7 we got, among other:
 
 - `ST_Distance_Sphere` to compute the distance between two points on a sphere.
 - Spatial indexes for InnoDB
 - [GeoJSON][4] integration which is, quoting from the [RFC][5], "a geospatial data interchange format based on JSON."
 
-There's a lot of interesting things we can now accomplish using these new fonctionnalities and for now I'll showcase a very simple way to do a search using a [Polygon][6]and a [Point][7]. The goal here will be to answer the question "is this point in this city?".
+There's a lot of interesting things we can now accomplish using these new fonctionnalities. Today I'll showcase a very simple example on how to do a search using a [Polygon][6]and a [Point][7]. The goal here will be to answer the question "is this point in this city?".
 
 ## Defining Points
 
-First I'll create a "places" table with a name and coordinates. However, instead of storing a latitude and a longitude as two different floats I'll use a Point.
+First let's create a "places" table with a name and a set of coordinates. However, instead of storing a latitude and a longitude as two different floats I'll use a `Point`.
 
 {% highlight sql %}
 CREATE TABLE `places` (
@@ -28,7 +28,7 @@ CREATE TABLE `places` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 {% endhighlight %}
 
-Then let's add a couple of places in Paris and one in New York for very basic testing:
+Then let's add a couple of places in Paris and one in New York for very basic testing. The way to store a new `Point` is very straighforward:
 
 {% highlight sql %}
 INSERT INTO `places` ( `name`, `coordinates`)
@@ -43,7 +43,7 @@ VALUES ("Brooklyn", POINT(40.711089, -73.948391));
 
 ## Filtering  
 
-Let's try to answer the question "what places in my database are in Paris?".
+Let's then try to answer the question "what places in my database are in Paris?".
 
 ### Filtering With `ST_Distance_Sphere`
 
@@ -57,22 +57,22 @@ FROM places
 
 This gives us:
 
-	Eiffel Tower	4629.968479838098
-	Pere Lachaise	6598.960247905806
-	Brooklyn	8500637.22140377
+	Eiffel Tower    4629.968479838098
+	Pere Lachaise   6598.960247905806
+	Brooklyn    8500637.22140377
 
 The distance returned is in metters, so everything checks out. If we want to see all points that are less than 10km from the Louvre, we can do:
 
 {% highlight sql %}
 SELECT name FROM places
-WHERE ST_Distance_Sphere(coordinates, POINT(48.861105, 2.335337)) < 10000
+WHERE ST_Distance_Sphere(coordinates, POINT(48.861105, 2.335337)) \< 10000
 {% endhighlight %}
 
-This is a pretty good approximation to, but what if I wanted to know if a point was in Paris, and not just close to the center of Paris?
+This is a pretty good approximation to being in Paris, but that's not perfect. What if I wanted to know if a point was really in Paris and not just close to the center of Paris?
 
 ### Filtering With a Polygon and  `ST_CONTAINS`
 
-First we'll define a very basic shape enclosing Paris. The coordinates I use are a very rough approximation and I only define a rectangle, but that'll work for this example:
+First let's define a very basic shape enclosing Paris. The coordinates I'll be using here are a very rough approximation and I only define a rectangle, but that'll work for this example:
 
 {% highlight sql %}
 SET @paris = ST_GEOMFROMTEXT(
@@ -95,11 +95,11 @@ SELECT name FROM places
 WHERE ST_CONTAINS(@paris, coordinates)
 {% endhighlight %}
 
-Of course I could have skipped the step where I defined `@paris` and called `POLYGON` directly in this query.
+Of course I could have skipped the step where I defined `@paris` and called `POLYGON` directly in the query.
 
 ## Performances
 
-Geospacial functions are fun to play with and since we can now [use spatial indexes in InnoDB][9], they become actually usable. I won't get into performances in this article, but I recommend reading the Percona article "[New GIS Features in MySQL 5.7][10]".
+Geospacial functions are fun to play with and since we can now [use spatial indexes in InnoDB][9], they become actually usable in production. I won't get into performances in this article, but I recommend reading the Percona article "[New GIS Features in MySQL 5.7][10]".
 
 
 [1]:	https://dev.mysql.com/doc/relnotes/mysql/5.6/en/news-5-6-1.html

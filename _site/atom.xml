@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2017-03-12T17:06:52+01:00</updated>
+ <updated>2017-03-13T08:47:53+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -19,7 +19,7 @@
      <updated>2017-03-13T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2017/03/13/mysql-viewport-gis</id>
      <content type="html">
-       &lt;p&gt;MySQL was a bit late to the Geospatial party compared to other databases like Postgres, but with the &lt;a href=&quot;https://dev.mysql.com/doc/relnotes/mysql/5.6/en/news-5-6-1.html&quot;&gt;5.6&lt;/a&gt; and then the &lt;a href=&quot;https://dev.mysql.com/doc/relnotes/mysql/5.7/en/&quot;&gt;5.7&lt;/a&gt; versions a lot of new &lt;a href=&quot;http://www.nationalgeographic.org/encyclopedia/geographic-information-system-gis/&quot;&gt;GIS&lt;/a&gt; features were finally implemented. For instance in 5.7 we got, among other:&lt;/p&gt;
+       &lt;p&gt;MySQL was a bit late to the geospatial party compared to other databases like Postgres, but with the &lt;a href=&quot;https://dev.mysql.com/doc/relnotes/mysql/5.6/en/news-5-6-1.html&quot;&gt;5.6&lt;/a&gt; and then the &lt;a href=&quot;https://dev.mysql.com/doc/relnotes/mysql/5.7/en/&quot;&gt;5.7&lt;/a&gt; releases a lot of new &lt;a href=&quot;http://www.nationalgeographic.org/encyclopedia/geographic-information-system-gis/&quot;&gt;GIS&lt;/a&gt; features were finally implemented. For instance in 5.7 we got, among other:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ST_Distance_Sphere&lt;/code&gt; to compute the distance between two points on a sphere.&lt;/li&gt;
@@ -27,11 +27,11 @@
   &lt;li&gt;&lt;a href=&quot;http://geojson.org/&quot;&gt;GeoJSON&lt;/a&gt; integration which is, quoting from the &lt;a href=&quot;https://tools.ietf.org/html/rfc7946&quot;&gt;RFC&lt;/a&gt;, “a geospatial data interchange format based on JSON.”&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;There’s a lot of interesting things we can now accomplish using these new fonctionnalities and for now I’ll showcase a very simple way to do a search using a &lt;a href=&quot;https://dev.mysql.com/doc/refman/5.7/en/gis-class-polygon.html&quot;&gt;Polygon&lt;/a&gt;and a &lt;a href=&quot;https://dev.mysql.com/doc/refman/5.7/en/gis-class-point.html&quot;&gt;Point&lt;/a&gt;. The goal here will be to answer the question “is this point in this city?”.&lt;/p&gt;
+&lt;p&gt;There’s a lot of interesting things we can now accomplish using these new fonctionnalities. Today I’ll showcase a very simple example on how to do a search using a &lt;a href=&quot;https://dev.mysql.com/doc/refman/5.7/en/gis-class-polygon.html&quot;&gt;Polygon&lt;/a&gt;and a &lt;a href=&quot;https://dev.mysql.com/doc/refman/5.7/en/gis-class-point.html&quot;&gt;Point&lt;/a&gt;. The goal here will be to answer the question “is this point in this city?”.&lt;/p&gt;
 
 &lt;h2 id=&quot;defining-points&quot;&gt;Defining Points&lt;/h2&gt;
 
-&lt;p&gt;First I’ll create a “places” table with a name and coordinates. However, instead of storing a latitude and a longitude as two different floats I’ll use a Point.&lt;/p&gt;
+&lt;p&gt;First let’s create a “places” table with a name and a set of coordinates. However, instead of storing a latitude and a longitude as two different floats I’ll use a &lt;code class=&quot;highlighter-rouge&quot;&gt;Point&lt;/code&gt;.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;&lt;span class=&quot;k&quot;&gt;CREATE&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;TABLE&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;`places`&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
   &lt;span class=&quot;nv&quot;&gt;`id`&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;NOT&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;NULL&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AUTO_INCREMENT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
@@ -40,7 +40,7 @@
   &lt;span class=&quot;k&quot;&gt;PRIMARY&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;KEY&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;`id`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ENGINE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;InnoDB&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;DEFAULT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CHARSET&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;utf8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Then let’s add a couple of places in Paris and one in New York for very basic testing:&lt;/p&gt;
+&lt;p&gt;Then let’s add a couple of places in Paris and one in New York for very basic testing. The way to store a new &lt;code class=&quot;highlighter-rouge&quot;&gt;Point&lt;/code&gt; is very straighforward:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;&lt;span class=&quot;k&quot;&gt;INSERT&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;INTO&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;`places`&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;`name`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;`coordinates`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;VALUES&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;&quot;Eiffel Tower&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;POINT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;48&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;858271&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;293795&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
@@ -53,7 +53,7 @@
 
 &lt;h2 id=&quot;filtering&quot;&gt;Filtering&lt;/h2&gt;
 
-&lt;p&gt;Let’s try to answer the question “what places in my database are in Paris?”.&lt;/p&gt;
+&lt;p&gt;Let’s then try to answer the question “what places in my database are in Paris?”.&lt;/p&gt;
 
 &lt;h3 id=&quot;filtering-with-stdistancesphere&quot;&gt;Filtering With &lt;code class=&quot;highlighter-rouge&quot;&gt;ST_Distance_Sphere&lt;/code&gt;&lt;/h3&gt;
 
@@ -65,22 +65,22 @@
 
 &lt;p&gt;This gives us:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Eiffel Tower	4629.968479838098
-Pere Lachaise	6598.960247905806
-Brooklyn	8500637.22140377
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Eiffel Tower    4629.968479838098
+Pere Lachaise   6598.960247905806
+Brooklyn    8500637.22140377
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;The distance returned is in metters, so everything checks out. If we want to see all points that are less than 10km from the Louvre, we can do:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;places&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ST_Distance_Sphere&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;coordinates&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;POINT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;48&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;861105&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;335337&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10000&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ST_Distance_Sphere&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;coordinates&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;POINT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;48&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;861105&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;335337&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10000&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;This is a pretty good approximation to, but what if I wanted to know if a point was in Paris, and not just close to the center of Paris?&lt;/p&gt;
+&lt;p&gt;This is a pretty good approximation to being in Paris, but that’s not perfect. What if I wanted to know if a point was really in Paris and not just close to the center of Paris?&lt;/p&gt;
 
 &lt;h3 id=&quot;filtering-with-a-polygon-and--stcontains&quot;&gt;Filtering With a Polygon and  &lt;code class=&quot;highlighter-rouge&quot;&gt;ST_CONTAINS&lt;/code&gt;&lt;/h3&gt;
 
-&lt;p&gt;First we’ll define a very basic shape enclosing Paris. The coordinates I use are a very rough approximation and I only define a rectangle, but that’ll work for this example:&lt;/p&gt;
+&lt;p&gt;First let’s define a very basic shape enclosing Paris. The coordinates I’ll be using here are a very rough approximation and I only define a rectangle, but that’ll work for this example:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;&lt;span class=&quot;k&quot;&gt;SET&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;paris&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ST_GEOMFROMTEXT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
   &lt;span class=&quot;s1&quot;&gt;'POLYGON(
@@ -99,11 +99,11 @@ Brooklyn	8500637.22140377
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;places&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ST_CONTAINS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;paris&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;coordinates&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Of course I could have skipped the step where I defined &lt;code class=&quot;highlighter-rouge&quot;&gt;@paris&lt;/code&gt; and called &lt;code class=&quot;highlighter-rouge&quot;&gt;POLYGON&lt;/code&gt; directly in this query.&lt;/p&gt;
+&lt;p&gt;Of course I could have skipped the step where I defined &lt;code class=&quot;highlighter-rouge&quot;&gt;@paris&lt;/code&gt; and called &lt;code class=&quot;highlighter-rouge&quot;&gt;POLYGON&lt;/code&gt; directly in the query.&lt;/p&gt;
 
 &lt;h2 id=&quot;performances&quot;&gt;Performances&lt;/h2&gt;
 
-&lt;p&gt;Geospacial functions are fun to play with and since we can now &lt;a href=&quot;https://dev.mysql.com/doc/refman/5.7/en/using-spatial-indexes.html&quot;&gt;use spatial indexes in InnoDB&lt;/a&gt;, they become actually usable. I won’t get into performances in this article, but I recommend reading the Percona article “&lt;a href=&quot;https://www.percona.com/blog/2016/02/03/new-gis-features-in-mysql-5-7/&quot;&gt;New GIS Features in MySQL 5.7&lt;/a&gt;”.&lt;/p&gt;
+&lt;p&gt;Geospacial functions are fun to play with and since we can now &lt;a href=&quot;https://dev.mysql.com/doc/refman/5.7/en/using-spatial-indexes.html&quot;&gt;use spatial indexes in InnoDB&lt;/a&gt;, they become actually usable in production. I won’t get into performances in this article, but I recommend reading the Percona article “&lt;a href=&quot;https://www.percona.com/blog/2016/02/03/new-gis-features-in-mysql-5-7/&quot;&gt;New GIS Features in MySQL 5.7&lt;/a&gt;”.&lt;/p&gt;
 
 
        
