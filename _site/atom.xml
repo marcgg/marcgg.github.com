@@ -4,13 +4,32 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2017-03-13T15:06:39+01:00</updated>
+ <updated>2017-07-22T18:50:35+02:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
    <email>marcg.gauthier@gmail.com</email>
  </author>
 
+ 
+  
+   <entry>
+     <title>Recruitment Process</title>
+     <link href="https://marcgg.com/blog/2017/06/30/recruitment-process/"/>
+     <updated>2017-06-30T00:00:00+02:00</updated>
+     <id>https://marcgg.com/blog/2017/06/30/recruitment-process</id>
+     <content type="html">
+       &lt;p&gt;I wrote on &lt;a href=&quot;https://drivy.engineering&quot;&gt;Drivy’s engineering blog&lt;/a&gt; an article about the way we conduct interviews to find the best candidates. It’s not a perfect flow, but we’ve had good feedback from people going through it and made some great hires, so I felt it would be worth sharing.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/team_working_at_drivy.jpg&quot; alt=&quot;People working in the Drivy offices&quot; style=&quot;padding: 0px; width: 650px;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;You can read it there: &lt;a href=&quot;https://drivy.engineering/tech-recruitment-process/&quot;&gt;The Tech Recruitment Process At Drivy&lt;/a&gt;&lt;/p&gt;
+
+
+       
+     </content>
+   </entry>
+  
  
   
    <entry>
