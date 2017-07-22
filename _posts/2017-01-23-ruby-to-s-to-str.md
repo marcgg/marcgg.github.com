@@ -1,9 +1,10 @@
 ---
 layout: post
 title: "The Difference Between to&#95;s & to&#95;str In Ruby"
-description: "A lot of people assume that to_s and `to_str` are the same methods, but the difference between them is actually quite major."
+description: "A lot of people assume that to\_s and `to_str` are the same methods, but the difference between them is actually quite major."
 blog: true
 category: blog
+featured: true
 tag: Ruby
 ---
 
@@ -23,24 +24,24 @@ on a new instance of this class:
 class Demo
 end
 
-puts Demo.new.to_s
+puts Demo.new.to\_s
 {% endhighlight %}
 
 This returns:
 
 	#<Demo:0x007fc49b05a408>
 
-We could also call `to_s` directly on the class and get a valid result as well since the `Class` [class is also an object][2]:
+We could also call `to_s` directly on the class and get a valid result as well since the `Class` [class is also an object][1]:
 
-    > Class.to_s
-    => "Class"
-    > Class.new.to_s
-    => "#<Class:0x007f8f5c02f5b0>"
+	> Class.to_s
+	=> "Class"
+	> Class.new.to_s
+	=> "#<Class:0x007f8f5c02f5b0>"
 
 However if we try to do the same with `to_str`, it won't work because it's not defined on a higher level class:
 
 {% highlight ruby %}
-puts Demo.new.to_str
+puts Demo.new.to\_str
 {% endhighlight %}
 
 This will return `undefined method to_str for #<Demo:0x007fea8204e290> (NoMethodError)`, meaning that we have to define it ourselves when creating a new class.
@@ -59,9 +60,9 @@ When calling `to_s`, it will return some form of string representation of the ob
 When creating a new class you can keep the default behaviour or build your own. For instance here's how `to_s` behaves on an integer:
 
 {% highlight ruby %}
-100.to_s(2) # returns "1100100"
-100.to_s # returns "100"
-100.to_s(8) # returns"144"
+100.to\_s(2) # returns "1100100"
+100.to\_s # returns "100"
+100.to\_s(8) # returns"144"
 {% endhighlight %}
 
 Here's what it could look like if you were defining it yourself:
@@ -72,8 +73,8 @@ class User
    @name = name
   end
 
-  def to_s
-   "<User: #{@name}>"
+  def to\_s
+   "\<User: #{@name}\>"
   end
 end
 {% endhighlight %}
@@ -81,7 +82,7 @@ end
 It's basically just a way to have a quick and nice way to display your objects that is going to be called when needed, for instance when using `puts` or when interpolating with `#{}`:
 
 {% highlight ruby %}
-puts "Here is #{User.new("Bob")}" # Returns "Here is <User: Bob>"
+puts "Here is #{User.new("Bob")}" # Returns "Here is \<User: Bob\>"
 {% endhighlight %}
 
 ### Behaving Like A String
@@ -94,18 +95,18 @@ On the other hand when an object implements `to_str`, it has way more consequenc
 Because of this, the only class in Ruby core implementing `to_str` is `String`:
 
 {% highlight c %}
-rb_str_to_s(VALUE str)
+rb\_str\_to\_s(VALUE str)
 {
- if (rb_obj_class(str) != rb_cString) {
-    return str_duplicate(rb_cString, str);
+ if (rb\_obj\_class(str) != rb\_cString) {
+	return str_duplicate(rb_cString, str);
  }
  return str;
 }
 {% endhighlight %}
 
-[Exception][3] used to implement `to_str` as well but is was removed in Ruby 1.9, which is why it's often mentioned as an example. The Ruby documentation was even wrong at the time of writing this article, so I wrote [a PR to fix it][4] that was merged.
+[Exception][2] used to implement `to_str` as well but is was removed in Ruby 1.9, which is why it's often mentioned as an example. The Ruby documentation was even wrong at the time of writing this article, so I wrote [a PR to fix it][3] that was merged.
 
-There are a lot of discussions regarding if a class should implement `to_str` or not,  since it's a strong signal that the class is really similar to a string and should behave as such. If this sounds interesting, you should take a look at this [Symbol#to_str][5] discussion on the Ruby core tracker, or at [this example in Rails][6] of when `to_str` is useful by [Aaron Patterson][7].
+There are a lot of discussions regarding if a class should implement `to_str` or not,  since it's a strong signal that the class is really similar to a string and should behave as such. If this sounds interesting, you should take a look at this [Symbol#to\_str][4] discussion on the Ruby core tracker, or at [this example in Rails][5] of when `to_str` is useful by [Aaron Patterson][6].
 
 
 #### Example 1: Fixnum
@@ -120,8 +121,8 @@ We get `'+': no implicit conversion of Fixnum into String (TypeError)`. This mak
 
 {% highlight ruby %}
 class Fixnum
-  def to_str
-   self.to_s
+  def to\_str
+   self.to\_s
   end
 end
  {% endhighlight %}
@@ -144,7 +145,7 @@ class User
    @name = name
   end
 
-  def to_str
+  def to\_str
    @name
   end
 end
@@ -154,15 +155,15 @@ puts "Say hello to " + User.new("Bob") # Displays "Say hello to Bob"
 
 ## Note On Implicit / Explicit Conversion
 
-We can also say that `to_s` is an explicit conversion and `to_str` is an implicit conversion. I'm not going into the details of this, if you'd like to get more information I recommend reading [Confident Ruby][8].
+We can also say that `to_s` is an explicit conversion and `to_str` is an implicit conversion. I'm not going into the details of this, if you'd like to get more information I recommend reading [Confident Ruby][7].
 
 Quoting directly from the book:
 
 > `to_s` is an explicit conversion method. Explicit conversions represent conversions from classes which are mostly or entirely unrelated to the target class.
->
+> 
 > `to_str`, on the other hand, is an implicit conversion method. Implicit conversions represent conversions from a class that is closely related to the target class.
->
-> _[Confident Ruby by Avdi Grimm][9]_
+> 
+> _[Confident Ruby by Avdi Grimm][8]_
 
 
 ## Summing It Up
@@ -176,12 +177,11 @@ That's a lot of information, but let me sum it up quickly before finishing the a
 
 _Note that both `to_s` and `to_str` should return an instance of `String`, even when subclassing `String`._
 
-[1]:	https://ruby-doc.org/core-2.2.0/BasicObject.html
-[2]:	https://ruby-doc.org/core-2.2.0/Class.html
-[3]:	http://apidock.com/ruby/Exception/to_str
-[4]:	https://github.com/ruby/ruby/pull/1517
-[5]:	https://bugs.ruby-lang.org/issues/7849
-[6]:	https://github.com/rails/rails/commit/188cc90af9b29d5520564af7bd7bbcdc647953ca
-[7]:	https://twitter.com/tenderlove
+[1]:	https://ruby-doc.org/core-2.2.0/Class.html
+[2]:	http://apidock.com/ruby/Exception/to_str
+[3]:	https://github.com/ruby/ruby/pull/1517
+[4]:	https://bugs.ruby-lang.org/issues/7849
+[5]:	https://github.com/rails/rails/commit/188cc90af9b29d5520564af7bd7bbcdc647953ca
+[6]:	https://twitter.com/tenderlove
+[7]:	http://amzn.to/2iV2Ngq
 [8]:	http://amzn.to/2iV2Ngq
-[9]:	http://amzn.to/2iV2Ngq
