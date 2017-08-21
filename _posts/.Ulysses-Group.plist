@@ -610,6 +610,26 @@
 					<integer>75</integer>
 				</dict>
 			</dict>
+			<key>2017-08-20-blogging-about-management.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>525039779.69424099</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>78</integer>
+				</dict>
+			</dict>
+			<key>2017-08-22-starting-with-management.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>525039779.69424897</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>78</integer>
+				</dict>
+			</dict>
 		</dict>
 		<key>userIconName</key>
 		<real>493490997</real>
@@ -796,6 +816,12 @@
 		<array>
 			<string>2017-06-30-recruitment-process.md</string>
 		</array>
+		<array>
+			<string>2017-08-20-blogging-about-management.md</string>
+		</array>
+		<array>
+			<string>2017-08-22-starting-with-management.md</string>
+		</array>
 	</array>
 	<key>storeFormatVersion</key>
 	<integer>1</integer>
@@ -811,7 +837,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-			<integer>76</integer>
+			<integer>78</integer>
 		</dict>
 		<key>userIconName</key>
 		<dict>

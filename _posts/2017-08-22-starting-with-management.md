@@ -18,4 +18,3 @@ This might sound obvious to you, and some larger companies will even highlight t
 Of course some knowledge is carried over, of course, but in a lot of aspects it was quickly clear that I was just a complete beginner. Thinking like a junior manager makes it easier to be okay with looking up very simple resources, start learning from the beginning. Running effective staff meetings, conducting 1 on 1s, managing your own time... there are countless great advices on these topics, and accepting that you have to learn these first is important. I can't overstate how having solid basis helps with confidence and reliability.
 
 It takes time and energy, but your previous background helps learning faster and improve quickly. It's an investment worth making.
-

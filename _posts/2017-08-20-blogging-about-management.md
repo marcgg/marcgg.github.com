@@ -15,11 +15,11 @@ This has been insanely interesting and a great challenge... so more than once I'
 
 I have given a few shots in the past at different topics, for instance project management with "[Deadlines & Estimates in Startups][3]" or recruitment with "[Why Resumes Are Actually Helpful][4]", but never on management itself.
 
-In the coming year I've decided to push myself to share more about what I've been learning. In a lot of cases I'm pretty sure I'll be stating the obvious to experience managers... but, just like I'm okay having old articles like "[What I Learned While Teaching][5]" that is very much pushing open doors, I've decided to be okay with more "naive" articles for a bit. 
+In the coming year I've decided to push myself to share more about what I've been learning. In a lot of cases I'm pretty sure I'll be stating the obvious to experienced managers... but, just like I'm okay having old articles like "[What I Learned While Teaching][5]" that is very much pushing open doors, I've decided to be okay with more "naive" articles for a bit. 
 
 One of my very early articles from early 2013 was "[Developers, Share Your Technical Knowledge][6]". Reading it back, it needs a lot of improvements, but it lead me into very interesting projects teaching programming to [teenagers][7],  entrepreneurs, [HEC][8] students, [coaching various early stage startups][9] and [more][10]... so I'd say that it was worth giving it a try!
 
-If you've been following this blog for the technical articles, don't worry I'll been still writing those! I've still got a lot of topics that I've left on the back-burner, and most of them are technical: matrix multiplication algorithms, precedence in Ruby, digging into rel-noopener, dealing with a monolith in production, building high-connectivity/low-data apps... as you can see there's still a lot to be said!
+If you've been following this blog for the technical articles, don't worry I'll still be writing those! I've still got a lot of topics that I've left on the back-burner, and most of them are technical: matrix multiplication algorithms, precedence in Ruby, digging into rel-noopener, dealing with a monolith in production, building high-connectivity/low-data apps... as you can see there's still a lot to be said!
 
 So all this to say, please bear with me and feel free to share feedback over [twitter][11] or in the comments of my future articles! The first one is already up and is about [the importance of having a beginner mindset when first switching from a senior engineering role to management][12].
 
