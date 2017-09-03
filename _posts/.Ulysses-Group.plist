@@ -630,6 +630,16 @@
 					<integer>78</integer>
 				</dict>
 			</dict>
+			<key>2017-09-04-manager-you-want.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>526129036.859083</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>81</integer>
+				</dict>
+			</dict>
 		</dict>
 		<key>userIconName</key>
 		<real>493490997</real>
@@ -822,6 +832,9 @@
 		<array>
 			<string>2017-08-22-starting-with-management.md</string>
 		</array>
+		<array>
+			<string>2017-09-04-manager-you-want.md</string>
+		</array>
 	</array>
 	<key>storeFormatVersion</key>
 	<integer>1</integer>
@@ -837,7 +850,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-			<integer>78</integer>
+			<integer>82</integer>
 		</dict>
 		<key>userIconName</key>
 		<dict>
