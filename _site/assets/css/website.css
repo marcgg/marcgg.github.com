@@ -337,6 +337,10 @@ ol{
 .book-cover-entry img{
   width: 120px;
 }
+.book-cover-entry {
+  background-image: none;
+}
+
 .book-rating .icon {
   display: inline-block;
   padding-right: 5px;
