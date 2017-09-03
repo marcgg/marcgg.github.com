@@ -5,7 +5,7 @@ author: " Michael Lopp"
 linkfr: "http://amzn.to/2chWpJI"
 linkus: "http://amzn.to/2cc6Xyg" 
 img: "humans-cover.jpg"
-score: 18
+score: 19
 read: true
 ---
 

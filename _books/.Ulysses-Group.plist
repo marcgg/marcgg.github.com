@@ -76,6 +76,16 @@
 					<integer>143</integer>
 				</dict>
 			</dict>
+			<key>effective-manager.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>526130457.50223601</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>172</integer>
+				</dict>
+			</dict>
 			<key>elixir.md</key>
 			<dict>
 				<key>lastModification</key>
@@ -465,6 +475,9 @@
 		<array>
 			<string>tipping.md</string>
 		</array>
+		<array>
+			<string>effective-manager.md</string>
+		</array>
 	</array>
 	<key>storeFormatVersion</key>
 	<integer>1</integer>
@@ -473,7 +486,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-			<integer>169</integer>
+			<integer>174</integer>
 		</dict>
 	</dict>
 </dict>

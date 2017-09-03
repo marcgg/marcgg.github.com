@@ -5,7 +5,7 @@ author: " Andrew S. Grove"
 linkfr: "http://amzn.to/2cw7OsH"
 linkus: "http://amzn.to/2cn8A6p" 
 img: "high-output-cover.jpg"
-score: 17
+score: 16
 read: true
 ---
 
