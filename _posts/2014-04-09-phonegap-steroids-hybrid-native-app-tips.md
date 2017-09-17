@@ -8,7 +8,7 @@ blog: true
 category: blog
 featured: true
 tag: iphone
-publictag: Development
+publictag: Programming
 ---
 
 A while ago I [wrote about AppGyver's SteroidsJS][1]
