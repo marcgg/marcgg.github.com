@@ -7,6 +7,7 @@ category: blog
 featured: true
 cssscope: deadlines
 tag: ProjectManagement
+publictag: Project Management
 ---
 
 A lot of developers in startups are against deadlines and estimates. There's even a whole "[\#NoEstimates][1]" movement that appeared recently.

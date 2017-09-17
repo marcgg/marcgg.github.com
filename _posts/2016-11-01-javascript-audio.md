@@ -6,6 +6,7 @@ blog: true
 category: blog
 featured: true
 tag: Dev
+publictag: Development
 ---
 
 <script src="/assets/js/posts/music.js"></script>

@@ -8,11 +8,11 @@ category: blog
 tag: iphone
 ---
 
-***Update 9 April 2014**: Since this post, I released a [quantified self app](http://liffapp.io)
+\***Update 9 April 2014**: Since this post, I released a [quantified self app][1]
 using SteroidsJs and 
 wrote another article with [tips & tricks to know when building a
 Steroids.js app](/blog/2014/04/09/phonegap-steroids-hybrid-native-app-tips/) (or any hybrid app really).
-300ms delay, overscroll, text rendering, 1px borders, local storage, performances, i18n ... it's all there!*
+300ms delay, overscroll, text rendering, 1px borders, local storage, performances, i18n ... it's all there!\*
 
 
 As I wrote before, I like the idea of developing mobile applications. I
@@ -22,8 +22,8 @@ interesting as well in the future.
 
 The problem is that, like a lot of people, I don't enjoy the
 experience of working with Objective C
-and XCode. I thought I found a solution with [RubyMotion](http://www.rubymotion.com/),
-I even [wrote about it](/blog/2012/10/22/custom-slider-ios-rubymotion/)...
+and XCode. I thought I found a solution with [RubyMotion][2],
+I even [wrote about it][3]...
 but I was mistaken. While RubyMotion is a great project, it's not for me.
 
 Yes you get to write Ruby code, but that's pretty much it. You still
@@ -38,16 +38,16 @@ never released anything.
 I tried again a couple of months later with an idea more simple: create a web view wrapper using
 RubyMotion and do everything inside a single page HTML 5 app. Sadly the
 lack of native UI made everything feel a bit off, so I scrapped that as well.
-I thought about using [PhoneGap](http://phonegap.com/)
+I thought about using [PhoneGap][4]
 but I figured that the app would end up with the same problem.
 
 Fast forward 6 months and I read that AppGyver released
-[Steroids.js](http://www.appgyver.com/steroids), an solution
+[Steroids.js][5], an solution
 promising to
-"[Bridge The Performance Gap Between PhoneGap And Native Apps By Using Native UI Components And Animations](http://techcrunch.com/2013/08/20/steroids-js-bridges-the-performance-gap-between-phonegap-and-native-apps-by-using-native-ui-components-and-animations/)".
+"[Bridge The Performance Gap Between PhoneGap And Native Apps By Using Native UI Components And Animations][6]".
 I immediatly thought that it was what I wanted! The next day AppGyver
 announced that Steroids would be
-[free for everyone](http://appgyver.blogspot.fr/2013/08/steroids-is-now-free-for-everyone.html),
+[free for everyone][7],
 so I decided to give it a try and write about it here.
 
 <div style="text-align: center"><img src="/assets/blog/steroids.png" /></div>
@@ -64,14 +64,14 @@ Alright.
 
 AppGiver provides a pretty good documentation. It's far from complete, but
 what is there is well written and very clear. To set my development
-environment I followed their [tutorial](http://academy.appgyver.com/courses/2/lessons/32).
+environment I followed their [tutorial][8].
 
 Overall everything went smoothly aside from a couple of gotchas very
 easy to figure out.
 
-For instance Steroids uses an older version of node.js so I had to set up [nvm](https://github.com/creationix/nvm)
+For instance Steroids uses an older version of node.js so I had to set up [nvm][9]
 in order to get it to run. The thing is that nvm creates a
-.bash_profile, but since I use [zsh](http://www.zsh.org/) it wouldn't pick up the correct path
+.bash\_profile, but since I use [zsh][10] it wouldn't pick up the correct path
 automatically as promised. Moving the concerned code to .zshrc fixed
 that.
 
@@ -117,7 +117,7 @@ script.
 
 Steroids comes with a very cool "native" Drawer, meaning that it will
 display a webview on the side of your app with a native animation. The
-[tutorial](http://academy.appgyver.com/courses/4/lessons/44) explaining
+[tutorial][11] explaining
 that got me excited so I decided that my app would have a drawer!
 
 Getting it to work was almost as simple as going:
@@ -141,7 +141,7 @@ breaks gestures inside your webview. It's also a bit more complicated to
 have the drawer on some screens and not others.
 
 After a few hours playing with it and talking with
-[a real iOS developer](http://twitter.com/jeclic)
+[a real iOS developer][12]
 ("you have a drawer for your app with 4 screens???") I decided that it wasn't really the
 UI I needed for this project.
 
@@ -166,7 +166,7 @@ steroids.config.tabBar.tabs = [
  {
    title: "Fun"
    icon: "icons/myicon@2x.png"
-   location: "http://localhost/views/fun/have_it.html"
+   location: "http://localhost/views/fun/have\_it.html"
  },
  {
    title: "Excitement"
@@ -177,12 +177,12 @@ steroids.config.tabBar.tabs = [
 {% endhighlight %}
 
 You then get access to ways to customize colors for everything as
-explained [here](http://academy.appgyver.com/courses/4/lessons/50),
+explained [here][13],
 and... tadaaaa:
 
 <div style="text-align: center"><img src="/assets/blog/app_steroids.jpg" /></div>
 
-The text displayed is contained in the have_it.html file placed in the
+The text displayed is contained in the have\_it.html file placed in the
 project.
 
 It is really simple and, even if this was written with javascript, it
@@ -223,9 +223,9 @@ your files into a tree structure in a pretty straightforward fashion.
 Steroids also handles adding and removing views so that it feels native.
 
 They explain it better than me in their tutorials,
-[Enhancing Your App with Native UI](http://academy.appgyver.com/courses/15/lessons/10)
+[Enhancing Your App with Native UI][14]
 and
-[Layer stack](http://academy.appgyver.com/courses/4/lessons/12).
+[Layer stack][15].
 
 ## Some Random Features
 
@@ -238,11 +238,11 @@ cookies.
 {% highlight javascript %}
 window.User = {
   setSession: function(val){
-    this.createCookie("my_session", val, 20)
+	this.createCookie("my_session", val, 20)
   },
 
   logout: function(){
-    this.eraseCookie("my_session");
+	this.eraseCookie("my_session");
   }
 
   // And so on ...
@@ -258,18 +258,18 @@ Overall it's just like developing a website: you get jQuery or whatever
 library you want and make calls and display the result on the page.
 
 It might seem obvious, but it is still good to mention that the API will need to accept
-[cross-origin resource sharing](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
+[cross-origin resource sharing][16]
 for the calls to work.
 
 I use Rails, and the quick way to do that was to use the
-[rack-cors gem](https://github.com/cyu/rack-cors)
+[rack-cors gem][17]
 and set it up as such:
 
 {% highlight ruby %}
 config.middleware.use Rack::Cors do
   allow do
-    origins '*'
-    resource '*', headers: :any, methods: [:get, :post, :options]
+	origins '*'
+	resource '*', headers: :any, methods: [:get, :post, :options]
   end
 end
 {% endhighlight %}
@@ -279,7 +279,7 @@ end
 ### The Scanner App
 
 You can download an application on the
-[appstore](https://itunes.apple.com/us/app/appgyver-scanner/id575076515?mt=8),
+[appstore][18],
 scan a QR code with it, and it will take you straight to your application. This
 is great to show previews to people and iterate quickly and saves time
 compared to solution like TestFlight that requires you to upload a
@@ -301,7 +301,7 @@ in the click of a button.
 This works fine, but still needs some polishing, mainly on ways to get an
 ETA for the build. Right now I've seen build times varying between 12
 hours and a couple of minutes. Apparently
-[it should be better moving forward](http://forums.appgyver.com/#!/steroids#how-long-does-a-adhoc-build),
+[it should be better moving forward][19],
 so I'll wait and see.
 
 ## The Documentation & Community
@@ -311,8 +311,8 @@ more tutorials and examples. This was to be expected since the project has only 
 released very recently.
 
 It's worth mentioning that the team is very responsive on
-[twitter](https://twitter.com/appgyver) or the
-[forums](http://developers.appgyver.com/forums). For instance I was confused about
+[twitter][20] or the
+[forums][21]. For instance I was confused about
 customizing colors, so I asked on the site. The next day they would have
 put up a new tutorial with concrete examples. Pretty sweet.
 
@@ -330,8 +330,31 @@ The next steps on my part is to stop playing around and actually start developin
 I'm also waiting for some features that are supposed to be in the roadmap,
 such as icons in nav bar or iOS 7 native UI.
 
-***2014 Update**: Since this, I've released an application using Steroids.js, it's a [quantified self application
-to track your day](http://liffapp.io). You can check it out [on the appstore](https://itunes.apple.com/en/app/liff-understand-your-life/id834944345)!*
+\***2014 Update**: Since this, I've released an application using Steroids.js, it's a [quantified self application
+to track your day](http://liffapp.io). You can check it out [on the appstore][22]!\*
 
 If you have any remarks, I'll be happy to hear them in the comments. For
 questions, I'm not sure to be able to answer all of them - but I'll try!
+
+[1]:	http://liffapp.io
+[2]:	http://www.rubymotion.com/
+[3]:	/blog/2012/10/22/custom-slider-ios-rubymotion/
+[4]:	http://phonegap.com/
+[5]:	http://www.appgyver.com/steroids
+[6]:	http://techcrunch.com/2013/08/20/steroids-js-bridges-the-performance-gap-between-phonegap-and-native-apps-by-using-native-ui-components-and-animations/
+[7]:	http://appgyver.blogspot.fr/2013/08/steroids-is-now-free-for-everyone.html
+[8]:	http://academy.appgyver.com/courses/2/lessons/32
+[9]:	https://github.com/creationix/nvm
+[10]:	http://www.zsh.org/
+[11]:	http://academy.appgyver.com/courses/4/lessons/44
+[12]:	http://twitter.com/jeclic
+[13]:	http://academy.appgyver.com/courses/4/lessons/50
+[14]:	http://academy.appgyver.com/courses/15/lessons/10
+[15]:	http://academy.appgyver.com/courses/4/lessons/12
+[16]:	http://en.wikipedia.org/wiki/Cross-origin_resource_sharing
+[17]:	https://github.com/cyu/rack-cors
+[18]:	https://itunes.apple.com/us/app/appgyver-scanner/id575076515?mt=8
+[19]:	http://forums.appgyver.com/#!/steroids#how-long-does-a-adhoc-build
+[20]:	https://twitter.com/appgyver
+[21]:	http://developers.appgyver.com/forums
+[22]:	https://itunes.apple.com/en/app/liff-understand-your-life/id834944345

@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2017-09-17T20:17:15+02:00</updated>
+ <updated>2017-09-17T20:36:05+02:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -5029,11 +5029,11 @@ I don’t see why I couldn’t either!&lt;/p&gt;
      <updated>2013-08-29T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2013/08/29/appgyver-steroids-iphone-hybrid-javascript</id>
      <content type="html">
-       &lt;p&gt;&lt;em&gt;&lt;strong&gt;Update 9 April 2014&lt;/strong&gt;: Since this post, I released a &lt;a href=&quot;http://liffapp.io&quot;&gt;quantified self app&lt;/a&gt;
+       &lt;p&gt;*&lt;strong&gt;Update 9 April 2014&lt;/strong&gt;: Since this post, I released a &lt;a href=&quot;http://liffapp.io&quot;&gt;quantified self app&lt;/a&gt;
 using SteroidsJs and 
 wrote another article with &lt;a href=&quot;/blog/2014/04/09/phonegap-steroids-hybrid-native-app-tips/&quot;&gt;tips &amp;amp; tricks to know when building a
 Steroids.js app&lt;/a&gt; (or any hybrid app really).
-300ms delay, overscroll, text rendering, 1px borders, local storage, performances, i18n … it’s all there!&lt;/em&gt;&lt;/p&gt;
+300ms delay, overscroll, text rendering, 1px borders, local storage, performances, i18n … it’s all there!*&lt;/p&gt;
 
 &lt;p&gt;As I wrote before, I like the idea of developing mobile applications. I
 don’t plan to focus exclusively on it, but having an iPhone app as a pet
@@ -5173,7 +5173,7 @@ actually pretty straightforward to do with Steroids.&lt;/p&gt;
  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
    &lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Fun&quot;&lt;/span&gt;
    &lt;span class=&quot;na&quot;&gt;icon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;icons/myicon@2x.png&quot;&lt;/span&gt;
-   &lt;span class=&quot;na&quot;&gt;location&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;http://localhost/views/fun/have_it.html&quot;&lt;/span&gt;
+   &lt;span class=&quot;na&quot;&gt;location&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;http://localhost/views/fun/have\_it.html&quot;&lt;/span&gt;
  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
    &lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Excitement&quot;&lt;/span&gt;
@@ -5239,11 +5239,11 @@ cookies.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;User&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;na&quot;&gt;setSession&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createCookie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;my_session&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createCookie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;my_session&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
 
   &lt;span class=&quot;na&quot;&gt;logout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;eraseCookie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;my_session&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;eraseCookie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;my_session&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
   &lt;span class=&quot;c1&quot;&gt;// And so on ...&lt;/span&gt;
@@ -5267,8 +5267,8 @@ and set it up as such:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;middleware&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Rack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Cors&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
   &lt;span class=&quot;n&quot;&gt;allow&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;origins&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'*'&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;resource&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'*'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;headers: :any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;methods: &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;origins&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'*'&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;resource&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'*'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;headers: :any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;methods: &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
@@ -5328,11 +5328,12 @@ see that the team put a lot of work into it and the product feels right.&lt;/p&g
 I’m also waiting for some features that are supposed to be in the roadmap,
 such as icons in nav bar or iOS 7 native UI.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;2014 Update&lt;/strong&gt;: Since this, I’ve released an application using Steroids.js, it’s a &lt;a href=&quot;http://liffapp.io&quot;&gt;quantified self application
-to track your day&lt;/a&gt;. You can check it out &lt;a href=&quot;https://itunes.apple.com/en/app/liff-understand-your-life/id834944345&quot;&gt;on the appstore&lt;/a&gt;!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;*&lt;strong&gt;2014 Update&lt;/strong&gt;: Since this, I’ve released an application using Steroids.js, it’s a &lt;a href=&quot;http://liffapp.io&quot;&gt;quantified self application
+to track your day&lt;/a&gt;. You can check it out &lt;a href=&quot;https://itunes.apple.com/en/app/liff-understand-your-life/id834944345&quot;&gt;on the appstore&lt;/a&gt;!*&lt;/p&gt;
 
 &lt;p&gt;If you have any remarks, I’ll be happy to hear them in the comments. For
 questions, I’m not sure to be able to answer all of them - but I’ll try!&lt;/p&gt;
+
 
        
      </content>

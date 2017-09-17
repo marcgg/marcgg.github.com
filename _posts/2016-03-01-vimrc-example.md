@@ -6,6 +6,7 @@ blog: true
 category: blog
 featured: true
 tag: Dev
+publictag: Development
 ---
 
 I started using Vim [a while ago][1] with the great distribution [Janus][2]. Since then I made a a lot of changes to my config, but it never felt entirely like my own setup. There always were a few plugins I wouldn't use and some features I couldn't get to work because I didn't understand the internals of my distribution.

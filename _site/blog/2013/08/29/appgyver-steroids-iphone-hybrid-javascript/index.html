@@ -53,11 +53,11 @@
   <div id="content">
     <div class="post" id="post-">
 
-      <p><em><strong>Update 9 April 2014</strong>: Since this post, I released a <a href="http://liffapp.io">quantified self app</a>
+      <p>*<strong>Update 9 April 2014</strong>: Since this post, I released a <a href="http://liffapp.io">quantified self app</a>
 using SteroidsJs and 
 wrote another article with <a href="/blog/2014/04/09/phonegap-steroids-hybrid-native-app-tips/">tips &amp; tricks to know when building a
 Steroids.js app</a> (or any hybrid app really).
-300ms delay, overscroll, text rendering, 1px borders, local storage, performances, i18n … it’s all there!</em></p>
+300ms delay, overscroll, text rendering, 1px borders, local storage, performances, i18n … it’s all there!*</p>
 
 <p>As I wrote before, I like the idea of developing mobile applications. I
 don’t plan to focus exclusively on it, but having an iPhone app as a pet
@@ -197,7 +197,7 @@ actually pretty straightforward to do with Steroids.</p>
  <span class="p">{</span>
    <span class="na">title</span><span class="p">:</span> <span class="s2">"Fun"</span>
    <span class="na">icon</span><span class="p">:</span> <span class="s2">"icons/myicon@2x.png"</span>
-   <span class="na">location</span><span class="p">:</span> <span class="s2">"http://localhost/views/fun/have_it.html"</span>
+   <span class="na">location</span><span class="p">:</span> <span class="s2">"http://localhost/views/fun/have\_it.html"</span>
  <span class="p">},</span>
  <span class="p">{</span>
    <span class="na">title</span><span class="p">:</span> <span class="s2">"Excitement"</span>
@@ -263,11 +263,11 @@ cookies.</p>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">window</span><span class="p">.</span><span class="nx">User</span> <span class="o">=</span> <span class="p">{</span>
   <span class="na">setSession</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">val</span><span class="p">){</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">createCookie</span><span class="p">(</span><span class="s2">"my_session"</span><span class="p">,</span> <span class="nx">val</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+	<span class="k">this</span><span class="p">.</span><span class="nx">createCookie</span><span class="p">(</span><span class="s2">"my_session"</span><span class="p">,</span> <span class="nx">val</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
   <span class="p">},</span>
 
   <span class="na">logout</span><span class="p">:</span> <span class="kd">function</span><span class="p">(){</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">eraseCookie</span><span class="p">(</span><span class="s2">"my_session"</span><span class="p">);</span>
+	<span class="k">this</span><span class="p">.</span><span class="nx">eraseCookie</span><span class="p">(</span><span class="s2">"my_session"</span><span class="p">);</span>
   <span class="p">}</span>
 
   <span class="c1">// And so on ...</span>
@@ -291,8 +291,8 @@ and set it up as such:</p>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">config</span><span class="p">.</span><span class="nf">middleware</span><span class="p">.</span><span class="nf">use</span> <span class="no">Rack</span><span class="o">::</span><span class="no">Cors</span> <span class="k">do</span>
   <span class="n">allow</span> <span class="k">do</span>
-    <span class="n">origins</span> <span class="s1">'*'</span>
-    <span class="n">resource</span> <span class="s1">'*'</span><span class="p">,</span> <span class="ss">headers: :any</span><span class="p">,</span> <span class="ss">methods: </span><span class="p">[</span><span class="ss">:get</span><span class="p">,</span> <span class="ss">:post</span><span class="p">,</span> <span class="ss">:options</span><span class="p">]</span>
+	<span class="n">origins</span> <span class="s1">'*'</span>
+	<span class="n">resource</span> <span class="s1">'*'</span><span class="p">,</span> <span class="ss">headers: :any</span><span class="p">,</span> <span class="ss">methods: </span><span class="p">[</span><span class="ss">:get</span><span class="p">,</span> <span class="ss">:post</span><span class="p">,</span> <span class="ss">:options</span><span class="p">]</span>
   <span class="k">end</span>
 <span class="k">end</span></code></pre></figure>
 
@@ -352,11 +352,12 @@ see that the team put a lot of work into it and the product feels right.</p>
 I’m also waiting for some features that are supposed to be in the roadmap,
 such as icons in nav bar or iOS 7 native UI.</p>
 
-<p><em><strong>2014 Update</strong>: Since this, I’ve released an application using Steroids.js, it’s a <a href="http://liffapp.io">quantified self application
-to track your day</a>. You can check it out <a href="https://itunes.apple.com/en/app/liff-understand-your-life/id834944345">on the appstore</a>!</em></p>
+<p>*<strong>2014 Update</strong>: Since this, I’ve released an application using Steroids.js, it’s a <a href="http://liffapp.io">quantified self application
+to track your day</a>. You can check it out <a href="https://itunes.apple.com/en/app/liff-understand-your-life/id834944345">on the appstore</a>!*</p>
 
 <p>If you have any remarks, I’ll be happy to hear them in the comments. For
 questions, I’m not sure to be able to answer all of them - but I’ll try!</p>
+
 
 
       <div id="more">

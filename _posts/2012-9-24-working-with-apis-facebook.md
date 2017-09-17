@@ -6,6 +6,7 @@ blog: true
 category: blog
 featured: true
 tag: Product
+publictag: Development
 redirect\_from:
 - /2012/09/24/working-with-apis-facebook/
 ---
