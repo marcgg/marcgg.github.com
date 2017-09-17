@@ -1,10 +1,9 @@
 ---
 layout: post
 title: "The Difference Between to&#95;s & to&#95;str In Ruby"
-description: "A lot of people assume that to\_s and `to_str` are the same methods, but the difference between them is actually quite major."
+description: "A lot of people assume that to_s and `to_str` are the same methods, but the difference between them is actually quite major."
 blog: true
 category: blog
-featured: true
 tag: Ruby
 ---
 
@@ -24,7 +23,7 @@ on a new instance of this class:
 class Demo
 end
 
-puts Demo.new.to\_s
+puts Demo.new.to_s
 {% endhighlight %}
 
 This returns:
@@ -41,7 +40,7 @@ We could also call `to_s` directly on the class and get a valid result as well s
 However if we try to do the same with `to_str`, it won't work because it's not defined on a higher level class:
 
 {% highlight ruby %}
-puts Demo.new.to\_str
+puts Demo.new.to_str
 {% endhighlight %}
 
 This will return `undefined method to_str for #<Demo:0x007fea8204e290> (NoMethodError)`, meaning that we have to define it ourselves when creating a new class.
@@ -60,9 +59,9 @@ When calling `to_s`, it will return some form of string representation of the ob
 When creating a new class you can keep the default behaviour or build your own. For instance here's how `to_s` behaves on an integer:
 
 {% highlight ruby %}
-100.to\_s(2) # returns "1100100"
-100.to\_s # returns "100"
-100.to\_s(8) # returns"144"
+100.to_s(2) # returns "1100100"
+100.to_s # returns "100"
+100.to_s(8) # returns"144"
 {% endhighlight %}
 
 Here's what it could look like if you were defining it yourself:
@@ -73,8 +72,8 @@ class User
    @name = name
   end
 
-  def to\_s
-   "\<User: #{@name}\>"
+  def to_s
+   "User: #{@name}"
   end
 end
 {% endhighlight %}
@@ -82,7 +81,7 @@ end
 It's basically just a way to have a quick and nice way to display your objects that is going to be called when needed, for instance when using `puts` or when interpolating with `#{}`:
 
 {% highlight ruby %}
-puts "Here is #{User.new("Bob")}" # Returns "Here is \<User: Bob\>"
+puts "Here is #{User.new("Bob")}" # Returns "Here is User: Bob"
 {% endhighlight %}
 
 ### Behaving Like A String
@@ -95,9 +94,9 @@ On the other hand when an object implements `to_str`, it has way more consequenc
 Because of this, the only class in Ruby core implementing `to_str` is `String`:
 
 {% highlight c %}
-rb\_str\_to\_s(VALUE str)
+rb_str_to_s(VALUE str)
 {
- if (rb\_obj\_class(str) != rb\_cString) {
+ if (rb_obj_class(str) != rb_cString) {
 	return str_duplicate(rb_cString, str);
  }
  return str;
@@ -106,7 +105,7 @@ rb\_str\_to\_s(VALUE str)
 
 [Exception][2] used to implement `to_str` as well but is was removed in Ruby 1.9, which is why it's often mentioned as an example. The Ruby documentation was even wrong at the time of writing this article, so I wrote [a PR to fix it][3] that was merged.
 
-There are a lot of discussions regarding if a class should implement `to_str` or not,  since it's a strong signal that the class is really similar to a string and should behave as such. If this sounds interesting, you should take a look at this [Symbol#to\_str][4] discussion on the Ruby core tracker, or at [this example in Rails][5] of when `to_str` is useful by [Aaron Patterson][6].
+There are a lot of discussions regarding if a class should implement `to_str` or not,  since it's a strong signal that the class is really similar to a string and should behave as such. If this sounds interesting, you should take a look at this [Symbol#to_str][4] discussion on the Ruby core tracker, or at [this example in Rails][5] of when `to_str` is useful by [Aaron Patterson][6].
 
 
 #### Example 1: Fixnum
@@ -121,8 +120,8 @@ We get `'+': no implicit conversion of Fixnum into String (TypeError)`. This mak
 
 {% highlight ruby %}
 class Fixnum
-  def to\_str
-   self.to\_s
+  def to_str
+   self.to_s
   end
 end
  {% endhighlight %}
@@ -145,7 +144,7 @@ class User
    @name = name
   end
 
-  def to\_str
+  def to_str
    @name
   end
 end

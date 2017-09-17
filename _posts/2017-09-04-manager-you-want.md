@@ -4,6 +4,7 @@ title: "Don't Simply Be The Manager You'd Love To Have"
 description: "Defining your style of management is hard and sometimes you need to look beyond the 'if it worked for me it'll work for them' mentality."
 blog: true
 category: blog
+featured: true
 tag: Management
 ---
 
@@ -18,5 +19,4 @@ Let's say you hate deadlines and feel like it's a terrible way to motivate peopl
 What do you do then?
 
 In my opinion thinking _"I like to be managed this way so everybody in my team would like it too"_ is too simplistic of a position. You need to take the good traits you see in a lot of different people, figure out what approach would work for you and then adapt all of this to your team and the situation in order to keep your people happy and productive.
-
 

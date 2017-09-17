@@ -5,7 +5,7 @@
     <title>
       The Difference Between to&#95;s & to&#95;str In Ruby
     </title>
-    <meta name="description" content="A lot of people assume that to s and `to_str` are the same methods, but the difference between them is actually quite major.">
+    <meta name="description" content="A lot of people assume that to_s and `to_str` are the same methods, but the difference between them is actually quite major.">
     <meta name="author" content="Marc G Gauthier">
     <meta content='user-scalable=no, width=device-width, initial-scale=1.0' name='viewport'>
     <meta name="google-site-verification" content="x2EpQdOMz-k9fP8hak9I3COaXhnQ4jNLp2GU4GYQ8jM" />
@@ -68,7 +68,7 @@ on a new instance of this class:</p>
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Demo</span>
 <span class="k">end</span>
 
-<span class="nb">puts</span> <span class="no">Demo</span><span class="p">.</span><span class="nf">new</span><span class="p">.</span><span class="nf">to</span><span class="p">\</span><span class="n">_s</span></code></pre></figure>
+<span class="nb">puts</span> <span class="no">Demo</span><span class="p">.</span><span class="nf">new</span><span class="p">.</span><span class="nf">to_s</span></code></pre></figure>
 
 <p>This returns:</p>
 
@@ -87,7 +87,7 @@ on a new instance of this class:</p>
 
 <p>However if we try to do the same with <code class="highlighter-rouge">to_str</code>, it won’t work because it’s not defined on a higher level class:</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">puts</span> <span class="no">Demo</span><span class="p">.</span><span class="nf">new</span><span class="p">.</span><span class="nf">to</span><span class="p">\</span><span class="n">_str</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">puts</span> <span class="no">Demo</span><span class="p">.</span><span class="nf">new</span><span class="p">.</span><span class="nf">to_str</span></code></pre></figure>
 
 <p>This will return <code class="highlighter-rouge">undefined method to_str for #&lt;Demo:0x007fea8204e290&gt; (NoMethodError)</code>, meaning that we have to define it ourselves when creating a new class.</p>
 
@@ -106,9 +106,9 @@ on a new instance of this class:</p>
 
 <p>When creating a new class you can keep the default behaviour or build your own. For instance here’s how <code class="highlighter-rouge">to_s</code> behaves on an integer:</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="mi">100</span><span class="p">.</span><span class="nf">to</span><span class="p">\</span><span class="n">_s</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># returns "1100100"</span>
-<span class="mi">100</span><span class="p">.</span><span class="nf">to</span><span class="p">\</span><span class="n">_s</span> <span class="c1"># returns "100"</span>
-<span class="mi">100</span><span class="p">.</span><span class="nf">to</span><span class="p">\</span><span class="n">_s</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="c1"># returns"144"</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="mi">100</span><span class="p">.</span><span class="nf">to_s</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># returns "1100100"</span>
+<span class="mi">100</span><span class="p">.</span><span class="nf">to_s</span> <span class="c1"># returns "100"</span>
+<span class="mi">100</span><span class="p">.</span><span class="nf">to_s</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="c1"># returns"144"</span></code></pre></figure>
 
 <p>Here’s what it could look like if you were defining it yourself:</p>
 
@@ -117,14 +117,14 @@ on a new instance of this class:</p>
    <span class="vi">@name</span> <span class="o">=</span> <span class="nb">name</span>
   <span class="k">end</span>
 
-  <span class="k">def</span> <span class="nf">to</span><span class="p">\</span><span class="n">_s</span>
-   <span class="s2">"</span><span class="se">\&lt;</span><span class="s2">User: </span><span class="si">#{</span><span class="vi">@name</span><span class="si">}</span><span class="se">\&gt;</span><span class="s2">"</span>
+  <span class="k">def</span> <span class="nf">to_s</span>
+   <span class="s2">"User: </span><span class="si">#{</span><span class="vi">@name</span><span class="si">}</span><span class="s2">"</span>
   <span class="k">end</span>
 <span class="k">end</span></code></pre></figure>
 
 <p>It’s basically just a way to have a quick and nice way to display your objects that is going to be called when needed, for instance when using <code class="highlighter-rouge">puts</code> or when interpolating with <code class="highlighter-rouge">#{}</code>:</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">puts</span> <span class="s2">"Here is </span><span class="si">#{</span><span class="no">User</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"Bob"</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span> <span class="c1"># Returns "Here is \&lt;User: Bob\&gt;"</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">puts</span> <span class="s2">"Here is </span><span class="si">#{</span><span class="no">User</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"Bob"</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span> <span class="c1"># Returns "Here is User: Bob"</span></code></pre></figure>
 
 <h3 id="behaving-like-a-string">Behaving Like A String</h3>
 
@@ -134,9 +134,9 @@ on a new instance of this class:</p>
 
 <p>Because of this, the only class in Ruby core implementing <code class="highlighter-rouge">to_str</code> is <code class="highlighter-rouge">String</code>:</p>
 
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">rb</span><span class="err">\</span><span class="n">_str</span><span class="err">\</span><span class="n">_to</span><span class="err">\</span><span class="n">_s</span><span class="p">(</span><span class="n">VALUE</span> <span class="n">str</span><span class="p">)</span>
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">rb_str_to_s</span><span class="p">(</span><span class="n">VALUE</span> <span class="n">str</span><span class="p">)</span>
 <span class="p">{</span>
- <span class="k">if</span> <span class="p">(</span><span class="n">rb</span><span class="err">\</span><span class="n">_obj</span><span class="err">\</span><span class="n">_class</span><span class="p">(</span><span class="n">str</span><span class="p">)</span> <span class="o">!=</span> <span class="n">rb</span><span class="err">\</span><span class="n">_cString</span><span class="p">)</span> <span class="p">{</span>
+ <span class="k">if</span> <span class="p">(</span><span class="n">rb_obj_class</span><span class="p">(</span><span class="n">str</span><span class="p">)</span> <span class="o">!=</span> <span class="n">rb_cString</span><span class="p">)</span> <span class="p">{</span>
 	<span class="k">return</span> <span class="n">str_duplicate</span><span class="p">(</span><span class="n">rb_cString</span><span class="p">,</span> <span class="n">str</span><span class="p">);</span>
  <span class="p">}</span>
  <span class="k">return</span> <span class="n">str</span><span class="p">;</span>
@@ -155,8 +155,8 @@ on a new instance of this class:</p>
 <p>We get <code class="highlighter-rouge">'+': no implicit conversion of Fixnum into String (TypeError)</code>. This makes sense, but what would happen if we were to define <code class="highlighter-rouge">to_str</code> on the <code class="highlighter-rouge">Fixnum</code> class?</p>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Fixnum</span>
-  <span class="k">def</span> <span class="nf">to</span><span class="p">\</span><span class="n">_str</span>
-   <span class="nb">self</span><span class="p">.</span><span class="nf">to</span><span class="p">\</span><span class="n">_s</span>
+  <span class="k">def</span> <span class="nf">to_str</span>
+   <span class="nb">self</span><span class="p">.</span><span class="nf">to_s</span>
   <span class="k">end</span>
 <span class="k">end</span>
  </code></pre></figure>
@@ -176,7 +176,7 @@ on a new instance of this class:</p>
    <span class="vi">@name</span> <span class="o">=</span> <span class="nb">name</span>
   <span class="k">end</span>
 
-  <span class="k">def</span> <span class="nf">to</span><span class="p">\</span><span class="n">_str</span>
+  <span class="k">def</span> <span class="nf">to_str</span>
    <span class="vi">@name</span>
   <span class="k">end</span>
 <span class="k">end</span>
