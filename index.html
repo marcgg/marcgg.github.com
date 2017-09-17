@@ -28,8 +28,9 @@ description: "Personnal website and blog talking about Ruby on Rails, project ma
         {%if post.featured%}
           <li>
             <a href="{{ BASE_PATH }}{{ post.url }}">{{post.title}}</a>
-            ({% if post.publictag %}{{post.publictag}}{% else %}{{ post.tag }}{% endif %},
-            {{ post.date | date: "%Y" }})
+            {%capture tag%}{% if post.publictag %}{{post.publictag}}{% else %}{{ post.tag }}{% endif %}{%endcapture%}
+            <span class="home-tag tag-{{tag | downcase | remove: " "}}">{{tag}}</span>
+            <span class="home-tag tag-date">{{ post.date | date: "%Y" }}</span>
           </li>
         {%endif%}
       {%endfor%}

@@ -246,6 +246,24 @@ ol{
   margin-bottom: 20px;
   list-style-type: decimal;
 }
+/* TAGS */
+
+.home-tag {
+  font-size: 10px;
+  display: inline-block;
+  border: 1px solid #dedede;
+  padding: 2px 2px 1px 2px;
+  border-radius: 2px;
+  line-height: 10px;
+  margin-left: 1px;
+}
+
+.tag-date{ color: #dedede; }
+
+.tag-management         { border-color: #929aff; color: #929aff; }
+.tag-development        { border-color: #ff9292; color: #ff9292; }
+.tag-coaching           { border-color: #4ec698; color: #4ec698; }
+.tag-projectmanagement  { border-color: #929aff; color: #929aff; }
 
 /* BLOG INDEX */
 #all-posts{
@@ -622,6 +640,10 @@ p code, li code{
 
 /************************ MOBILE LAYOUT *********************/
 @media all and (max-width: 800px) {
+
+  .home-tag {
+    display: none;
+  }
 
   .author{
     float: none !important;
