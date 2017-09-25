@@ -467,50 +467,6 @@ p code, li code{
   font-style: italic;
 }
 
-/* PHOTOS */
-#photos-index{
-  width: 1024px;
-  margin: auto;
-  text-align: center;
-  margin: 20px auto 20px auto;
-}
-#photos-index .photo{
-  margin: 5px 5px;
-  display: inline-block;
-  position: relative;
-}
-#photos-index img{
-  width: 320px;
-}
-#photos-index a span{
-  position: absolute;
-  bottom: 0px;
-  padding: 10px 0px;
-  z-index: 1000;
-  left: 0px;
-  width: 320px;
-  text-align:center;
-  color: rgba(0,0,0,0);
-  font-family: 'Open Sans', sans-serif;
-}
-#photos-index a:hover span{
-  bottom: 10px;
-  color: rgba(200,200,200,1) !important;
-  transition:.5s;
-  background-color: rgba(0,0,0,0.3);
-}
-
-#photo-content{
-  width: 1024px;
-  margin: 40px auto;
-}
-#photo-content img{
-  display:block;
-  margin: 0px auto 40px auto;
-  border: 2px solid #333;
-}
-
-
 /* HIRE */
 
 #hire h2{
