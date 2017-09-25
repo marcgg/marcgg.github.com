@@ -306,6 +306,16 @@
 					<integer>133</integer>
 				</dict>
 			</dict>
+			<key>the-advantage.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>528043945.870709</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>177</integer>
+				</dict>
+			</dict>
 			<key>the-goal.md</key>
 			<dict>
 				<key>lastModification</key>
@@ -478,6 +488,9 @@
 		<array>
 			<string>effective-manager.md</string>
 		</array>
+		<array>
+			<string>the-advantage.md</string>
+		</array>
 	</array>
 	<key>storeFormatVersion</key>
 	<integer>1</integer>
@@ -486,7 +499,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-			<integer>174</integer>
+			<integer>178</integer>
 		</dict>
 	</dict>
 </dict>
