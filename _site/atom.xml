@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2017-10-08T21:27:01+02:00</updated>
+ <updated>2017-10-08T21:29:37+02:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -2693,6 +2693,32 @@ Switched to branch 'first'
 &lt;p&gt;Finally, I encourage you to read &lt;a href=&quot;https://pragprog.com/magazines/2013-04/estimation&quot;&gt;“Estimation - The Best We Can Do”&lt;/a&gt; by Jon Jeffries where he discusses the way estimates can be done in the context of agile teams. I don’t like the concept of velocity, but some points are worth reading.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Thanks a lot to &lt;a href=&quot;http://julienblanchard.com/&quot;&gt;Julien&lt;/a&gt; for challenging me on the very first draft of the article and helping me refine my reflexion. Thanks also to all other people who helped me make some adjustments and spelling corrections!&lt;/em&gt;&lt;/p&gt;
+
+&lt;style&gt;
+#post-deadlines blockquote{
+  color: rgb(84, 84, 84);
+  font-style: normal;
+  margin: 20px 40px;
+}
+#post-deadlines blockquote p{
+  margin: 10px 20px !important;
+}
+#post-deadlines blockquote .dpm{
+  color: #3B9E2E !important;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+}
+#post-deadlines blockquote .ddev{
+  color: #AD34CF !important;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+}
+#post-deadlines blockquote .dcto{
+  color: #9E2E2E !important;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+}
+&lt;/style&gt;
 
 
        
