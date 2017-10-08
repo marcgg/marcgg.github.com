@@ -640,6 +640,16 @@
 					<integer>81</integer>
 				</dict>
 			</dict>
+			<key>2017-09-27-continous-integration.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>529164907.695566</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>89</integer>
+				</dict>
+			</dict>
 		</dict>
 		<key>userIconName</key>
 		<real>493490997</real>
@@ -835,6 +845,9 @@
 		<array>
 			<string>2017-09-04-manager-you-want.md</string>
 		</array>
+		<array>
+			<string>2017-09-27-continous-integration.md</string>
+		</array>
 	</array>
 	<key>storeFormatVersion</key>
 	<integer>1</integer>
@@ -850,7 +863,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-			<integer>82</integer>
+			<integer>90</integer>
 		</dict>
 		<key>userIconName</key>
 		<dict>

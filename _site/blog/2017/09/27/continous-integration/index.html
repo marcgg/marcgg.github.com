@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>
-      Trailing Slashes, Github Pages, Jekyll 3 & 404s
+      Continous Integration at Drivy
     </title>
-    <meta name="description" content="Github Pages' change from Jekyll 2 to 3 broke my website and many others because of a change in trailing slashes behaviour.">
+    <meta name="description" content="In this article I try to give concrete examples on how Drivy went from nothing to shipping to production multiples times a day while maintaining a low level of defects. ">
     <meta name="author" content="Marc G Gauthier">
     <meta content='user-scalable=no, width=device-width, initial-scale=1.0' name='viewport'>
     <meta name="google-site-verification" content="x2EpQdOMz-k9fP8hak9I3COaXhnQ4jNLp2GU4GYQ8jM" />
@@ -37,7 +37,7 @@
     <h1>
   <span>
     
-      Trailing Slashes, Github Pages, Jekyll 3 & 404s
+      Continous Integration at Drivy
     
     
   </span>
@@ -45,58 +45,16 @@
 
 
 <div class="published">
-  <span>14 March 2016</span>
+  <span>27 September 2017</span>
 </div>
 
 <div id="container">
   <div id="content">
     <div class="post" id="post-">
 
-      <p>A month ago Github <a href="https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0">announced</a> that they was now running Jekyll 3. At this point I already tried to upgrade but ran into so many issues I gave up, so I was still building my site with Jekyll 2.</p>
+      <p>Here is another article I wrote for <a href="https://drivy.engineering">Drivy’s engineering blog</a>. I was thinking that a lot of company share where they are at in term of CI processes, but don’t really explain how they got there. In this post, I’ve went over almost five years of various iterations, from having nothing and shipping manually to building our own release tool.</p>
 
-<p>Looking at the announcement I figured that it was no big deal since every major deprecations would only occur in May. It really felt safe to stay with Jekyll 2 and migrate in a month or two.</p>
-
-<p>Big mistake.</p>
-
-<h2 id="the-symptoms">The Symptoms</h2>
-
-<p>A few weeks later, while checking my analytics, I noticed that my view count was dropping slowly but surely:</p>
-
-<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/analytics-drop.jpg" alt="Google analytics drop" style="padding: 20px; width: 600px;" /></div>
-
-<p>I thought that there was some algorithm change on Google’s side and didn’t bother digging more into it… until I later checked Google Webmaster tools and saw a large increase in crawling errors around the same time!</p>
-
-<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/webmaster-tools.jpg" alt="Google webmaster tools drop" style="padding: 20px; width: 600px;" /></div>
-
-<p><em>Note that this only occurred mid February and not right when Github started using Jekyll 3 because this was the moment when I published <a href="/blog/2016/02/15/rspec-on-multiple-rails-projects/">a new article</a>. This lead me to rebuild my site, bust my cache and so on. This made the whole experience even more confusing.</em></p>
-
-<h2 id="the-issue--how-to-solve-it">The Issue &amp; How To Solve It</h2>
-
-<p>Since this site is not my main focus, I could only investigate later on. Once I found some time to spend on it, I understood that this was due to a major change in Jekyll 3 regarding trailing slashes as explained in the <a href="https://jekyllrb.com/docs/upgrading/2-to-3/">migration guide</a>.</p>
-
-<blockquote>
-  <p>In Jekyll 2, any URL constructed from the permalink: field had a trailing slash (/) added to it automatically. Jekyll 3 no longer adds a trailing slash automatically to permalink: URLs. This can potentially result in old links to pages returning a 404 error.</p>
-</blockquote>
-
-<p>My configuration at the time looked like this, with no trailing slash explicitly mentioned:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>permalink: /:categories/:year/:month/:day/:title
-</code></pre>
-</div>
-
-<p>A lot of external links pointing to my blog had trailing slashes but I never paid any attention to this since it was working properly. Once this trailing slash redirect logic stopped working on Github Pages, I lost a lot of links, dropped terribly in SEO and lost most of my traffic in the course of a few weeks.</p>
-
-<p>Ouch.</p>
-
-<p>I fixed the issue by adding explicitly the trailing slash to the <code class="highlighter-rouge">permalink</code> configuration. Once it was done I started to see my stats slowly going back up again.</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>permalink: /:categories/:year/:month/:day/:title/
-</code></pre>
-</div>
-
-<p>It’s a bit of a shame that such a breaking change was released somewhat under the radar. I’m wondering how many websites are now returning 404s because of it… The positive side of this is that the Jekyll team did take this <a href="https://github.com/jekyll/jekyll/issues/4440">into account</a> and <a href="https://talk.jekyllrb.com/t/github-pages-with-jekyll3-blog-posts-with-trailing-slash-no-longer-work/1877/3">updated their documentation</a>.</p>
-
-<p>The only sure thing is that from now on I’ll try to pay more attention to my blog’s analytics!</p>
+<p>You can read about it here: <a href="https://drivy.engineering/continuous-integration/">Evolution Of Our Continuous Delivery Process</a></p>
 
 
 
@@ -127,51 +85,6 @@
             
           
             
-              
-              <li><a href="/blog/2016/11/21/chiptune-sequencer-multiplayer/">Building A Multiplayer 8 Bits Sequencer</a></li>
-            
-          
-            
-              
-              <li><a href="/blog/2016/11/01/javascript-audio/">Generate Sounds Programmatically With Javascript</a></li>
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-              
-              <li><a href="/blog/2016/03/01/vimrc-example/">Vim Configuration From Scratch in 2016</a></li>
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
           
             
           
@@ -197,40 +110,7 @@
           
             
               
-              <li><a href="/blog/2014/07/22/in-defense-of-legacy-code/">Some Respect For Legacy Code</a></li>
-            
-          
-            
-          
-            
-              
-              <li><a href="/blog/2014/04/28/frame-based-layout-bad-code/">Tips on Creating a Website From When I Was 12</a></li>
-            
-          
-            
-          
-            
-          
-            
-              
-              <li><a href="/blog/2013/11/05/enough-with-the-language-trolls/">Enough With The Trolls</a></li>
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-              
-              <li><a href="/blog/2013/03/25/please-changelog-open-source/">Please Keep a Changelog For Your Open Source Lib</a></li>
+              <li><a href="/blog/2016/02/22/git-flow-heroku-pipelines/">Simple Git Flow With Heroku Pipelines</a></li>
             
           
             
@@ -252,8 +132,65 @@
             
           
             
-              
-              <li><a href="/blog/2012/09/04/one-reason-to-switch-to-vim-editor/">The One Thing That Made Me Switch To Vim</a></li>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
             
           
             

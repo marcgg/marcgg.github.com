@@ -4,13 +4,30 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2017-09-25T17:03:07+02:00</updated>
+ <updated>2017-10-08T16:22:37+02:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
    <email>marcg.gauthier@gmail.com</email>
  </author>
 
+ 
+  
+   <entry>
+     <title>Continous Integration at Drivy</title>
+     <link href="https://marcgg.com/blog/2017/09/27/continous-integration/"/>
+     <updated>2017-09-27T00:00:00+02:00</updated>
+     <id>https://marcgg.com/blog/2017/09/27/continous-integration</id>
+     <content type="html">
+       &lt;p&gt;Here is another article I wrote for &lt;a href=&quot;https://drivy.engineering&quot;&gt;Drivy’s engineering blog&lt;/a&gt;. I was thinking that a lot of company share where they are at in term of CI processes, but don’t really explain how they got there. In this post, I’ve went over almost five years of various iterations, from having nothing and shipping manually to building our own release tool.&lt;/p&gt;
+
+&lt;p&gt;You can read about it here: &lt;a href=&quot;https://drivy.engineering/continuous-integration/&quot;&gt;Evolution Of Our Continuous Delivery Process&lt;/a&gt;&lt;/p&gt;
+
+
+       
+     </content>
+   </entry>
+  
  
   
    <entry>
