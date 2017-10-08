@@ -467,67 +467,6 @@ p code, li code{
   font-style: italic;
 }
 
-/* HIRE */
-
-#hire h2{
-  margin: 40px 0px 0px 0px !important;
-  border-top: 1px solid #ddd;
-  padding-top: 40px !important;
-  padding-bottom: 40px !important;
-}
-
-#hire .example-desc{
-  margin-top: 30px;
-}
-.review{
-  width: 200px;
-  float: left;
-  padding: 5px;
-  margin: 20px;
-}
-.reviewer{
-  text-align: center;
-}
-.review img{
-  width: 80px;
-  border-radius: 80px;
-}
-
-#reviews{
-  margin-bottom: 20px;
-}
-
-.person{
-  text-align: center;
-  font-weight: bold;
-}
-.position{
-  text-align: center;
-  font-size: 0.75em;
-}
-.review-body{
-  margin-top: 10px;
-  text-align: justify;
-}
-
-#references_logo{
-  text-align: center;
-  margin-bottom: 20px;
-  padding-left: 30px;
-}
-
-#references_logo img{
-  width: 100px;
-  float: left;
-  margin: 20px 20px;
-  border: 1px solid #ddd;
-}
-
-#references_logo .minor{
-  width: 69px;
-  margin: 20px 15px;
-}
-
 /*************** CUSTOM ARTICLE CSS ***************/
 
 #post-deadlines blockquote{
