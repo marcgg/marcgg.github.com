@@ -650,6 +650,16 @@
 					<integer>89</integer>
 				</dict>
 			</dict>
+			<key>2017-10-09-paper-note-taking-meetings.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>529175232.09826398</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>97</integer>
+				</dict>
+			</dict>
 		</dict>
 		<key>userIconName</key>
 		<real>493490997</real>
@@ -848,6 +858,9 @@
 		<array>
 			<string>2017-09-27-continous-integration.md</string>
 		</array>
+		<array>
+			<string>2017-10-09-paper-note-taking-meetings.md</string>
+		</array>
 	</array>
 	<key>storeFormatVersion</key>
 	<integer>1</integer>
@@ -863,7 +876,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-			<integer>90</integer>
+			<integer>98</integer>
 		</dict>
 		<key>userIconName</key>
 		<dict>
