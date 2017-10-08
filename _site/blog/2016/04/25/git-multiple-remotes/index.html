@@ -1,128 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>
-      Pushing To Both Bitbucket And Github
-    </title>
-    <meta name="description" content="Here's some interesting features of Git I tried out while messing around with the idea of using Bitbucket as a failover for Github.">
-    <meta name="author" content="Marc G Gauthier">
-    <meta content='user-scalable=no, width=device-width, initial-scale=1.0' name='viewport'>
-    <meta name="google-site-verification" content="x2EpQdOMz-k9fP8hak9I3COaXhnQ4jNLp2GU4GYQ8jM" />
-    <link href='//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,400,700,300' rel='stylesheet' type='text/css'>
-    <link href="/assets/css/app.css?body=1" rel="stylesheet" type="text/css" media="all">
-    <link href="/atom.xml" rel="alternate" type="application/atom+xml" title="Marcgg#Blog">
-    <link rel="shortcut icon" href="/assets/favicon.png">
-  </head>
-
-  <body>
-    <div id="gradient"></div>
-    <header>
-
-      <div id="logo">
-        <a id='logo1' href="/">marcgg</a>
-        <span id='logo2'>#</span>
-        <a id='logo3' href="/blog/">
-          blog
-        </a>
-      </div>
-      <div id="more-nav">
-        &rarr; <a href="/blog/" class="selected">blog</a>
-        &rarr; <a href="/books/" class="">books</a>
-        &rarr; <a href="/hire/" class="">hire me</a>
-      </div>
-    </header>
-
-    <h1>
-  <span>
-    
-      Pushing To Both Bitbucket And Github
-    
-    
-  </span>
-</h1>
-
-
-<div class="published">
-  <span>25 April 2016</span>
-</div>
-
-<div id="container">
-  <div id="content">
-    <div class="post" id="post-">
-
-      <p>The great thing with Git is that it’s distributed. However in many projects we end up with a single point of failure, which kind of defeats the point. For instance a lot of people use Github and when it goes down, they can’t push code and collaborate with their team. From this observation, I decided to mess arround with ideas on how to work on the same code base with both Github and Bitbucket.</p>
-
-<p><strong>Disclaimer:</strong> I didn’t really find a usable solution for my issue, but still ended up having some fun with git push urls and git aliases so I figured I’d share those.</p>
-
-<h2 id="pushing-explicitely-to-two-different-remotes">Pushing Explicitely To Two Different Remotes</h2>
-
-<p>Let’s imagine we set up two entirely different remotes for the same project:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>$  git remote add bitbucket git@bitbucket.org:marcgg/multiple-origins.git
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="utf-8"> <title> Pushing To Both Bitbucket And Github </title> <meta name="description" content="Here's some interesting features of Git I tried out while messing around with the idea of using Bitbucket as a failover for Github."> <meta name="author" content="Marc G Gauthier"> <meta content='user-scalable=no, width=device-width, initial-scale=1.0' name='viewport'> <meta name="google-site-verification" content="x2EpQdOMz-k9fP8hak9I3COaXhnQ4jNLp2GU4GYQ8jM" /> <link href='//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,400,700,300' rel='stylesheet' type='text/css'> <link href="/assets/css/app.css?body=1" rel="stylesheet" type="text/css" media="all"> <link href="/atom.xml" rel="alternate" type="application/atom+xml" title="Marcgg#Blog"> <link rel="shortcut icon" href="/assets/favicon.png"> </head> <body> <div id="gradient"></div> <header> <div id="logo"> <a id='logo1' href="/">marcgg</a> <span id='logo2'>#</span> <a id='logo3' href="/blog/"> blog </a> </div> <div id="more-nav"> &rarr; <a href="/blog/" class="selected">blog</a> &rarr; <a href="/books/" class="">books</a> &rarr; <a href="/hire/" class="">hire me</a> </div> </header> <h1> <span> Pushing To Both Bitbucket And Github </span> </h1> <div class="published"> <span>25 April 2016</span> </div> <div id="container"> <div id="content"> <div class="post" id="post-"> <p>The great thing with Git is that it’s distributed. However in many projects we end up with a single point of failure, which kind of defeats the point. For instance a lot of people use Github and when it goes down, they can’t push code and collaborate with their team. From this observation, I decided to mess arround with ideas on how to work on the same code base with both Github and Bitbucket.</p> <p><strong>Disclaimer:</strong> I didn’t really find a usable solution for my issue, but still ended up having some fun with git push urls and git aliases so I figured I’d share those.</p> <h2 id="pushing-explicitely-to-two-different-remotes">Pushing Explicitely To Two Different Remotes</h2> <p>Let’s imagine we set up two entirely different remotes for the same project:</p> <div class="highlighter-rouge"><pre class="highlight"><code>$  git remote add bitbucket git@bitbucket.org:marcgg/multiple-origins.git
 $ git remote add github git@github.com:marcgg/multiple-origins.git
-</code></pre>
-</div>
-
-<p>Now I can explicitely push to either project, which is quite convenient:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>$ git push github master
+</code></pre></div> <p>Now I can explicitely push to either project, which is quite convenient:</p> <div class="highlighter-rouge"><pre class="highlight"><code>$ git push github master
 $ git push bitbucket master
-</code></pre>
-</div>
-
-<h3 id="using-git-aliases">Using Git Aliases</h3>
-
-<p>We can also create an alias to make it easier to push to both remotes. We’ll be using the <code class="highlighter-rouge">!</code> (bang) <a href="http://blogs.atlassian.com/2014/10/advanced-git-aliases/">to create a more advanced alias</a>:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>$ git config alias.pushall '!git push bitbucket master &amp;&amp; git push github master'
+</code></pre></div> <h3 id="using-git-aliases">Using Git Aliases</h3> <p>We can also create an alias to make it easier to push to both remotes. We’ll be using the <code class="highlighter-rouge">!</code> (bang) <a href="http://blogs.atlassian.com/2014/10/advanced-git-aliases/">to create a more advanced alias</a>:</p> <div class="highlighter-rouge"><pre class="highlight"><code>$ git config alias.pushall '!git push bitbucket master &amp;&amp; git push github master'
 $ git pushall
-</code></pre>
-</div>
-
-<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/bitbucket_github.jpg" alt="Github and Bitbucket push" style="padding: 20px; width: 600px;" /></div>
-
-<h3 id="using-bash-aliases">Using Bash Aliases</h3>
-
-<p>We can also use bash to do this with a simple loop:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>$ alias pushall='for i in git remote; do git push $i; done;'
-</code></pre>
-</div>
-
-<p>You can then take this and push it back into a Git alias because why not, this time wrapping it in an anonymous bash function:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>$ git config alias.loopush '!f(){ for i in git remote; do git push $i; done; };f'
-</code></pre>
-</div>
-
-<p><em>If  you enjoy this kind of stuff, you should take a look at “<a href="http://blogs.atlassian.com/2014/10/advanced-git-aliases/">One weird trick for powerful Git aliases</a>”  on the Atlassian blog.</em></p>
-
-<h2 id="using-multiple-git-push-urls">Using Multiple Git Push URLs</h2>
-
-<p>You might not know that, when you add a remote, it actually adds both a fetch and a push URL. So for my exemple, it looks like this:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>$ git remote -v
+</code></pre></div> <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/bitbucket_github.jpg" alt="Github and Bitbucket push" style="padding: 20px; width: 600px;" /></div> <h3 id="using-bash-aliases">Using Bash Aliases</h3> <p>We can also use bash to do this with a simple loop:</p> <div class="highlighter-rouge"><pre class="highlight"><code>$ alias pushall='for i in git remote; do git push $i; done;'
+</code></pre></div> <p>You can then take this and push it back into a Git alias because why not, this time wrapping it in an anonymous bash function:</p> <div class="highlighter-rouge"><pre class="highlight"><code>$ git config alias.loopush '!f(){ for i in git remote; do git push $i; done; };f'
+</code></pre></div> <p><em>If you enjoy this kind of stuff, you should take a look at “<a href="http://blogs.atlassian.com/2014/10/advanced-git-aliases/">One weird trick for powerful Git aliases</a>” on the Atlassian blog.</em></p> <h2 id="using-multiple-git-push-urls">Using Multiple Git Push URLs</h2> <p>You might not know that, when you add a remote, it actually adds both a fetch and a push URL. So for my exemple, it looks like this:</p> <div class="highlighter-rouge"><pre class="highlight"><code>$ git remote -v
 bitbucket	git@bitbucket.org:marcgg/multiple-origins.git (fetch)
 bitbucket	git@bitbucket.org:marcgg/multiple-origins.git (push)
 
 github	git@github.com:marcgg/multiple-origins.git (fetch)
 github	git@github.com:marcgg/multiple-origins.git (push)
-</code></pre>
-</div>
-
-<p>The interesting thing to know here is that you can have multiple push urls. To demo this, let’s add a new remote pointing to Bitbucket and then add another push url. Note that I have to re-add the bitbuck push url, because Git will first replace the default push url before adding new ones.</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>$ git remote add origin git@bitbucket.org:marcgg/multiple-origins.git
+</code></pre></div> <p>The interesting thing to know here is that you can have multiple push urls. To demo this, let’s add a new remote pointing to Bitbucket and then add another push url. Note that I have to re-add the bitbuck push url, because Git will first replace the default push url before adding new ones.</p> <div class="highlighter-rouge"><pre class="highlight"><code>$ git remote add origin git@bitbucket.org:marcgg/multiple-origins.git
 $ git remote set-url --add --push origin git@github.com:marcgg/multiple-origins.git
 $ git remote set-url --add --push origin git@bitbucket.org:marcgg/multiple-origins.git 
-</code></pre>
-</div>
-
-<p>And now if I list my remotes I get this:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>$ git remote -v
+</code></pre></div> <p>And now if I list my remotes I get this:</p> <div class="highlighter-rouge"><pre class="highlight"><code>$ git remote -v
 bitbucket	git@bitbucket.org:marcgg/multiple-origins.git (push)
 bitbucket	git@bitbucket.org:marcgg/multiple-origins.git (fetch)
 
@@ -132,262 +25,18 @@ github	git@github.com:marcgg/multiple-origins.git (fetch)
 origin	git@bitbucket.org:marcgg/multiple-origins.git (fetch)
 origin	git@github.com:marcgg/multiple-origins.git (push)
 origin	git@bitbucket.org:marcgg/multiple-origins.git (push)
-</code></pre>
-</div>
-
-<p>I don’t know why, but I think that it looks pretty cool! I find it very peculiar to have this kind of output when simply running a <code class="highlighter-rouge">push</code> command:</p>
-
-<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/bitbucket_github_2.jpg" alt="Github and Bitbucket push" style="padding: 20px; width: 600px;" /></div>
-
-<p>Of course there are a lot of problems with this approach. For instance a push could fail while the other one succeeds, and since the operation is not wrapped in a transaction it might leave you in some weird state:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>$ git push origin master
+</code></pre></div> <p>I don’t know why, but I think that it looks pretty cool! I find it very peculiar to have this kind of output when simply running a <code class="highlighter-rouge">push</code> command:</p> <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/bitbucket_github_2.jpg" alt="Github and Bitbucket push" style="padding: 20px; width: 600px;" /></div> <p>Of course there are a lot of problems with this approach. For instance a push could fail while the other one succeeds, and since the operation is not wrapped in a transaction it might leave you in some weird state:</p> <div class="highlighter-rouge"><pre class="highlight"><code>$ git push origin master
 To git@github.com:marcgg/multiple-origins.git
 ! [rejected]        master -&gt; master (non-fast-forward)
 error: failed to push some refs to 'git@github.com:marcgg/multiple-origins.git'
 Writing objects: 100% (2/2), 271 bytes | 0 bytes/s, done.
 To git@bitbucket.org:marcgg/multiple-origins.git
   1cdea23..a4959f9  master -&gt; master
-</code></pre>
-</div>
-
-<h3 id="fetching">Fetching</h3>
-
-<p>The problem is that now we have an <code class="highlighter-rouge">origin</code> remote that points to Bitbucket and Github for pushing, but only to Bitbucket for fetching. It would feel right to have multiple fetch urls on the same remote. Soooo I guess we can just make it crash ?</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>$ git remote set-url origin cant-do-that
+</code></pre></div> <h3 id="fetching">Fetching</h3> <p>The problem is that now we have an <code class="highlighter-rouge">origin</code> remote that points to Bitbucket and Github for pushing, but only to Bitbucket for fetching. It would feel right to have multiple fetch urls on the same remote. Soooo I guess we can just make it crash ?</p> <div class="highlighter-rouge"><pre class="highlight"><code>$ git remote set-url origin cant-do-that
 $ git fetch origin
 fatal: 'cant-do-that' does not appear to be a git repository
 fatal: Could not read from remote repository.
 
 ¯\_(ツ)_/¯
-</code></pre>
-</div>
+</code></pre></div> <h2 id="conclusion">Conclusion</h2> <p>There are some complications when working with multiple remotes, but they mostly occur when you are pulling, not really when you are pushing. Overall it feels like the naive approach of pushing and pulling explicitely from a specific remote is a decent way to dealing with your main remote being down.</p> <div id="more"> <div id="more-articles"> <p>Since you scrolled this far, you might be interested in some other things I wrote!</p> <ul> <li><a href="/blog/2015/10/18/git-checkout-minus/">How To Checkout The Previous Branch In Git</a></li> <li><a href="/blog/2015/08/04/git-first-parent-log/">Git Log's --first-parent Option</a></li> <li><a href="/books/">Startup & Tech Book Reviews</a> </ul> </div> <a href="https://twitter.com/marcgg" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @marcgg</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> <a href="https://twitter.com/share" class="twitter-share-button" data-via="marcgg" data-size="large">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> </div> <div id="comments"> <style id="disqus_hide"> #disqus_thread{ display: none; } </style> <p> <span id="show-disqus-arrow">&rarr; </span> <a href="#" id="show-disqus">Read the comments or contribute with your own</a> </p> <div id="disqus_thread"></div> </div> <script type="text/javascript"> var disqus_shortname = 'marcgg'; (function() { var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true; dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq); })(); </script> </div> </div> </div> <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> <script src="/assets/js/comments.js"></script> <link rel="preload" href="/assets/css/code.css" as="style" onload="this.rel='stylesheet'"> <script> /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */ !function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this); /*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */ !function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this); </script> <footer> <div>Website powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a>, hosted on <a href="https://github.com/marcgg/marcgg.github.com">Github</a> and put together by <a href="http://twitter.com/marcgg">@marcgg</a>.</div> <div>All of the <a href="/blog">blog's articles</a> are under <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative commons</a> license unless stated otherwise. Everything else is &copy;.</div> </footer> <script type="text/javascript"> var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-31071519-1']); _gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script> </body> </html>
 
-<h2 id="conclusion">Conclusion</h2>
-
-<p>There are some complications when working with multiple remotes, but they mostly occur when you are pulling, not really when you are pushing. Overall it feels like the naive approach of pushing and pulling explicitely from a specific remote is a decent way to dealing with your main remote being down.</p>
-
-
-
-      <div id="more">
-        
-        
-
-        <div id="more-articles">
-          
-            <p>Since you scrolled this far, you might be interested in some other things I wrote!</p>
-            <ul>
-              
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-              
-              <li><a href="/blog/2015/10/18/git-checkout-minus/">How To Checkout The Previous Branch In Git</a></li>
-            
-          
-            
-          
-            
-          
-            
-              
-              <li><a href="/blog/2015/08/04/git-first-parent-log/">Git Log's --first-parent Option</a></li>
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-        
-              <li><a href="/books/">Startup & Tech Book Reviews</a>
-            </ul>
-          
-        </div>
-        <a href="https://twitter.com/marcgg" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @marcgg</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-        <a href="https://twitter.com/share" class="twitter-share-button" data-via="marcgg" data-size="large">Tweet</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-      </div>
-
-      <div id="comments">
-        <style id="disqus_hide">
-          #disqus_thread{
-            display: none;
-          }
-        </style>
-        <p>
-          <span id="show-disqus-arrow">&rarr; </span>
-          <a href="#" id="show-disqus">Read the comments or contribute with your own</a>
-        </p>
-        <div id="disqus_thread"></div>
-      </div>
-      <script type="text/javascript">
-          var disqus_shortname = 'marcgg';
-          (function() {
-              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-              dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-          })();
-      </script>
-
-    </div>
-
-  </div>
-</div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="/assets/js/comments.js"></script>
-
-<link rel="preload" href="/assets/css/code.css" as="style" onload="this.rel='stylesheet'">
-<script>
-/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
-!function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
-/*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
-!function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
-</script>
-
-
-    <footer>
-      <div>Website powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a>, hosted on
-      <a href="https://github.com/marcgg/marcgg.github.com">Github</a>
-      and put together by <a href="http://twitter.com/marcgg">@marcgg</a>.</div>
-      <div>All of the <a href="/blog">blog's articles</a> are under
-      <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative commons</a> license
-      unless stated otherwise. Everything else is &copy;.</div>
-    </footer>
-
-    <script type="text/javascript">
-
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-31071519-1']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-
-    </script>
-  </body>
-</html>
