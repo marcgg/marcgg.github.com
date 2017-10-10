@@ -78,7 +78,7 @@ Before ending the 1:1, I can easily use the color coding to scan this single pag
 
 Of course, while this has some advantages, this is not perfect and has some drawbacks.
 
-For instance having to physically grab the notebooks can be problematic if I'm not at my desk. I'm also quite afraid to loose them, and will probably need to figure out a way to ensure they are backed up with solutions like [Rocketbook][8]. This might be overkill, I still need to figure out my options.
+For instance having to physically grab the notebooks can be problematic if I'm not at my desk. I'm also quite afraid to lose them, and will probably need to figure out a way to ensure they are backed up with solutions like [Rocketbook][8]. This might be overkill, I still need to figure out my options.
 
 Another limit is that while I can type quite fast, I'm a bit slower when writing by hand. I'm still working on this by improving my shorthand and creating simple systems (like circled initials to reference people) to be able to write quicker and more effectively.
 
