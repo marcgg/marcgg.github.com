@@ -4,13 +4,110 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2018-01-28T18:27:29+01:00</updated>
+ <updated>2018-01-28T20:37:05+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
    <email>marcg.gauthier@gmail.com</email>
  </author>
 
+ 
+  
+   <entry>
+     <title>Tracking Short Term Tasks With Notebooks</title>
+     <link href="https://marcgg.com/blog/2018/01/29/todo-list-notebook-system/"/>
+     <updated>2018-01-29T00:00:00+01:00</updated>
+     <id>https://marcgg.com/blog/2018/01/29/todo-list-notebook-system</id>
+     <content type="html">
+       &lt;p&gt;Since I’ve moved from software development to management, I have a lot more tasks popping up during the day and a lot of ongoing work. Obviously I don’t have the time to do everything right away, so I needed to find a way to handle this ongoing flow of short term topics.&lt;/p&gt;
+
+&lt;h2 id=&quot;requirements&quot;&gt;Requirements&lt;/h2&gt;
+
+&lt;p&gt;I know that there are thousands of &lt;a href=&quot;https://evernote.com/&quot;&gt;apps&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/Getting_Things_Done&quot;&gt;methodologies&lt;/a&gt; focused on this topic, but I wanted something that worked perfectly for me and fitted in the way I work. These were my requirements:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Is optimised for short tasks that need to be done within a couple of weeks&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Does not require a computer since I don’t want to always be carrying a computer with me&lt;/li&gt;
+  &lt;li&gt;Does not require a phone since I don’t like typing on a phone&lt;/li&gt;
+  &lt;li&gt;Allows me to simply push back tasks&lt;/li&gt;
+  &lt;li&gt;Is easily browsable and retains history of modifications&lt;/li&gt;
+  &lt;li&gt;Does not require much continuous time to setup and maintain&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;notebooks--lists&quot;&gt;Notebooks &amp;amp; Lists&lt;/h2&gt;
+
+&lt;p&gt;I use a small notebook (9x14cm) and a &lt;a href=&quot;http://amzn.to/2y2NXeg&quot;&gt;4 colors pen&lt;/a&gt;. To facilitate future reading, I write the date I start using a new notebook on the first page. A notebook usually lasts me a couple of weeks because I also use them to write down ideas and discuss with other people.&lt;/p&gt;
+
+&lt;h3 id=&quot;methodology&quot;&gt;Methodology&lt;/h3&gt;
+
+&lt;p&gt;Here is how I keep track of tasks:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;I write in blue the tasks as they come on a single page. If the task is really important, I circle it in red.&lt;/li&gt;
+  &lt;li&gt;When I complete a task, I cross it off in blue.&lt;/li&gt;
+  &lt;li&gt;Once the page gets full, I take 5 to 10 minutes to copy what is not yet completed to a new page. At this point I can decide not to copy a task if I consider it shouldn’t be in my short term scope. If that’s the case, I make a small note in black explaining why.&lt;/li&gt;
+  &lt;li&gt;If I decide that a task still needs to be done but has a larger scope than expected, I’ll move it to another backlog, usually a Trello board.&lt;/li&gt;
+  &lt;li&gt;When a page has been copied, I cross it in black to make it clear that it’s an old version.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;how-it-looks&quot;&gt;How It Looks&lt;/h3&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/note_todo.jpg&quot; alt=&quot;Using notebook for todo list&quot; style=&quot;padding: 0px; width: 700px;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;This is an old page since it is crossed in black. Here reading the PR was an important task that I completed. I also completed 3 other tasks, but I decided to not work on the budget email because it was delayed. Finally 3 tasks were copied to another page to be completed later.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;advantages&quot;&gt;Advantages&lt;/h3&gt;
+
+&lt;h4 id=&quot;backlog-tending&quot;&gt;Backlog Tending&lt;/h4&gt;
+
+&lt;p&gt;At first glance, copying your entire todo list every couple of days doesn’t seem very efficient, but it allows me to stop for a few minutes and reconsider my priorities.  This is why I use small notebooks so that the pages fill quicker and I have to do some frequent backlog tending to figure out what I really should be doing.&lt;/p&gt;
+
+&lt;p&gt;If I have dozens of items, it will be a pain to write and it’s usually a sign that I’m overcommitted or that I let very small tasks pile up. Instead of copying them, I’ll delegate or do them if they take less than 5 minutes. I can also decide to not do the task at all.&lt;/p&gt;
+
+&lt;p&gt;All this is somewhat inspired by the way &lt;a href=&quot;https://www.atlassian.com/agile/kanban/wip-limits&quot;&gt;Kanban has a limit on certains columns&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;cleaning-up-very-small-tasks&quot;&gt;Cleaning Up Very Small Tasks&lt;/h4&gt;
+
+&lt;p&gt;I often notice that I need to do a few very small tasks that would take less than 5 minutes to complete. These tasks usually end up costing more time and energy when you let them wait for a while, so it’s best to either do them or not do them… but decide quickly!&lt;/p&gt;
+
+&lt;p&gt;Doing this frequent backlog tending allows me to just move quicker on this type of task.&lt;/p&gt;
+
+&lt;h4 id=&quot;consciously-pushing-back-tasks&quot;&gt;Consciously Pushing Back Tasks&lt;/h4&gt;
+
+&lt;p&gt;If I decide to still do a task, I need to write it again… and it’s way less fun than cross completed tasks off! However I like the fact that this is a deliberate process. This way, keeping a task in my backlog has a small confort cost to me. It’s easy to leave a task for months in a backlog, but it’s really annoying to have to write the same task over and over!&lt;/p&gt;
+
+&lt;p&gt;This situation forces me to stop thinking that I’ll eventually do a given task this week and realise that it will never be a priority. This way my backlog is what I’m really going to do next, not a long list of outdated ideas.&lt;/p&gt;
+
+&lt;h4 id=&quot;easily-readable-history&quot;&gt;Easily Readable History&lt;/h4&gt;
+
+&lt;p&gt;When going back through a notebook, I can see what tasks I’ve accomplished, what I pushed back and what I decided to never do:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Task crossed in blue: done&lt;/li&gt;
+  &lt;li&gt;Black note on a task: abandoned&lt;/li&gt;
+  &lt;li&gt;Task written a on different pages: pushed back&lt;/li&gt;
+  &lt;li&gt;Same task circled in red on multiple pages: probably a problem&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I can also quickly browse through and visually get a picture of what happened recently, looking at the number of tasks completed or the amount of tasks circled in red.&lt;/p&gt;
+
+&lt;h4 id=&quot;committing-information-to-memory&quot;&gt;Committing Information To Memory&lt;/h4&gt;
+
+&lt;p&gt;I’ve read a lot that &lt;a href=&quot;http://www.npr.org/2016/04/17/474525392/attention-students-put-your-laptops-away&quot;&gt;writing down notes helps with information retention&lt;/a&gt;. I don’t know if it’s generally true, but it’s really the case for me. So writing and copying tasks allow me to retain more information and keep all the ongoing projects and topics in mind more easily, which helps to make quicker decision and not have to dig into a todo list app to know what I have to do in the next couple of days.&lt;/p&gt;
+
+&lt;h3 id=&quot;limitations&quot;&gt;Limitations&lt;/h3&gt;
+
+&lt;p&gt;Just like my &lt;a href=&quot;/blog/2017/10/09/paper-note-taking-meetings/&quot;&gt;note taking during 1 on 1 strategy&lt;/a&gt;, this methodology has a lot of limits. Paper notes are not searchable, not backed up in the cloud… but I feel like most limitations are not a real issue to me since I only use this for short term tasks. The only problem I saw so far is when I work remotely and forget to take my notebook with me… but it doesn’t happen often :)&lt;/p&gt;
+
+&lt;p&gt;This system is also optimised for tasks that take a day maximum and need to be done short term, this is why I use other strategies for long term projects. I’m ok with not having a unified task system and actually prefer to optimise for the specificity of the short term tasks. However I know that some people enjoy something fitting for all situations.&lt;/p&gt;
+
+&lt;p&gt;Overall, clearly this system is not perfect, and is highly tailored to the way I work, but hopefully this article will still have insights that will help you improve the way you deal with tasks!&lt;/p&gt;
+
+
+       
+     </content>
+   </entry>
+  
  
   
    <entry>
