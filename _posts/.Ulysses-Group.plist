@@ -660,14 +660,14 @@
 					<integer>97</integer>
 				</dict>
 			</dict>
-			<key>2018-01-29-todo-list-notebook-system.md</key>
+			<key>2018-02-18-todo-list-notebook-system.md</key>
 			<dict>
 				<key>lastModification</key>
-				<real>538859796.62337005</real>
+				<real>540664869.42327905</real>
 				<key>version</key>
 				<dict>
 					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-					<integer>105</integer>
+					<integer>107</integer>
 				</dict>
 			</dict>
 		</dict>
@@ -872,7 +872,7 @@
 			<string>2017-10-09-paper-note-taking-meetings.md</string>
 		</array>
 		<array>
-			<string>2018-01-29-todo-list-notebook-system.md</string>
+			<string>2018-02-18-todo-list-notebook-system.md</string>
 		</array>
 	</array>
 	<key>storeFormatVersion</key>
@@ -889,7 +889,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-			<integer>106</integer>
+			<integer>108</integer>
 		</dict>
 		<key>userIconName</key>
 		<dict>
