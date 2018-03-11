@@ -670,6 +670,16 @@
 					<integer>107</integer>
 				</dict>
 			</dict>
+			<key>2018-03-12-software-quality-focus.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>542487093.82434297</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>113</integer>
+				</dict>
+			</dict>
 		</dict>
 		<key>userIconName</key>
 		<real>493490997</real>
@@ -874,6 +884,9 @@
 		<array>
 			<string>2018-02-18-todo-list-notebook-system.md</string>
 		</array>
+		<array>
+			<string>2018-03-12-software-quality-focus.md</string>
+		</array>
 	</array>
 	<key>storeFormatVersion</key>
 	<integer>1</integer>
@@ -889,7 +902,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-			<integer>108</integer>
+			<integer>114</integer>
 		</dict>
 		<key>userIconName</key>
 		<dict>
