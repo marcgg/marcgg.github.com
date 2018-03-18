@@ -22,11 +22,11 @@ Of course some organisations will need something like git-flow, it has its merit
 - You are in a larger team with a dedicated QA team.
 - You can't ship to production a few times a week because of reasons outside of your current git flow.
 
-It's also worth saying that a better git flow will not fix everything. Please invest in automated tests, pull requests, [monitoring][2], code quality. Learn to [deal with large features][3] and aim at [continuous delivery][4], it will help in the long run.
+It's also worth saying that a better git flow will not fix everything. Please invest in automated tests, pull requests, [monitoring][2], code quality. Learn to [deal with large features][3], [ship smaller things][4] and aim at [continuous delivery][5], it will help in the long run.
 
 ## Proposed Git Flow
 
-I [already wrote about this][5], but here is a simplified version, since even my first version looked a bit complicated to some. 
+I [already wrote about this][6], but here is a simplified version, since even my first version looked a bit complicated to some. 
 
 ### Releasing 
 
@@ -53,7 +53,7 @@ I don't think there's a need for a strong process here. It's basically up to you
 
 ### What version scheme should I use?
 
-If your version number is only used by your small team, it doesn't really matter, use what makes sense to you. If it's used by more people, I'd recommend [SEMVER][6].
+If your version number is only used by your small team, it doesn't really matter, use what makes sense to you. If it's used by more people, I'd recommend [SEMVER][7].
 
 ### Rebasing is hard, won't it mess up my branches?
 
@@ -70,6 +70,7 @@ Please don't, use what works for you :)
 [1]:	/assets/blog/git-flow-complex.png
 [2]:	/blog/2016/07/04/monitoring-bugs/
 [3]:	https://drivy.engineering/best-practices-for-large-features/
-[4]:	https://drivy.engineering/continuous-integration/
-[5]:	/blog/2016/02/22/git-flow-heroku-pipelines/
-[6]:	https://semver.org/
+[4]:	/blog/2018/03/20/splitting-releases/
+[5]:	https://drivy.engineering/continuous-integration/
+[6]:	/blog/2016/02/22/git-flow-heroku-pipelines/
+[7]:	https://semver.org/

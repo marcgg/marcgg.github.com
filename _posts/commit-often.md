@@ -4,7 +4,7 @@ title: "Committing often"
 description: ""
 blog: false
 category: blog
-tag: Git
+tag: Engineering
 ---
 
 Commit just like ctrl+s

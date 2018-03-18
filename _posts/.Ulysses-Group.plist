@@ -680,44 +680,54 @@
 					<integer>115</integer>
 				</dict>
 			</dict>
-			<key>2018-03-20-simplify-git-flow.md</key>
+			<key>2018-03-20-splitting-releases.md</key>
 			<dict>
 				<key>lastModification</key>
-				<real>543087132.24943101</real>
+				<real>543089158.88241506</real>
 				<key>version</key>
 				<dict>
 					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-					<integer>129</integer>
+					<integer>146</integer>
 				</dict>
 			</dict>
-			<key>2018-03-21-checker-jobs-data-consistency.md</key>
+			<key>checker-jobs-data-consistency.md</key>
 			<dict>
 				<key>lastModification</key>
-				<real>543087123.16643596</real>
+				<real>543089170.767259</real>
 				<key>version</key>
 				<dict>
 					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-					<integer>127</integer>
+					<integer>149</integer>
 				</dict>
 			</dict>
-			<key>2018-03-21-splitting-releases.md</key>
+			<key>commit-often.md</key>
 			<dict>
 				<key>lastModification</key>
-				<real>543087494.55880404</real>
+				<real>543089174.54730201</real>
 				<key>version</key>
 				<dict>
 					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-					<integer>133</integer>
+					<integer>151</integer>
 				</dict>
 			</dict>
-			<key>2018-03-22-commit-often.md</key>
+			<key>diversity beyond just gender.md</key>
 			<dict>
 				<key>lastModification</key>
-				<real>543087755.91167796</real>
+				<real>543089153.33250499</real>
 				<key>version</key>
 				<dict>
 					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-					<integer>137</integer>
+					<integer>143</integer>
+				</dict>
+			</dict>
+			<key>simplify-git-flow.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>543089166.28891897</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>147</integer>
 				</dict>
 			</dict>
 		</dict>
@@ -928,16 +938,19 @@
 			<string>2018-03-19-software-quality-focus.md</string>
 		</array>
 		<array>
-			<string>2018-03-20-simplify-git-flow.md</string>
+			<string>2018-03-20-splitting-releases.md</string>
 		</array>
 		<array>
-			<string>2018-03-21-checker-jobs-data-consistency.md</string>
+			<string>simplify-git-flow.md</string>
 		</array>
 		<array>
-			<string>2018-03-21-splitting-releases.md</string>
+			<string>checker-jobs-data-consistency.md</string>
 		</array>
 		<array>
-			<string>2018-03-22-commit-often.md</string>
+			<string>commit-often.md</string>
+		</array>
+		<array>
+			<string>diversity beyond just gender.md</string>
 		</array>
 	</array>
 	<key>storeFormatVersion</key>
@@ -954,7 +967,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-			<integer>138</integer>
+			<integer>152</integer>
 		</dict>
 		<key>userIconName</key>
 		<dict>
