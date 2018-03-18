@@ -680,6 +680,46 @@
 					<integer>115</integer>
 				</dict>
 			</dict>
+			<key>2018-03-20-simplify-git-flow.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>543087132.24943101</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>129</integer>
+				</dict>
+			</dict>
+			<key>2018-03-21-checker-jobs-data-consistency.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>543087123.16643596</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>127</integer>
+				</dict>
+			</dict>
+			<key>2018-03-21-splitting-releases.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>543087494.55880404</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>133</integer>
+				</dict>
+			</dict>
+			<key>2018-03-22-commit-often.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>543087755.91167796</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>137</integer>
+				</dict>
+			</dict>
 		</dict>
 		<key>userIconName</key>
 		<real>493490997</real>
@@ -887,6 +927,18 @@
 		<array>
 			<string>2018-03-19-software-quality-focus.md</string>
 		</array>
+		<array>
+			<string>2018-03-20-simplify-git-flow.md</string>
+		</array>
+		<array>
+			<string>2018-03-21-checker-jobs-data-consistency.md</string>
+		</array>
+		<array>
+			<string>2018-03-21-splitting-releases.md</string>
+		</array>
+		<array>
+			<string>2018-03-22-commit-often.md</string>
+		</array>
 	</array>
 	<key>storeFormatVersion</key>
 	<integer>1</integer>
@@ -902,7 +954,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-			<integer>116</integer>
+			<integer>138</integer>
 		</dict>
 		<key>userIconName</key>
 		<dict>
