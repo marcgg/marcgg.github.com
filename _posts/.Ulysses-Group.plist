@@ -2,10 +2,31 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>childOrder</key>
+	<array>
+		<string>New Folder</string>
+	</array>
 	<key>createMarkedFile</key>
 	<integer>0</integer>
 	<key>resolutionData</key>
 	<dict>
+		<key>childOrder</key>
+		<dict>
+			<key>New Folder</key>
+			<dict>
+				<key>explicitUnassignment</key>
+				<true/>
+				<key>firstUnassignment</key>
+				<real>543097310.982144</real>
+				<key>lastModification</key>
+				<real>543097310.982144</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>3</integer>
+				</dict>
+			</dict>
+		</dict>
 		<key>createMarkedFile</key>
 		<real>493490997</real>
 		<key>sheetClusters</key>
@@ -690,6 +711,16 @@
 					<integer>146</integer>
 				</dict>
 			</dict>
+			<key>2018-03-22-expressing-intent-comments-ruby.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>543100717.56982398</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>165</integer>
+				</dict>
+			</dict>
 			<key>checker-jobs-data-consistency.md</key>
 			<dict>
 				<key>lastModification</key>
@@ -941,6 +972,9 @@
 			<string>2018-03-20-splitting-releases.md</string>
 		</array>
 		<array>
+			<string>2018-03-22-expressing-intent-comments-ruby.md</string>
+		</array>
+		<array>
 			<string>simplify-git-flow.md</string>
 		</array>
 		<array>
@@ -959,6 +993,11 @@
 	<string>Notes</string>
 	<key>versioning</key>
 	<dict>
+		<key>childOrder</key>
+		<dict>
+			<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+			<integer>3</integer>
+		</dict>
 		<key>createMarkedFile</key>
 		<dict>
 			<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
@@ -967,7 +1006,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-			<integer>154</integer>
+			<integer>166</integer>
 		</dict>
 		<key>userIconName</key>
 		<dict>

@@ -2,7 +2,7 @@
 layout: post
 title: "Start Shipping Smaller Things"
 description: "Reducing the size of your releases is a great thing you can do to improve the health of app. However it's not always easy to get into this mindset..."
-blog: true
+blog: false
 category: blog
 tag: Engineering
 ---
