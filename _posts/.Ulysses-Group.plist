@@ -670,14 +670,14 @@
 					<integer>107</integer>
 				</dict>
 			</dict>
-			<key>2018-03-19-software-quality-focus.md</key>
+			<key>2018-03-18-software-quality-focus.md</key>
 			<dict>
 				<key>lastModification</key>
-				<real>543083722.64228797</real>
+				<real>543094591.39228296</real>
 				<key>version</key>
 				<dict>
 					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-					<integer>115</integer>
+					<integer>153</integer>
 				</dict>
 			</dict>
 			<key>2018-03-20-splitting-releases.md</key>
@@ -935,7 +935,7 @@
 			<string>2018-02-18-todo-list-notebook-system.md</string>
 		</array>
 		<array>
-			<string>2018-03-19-software-quality-focus.md</string>
+			<string>2018-03-18-software-quality-focus.md</string>
 		</array>
 		<array>
 			<string>2018-03-20-splitting-releases.md</string>
@@ -967,7 +967,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-			<integer>152</integer>
+			<integer>154</integer>
 		</dict>
 		<key>userIconName</key>
 		<dict>

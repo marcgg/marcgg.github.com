@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2018-03-18T19:20:01+01:00</updated>
+ <updated>2018-03-18T20:36:37+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -35,9 +35,9 @@
   
    <entry>
      <title>Where To Focus Software Quality Efforts</title>
-     <link href="https://marcgg.com/blog/2018/03/19/software-quality-focus/"/>
-     <updated>2018-03-19T00:00:00+01:00</updated>
-     <id>https://marcgg.com/blog/2018/03/19/software-quality-focus</id>
+     <link href="https://marcgg.com/blog/2018/03/18/software-quality-focus/"/>
+     <updated>2018-03-18T00:00:00+01:00</updated>
+     <id>https://marcgg.com/blog/2018/03/18/software-quality-focus</id>
      <content type="html">
        &lt;p&gt;When building software it’s often hard to pinpoint where to focus efforts. We have to build the right thing, and to do it in the best way possible. A good thing to keep in mind is that not all parts of a codebase deserve the same attention.&lt;/p&gt;
 
