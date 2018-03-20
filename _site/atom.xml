@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2018-03-18T22:18:51+01:00</updated>
+ <updated>2018-03-20T15:34:40+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -14,6 +14,24 @@
  
   
  
+  
+   <entry>
+     <title>Start Shipping Smaller Things</title>
+     <link href="https://marcgg.com/blog/2018/03/20/splitting-releases/"/>
+     <updated>2018-03-20T00:00:00+01:00</updated>
+     <id>https://marcgg.com/blog/2018/03/20/splitting-releases</id>
+     <content type="html">
+       &lt;p&gt;Reducing the size of your releases is a great thing to do in order to improve the health of app. It’ll reduce the risk of bugs, simplify rollbacks and get your code in front of users quicker. It also makes for less stressful releases… no one likes to ship one month worth of code at once!&lt;/p&gt;
+
+&lt;p&gt;However it’s hard to know how to ship smaller things, so a lot of people don’t even try to do it. If you’re in this situation, here is a way to start.&lt;/p&gt;
+
+&lt;p&gt;Let’s say you are adding a new feature to an older section of your app. You look at the code and decide it needs some refactoring and more tests. Instead of doing the refactoring while building the new feature, do it before. Once the refactoring is ready, merge it into &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; and release it… and &lt;strong&gt;only then&lt;/strong&gt; start coding the feature. Same thing if you need to update a dependency to add a feature: release the update before actually building the feature.&lt;/p&gt;
+
+&lt;p&gt;This is not much, but it’s in my opinion a good way to start thinking about splitting releases, which will help in the long run.&lt;/p&gt;
+
+       
+     </content>
+   </entry>
   
  
   
