@@ -714,6 +714,16 @@
 					<integer>169</integer>
 				</dict>
 			</dict>
+			<key>2018-04-03-desk-monitor-stand.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>544396634.37155795</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>176</integer>
+				</dict>
+			</dict>
 			<key>checker-jobs-data-consistency.md</key>
 			<dict>
 				<key>lastModification</key>
@@ -736,12 +746,16 @@
 			</dict>
 			<key>diversity beyond just gender.md</key>
 			<dict>
+				<key>explicitUnassignment</key>
+				<true/>
+				<key>firstUnassignment</key>
+				<real>544396072.96747601</real>
 				<key>lastModification</key>
-				<real>543089153.33250499</real>
+				<real>544396072.96747601</real>
 				<key>version</key>
 				<dict>
 					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-					<integer>143</integer>
+					<integer>171</integer>
 				</dict>
 			</dict>
 		</dict>
@@ -969,6 +983,9 @@
 		<array>
 			<string>diversity beyond just gender.md</string>
 		</array>
+		<array>
+			<string>2018-04-03-desk-monitor-stand.md</string>
+		</array>
 	</array>
 	<key>storeFormatVersion</key>
 	<integer>1</integer>
@@ -989,7 +1006,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-			<integer>170</integer>
+			<integer>177</integer>
 		</dict>
 		<key>userIconName</key>
 		<dict>

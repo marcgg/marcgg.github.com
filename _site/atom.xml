@@ -4,13 +4,113 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2018-04-02T20:54:05+02:00</updated>
+ <updated>2018-04-03T00:19:09+02:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
    <email>marcg.gauthier@gmail.com</email>
  </author>
 
+ 
+  
+   <entry>
+     <title>Building a Custom Monitor Stand</title>
+     <link href="https://marcgg.com/blog/2018/04/03/desk-monitor-stand/"/>
+     <updated>2018-04-03T00:00:00+02:00</updated>
+     <id>https://marcgg.com/blog/2018/04/03/desk-monitor-stand</id>
+     <content type="html">
+       &lt;p&gt;I’ve bought a new desk as well as a new monitor, so I’ve decided to improve my setup. The desk is a simple &lt;a href=&quot;https://www.ikea.com/us/en/catalog/products/S79046038/&quot;&gt;Ikea Hilver table&lt;/a&gt;,  but I built the monitor stand. Since I wanted to keep track of what I did, I took some pictures and I figured I could share them here… to be honest I’m not a good handyman, so I’m not sure if it’ll be useful to anyone but here you go!&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;a href=&quot;/assets/blog/desk/main_hd.jpg&quot;&gt;&lt;img src=&quot;/assets/blog/desk/main_ld.jpg&quot; alt=&quot;Home desk with a custom monitor stand&quot; style=&quot;padding: 0px; width: 700px;&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+
+&lt;p&gt;Note that it is heavily inspired by &lt;a href=&quot;https://ugmonk.com/2017/04/12/how-i-designed-a-super-productive-desk-setup/&quot;&gt;Jeff Sheldon&lt;/a&gt;’s stand, but I didn’t use raw wood because I felt a simple melamine white panel would look better with the bamboo desk. I also didn’t want to use the &lt;a href=&quot;https://www.ikea.com/us/en/catalog/products/60263574/&quot;&gt;Capita legs&lt;/a&gt; because they would make my monitor way too high and hurt my neck in the long run, so instead I built custom legs.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Disclaimer: This article was a nightmare to write in english, I couldn’t find proper translations for woodworking terms I only knew in French like “tasseaux”, “double filetage”, “chant thermocolant”, “niveau”… so don’t hesitate to correct me in the comments!&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;the-material&quot;&gt;The Material&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Melamine white panel 80cm x 25cm, 6.95€&lt;/li&gt;
+  &lt;li&gt;Leftover pine wood approx. 2m, 2€&lt;/li&gt;
+  &lt;li&gt;Double threaded bolts, 2.79€&lt;/li&gt;
+  &lt;li&gt;Thermobonding decorative film, 5.40€&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;how-to-build-it&quot;&gt;How To Build It&lt;/h2&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/desk/1n.jpg&quot; alt=&quot;Building a custom monitor stand&quot; style=&quot;padding: 0px; width: 650px;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;I bought really simple leftover piece of pine already cut like this.  In order to build the legs I just had to cut it into 4 pieces of 5cm each - instead of 10cm for the smaller legs I found out at retailers.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/desk/2n.jpg&quot; alt=&quot;Building a custom monitor stand&quot; style=&quot;padding: 0px; width: 650px;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;Be careful when measuring! The sad thing is that I only have this really old school saw that destroys everything in its path. It did the job, but I was happy to have a bit more wood than I actually needed.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/desk/3n.jpg&quot; alt=&quot;Building a custom monitor stand&quot; style=&quot;padding: 0px; width: 650px;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;The raw four legs.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/desk/4n.jpg&quot; alt=&quot;Building a custom monitor stand&quot; style=&quot;padding: 0px; width: 650px;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;Since the saw did quite a number on the wood, some sanding was needed to smooth everything out. If the leg was too damaged but still working I saved it for the less visible back of the monitor stand.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/desk/5n.jpg&quot; alt=&quot;Building a custom monitor stand&quot; style=&quot;padding: 0px; width: 650px;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;Testing if everything is level… success!&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/desk/6n.jpg&quot; alt=&quot;Building a custom monitor stand&quot; style=&quot;padding: 0px; width: 650px;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;Now drilling into the legs.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/desk/7n.jpg&quot; alt=&quot;Building a custom monitor stand&quot; style=&quot;padding: 0px; width: 650px;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;Then to add the double thread bolt.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/desk/8n.jpg&quot; alt=&quot;Building a custom monitor stand&quot; style=&quot;padding: 0px; width: 650px;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;There might be a better way to do it, but I used pliers to screw it to the legs.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/desk/9n.jpg&quot; alt=&quot;Building a custom monitor stand&quot; style=&quot;padding: 0px; width: 650px;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;There are some minor imperfections, but that’s fine since they are mostly going to be underneath the panel.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/desk/10n.jpg&quot; alt=&quot;Building a custom monitor stand&quot; style=&quot;padding: 0px; width: 650px;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;Now to measure where to add the legs. I decided to offset them a lot from the edge of the panel. This in addition to their color really close to the bamboo should make them barely visible.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/desk/11n.jpg&quot; alt=&quot;Building a custom monitor stand&quot; style=&quot;padding: 0px; width: 650px;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;Protip: use a piece of tape to know exactly how far to drill!&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/desk/12n.jpg&quot; alt=&quot;Building a custom monitor stand&quot; style=&quot;padding: 0px; width: 650px;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;Screwing the legs, then testing the level again.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/desk/12bn.jpg&quot; alt=&quot;Building a custom monitor stand&quot; style=&quot;padding: 0px; width: 650px;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;Since it’s a white panel, I wanted to use decorative film on the sides to hide the wood. The one I found was thermobonding, so I had to use an iron. To avoid damaging it, I put a piece of paper between the iron and the film.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/desk/13n.jpg&quot; alt=&quot;Building a custom monitor stand&quot; style=&quot;padding: 0px; width: 650px;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;Then to remove the extra material with a cutter.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/desk/14n.jpg&quot; alt=&quot;Building a custom monitor stand&quot; style=&quot;padding: 0px; width: 650px;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;If it’s not very precise, it doesn’t feel correct.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/desk/15n.jpg&quot; alt=&quot;Building a custom monitor stand&quot; style=&quot;padding: 0px; width: 650px;&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;Looking good!&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;a href=&quot;/assets/blog/desk/final_side_hd.jpg&quot;&gt;&lt;img src=&quot;/assets/blog/desk/final_side.jpg&quot; alt=&quot;Home desk with a custom monitor stand&quot; style=&quot;padding: 0px; width: 700px;&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+
+&lt;p&gt;Underneath the monitor stand I can hide a &lt;a href=&quot;https://amzn.to/2IomcP7&quot;&gt;USB hub&lt;/a&gt; where I plug the mouse and keyboard so I don’t have too many wires going around, but I’ll probably get a wireless mouse and keyboard soon. On top of it I store a few things, including my &lt;a href=&quot;https://amzn.to/2H78gcU&quot;&gt;bluetooth speaker&lt;/a&gt;. I didn’t invest into bigger speakers because I mostly use &lt;a href=&quot;https://amzn.to/2InSOZe&quot;&gt;my tacky gaming headset&lt;/a&gt;. My monitor is &lt;a href=&quot;https://amzn.to/2In5iQB&quot;&gt;a simple 24’’ HP&lt;/a&gt; and on the side you can see my &lt;a href=&quot;https://amzn.to/2JcnbmE&quot;&gt;2012 Macbook Pro&lt;/a&gt; that’s still holding up very well.&lt;/p&gt;
+
+
+       
+     </content>
+   </entry>
+  
  
   
    <entry>
