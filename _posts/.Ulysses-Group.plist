@@ -3,30 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>childOrder</key>
-	<array>
-		<string>New Folder</string>
-	</array>
+	<array/>
 	<key>createMarkedFile</key>
 	<integer>0</integer>
 	<key>resolutionData</key>
 	<dict>
 		<key>childOrder</key>
-		<dict>
-			<key>New Folder</key>
-			<dict>
-				<key>explicitUnassignment</key>
-				<true/>
-				<key>firstUnassignment</key>
-				<real>543097310.982144</real>
-				<key>lastModification</key>
-				<real>543097310.982144</real>
-				<key>version</key>
-				<dict>
-					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-					<integer>3</integer>
-				</dict>
-			</dict>
-		</dict>
+		<dict/>
 		<key>createMarkedFile</key>
 		<real>493490997</real>
 		<key>sheetClusters</key>
@@ -721,6 +704,16 @@
 					<integer>165</integer>
 				</dict>
 			</dict>
+			<key>2018-04-02-simplify-git-flow.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>544386963.577806</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>169</integer>
+				</dict>
+			</dict>
 			<key>checker-jobs-data-consistency.md</key>
 			<dict>
 				<key>lastModification</key>
@@ -749,16 +742,6 @@
 				<dict>
 					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
 					<integer>143</integer>
-				</dict>
-			</dict>
-			<key>simplify-git-flow.md</key>
-			<dict>
-				<key>lastModification</key>
-				<real>543089166.28891897</real>
-				<key>version</key>
-				<dict>
-					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-					<integer>147</integer>
 				</dict>
 			</dict>
 		</dict>
@@ -975,7 +958,7 @@
 			<string>2018-03-22-expressing-intent-comments-ruby.md</string>
 		</array>
 		<array>
-			<string>simplify-git-flow.md</string>
+			<string>2018-04-02-simplify-git-flow.md</string>
 		</array>
 		<array>
 			<string>checker-jobs-data-consistency.md</string>
@@ -1006,7 +989,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-			<integer>166</integer>
+			<integer>170</integer>
 		</dict>
 		<key>userIconName</key>
 		<dict>

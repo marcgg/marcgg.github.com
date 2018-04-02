@@ -4,13 +4,104 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2018-03-20T15:34:40+01:00</updated>
+ <updated>2018-04-02T20:54:05+02:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
    <email>marcg.gauthier@gmail.com</email>
  </author>
 
+ 
+  
+   <entry>
+     <title>Simplify Your Git Flow</title>
+     <link href="https://marcgg.com/blog/2018/04/02/simplify-git-flow/"/>
+     <updated>2018-04-02T00:00:00+02:00</updated>
+     <id>https://marcgg.com/blog/2018/04/02/simplify-git-flow</id>
+     <content type="html">
+       &lt;p&gt;When consulting, I often see so small teams struggle with git because they seem to expect that a good flow has to be a complicated. Usually this is because they saw &lt;a href=&quot;/assets/blog/git-flow-complex.png&quot;&gt;this git-flow schema&lt;/a&gt; at some point when researching various solutions and thought they needed all of this to be able to ship in good conditions.&lt;/p&gt;
+
+&lt;p&gt;I’d like to argue in this article that &lt;strong&gt;most small agile teams releasing a web app can be effective with only a very simple git flow if they invested in automated testing&lt;/strong&gt;. I’ve implemented a simpler approach to git in many small teams and it has always made things better. Developers are more empowered because they can easily use the flow and there is no need for additional tooling.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/no-need-complexity-git.jpg&quot; alt=&quot;Git flow can be simpler&quot; style=&quot;padding: 0px; width: 650px;&quot; /&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;disclaimer&quot;&gt;Disclaimer&lt;/h2&gt;
+
+&lt;p&gt;Of course some organisations do need something like git-flow, it has its merits. So please keep in mind that, if you are in one of these situations, you won’t find my article helpful:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Your current flow works for you.&lt;/li&gt;
+  &lt;li&gt;You are not building a web application.&lt;/li&gt;
+  &lt;li&gt;You are in a larger development team with a dedicated QA team.&lt;/li&gt;
+  &lt;li&gt;You can’t ship to production a few times a week because of reasons outside of the development team’s control.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It’s also worth saying that a better git flow will not fix everything. Please invest in automated tests, pull requests, &lt;a href=&quot;/blog/2016/07/04/monitoring-bugs/&quot;&gt;monitoring&lt;/a&gt;, code quality. Learn to &lt;a href=&quot;https://drivy.engineering/best-practices-for-large-features/&quot;&gt;deal with large features&lt;/a&gt;, &lt;a href=&quot;/blog/2018/03/20/splitting-releases/&quot;&gt;ship smaller things&lt;/a&gt; and aim at &lt;a href=&quot;https://drivy.engineering/continuous-integration/&quot;&gt;continuous delivery&lt;/a&gt;. It will most likely help in the long run.&lt;/p&gt;
+
+&lt;h2 id=&quot;proposed-git-flow&quot;&gt;Proposed Git Flow&lt;/h2&gt;
+
+&lt;p&gt;I &lt;a href=&quot;/blog/2016/02/22/git-flow-heroku-pipelines/&quot;&gt;already wrote about this&lt;/a&gt;, but here is an even more simplified version, since even my first version looked a bit complicated to some.&lt;/p&gt;
+
+&lt;h3 id=&quot;releasing&quot;&gt;Releasing&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The latest version of &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; is always deployed to a staging environment.&lt;/li&gt;
+  &lt;li&gt;When coding, use feature branches. Only merge them on &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; when they are ready to be deployed. Don’t leave too much code waiting on branches.&lt;/li&gt;
+  &lt;li&gt;If you can deploy feature branches on a new staging environment to test them, perfect! However you can probably get by with just the one staging.&lt;/li&gt;
+  &lt;li&gt;Don’t stay too long on a feature branch, or at least rebase often. Squash your commits into something that makes sense to your teammates. Rebasing is easier than it seems, give it a try!&lt;/li&gt;
+  &lt;li&gt;When you release to production, tag the latest commit and promote staging to production.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;hotfixing&quot;&gt;Hotfixing&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;If you need to hotfix, create a branch from the latest tagged version and release this. You don’t need to have an always deployable &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Don’t forget to merge your hotfix back into master.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;more-details&quot;&gt;More Details&lt;/h3&gt;
+
+&lt;p&gt;If you need more details to be convinced, you can take a look at my previous article: “&lt;a href=&quot;/blog/2016/02/22/git-flow-heroku-pipelines/&quot;&gt;Simple Git Flow With Heroku Pipelines&lt;/a&gt;”.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/git-flow-drivy.jpg&quot; alt=&quot;Proposed git flow example&quot; style=&quot;padding: 0px; width: 650px;&quot; /&gt;&lt;br /&gt;&lt;em&gt;Extract from the article&lt;/em&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;frequently-asked-questions&quot;&gt;Frequently Asked Questions&lt;/h2&gt;
+
+&lt;h3 id=&quot;doesnt-master-always-needs-to-be-deployable&quot;&gt;Doesn’t master always needs to be deployable?&lt;/h3&gt;
+
+&lt;p&gt;It’s better if it is, but really you can get by without it. You can perfectly hotfix by using tags, thus removing the need for a &lt;code class=&quot;highlighter-rouge&quot;&gt;develop&lt;/code&gt; branch.&lt;/p&gt;
+
+&lt;h3 id=&quot;should-i-use-merge-commits&quot;&gt;Should I use merge commits?&lt;/h3&gt;
+
+&lt;p&gt;I don’t think we need for a strong process here. It’s basically up to you and your team to decide what you prefer in term git history readability. Personally I use merge commits if a branch has multiple commits while trying to have short lived branches with only one commit.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-version-scheme-should-i-use&quot;&gt;What version scheme should I use?&lt;/h3&gt;
+
+&lt;p&gt;If your version number is only used by your small team, it doesn’t really matter, use what makes sense to you. If it’s used by more people, I’d recommend &lt;a href=&quot;https://semver.org/&quot;&gt;SEMVER&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;rebasing-is-hard-wont-it-mess-up-my-branches&quot;&gt;Rebasing is hard, won’t it mess up my branches?&lt;/h3&gt;
+
+&lt;p&gt;It seems complicated at first, but after a few times you’ll get used to it and see its benefits. Overall it’s quite simple and there are tons of great tutorials out there.&lt;/p&gt;
+
+&lt;h3 id=&quot;i-can-only-test-when-deploying-to-staging-how-can-i-follow-this-flow&quot;&gt;I can only test when deploying to staging, how can I follow this flow?&lt;/h3&gt;
+
+&lt;p&gt;If this is the case and you can’t easily spin a new staging machine for each feature branch, then this flow isn’t for you just yet. I would advise you to invest in ways to test locally and write automated tests as well.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-if-someone-merges-something-broken-into-master&quot;&gt;What if someone merges something broken into master?&lt;/h3&gt;
+
+&lt;p&gt;This is a situation every person in the team should try to avoid, but if it happens you can simply revert the commit.&lt;/p&gt;
+
+&lt;p&gt;If the commit is not revertable because of a destructive migration for instance (something that should be avoided, but that’s another story), then freeze releases until it’s fixed. This situation shouldn’t happen often if your team is careful and only merge things that are not broken or are at least revertable.&lt;/p&gt;
+
+&lt;h3 id=&quot;my-git-flow-works-well-for-my-team-should-i-change-it&quot;&gt;My git flow works well for my team, should I change it?&lt;/h3&gt;
+
+&lt;p&gt;Please don’t, use what works for you :)&lt;/p&gt;
+
+
+       
+     </content>
+   </entry>
+  
  
   
  
