@@ -4,10 +4,12 @@ title: "Simplify Your Git Flow"
 description: "Using git is often made too complicated. Small teams that could do just fine with a very simple flow end up re-using solutions that end up slowing them down. Here is a simpler alternative."
 blog: true
 category: blog
+featured: true
 tag: Git
+publictag: Programming
 ---
 
-When consulting, I often see so small teams struggle with git because they seem to expect that a good flow has to be a complicated. Usually this is because they saw [this git-flow schema][1] at some point when researching various solutions and thought they needed all of this to be able to ship in good conditions. 
+When consulting, I often see so small teams struggle with git because they seem to expect that a good flow has to be a complicated. Usually this is because they saw [this git-flow schema][1] at some point when researching various solutions and thought they needed all of this to be able to ship in good conditions.
 
 I'd like to argue in this article that **most small agile teams releasing a web app can be effective with only a very simple git flow if they invested in automated testing**. I've implemented a simpler approach to git in many small teams and it has always made things better. Developers are more empowered because they can easily use the flow and there is no need for additional tooling.
 
@@ -26,19 +28,19 @@ It's also worth saying that a better git flow will not fix everything. Please in
 
 ## Proposed Git Flow
 
-I [already wrote about this][6], but here is an even more simplified version, since even my first version looked a bit complicated to some. 
+I [already wrote about this][6], but here is an even more simplified version, since even my first version looked a bit complicated to some.
 
 ### Releasing
 
 - The latest version of `master` is always deployed to a staging environment.
 - When coding, use feature branches. Only merge them on `master` when they are ready to be deployed. Don't leave too much code waiting on branches.
 - If you can deploy feature branches on a new staging environment to test them, perfect! However you can probably get by with just the one staging.
-- Don't stay too long on a feature branch, or at least rebase often. Squash your commits into something that makes sense to your teammates. Rebasing is easier than it seems, give it a try! 
+- Don't stay too long on a feature branch, or at least rebase often. Squash your commits into something that makes sense to your teammates. Rebasing is easier than it seems, give it a try!
 - When you release to production, tag the latest commit and promote staging to production.
 
 ### Hotfixing
 
-- If you need to hotfix, create a branch from the latest tagged version and release this. You don't need to have an always deployable `master`. 
+- If you need to hotfix, create a branch from the latest tagged version and release this. You don't need to have an always deployable `master`.
 - Don't forget to merge your hotfix back into master.
 
 ### More Details
@@ -51,7 +53,7 @@ If you need more details to be convinced, you can take a look at my previous art
 
 ### Doesn't master always needs to be deployable?
 
-It's better if it is, but really you can get by without it. You can perfectly hotfix by using tags, thus removing the need for a `develop` branch. 
+It's better if it is, but really you can get by without it. You can perfectly hotfix by using tags, thus removing the need for a `develop` branch.
 
 ### Should I use merge commits?
 

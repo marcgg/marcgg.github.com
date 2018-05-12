@@ -4,7 +4,6 @@ title: "Vim Configuration From Scratch in 2016"
 description: "Complete example to configure Vim. We'll use pathogen and git to manage plugins, add a theme... but also set up fuzzy search, auto complete, smart indentation, multi-cursors support (like Sublime) and much more thanks to a long list of curated plugins."
 blog: true
 category: blog
-featured: true
 tag: Dev
 publictag: Programming
 ---
@@ -31,7 +30,7 @@ To do this, create a `.vim` repository with a `vimrc` file that will contain mos
 	$ touch vimrc
 	$ git init .
 
-Now you need to go back to your home directory and [symlink][8] the `vimrc` file. This way you get to use your `.vimrc` file normally while still get all the advantages of versioning with Git. 
+Now you need to go back to your home directory and [symlink][8] the `vimrc` file. This way you get to use your `.vimrc` file normally while still get all the advantages of versioning with Git.
 
 	$ ln -s ~/.vim/vimrc ~/.vimrc
 
@@ -201,7 +200,7 @@ Later on when you use your config on another machine or want to update your plug
 
 ### Vim Plugins I Used
 
-Here is a list of all the plugins I decided to include and why. I also added the advanced configuration I used and some examples when needed. This list is, of course, very subjective and will depend on what you expect your editor to do for you, but I feel like it's a good starting point. 
+Here is a list of all the plugins I decided to include and why. I also added the advanced configuration I used and some examples when needed. This list is, of course, very subjective and will depend on what you expect your editor to do for you, but I feel like it's a good starting point.
 
 #### Command-T
 
