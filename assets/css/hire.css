@@ -11,7 +11,7 @@
   margin-top: 30px;
 }
 .review{
-  width: 320px;
+  width: 300px;
   float: left;
   padding: 5px;
   margin: 20px;
@@ -25,8 +25,14 @@
   border-radius: 80px;
 }
 
-#reviews{
-  margin-bottom: 20px;
+#first-reviews {
+  border-top: 1px solid #ddd;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.reviews{
+  width: 100%;
 }
 
 .person{
