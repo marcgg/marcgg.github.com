@@ -23,9 +23,7 @@ names = ["Alice", "Bob", "Charles", "Danny"]
 However a comment like this is not directly related to the code: we have nothing making sure that it stays near the variable. It's also local: if the variable is used later on, you can't know what information the developers updating the code will have. An option is to change the variable name to something more explicit.
 
 {% highlight ruby %}
-orderednames = [
-]()  "Alice", "Bob", "Charles", "Danny"
-]
+ordered_names = ["Alice", "Bob", "Charles", "Danny"]
 {% endhighlight %}
 
 This is better because you don't even need to clarify: the code speaks for itself.
@@ -36,9 +34,9 @@ The problem with the approaches above is that the fact that the array is ordered
 
 {% highlight ruby %}
 class OrderedNames
-  attr\_reader :values
+  attr_reader :values
 
-  def initialize(array\_of\_names)
+  def initialize(array_of_names)
 	raise "Array not sorted" unless sorted?(array_of_names)
 	@values = array_of_names
   end
@@ -53,11 +51,11 @@ class OrderedNames
 
 This is way more verbose and in some cases it would be overkill since it costs time to write, test and maintain. However it can be a good approach if having an ordered array is very important and the code using the array is not defensive itself.
 
-Of course this is just an example for the sake of argument, and in a lot of case you can just rely on existing structures, like [SortedSet][2].
+Of course this is just an example for the sake of argument, and in a lot of case you can just rely on existing structures, like [SortedSet][1].
 
 ## Why Bother?
 
-Expressiveness in code is very important as we spend way more time reading code than writing it. A few minutes spent trying to figure out the best way to express your intent can result in days of productivity saved over the lifetime of a project. It's then a matter of defining what [narrative][3] you want to optimise and what tools you have at your disposal to do so.
+Expressiveness in code is very important as we spend way more time reading code than writing it. A few minutes spent trying to figure out the best way to express your intent can result in days of productivity saved over the lifetime of a project. It's then a matter of defining what [narrative][2] you want to optimise and what tools you have at your disposal to do so.
 
-[2]:	https://ruby-doc.org/stdlib-1.9.3/libdoc/set/rdoc/SortedSet.html
-[3]:	https://drivy.engineering/code_simplicity_reading_levels/
+[1]:	https://ruby-doc.org/stdlib-1.9.3/libdoc/set/rdoc/SortedSet.html
+[2]:	https://drivy.engineering/code_simplicity_reading_levels/
