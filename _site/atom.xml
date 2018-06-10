@@ -4,13 +4,56 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2018-06-10T15:30:28+02:00</updated>
+ <updated>2018-06-10T16:12:09+02:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
    <email>marcg.gauthier@gmail.com</email>
  </author>
 
+ 
+  
+   <entry>
+     <title>Committing All The Time</title>
+     <link href="https://marcgg.com/blog/2018/06/11/git-commit-all-the-time/"/>
+     <updated>2018-06-11T00:00:00+02:00</updated>
+     <id>https://marcgg.com/blog/2018/06/11/git-commit-all-the-time</id>
+     <content type="html">
+       &lt;p&gt;I tend to commit a lot when I’m working on a git branch. A &lt;em&gt;lot&lt;/em&gt;. I’d say every fifteen minutes on something I’ll add a new quick commit to track my progress. I started doing it a few years back as it felt like the logical extension of compulsively pressing &lt;code class=&quot;highlighter-rouge&quot;&gt;cmd+S&lt;/code&gt; every time I made a change.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-commit-often&quot;&gt;Why Commit Often?&lt;/h2&gt;
+
+&lt;p&gt;This approach doesn’t only fit my OCD, it also has some great advantages in my opinion:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Never lose large chunks of work&lt;/strong&gt;. Since I’m always committing and pushing, my computer could burn and I would have at worse half an hour of work only stored locally.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Easily go back in time &lt;/strong&gt;. If you’ve ever tried to &lt;code class=&quot;highlighter-rouge&quot;&gt;cmd+Z&lt;/code&gt; yourself out of a bad spot, but couldn’t because the change spanned over multiple files, then you know the struggle. This problem simply goes away when you commit at every small milestone. Big issue with your latest changes? Just &lt;code class=&quot;highlighter-rouge&quot;&gt;git reset --hard&lt;/code&gt; and start over.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Share ongoing progress&lt;/strong&gt;. If I want to show what I’ve written recently to a colleague, I have no issue just committing and pushing to Github right away. My git history is messed up locally anyways, so who cares?&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Leverage your CI to run tests&lt;/strong&gt;. If you can commit often, you can push often and run the entire test suite on your preferred CI. This is often faster than running it locally, and ensures you won’t have a surprise later in your development process.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Be able to see the various steps taken&lt;/strong&gt;. Since I’m committing every time I reach some kind of simple milestone, I get a nice history of what I’ve had to do to reach this result.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;clean-up-before-merging&quot;&gt;Clean Up Before Merging&lt;/h2&gt;
+
+&lt;p&gt;To be quick, I don’t shy away from commit messages like &lt;code class=&quot;highlighter-rouge&quot;&gt;wip&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;fixed tests&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;fixed tests for real&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;module XYZ kinda works&lt;/code&gt;. Of course by doing so, I always end up with a terrible git history that is only relevant to me.&lt;/p&gt;
+
+&lt;p&gt;Obviously that’s not good.&lt;/p&gt;
+
+&lt;p&gt;My thinking here is that, as long as I’m alone on my git branch, I can do whatever I want. However, once I decide to either ask for a PR or merge back into &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt;, I’ll have to clean my history into comprehensive commits following the project’s conventions. It’s really easier than you’d think, and if you’re not familiar with this I recommend reading: “&lt;a href=&quot;https://drivy.engineering/git-rebase-edit-history/&quot;&gt;Editing your git history with rebase for cleaner pull requests&lt;/a&gt;“by &lt;a href=&quot;https://twitter.com/intrepidd&quot;&gt;Adrien Siami&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you have some practice it doesn’t take long, and being able to rewrite your history is valuable because we all end up typing &lt;code class=&quot;highlighter-rouge&quot;&gt;git commit -m &quot;Fix tests for real this time&quot;&lt;/code&gt; at some point.&lt;/p&gt;
+
+&lt;h2 id=&quot;try-it-out-&quot;&gt;Try It Out :)&lt;/h2&gt;
+
+&lt;p&gt;Overall committing a lot allows me to make sure I don’t build yourself into a corner or lose work, while forcing me to always think about how to present my git history to the world once it’s ready to be merged.&lt;/p&gt;
+
+&lt;p&gt;If that sounds like something interesting to you, try it out and let me know!&lt;/p&gt;
+
+
+       
+     </content>
+   </entry>
+  
  
   
    <entry>
