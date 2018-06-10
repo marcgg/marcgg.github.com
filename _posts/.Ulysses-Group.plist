@@ -723,11 +723,13 @@
 			<key>2018-04-03-desk-monitor-stand.md</key>
 			<dict>
 				<key>lastModification</key>
-				<real>544396634.37155795</real>
+				<real>550330220.97952294</real>
 				<key>version</key>
 				<dict>
+					<key>22b37cbde41d031e41bbecbb31feac74cbe4c52f970ca6de54f65b5a987618fe</key>
+					<integer>7</integer>
 					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-					<integer>176</integer>
+					<integer>187</integer>
 				</dict>
 			</dict>
 			<key>2018-05-10-expressing-intent-comments-ruby.md</key>
@@ -749,13 +751,13 @@
 			<key>2018-05-15-expressing-intent-comments-ruby.md</key>
 			<dict>
 				<key>lastModification</key>
-				<real>550330158.33425903</real>
+				<real>550330223.61738801</real>
 				<key>version</key>
 				<dict>
 					<key>22b37cbde41d031e41bbecbb31feac74cbe4c52f970ca6de54f65b5a987618fe</key>
-					<integer>2</integer>
+					<integer>7</integer>
 					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-					<integer>184</integer>
+					<integer>189</integer>
 				</dict>
 			</dict>
 			<key>2018-06-10-expressing-intent-comments-ruby.md</key>
@@ -1014,19 +1016,19 @@
 			<string>2018-05-10-expressing-intent-comments-ruby.md</string>
 		</array>
 		<array>
-			<string>2018-05-15-expressing-intent-comments-ruby.md</string>
+			<string>2018-04-02-simplify-git-flow.md</string>
 		</array>
 		<array>
-			<string>2018-04-02-simplify-git-flow.md</string>
+			<string>2018-04-03-desk-monitor-stand.md</string>
+		</array>
+		<array>
+			<string>2018-05-15-expressing-intent-comments-ruby.md</string>
 		</array>
 		<array>
 			<string>checker-jobs-data-consistency.md</string>
 		</array>
 		<array>
 			<string>commit-often.md</string>
-		</array>
-		<array>
-			<string>2018-04-03-desk-monitor-stand.md</string>
 		</array>
 	</array>
 	<key>storeFormatVersion</key>
@@ -1050,7 +1052,7 @@
 			<key>22b37cbde41d031e41bbecbb31feac74cbe4c52f970ca6de54f65b5a987618fe</key>
 			<integer>7</integer>
 			<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-			<integer>185</integer>
+			<integer>189</integer>
 		</dict>
 		<key>userIconName</key>
 		<dict>
