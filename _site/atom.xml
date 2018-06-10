@@ -4,13 +4,72 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2018-05-12T14:54:04+02:00</updated>
+ <updated>2018-06-10T15:30:01+02:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
    <email>marcg.gauthier@gmail.com</email>
  </author>
 
+ 
+  
+   <entry>
+     <title>Expressing Intent Without Comments In Ruby</title>
+     <link href="https://marcgg.com/blog/2018/05/15/expressing-intent-comments-ruby/"/>
+     <updated>2018-05-15T00:00:00+02:00</updated>
+     <id>https://marcgg.com/blog/2018/05/15/expressing-intent-comments-ruby</id>
+     <content type="html">
+       &lt;p&gt;There’s an endless discussion going on between programmers about the utility of comments and how to express intent in code.  Let’s push it a bit further and see a few different ways of how to clearly define that a variable is an ordered array of names. I’m focusing here on what Ruby provides, other languages have other features to deal with this question.&lt;/p&gt;
+
+&lt;h2 id=&quot;not-using-comments&quot;&gt;(Not) Using Comments&lt;/h2&gt;
+
+&lt;p&gt;Let’s say we’re working with an array that is supposed to be ordered.&lt;/p&gt;
+
+&lt;p&gt;If we use a comment, it makes it very clear that there is a catch with this array.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# The array is ordered&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;names&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Alice&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Bob&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Charles&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Danny&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;However a comment like this is not directly related to the code: we have nothing making sure that it stays near the variable. It’s also local: if the variable is used later on, you can’t know what information the developers updating the code will have. An option is to change the variable name to something more explicit.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;orderednames&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;\[&lt;/span&gt;
+  &lt;span class=&quot;s2&quot;&gt;&quot;Alice&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Bob&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Charles&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Danny&quot;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This is better because you don’t even need to clarify: the code speaks for itself.&lt;/p&gt;
+
+&lt;h2 id=&quot;going-further-adding-defensiveness&quot;&gt;Going Further, Adding Defensiveness&lt;/h2&gt;
+
+&lt;p&gt;The problem with the approaches above is that the fact that the array is ordered is just indicative. It does express intent but we are never sure that the array is actually sorted. If we want this safety, we have the option to add a simple class doing the check for us.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;OrderedNames&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;attr_reader&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:values&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array_of_names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;raise&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Array not sorted&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;unless&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sorted?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array_of_names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;vi&quot;&gt;@values&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;array_of_names&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;kp&quot;&gt;private&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sorted?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;each_cons&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;all?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+ &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This is way more verbose and in some cases it would be overkill since it costs time to write, test and maintain. However it can be a good approach if having an ordered array is very important and the code using the array is not defensive itself.&lt;/p&gt;
+
+&lt;p&gt;Of course this is just an example for the sake of argument, and in a lot of case you can just rely on existing structures, like &lt;a href=&quot;https://ruby-doc.org/stdlib-1.9.3/libdoc/set/rdoc/SortedSet.html&quot;&gt;SortedSet&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-bother&quot;&gt;Why Bother?&lt;/h2&gt;
+
+&lt;p&gt;Expressiveness in code is very important as we spend way more time reading code than writing it. A few minutes spent trying to figure out the best way to express your intent can result in days of productivity saved over the lifetime of a project. It’s then a matter of defining what &lt;a href=&quot;https://drivy.engineering/code_simplicity_reading_levels/&quot;&gt;narrative&lt;/a&gt; you want to optimise and what tools you have at your disposal to do so.&lt;/p&gt;
+
+
+       
+     </content>
+   </entry>
+  
  
   
    <entry>
@@ -201,8 +260,6 @@
        
      </content>
    </entry>
-  
- 
   
  
   

@@ -696,12 +696,18 @@
 			</dict>
 			<key>2018-03-22-expressing-intent-comments-ruby.md</key>
 			<dict>
+				<key>explicitUnassignment</key>
+				<true/>
+				<key>firstUnassignment</key>
+				<real>550329653.69564605</real>
 				<key>lastModification</key>
-				<real>543100717.56982398</real>
+				<real>550329653.69564605</real>
 				<key>version</key>
 				<dict>
+					<key>22b37cbde41d031e41bbecbb31feac74cbe4c52f970ca6de54f65b5a987618fe</key>
+					<integer>2</integer>
 					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-					<integer>165</integer>
+					<integer>179</integer>
 				</dict>
 			</dict>
 			<key>2018-04-02-simplify-git-flow.md</key>
@@ -724,6 +730,50 @@
 					<integer>176</integer>
 				</dict>
 			</dict>
+			<key>2018-05-10-expressing-intent-comments-ruby.md</key>
+			<dict>
+				<key>explicitUnassignment</key>
+				<true/>
+				<key>firstUnassignment</key>
+				<real>550330161.84289396</real>
+				<key>lastModification</key>
+				<real>550330161.84289396</real>
+				<key>version</key>
+				<dict>
+					<key>22b37cbde41d031e41bbecbb31feac74cbe4c52f970ca6de54f65b5a987618fe</key>
+					<integer>7</integer>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>185</integer>
+				</dict>
+			</dict>
+			<key>2018-05-15-expressing-intent-comments-ruby.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>550330158.33425903</real>
+				<key>version</key>
+				<dict>
+					<key>22b37cbde41d031e41bbecbb31feac74cbe4c52f970ca6de54f65b5a987618fe</key>
+					<integer>2</integer>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>184</integer>
+				</dict>
+			</dict>
+			<key>2018-06-10-expressing-intent-comments-ruby.md</key>
+			<dict>
+				<key>explicitUnassignment</key>
+				<true/>
+				<key>firstUnassignment</key>
+				<real>550330157.24382901</real>
+				<key>lastModification</key>
+				<real>550330157.24382901</real>
+				<key>version</key>
+				<dict>
+					<key>22b37cbde41d031e41bbecbb31feac74cbe4c52f970ca6de54f65b5a987618fe</key>
+					<integer>7</integer>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>185</integer>
+				</dict>
+			</dict>
 			<key>checker-jobs-data-consistency.md</key>
 			<dict>
 				<key>lastModification</key>
@@ -742,20 +792,6 @@
 				<dict>
 					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
 					<integer>151</integer>
-				</dict>
-			</dict>
-			<key>diversity beyond just gender.md</key>
-			<dict>
-				<key>explicitUnassignment</key>
-				<true/>
-				<key>firstUnassignment</key>
-				<real>544396072.96747601</real>
-				<key>lastModification</key>
-				<real>544396072.96747601</real>
-				<key>version</key>
-				<dict>
-					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-					<integer>171</integer>
 				</dict>
 			</dict>
 		</dict>
@@ -972,6 +1008,15 @@
 			<string>2018-03-22-expressing-intent-comments-ruby.md</string>
 		</array>
 		<array>
+			<string>2018-06-10-expressing-intent-comments-ruby.md</string>
+		</array>
+		<array>
+			<string>2018-05-10-expressing-intent-comments-ruby.md</string>
+		</array>
+		<array>
+			<string>2018-05-15-expressing-intent-comments-ruby.md</string>
+		</array>
+		<array>
 			<string>2018-04-02-simplify-git-flow.md</string>
 		</array>
 		<array>
@@ -979,9 +1024,6 @@
 		</array>
 		<array>
 			<string>commit-often.md</string>
-		</array>
-		<array>
-			<string>diversity beyond just gender.md</string>
 		</array>
 		<array>
 			<string>2018-04-03-desk-monitor-stand.md</string>
@@ -1005,8 +1047,10 @@
 		</dict>
 		<key>sheetClusters</key>
 		<dict>
+			<key>22b37cbde41d031e41bbecbb31feac74cbe4c52f970ca6de54f65b5a987618fe</key>
+			<integer>7</integer>
 			<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-			<integer>177</integer>
+			<integer>185</integer>
 		</dict>
 		<key>userIconName</key>
 		<dict>
