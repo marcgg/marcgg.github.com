@@ -4,13 +4,64 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2018-10-19T15:27:28+02:00</updated>
+ <updated>2018-10-19T16:23:01+02:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
    <email>marcg.gauthier@gmail.com</email>
  </author>
 
+ 
+  
+   <entry>
+     <title>Regression Testing For Data</title>
+     <link href="https://marcgg.com/blog/2018/10/22/regression-testing-for-data-ruby/"/>
+     <updated>2018-10-22T00:00:00+02:00</updated>
+     <id>https://marcgg.com/blog/2018/10/22/regression-testing-for-data-ruby</id>
+     <content type="html">
+       &lt;p&gt;Making sure that data stays valid is really not a trivial task. Of course for simple requirements, like “this column is not null” or “this field is unique”, you can just use the database constraints and that’s it. Same goes for type validation.&lt;/p&gt;
+
+&lt;h2 id=&quot;making-sure-data-stays-valid-is-hard&quot;&gt;Making Sure Data Stays Valid Is Hard&lt;/h2&gt;
+
+&lt;p&gt;However when you want to check for something more complex, like &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;any user created after June 4th in the UK should have the new terms of services accepted, unless they came through this specific ad campaign&quot;&lt;/code&gt;, it all changes. Depending on your database you could use stored procedures, but this is often harder to write, version and maintain.&lt;/p&gt;
+
+&lt;p&gt;You could of course assume that your data will never get corrupted, and validations directly in the code should do the trick, but I think that’d be way too optimistic. Bugs happen all the time, and it’s best to plan for the worst.&lt;/p&gt;
+
+&lt;p&gt;Personally I like using database constraints as much as possible and be really defensive when writing any code changing data. However since no one is perfect I also like to &lt;a href=&quot;/blog/2016/07/04/monitoring-bugs/&quot;&gt;rely on monitoring to detect anomalies&lt;/a&gt;. For instance a big drop in conversion at signup could allow us to notice a bug on the signup process.&lt;/p&gt;
+
+&lt;p&gt;This is where the &lt;a href=&quot;https://github.com/drivy/checker_jobs&quot;&gt;checker job gem&lt;/a&gt; fits in. It gives us a simple DSL to express axioms regarding our data and be notified if they are not verified in production. This way you can notice quickly that something is going wrong and fix the data and the incriminated code.&lt;/p&gt;
+
+&lt;h2 id=&quot;using-the-checker-jobs-gem&quot;&gt;Using The Checker Jobs Gem&lt;/h2&gt;
+
+&lt;p&gt;To get an email if there are invalid users you would do this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;	&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;UserChecker&lt;/span&gt;
+	  &lt;span class=&quot;kp&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;CheckerJobs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Base&lt;/span&gt;
+	
+	  &lt;span class=&quot;n&quot;&gt;notify&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:email&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;to: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;hello@marcgg.com&quot;&lt;/span&gt;
+	
+	  &lt;span class=&quot;n&quot;&gt;ensure_no&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:user_with_invalid_tos_state&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+	    &lt;span class=&quot;c1&quot;&gt;# some code that returns invalid users in an array&lt;/span&gt;
+	  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Then you have to run this checker regularly using your favorite task scheduler solution. For instance using &lt;a href=&quot;https://github.com/mperham/sidekiq&quot;&gt;Sidekiq&lt;/a&gt; it would look like this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;	&lt;span class=&quot;no&quot;&gt;Sidekiq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Client&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;enqueue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;UserChecker&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;If you prefer another method of being notified, the gem also supports &lt;a href=&quot;https://www.bugsnag.com/&quot;&gt;Bugsnag&lt;/a&gt; and &lt;a href=&quot;https://github.com/drivy/checker_jobs/tree/master/lib/checker_jobs/notifiers&quot;&gt;is setup in a way allowing to have multiple notifiers&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;good-tradeoff-between-speed-of-development--stability&quot;&gt;Good Tradeoff Between Speed of Development &amp;amp; Stability&lt;/h2&gt;
+
+&lt;p&gt;We’ve been using this for a while now at Drivy and it has proven very useful. It speeds up development quite a bit since it gives developers confidence that the data won’t be silently corrupted, and it allows us to fix any issue very quickly. Other options would have been too time consuming (complex stored procedures) or too brittle.&lt;/p&gt;
+
+&lt;p&gt;This is why &lt;a href=&quot;https://drivy.engineering/checker-jobs/&quot;&gt;we decided to open source it recently&lt;/a&gt;, so if you find the idea interesting, please give it a try and let us know what you think!&lt;/p&gt;
+
+
+       
+     </content>
+   </entry>
+  
  
   
    <entry>

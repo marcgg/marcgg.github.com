@@ -694,22 +694,6 @@
 					<integer>146</integer>
 				</dict>
 			</dict>
-			<key>2018-03-22-expressing-intent-comments-ruby.md</key>
-			<dict>
-				<key>explicitUnassignment</key>
-				<true/>
-				<key>firstUnassignment</key>
-				<real>550329653.69564605</real>
-				<key>lastModification</key>
-				<real>550329653.69564605</real>
-				<key>version</key>
-				<dict>
-					<key>22b37cbde41d031e41bbecbb31feac74cbe4c52f970ca6de54f65b5a987618fe</key>
-					<integer>2</integer>
-					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-					<integer>179</integer>
-				</dict>
-			</dict>
 			<key>2018-04-02-simplify-git-flow.md</key>
 			<dict>
 				<key>lastModification</key>
@@ -732,22 +716,6 @@
 					<integer>187</integer>
 				</dict>
 			</dict>
-			<key>2018-05-10-expressing-intent-comments-ruby.md</key>
-			<dict>
-				<key>explicitUnassignment</key>
-				<true/>
-				<key>firstUnassignment</key>
-				<real>550330161.84289396</real>
-				<key>lastModification</key>
-				<real>550330161.84289396</real>
-				<key>version</key>
-				<dict>
-					<key>22b37cbde41d031e41bbecbb31feac74cbe4c52f970ca6de54f65b5a987618fe</key>
-					<integer>7</integer>
-					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-					<integer>185</integer>
-				</dict>
-			</dict>
 			<key>2018-05-15-expressing-intent-comments-ruby.md</key>
 			<dict>
 				<key>lastModification</key>
@@ -758,70 +726,6 @@
 					<integer>7</integer>
 					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
 					<integer>189</integer>
-				</dict>
-			</dict>
-			<key>2018-06-10-expressing-intent-comments-ruby.md</key>
-			<dict>
-				<key>explicitUnassignment</key>
-				<true/>
-				<key>firstUnassignment</key>
-				<real>550330157.24382901</real>
-				<key>lastModification</key>
-				<real>550330157.24382901</real>
-				<key>version</key>
-				<dict>
-					<key>22b37cbde41d031e41bbecbb31feac74cbe4c52f970ca6de54f65b5a987618fe</key>
-					<integer>7</integer>
-					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-					<integer>185</integer>
-				</dict>
-			</dict>
-			<key>2018-06-10-git-commit-all-the-time.md</key>
-			<dict>
-				<key>explicitUnassignment</key>
-				<true/>
-				<key>firstUnassignment</key>
-				<real>550332704.29175997</real>
-				<key>lastModification</key>
-				<real>550332704.29175997</real>
-				<key>version</key>
-				<dict>
-					<key>22b37cbde41d031e41bbecbb31feac74cbe4c52f970ca6de54f65b5a987618fe</key>
-					<integer>17</integer>
-					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-					<integer>203</integer>
-				</dict>
-			</dict>
-			<key>2018-06-10-picking-a-technology.md</key>
-			<dict>
-				<key>explicitUnassignment</key>
-				<true/>
-				<key>firstUnassignment</key>
-				<real>550330717.53832603</real>
-				<key>lastModification</key>
-				<real>550330717.53832603</real>
-				<key>version</key>
-				<dict>
-					<key>22b37cbde41d031e41bbecbb31feac74cbe4c52f970ca6de54f65b5a987618fe</key>
-					<integer>11</integer>
-					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-					<integer>197</integer>
-				</dict>
-			</dict>
-			<key>2018-06-10-structuring-team.md</key>
-			<dict>
-				<key>explicitUnassignment</key>
-				<true/>
-				<key>firstUnassignment</key>
-				<real>550330307.92444503</real>
-				<key>lastModification</key>
-				<real>550330307.92444503</real>
-				<key>version</key>
-				<dict>
-					<key>22b37cbde41d031e41bbecbb31feac74cbe4c52f970ca6de54f65b5a987618fe</key>
-					<integer>10</integer>
-					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-					<integer>193</integer>
 				</dict>
 			</dict>
 			<key>2018-06-11-git-commit-all-the-time.md</key>
@@ -836,62 +740,16 @@
 					<integer>202</integer>
 				</dict>
 			</dict>
-			<key>20commit-often.md</key>
+			<key>2018-10-22-regression-testing-for-data-ruby.md</key>
 			<dict>
-				<key>explicitUnassignment</key>
-				<true/>
-				<key>firstUnassignment</key>
-				<real>550331731.11300898</real>
 				<key>lastModification</key>
-				<real>550331731.11300898</real>
+				<real>561650412.58456695</real>
 				<key>version</key>
 				<dict>
 					<key>22b37cbde41d031e41bbecbb31feac74cbe4c52f970ca6de54f65b5a987618fe</key>
-					<integer>15</integer>
+					<integer>17</integer>
 					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-					<integer>201</integer>
-				</dict>
-			</dict>
-			<key>Untitled.md</key>
-			<dict>
-				<key>explicitUnassignment</key>
-				<true/>
-				<key>firstUnassignment</key>
-				<real>550330293.57785797</real>
-				<key>lastModification</key>
-				<real>550330293.57785797</real>
-				<key>version</key>
-				<dict>
-					<key>22b37cbde41d031e41bbecbb31feac74cbe4c52f970ca6de54f65b5a987618fe</key>
-					<integer>9</integer>
-					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-					<integer>193</integer>
-				</dict>
-			</dict>
-			<key>checker-jobs-data-consistency.md</key>
-			<dict>
-				<key>lastModification</key>
-				<real>543089170.767259</real>
-				<key>version</key>
-				<dict>
-					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-					<integer>149</integer>
-				</dict>
-			</dict>
-			<key>commit-often.md</key>
-			<dict>
-				<key>explicitUnassignment</key>
-				<true/>
-				<key>firstUnassignment</key>
-				<real>550331718.95032895</real>
-				<key>lastModification</key>
-				<real>550331718.95032895</real>
-				<key>version</key>
-				<dict>
-					<key>22b37cbde41d031e41bbecbb31feac74cbe4c52f970ca6de54f65b5a987618fe</key>
-					<integer>15</integer>
-					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-					<integer>201</integer>
+					<integer>211</integer>
 				</dict>
 			</dict>
 		</dict>
@@ -1105,15 +963,6 @@
 			<string>2018-03-20-splitting-releases.md</string>
 		</array>
 		<array>
-			<string>2018-03-22-expressing-intent-comments-ruby.md</string>
-		</array>
-		<array>
-			<string>2018-06-10-expressing-intent-comments-ruby.md</string>
-		</array>
-		<array>
-			<string>2018-05-10-expressing-intent-comments-ruby.md</string>
-		</array>
-		<array>
 			<string>2018-04-02-simplify-git-flow.md</string>
 		</array>
 		<array>
@@ -1123,28 +972,10 @@
 			<string>2018-05-15-expressing-intent-comments-ruby.md</string>
 		</array>
 		<array>
-			<string>2018-06-10-picking-a-technology.md</string>
-		</array>
-		<array>
-			<string>Untitled.md</string>
-		</array>
-		<array>
-			<string>2018-06-10-structuring-team.md</string>
-		</array>
-		<array>
-			<string>checker-jobs-data-consistency.md</string>
-		</array>
-		<array>
-			<string>commit-often.md</string>
-		</array>
-		<array>
-			<string>20commit-often.md</string>
-		</array>
-		<array>
-			<string>2018-06-10-git-commit-all-the-time.md</string>
-		</array>
-		<array>
 			<string>2018-06-11-git-commit-all-the-time.md</string>
+		</array>
+		<array>
+			<string>2018-10-22-regression-testing-for-data-ruby.md</string>
 		</array>
 	</array>
 	<key>storeFormatVersion</key>
@@ -1168,7 +999,7 @@
 			<key>22b37cbde41d031e41bbecbb31feac74cbe4c52f970ca6de54f65b5a987618fe</key>
 			<integer>17</integer>
 			<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-			<integer>203</integer>
+			<integer>211</integer>
 		</dict>
 		<key>userIconName</key>
 		<dict>
