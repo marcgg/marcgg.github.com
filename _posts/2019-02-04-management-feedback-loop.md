@@ -31,7 +31,7 @@ To achieve this, you might spend more time attending meetings or talking to peop
 
 It's not that you're suddently useless, it's the fact that the feedback loop is different. It's more subtle and on a longer time frame... and in most cases if you do things right no one might not even notice! Instead of a couple of features in front of happy users each week, you could have to wait a year to see that Alice became more productive thanks to your guidance, or that Bob really grew into his new role as technical lead.
 
-The feedback loop this time is longer and harder to measure:
+In this case the feedback loop is longer and harder to measure:
 - A person in your team improves over time
 - Technical choices are proven to be right year after years
 - People better understand the context they're building software in, objectives are clear

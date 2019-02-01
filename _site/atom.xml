@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2019-02-01T16:28:16+01:00</updated>
+ <updated>2019-02-01T16:30:12+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -17,9 +17,9 @@
   
    <entry>
      <title>The Developer / Manager Feedback Loop Difference </title>
-     <link href="https://marcgg.com/blog/2019/02/04/management-mindset/"/>
+     <link href="https://marcgg.com/blog/2019/02/04/management-feedback-loop/"/>
      <updated>2019-02-04T00:00:00+01:00</updated>
-     <id>https://marcgg.com/blog/2019/02/04/management-mindset</id>
+     <id>https://marcgg.com/blog/2019/02/04/management-feedback-loop</id>
      <content type="html">
        &lt;p&gt;Most software engineers turned managers I’ve met struggle with the same issue in their first weeks on the job and usually end up saying something like: “I couldn’t get any work done this week!”.  Of course everybody expects to have more meetings, move  to a &lt;a href=&quot;http://www.paulgraham.com/makersschedule.html&quot;&gt;manager schedule&lt;/a&gt;, but most are not prepared enough to the major change in feedback loop that occurs.&lt;/p&gt;
 
@@ -47,7 +47,7 @@
 
 &lt;p&gt;It’s not that you’re suddently useless, it’s the fact that the feedback loop is different. It’s more subtle and on a longer time frame… and in most cases if you do things right no one might not even notice! Instead of a couple of features in front of happy users each week, you could have to wait a year to see that Alice became more productive thanks to your guidance, or that Bob really grew into his new role as technical lead.&lt;/p&gt;
 
-&lt;p&gt;The feedback loop this time is longer and harder to measure:&lt;/p&gt;
+&lt;p&gt;In this case the feedback loop is longer and harder to measure:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;A person in your team improves over time&lt;/li&gt;
   &lt;li&gt;Technical choices are proven to be right year after years&lt;/li&gt;
