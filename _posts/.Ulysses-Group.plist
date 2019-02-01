@@ -752,6 +752,30 @@
 					<integer>211</integer>
 				</dict>
 			</dict>
+			<key>2019-02-04-management-mindset.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>570719490.38198304</real>
+				<key>version</key>
+				<dict>
+					<key>22b37cbde41d031e41bbecbb31feac74cbe4c52f970ca6de54f65b5a987618fe</key>
+					<integer>22</integer>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>211</integer>
+				</dict>
+			</dict>
+			<key>2019-02-10-dont.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>570720519.62826002</real>
+				<key>version</key>
+				<dict>
+					<key>22b37cbde41d031e41bbecbb31feac74cbe4c52f970ca6de54f65b5a987618fe</key>
+					<integer>30</integer>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>211</integer>
+				</dict>
+			</dict>
 		</dict>
 		<key>userIconName</key>
 		<real>493490997</real>
@@ -977,6 +1001,12 @@
 		<array>
 			<string>2018-10-22-regression-testing-for-data-ruby.md</string>
 		</array>
+		<array>
+			<string>2019-02-04-management-mindset.md</string>
+		</array>
+		<array>
+			<string>2019-02-10-dont.md</string>
+		</array>
 	</array>
 	<key>storeFormatVersion</key>
 	<integer>1</integer>
@@ -997,7 +1027,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>22b37cbde41d031e41bbecbb31feac74cbe4c52f970ca6de54f65b5a987618fe</key>
-			<integer>17</integer>
+			<integer>31</integer>
 			<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
 			<integer>211</integer>
 		</dict>
