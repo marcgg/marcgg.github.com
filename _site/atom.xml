@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2019-02-01T16:30:12+01:00</updated>
+ <updated>2019-02-04T09:12:28+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -25,9 +25,9 @@
 
 &lt;h2 id=&quot;the-developer-feedback-loop&quot;&gt;The Developer Feedback Loop&lt;/h2&gt;
 
-&lt;p&gt;Building software can get frustrating, but it’s also very rewarding. Before the developer’s involvement there was a bug or a feature was missing and once they’re done the problem is fixed. On top of this, you get to focus on writing code most of your day then, at the end, you have a few commits to show for it. That’s pretty good in my book!&lt;/p&gt;
+&lt;p&gt;Building software can get frustrating, but it’s also very rewarding. Before a developer’s involvement there’s a bug or a feature missing… once they’re done the problem is fixed! On top of this, you get to focus on writing code most of your day and almost always have a few commits to show for it.&lt;/p&gt;
 
-&lt;p&gt;Overall the feedback loop is quick and simple with things such as:&lt;/p&gt;
+&lt;p&gt;Overall the feedback loop is quick and simple with milestones such as:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Your tests go from red to green&lt;/li&gt;
   &lt;li&gt;The project compiles&lt;/li&gt;
@@ -35,9 +35,10 @@
   &lt;li&gt;A given library is succesfully updated&lt;/li&gt;
   &lt;li&gt;Performances improve in your app and you have the graphs to prove it&lt;/li&gt;
   &lt;li&gt;The number of errors reduces in a given area&lt;/li&gt;
+  &lt;li&gt;You can see usage numbers for something you’ve built&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Overall it has a lot of cases where either it works or it doesn’t. Also your work can easily be showcased to other and you can generally say “look at what I built!”.&lt;/p&gt;
+&lt;p&gt;Overall development has a lot of situations where either it functions or it doesn’t, making success and failure clear. Another cool part is that your work can easily be showcased to others and you can generally say “look at what I built!”.&lt;/p&gt;
 
 &lt;h2 id=&quot;the-manager-feedback-loop&quot;&gt;The Manager Feedback Loop&lt;/h2&gt;
 
@@ -45,23 +46,23 @@
 
 &lt;p&gt;To achieve this, you might spend more time attending meetings or talking to people without any direct visible result. You will also work on very long term plans where you will notice the benefits only after months or years. You’re also not the one “actually” building the software, so it’s easy to think that you’re not &lt;em&gt;really&lt;/em&gt; being productive.&lt;/p&gt;
 
-&lt;p&gt;It’s not that you’re suddently useless, it’s the fact that the feedback loop is different. It’s more subtle and on a longer time frame… and in most cases if you do things right no one might not even notice! Instead of a couple of features in front of happy users each week, you could have to wait a year to see that Alice became more productive thanks to your guidance, or that Bob really grew into his new role as technical lead.&lt;/p&gt;
+&lt;p&gt;It’s good to note that you’re not suddently useless, instead it’s a lot of perception change due to the fact that the feedback loop is different. It’s more subtle and on a longer time frame… and in most cases, if you do things right, no one might even notice! Instead of a couple of features in front of happy users each week, you could have to wait a year to see that Alice became more productive thanks to your guidance, or that Bob really grew into his new role as technical lead thanks to your reorganisation of the team.&lt;/p&gt;
 
 &lt;p&gt;In this case the feedback loop is longer and harder to measure:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;A person in your team improves over time&lt;/li&gt;
+  &lt;li&gt;A person in your team improves over time faster than they would have without you&lt;/li&gt;
   &lt;li&gt;Technical choices are proven to be right year after years&lt;/li&gt;
   &lt;li&gt;People better understand the context they’re building software in, objectives are clear&lt;/li&gt;
-  &lt;li&gt;The team remains productive&lt;/li&gt;
-  &lt;li&gt;Turnover stays low, people stay happy&lt;/li&gt;
+  &lt;li&gt;The team remains productive and focused&lt;/li&gt;
+  &lt;li&gt;Turnover stays low, people are generally happy&lt;/li&gt;
   &lt;li&gt;Project are delivered on time&lt;/li&gt;
   &lt;li&gt;No one is working crazy hours to reach objectives&lt;/li&gt;
-  &lt;li&gt;There’s not many complaints from your reports&lt;/li&gt;
+  &lt;li&gt;There are not many complaints from your team&lt;/li&gt;
   &lt;li&gt;External &amp;amp; internal clients are consistently happy&lt;/li&gt;
   &lt;li&gt;There’s a general feeling of moving forward&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;This isn’t a bad thing, it’s only a difference to keep in mind. In order to avoid being stressed out or depressed, new managers need to understand this concept as soon as possible so that they can focus on what matters instead dreading this feeling of unproductivity.&lt;/p&gt;
+&lt;p&gt;This isn’t a bad thing, it’s only a difference to keep in mind. In order to avoid being stressed out or depressed, new managers need to understand this concept as soon as possible so that they can focus on what matters instead dreading this feeling of unproductivity. This is &lt;a href=&quot;/blog/2017/08/22/starting-with-management/&quot;&gt;an entire new position&lt;/a&gt;, it’s normal to take a bit of time to get a good feel for it.&lt;/p&gt;
 
 
        
