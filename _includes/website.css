@@ -464,7 +464,9 @@ p code, li code{
   padding: 20px;
   margin-bottom: 20px;
   opacity: 0.7;
-  font-style: italic;
+}
+#book-review a{
+  color: #763232;
 }
 
 
