@@ -76,6 +76,16 @@
 					<integer>143</integer>
 				</dict>
 			</dict>
+			<key>design-everyday-things.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>596899726.94592297</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>181</integer>
+				</dict>
+			</dict>
 			<key>effective-manager.md</key>
 			<dict>
 				<key>lastModification</key>
@@ -166,6 +176,16 @@
 					<integer>46</integer>
 				</dict>
 			</dict>
+			<key>never-split-difference.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>596900129.75348699</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>185</integer>
+				</dict>
+			</dict>
 			<key>non-violent.md</key>
 			<dict>
 				<key>lastModification</key>
@@ -174,6 +194,16 @@
 				<dict>
 					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
 					<integer>93</integer>
+				</dict>
+			</dict>
+			<key>one-thing.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>596900417.99349701</real>
+				<key>version</key>
+				<dict>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>189</integer>
 				</dict>
 			</dict>
 			<key>peopleware.md</key>
@@ -491,6 +521,15 @@
 		<array>
 			<string>the-advantage.md</string>
 		</array>
+		<array>
+			<string>design-everyday-things.md</string>
+		</array>
+		<array>
+			<string>never-split-difference.md</string>
+		</array>
+		<array>
+			<string>one-thing.md</string>
+		</array>
 	</array>
 	<key>storeFormatVersion</key>
 	<integer>1</integer>
@@ -499,7 +538,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-			<integer>178</integer>
+			<integer>190</integer>
 		</dict>
 	</dict>
 </dict>
