@@ -764,16 +764,16 @@
 					<integer>211</integer>
 				</dict>
 			</dict>
-			<key>2019-02-10-dont.md</key>
+			<key>2019-11-30-one-on-one-openers.md</key>
 			<dict>
 				<key>lastModification</key>
-				<real>570720519.62826002</real>
+				<real>596913725.06075299</real>
 				<key>version</key>
 				<dict>
 					<key>22b37cbde41d031e41bbecbb31feac74cbe4c52f970ca6de54f65b5a987618fe</key>
-					<integer>30</integer>
+					<integer>33</integer>
 					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-					<integer>211</integer>
+					<integer>225</integer>
 				</dict>
 			</dict>
 		</dict>
@@ -1005,7 +1005,7 @@
 			<string>2019-02-04-management-feedback-loop.md</string>
 		</array>
 		<array>
-			<string>2019-02-10-dont.md</string>
+			<string>2019-11-30-one-on-one-openers.md</string>
 		</array>
 	</array>
 	<key>storeFormatVersion</key>
@@ -1029,7 +1029,7 @@
 			<key>22b37cbde41d031e41bbecbb31feac74cbe4c52f970ca6de54f65b5a987618fe</key>
 			<integer>33</integer>
 			<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
-			<integer>211</integer>
+			<integer>226</integer>
 		</dict>
 		<key>userIconName</key>
 		<dict>
