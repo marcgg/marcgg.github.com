@@ -5,6 +5,8 @@ description: "Developers turned engineering managers often feel like they are no
 blog: true
 category: blog
 tag: Management
+featured: true
+publictag: Management
 ---
 
 Most software engineers turned managers I've met struggle with the same issue in their first weeks on the job and usually end up saying something like: "I couldn't get any work done this week!".  Of course everybody expects to have more meetings, move  to a [manager schedule][1], but most are not prepared enough to the major change in feedback loop that occurs.
