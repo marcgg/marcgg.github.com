@@ -5,7 +5,7 @@ description: Using deadlines and estimates in a software project  gets a bad rep
 blog: true
 category: blog
 featured: true
-cssscope: deadlines
+cssscope: conversation
 tag: ProjectManagement
 publictag: Project Management
 ---
@@ -221,33 +221,6 @@ I would also recommend reading [The Clean Coder: A Code of Conduct for Professio
 Finally, I encourage you to read ["Estimation - The Best We Can Do"][9] by Jon Jeffries where he discusses the way estimates can be done in the context of agile teams. I don't like the concept of velocity, but some points are worth reading.
 
 _Thanks a lot to [Julien][10] for challenging me on the very first draft of the article and helping me refine my reflexion. Thanks also to all other people who helped me make some adjustments and spelling corrections!_
-
-
-<style>
-#post-deadlines blockquote{
-  color: rgb(84, 84, 84);
-  font-style: normal;
-  margin: 20px 40px;
-}
-#post-deadlines blockquote p{
-  margin: 10px 20px !important;
-}
-#post-deadlines blockquote .dpm{
-  color: #3B9E2E !important;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 13px;
-}
-#post-deadlines blockquote .ddev{
-  color: #AD34CF !important;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 13px;
-}
-#post-deadlines blockquote .dcto{
-  color: #9E2E2E !important;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 13px;
-}
-</style>
 
 [1]:	https://twitter.com/search?q=#noestimates&src=typd
 [2]:	https://en.wikipedia.org/wiki/Planning_poker

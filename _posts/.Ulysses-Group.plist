@@ -776,6 +776,18 @@
 					<integer>225</integer>
 				</dict>
 			</dict>
+			<key>2020-03-23-recruitment-interviews.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>606494587.68010497</real>
+				<key>version</key>
+				<dict>
+					<key>22b37cbde41d031e41bbecbb31feac74cbe4c52f970ca6de54f65b5a987618fe</key>
+					<integer>38</integer>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>226</integer>
+				</dict>
+			</dict>
 		</dict>
 		<key>userIconName</key>
 		<real>493490997</real>
@@ -1007,6 +1019,9 @@
 		<array>
 			<string>2019-11-30-one-on-one-openers.md</string>
 		</array>
+		<array>
+			<string>2020-03-23-recruitment-interviews.md</string>
+		</array>
 	</array>
 	<key>storeFormatVersion</key>
 	<integer>1</integer>
@@ -1027,7 +1042,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>22b37cbde41d031e41bbecbb31feac74cbe4c52f970ca6de54f65b5a987618fe</key>
-			<integer>33</integer>
+			<integer>39</integer>
 			<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
 			<integer>226</integer>
 		</dict>

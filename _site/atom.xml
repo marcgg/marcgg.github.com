@@ -4,13 +4,174 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2020-03-21T14:36:21+01:00</updated>
+ <updated>2020-03-21T15:45:47+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
    <email>marcg.gauthier@gmail.com</email>
  </author>
 
+ 
+  
+   <entry>
+     <title>Interviewing Guidelines</title>
+     <link href="https://marcgg.com/blog/2020/03/23/recruitment-interviews/"/>
+     <updated>2020-03-23T00:00:00+01:00</updated>
+     <id>https://marcgg.com/blog/2020/03/23/recruitment-interviews</id>
+     <content type="html">
+       &lt;p&gt;Recruiting is one of the most important task a team leader can have. A bad hire can destroy the dynamic of a good team, and a great hire can multiply the velocity of everyone around them. Here are a few ideas I’ve gathered after approximatively ten years of recruiting software engineers.&lt;/p&gt;
+
+&lt;h2 id=&quot;goals-of-having-a-process&quot;&gt;Goals of Having a Process&lt;/h2&gt;
+
+&lt;p&gt;Some people do not believe in a clear recruitment process, prefering instinct to method. This makes sense when you are recruiting a couple of people, or if you are looking for a very specific profile. However, if you are recruiting at scale you will quickly see the limits of this approach: the one with the “instinct” will become a massive bottleneck, slowing down everything. The rest of the team will not be able to efficiently participate and get frustrated, the candidates will sense the issue and conversion rate will go down.&lt;/p&gt;
+
+&lt;p&gt;Different people will have different goals, but here are mine.&lt;/p&gt;
+
+&lt;h3 id=&quot;for-the-candidate&quot;&gt;For the Candidate&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Clear process and expectations&lt;/strong&gt;, a candidat should know what they are getting into.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt; Pleasant experience &lt;/strong&gt; even if this doesn’t end with a hire. Of course it can’t be great everytime, but at least we should try to make it as pleasant as possible&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Fast turnaround&lt;/strong&gt;, not making people wait around for answers.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Feedbacks during the process&lt;/strong&gt;, both ways, to avoid disapointments. If it’s going poorly for the candidate, the recruiter should know about it.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;for-the-company&quot;&gt;For the Company&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt; More hires at the expected quality &lt;/strong&gt;, obviously!&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt; Better predictability &lt;/strong&gt;, we know what we can get when we open a position.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt; Pleasant interviewer experience &lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt; Improve employer brand &lt;/strong&gt;, to ease future hires&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;interview-funnel&quot;&gt;Interview Funnel&lt;/h2&gt;
+
+&lt;p&gt;Over the past few years I’ve tried a lot of different processes,  and I think there is no one true way of doing it. However the one thing that works is having a real funnel with objectives for each steps.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/hiring-steps.jpg&quot; alt=&quot;Recruitment funnel&quot; style=&quot;padding: 5px; width: 600px&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;This way it’s easy to communicate both internally to the people involved and externally to the candidats the way the process works.&lt;/p&gt;
+
+&lt;h3 id=&quot;defining-what-you-want-to-test&quot;&gt;Defining what you want to test&lt;/h3&gt;
+
+&lt;p&gt;Before setting up your applicant tracking system (ATS) or defining your recruitment process, the most important first step is to understand what kind of person you want to hire.&lt;/p&gt;
+
+&lt;p&gt;Make a clear list of skills you want to check and the kind of person you think would fit in your company/team. Then use the interviewing process to check against this.&lt;/p&gt;
+
+&lt;p&gt;To help, it’s great to be able to leverage things like company culture documents or team objectives.&lt;/p&gt;
+
+&lt;h3 id=&quot;setting-your-steps&quot;&gt;Setting Your Steps&lt;/h3&gt;
+
+&lt;p&gt;There are a lot of things that can be done, but to illustrate this, here are a few example steps that I’ve used or seen companies used:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Screening call&lt;/li&gt;
+  &lt;li&gt;Take home assignment&lt;/li&gt;
+  &lt;li&gt;On site pairing&lt;/li&gt;
+  &lt;li&gt;Lunch with the team&lt;/li&gt;
+  &lt;li&gt;Meet your future manager&lt;/li&gt;
+  &lt;li&gt;Technical interview&lt;/li&gt;
+  &lt;li&gt;Fit interview&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;objectives-for-each-step&quot;&gt;Objectives For Each Step&lt;/h3&gt;
+
+&lt;p&gt;Once you have decided of the various steps, you need to decide of the objective for each step. This is crucial, because in order to be effective you have to make sure you did test what you were planning on testing.&lt;/p&gt;
+
+&lt;p&gt;To illustrate what you don’t want, here is a conversation I’ve seen a few times:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;span class=&quot;dpm&quot;&gt;Hiring Manager:&lt;/span&gt; So, how did the technical interview go with the candidate?&lt;/p&gt;
+
+  &lt;p&gt;&lt;span class=&quot;ddev&quot;&gt;Interviewer:&lt;/span&gt; It went great! I’ve given the recommendation to hire.&lt;/p&gt;
+
+  &lt;p&gt;&lt;span class=&quot;dpm&quot;&gt;HM:&lt;/span&gt; Great, we need strong developers in the team to tackle project XYZ.&lt;/p&gt;
+
+  &lt;p&gt;&lt;span class=&quot;ddev&quot;&gt;Int:&lt;/span&gt; Hm I don’t know about that, we couldn’t really get to the coding part of the interview.&lt;/p&gt;
+
+  &lt;p&gt;&lt;span class=&quot;dpm&quot;&gt;HM:&lt;/span&gt; What do you mean?&lt;/p&gt;
+
+  &lt;p&gt;&lt;span class=&quot;ddev&quot;&gt;Int:&lt;/span&gt; The candidate didn’t really know the language we use here, so instead we chatted a bit about the company and our current projects. They seem really interested in joining and have a great attitude!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Here the interviewer clearly didn’t have clear objectives for the technical interview, that should be focused on figuring out on determining the candidate’s technical skills. The expectations of the hiring managers were not correctly set. In this scenario the hiring manager was lucky to have a chat with the interviewer, they could have only taken the “hire” recommendation and go forward with candidate, only to be disapointed after the hire.&lt;/p&gt;
+
+&lt;p&gt;When setting objectives, remember to:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Keep them realistic and simple &lt;/strong&gt;. It’s very hard to get a sense of someone during a one hour interview, so don’t expect too much from your interviewers.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt; Have a set of objectives around showcasing the position &lt;/strong&gt; as well. You are assessing the candidate, but keep in mind that the candidate is also assessing the company and the position.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Share them explicitely&lt;/strong&gt;, it shouldn’t be an oral tradition.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Check that they are followed&lt;/strong&gt; by shadowing some interviews, setting up feedback sessions etc.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Personally I like to write objectives as questions to be answered. To illustrate here are a few examples of objectives to assess the candidate:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Are they motivated to join the company?&lt;/li&gt;
+  &lt;li&gt;Do they show interest for solving users’ problems?&lt;/li&gt;
+  &lt;li&gt;Will they work well with their manager?&lt;/li&gt;
+  &lt;li&gt;Do they fit our values?&lt;/li&gt;
+  &lt;li&gt;Do I see this person in my team?&lt;/li&gt;
+  &lt;li&gt;Can this person fit in the organisation and evolve?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;… and a few examples of objectives to showcase the company and/or position:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Provide an interesting challenge to the candidate&lt;/li&gt;
+  &lt;li&gt;Give more context to the candidate&lt;/li&gt;
+  &lt;li&gt;Showcase our work environment and mission&lt;/li&gt;
+  &lt;li&gt;Address any remaining doubts the candidate could have&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;guidelines-for-interviewers&quot;&gt;Guidelines For Interviewers&lt;/h2&gt;
+
+&lt;p&gt;There are a lot of things interviewers need to get right, and it usually takes years of practice to really be an efficient hiring manager. Here are the advices I usually share to people new to it:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt; Focus on the objective &lt;/strong&gt;, rate candidates based on it only.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt; Always sell the position &amp;amp; the company &lt;/strong&gt;, regardless of the candidate. It might not be a fit today, but it might be one tomorrow of for a different position.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt; Let the candidate answer &lt;/strong&gt;, don’t be afraid of silence. It’s easy to try to fill in unfortable blanks in the conversation, fight this urge!&lt;/li&gt;
+  &lt;li&gt;You need to &lt;strong&gt; be sure of your recommendation &lt;/strong&gt;, so dig deep to turn orange flags into red or green.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt; Contribute to improve the process &lt;/strong&gt;, and share any issues that could be addressed.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt; Don’t mistake enthusiasm for ability. Don’t mistake quietness for a lack of motivation. &lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt; Rate regardless of time spent &lt;/strong&gt;. If you had a 20 minutes phone call that went very well, you should give a “hire” recomendation. The hiring manager will know the context and use your feedback accordlingly.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt; Do not share your opinion with other interviewers &lt;/strong&gt; and do not try to read other people’s feedback. Stay unbiased.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt; Don’t be influenced by the context &lt;/strong&gt;. Being understaffed doesn’t mean we should hire anybody&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;onboarding&quot;&gt;Onboarding&lt;/h3&gt;
+
+&lt;p&gt;It’s important to not just throw people in the recruitment process hoping they’ll be good interviewers. First, I tend to think that interviewing should be an opt-in process, and that there is little value in having someone talk to candidates if they don’t want to do it.&lt;/p&gt;
+
+&lt;p&gt;For those who want to help hire the right persons, here are a few things that can help:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Have documentation with use case examples, question templates etc.&lt;/li&gt;
+  &lt;li&gt;Spend some time briefing the person before an interview, and debriefing after.&lt;/li&gt;
+  &lt;li&gt;Have some shadowing sessions, where a new interviewer follows the lead of a more experienced one.&lt;/li&gt;
+  &lt;li&gt;Involve recruiters in the process to help explain how to sell a position or how to identify red flags.&lt;/li&gt;
+  &lt;li&gt;Setup reverse shadowing sessions, where a new interviewer leads an interview but is watched by a well meaning more experienced interviewer.&lt;/li&gt;
+  &lt;li&gt;Gather feedback from newly onboarded interviewers to improve the process.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;measuring&quot;&gt;Measuring&lt;/h2&gt;
+
+&lt;p&gt;Like everything, it’s important to measure what you are doing. A few metrics that are interting to follow:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Time to hire&lt;/li&gt;
+  &lt;li&gt;Conversion rate&lt;/li&gt;
+  &lt;li&gt;Candidate satisfaction rate (segmented by hired/not hired)&lt;/li&gt;
+  &lt;li&gt;Interviewers satisfaction rate&lt;/li&gt;
+  &lt;li&gt;Number of candidates seen&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Overall recruiting is hard and there is no silver bullet. However I hope this article will help you improve your process.&lt;/p&gt;
+
+       
+     </content>
+   </entry>
+  
  
   
    <entry>
@@ -3306,32 +3467,6 @@ Switched to branch 'first'
 &lt;p&gt;Finally, I encourage you to read &lt;a href=&quot;https://pragprog.com/magazines/2013-04/estimation&quot;&gt;“Estimation - The Best We Can Do”&lt;/a&gt; by Jon Jeffries where he discusses the way estimates can be done in the context of agile teams. I don’t like the concept of velocity, but some points are worth reading.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Thanks a lot to &lt;a href=&quot;http://julienblanchard.com/&quot;&gt;Julien&lt;/a&gt; for challenging me on the very first draft of the article and helping me refine my reflexion. Thanks also to all other people who helped me make some adjustments and spelling corrections!&lt;/em&gt;&lt;/p&gt;
-
-&lt;style&gt;
-#post-deadlines blockquote{
-  color: rgb(84, 84, 84);
-  font-style: normal;
-  margin: 20px 40px;
-}
-#post-deadlines blockquote p{
-  margin: 10px 20px !important;
-}
-#post-deadlines blockquote .dpm{
-  color: #3B9E2E !important;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 13px;
-}
-#post-deadlines blockquote .ddev{
-  color: #AD34CF !important;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 13px;
-}
-#post-deadlines blockquote .dcto{
-  color: #9E2E2E !important;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 13px;
-}
-&lt;/style&gt;
 
 
        

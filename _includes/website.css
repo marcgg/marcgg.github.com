@@ -629,3 +629,29 @@ p code, li code{
   }
 }
 
+
+/* CONVERSATION */
+
+#post-conversation blockquote{
+  color: rgb(84, 84, 84);
+  font-style: normal;
+  margin: 20px 40px;
+}
+#post-conversation blockquote p{
+  margin: 10px 20px !important;
+}
+#post-conversation blockquote .dpm{
+  color: #3B9E2E !important;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+}
+#post-conversation blockquote .ddev{
+  color: #AD34CF !important;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+}
+#post-conversation blockquote .dcto{
+  color: #9E2E2E !important;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+}
