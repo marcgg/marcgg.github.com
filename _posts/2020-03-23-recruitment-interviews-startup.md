@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Recruitment Process For Software Engineers"
-description: "List best practices learned through years of hiring software engineers, from setting a good process to ideas to onboard interviewers into the process."
+title: "Process For Recruiting Software Engineers"
+description: "A list of best practices learned through years of hiring software engineers, from creating a good process to onboarding interviewers or measuring success."
 blog: true
 category: blog
 tag: Recruitment
@@ -10,17 +10,17 @@ cssscope: conversation
 
 Recruiting is one of the most important task a team leader can have. A bad hire can destroy the dynamic of a good team, and a great hire can multiply the velocity of everyone around them. 
 
-Here are a few ideas I've gathered after almost ten years of recruiting software engineers, first as a technical interviewer, then as a hiring manager and finally as the lead of the entire engineering department.
+I've tried and gathered a lot of ideas after years of recruiting software engineers, first as a technical interviewer, then as a hiring manager and finally as the lead of the entire engineering department. In this post I'll try to sum up what seemed to be working the best.
 
 ## Getting Started
 
 ### When to Add a Process
 
-Some people do not believe in spending time setting up a clear recruitment process, prefering going with their instinct. This makes total sense when you are recruiting a couple of people for a small structure, or if you are looking for a very specific profile.
+Some people do not believe in spending time setting up a clear recruitment process, prefering going with their instinct. I don't disagree for some cases. For instance this makes total sense when you are recruiting a couple of people for a small structure.
 
 However, if you are recruiting at a larger scale, you will quickly see the limits of this approach. The person with the "instinct" becomes a massive bottleneck, slowing down everything. The rest of the team is unable to efficiently participate and gets frustrated. Finally the candidates senses the issue and conversion rate goes down.
 
-I'd say that if you hire more than 5 people a year it's worth investing into a simple process.
+I'd say that, if you hire more than 5 people a year, it's worth investing into a simple process.
 
 ### Objectives of Having A Process
 
@@ -36,7 +36,7 @@ Defining a process helps reaching certain objectives. Here are the ones I've set
 #### Impacting the Company
 
 - ** More hires at the expected quality **, obviously!
-- ** Better predictability **. It is useful to know what can be the time and energy required to hire someone.
+- ** Better predictability **s. It is useful to know what can be the time and energy required to hire someone.
 - ** Pleasant interviewer experience **. We need to keep in mind that a lot of people involved in the process are usually not recruiters by trade, and therefore we have to make it easier on them.
 - ** Improve employer brand **, to ease future hires.
 
@@ -44,7 +44,7 @@ Defining a process helps reaching certain objectives. Here are the ones I've set
 
 ### Figuring Out What's Important
 
-Before setting up your applicant tracking system or defining your recruitment process, the most important thing is to know what kind of person you want to hire. If you don't, you'll end up setting the wrong interviews, checking the wrong skills and in the end waste everybody's time or make a wrong hire.
+Before setting up your applicant tracking system or defining your recruitment process, the most important thing is to know what kind of person you want to hire. If you don't, you'll end up plannings the wrong interviews, checking the wrong skills and in the end waste everybody's time or make a wrong hire.
 
 To get there, make a clear list of skills you want to check and the kind of person you think would fit in your company/team. Then use the interviewing process to check against this.
 
@@ -93,7 +93,7 @@ What you really don't want is this kind of conversation:
 
 Here the interviewer didn't have clear objectives for the technical interview. This step should be focused on figuring out on determining the candidate's technical skills, not assessing the motivation. 
 
-When setting objectives, remember to:
+When defining objectives, remember to:
 - **Keep them realistic and simple **. It's very hard to get a sense of someone during a one hour interview, so don't expect the impossible from your interviewers.
 - ** Have a set of objectives around showcasing the position ** as well. You are assessing the candidate, but keep in mind that the candidate is also assessing the company and the position.
 - **Share them explicitely**, it shouldn't be an oral tradition.
@@ -145,7 +145,7 @@ Of course this is just the recommendation of the interviewers, the final call re
 
 Finally I also like to ask for a paragraph or two to explain their decision.
 
-### Onboarding Interviewers 
+### Onboarding Interviewers
 
 I think that interviewing should be an opt-in process. There is little value in having someone talk to candidates if they don't want to do it.
 
