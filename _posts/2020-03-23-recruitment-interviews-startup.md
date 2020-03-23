@@ -10,7 +10,7 @@ cssscope: conversation
 
 Recruiting is one of the most important task a team leader can have. A bad hire can destroy the dynamic of a good team, and a great hire can multiply the velocity of everyone around them. 
 
-I've tried and gathered a lot of ideas after years of recruiting software engineers, first as a technical interviewer, then as a hiring manager and finally as the lead of the entire engineering department. In this post I'll try to sum up what seemed to be working the best.
+I've tried a lot of ideas after years of recruiting software engineers, first as a technical interviewer, then as a hiring manager and finally as the lead of the entire engineering department. In this article I won't give you a process that works out of the box, but instead a few steps to setup one for your team.
 
 ## Getting Started
 
