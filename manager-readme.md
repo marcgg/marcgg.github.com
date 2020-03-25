@@ -8,7 +8,7 @@ subtitle: "A comprehensive documentation of how I work"
 
 If you're not familiar with this format, it is heavily inspired by [Oren Ellenbogen][1]'s [work][2]. This document is an effort to explain my role, my values, my expectations and my quirks as a manager.  It might seem a bit weird, but I see it as a way to gain time when starting to work together and help you understand the way I operate. 
 
-It's important to keep in mind that this is a live document and, as such, it will change with time. Also remember that I'm here for you and will do my best to adapt my management style to you, so please don't see anything here as set in stone.
+It's important to keep in mind that this is a live document and, as such, it will change with time. Also remember that I'm here for you anld will do my best to adapt my management style to you, so please don't see anything here as set in stone.
 
 Of course this does not replace actually learning to know each other :)
 
@@ -82,9 +82,9 @@ If I do my job properly, I should be helpful to you. My goal will be to give you
 
 - If you're explaining a production issue to me, I want to hear the user impact & if it's fixed before getting into any other details. If you don't start with the impact I'll be stressed out and most likely annoyed the whole time you tell me.
 
-- The company might need me to not share a particular piece of information with you, and I will not do it. However I will never lie to you.
+- The company might need me to not share a particular piece of information with you, and I will not do it. However I will never lie to you, the worst I can do is remain vague.
 
-- I prefer to be direct, but it can sometimes be a bit intense. To prevent this I often try to dial it down. If you feel I'm overdoing it and not being direct enough, let me know and I'll adjust.
+- I prefer to be direct, but it can sometimes be a bit intense to some people. To prevent this I often try to dial it down. If you feel I'm overdoing it and not being direct enough, let me know and I'll adjust. Same thing if you feel I'm not dialing it down enough :)
 
 - Followup is very important to me. Generally I assume that you will make a note of any action required and let me know when it's done / if it's delayed / if you need help. Once I consider that it is in your scope, I will stop worrying about it. What I would dislike is that you forgot about it, or decided not to do it without letting me know.
 
