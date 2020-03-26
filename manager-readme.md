@@ -94,7 +94,7 @@ If I do my job properly, I should be helpful to you. My goal will be to give you
 
 - I have very high esteem for what has been done in the past, such as legacy code or previous product decisions. If it wasn't for this we wouldn't be where we are. Yes sometimes it can be clunky… but the people who did it tried their best with the information and skills they had.
 
-- I absolutely hate meetings that start or end late. If you are late for a meeting, there's a good chance I'll cancel or start without you. Because of this I also try my best to be very on time to every meeting and you can expect my meetings to start on time. I'd say 1-2 minutes is fine, but above 5 minutes I will tend to expect a small excuse. At least that's the way I'll act with you if I'm late :)
+- I absolutely hate meetings that start or end late as it feels like a complete waste of time. If you are significantly late for a meeting, there's a good chance I'll cancel or start without you. Because of this I also try my best to be very on time to every meeting and you can expect my meetings to start on time. As a rule of thumb I'd say a few minutes is fine, but above 5 minutes I will tend to expect a small excuse. At least that's the way I'll act with you if I'm late :)
 
 - If sometimes I work overtime, I don't expect you to do the same. If I message you and you're done with your day, I don't expect a response right away. In most cases it can wait the next day.
 

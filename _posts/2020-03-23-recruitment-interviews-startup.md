@@ -16,9 +16,9 @@ I've tried a lot of ideas after years of recruiting software engineers, first as
 
 ### When to Add a Process
 
-Some people do not believe in spending time setting up a clear recruitment process, prefering going with their instinct. I don't disagree for some cases. For instance this makes total sense when you are recruiting a couple of people for a small structure.
+Some people do not believe in spending time setting up a clear recruitment process, preferring going with their instinct. I don't disagree for some cases. For instance this makes total sense when you are recruiting a couple of people for a small structure.
 
-However, if you are recruiting at a larger scale, you will quickly see the limits of this approach. The person with the "instinct" becomes a massive bottleneck, slowing down everything. The rest of the team is unable to efficiently participate and gets frustrated. Finally the candidates senses the issue and conversion rate goes down.
+However, if you are recruiting at a larger scale, you will quickly see the limits of this approach. The person with the "instinct" becomes a massive bottleneck, slowing down everything. The rest of the team is unable to efficiently participate and gets frustrated. Finally the candidates can feel the issue and the conversion rate goes down.
 
 I'd say that, if you hire more than 5 people a year, it's worth investing into a simple process.
 
@@ -31,20 +31,20 @@ Defining a process helps reaching certain objectives. Here are the ones I've set
 - **Clear process and expectations**. A candidate should know what they are getting into.
 - ** Pleasant experience ** even if this doesn't end with a hire. Ideally someone who isn't hired refers a friend or won't hesitate to apply again after a year or two.
 - **Fast turnaround**. The recruitment process is stressful, there is no need to make people wait for answers on top of this.
-- **Feedbacks during the process**, both ways, to avoid disapointments. If it's going poorly for the candidate, the recruiter should know about it.
+- **Feedbacks during the process**, both ways, to avoid disappointments. If it's going poorly for the candidate, the recruiter should know about it.
 
 #### Impacting the Company
 
-- ** More hires at the expected quality **, obviously!
-- ** Better predictability **s. It is useful to know what can be the time and energy required to hire someone.
-- ** Pleasant interviewer experience **. We need to keep in mind that a lot of people involved in the process are usually not recruiters by trade, and therefore we have to make it easier on them.
-- ** Improve employer brand **, to ease future hires.
+- **More hires at the expected quality**, obviously!
+- **Better predictability**. It is useful to know what can be the time and energy required to hire someone.
+- **Pleasant interviewer experience**. We need to keep in mind that a lot of people involved in the process are usually not recruiters by trade, and therefore we have to make it easier on them.
+- **Improve employer brand**, to ease future hires.
 
 ## Testing The Candidate
 
 ### Figuring Out What's Important
 
-Before setting up your applicant tracking system or defining your recruitment process, the most important thing is to know what kind of person you want to hire. If you don't, you'll end up plannings the wrong interviews, checking the wrong skills and in the end waste everybody's time or make a wrong hire.
+Before setting up your applicant tracking system or defining your recruitment process, the most important thing is to know what kind of person you want to hire. If you don't, you'll end up planning the wrong interviews, checking the wrong skills and in the end wasting everybody's time or making a wrong hire.
 
 To get there, make a clear list of skills you want to check and the kind of person you think would fit in your company/team. Then use the interviewing process to check against this.
 
@@ -52,7 +52,7 @@ If you have it, it's great to be able to leverage things like company culture do
 
 ### Recruitment Funnel
 
-Over the past few years I've tried a lot of different processes,   andthe one thing that works is having a real funnel with objectives for each steps.
+Over the past few years I've tried a lot of different processes,   andthe one thing that works is having a real funnel with objectives for each step.
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/hiring-steps.jpg" alt="Recruitment funnel" style="padding: 5px; width: 600px"/></div>
 
@@ -75,7 +75,7 @@ You then need to order them, define the time spent on each and so on.
 
 #### Setting Objectives For Each Step
 
-Once you have decided of the various steps, you need to decide of the objective for each step. This is crucial, because in order to be effective you have to make sure you did test what you were planning on testing.
+Once you have decided on the various steps, you need to decide of the objective of each step. This is crucial, because in order to be effective you have to make sure you did test what you were planning on testing.
 
 What you really don't want is this kind of conversation:
 
@@ -95,14 +95,14 @@ Here the interviewer didn't have clear objectives for the technical interview. T
 
 When defining objectives, remember to:
 - **Keep them realistic and simple **. It's very hard to get a sense of someone during a one hour interview, so don't expect the impossible from your interviewers.
-- ** Have a set of objectives around showcasing the position ** as well. You are assessing the candidate, but keep in mind that the candidate is also assessing the company and the position.
-- **Share them explicitely**, it shouldn't be an oral tradition.
+- **Have a set of objectives around showcasing the position ** as well. You are assessing the candidate, but keep in mind that the candidate is also assessing the company and the position.
+- **Share them explicitfly**, it shouldn't be an oral tradition.
 - **Check that they are followed** by shadowing some random interviews, setting up feedback sessions etc. 
 
 Personally I like to write objectives as questions to be answered. To illustrate here are a few examples of objectives to assess the candidate:
 
 - Are they motivated to join the company?
-- Do they show interest for solving users’ problems?
+- Do they show interest inu solving users’ problems?
 - Will they work well with their manager?
 - Do they fit our values?
 - Do I see this person in my team?
@@ -121,15 +121,15 @@ Personally I like to write objectives as questions to be answered. To illustrate
 
 There are a lot of things interviewers need to get right, and it can take years of practice to be a confident interviewer. Here are the advices I usually share to people new to it:
 
-- ** Focus on the objective **, rate candidates based on it only.
-- ** Always sell the position & the company **, regardless of the candidate. It might not be a fit today, but it might be one tomorrow.
-- ** Let the candidate answer ** and don’t be afraid of silence. It's easy to try to fill in unconfortable blanks in the conversation.
-- You need to ** be sure of your recommendation **, so dig deep to turn orange flags into red or green. 
-- ** Contribute to improve the process **, and share any issues that could be addressed.
-- ** Don't mistake enthusiasm for ability. Don't mistake quietness for a lack of motivation. **
-- ** Rate regardless of time spent **. If you had a 20 minutes phone call that went very well, you should give a "hire" recomendation. The hiring manager will know the context and use your feedback accordlingly.
-- ** Do not share your opinion with other interviewers ** and do not try to read other people's feedback. Stay unbiased.
-- ** Don’t be influenced by the context **. Being understaffed doesn’t mean we should hire anybody
+- **Focus on the objective**, rate candidates based on it only.
+- **Always sell the position & the company**, regardless of the candidate. It might not be a fit today, but it might be one tomorrow.
+- **Let the candidate answer** and don’t be afraid of silence. It's easy to try to fill in uncomfortable blanks in the conversation.
+- You need to ** be sure of your recommendation**, so dig deep to turn orange flags into red or green. 
+- **Contribute to improve the process**, and share any issues that could be addressed.
+- **Don't mistake enthusiasm for ability. Don't mistake quietness for a lack of motivation.**
+- **Rate regardless of time spent**. If you had a 20 minutes phone call that went very well, you should give a "hire" recommendation. The hiring manager will know the context and use your feedback accordingly.
+- **Do not share ryour opinion with other interviewers** and do not try to read other people's feedback. Stay unbiased.
+- **Don’t be influenced by the context**. Being understaffed doesn’t mean we should hire anybody
 - **Have a few recurring questions**, [this way you'll be able to compare candidates][1].
 
 ### Expected Output
@@ -141,7 +141,7 @@ Then you need to define what kind of output you want out of the interviewers, mo
 - ** ✗ No **. This person is not good enough at what I’ve tested. I’m not completely confident it would go well if we were to hire them.
 - ** ✗ ✗ Strong no **. The person is bad at what I’ve tested, or I couldn’t even test it because of major fit issues with this person. I can’t see them here.
 
-Of course this is just the recommendation of the interviewers, the final call rest into either the hands of the hiring manager or some kind of hiring comittee. It's perfectly possibly for someone with a couple of "no" to get hired, if the other interviews went really well.
+Of course this is just the recommendation of the interviewers, the final call rests into either the hands of the hiring manager or some kind of hiring committee. It's perfectly possible for someone with a couple of "no" to get hired, if the other interviews went really well.
 
 Finally I also like to ask for a paragraph or two to explain their decision.
 
