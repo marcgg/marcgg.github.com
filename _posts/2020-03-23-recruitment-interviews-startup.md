@@ -8,7 +8,7 @@ tag: Recruitment
 cssscope: conversation
 ---
 
-Recruiting is one of the most important task a team leader can have. A bad hire can destroy the dynamic of a good team, and a great hire can multiply the velocity of everyone around them. 
+Recruiting is one of the most important task a team leader can have. A bad hire can destroy the dynamic of a good team, and a great hire can multiply the everyone's velocityl. 
 
 I've tried a lot of ideas after years of recruiting software engineers, first as a technical interviewer, then as a hiring manager and finally as the lead of the entire engineering department. In this article I won't give you a process that works out of the box, but instead a few steps to setup one for your team.
 
@@ -52,7 +52,7 @@ If you have it, it's great to be able to leverage things like company culture do
 
 ### Recruitment Funnel
 
-Over the past few years I've tried a lot of different processes,   andthe one thing that works is having a real funnel with objectives for each step.
+Over the past few years I've tried a lot of different processes,   and the one thing that works is having a real funnel with objectives for each step.
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/hiring-steps.jpg" alt="Recruitment funnel" style="padding: 5px; width: 600px"/></div>
 
@@ -96,17 +96,17 @@ Here the interviewer didn't have clear objectives for the technical interview. T
 When defining objectives, remember to:
 - **Keep them realistic and simple **. It's very hard to get a sense of someone during a one hour interview, so don't expect the impossible from your interviewers.
 - **Have a set of objectives around showcasing the position ** as well. You are assessing the candidate, but keep in mind that the candidate is also assessing the company and the position.
-- **Share them explicitfly**, it shouldn't be an oral tradition.
-- **Check that they are followed** by shadowing some random interviews, setting up feedback sessions etc. 
+- **Share them explicitly**, it shouldn't be an oral tradition.
+- **Check that they are followed** by shadowing some random interviews, setting up feedback sessions , etc. 
 
 Personally I like to write objectives as questions to be answered. To illustrate here are a few examples of objectives to assess the candidate:
 
 - Are they motivated to join the company?
-- Do they show interest inu solving users’ problems?
+- Do they show interest in solving users’ problems?
 - Will they work well with their manager?
 - Do they fit our values?
 - Do I see this person in my team?
-- Can this person fit in the organisation and evolve?
+- Can this person fit in the organization and evolve?
 
 ... and a few examples of objectives to showcase the company and/or position:
 
@@ -128,13 +128,13 @@ There are a lot of things interviewers need to get right, and it can take years 
 - **Contribute to improve the process**, and share any issues that could be addressed.
 - **Don't mistake enthusiasm for ability. Don't mistake quietness for a lack of motivation.**
 - **Rate regardless of time spent**. If you had a 20 minutes phone call that went very well, you should give a "hire" recommendation. The hiring manager will know the context and use your feedback accordingly.
-- **Do not share ryour opinion with other interviewers** and do not try to read other people's feedback. Stay unbiased.
+- **Do not share your opinion with other interviewers** and do not try to read other people's feedback. Stay unbiased.
 - **Don’t be influenced by the context**. Being understaffed doesn’t mean we should hire anybody
 - **Have a few recurring questions**, [this way you'll be able to compare candidates][1].
 
 ### Expected Output
 
-Then you need to define what kind of output you want out of the interviewers, most likely a "hire/no hire" answer. I like what some applicant tracking system force you to do by rating on a scale from 1 to 4 because it removes the ability to say "I don't know". 
+Then you need to define what kind of output you want out of the interviewers, most likely a "hire/no hire" answer. I like what some applicant tracking system do, rating on a scale from 1 to 4 as it removes the ability to say "I don't know". 
 
 - ** ✓ ✓ Strong yes **. This person is really great at what I’ve been tasked to test. I’m very much looking forward to work with them.
 - ** ✓ Yes **. This person is good at what I’ve been tasked to test. I’ve seen a couple of minor issues, but nothing too problematic.
@@ -151,7 +151,7 @@ I think that interviewing should be an opt-in process. There is little value in 
 
 For those who want to start helping hire, here are a few things that can help get started:
 
-- Have documentation with use case examples, question templates, interviewing techniques etc.
+- Have documentation with use case examples, question templates, interviewing techniques , etc.
 - Spend some time briefing the person before an interview, and more time debriefing after.
 - Setup some shadowing sessions, where a new interviewer follows the lead of a more experienced one.
 - Involve recruiters in the process to help explain interviewing techniques.

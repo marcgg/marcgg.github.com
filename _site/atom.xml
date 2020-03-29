@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2020-03-26T10:16:43+01:00</updated>
+ <updated>2020-03-29T11:18:40+02:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -19,7 +19,7 @@
      <updated>2020-03-23T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2020/03/23/recruitment-interviews-startup</id>
      <content type="html">
-       &lt;p&gt;Recruiting is one of the most important task a team leader can have. A bad hire can destroy the dynamic of a good team, and a great hire can multiply the velocity of everyone around them.&lt;/p&gt;
+       &lt;p&gt;Recruiting is one of the most important task a team leader can have. A bad hire can destroy the dynamic of a good team, and a great hire can multiply the everyone’s velocityl.&lt;/p&gt;
 
 &lt;p&gt;I’ve tried a lot of ideas after years of recruiting software engineers, first as a technical interviewer, then as a hiring manager and finally as the lead of the entire engineering department. In this article I won’t give you a process that works out of the box, but instead a few steps to setup one for your team.&lt;/p&gt;
 
@@ -67,7 +67,7 @@
 
 &lt;h3 id=&quot;recruitment-funnel&quot;&gt;Recruitment Funnel&lt;/h3&gt;
 
-&lt;p&gt;Over the past few years I’ve tried a lot of different processes,   andthe one thing that works is having a real funnel with objectives for each step.&lt;/p&gt;
+&lt;p&gt;Over the past few years I’ve tried a lot of different processes,   and the one thing that works is having a real funnel with objectives for each step.&lt;/p&gt;
 
 &lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/hiring-steps.jpg&quot; alt=&quot;Recruitment funnel&quot; style=&quot;padding: 5px; width: 600px&quot; /&gt;&lt;/div&gt;
 
@@ -116,19 +116,19 @@
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;Keep them realistic and simple &lt;/strong&gt;. It’s very hard to get a sense of someone during a one hour interview, so don’t expect the impossible from your interviewers.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Have a set of objectives around showcasing the position &lt;/strong&gt; as well. You are assessing the candidate, but keep in mind that the candidate is also assessing the company and the position.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Share them explicitfly&lt;/strong&gt;, it shouldn’t be an oral tradition.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Check that they are followed&lt;/strong&gt; by shadowing some random interviews, setting up feedback sessions etc.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Share them explicitly&lt;/strong&gt;, it shouldn’t be an oral tradition.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Check that they are followed&lt;/strong&gt; by shadowing some random interviews, setting up feedback sessions , etc.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Personally I like to write objectives as questions to be answered. To illustrate here are a few examples of objectives to assess the candidate:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Are they motivated to join the company?&lt;/li&gt;
-  &lt;li&gt;Do they show interest inu solving users’ problems?&lt;/li&gt;
+  &lt;li&gt;Do they show interest in solving users’ problems?&lt;/li&gt;
   &lt;li&gt;Will they work well with their manager?&lt;/li&gt;
   &lt;li&gt;Do they fit our values?&lt;/li&gt;
   &lt;li&gt;Do I see this person in my team?&lt;/li&gt;
-  &lt;li&gt;Can this person fit in the organisation and evolve?&lt;/li&gt;
+  &lt;li&gt;Can this person fit in the organization and evolve?&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;… and a few examples of objectives to showcase the company and/or position:&lt;/p&gt;
@@ -154,14 +154,14 @@
   &lt;li&gt;&lt;strong&gt;Contribute to improve the process&lt;/strong&gt;, and share any issues that could be addressed.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Don’t mistake enthusiasm for ability. Don’t mistake quietness for a lack of motivation.&lt;/strong&gt;&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Rate regardless of time spent&lt;/strong&gt;. If you had a 20 minutes phone call that went very well, you should give a “hire” recommendation. The hiring manager will know the context and use your feedback accordingly.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Do not share ryour opinion with other interviewers&lt;/strong&gt; and do not try to read other people’s feedback. Stay unbiased.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Do not share your opinion with other interviewers&lt;/strong&gt; and do not try to read other people’s feedback. Stay unbiased.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Don’t be influenced by the context&lt;/strong&gt;. Being understaffed doesn’t mean we should hire anybody&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Have a few recurring questions&lt;/strong&gt;, &lt;a href=&quot;http://marcgg.com/blog/2017/01/22/job-interview-questions/&quot;&gt;this way you’ll be able to compare candidates&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;expected-output&quot;&gt;Expected Output&lt;/h3&gt;
 
-&lt;p&gt;Then you need to define what kind of output you want out of the interviewers, most likely a “hire/no hire” answer. I like what some applicant tracking system force you to do by rating on a scale from 1 to 4 because it removes the ability to say “I don’t know”.&lt;/p&gt;
+&lt;p&gt;Then you need to define what kind of output you want out of the interviewers, most likely a “hire/no hire” answer. I like what some applicant tracking system do, rating on a scale from 1 to 4 as it removes the ability to say “I don’t know”.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt; ✓ ✓ Strong yes &lt;/strong&gt;. This person is really great at what I’ve been tasked to test. I’m very much looking forward to work with them.&lt;/li&gt;
@@ -181,7 +181,7 @@
 &lt;p&gt;For those who want to start helping hire, here are a few things that can help get started:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Have documentation with use case examples, question templates, interviewing techniques etc.&lt;/li&gt;
+  &lt;li&gt;Have documentation with use case examples, question templates, interviewing techniques , etc.&lt;/li&gt;
   &lt;li&gt;Spend some time briefing the person before an interview, and more time debriefing after.&lt;/li&gt;
   &lt;li&gt;Setup some shadowing sessions, where a new interviewer follows the lead of a more experienced one.&lt;/li&gt;
   &lt;li&gt;Involve recruiters in the process to help explain interviewing techniques.&lt;/li&gt;

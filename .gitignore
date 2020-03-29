@@ -8,3 +8,4 @@ _site/Gemfile
 _site/Gemfile.lock
 *.swp
 *.swo
+*.Ulysses-*
