@@ -4,7 +4,6 @@ title: "Podcast Episodes to Listen to During Lockdown"
 description: "List of podcast episodes on science, design, history, culture, entrepreneurship or even management."
 blog: true
 category: blog
-tag: Management
 ---
 
 This quarantine period is a good time to get into podcasts. It's a good way to listen to something interesting while staying active around the house, not glued in front of a screen.
