@@ -1,18 +1,16 @@
 ---
 layout: simple
-title: "Manager Readme"
+title: "Manager README"
 description: "A comprehensive documentation of how I work."
+category: README
 subtitle: "A comprehensive documentation of how I work"
 ---
 
+If you're not familiar with this format, it is heavily inspired by [Oren Ellenbogen][1]'s [work][2]. This document is an effort to explain my role, my values, my expectations and my quirks as a manager.  It might seem a bit weird, but I see it as a way to gain time when starting to work together and help you understand the way I operate. Of course this does not replace actually learning to know each other!
 
-If you're not familiar with this format, it is heavily inspired by [Oren Ellenbogen][1]'s [work][2]. This document is an effort to explain my role, my values, my expectations and my quirks as a manager.  It might seem a bit weird, but I see it as a way to gain time when starting to work together and help you understand the way I operate. 
+It's important to keep in mind that this is a living document and, as such, it will change with time. Also remember that I'm here for you and will do my best to adapt my management style to you, so please don't see anything here as set in stone.
 
-It's important to keep in mind that this is a live document and, as such, it will change with time. Also remember that I'm here for you anld will do my best to adapt my management style to you, so please don't see anything here as set in stone.
-
-Of course this does not replace actually learning to know each other :)
-
-**If you see a discrepancy between this document and my behavior, please tell me.**
+**If you see a discrepancy between this document and my behaviour, please tell me.**
 
 _Note to future teammates and employers: This is obviously catered to the way my current company works. Some things will remain true no matter where I am at, but others might change depending on the context._
 
@@ -34,12 +32,12 @@ I love when things fit together well and deliver value.
 
 It can be a group of people working well together, a piece of code shipped without bugs, a well crafted design, a great piece of software architecture, an elegant solution to a user problem… if it works well and serves a purpose, then I most likely enjoy and be proud to be associated with it!
 
-Because of this I like optimising things - no matter the thing. Meetings need to be focused and interesting, code without bugs, processes simple and clear… in my spare time I even play games like [Factorio][3] or [Oxygen Not Included][4] - games about automatisation and optimisation!
+Because of this I like optimising things — no matter the thing. Meetings need to be focused and interesting, code without bugs, processes simple and clear… in my spare time I even play games like [Factorio][3] or [Oxygen Not Included][4] - games about automatisation and optimisation!
 
 In a work environment, I value...
 
 - Working with a group of **genuinely nice & interesting people**
--  **Work well done** , code that doesn't crash, clear specifications...
+-  **Work well done** , meaning code that doesn't crash, clear specifications, effective design...
 - People who **keep learning** and are **curious** about all parts of the organisation
 - Team members who **challenge ideas in a constructive and healthy way**
 - The **positive real life impact** our work can have
@@ -47,7 +45,7 @@ In a work environment, I value...
 - Autonomous people proactively taking **ownership and accountability**
 - An **ethical approach** to problems and solutions
 - A **sane work/life balance**
-- **Diversity** , which can come in many forms in my opinion - from gender to socio-economic background
+- **Diversity** coming in many forms, like gender but also socio-economic background or nationnality
 - **Continuous improvement** for both systems and peoples
 
 ## What I Can Help You With
@@ -70,50 +68,48 @@ If I do my job properly, I should be helpful to you. My goal will be to give you
 
 ### Communication
 
-- I can sometimes answer very briefly to be efficient. It can be perceived as dismissive, but that's never my intention.
+- I tend to repeat myself. There might be a lot of people in the team, and I might forget I already told you about something. I might also think that it's a point important enough to be constantly repeated. If it becomes annoying, don't hesitate to let me know and I'll stop for this particular topic :)
 
-- I might repeat myself a lot. There might be a lot of people in the team, and I might forget I already told you about something. I might also think that it's a point important enough to be constantly repeated. If it becomes annoying, don't hesitate to let me know and I'll stop for this particular topic :)
-
-- I can have strong opinions, and I don't shy away from heated debates. I actually can quickly get carried away talking about an interesting topic. When discussing I'm always "attacking" ideas, not people. However some can feel like it becomes a criticism of themselves. That's never my intention, but I get that it can be perceived this way, so don't hesitate to tell me if I'm too intense about it.
+- I can have strong opinions, and I don't shy away from heated debates. I actually can quickly get carried away talking about an interesting topic. When discussing I'm always "attacking" ideas, not people. However some can feel like it becomes a criticism of themselves. That's never my intention, but I get that it can be perceived this way, so don't hesitate to tell me if I'm too intense.
 
 - I'm quite pessimistic by nature. This doesn't mean that I don't believe in what we are trying to do, I simply tend to mostly see the flaws and improvements rather than the good side of things.
 
 - I sometimes ask open-ended questions but don't expect any particular answer. It's a conversation, not a test, and there is no "right" answer.
 
-- If you're explaining a production issue to me, I want to hear the user impact & if it's fixed before getting into any other details. If you don't start with the impact I'll be stressed out and most likely annoyed the whole time you tell me.
+- If you're explaining a production issue to me, I want to hear the impact on users & if it's fixed before getting into any other details. If you don't start with the impact I'll be stressed out the whole time you are talking to me.
 
 - The company might need me to not share a particular piece of information with you, and I will not do it. However I will never lie to you, the worst I can do is remain vague.
 
-- I prefer to be direct, but it can sometimes be a bit intense to some people. To prevent this I often try to dial it down. If you feel I'm overdoing it and not being direct enough, let me know and I'll adjust. Same thing if you feel I'm not dialing it down enough :)
+- By default I prefer to be direct and push people to do better. While it is appreciated by some, I know that it can be a bit too much for some people. This is not a problem, please let me know and I'll adapt.
 
-- Followup is very important to me. Generally I assume that you will make a note of any action required and let me know when it's done / if it's delayed / if you need help. Once I consider that it is in your scope, I will stop worrying about it. What I would dislike is that you forgot about it, or decided not to do it without letting me know.
+- Followup is very important to me. Generally I assume that you will make a note of any action required and let me know when it's done / if it's delayed / if you need help. Once I consider that it is in your scope, I will stop worrying about it. What I dislike is people forgetting tasks or dropping topics without telling me.
 
-- Sometimes I might speak too much, especially when it's a topic I enjoy. Feel free to interrupt me if you feel like this is not relevant.
+- Sometimes I might speak too much, especially when it's a topic I enjoy. Feel free to interrupt me if you feel like this is not relevant and I'm wasting time.
 
 ### Work
 
-- I have very high esteem for what has been done in the past, such as legacy code or previous product decisions. If it wasn't for this we wouldn't be where we are. Yes sometimes it can be clunky… but the people who did it tried their best with the information and skills they had.
+- I have a very high esteem for what has been done in the past, such as [legacy code][5] or previous product decisions. If it wasn't for this we wouldn't be where we are. Yes sometimes it can be clunky… but the people who did it tried their best with the information and skills they had.
 
-- I absolutely hate meetings that start or end late as it feels like a complete waste of time. If you are significantly late for a meeting, there's a good chance I'll cancel or start without you. Because of this I also try my best to be very on time to every meeting and you can expect my meetings to start on time. As a rule of thumb I'd say a few minutes is fine, but above 5 minutes I will tend to expect a small excuse. At least that's the way I'll act with you if I'm late :)
+- I hate meetings that start or end late. It feels like a complete waste of time. If you are significantly late for a meeting, there's a good chance I'll cancel or start without you if it's not a one on one. Because of this I also try my best to be on time to every meeting and you can expect my meetings to start on time. As a rule of thumb I'd say a few minutes are acceptable, but above 5 minutes I will tend to expect a small excuse. At least that's the way I'll act with you if I'm late :)
 
-- If sometimes I work overtime, I don't expect you to do the same. If I message you and you're done with your day, I don't expect a response right away. In most cases it can wait the next day.
+- If sometimes I work overtime, I don't expect you to do the same. If I message you and you're done with your day, I don't expect a response right away. In most cases it can wait the next day. When unsure, ask me.
 
-- I take vacations, you should too. When I'm off, I try not to check email or slack, but I'm available via SMS for anything that can't wait for my return. Don't hesitate to use it if relevant. I will feel way more at ease knowing that people will contact me this way in case of major trouble.
+- I take vacations, you should too. When I'm off, I usually do not to check email or slack, but I'm always available via SMS for anything that can't wait for my return. Don't hesitate to use it if relevant. I will feel way more at ease knowing that people will contact me this way in case of major trouble.
 
-- I have a bias for doing something. I much prefer trying something after a couple of discussions rather than having long meetings or studies.
+- I have a bias for doing something over planning. I much prefer trying something after a couple of discussions rather than having long meetings or studies.
 
-- I might invite you to some meetings without talking to you first. This is only to gain time. If the slot is not convenient or if you want more information about the agenda, don't hesitate to ask me.
+- To save time, I might invite you to some meetings without talking to you first. If the moment is not convenient or if you want more information about the agenda, don't hesitate to ask me and I can often move it.
 
 - I tend to have high expectations and will challenge you on what you are doing. This doesn't necessarily mean that you are doing a poor job. It can mean that I believe you can progress even more.
 
 ### Personality Tests
 
-I don't entirely believe in putting people into boxes, but personality tests can be a decent proxy to get some understanding of someone. So if you're into that, here are my results:
+I don't entirely believe in putting people into boxes, but personality tests can be a decent proxy to understand someone. So if you're into that, here are my results:
 
-- [**Myers Briggs**][5]: [INTP][6]
-- [**CliftonStrengths**][7] top 5 strengths, in order: [Learner][8], [Activator][9], [Relator][10]_,_ [Context][11] & [Arranger][12]
+- [**Myers Briggs**][6]: [INTP][7]
+- [**CliftonStrengths**][8] top 5 strengths, in order: [Learner][9], [Activator][10], [Relator][11], [Context][12] & [Arranger][13]
 
-I generally agree with the results and I see that I do have traits from the various profiles.
+I generally agree with the results and can't deny that I do have traits from the various profiles.
 
 ## Day To Day Framework
 
@@ -131,20 +127,22 @@ I don't expect any particular schedule from you, just that you are present for a
 
 If you have constraints, like sports or kids, don't hesitate to let me know and make it clear in your calendar when you are present or not.
 
-### Remote
+### Work From Home
 
-Under a couple of days a month I will always validate requests for remote. I will assume the following and if you respect them remote won't be a topic of discussion between us:
+I strongly believe that any team should operate correctly even if everyone is remote, and I generally have a bias in favour of remote work.
+
+Before going remote, you usually have to send me a work from home request. If you do it a few days a month I will always validate them. If you want to be remote more regularly, let's talk about it. If you want to be fully remote, that's another discussion that might require a contract renegotiation.
+
+I will assume the following and if you respect them, remote work won't be a topic of discussion between us:
 
 - You talked to your team and other people that might need you
 - You made sure to be reachable & have a sufficient internet connection
 - You will be present in all meetings you were supposed to be in
 - You will actually work :)
 
-If you want to be remote more regularly, let's talk about it. If you want to be fully remote, that's another discussion that might require a contract renegotiation.
-
 ### Holidays
 
-I've never refused days off before, and I'm counting on everybody to keep it this way. Use your best judgment and understand the context. In doubt, ask me before booking your flight or planning your holidays.
+I very rarely refuse holiday requests. Use your best judgment and understand the context. In doubt, ask me before booking your flight or planning your holidays.
 
 ### 1:1s
 
@@ -158,23 +156,25 @@ I set time for my direct reports to have dedicated time together. Here is what y
 
 ### Yearly Performance Review
 
-Every year we'll have a \~2 hours meeting about your performances. Ideally we will have discussed everything during the year and will use this moment to wrap the year up. I will also give you some vision over what's going to happen in the coming years, the different career paths available to you etc.
+Every year we'll have a meeting of a few hours about your performances. Ideally we will have discussed everything during the year and will use this moment to wrap the year up. I will also give you some vision over what's going to happen in the coming years, the different career paths available to you , etc.
 
 This will also be the best moment to discuss salary changes.
 
 ### Reading my Calendar
 
-My calendar is up to date as it can get pretty complicated. I have one kid, and I have to pick her up from the daycare in some evenings and mornings. I also have a lot of meetings, interviews, 1:1s… Because of this, please always check my calendar before booking a meeting with me. If you can't find a spot, ask me if I can find one.
+My calendar is up to date as it can get pretty complicated. I have one kid, and I have to pick her up from the daycare in some evenings and/or mornings. I also have a lot of meetings, interviews, 1:1s…
+
+Because of this, please always check my calendar before booking a meeting with me. If you can't find a spot, ask me if I can find one.
 
 ### Contacting Me
 
-- **Slack** to get my attention quickly or chat about something. I check it every few hours and generally answer within a day. Please avoid sending multiple messages instead of a full sentence..
+- **Slack** to get my attention quickly or chat about something. I check it every few hours and generally answer within a day. Please avoid sending multiple messages to share only one idea.
 - **Email** if you want in depth answers or have complicated questions. I check it 3 times a day and answer within a week usually.
-- **At the coffee machine** for anything we can easily discuss while sipping a drink
-- **At my desk** if urgent
-- **In whatever meeting I'm in** if urgent and I'm in the office
-- **SMS** if urgent and I'm not at the office
-- **Phone call + SMS**  if VERY urgent and I'm not at the office
+- **At the coffee machine** for anything we can easily discuss while sipping a drink.
+- **At my desk** if urgent.
+- **In whatever meeting I'm in** if urgent and I'm in the office.
+- **SMS** if urgent and I'm not at the office.
+- **Phone call + SMS**  if VERY urgent and I'm not at the office.
 
 If you are waiting on me for something and I'm not doing anything, maybe I forgot or maybe I planned on getting it way later than you expected. In this case don't hesitate to ping me. I'll never get mad about this and appreciate the fact that you want your topic to move forward.
 
@@ -182,13 +182,13 @@ If you are waiting on me for something and I'm not doing anything, maybe I forgo
 
 ### My First Expectations
 
-We hired you because of your experience and skills, so my role is not to tell you how to do your job. Because of this I'm expecting that you are able to operate as a professional, making smart decisions moving your projects forward.
+We hired you because of your experience and skills, so my role is not to tell you how to do your job. Because of this I'm expecting that you are able to operate as a professional, making smart decisions moving your projects forward and communicate along the way.
 
 This doesn't mean that I think you'll do everything on your own.  I am here to provide you guidance and mentorship (either through me, or by finding the people you should be getting it from). When you need help, I expect you to not hesitate and ask for it. If you feel you made a mistake, you should share it openly with me.
 
 ### Expressing Other Expectations
 
-I try to make my expectations as clear as possible, I just find it to be a simpler way to work and communicate. If it's not clear what I'm expecting of you, then please ask for clarifications - let's not wait until we misunderstand each other! If you disagree with my expectations, please let me know, I can adjust.
+I try to make my expectations as clear as possible, I just find it to be a simpler way to work and communicate. If it's not clear what I'm expecting of you, then please ask for clarifications — let's not wait until we misunderstand each other! If you disagree with my expectations, please let me know, I can adjust.
 
 If you have expectations for me, please let me know and be clear as well.
 
@@ -198,7 +198,7 @@ If you mess up in some way, please let me know. If I hear it from you, I'll be d
 
 ### I'll Make Mistakes
 
-I do my best, but I'm bound to make mistakes. When it's the case, please assume that I have good intentions, and don't hesitate to let me know if you think that I'm making a poor decision or acting in a way that doesn't make sense to you.
+I'll do my best, but I'm bound to make mistakes. When it's the case, please assume that I have good intentions, and don't hesitate to let me know if you think that I'm making a poor decision or acting in a way that doesn't make sense to you.
 
 I'll be happy to give you more context to explain my actions or try to fix whatever is wrong. I'll also do my best to react in a productive fashion to any negative feedback.
 
@@ -234,11 +234,12 @@ I will also mention it to you in private within a couple of weeks of the achieve
 [2]:	https://managerreadme.com/
 [3]:	https://www.youtube.com/watch?v=KVvXv1Z6EY8
 [4]:	https://www.youtube.com/watch?v=wcLayGm_pM4
-[5]:	https://www.myersbriggs.org/my-mbti-personality-type/mbti-basics/home.htm?bhcp=1
-[6]:	https://www.16personalities.com/intp-personality
-[7]:	https://www.gallup.com/cliftonstrengths/en/252137/home.aspx
-[8]:	https://www.gallup.com/cliftonstrengths/en/252293/learner-theme.aspx
-[9]:	https://www.gallup.com/cliftonstrengths/en/252140/activator-theme.aspx
-[10]:	https://www.gallup.com/cliftonstrengths/en/252311/relator-theme.aspx
-[11]:	https://www.gallup.com/cliftonstrengths/en/252209/context-theme.aspx
-[12]:	https://www.gallup.com/cliftonstrengths/en/252161/arranger-theme.aspx
+[5]:	/blog/2014/07/22/in-defense-of-legacy-code/
+[6]:	https://www.myersbriggs.org/my-mbti-personality-type/mbti-basics/home.htm?bhcp=1
+[7]:	https://www.16personalities.com/intp-personality
+[8]:	https://www.gallup.com/cliftonstrengths/en/252137/home.aspx
+[9]:	https://www.gallup.com/cliftonstrengths/en/252293/learner-theme.aspx
+[10]:	https://www.gallup.com/cliftonstrengths/en/252140/activator-theme.aspx
+[11]:	https://www.gallup.com/cliftonstrengths/en/252311/relator-theme.aspx
+[12]:	https://www.gallup.com/cliftonstrengths/en/252209/context-theme.aspx
+[13]:	https://www.gallup.com/cliftonstrengths/en/252161/arranger-theme.aspx

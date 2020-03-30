@@ -32,7 +32,7 @@ layout: compress
       <div id="logo">
         <a id='logo1' href="/">marcgg</a>
         <span id='logo2'>#</span>
-        <a id='logo3' href="/{% if page.category != 'about'%}{{page.category}}/{% endif %}">
+        <a id='logo3' href="/{% if page.category != 'about'%}{% if page.category != 'README'%}{{page.category}}/{% endif %}{% endif %}">
           {{page.category}}
         </a>
       </div>

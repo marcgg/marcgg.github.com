@@ -2,32 +2,32 @@
 layout: page
 title : Marc G Gauthier - Blog
 category: blog
-description: "Blog with articles about Ruby, startups, teaching, Elixir, MySQL, Heroku, Philosophy and more."
+description: "Blog with articles about ruby, management, startups, teaching, javascript, philosophy and more."
 ---
 
 <div id="all-posts">
   {% for post in site.posts %}
     {%if post.tag != "book" %}
-    {% if post.blog == true %}
-      <div id="index-post-{% increment i %}" class="single-post">
-        <div class="excerpt">
-          <div class="date">{{ post.date | date: "%B %Y" }}</div>
-          <div class="title">
-            <a href="{{ BASE_PATH }}{{ post.url }}">
-              {% if post.titlehtml %}
-                {{ post.titlehtml }}
-              {% else %}
-                {{ post.title }}
-              {% endif %}
-            </a>
-          </div>
+      {% if post.blog == true %}
+        <div id="index-post-{% increment i %}" class="single-post">
+          <div class="excerpt">
+            <div class="date">{{ post.date | date: "%B %Y" }}</div>
+            <div class="title">
+              <a href="{{ BASE_PATH }}{{ post.url }}">
+                {% if post.titlehtml %}
+                  {{ post.titlehtml }}
+                {% else %}
+                  {{ post.title }}
+                {% endif %}
+              </a>
+            </div>
 
-          <p class="description">
-            {{post.description}}
-          </p>
+            <p class="description">
+              {{post.description}}
+            </p>
+          </div>
         </div>
-      </div>
-    {% endif %}
+      {% endif %}
     {% endif %}
   {% endfor %}
 </div>
