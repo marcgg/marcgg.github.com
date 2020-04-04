@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2020-04-04T14:37:57+02:00</updated>
+ <updated>2020-04-04T14:39:41+02:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -730,8 +730,6 @@
        &lt;p&gt;When consulting, I often see so small teams struggle with git because they seem to expect that a good flow has to be a complicated. Usually this is because they saw &lt;a href=&quot;/assets/blog/git-flow-complex.png&quot;&gt;this git-flow schema&lt;/a&gt; at some point when researching various solutions and thought they needed all of this to be able to ship in good conditions.&lt;/p&gt;
 
 &lt;p&gt;I’d like to argue in this article that &lt;strong&gt;most small agile teams releasing a web app can be effective with only a very simple git flow if they invested in automated testing&lt;/strong&gt;. I’ve implemented a simpler approach to git in many small teams and it has always made things better. Developers are more empowered because they can easily use the flow and there is no need for additional tooling.&lt;/p&gt;
-
-&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/no-need-complexity-git.jpg&quot; alt=&quot;Git flow can be simpler&quot; style=&quot;padding: 0px; width: 650px;&quot; /&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;disclaimer&quot;&gt;Disclaimer&lt;/h2&gt;
 

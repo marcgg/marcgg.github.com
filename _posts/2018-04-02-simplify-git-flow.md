@@ -13,8 +13,6 @@ When consulting, I often see so small teams struggle with git because they seem 
 
 I'd like to argue in this article that **most small agile teams releasing a web app can be effective with only a very simple git flow if they invested in automated testing**. I've implemented a simpler approach to git in many small teams and it has always made things better. Developers are more empowered because they can easily use the flow and there is no need for additional tooling.
 
-<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/no-need-complexity-git.jpg" alt="Git flow can be simpler" style="padding: 0px; width: 650px;"/></div>
-
 ## Disclaimer
 
 Of course some organisations do need something like git-flow, it has its merits. So please keep in mind that, if you are in one of these situations, you won't find my article helpful:
