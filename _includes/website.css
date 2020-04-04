@@ -457,6 +457,9 @@ p code, li code{
   margin: -20px 0px 20px 0px;
   color: #aaa;
 }
+.image-wrapper em a{
+  color: #aaa;
+}
 
 .twitter-tweet{
   margin: auto;

@@ -5,7 +5,7 @@ description: "I wrote a document to explain to my team how I operate at work, in
 blog: false
 category: blog
 tag: Management
-featured: true
+featured: false
 ---
 
 I've always liked [Oren Ellenbogen][1]'s idea of having a [Manager README][2] or something close to what [Michael Lopp has on his site][3]. After some time I finally wrote mine and shared it internally, and after even more time I've decided to share it publicly, so if you're interested you can [go and check it out now][4].
