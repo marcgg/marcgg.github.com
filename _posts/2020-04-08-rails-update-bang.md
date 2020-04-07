@@ -27,7 +27,7 @@ record.update!(params) # raises is invalid
 
 ## Usage to Avoid
 
-On the other hand, here is something that is to avoid:
+On the other hand, here is something to avoid:
 
 {% highlight ruby %}
 some_action
@@ -37,11 +37,11 @@ some_other_action
 
 ### Silent Failure
 
-If this succeeds, it's all good. However **if it fails, it will fail silently** and could cause some disastrous side effects down the line. Silent failures are the worst kind of failures as it makes debugging a nightmare since the problem could be anywhere in the code.
+If this action succeeds, it's all good. However **if it fails and not save the record, it will do it silently** and could cause some disastrous side effects down the line. Silent failures are the worst kind of failures as it makes debugging a nightmare since the problem could be anywhere in the code.
 
-There might be situations where it is acceptable. For instance let's say you have a corrupted database and want to only update the valid records in a script... then you don't really care that it doesn't save the invalid record. However I would argue that this is quite an implicit behaviour and your code won't [express your intent][3] unless you add comments, so why not spend the extra couple of minutes to graciously handle it?
+Of course there are situations where it is acceptable. For instance you have a corrupted database and only want to update the valid records in a script... then yes, under these circumstances you don't really care that the invalid record is not updated. However I would argue that this is quite an implicit behaviour and your code won't [express your intent][3] unless you add comments, so why not spend the extra couple of minutes to graciously handle it?
 
-And even if there are some cases where it wouldn't cause major issues, there is still an overwhelming number of situation where you'll want to know that something didn't happen as expected. 
+Finally, even if there are some cases where this wouldn't cause major issues, there is still an overwhelming number of situations where you'll want to know that something didn't happen as expected.
 
 ### How To Fix
 

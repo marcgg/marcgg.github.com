@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2020-04-07T14:54:47+02:00</updated>
+ <updated>2020-04-07T15:00:34+02:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -37,7 +37,7 @@
 
 &lt;h2 id=&quot;usage-to-avoid&quot;&gt;Usage to Avoid&lt;/h2&gt;
 
-&lt;p&gt;On the other hand, here is something that is to avoid:&lt;/p&gt;
+&lt;p&gt;On the other hand, here is something to avoid:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;some_action&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;record&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -45,11 +45,11 @@
 
 &lt;h3 id=&quot;silent-failure&quot;&gt;Silent Failure&lt;/h3&gt;
 
-&lt;p&gt;If this succeeds, it’s all good. However &lt;strong&gt;if it fails, it will fail silently&lt;/strong&gt; and could cause some disastrous side effects down the line. Silent failures are the worst kind of failures as it makes debugging a nightmare since the problem could be anywhere in the code.&lt;/p&gt;
+&lt;p&gt;If this action succeeds, it’s all good. However &lt;strong&gt;if it fails and not save the record, it will do it silently&lt;/strong&gt; and could cause some disastrous side effects down the line. Silent failures are the worst kind of failures as it makes debugging a nightmare since the problem could be anywhere in the code.&lt;/p&gt;
 
-&lt;p&gt;There might be situations where it is acceptable. For instance let’s say you have a corrupted database and want to only update the valid records in a script… then you don’t really care that it doesn’t save the invalid record. However I would argue that this is quite an implicit behaviour and your code won’t &lt;a href=&quot;/blog/2018/05/15/expressing-intent-comments-ruby/&quot;&gt;express your intent&lt;/a&gt; unless you add comments, so why not spend the extra couple of minutes to graciously handle it?&lt;/p&gt;
+&lt;p&gt;Of course there are situations where it is acceptable. For instance you have a corrupted database and only want to update the valid records in a script… then yes, under these circumstances you don’t really care that the invalid record is not updated. However I would argue that this is quite an implicit behaviour and your code won’t &lt;a href=&quot;/blog/2018/05/15/expressing-intent-comments-ruby/&quot;&gt;express your intent&lt;/a&gt; unless you add comments, so why not spend the extra couple of minutes to graciously handle it?&lt;/p&gt;
 
-&lt;p&gt;And even if there are some cases where it wouldn’t cause major issues, there is still an overwhelming number of situation where you’ll want to know that something didn’t happen as expected.&lt;/p&gt;
+&lt;p&gt;Finally, even if there are some cases where this wouldn’t cause major issues, there is still an overwhelming number of situations where you’ll want to know that something didn’t happen as expected.&lt;/p&gt;
 
 &lt;h3 id=&quot;how-to-fix&quot;&gt;How To Fix&lt;/h3&gt;
 
