@@ -4,13 +4,62 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2020-04-04T15:02:20+02:00</updated>
+ <updated>2020-04-07T14:13:39+02:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
    <email>marcg.gauthier@gmail.com</email>
  </author>
 
+ 
+  
+   <entry>
+     <title>Misuse of update/update! in Ruby on Rails</title>
+     <link href="https://marcgg.com/blog/2020/04/08/rails-update-bang/"/>
+     <updated>2020-04-08T00:00:00+02:00</updated>
+     <id>https://marcgg.com/blog/2020/04/08/rails-update-bang</id>
+     <content type="html">
+       &lt;p&gt;One of my pet peeves when reviewing Ruby on Rails pull requests is the usage of &lt;a href=&quot;https://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-update&quot;&gt;update&lt;/a&gt; and &lt;a href=&quot;https://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-update-21&quot;&gt;update!&lt;/a&gt;, or any &lt;code class=&quot;highlighter-rouge&quot;&gt;ActiveRecord::Persistence&lt;/code&gt; method and it’s bang (&lt;code class=&quot;highlighter-rouge&quot;&gt;!&lt;/code&gt;) counterpart.&lt;/p&gt;
+
+&lt;h2 id=&quot;normal-usage&quot;&gt;Normal Usage&lt;/h2&gt;
+
+&lt;p&gt;As a reminder, &lt;code class=&quot;highlighter-rouge&quot;&gt;update&lt;/code&gt; will return false if a validation error occurs and &lt;code class=&quot;highlighter-rouge&quot;&gt;update!&lt;/code&gt; will raise instead. The way it’s normally used is:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;record&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;display_success&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;react_to_problem&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# or&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;record&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;update!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# raises is invalid&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;usage-to-avoid&quot;&gt;Usage to Avoid&lt;/h2&gt;
+
+&lt;p&gt;On the other hand, here is something that is almost never valid:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;some_action&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;record&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;some_other_action&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;If this succeeds, it’s all good. However if it fails it will fail silently, which is the worst kind of failure. There might be a situation where this is fine, but in most cases you want to be aware that something didn’t happen as expected.&lt;/p&gt;
+
+&lt;p&gt;This is why you should either raise on error using &lt;code class=&quot;highlighter-rouge&quot;&gt;update!&lt;/code&gt; or react to the &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt; return of the persistence method.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;record&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;update!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# or&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;unless&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;record&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;react_to_failure&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Could be as simple as logging what happened&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+
+       
+     </content>
+   </entry>
+  
  
   
    <entry>
