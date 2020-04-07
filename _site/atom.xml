@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2020-04-07T14:13:39+02:00</updated>
+ <updated>2020-04-07T14:54:47+02:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -19,11 +19,11 @@
      <updated>2020-04-08T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2020/04/08/rails-update-bang</id>
      <content type="html">
-       &lt;p&gt;One of my pet peeves when reviewing Ruby on Rails pull requests is the usage of &lt;a href=&quot;https://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-update&quot;&gt;update&lt;/a&gt; and &lt;a href=&quot;https://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-update-21&quot;&gt;update!&lt;/a&gt;, or any &lt;code class=&quot;highlighter-rouge&quot;&gt;ActiveRecord::Persistence&lt;/code&gt; method and it’s bang (&lt;code class=&quot;highlighter-rouge&quot;&gt;!&lt;/code&gt;) counterpart.&lt;/p&gt;
+       &lt;p&gt;One of my pet peeves when reviewing Ruby on Rails code is the usage of &lt;a href=&quot;https://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-update&quot;&gt;update&lt;/a&gt; and &lt;a href=&quot;https://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-update-21&quot;&gt;update!&lt;/a&gt;, or any &lt;code class=&quot;highlighter-rouge&quot;&gt;ActiveRecord::Persistence&lt;/code&gt; method and it’s bang (&lt;code class=&quot;highlighter-rouge&quot;&gt;!&lt;/code&gt;) counterpart.&lt;/p&gt;
 
-&lt;h2 id=&quot;normal-usage&quot;&gt;Normal Usage&lt;/h2&gt;
+&lt;h2 id=&quot;typical-usage&quot;&gt;Typical Usage&lt;/h2&gt;
 
-&lt;p&gt;As a reminder, &lt;code class=&quot;highlighter-rouge&quot;&gt;update&lt;/code&gt; will return false if a validation error occurs and &lt;code class=&quot;highlighter-rouge&quot;&gt;update!&lt;/code&gt; will raise instead. The way it’s normally used is:&lt;/p&gt;
+&lt;p&gt;As a reminder, &lt;code class=&quot;highlighter-rouge&quot;&gt;update&lt;/code&gt; will return false if a validation error occurs and &lt;code class=&quot;highlighter-rouge&quot;&gt;update!&lt;/code&gt; will raise instead. The way it’s normally used is as follow:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;record&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;n&quot;&gt;display_success&lt;/span&gt;
@@ -37,15 +37,23 @@
 
 &lt;h2 id=&quot;usage-to-avoid&quot;&gt;Usage to Avoid&lt;/h2&gt;
 
-&lt;p&gt;On the other hand, here is something that is almost never valid:&lt;/p&gt;
+&lt;p&gt;On the other hand, here is something that is to avoid:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;some_action&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;record&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;some_other_action&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;If this succeeds, it’s all good. However if it fails it will fail silently, which is the worst kind of failure. There might be a situation where this is fine, but in most cases you want to be aware that something didn’t happen as expected.&lt;/p&gt;
+&lt;h3 id=&quot;silent-failure&quot;&gt;Silent Failure&lt;/h3&gt;
 
-&lt;p&gt;This is why you should either raise on error using &lt;code class=&quot;highlighter-rouge&quot;&gt;update!&lt;/code&gt; or react to the &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt; return of the persistence method.&lt;/p&gt;
+&lt;p&gt;If this succeeds, it’s all good. However &lt;strong&gt;if it fails, it will fail silently&lt;/strong&gt; and could cause some disastrous side effects down the line. Silent failures are the worst kind of failures as it makes debugging a nightmare since the problem could be anywhere in the code.&lt;/p&gt;
+
+&lt;p&gt;There might be situations where it is acceptable. For instance let’s say you have a corrupted database and want to only update the valid records in a script… then you don’t really care that it doesn’t save the invalid record. However I would argue that this is quite an implicit behaviour and your code won’t &lt;a href=&quot;/blog/2018/05/15/expressing-intent-comments-ruby/&quot;&gt;express your intent&lt;/a&gt; unless you add comments, so why not spend the extra couple of minutes to graciously handle it?&lt;/p&gt;
+
+&lt;p&gt;And even if there are some cases where it wouldn’t cause major issues, there is still an overwhelming number of situation where you’ll want to know that something didn’t happen as expected.&lt;/p&gt;
+
+&lt;h3 id=&quot;how-to-fix&quot;&gt;How To Fix&lt;/h3&gt;
+
+&lt;p&gt;This is why you should either raise using &lt;code class=&quot;highlighter-rouge&quot;&gt;update!&lt;/code&gt; or react when the persistence method returns &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt;, like this:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;record&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;update!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
@@ -54,6 +62,15 @@
 &lt;span class=&quot;k&quot;&gt;unless&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;record&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;n&quot;&gt;react_to_failure&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Could be as simple as logging what happened&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;using-a-linter&quot;&gt;Using a Linter&lt;/h3&gt;
+
+&lt;p&gt;If you agree and don’t want to have this discussion on every PR, you can use &lt;a href=&quot;https://github.com/rubocop-hq/rubocop&quot;&gt;Rubocop&lt;/a&gt;’s linting. Simply add the &lt;a href=&quot;https://github.com/rubocop-hq/rubocop-rails&quot;&gt;Rails extension&lt;/a&gt; and use the &lt;code class=&quot;highlighter-rouge&quot;&gt;SaveBang&lt;/code&gt; cop by setting the following configuration:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Rails/SaveBang:
+  Enabled: true
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 
        
