@@ -8,5 +8,7 @@ gem 'jekyll-redirect-from', branch: "master", github: "jekyll/jekyll-redirect-fr
 gem "kramdown"
 gem "rouge"
 
+gem 'rmagick'
+
 # Requires Pygments
 # sudo easy_install Pygments

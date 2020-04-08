@@ -18,6 +18,7 @@ Accept rvmrc prompt
 
 ```
 bundle install
+brew install pkg-config imagemagick gs
 bundle exec jekyll serve --watch
 ```
 
