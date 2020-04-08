@@ -6,51 +6,51 @@ category: README
 subtitle: "A comprehensive documentation of how I work"
 ---
 
-If you're not familiar with this format, it is heavily inspired by [Oren Ellenbogen][1]'s [work][2]. This document is an effort to explain my role, my values, my expectations and my quirks as a manager.  It might seem a bit weird, but I see it as a way to gain time when starting to work together and help you understand the way I operate. Of course this does not replace actually learning to know each other!
+This format is heavily inspired by [Oren Ellenbogen][1]'s [work][2]. This document is an effort to explain my role, my values, my expectations and my quirks as a manager. It might seem a bit weird, but I see it as a way to gain time when starting to work together and help you understand the way I operate. Of course this does not replace actually learning to know each other! If you want more context regarding why I wrote this, please read [this blog article][3].
 
-It's important to keep in mind that this is a living document and, as such, it will change with time. Also remember that I'm here for you and will do my best to adapt my management style to you, so please don't see anything here as set in stone.
+It's important to keep in mind that this is a living document and, as such, it will change over time. Remember as well that I'm here to help you succeed and will do my best to adapt my management style to you, so please don't see anything here as set in stone and feel free to come and discuss specific points with me.
 
-**If you see a discrepancy between this document and my behaviour, please tell me.**
+Finally, **if you see a discrepancy between this document and my behaviour, please tell me.**
 
 _Note to future teammates and employers: This is obviously catered to the way my current company works. Some things will remain true no matter where I am at, but others might change depending on the context._
 
 ## My Role
 
-The way I see it, my job is to find the right spot between what the company wants to be accomplished and what the person wants to do, with a focus on long term.
+The way I see it, my job is to find the right spot between what the company wants to be accomplished and what the person wants to do, with a focus on medium to long term.
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/manager-readme/focus.jpg" alt="Finding the right spot" style="padding: 5px; width: 100%"/></div>
 
 We'll never have a perfect overlap, so there are tradeoffs to be made. To caricature, the easy and first tradeoff to agree on is that the company should pay the employee (it would have been easier to pay nothing), and the employee should work on projects helping the company (it would have been easier to stay at home and chill).
 
-To get to a good spot I need to have a good understanding of both parties and figure out the best solution to move forward, and then put this into actions. The actual solution and actions are massively depending on the context, so my actual day to day varies a lot depending on the context.
+To get to a good spot I need to have a good understanding of both parties and figure out the best solution to move forward, and then translate this into actions. The actual things to do are massively depending on the context, so my day to day varies a lot. I might work on budgets, review pull requests, prepare performance reviews, meet job candidates, write some code to fix a flaky test...
 
-If this is done correctly, it will lead to great people wanting to join and stay while delivering value for the company, ultimately helping everyone succeed.
+If I do my job correctly, it will lead to great people wanting to join and stay while delivering value for the company, ultimately helping everyone succeed.
 
 ## What I Value
 
 I love when things fit together well and deliver value.
 
-It can be a group of people working well together, a piece of code shipped without bugs, a well crafted design, a great piece of software architecture, an elegant solution to a user problem… if it works well and serves a purpose, then I most likely enjoy and be proud to be associated with it!
+It can be a group of people working well together, a piece of code shipped without bugs, a well crafted design, a great piece of software architecture, an elegant solution to a user's problem… if it works well and serves a purpose, then I most likely enjoy and be proud to be associated with it!
 
-Because of this I like optimising things — no matter the thing. Meetings need to be focused and interesting, code without bugs, processes simple and clear… in my spare time I even play games like [Factorio][3] or [Oxygen Not Included][4] - games about automatisation and optimisation!
+Because of this I like optimising things — no matter the thing. Meetings need to be focused and interesting, code without bugs, processes simple and clear. In my spare time I even play games like [Factorio][4] or [Oxygen Not Included][5] - games about automatisation and optimisation!
 
 In a work environment, I value...
 
 - Working with a group of **genuinely nice & interesting people**
+- The **positive real life impact** our work can have
 -  **Work well done** , meaning code that doesn't crash, clear specifications, effective design...
 - People who **keep learning** and are **curious** about all parts of the organisation
 - Team members who **challenge ideas in a constructive and healthy way**
-- The **positive real life impact** our work can have
--  **Honesty** , **humility** , **good faith**, **transparency** and **openness to dialog**
 - Autonomous people proactively taking **ownership and accountability**
+- **Honesty** , **humility** , **good faith**, **transparency** and **openness to dialog**
 - An **ethical approach** to problems and solutions
 - A **sane work/life balance**
-- **Diversity** coming in many forms, like gender but also socio-economic background or nationnality
+- **Diversity** coming in many forms, like gender but also socio-economic background or nationality
 - **Continuous improvement** for both systems and peoples
 
 ## What I Can Help You With
 
-If I do my job properly, I should be helpful to you. My goal will be to give you what you need to be successful in this company. There are multiple topics I can help with, and most of them we'll figure out together, but here is a list of the things I usually do:
+My goal will be to give you what you need to be successful in this company. There are multiple topics I can help with, and most of them we'll figure out together, but here is a list of the things I usually do:
 
 - Provide context and perspective about the business, other teams, the ecosystem...
 
@@ -58,11 +58,11 @@ If I do my job properly, I should be helpful to you. My goal will be to give you
 
 - Help sort out priorities if you feel overwhelmed by the amount of work to do.
 
-- My strong suits are backend development, organisation, software architecture & management. I'll be particularly relevant there, but I can give insights and advice in all product & engineering related subjects.
+- My strong suits are backend development, organisation, software architecture & management. I'll be particularly relevant there, if you want to sit down and have a brainstorm about a particular topic. However I can give insights and advice in all product & engineering related topics.
 
-- Provide guidance and opportunities for career development. What you are doing right now might not be what you want to be doing in three years, so let's discuss this.
+- Provide guidance and opportunities for career development. What you are doing right now might not be what you want to be doing in three years, so let's discuss this freely.
 
-- Firefight with you if needed. It can be a production issue, a hard topic to tackle, a HR issue with one of your reports, reading a complex pull request… if you are stuck I can most likely help you out.
+- Firefight with you if needed. It can be a production issue, a hard topic to tackle, an HR issue with one of your reports, reading a complex pull request, understanding a piece of legacy code… if you are stuck I can most likely help you out.
 
 ## Personality Quirks
 
@@ -72,31 +72,31 @@ If I do my job properly, I should be helpful to you. My goal will be to give you
 
 - I can have strong opinions, and I don't shy away from heated debates. I actually can quickly get carried away talking about an interesting topic. When discussing I'm always "attacking" ideas, not people. However some can feel like it becomes a criticism of themselves. That's never my intention, but I get that it can be perceived this way, so don't hesitate to tell me if I'm too intense.
 
-- I'm quite pessimistic by nature. This doesn't mean that I don't believe in what we are trying to do, I simply tend to mostly see the flaws and improvements rather than the good side of things.
+- I'm quite pessimistic by nature about the future. This doesn't mean that I don't believe in what we are trying to do, I simply tend to mostly see the flaws and improvements rather than the good side of things. This helps in anticipating issues, but can give a bad vibe to some.
 
-- I sometimes ask open-ended questions but don't expect any particular answer. It's a conversation, not a test, and there is no "right" answer.
+- I often ask open-ended questions about a number of topics. It's always a conversation, not a test. There is no "right" answer, even if I have an opinion about what we should be doing.
 
 - If you're explaining a production issue to me, I want to hear the impact on users & if it's fixed before getting into any other details. If you don't start with the impact I'll be stressed out the whole time you are talking to me.
 
 - The company might need me to not share a particular piece of information with you, and I will not do it. However I will never lie to you, the worst I can do is remain vague.
 
-- By default I prefer to be direct and push people to do better. While it is appreciated by some, I know that it can be a bit too much for some people. This is not a problem, please let me know and I'll adapt.
+- By default I prefer to be direct and push people to do better. It's truly very frustrating to me to see someone not reaching their potential. While it is appreciated by some, I know that it can be a bit too much for some people. If this a problem, please let me know and I'll adapt.
 
-- Followup is very important to me. Generally I assume that you will make a note of any action required and let me know when it's done / if it's delayed / if you need help. Once I consider that it is in your scope, I will stop worrying about it. What I dislike is people forgetting tasks or dropping topics without telling me.
+- Following up is very important to me. I assume that you will make a note of any action required and let me know when it's done / if it's delayed / if you need help. Once I consider that it is in your scope, I will stop worrying about it and trust you to deliver. What I dislike is people forgetting tasks or dropping topics without telling me.
 
-- Sometimes I might speak too much, especially when it's a topic I enjoy. Feel free to interrupt me if you feel like this is not relevant and I'm wasting time.
+- Sometimes I can speak too much, especially when it's a topic I enjoy. Feel free to interrupt me if you feel like this is not relevant and I'm wasting time.
 
 ### Work
 
-- I have a very high esteem for what has been done in the past, such as [legacy code][5] or previous product decisions. If it wasn't for this we wouldn't be where we are. Yes sometimes it can be clunky… but the people who did it tried their best with the information and skills they had.
+- I have a very high esteem for what has been accomplished in the past, such as [legacy code][6] or previous product decisions. Yes sometimes it can be clunky, but the people who did it tried their best with the information and skills they had at the time.
 
-- I hate meetings that start or end late. It feels like a complete waste of time. If you are significantly late for a meeting, there's a good chance I'll cancel or start without you if it's not a one on one. Because of this I also try my best to be on time to every meeting and you can expect my meetings to start on time. As a rule of thumb I'd say a few minutes are acceptable, but above 5 minutes I will tend to expect a small excuse. At least that's the way I'll act with you if I'm late :)
+- I hate meetings that start or end late. It feels like a complete waste of time. If you are significantly late for a meeting, there's a good chance I'll cancel or start without you if it's not a one on one. Because of this, I also try my best to be on time to every meeting and you can expect my meetings to start on time. As a rule of thumb I'd say a few minutes late are acceptable, but above 5 minutes I will tend to expect a small excuse. At least that's the way I'll act with you if I'm late :)
 
-- If sometimes I work overtime, I don't expect you to do the same. If I message you and you're done with your day, I don't expect a response right away. In most cases it can wait the next day. When unsure, ask me.
+- There are cases where I'll work overtime. I don't expect you to do the same unless explicitly specified. If I message you and you're done with your day, I don't expect a response right away. In most cases it can wait the next day. When unsure, ask me.
 
-- I take vacations, you should too. When I'm off, I usually do not to check email or slack, but I'm always available via SMS for anything that can't wait for my return. Don't hesitate to use it if relevant. I will feel way more at ease knowing that people will contact me this way in case of major trouble.
+- I take vacations and you should too. When I'm off, I usually do not to check my emails nor slacks, but I'm always available via SMS for anything that can't wait for my return. Don't hesitate to use it if relevant, as I will feel way more at ease knowing that people will contact me in case of major trouble.
 
-- I have a bias for doing something over planning. I much prefer trying something after a couple of discussions rather than having long meetings or studies.
+- I have a bias for doing something instead of planning. I much prefer trying out an idea after a couple of discussions rather than having long meetings or studies. I also like to have a lot of quickly drafted alternative plans, so while I'll try out plan A, I keep plans B, C, D & E in mind.
 
 - To save time, I might invite you to some meetings without talking to you first. If the moment is not convenient or if you want more information about the agenda, don't hesitate to ask me and I can often move it.
 
@@ -106,8 +106,8 @@ If I do my job properly, I should be helpful to you. My goal will be to give you
 
 I don't entirely believe in putting people into boxes, but personality tests can be a decent proxy to understand someone. So if you're into that, here are my results:
 
-- [**Myers Briggs**][6]: [INTP][7]
-- [**CliftonStrengths**][8] top 5 strengths, in order: [Learner][9], [Activator][10], [Relator][11], [Context][12] & [Arranger][13]
+- [**Myers Briggs**][7]: [INTP][8]
+- [**CliftonStrengths**][9] top 5 strengths, in order: [Learner][10], [Activator][11], [Relator][12], [Context][13] & [Arranger][14]
 
 I generally agree with the results and can't deny that I do have traits from the various profiles.
 
@@ -115,11 +115,11 @@ I generally agree with the results and can't deny that I do have traits from the
 
 ### I'm Available For You
 
-I make myself available during the 1:1s, but it can be too little for you, hindering your chances of success. If that's the case, don't hesitate to ask me questions, that's mostly why I'm here for!
+I always make myself available during our 1:1s, but it might be too little for you, hindering your chances of success. If that's the case, don't hesitate to ask me questions, that's mostly why I'm here for!
 
 **I will always have 5 minutes to spare for you**. Even if my calendar is completely full. Even if I look busy. Keep in mind that 5 minutes will never be too much for me, and can sometimes save you a lot of time or headaches.
 
-A small note however: please always give me some context. I hate "do you have 5 minutes?" messages on Slack. Prefer "do you have 5 minutes to talk about X?", I will appreciate it greatly.
+A small note however: please always give me some context when asking for my time. I really don't like "do you have 5 minutes?" messages on Slack. Prefer "do you have 5 minutes to talk about X?", I will appreciate it greatly.
 
 ### Work Hours
 
@@ -232,14 +232,15 @@ I will also mention it to you in private within a couple of weeks of the achieve
 
 [1]:	orenellenbogen
 [2]:	https://managerreadme.com/
-[3]:	https://www.youtube.com/watch?v=KVvXv1Z6EY8
-[4]:	https://www.youtube.com/watch?v=wcLayGm_pM4
-[5]:	/blog/2014/07/22/in-defense-of-legacy-code/
-[6]:	https://www.myersbriggs.org/my-mbti-personality-type/mbti-basics/home.htm?bhcp=1
-[7]:	https://www.16personalities.com/intp-personality
-[8]:	https://www.gallup.com/cliftonstrengths/en/252137/home.aspx
-[9]:	https://www.gallup.com/cliftonstrengths/en/252293/learner-theme.aspx
-[10]:	https://www.gallup.com/cliftonstrengths/en/252140/activator-theme.aspx
-[11]:	https://www.gallup.com/cliftonstrengths/en/252311/relator-theme.aspx
-[12]:	https://www.gallup.com/cliftonstrengths/en/252209/context-theme.aspx
-[13]:	https://www.gallup.com/cliftonstrengths/en/252161/arranger-theme.aspx
+[3]:	/blog/2020/04/14/creating-my-manager-readme/
+[4]:	https://www.youtube.com/watch?v=KVvXv1Z6EY8
+[5]:	https://www.youtube.com/watch?v=wcLayGm_pM4
+[6]:	/blog/2014/07/22/in-defense-of-legacy-code/
+[7]:	https://www.myersbriggs.org/my-mbti-personality-type/mbti-basics/home.htm?bhcp=1
+[8]:	https://www.16personalities.com/intp-personality
+[9]:	https://www.gallup.com/cliftonstrengths/en/252137/home.aspx
+[10]:	https://www.gallup.com/cliftonstrengths/en/252293/learner-theme.aspx
+[11]:	https://www.gallup.com/cliftonstrengths/en/252140/activator-theme.aspx
+[12]:	https://www.gallup.com/cliftonstrengths/en/252311/relator-theme.aspx
+[13]:	https://www.gallup.com/cliftonstrengths/en/252209/context-theme.aspx
+[14]:	https://www.gallup.com/cliftonstrengths/en/252161/arranger-theme.aspx
