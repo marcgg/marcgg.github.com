@@ -5,6 +5,7 @@ description: "MySQL 5.7 brought a lot of new interesting geospatial features. It
 blog: true
 category: blog
 tag: MySQL
+socialmediapreview: "MySQL 5.7"
 ---
 
 MySQL was a bit late to the geospatial party compared to other databases like Postgres, but with the [5.6][1] and then the [5.7][2] releases a lot of new [GIS][3] features were finally implemented. For instance in 5.7 we got, among other:
@@ -41,7 +42,7 @@ INSERT INTO `places` ( `name`, `coordinates`)
 VALUES ("Brooklyn", POINT(40.711089, -73.948391));
 {% endhighlight %}
 
-## Filtering  
+## Filtering
 
 Let's then try to answer the question "what places in my database are in Paris?".
 

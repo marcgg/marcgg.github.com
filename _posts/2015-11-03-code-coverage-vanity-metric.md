@@ -5,9 +5,10 @@ description: "Using code coverage tools can be helpful to find dead code or unte
 blog: true
 category: blog
 tag: ProjectManagement
+socialmediapreview: "Regarding Code Coverage"
 ---
 
-Code coverage can be a useful way to find untested sections of your project. However, if used as a KPI, it can do more harm than good. 
+Code coverage can be a useful way to find untested sections of your project. However, if used as a KPI, it can do more harm than good.
 
 I see looking at code coverage a bit the same way as looking at the lines of code count in a project. If there are 800 lines in a file, it's probably a problem. However if someone uses the number of lines per file as a metric and decides to set objectives like "get every file under 50 LoC", we're in trouble. Developers will end up extracting the logic just for the sake of extracting. Of course there are situations where [having a messy file is the best option][1] at a given time, and judging code quality based on something as arbitrary as LoC count makes little sense.
 
@@ -22,15 +23,15 @@ Since code coverage can so easily be wrong and manipulated, it becomes impossibl
 The most important thing about tests is their ability to detect bugs, not that they improves some number on a dashboard. You can have thousands of tests, if their only purpose is to raise coverage, they are useless.
 
 > The pupil went to the master programmer and said:
-> 
+>
 > “All my tests pass all the time. Don’t I deserve a raise?”
-> 
+>
 > The master slapped the pupil and replied:
-> 
+>
 > "If all your tests pass, all the time, you need to write better tests.”
-> 
+>
 > &nbsp;
-> 
+>
 > From "[The Way of Testivus][3]" by Alberto Savoia
 
 You could stop looking at coverage as a sign of good testing and evaluate the number of regressions and other bugs introduced in production instead. This would probably give you a better sense of how well your project is tested. Then you can start thinking about why the tests already written did not catch the issues before release and improve your strategy.
@@ -38,7 +39,7 @@ You could stop looking at coverage as a sign of good testing and evaluate the nu
 Of course don't throw away your coverage tools, they can be useful to find dead code or sections that are not tested... just don't use the result as some kind of [KPI][4] for your project and don't assume that a "covered" line is a "tested" line.
 
 > "I wouldn’t have written four coverage tools if I didn’t think they’re helpful. But they’re only helpful if they’re used to enhance thought, not replace it"
-> 
+>
 > [Brian Marick][5] in "[How to Misuse Code Coverage][6]"
 
 [1]:	https://www.youtube.com/watch?v=f5I1iyso29U

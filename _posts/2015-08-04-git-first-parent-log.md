@@ -5,9 +5,10 @@ description: The first parent options allows you to ignore commits that are not 
 blog: true
 category: blog
 tag: Git
+socialmediapreview: "git --first-parent"
 ---
 
-Git is full of little features that are very cool to discover. Let me tell you about an option of the [git-log][1] function: 
+Git is full of little features that are very cool to discover. Let me tell you about an option of the [git-log][1] function:
 
 	$ git log --first-parent
 
@@ -16,7 +17,7 @@ This makes the log only follow the first parent commit after a merge. It seems a
 
 ## Example System
 
-Let’s say I want to output additions and deletions from a file on a given branch *without* looking at the diff. This means I will only look at the content of the file at a given commit by checking out to a commit and read the content of the file. 
+Let’s say I want to output additions and deletions from a file on a given branch *without* looking at the diff. This means I will only look at the content of the file at a given commit by checking out to a commit and read the content of the file.
 
 For instance I have an empty file and my first commit adds "A". The system needs to output:
 
@@ -30,7 +31,7 @@ Then if I remove "B", the file only contains "A". The system knows that we had "
 
 - Removed B
 
-... and so on. I know it seems weird, but it is a real use case I have encountered. 
+... and so on. I know it seems weird, but it is a real use case I have encountered.
 
 ## The Problem
 
@@ -57,7 +58,7 @@ It is because the log will display your history as such:
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/git_log@2x.png" style="width: 600px; padding: 20px;"/></div>
 
-That's not what we want here! We have the information of D being added on the merge, so we don't need to complexify our log. Here it would make sense to exclude the commit adding "D" and only keep the merge one, "ABCD". 
+That's not what we want here! We have the information of D being added on the merge, so we don't need to complexify our log. Here it would make sense to exclude the commit adding "D" and only keep the merge one, "ABCD".
 
 ## The Solution Using first-parent
 

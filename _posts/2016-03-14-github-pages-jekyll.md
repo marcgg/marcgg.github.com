@@ -5,9 +5,10 @@ description: "Github Pages' change from Jekyll 2 to 3 broke my website and many 
 blog: true
 category: blog
 tag: Dev
+socialmediapreview: "Github x Jekyll Bug"
 ---
 
-A month ago Github [announced][1] that they was now running Jekyll 3. At this point I already tried to upgrade but ran into so many issues I gave up, so I was still building my site with Jekyll 2. 
+A month ago Github [announced][1] that they was now running Jekyll 3. At this point I already tried to upgrade but ran into so many issues I gave up, so I was still building my site with Jekyll 2.
 
 Looking at the announcement I figured that it was no big deal since every major deprecations would only occur in May. It really felt safe to stay with Jekyll 2 and migrate in a month or two.
 
@@ -29,7 +30,7 @@ _Note that this only occurred mid February and not right when Github started usi
 
 Since this site is not my main focus, I could only investigate later on. Once I found some time to spend on it, I understood that this was due to a major change in Jekyll 3 regarding trailing slashes as explained in the [migration guide][3].
 
-> In Jekyll 2, any URL constructed from the permalink: field had a trailing slash (/) added to it automatically. Jekyll 3 no longer adds a trailing slash automatically to permalink: URLs. This can potentially result in old links to pages returning a 404 error. 
+> In Jekyll 2, any URL constructed from the permalink: field had a trailing slash (/) added to it automatically. Jekyll 3 no longer adds a trailing slash automatically to permalink: URLs. This can potentially result in old links to pages returning a 404 error.
 
 My configuration at the time looked like this, with no trailing slash explicitly mentioned:
 

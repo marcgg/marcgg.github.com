@@ -5,6 +5,7 @@ description: "Recruiting is hard, and defining a good process is very important.
 blog: true
 category: blog
 tag: Recruitment
+socialmediapreview: "Recruitment Process"
 ---
 
 I wrote on [Drivy's engineering blog][1] an article about the way we conduct interviews to find the best candidates. It's not a perfect flow, but we've had good feedback from people going through it and made some great hires, so I felt it would be worth sharing.

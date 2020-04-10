@@ -6,6 +6,7 @@ description: "Identifying and monitoring production issues is hard. Here's what'
 blog: true
 category: blog
 tag: Monitoring
+socialmediapreview: "Monitoring Bugs"
 ---
 
 No one wants bugs in their app. Developers, end users, product owners... everybody agree on this one. However I'm always surprised by the number of companies that don't pay much attention to production bugs.
@@ -20,7 +21,7 @@ The first step of fixing bugs is knowing that they exist. The worst kind of prob
 
 If you only rely on user reports to find bugs, you're going to have a bad time. However it's important to keep an eye out for user reports.
 
-At Drivy we have a team dedicated to customer support, but they handle all kind of calls. On some occasions there will be reports of problems, so we created a Slack channel called #ask-a-tech where they can tell the development team about possible bugs. 
+At Drivy we have a team dedicated to customer support, but they handle all kind of calls. On some occasions there will be reports of problems, so we created a Slack channel called #ask-a-tech where they can tell the development team about possible bugs.
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/ask_a_tech.png" alt="Bug report on slack" style="padding: 20px; width: 600px;"/></div>
 

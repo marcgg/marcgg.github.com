@@ -7,6 +7,7 @@ category: blog
 featured: true
 tag: Dev
 publictag: Programming
+socialmediapreview: "Generate Sounds with JS"
 ---
 
 <script src="/assets/js/posts/music.js"></script>

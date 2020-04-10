@@ -5,6 +5,7 @@ description: Here are some very simple examples to better understand how to spaw
 blog: true
 category: blog
 tag: Elixir
+socialmediapreview: "Elixir Processes 101
 ---
 
 In this article, there will be no fancy tricks or protips, just simple ideas and examples to get started. This is basically the result of my trial and error approach to understand Elixir Processes.

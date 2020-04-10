@@ -6,6 +6,7 @@ description: "During a hackathon I build a way to play chiptune music with peopl
 blog: true
 category: blog
 tag: Dev
+socialmediapreview: "Multiplayer 8 Bits Sequencer"
 ---
 
 For this year [Ruby Rampage][1] (previously called Rails Rumble) hackathon I really wanted to build something using the new features of Rails 5. A few years ago I tried to build [a multiplayer HTML 5 game in two days][2], but I had to use NodeJS... now was the time to see if [ActionCable][3]  was any better! I also was curious about the new improvements of the Web Audio API ever since I've read articles about it.
@@ -14,7 +15,7 @@ I went ahead and after two days of work I managed to get a working site and depl
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/JZlsbC-7GZY" frameborder="0" allowfullscreen></iframe></center><br>
 
-It only works on Chrome and runs on a free Heroku server, but it still handles a decent number of concurrent connections.  
+It only works on Chrome and runs on a free Heroku server, but it still handles a decent number of concurrent connections.
 
 ## Building The Sequencer
 
@@ -28,9 +29,9 @@ Overall the experience was nicer than what I used to with NodeJS and in a few ho
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/chiptune_step1.jpg" alt="" style="padding: 20px; width: 400px;"/></div>
 
-After a bit I realized that it was very hard to maintain the list of connected players and update it when they leave, get disconnected or just stop responding. It's at this point that I started investing more time into getting a stable way of handling players, with a dedicated model and better integration with Redis. One challenge there was to link a request signature to a player, and make sure the link was properly persisted and updated at the right time. 
+After a bit I realized that it was very hard to maintain the list of connected players and update it when they leave, get disconnected or just stop responding. It's at this point that I started investing more time into getting a stable way of handling players, with a dedicated model and better integration with Redis. One challenge there was to link a request signature to a player, and make sure the link was properly persisted and updated at the right time.
 
-I [shared some Ruby code here][8] if you're interested - but keep in mind that it's "hackathon code", so don't go and just use this :) 
+I [shared some Ruby code here][8] if you're interested - but keep in mind that it's "hackathon code", so don't go and just use this :)
 
 ### Broadcasting
 
@@ -99,7 +100,7 @@ In the last half day of the hackathon I was mostly tweaking the sound and design
 
 ## Conclusion
 
-Overall it was a very interesting project that was fun to build and is also fun to use every once in a while. When there is a lot of people playing it's a real mess, but it was expected and is also very funny to watch. 
+Overall it was a very interesting project that was fun to build and is also fun to use every once in a while. When there is a lot of people playing it's a real mess, but it was expected and is also very funny to watch.
 
 Something I didn't anticipate was that, while I love coding with music, for this project I absolutely couldn't. Instead I spent a couple of days listening to beepings and sine waves. The worse was when I introduced bugs and a piercing noise would destroy my ears.
 

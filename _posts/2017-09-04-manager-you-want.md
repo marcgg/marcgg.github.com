@@ -6,9 +6,10 @@ blog: true
 category: blog
 featured: true
 tag: Management
+socialmediapreview: "Management Style"
 ---
 
-We've all had managers, some were good, some were bad, so of course when offered the opportunity to take on a leadership role it's clear that we'd want to be on the "good" side of this spectrum... but what does it mean? 
+We've all had managers, some were good, some were bad, so of course when offered the opportunity to take on a leadership role it's clear that we'd want to be on the "good" side of this spectrum... but what does it mean?
 
 The simplest answer would be "be someone that I would have loved being managed by".
 

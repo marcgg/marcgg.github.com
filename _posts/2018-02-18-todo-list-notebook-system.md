@@ -5,6 +5,7 @@ description: "Here's how I've been using notebooks and a 4-colors pen to handle 
 blog: true
 category: blog
 tag: Management
+socialmediapreview: "Notebooks & Todo Lists"
 ---
 
 Since I've moved from software development to engineering management, I have a lot more tasks popping up during the day and a lot of unsorted ongoing work. Obviously I don't have the time to do everything right away, so I needed to find a way to handle this ongoing flow of short term topics.
@@ -29,7 +30,7 @@ When working I always use small notebooks (9x14cm) and a [4 colors pen][3]. To f
 Here is how I keep track of tasks by using a notebook:
 
 - I write in blue the tasks as they come on a single page. If the task is really important, I circle it in red.
-- When I complete a task, I cross it off in blue. 
+- When I complete a task, I cross it off in blue.
 - Once the page gets full, I take 5 to 10 minutes to copy what is not yet completed to a new page. At this point I can decide not to copy a task if I consider it shouldn't be in my short term scope. If that's the case, I make a small note in black explaining why.
 - If I decide that a task still needs to be done but has a larger scope than expected, I'll move it to another backlog, usually a Trello board.
 - When a page has been copied, I cross it in black to make it clear that it's an old version.

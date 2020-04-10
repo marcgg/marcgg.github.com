@@ -5,6 +5,7 @@ description: "When building software it's often hard to know if time is spent on
 blog: true
 category: blog
 tag: Engineering
+socialmediapreview: "Software Quality"
 ---
 
 When building software it's often hard to pinpoint where to focus efforts. We have to build the right thing, and to do it in the best way possible. A good thing to keep in mind is that not all parts of a codebase deserve the same attention.
@@ -23,7 +24,7 @@ There are a lot of ways to achieve the directions mentioned in the schema, but h
 
 ### Minor / Changes Rarely
 
-If something doesn't change much and is not critical, it's often ok to have less tests and take a bit more shortcuts. Maybe it's the part of your codebase where junior developers learn the trade! 
+If something doesn't change much and is not critical, it's often ok to have less tests and take a bit more shortcuts. Maybe it's the part of your codebase where junior developers learn the trade!
 
 Of course don't throw quality out the window, but you probably don't need to debate for days what the perfect pattern needs to be for this simple internal admin dashboard.
 
@@ -39,7 +40,7 @@ If you have critical code that doesn't change often, it can be fine to isolate i
 
 ### Critical / Changes Often
 
-This is the business critical part of your application. Here you can feel free to go all out and use all the time you saved to make it very resilient. Use testing, lots of peer reviews, vetted design patterns, industry best practices... whatever makes sense for your organisation. 
+This is the business critical part of your application. Here you can feel free to go all out and use all the time you saved to make it very resilient. Use testing, lots of peer reviews, vetted design patterns, industry best practices... whatever makes sense for your organisation.
 
 This should be your best code, even if it changes often.
 

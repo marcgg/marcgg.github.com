@@ -8,6 +8,7 @@ blog: true
 lang: "fr"
 category: blog
 tag: Philosophy
+socialmediapreview: "Passer un Deuxième Bac"
 ---
 
 J'ai obtenu mon baccalauréat scientifique en 2004. Malgré cela, ces deux dernières années j'ai mis un peu

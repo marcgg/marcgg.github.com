@@ -6,9 +6,10 @@ blog: true
 category: blog
 tag: Recruitment
 cssscope: conversation
+socialmediapreview: "Recruitment Process"
 ---
 
-Recruiting is one of the most important task a team leader can have. A bad hire can destroy the dynamic of a good team, and a great hire can multiply the everyone's velocityl. 
+Recruiting is one of the most important task a team leader can have. A bad hire can destroy the dynamic of a good team, and a great hire can multiply the everyone's velocityl.
 
 I've tried a lot of ideas after years of recruiting software engineers, first as a technical interviewer, then as a hiring manager and finally as the lead of the entire engineering department. In this article I won't give you a process that works out of the box, but instead a few steps to setup one for your team.
 
@@ -79,25 +80,25 @@ Once you have decided on the various steps, you need to decide of the objective 
 
 What you really don't want is this kind of conversation:
 
-> <span class='dpm'>Hiring Manager:</span> So, how did the technical interview go with the candidate? 
-> 
+> <span class='dpm'>Hiring Manager:</span> So, how did the technical interview go with the candidate?
+>
 > <span class='ddev'>Interviewer:</span> It went great! I've given the recommendation to hire.
-> 
-> <span class='dpm'>HM:</span> Great, we need strong developers in the team to tackle project XYZ. 
-> 
+>
+> <span class='dpm'>HM:</span> Great, we need strong developers in the team to tackle project XYZ.
+>
 > <span class='ddev'>Int:</span> Hm... I don't know about that. We couldn't really get to the coding part of the interview.
-> 
-> <span class='dpm'>HM:</span> What do you mean? 
-> 
+>
+> <span class='dpm'>HM:</span> What do you mean?
+>
 > <span class='ddev'>Int:</span> The candidate didn't really know the language we use here, so instead we chatted a bit about the company and our current projects. They seem really interested in joining and have a great attitude!
 
-Here the interviewer didn't have clear objectives for the technical interview. This step should be focused on figuring out on determining the candidate's technical skills, not assessing the motivation. 
+Here the interviewer didn't have clear objectives for the technical interview. This step should be focused on figuring out on determining the candidate's technical skills, not assessing the motivation.
 
 When defining objectives, remember to:
 - **Keep them realistic and simple **. It's very hard to get a sense of someone during a one hour interview, so don't expect the impossible from your interviewers.
 - **Have a set of objectives around showcasing the position ** as well. You are assessing the candidate, but keep in mind that the candidate is also assessing the company and the position.
 - **Share them explicitly**, it shouldn't be an oral tradition.
-- **Check that they are followed** by shadowing some random interviews, setting up feedback sessions , etc. 
+- **Check that they are followed** by shadowing some random interviews, setting up feedback sessions , etc.
 
 Personally I like to write objectives as questions to be answered. To illustrate here are a few examples of objectives to assess the candidate:
 
@@ -124,7 +125,7 @@ There are a lot of things interviewers need to get right, and it can take years 
 - **Focus on the objective**, rate candidates based on it only.
 - **Always sell the position & the company**, regardless of the candidate. It might not be a fit today, but it might be one tomorrow.
 - **Let the candidate answer** and don’t be afraid of silence. It's easy to try to fill in uncomfortable blanks in the conversation.
-- You need to ** be sure of your recommendation**, so dig deep to turn orange flags into red or green. 
+- You need to ** be sure of your recommendation**, so dig deep to turn orange flags into red or green.
 - **Contribute to improve the process**, and share any issues that could be addressed.
 - **Don't mistake enthusiasm for ability. Don't mistake quietness for a lack of motivation.**
 - **Rate regardless of time spent**. If you had a 20 minutes phone call that went very well, you should give a "hire" recommendation. The hiring manager will know the context and use your feedback accordingly.
@@ -134,7 +135,7 @@ There are a lot of things interviewers need to get right, and it can take years 
 
 ### Expected Output
 
-Then you need to define what kind of output you want out of the interviewers, most likely a "hire/no hire" answer. I like what some applicant tracking system do, rating on a scale from 1 to 4 as it removes the ability to say "I don't know". 
+Then you need to define what kind of output you want out of the interviewers, most likely a "hire/no hire" answer. I like what some applicant tracking system do, rating on a scale from 1 to 4 as it removes the ability to say "I don't know".
 
 - ** ✓ ✓ Strong yes **. This person is really great at what I’ve been tasked to test. I’m very much looking forward to work with them.
 - ** ✓ Yes **. This person is good at what I’ve been tasked to test. I’ve seen a couple of minor issues, but nothing too problematic.

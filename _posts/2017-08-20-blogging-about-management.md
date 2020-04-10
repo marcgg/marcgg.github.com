@@ -5,6 +5,7 @@ description: "In this article I try to explain why I've not written much about m
 blog: true
 category: blog
 tag: Blog
+socialmediapreview: "Blogging About Management"
 ---
 
 _Careful, this is a meta article about this blog! Continue at your own risk._
@@ -15,7 +16,7 @@ This has been insanely interesting and a great challenge... so more than once I'
 
 I have given a few shots in the past at different topics, for instance project management with "[Deadlines & Estimates in Startups][3]" or recruitment with "[Why Resumes Are Actually Helpful][4]", but never on management itself.
 
-In the coming year I've decided to push myself to share more about what I've been learning. In a lot of cases I'm pretty sure I'll be stating the obvious to experienced managers... but, just like I'm okay having old articles like "[What I Learned While Teaching][5]" that is very much pushing open doors, I've decided to be okay with more "naive" articles for a bit. 
+In the coming year I've decided to push myself to share more about what I've been learning. In a lot of cases I'm pretty sure I'll be stating the obvious to experienced managers... but, just like I'm okay having old articles like "[What I Learned While Teaching][5]" that is very much pushing open doors, I've decided to be okay with more "naive" articles for a bit.
 
 One of my very early articles from early 2013 was "[Developers, Share Your Technical Knowledge][6]". Reading it back, it needs a lot of improvements, but it lead me into very interesting projects teaching programming to [teenagers][7],  entrepreneurs, [HEC][8] students, [coaching various early stage startups][9] and [more][10]... so I'd say that it was worth giving it a try!
 

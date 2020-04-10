@@ -6,6 +6,7 @@ clicking a link and I'm debating wether or not to keep on working on it."
 blog: true
 category: blog
 tag: Projects
+socialmediapreview: "Track Clicks"
 ---
 
 A couple of days ago I saw

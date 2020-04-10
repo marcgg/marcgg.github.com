@@ -5,6 +5,7 @@ description: "Rails protects you against CSRF attacks, but it gives you a lot of
 blog: true
 category: blog
 tag: Ruby
+socialmediapreview: "CSRF in Rails"
 ---
 
 Cross-site request forgery or [CSRF][1] is a well known attack that has been [vastly documented][2].
@@ -17,7 +18,7 @@ class ApplicationController < ActionController::Base
 end
 {% endhighlight %}
 
-This `with` parameter is actually the `forgery_protection_strategy` parameter, it tells Rails how to behave when a CSRF attack is identified. 
+This `with` parameter is actually the `forgery_protection_strategy` parameter, it tells Rails how to behave when a CSRF attack is identified.
 
 ## The Different Forgery Protection Strategies
 

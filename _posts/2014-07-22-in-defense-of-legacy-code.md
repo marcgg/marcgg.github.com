@@ -5,13 +5,14 @@ description: While it is easy to complain about legacy code, it’s important to
 blog: true
 category: blog
 tag: Dev
+socialmediapreview: "Respect Legacy Code"
 ---
 
 It’s your first day. You just joined a team working on a cool project. That’s usually at this point that you discover that the code base is not as good as you’d expected. Most likely you’ll then hear from your colleagues something like “Jane wrote that a few years back, we didn’t need to change it so it’s a bit outdated” or “this is some **legacy code**”. _Gasp_.
 
 <div style="text-align: center"><img src="/assets/blog/reveal.png"/></div>
 
-This is the definition of legacy code I’m going to use in this article by the way. Meaning, code that still works, is still being used but is not easy to update. This could be due to usage of an outdated frameworks, weird coding conventions, incoherences with the main code base, [lack of automated tests][1] … 
+This is the definition of legacy code I’m going to use in this article by the way. Meaning, code that still works, is still being used but is not easy to update. This could be due to usage of an outdated frameworks, weird coding conventions, incoherences with the main code base, [lack of automated tests][1] …
 
 When encountering legacy code, a lot of developers want to refactor everything right away or even rewrite everything from scratch. I can’t blame them, there’s nothing like a greenfield project! I would even go as far as saying that it’s perfectly logical and healthy. It’s important to identify a source of problems and want to fix it.
 

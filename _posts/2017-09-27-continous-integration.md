@@ -5,6 +5,7 @@ description: "In this article I try to give concrete examples on how Drivy went 
 blog: true
 category: blog
 tag: Engineering
+socialmediapreview: "Continuous Integration"
 ---
 
 Here is another article I wrote for [Drivy's engineering blog][1]. I was thinking that a lot of company share where they are at in term of CI processes, but don't really explain how they got there. In this post, I've went over almost five years of various iterations, from having nothing and shipping manually to building our own release tool.

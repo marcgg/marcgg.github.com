@@ -8,6 +8,7 @@ category: blog
 tag: History
 redirect_from:
 - /blog/2015/02/02/grace-murray-hopper-compiler-cobol/
+socialmediapreview: "Grace Murray Hopper"
 ---
 
 Rear Admiral Grace M. Hopper, USN, Ph.D., born December 9 1906, is a really interesting person.
@@ -27,7 +28,7 @@ _Interesting fact, while I was finishing my article, a documentary called “[Qu
 In 1943 Hopper was teaching mathematics at [Vassar][5], but she decided to take a leave of absence and volonteered to serve in the WAVES - the [Women Accepted for Volunteer Emergency Service][6]. She did well during training and was sent to Harvard University where she was assigned to work as part of the [Mark I Computer][7] programming staff.
 
 > “We did coding, we ran the computer, we did everything. We were coders.”
-> 
+>
 > Grace Murray Hopper [in a 1980 interview][8]
 
 It was a time of punch cards and switches, but this computer was trully helping the military by running large amount of mathematical operations. It was notably used to figure out the viability of implosions for the [Manhattan Project][9].
@@ -41,7 +42,7 @@ After the war, she remained in the Navy and worked as a research fellow at Harva
 In 1949 she joined the team working on the UNIVAC I, the second commercial computer produced in the US. This is where she started working on her compiler, the A-0 System. At a time where every programmer would produce assembly code, it was revolutionnary. In 1952 she had an operational version of her [single-pass][12] compiler, but she ran into scepticism from the industry.
 
 > “Nobody believed that, I had a running compiler and nobody would touch it. They told me computers could only do arithmetic; they could not do programs. It was a selling job to get people to try it. I think with any new idea, because people are allergic to change, you have to get out and sell the idea."
-> 
+>
 > Grace Murray Hopper
 
 It took a while, but this idea was finally accepted. Grace Hopper and her team iterated and released new versions of the compiler. In the end, it was the A-2 compiler that would be the first to be used extensively, leading the way for even more improvements and the creation of new programming languages.
@@ -55,13 +56,13 @@ In 1954 Hopper was named the first director of automatic programming at [Remingt
 They also created FLOW-MATIC, also known as B-0 (Business Language version 0). It was realized based on the observation that customers processing business data were not comfortable with mathematical notation.
 
 > “I kept calling for more user friendly languages. I’ve always tried to do that, that’s why I want these other languages that are aimed at people. Most of the stuff we get from academicians, computer science people, is in no way adapted to people.”
-> 
+>
 > Grace Murray Hopper [in a 1980 interview][14]
 
 In 1953, Hoper proposed that problems could be expressed with English keywords. Her company’s management at the time decided that the idea would be unfeasible and discarded it. Despite this, in early 1955, Hopper and her team wrote a specification for such a programming language and implemented a prototype.
 
 > “It's always easier to apologize than to ask permission.”
-> 
+>
 > Grace Murray Hopper
 
 This language was FLOW-MATIC, the first language to use English keywords that facilitated its use in business settings. This was proved useful and IBM even released [COMTRAN][15] (Commercial Translator) in 1957 following the same principle. It’s also worth mentioning that FLOW-MATIC was also the first language to separate the description of data from the operations made on it.
@@ -82,12 +83,12 @@ Following its objective, the organisation designed COBOL (COmmon Business-Orient
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/cobol.png" style="height: 300px;"/></div>
 
-All the current programming languages at the time , such as [AIMACO][18] or COMTRAN, had some kind of influence on COBOL . However it is notorious that COBOL was mostly based on the previous programming language design work made by Grace Hopper. Several elements of FLOW-MATIC were even incorporated into COBOL, including the separation of input and ouput or the idea of dividing a given program into sections. 
+All the current programming languages at the time , such as [AIMACO][18] or COMTRAN, had some kind of influence on COBOL . However it is notorious that COBOL was mostly based on the previous programming language design work made by Grace Hopper. Several elements of FLOW-MATIC were even incorporated into COBOL, including the separation of input and ouput or the idea of dividing a given program into sections.
 
 This is why she is refered to as "the (grand)mother of COBOL”.
 
-> “If you take the FLOW-MATIC manual and compare it with COBOL 60 you’ll find COBOL 60 is 95% FLOW-MATIC. So the influence of Commercial Translator in fact was extremely small.” 
-> 
+> “If you take the FLOW-MATIC manual and compare it with COBOL 60 you’ll find COBOL 60 is 95% FLOW-MATIC. So the influence of Commercial Translator in fact was extremely small.”
+>
 > Grace Murray Hopper [in a 1980 interview][19]
 
 ## Standards & Portability
@@ -108,8 +109,8 @@ She was also very visionnary in seeing the great potential in making computers m
 
 An interesting point is that she was very active in trying to get corporations to prefer distributed systems over large mainframes. This implied a large shift in mentality as giant general purpose systems were the norm.
 
-> I could see people were going to need these things and the amount of information would increase. And I still think it’s going to increase even more. I don’t think we’ve even begun to recognize how much we are going to have to do with these computers. 
-> 
+> I could see people were going to need these things and the amount of information would increase. And I still think it’s going to increase even more. I don’t think we’ve even begun to recognize how much we are going to have to do with these computers.
+>
 > Grace Murray Hopper [in a 1980 interview][21]
 
 ## To Conclude
@@ -117,7 +118,7 @@ An interesting point is that she was very active in trying to get corporations t
 Rear Admiral Grace M. Hopper, USN, Ph.D. passed away in 1992 at age 85.
 
 > The most important thing I've accomplished, other than building the compiler, is training young people. They come to me, you know, and say, 'Do you think we can do this?' I say, "Try it." And I back 'em up. They need that. I keep track of them as they get older and I stir 'em up at intervals so they don't forget to take chances
-> 
+>
 > Grace Murray Hopper
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/grace_uniform.jpg" style="width: 300px;"/></div>

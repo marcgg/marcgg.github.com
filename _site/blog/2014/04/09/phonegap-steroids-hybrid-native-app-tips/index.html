@@ -15,7 +15,7 @@
 	      <span class="p">,</span> <span class="nx">fingers</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">originalEvent</span><span class="p">.</span><span class="nx">touches</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
 	    <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">data</span><span class="p">(</span><span class="s1">'lastTouch'</span><span class="p">,</span> <span class="nx">t2</span><span class="p">);</span>
 	    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">dt</span> <span class="o">||</span> <span class="nx">dt</span> <span class="o">&gt;</span> <span class="mi">500</span> <span class="o">||</span> <span class="nx">fingers</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span> <span class="c1">// not double-tap</span>
-	
+
 	    <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span> <span class="c1">// double tap - prevent the zoom</span>
 	    <span class="c1">// also synthesize click events we just swallowed up</span>
 	    <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">trigger</span><span class="p">(</span><span class="s1">'click'</span><span class="p">).</span><span class="nx">trigger</span><span class="p">(</span><span class="s1">'click'</span><span class="p">);</span>

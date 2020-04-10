@@ -5,6 +5,7 @@ description: "A lot of people assume that to_s and `to_str` are the same methods
 blog: true
 category: blog
 tag: Ruby
+socialmediapreview: "to_s vs to_str"
 ---
 
 If you ever looked at the available methods on some objects in Ruby, you might have noticed that there seems to be two different ways to cast an object to string: `to_s` and `to_str`. However, most people only use `to_s`... is it because it's shorter or is `to_str` functionally different?
@@ -159,9 +160,9 @@ We can also say that `to_s` is an explicit conversion and `to_str` is an implici
 Quoting directly from the book:
 
 > `to_s` is an explicit conversion method. Explicit conversions represent conversions from classes which are mostly or entirely unrelated to the target class.
-> 
+>
 > `to_str`, on the other hand, is an implicit conversion method. Implicit conversions represent conversions from a class that is closely related to the target class.
-> 
+>
 > _[Confident Ruby by Avdi Grimm][8]_
 
 

@@ -6,6 +6,7 @@ number of emails sent is not the way to go."
 blog: true
 category: blog
 tag: ProjectManagement
+socialmediapreview: "Measuring Productivity"
 ---
 
 A couple of days ago I ran into a new application by [MetaLab][1] called
@@ -111,7 +112,7 @@ not surprising that it's the way it is in most places.
 > control a manager can assert: Ensuring butts in seats for eight hours between 9-5+. Though while
 > they can make people come to the office under the threat of termination, they most certainly
 > cannot make those same people motivated to do great work.
-> 
+>
 > [@dhh][3] about [Yahoo banning remote work][4]
 
 Again, this rewards employees that are not necessarily the best ones.
@@ -124,7 +125,7 @@ which is not good for anyone - employer included.
 > Working overtime sucks the spirit and motivation out of your team.
 > When your team becomes tired and demoralized they will get less work done,
 > not more, no matter how many hours are worked.
-> 
+>
 > [Extreme Programming Manifesto][5]
 
 <div style="text-align: center"><img src="/assets/blog/brandon.png" /></div>
@@ -141,11 +142,11 @@ what I believe is micromanagement before continuing.
 > In business management, micromanagement is a management style whereby a manager
 > closely observes or controls the work of subordinates or employees.
 > Micromanagement generally has a negative connotation.
-> 
+>
 > [Wikipedia][6]
 
 > micromanage: to manage especially with excessive control or attention to details
-> 
+>
 > [Merriam Webster][7]
 
 To me knowing what tasks someone is working

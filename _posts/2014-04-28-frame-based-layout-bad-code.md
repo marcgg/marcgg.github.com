@@ -6,6 +6,7 @@ by only using FRAMES and other amazing tricks."
 blog: true
 category: blog
 tag: Dev
+socialmediapreview: "Frames from the Past
 ---
 
 I've been writing code for a while. I started with QBasic when I was a kid and the two things I remember from

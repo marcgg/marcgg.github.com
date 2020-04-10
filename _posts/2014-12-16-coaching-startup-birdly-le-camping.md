@@ -6,6 +6,7 @@ description: How I helped a team of 3 students with little to no development bac
 blog: true
 category: blog
 tag: Startup
+socialmediapreview: "Startup Coaching"
 ---
 
 A few months back I was contacted by three students that wanted to create their company. As a developer, this happens to me all the time and I often refuse to help because of the projects’ lack of realism. After a phone call I decided that it would be interesting to meet them… and I have to say that I was impressed by how much potential the team was showing.

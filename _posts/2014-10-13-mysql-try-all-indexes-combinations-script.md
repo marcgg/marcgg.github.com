@@ -7,6 +7,7 @@ category: blog
 tag: MySQL
 redirect\_from:
 - /blog/2014/10/14/mysql-try-all-indexes-combinations-script/
+socialmediapreview: "Bruteforce MySQL Performances"
 ---
 
 I’ve been working with MySQL for a while now and I think that it’s a pretty good solution to store your data. Lately I’m more leaning toward Postgres but that’s another story.

@@ -6,6 +6,7 @@ built a project to give away objects and track their lives. Here's how it went."
 blog: true
 category: blog
 tag: Projects
+socialmediapreview: "Hackathon"
 ---
 
 A couple of weeks ago [Kevin][1], [Étienne][2], [Benjamin][3], [Emiland][4] and I decided to go to the the Paris’ session of [AngelHack][5]. This is a worldwide [hackathon][6] with fancy [sponsors][7] giving you the opportunity to build and pitch a new product in 24 hours. This edition gathered 165 attendees and 47 projects.

@@ -14,7 +14,7 @@ github	git@github.com:marcgg/multiple-origins.git (fetch)
 github	git@github.com:marcgg/multiple-origins.git (push)
 </code></pre></div> <p>The interesting thing to know here is that you can have multiple push urls. To demo this, let’s add a new remote pointing to Bitbucket and then add another push url. Note that I have to re-add the bitbuck push url, because Git will first replace the default push url before adding new ones.</p> <div class="highlighter-rouge"><pre class="highlight"><code>$ git remote add origin git@bitbucket.org:marcgg/multiple-origins.git
 $ git remote set-url --add --push origin git@github.com:marcgg/multiple-origins.git
-$ git remote set-url --add --push origin git@bitbucket.org:marcgg/multiple-origins.git 
+$ git remote set-url --add --push origin git@bitbucket.org:marcgg/multiple-origins.git
 </code></pre></div> <p>And now if I list my remotes I get this:</p> <div class="highlighter-rouge"><pre class="highlight"><code>$ git remote -v
 bitbucket	git@bitbucket.org:marcgg/multiple-origins.git (push)
 bitbucket	git@bitbucket.org:marcgg/multiple-origins.git (fetch)

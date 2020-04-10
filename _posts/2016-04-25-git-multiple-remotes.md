@@ -5,6 +5,7 @@ description: "Here's some interesting features of Git I tried out while messing 
 blog: true
 category: blog
 tag: Git
+socialmediapreview: "Multiple Git Remotes"
 ---
 
 The great thing with Git is that it's distributed. However in many projects we end up with a single point of failure, which kind of defeats the point. For instance a lot of people use Github and when it goes down, they can't push code and collaborate with their team. From this observation, I decided to mess arround with ideas on how to work on the same code base with both Github and Bitbucket.
@@ -51,7 +52,7 @@ You might not know that, when you add a remote, it actually adds both a fetch an
 	$ git remote -v
 	bitbucket	git@bitbucket.org:marcgg/multiple-origins.git (fetch)
 	bitbucket	git@bitbucket.org:marcgg/multiple-origins.git (push)
-	
+
 	github	git@github.com:marcgg/multiple-origins.git (fetch)
 	github	git@github.com:marcgg/multiple-origins.git (push)
 
@@ -59,17 +60,17 @@ The interesting thing to know here is that you can have multiple push urls. To d
 
 	$ git remote add origin git@bitbucket.org:marcgg/multiple-origins.git
 	$ git remote set-url --add --push origin git@github.com:marcgg/multiple-origins.git
-	$ git remote set-url --add --push origin git@bitbucket.org:marcgg/multiple-origins.git 
+	$ git remote set-url --add --push origin git@bitbucket.org:marcgg/multiple-origins.git
 
 And now if I list my remotes I get this:
 
 	$ git remote -v
 	bitbucket	git@bitbucket.org:marcgg/multiple-origins.git (push)
 	bitbucket	git@bitbucket.org:marcgg/multiple-origins.git (fetch)
-	
+
 	github	git@github.com:marcgg/multiple-origins.git (push)
 	github	git@github.com:marcgg/multiple-origins.git (fetch)
-	
+
 	origin	git@bitbucket.org:marcgg/multiple-origins.git (fetch)
 	origin	git@github.com:marcgg/multiple-origins.git (push)
 	origin	git@bitbucket.org:marcgg/multiple-origins.git (push)

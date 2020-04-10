@@ -7,6 +7,7 @@ category: blog
 featured: true
 tag: Git
 publictag: Programming
+socialmediapreview: "Simple Git Flow"
 ---
 
 When consulting, I often see so small teams struggle with git because they seem to expect that a good flow has to be a complicated. Usually this is because they saw [this git-flow schema][1] at some point when researching various solutions and thought they needed all of this to be able to ship in good conditions.

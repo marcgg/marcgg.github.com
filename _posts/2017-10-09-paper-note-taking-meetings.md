@@ -5,6 +5,7 @@ description: "Here is my strategy to be effective when taking notes while avoidi
 blog: true
 category: blog
 tag: Management
+socialmediapreview: "Note Taking During 1:1s"
 ---
 
 I've been experimenting with various note taking strategies when having my regular 30 minutes [one on ones][1] (1:1s) with my team. After a few tries I think I've found one that fits the way I operate. Of course this is not meant to be used as is, since note taking is quite personal. However there might be something interesting to you! Of course if you have tricks or feedback, feel free to share them in the comments.
@@ -13,7 +14,7 @@ I've been experimenting with various note taking strategies when having my regul
 
 ### Focus And Discussion Flow
 
-Adding a laptop to a 1:1 makes me less focused, more open to interruptions or distractions. Notifications can pop up, I might want to check a particular point being discussed... when I really should be completely focused on the current conversation. 
+Adding a laptop to a 1:1 makes me less focused, more open to interruptions or distractions. Notifications can pop up, I might want to check a particular point being discussed... when I really should be completely focused on the current conversation.
 
 Another problem is that it can feel awkward taking notes if the other person can't see your screen. You can sometime make sure they get a view on what you are typing, but it can get physically impossible depending on the room situation. I also generally think that the computer acts as a wall between me and the other person. It feels more natural to just be taking notes on paper.
 
@@ -50,7 +51,7 @@ I write with the simple [4 colors pen][5] seen on the picture above and use each
 
 Green and red stand out in the page because they are for actions & deliverables. This is good, because when I quickly scan my notes this is usually what I'll be looking for. If I need to analyse further, for a performance review for instance, then I read most of the thing anyway.
 
-Note that if there is a critical deliverable, either expected from me or the other person, I will circle the item multiple times. 
+Note that if there is a critical deliverable, either expected from me or the other person, I will circle the item multiple times.
 
 ### Page Organisation
 

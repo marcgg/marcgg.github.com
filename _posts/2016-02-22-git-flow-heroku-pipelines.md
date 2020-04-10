@@ -5,6 +5,7 @@ description: "With the introduction of Heroku pipelines and the general complexi
 blog: true
 category: blog
 tag: Engineering
+socialmediapreview: "Simple Git Flow"
 ---
 
 At [Drivy][1] we've changed the way we work with Git from [Git flow][2] to something new... and so far it's been working pretty well and allowed us to release faster! I feel like that this new flow is way simpler than Git Flow and more pragmatic than Github's Flow. It has some general guidelines but still accounts for how a team acts in real life. The goal and measure of success here is the team's ability to ship stable code quickly.

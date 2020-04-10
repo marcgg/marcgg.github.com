@@ -6,6 +6,7 @@ solutions, design patterns... and every week it's pointless."
 blog: true
 category: blog
 tag: Dev
+socialmediapreview: "Programming Language Dogma"
 ---
 
 Every week I see people arguing over languages, frameworks, hosting
@@ -72,7 +73,7 @@ adapt.
 ## To Sum It Up
 
 > &quot;Don&#39;t define yourself by hating other things. Define yourself by building cool stuff.&quot;
-> 
+>
 > [Steve Klabnik][2] at [DotRB][3]
 
 [1]:	/blog/2012/01/09/start-working-on-your-side-project/

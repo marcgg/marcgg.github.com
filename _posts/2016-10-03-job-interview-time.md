@@ -5,6 +5,7 @@ description: "We all know that arriving late is bad, but there is such a thing a
 blog: true
 category: blog
 tag: Recruitment
+socialmediapreview: "Job Interview Tip"
 ---
 
 I've spent [a lot of time][1] conducting job interviews over the past few years for the various startups I've been a part of. One of the things I noticed is that, while most people know that arriving late is never a good idea, a lot of candidates don't realize that arriving too early is not the best move either.
@@ -23,7 +24,7 @@ Your first chance to make a good impression is now tainted with awkwardness and 
 
 Arriving late is the worst way to begin an interview. If this happens to you, even if you're only two minutes late, you should apologize profusely and hope this isn't an eliminating factor for the person you'll be talking to. Note that "it took longer than expected" is not a valid answer, you should have planned better. You should also send a quick email stating that you'll be a few minutes late.
 
-However, if you arrive at the exact time scheduled, then it's almost the same as if you were late. You will probably have to take an elevator, talk to a receptionist, be guided to a meeting room and so on. 
+However, if you arrive at the exact time scheduled, then it's almost the same as if you were late. You will probably have to take an elevator, talk to a receptionist, be guided to a meeting room and so on.
 
 While you were on time to show up at the company's door, you'll be late at the actual job interview and loose important face time with your interviewer.
 

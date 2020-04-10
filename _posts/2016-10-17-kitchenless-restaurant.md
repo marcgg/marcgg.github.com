@@ -5,6 +5,7 @@ description: "With all the changes in food delivery, could we see a rise in qual
 blog: true
 category: blog
 tag: Philosophy
+socialmediapreview: "Kitchenless Restaurants"
 ---
 
 With all the changes in the way we order food, I'm wondering if we're ever going to get to where restaurants will stop preparing food while still serving quality meals.

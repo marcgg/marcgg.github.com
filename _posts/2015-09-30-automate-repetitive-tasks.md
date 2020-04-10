@@ -5,6 +5,7 @@ description: Stop looking only as time as a metric to know when to automate. The
 blog: true
 category: blog
 tag: ProjectManagement
+socialmediapreview: "Task Automation"
 ---
 
 When it comes to automating repetitive tasks done on a computer, there seem to be two schools of thought.
@@ -52,7 +53,7 @@ Adding too many repetitive tasks that are not worth automating and you could end
 
 ### Focus
 
-Every day I need to do this one task. I also probably have a few others tasks just like this. To be able to complete them on time, I might have to stop what I'm doing at some point and shift my focus to this repetitive task. Even if the task itself takes 1 minute, the context switching will cost way more. 
+Every day I need to do this one task. I also probably have a few others tasks just like this. To be able to complete them on time, I might have to stop what I'm doing at some point and shift my focus to this repetitive task. Even if the task itself takes 1 minute, the context switching will cost way more.
 
 ### Growth
 

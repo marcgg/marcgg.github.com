@@ -6,6 +6,7 @@ nationality."
 blog: true
 category: blog
 tag: Philosophy
+socialmediapreview: "Pride in Nationnality"
 ---
 
 A few years back, when I was living in the US, a lot of people asked me if I

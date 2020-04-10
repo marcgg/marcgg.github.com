@@ -5,6 +5,7 @@ description: Presentation of a simple Git shortcut to move back to the branch yo
 blog: true
 category: blog
 tag: Git
+socialmediapreview: "git checkout -"
 ---
 
 **tl;dr: Use `git checkout -` to move back to the previous branch.**
@@ -16,7 +17,7 @@ When using Git, it's very common to move back and forth between two branches. To
 This will move you back to the branch you were on previously. The syntax looks a bit esoteric, so let's take a look at the `git checkout` documentation to understand it better:
 
 > As a special case, the "@{-N}" syntax for the N-th last branch/commit checks out branches (instead of detaching).
->  
+>
 > [Git Documentation][1]
 
 Now with an example:

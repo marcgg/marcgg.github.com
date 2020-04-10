@@ -6,10 +6,11 @@ applications with a native feel on both iPhone and Android. It seemed great so I
 blog: true
 category: blog
 tag: iphone
+socialmediapreview: "Steroids.js First Impressions"
 ---
 
 \***Update 9 April 2014**: Since this post, I released a [quantified self app][1]
-using SteroidsJs and 
+using SteroidsJs and
 wrote another article with [tips & tricks to know when building a
 Steroids.js app](/blog/2014/04/09/phonegap-steroids-hybrid-native-app-tips/) (or any hybrid app really).
 300ms delay, overscroll, text rendering, 1px borders, local storage, performances, i18n ... it's all there!\*

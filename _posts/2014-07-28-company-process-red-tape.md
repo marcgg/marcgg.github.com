@@ -7,6 +7,7 @@ category: blog
 tag: Startup
 redirect_from:
 - /2014/07/28/company-process-red-tape/
+socialmediapreview: "Regarding Red Tape"
 ---
 
 To me, a formal process is just like code. A way to solve a problem. I’m not talking about best practices or common sense but real formalized ways of doing things. For instance if a team constantly have problem communicating, it could be interesting to set and enforce some kind of recurring meeting to facilitate discussions - let’s say every monday, 1 hour, all hands.
@@ -19,8 +20,8 @@ Going back to my first example, if the development team is only two people in th
 
 It’s all about adapting your processes to the situation. A brilliant organizational idea from another company might not work for your team. [Heck][1], what worked for you at some point might not even do it anymore after doubling in size!
 
-> One of my fav authors once said every law should be signed with mourning, “this is where we failed each other, and now require force”. 
-> 
+> One of my fav authors once said every law should be signed with mourning, “this is where we failed each other, and now require force”.
+>
 > Quinn Norton ([@quinnnorton][2]), [May 12th 2014][3], paraphrasing [Dale Pendell][4]
 
 I really like this tweet. A bit extreme but hey, the phrasing is pretty cool. Just replace “law” by “company processes” and _voilà_. What I take from it is that, **ideally**, you should have everyone in your team working well without having to apply force.
@@ -30,7 +31,7 @@ If John often arrives late in meetings doesn’t necessary mean you need to crea
 To this point I’ve repeated a lot how everything should be adapted and how it depends on a given situation. The corollary of this is that anyone telling you that methodology X is [perfect][5] for _any_ team is mistaken.
 
 > "I suppose it is tempting, if the only tool you have is a hammer, to treat everything as if it were a nail.”
-> 
+>
 > [Abraham H. Maslow][6]
 
 I would not claim to have the perfect way to work with a team. I’m bound to make [mistakes][7], we all are. And it’s a complex subject… there are even [people writting thesis about it][8]!

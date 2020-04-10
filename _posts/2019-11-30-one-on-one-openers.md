@@ -5,6 +5,7 @@ description: "Depending on how you start the conversation, you will influence wh
 blog: true
 category: blog
 tag: Management
+socialmediapreview: "One on One Openners"
 ---
 
 I have weekly one on ones with my direct reports. The objective is to build a good relationship and remove immediate roadblocks.
@@ -25,7 +26,7 @@ That seems trivial, but since I'm having A LOT of one on ones, I've tried differ
 - "What's on your mind?" tends to have people talk about what is going on _today_, when the discussion should be broader.
 - Saying nothing doesn't usually work with most people, leading to an awkward start or a meeting that never properly "starts" - which can be fine now and then.
 
-My favorite way to begin the conversation nowadays is **"What do you want to talk about?"**. 
+My favorite way to begin the conversation nowadays is **"What do you want to talk about?"**.
 
 This reminds us that the objective of the first ten minutes is to let them speak and share what is relevant to them. When they finish speaking, I'll often ask "is there anything else you'd like to talk about?" to make sure that we're not skipping something important.
 

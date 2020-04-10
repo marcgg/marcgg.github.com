@@ -6,6 +6,7 @@ it can also be a lot of fun."
 blog: true
 category: blog
 tag: Philosophy
+socialmediapreview: "Mixing Languages"
 ---
 
 I was born in France and lived there for the most part of my life. I have

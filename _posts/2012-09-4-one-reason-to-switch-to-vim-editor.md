@@ -9,6 +9,7 @@ category: blog
 tag: Dev
 redirect_from:
 - /2012/09/04/one-reason-to-switch-to-vim-editor/
+socialmediapreview: "Switching to Vim"
 ---
 
 I know, I know, this has been done to death, but stay with me for a second. I’m not here to tell you that Vim is the best editor out there, just to tell you the one reason that got me to switch.
@@ -17,7 +18,7 @@ Like every developer with some curiosity, I tried a ridiculous amount of text ed
 
 At some point I realized that I was wasting my time learning slightly different shortcuts and ways of setting up a project. I began to consider Vim seriously because it stood the test of time and seemed cool for some reason, but really the one thing that convinced me was a problem I had at my job.
 
-One day something went wrong on a server running Debian. The sysadmin was not around and I ended up being the one that had to go on there and fix it. It was linked to some config files that were not properly set up, and the only editor available was Vim. 
+One day something went wrong on a server running Debian. The sysadmin was not around and I ended up being the one that had to go on there and fix it. It was linked to some config files that were not properly set up, and the only editor available was Vim.
 
 Back then I had almost [no clue][2] on how to use it.
 

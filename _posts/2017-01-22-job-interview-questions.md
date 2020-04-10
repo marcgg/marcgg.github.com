@@ -5,6 +5,7 @@ description: "Asking the same questions to all the job applicants you interview 
 blog: true
 category: blog
 tag: Recruitment
+socialmediapreview: "Recruitment Tip"
 ---
 
 When conducting job interviews, it's important to have a few recurring questions.  Obviously I'm not saying to be completely robotic and only fill up a form with predetermined questions. Personnally I like saving around 30% of the interview time to pose the same 3 to 5 problems.

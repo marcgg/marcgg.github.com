@@ -9,6 +9,7 @@ category: blog
 tag: iphone
 redirect_from:
 - /2012/10/22/custom-slider-ios-rubymotion/
+socialmediapreview: "RubyMotion Custom Slider"
 ---
 
 I always liked the idea of developing mobile applications, but also found the Objective C + XCode experience not very enjoyable. I gave alternatives like [Titanium][1] a try, but wasn’t fully convinced. Lately I’ve been getting into [RubyMotion][2] and so far I’m really impressed by the general feel of it.
@@ -40,7 +41,7 @@ Way](http://ruby.learncodethehardway.org/) by [Zed A. Shaw][7].
 
 I’ll try to explain how to customize a
 [UISlider][8]
- to get the look and feel matching the design of your application. 
+ to get the look and feel matching the design of your application.
 Here’s what’s the demo code will give you:
 
 <iframe src="http://www.screenr.com/embed/v0y8" width="100%" height="396" frameborder="0">Loading</iframe>
@@ -55,10 +56,10 @@ and assign it to be the root.
 class AppDelegate
   def application(application, didFinishLaunchingWithOptions:launchOptions)
 	@window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
-	
+
 	main_controller = MainController.alloc.init
 	@window.rootViewController = main_controller
-	
+
 	@window.rootViewController.wantsFullScreenLayout = true
 	@window.makeKeyAndVisible
 	true

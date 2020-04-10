@@ -5,6 +5,7 @@ description: I’m not a good designer, not at all. However I still tried to cre
 blog: true
 category: blog
 tag: Design
+socialmediapreview: "New Design!"
 ---
 
 I’m not a good designer, not at all. However I still tried to create a new version of my website based on the old one - mainly because I grew really tired of the previous design.

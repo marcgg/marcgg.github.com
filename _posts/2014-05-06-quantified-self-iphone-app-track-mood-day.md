@@ -6,6 +6,7 @@ description: "A lot of iOS and Android applications have been created to track o
 blog: true
 category: blog
 tag: Health
+socialmediapreview: "Quantified Self"
 ---
 
 I wouldn't say that I'm into quantified self, but I do enjoy having some idea of what I'm doing with my life. Wearing gear tracking you, a Jawbone for instance, feels overkill to me. My approach is simply based on Foursquare to see where I've been and a calendar app to note what I've done.

@@ -5,6 +5,7 @@ description: "There's an endless discussion going on between programmers about t
 blog: true
 category: blog
 tag: Ruby
+socialmediapreview: "Expressing Intent in Ruby"
 ---
 
 There's an endless discussion going on between programmers about the utility of comments and how to express intent in code.  Let's push it a bit further and see a few different ways of how to clearly define that a variable is an ordered array of names. I'm focusing here on what Ruby provides, other languages have other features to deal with this question.

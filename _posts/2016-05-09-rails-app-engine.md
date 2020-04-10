@@ -5,6 +5,7 @@ description: "In this post I've been playing around with Google App Engine, tryi
 blog: true
 category: blog
 tag: Ruby
+socialmediapreview: "App Engine"
 ---
 
 The past week had two great news: [Ruby on Google App Engine went beta][1] and [Rails 5.0.0.rc1 was released][2]. I decided it was a good opportunity to try both!
@@ -76,7 +77,7 @@ Great! Let's check it out!
 
 #### Reading Logs
 
-I have to find how to read my logs to figure out what's going on, so I start looking. 
+I have to find how to read my logs to figure out what's going on, so I start looking.
 
 I first run into the `gets-log` command, but it feels a bit complicated since I'm not sure exactly what logs are going to help me debug. I then find the `gcloud beta logging logs` command that is supposed to list all the logs available, which is pretty great. To run it I have to install gcloud Beta Commands, so I install this as well. The command works, but I'm still a bit confused by what I'm supposed to do here and how I could find a way to stream my server's output to my console.
 
@@ -90,14 +91,14 @@ After fiddling with the various filters I end up finding the "just show me every
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/app_engine_logs.jpg" alt="" style="padding: 20px; width: 600px;"/></div>
 
-At this point I see hits, so it's a good start. 
+At this point I see hits, so it's a good start.
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/app_engine_hits.jpg" alt="" style="padding: 20px; width: 600px;"/></div>
 
-As it turns out I have a configuration issue:  `#<RuntimeError: Missing 'secret_key_base' for 'production' environment, set this value in 'config/secrets.yml'>`. 
+As it turns out I have a configuration issue:  `#<RuntimeError: Missing 'secret_key_base' for 'production' environment, set this value in 'config/secrets.yml'>`.
 
 #### Environment Variables
-  
+
 Right now the problematic section of our `secrets.yml` file looks like this:
 
 	production:

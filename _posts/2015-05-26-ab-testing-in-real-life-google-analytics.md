@@ -5,6 +5,7 @@ description: Split testing... everyone is talking about it, but how do you actua
 blog: true
 category: blog
 tag: Monitoring
+socialmediapreview: "Split Testing"
 ---
 
 I've been enthusiastic about the concept of A/B testing for a very long time, but I only got to implement it for the first time about two years ago. At the time I thought it would be easy. So many companies are talking about it, there must be a clear path to do it, right?
@@ -66,7 +67,7 @@ First of all, don't start doing any split testing if you don't have identified K
 Based on this, try to define a clear conversion funnel. If you're not familiar with the concept, allow me to quote [Wikipedia][3]:
 
 > Conversion funnel is a technical term used in e-commerce operations to describe the track a consumer takes through an Internet advertising or search system, navigating an e-commerce website and finally converting to a sale.
-> 
+>
 > The metaphor of a funnel is used to describe the decrease in numbers that occurs at each step of the process.
 
 For instance, in the case of the hat website:

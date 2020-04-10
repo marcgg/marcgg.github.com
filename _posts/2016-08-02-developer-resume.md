@@ -2,10 +2,11 @@
 layout: post
 title: "Why Resumes Are Actually Helpful"
 description: "There are still developers thinking resumes are not useful, when really they can help simplifying the recruitment process and be generally very helpful for all parties involved."
-blog: true  
+blog: true
 cssscope: deadlines
 category: blog
 tag: Recruitment
+socialmediapreview: "Resume are Helpful"
 ---
 
 I'm a developer, but I've always spent time helping with recruitment for the various companies I've been a part of. I'm even doing that to a lesser extend as a consultant. Based on this experience, I think I can say that we should stop saying that a developer doesn't need a resume of any kind and that Github alone is enough. I thought this was a closed subject, that we stopped believing that [Github is your developer portfolio][1], but I still see people applying with a Github account and almost getting offended if I ask if they have at least a Linkedin profile.
@@ -47,24 +48,24 @@ Having a resume can also lead to better conversations. For instance I could noti
 
 If you look at [my github account][4], you'll see that it's a mess.
 
-There's all kinds of randomness going on: my dotfiles, this site, a very old but somewhat popular jQuery plugin, terrible hackaton code, a few backups, a couple of forks that were merged (or not), projects I gave up on, projects still running, demo repositories for when I give classes... 
+There's all kinds of randomness going on: my dotfiles, this site, a very old but somewhat popular jQuery plugin, terrible hackaton code, a few backups, a couple of forks that were merged (or not), projects I gave up on, projects still running, demo repositories for when I give classes...
 
 I don't really mind though, because I wouldn't apply to a job with this. Most developers are just like me in this, most of our best work is private... but still, why so many people send their Github account when there is nothing relevant on there?
 
 To be honest, I totally gave up on looking at Github unless the candidate explicitely points to a given repository. If I do browse the code on my own, it will _always_ ends in a discusion like this one:
 
 > <span class='dpm'>Me</span>: I've looked at your Github account since you sent it with your application. On project Y I wondered why you made this choice...?
-> 
+>
 >  <span class='ddev'>Candidate</span>: That's an old project I don't even remember.
-> 
+>
 >  <span class='dpm'>Me</span>:  Okay, well on project Z I found a couple of situations where I felt like the code was subpar. What lead you to write it this way?
-> 
+>
 > <span class='ddev'>Candidate</span>: This project was done during a weekend, it's hacked together so the code is terrible. I'd rather not talk about this one.
-> 
+>
 >  <span class='dpm'>Me</span>: Is there a repository I could look at?
-> 
+>
 > <span class='ddev'>Candidate</span>: Not really, most of my best work is private.
-> 
+>
 >  <span class='dpm'>Me</span>:  (ಠ\_ಠ)
 
 ## Looking At Code

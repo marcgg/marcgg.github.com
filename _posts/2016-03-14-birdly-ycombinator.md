@@ -7,6 +7,7 @@ category: blog
 featured: true
 tag: Startup
 publictag: Coaching
+socialmediapreview: "Startup Coaching"
 ---
 
 [Birdly][1], the company [I helped getting accepted into a famous Parisian accelerator][2] more than a year ago, has been accepted to take part in the [Y Combinator program][3]! I figured I'd take the opportunity to share what has been my relationship with their team up to this point.

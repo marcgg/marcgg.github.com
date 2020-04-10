@@ -9,6 +9,7 @@ tag: Product
 publictag: Programming
 redirect\_from:
 - /2012/09/24/working-with-apis-facebook/
+socialmediapreview: "Working with APIs"
 ---
 
 Before we begin let me give you a little background on why I’m writing this article.

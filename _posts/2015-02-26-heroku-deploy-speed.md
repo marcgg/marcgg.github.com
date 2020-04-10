@@ -5,6 +5,7 @@ description: If you are having trouble finding the part your deployment to Herok
 blog: true
 category: blog
 tag: Performance
+socialmediapreview: "Deploy Speed on Heroku"
 ---
 
 Sometimes deploying to Heroku can get really slow. Obviously before spending any time trying to speed it up, you should actually know what part of it is causing the problem. For instance, if you run Ruby on Rails, you get some information regarding the asset precompilation time or for how long Bundler installed your gems.

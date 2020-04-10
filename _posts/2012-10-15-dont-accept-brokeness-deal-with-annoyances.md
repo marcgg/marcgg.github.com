@@ -7,6 +7,7 @@ areas of one's life."
 blog: true
 category: blog
 tag: Health
+socialmediapreview: "Don't Accept Brokenness"
 ---
 
 For a while I had a problem with my jaw. Ten years back I got elbowed in the face (don’t ask), and since then I had trouble yawning or just opening my mouth wide open. I could try to do it, but it would result in the whole thing locking and a good deal of pain.

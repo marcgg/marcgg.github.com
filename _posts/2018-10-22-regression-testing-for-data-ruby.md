@@ -5,6 +5,7 @@ description: "This non-instrusive Ruby gem allows you to be notified when your d
 blog: true
 category: blog
 tag: Ruby
+socialmediapreview: "Regression Testing For Data"
 ---
 
 Making sure that data stays valid is not a trivial task. For simple requirements, like "this column is not null" or "this field is unique", you of course just use the database constraints and that's it. Same goes for type validation.
@@ -26,9 +27,9 @@ To get an email if there are invalid users you would do this:
 {% highlight ruby %}
 	class UserChecker
 	  include CheckerJobs::Base
-	
+
 	  notify :email, to: "hello@marcgg.com"
-	
+
 	  ensure_no :user_with_invalid_tos_state do
 	    # some code that returns invalid users in an array
 	  end
@@ -40,7 +41,7 @@ You then have to run this checker regularly using your favorite task scheduler s
 {% highlight ruby %}
 	Zhong.schedule do
 	 category "checkers" do
-	   every(1.hour, "check users") do 
+	   every(1.hour, "check users") do
 	     Sidekiq::Client.enqueue(UserChecker)
 	   end
 	 end

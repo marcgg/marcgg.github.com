@@ -9,6 +9,7 @@ category: blog
 tag: iphone
 redirect_from:
 - /2012/11/12/webviews-javascript-ios-rubymotion/
+socialmediapreview: "Webviews in RubyMotion"
 ---
 
 Here we go, another article on [RubyMotion][1]!
@@ -63,10 +64,10 @@ and assign it to be the root.
 class AppDelegate
   def application(application, didFinishLaunchingWithOptions:launchOptions)
 	@window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
-	
+
 	main_controller = MainController.alloc.init
 	@window.rootViewController = main_controller
-	
+
 	@window.rootViewController.wantsFullScreenLayout = true
 	@window.makeKeyAndVisible
 	true

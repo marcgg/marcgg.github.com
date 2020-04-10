@@ -8,6 +8,7 @@ working on yours tonight."
 blog: true
 category: blog
 tag: Projects
+socialmediapreview: "Start your side project!"
 ---
 
 To me a side project is taking an idea and building it from scratch. You do not have to complete it, it doesn’t need a business model or turn into a company over time, it doesn’t even need to make sense to other people than you. It is just a way to experiment. If later on it turns out into a successful company, good for you, but it doesn’t have to be your goal.

@@ -7,6 +7,7 @@ tricks I use every day to avoid any unecessary pain."
 blog: true
 category: blog
 tag: Health
+socialmediapreview: "Avoid Thumb Pain"
 ---
 
 Most coders complain about wrist pain. For some reason I never had major trouble there except when working for hours on a laptop. My main issue seemed more original and was located in [the group of muscles controlling the thumb](http://en.wikipedia.org/wiki/Thenar_eminence). Suddently it would hurt for days, then go away, then come back... good times.

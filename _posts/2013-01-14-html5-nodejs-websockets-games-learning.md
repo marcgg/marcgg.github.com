@@ -9,6 +9,7 @@ category: blog
 tag: Projects
 redirect_from:
 - /2013/01/14/html5-nodejs-websockets-games-learning/
+socialmediapreview: "Multiplayer HTML5 Game"
 ---
 
 Okay. Let's start by saying that I'm a developer that does mostly web stuff.

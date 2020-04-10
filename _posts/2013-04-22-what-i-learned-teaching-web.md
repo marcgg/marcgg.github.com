@@ -7,6 +7,7 @@ what this taught me."
 blog: true
 category: blog
 tag: Teaching
+socialmediapreview: "Learned While Teaching"
 ---
 
 A few months back I wrote [an article about how developers should share

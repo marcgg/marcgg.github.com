@@ -5,6 +5,7 @@ description: "Here are the various steps I took to build my custom monitor stand
 blog: true
 category: blog
 tag: Design
+socialmediapreview: "Custom Monitor Stand"
 ---
 
 I've bought a new desk as well as a new monitor, so I've decided to improve my setup. The desk is a simple [Ikea Hilver table][1],  but I built the monitor stand. Since I wanted to keep track of what I did, I took some pictures and I figured I could share them here... to be honest I'm not a good handyman, so I'm not sure if it'll be useful to anyone but here you go!

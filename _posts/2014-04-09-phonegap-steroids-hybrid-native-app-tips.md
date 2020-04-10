@@ -9,6 +9,7 @@ category: blog
 featured: true
 tag: iphone
 publictag: Programming
+socialmediapreview: "Hybrid Mobile App"
 ---
 
 A while ago I [wrote about AppGyver's SteroidsJS][1]
@@ -97,7 +98,7 @@ Just in case this answer disapears, here's what it looks like:
 	      , fingers = e.originalEvent.touches.length;
 	    $(this).data('lastTouch', t2);
 	    if (!dt || dt > 500 || fingers > 1) return; // not double-tap
-	
+
 	    e.preventDefault(); // double tap - prevent the zoom
 	    // also synthesize click events we just swallowed up
 	    $(this).trigger('click').trigger('click');
@@ -228,7 +229,7 @@ it's a pain.
 > Retina Display is a brand name used by Apple for liquid crystal displays
 > that have a pixel density high enough that the human eye is unable to discern
 > individual pixels at a typical viewing distance.
-> 
+>
 > [wikipedia][19]
 
 The short version of how to deal with it is pretty straightforward: create images twice as big, call them
@@ -328,7 +329,7 @@ This happened when I tried to apply an animation to a div with a linear-gradient
 > (e.g. when the shape is dynamic based on the content) - \*\*otherwise, static images
 > are always faster\*\*. On very low-end platforms, it's even advised to use static images
 > for some of the text if possible.
-> 
+>
 > [webkit.org][27]
 
 The solution here is to prefer using images as background images rather

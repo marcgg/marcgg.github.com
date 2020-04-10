@@ -9,6 +9,7 @@ category: blog
 featured: true
 tag: Startup
 publictag: Coaching
+socialmediapreview: "Developers & Knowledge Sharing"
 ---
 
 When you think startup, you might get the picture of a bunch of

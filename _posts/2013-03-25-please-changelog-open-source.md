@@ -6,6 +6,7 @@ project is a must have. Here's why."
 blog: true
 category: blog
 tag: Dev
+socialmediapreview: "Please Keep a Changelog"
 ---
 
 I love open source. I think it's amazing that some people are willing to

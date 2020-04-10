@@ -5,6 +5,7 @@ description: "Running RSpec on more than one project is already tricky when it's
 blog: true
 category: blog
 tag: Ruby
+socialmediapreview: "RSpec on Multiple Projects"
 ---
 
 _tl;dr: I had to run specs on a lot of different projects and gather results. Here's how I did it with shell scripts and Ruby._

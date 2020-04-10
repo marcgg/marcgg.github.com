@@ -5,6 +5,7 @@ description: I was stuck in a plane so I started fiddling with my alternative ve
 blog: true
 category: blog
 tag: Projects
+socialmediapreview: "Game of Life"
 ---
 
 A few days ago I was on a plane for 6 hours and we only had a shared TV screen playing terrible sitcoms and movies. What do you do in this situation? Code some weird version of [Conway's Game of Life][1] of course!

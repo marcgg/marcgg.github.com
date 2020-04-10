@@ -7,6 +7,7 @@ consumption."
 blog: true
 category: blog
 tag: Perso
+socialmediapreview: "I Left Tigerlily"
 ---
 
 I joined [Tigerlily][1] even before it was called that and, for 3 years, I contributed to the creation of [amazing products][2] that are now used by major companies in France and abroad. We built a great team of very talented people, brought innovation to how brands would interact with their users on social networks and always thrived to be the best at what we’d put our minds into.

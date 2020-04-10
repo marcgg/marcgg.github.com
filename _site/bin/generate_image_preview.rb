@@ -8,11 +8,11 @@ def generate_image(file_name, message)
   puts "Generating image: #{file_name}#{EXTENSION} - #{message}"
   canvas = Magick::ImageList.new
   canvas.new_image(1200, 630)
-  canvas.border!(8,8,"#ed5252")
+  canvas.border!(15,15,"#ed5252")
 
   text = Magick::Draw.new
   text.font = "/Users/marcgg/Dropbox/code/marcgg.github.com/assets/fonts/Open_Sans/OpenSans-ExtraBold.ttf"
-  text.pointsize = 105 - message.size
+  text.pointsize = 175 - (message.size*4).to_i
   text.gravity = Magick::CenterGravity
 
   text.annotate(canvas, 0,0,0,0, message) {

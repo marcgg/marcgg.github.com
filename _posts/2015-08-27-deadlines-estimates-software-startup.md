@@ -8,6 +8,7 @@ featured: true
 cssscope: conversation
 tag: ProjectManagement
 publictag: Project Management
+socialmediapreview: "Deadlines & Estimates"
 ---
 
 A lot of developers in startups are against deadlines and estimates. There's even a whole "[\#NoEstimates][1]" movement that appeared recently.
@@ -55,17 +56,17 @@ It's the responsibility of all parties involved to make sure that these conversa
 With the definition above, estimates become perfectly ok. They help everyone get an understanding of the amount of work we're about to get into as a team.
 
 > <span class='dpm'>Product Manager:</span> We want to add a newsletter feature to our website. How long do you think it will take?
-> 
+>
 > <span class='ddev'>Developer:</span> It depends, do you want to use a third party or do it entirely internally?
-> 
+>
 > <span class='dpm'>PM:</span> I'm not sure. How long would it take?
-> 
+>
 > <span class='ddev'>D:</span> Using a third party should be way faster, probably a day or two of development. Of course I'll be able to tell you more precisely once we spend a few hours comparing what good SaaS are within our budget and how to use them. Developing the newsletter from scratch is going to be longer than that.
-> 
+>
 > <span class='dpm'>PM:</span> How much longer? You know we try to avoid adding too many third parties to this app.
-> 
+>
 > <span class='ddev'>D:</span> Something close to a couple of weeks. There are a lot of things to think about - unsubscriptions, templates ... If you'd like I could spend a day on it to refine my estimate?
-> 
+>
 > <span class='dpm'>PM:</span> That's alright, we'll go with the third party option. There's no need to spend that much time on a newsletter. I'll see with the others what budget we have and get back to you.
 
 The product owner means well, but doesn't have all the information needed to make a decision. To handle this, both parties use estimates to determine what option makes the most sense for the company. In the end, no deadline has been set.
@@ -73,17 +74,17 @@ The product owner means well, but doesn't have all the information needed to mak
 However, not all discussions go like this. Let's say that a couple of days passed and the product manager comes back to the developer:
 
 > <span class='dpm'>PM:</span> I have the budget approved, we can afford to use Mailchimp for this. How long will it take?
-> 
+>
 > <span class='ddev'>D:</span> I'm not sure exactly, I'd say a couple of days but I never used Mailchimp before. It's supposed to be simple, but I can't be sure.
-> 
+>
 > <span class='dpm'>PM:</span> I need to know if it's going to get done for the big meeting tomorrow so I can write a slide about it.
-> 
+>
 > <span class='ddev'>D:</span> I can't promise you that. It will be done by the end of the week, but tomorrow is too close for me to commit.
-> 
+>
 > <span class='dpm'>PM:</span> It's a very important meeting you know.
-> 
+>
 > <span class='ddev'>D:</span> Of course, that's why I don't want to promise on something I'm not sure I can deliver and leave you at the meeting with an half finished newsletter!
-> 
+>
 > <span class='dpm'>PM:</span> I understand.
 
 Here, the developer refuses to commit to a date because she lacks information. It would be risky.
@@ -110,17 +111,17 @@ It's perfectly fine to do this: you don't commit yourself, you don't set a hard 
 Sometimes a developer can see that a feature is not worth building because it would take too long. This is something product managers can't know and are always happy to hear about.
 
 > <span class='ddev'>Developer:</span> I see you assigned me a ticket to add a PDF export feature for our premium users.
-> 
+>
 > <span class='dpm'>Product Manager:</span> Yes, it was a feature request that came out of the last user survey we sent out. Is there a problem with the spec?
-> 
+>
 > <span class='ddev'>D:</span> Not really a problem, but I think it will take at least two weeks to complete. I looked at it quickly and it seems the data is really not formatted as we want for this export.
-> 
+>
 > <span class='dpm'>PM:</span> Really? It seemed easy!
-> 
+>
 > <span class='ddev'>D:</span> Yes, it could have been easy. The thing is, we made this structural choice a while back and I'd need to change it before making the export. Do you think it's worth it?
-> 
+>
 > <span class='dpm'>PM:</span> I was thinking it would only take a day when I assigned the ticket to you... I don't think it's worth spending two weeks on that. It's just a feature that would have been nice to have if it had taken a day or two.
-> 
+>
 > <span class='ddev'>D:</span> My thoughts exactly. I'll close the ticket and start working on this other feature instead.
 
 ### Detecting Difficulties
@@ -128,25 +129,25 @@ Sometimes a developer can see that a feature is not worth building because it wo
 Used correctly, estimates can help technical leads identify other developers struggling with a complex issue. This also prevents the very need for micromanagement or the "are you done yet" effect.
 
 > <span class='dcto'>CTO:</span> I assigned you this new ticket to develop the ability to add a discount code on checkout.
-> 
+>
 > <span class='ddev'>Developer:</span> Great! It's been on the roadmap for a while, glad we can get to it.
-> 
+>
 > <span class='dcto'>CTO:</span> How long do you think it should take you?
-> 
+>
 > <span class='ddev'>D:</span> I'm not sure, but I doubt it'll take more than 2 days.
 
 2 days later...
 
 > <span class='dcto'>CTO:</span> I noticed that you're still not done on the discount feature. It's not a problem, but I was wondering if you were having any trouble.
-> 
+>
 > <span class='ddev'>D:</span> Yes, it turns out we need a special integration with our payment provider I didn't think of.
-> 
+>
 > <span class='dcto'>CTO:</span> That's too bad. How much more time do you think it'll take?
-> 
+>
 > <span class='ddev'>D:</span> I really don't know, maybe two weeks, but it could be more. Should I stop development and go back on another feature?
-> 
+>
 > <span class='dcto'>CTO:</span> No, it's a very important piece of functionality, so please keep going and take the time you need to get it right. If by the end of the week you're still having troubles you could pair with Tim, he knows well this part of the app. What do you think?
-> 
+>
 > <span class='ddev'>D:</span> That would be helpful, great!
 
 ### Finding Quick Wins
@@ -154,11 +155,11 @@ Used correctly, estimates can help technical leads identify other developers str
 Estimates can help a developer find and communicate about quick wins for the project.
 
 > <span class='ddev'>Developer:</span> Remember how we wanted to be able to use advanced filters on our internal search?
-> 
+>
 > <span class='dpm'>Product Manager:</span> Yes, you told me  a year ago that it would take months. I'd love to have it, but it's not very high priority right now.
-> 
+>
 > <span class='ddev'>D:</span> Well, thanks to my latest refactoring made for another feature I was working on, we should be able to add the filters in a day or two!
-> 
+>
 > <span class='dpm'>PM:</span> That would be amazing! Now that it can be that fast, it's worth spending the time.
 
 ## The Cost Of Estimates
@@ -170,7 +171,7 @@ If the cost of estimating something gets too big compared to the scope of the fe
 Overall, for startups, I recommend not spending more than a few minutes on estimates. If you end up with a huge project, try to break it into smaller bits and estimate these instead of trying to deal with the whole thing.
 
 > “The future is uncertain and you will never know less than you know right now.”
-> 
+>
 > Sandi Metz, [Practical Object-Oriented Design in Ruby: An Agile Primer][3]
 
 If estimates are mandatory for each simple feature, you might be losing a lot of time, and people might start to develop crazy ways to do these estimates.
@@ -201,7 +202,7 @@ For instance, rushing to get a feature into production by the end of the week be
 To avoid missing these fake deadlines, developers will reduce quality or scope. So you'll end up with incomplete or poorly created features, all this for the sake of an artificial deadline. This is short-sighted, makes absolutely no sense and, if repeated enough time, will drive your team away or at least lead to some serious loss in productivity over time. Creating a sustainable startup is not a sprint, it's a longer race.
 
 > "Agile processes promote sustainable development. The sponsors, developers, and users should be able to maintain a constant pace indefinitely."
-> 
+>
 > [Principles behind the Agile Manifesto][4]
 
 ### Deadlines For Motivation

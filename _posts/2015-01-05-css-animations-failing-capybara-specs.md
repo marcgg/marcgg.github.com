@@ -5,6 +5,7 @@ description: It is possible that random tests in your suite are failing because 
 blog: true
 category: blog
 tag: Tests
+socialmediapreview: "CSS Breaking Specs"
 ---
 
 If you don’t have some kind of acceptance tests, you should probably add some. Personnally I like to use [Capybara][1] with [PhantomJS][2]/[Poltergeist][3] and this post takes this stack as example, but other testing options will most likely have similar behavior.
