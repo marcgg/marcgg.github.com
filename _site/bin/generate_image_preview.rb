@@ -2,6 +2,10 @@ require "RMagick"
 
 puts "generating preview"
 
+# https://developers.facebook.com/tools/debug/?q=https%3A%2F%2Fmarcgg.com%2Fblog%2F2020%2F03%2F30%2Fpodcasts-episodes-for-quarantine%2F
+# https://www.linkedin.com/post-inspector/inspect/https:%2F%2Fmarcgg.com%2Fblog%2F2020%2F03%2F30%2Fpodcasts-episodes-for-quarantine%2F
+# https://cards-dev.twitter.com/validator
+
 EXTENSION = ".gif"
 
 def generate_image(file_name, message)
@@ -25,7 +29,7 @@ end
 ##################################################################################
 
 FOLDER_PATH = "../_posts/"
-MESSAGE_PATTERN = /^socialmediapreview: "([a-zA-Z0-9_ ]*)"$/
+MESSAGE_PATTERN = /^socialmediapreview: "([&a-zA-Z0-9_ ]*)"$/
 
 Dir.entries(FOLDER_PATH).each do |file|
   next unless file.match?(/\.md$/)
