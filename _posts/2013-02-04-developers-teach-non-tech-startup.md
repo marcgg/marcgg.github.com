@@ -7,9 +7,9 @@ joy for all."
 blog: true
 category: blog
 featured: true
-tag: Startup
+tag: Teaching
 publictag: Coaching
-socialmediapreview: "Developers & Knowledge Sharing"
+socialmediapreview: "Sharing Knowledge"
 ---
 
 When you think startup, you might get the picture of a bunch of

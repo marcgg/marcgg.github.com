@@ -6,30 +6,29 @@ puts "generating preview"
 # https://www.linkedin.com/post-inspector/inspect/https:%2F%2Fmarcgg.com%2Fblog%2F2020%2F03%2F30%2Fpodcasts-episodes-for-quarantine%2F
 # https://cards-dev.twitter.com/validator
 
-EXTENSION = ".gif"
+EXTENSION = ".jpg"
 
-def generate_image(file_name, message)
-  puts "Generating image: #{file_name}#{EXTENSION} - #{message}"
-  canvas = Magick::ImageList.new
-  canvas.new_image(1200, 630)
-  canvas.border!(15,25,"#ed5252")
+def generate_image(file_name, message, tag)
+  puts "Generating image: #{file_name}#{EXTENSION} - #{message} - #{tag}"
 
-  text = Magick::Draw.new
-  text.font = "/Users/marcgg/Dropbox/code/marcgg.github.com/assets/fonts/Open_Sans/OpenSans-ExtraBold.ttf"
-  text.pointsize = 175 - (message.size*4).to_i
-  text.gravity = Magick::CenterGravity
-
-  text.annotate(canvas, 0,0,0,0, message) {
-    self.fill = "#1c1c1c"
-  }
-
-  canvas.write("../assets/previews/#{file_name}#{EXTENSION}")
+  img = Magick::ImageList.new("./backgrounds/#{tag.downcase}.jpg")
+  #img.border!(15,25,"#ed5252")
+  txt = Magick::Draw.new
+  img.annotate(txt, 0,0,0,0, message) do
+    txt.gravity = Magick::CenterGravity
+    txt.pointsize = 175 - (message.size*4).to_i
+    txt.fill = "#1c1c1c"
+    txt.font = "/Users/marcgg/Dropbox/code/marcgg.github.com/assets/fonts/Open_Sans/OpenSans-ExtraBold.ttf"
+    img.format = "jpeg"
+  end
+  img.write("../assets/previews/#{file_name}#{EXTENSION}")
 end
 
 ##################################################################################
 
 FOLDER_PATH = "../_posts/"
 MESSAGE_PATTERN = /^socialmediapreview: "([&a-zA-Z0-9_ ]*)"$/
+TAG_PATTERN = /^tag: "?([&a-zA-Z0-9_ ]*)"?$/
 
 Dir.entries(FOLDER_PATH).each do |file|
   next unless file.match?(/\.md$/)
@@ -39,9 +38,10 @@ Dir.entries(FOLDER_PATH).each do |file|
   file_data = File.read(FOLDER_PATH + file)
 
   res = file_data.match(MESSAGE_PATTERN)
+  tag = file_data.match(TAG_PATTERN)
   if res
     puts "Data found, generating image"
     message = res[1]
-    generate_image(file_name, message)
+    generate_image(file_name, message, tag[1])
   end
 end

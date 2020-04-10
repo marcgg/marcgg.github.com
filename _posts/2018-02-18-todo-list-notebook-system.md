@@ -4,7 +4,7 @@ title: "Tracking Short Term Tasks With Notebooks"
 description: "Here's how I've been using notebooks and a 4-colors pen to handle any small tasks coming my way."
 blog: true
 category: blog
-tag: Management
+tag: ProjectManagement
 socialmediapreview: "Notebooks & Todo Lists"
 ---
 

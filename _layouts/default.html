@@ -26,7 +26,7 @@ layout: compress
     {% endif %}
 
     {% if page.collection == "posts" %}
-      {% capture twitter_image %}{{ page.path | replace: ".md", ".gif" | replace: "_posts/", "" }}{% endcapture %}
+      {% capture twitter_image %}{{ page.path | replace: ".md", ".jpg" | replace: "_posts/", "" }}{% endcapture %}
       <meta name="twitter:image" content="https://marcgg.com/assets/previews/{{twitter_image}}" />
       <meta name="image" property="og:image" content="https://marcgg.com/assets/previews/{{twitter_image}}" />
     {% endif %}

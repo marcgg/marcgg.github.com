@@ -4,7 +4,7 @@ title: "Simple Git Flow With Heroku Pipelines"
 description: "With the introduction of Heroku pipelines and the general complexity of Git Flow, we decided to change the way we work with Git."
 blog: true
 category: blog
-tag: Engineering
+tag: Git
 socialmediapreview: "Simple Git Flow"
 ---
 
