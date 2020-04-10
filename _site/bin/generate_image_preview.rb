@@ -27,7 +27,7 @@ end
 ##################################################################################
 
 FOLDER_PATH = "../_posts/"
-MESSAGE_PATTERN = /^socialmediapreview: "([&a-zA-Z0-9_ ]*)"$/
+MESSAGE_PATTERN = /^socialmediapreview: "([&a-zA-Z0-9_ !\/\?\.:;=+$%éèà\-']*)"$/
 TAG_PATTERN = /^tag: "?([&a-zA-Z0-9_ ]*)"?$/
 
 Dir.entries(FOLDER_PATH).each do |file|
@@ -43,5 +43,7 @@ Dir.entries(FOLDER_PATH).each do |file|
     puts "Data found, generating image"
     message = res[1]
     generate_image(file_name, message, tag[1])
+  else
+    puts "Skipping!"
   end
 end

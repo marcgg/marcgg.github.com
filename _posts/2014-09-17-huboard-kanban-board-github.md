@@ -5,6 +5,7 @@ description: You all know Github issues. HuBoard is a tool giving more features 
 blog: true
 category: blog
 tag: ProjectManagement
+socialmediapreview: "Github Kanban Board"
 ---
 
 I’ve been working in startups for a bit now, and the thing I love with this kind of structure is how [lightweight][1] the company processes can be. I don’t need to ask 3 different people to have access to the internet nor do I have an army of managers telling me [how to code][2]. Pretty neat.
