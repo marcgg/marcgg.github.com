@@ -8,7 +8,7 @@ def generate_image(file_name, message)
   puts "Generating image: #{file_name}#{EXTENSION} - #{message}"
   canvas = Magick::ImageList.new
   canvas.new_image(1200, 630)
-  canvas.border!(15,15,"#ed5252")
+  canvas.border!(15,25,"#ed5252")
 
   text = Magick::Draw.new
   text.font = "/Users/marcgg/Dropbox/code/marcgg.github.com/assets/fonts/Open_Sans/OpenSans-ExtraBold.ttf"
