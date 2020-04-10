@@ -6,9 +6,10 @@ blog: false
 category: blog
 tag: Management
 featured: false
+socialmediapreview: "My Manager README"
 ---
 
-I've always liked [Oren Ellenbogen][1]'s idea of having a [Manager README][2] or a document similar to what [Michael Lopp displays on his site][3]. After some time I finally wrote something and shared it internally, and I've now decided to share it publicly. 
+I've always liked [Oren Ellenbogen][1]'s idea of having a [Manager README][2] or a document similar to what [Michael Lopp displays on his site][3]. After some time I finally wrote something and shared it internally, and I've now decided to share it publicly.
 
 If you're wondering what this is all about, why I think it's useful and how I wrote mine, keep reading. If you just want to read the document itself, you can [go and check it out now][4].
 

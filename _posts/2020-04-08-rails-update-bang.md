@@ -5,6 +5,7 @@ description: "Ruby on Rails gives you update and update! ('update bang') to modi
 blog: true
 category: blog
 tag: Ruby
+socialmediapreview: "update vs update!"
 ---
 
 One of my pet peeves when reviewing Ruby on Rails code is the usage of [update][1] and [update!][2], or any `ActiveRecord::Persistence` method and it's bang (`!`) counterpart.

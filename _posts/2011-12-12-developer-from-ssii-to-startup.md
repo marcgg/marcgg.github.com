@@ -7,6 +7,7 @@ career move."
 blog: true
 category: blog
 tag: Startup
+socialmediapreview: "SSII To Startup"
 ---
 
 In France we have what we call SSII for Société de Service en Ingénierie Informatique. Poorly translated it goes something like «IT Consulting Firm». This is where most young CS graduates will go, mainly because once you get your degree you are spammed by job offers from their recruiters.

@@ -5,6 +5,7 @@ description: "How to organise a department meeting for software engineers, inclu
 blog: true
 category: blog
 tag: Management
+socialmediapreview: "Engineering Team Meeting"
 ---
 
 When I started managing the engineering department at my company, I wanted to have an interesting team meeting involving the entire team. My objective at the time was to set up a meeting that people would look forward to, going beyond simple team & company updates. It's now been a few years since the first, and while not all presentations are a complete success, I'm pretty happy with the way it turned out.
@@ -16,7 +17,7 @@ If you don't already have a similar meeting and want to give this format a try i
 
 ## Format
 
-For duration, I went with 1 hour every two weeks. If we didn't have daily standup meetings, I would have gone with something weekly instead. The meeting itself is held in the office, but is friendly to people working from home that can follow the presentation, present themselves or ask questions. 
+For duration, I went with 1 hour every two weeks. If we didn't have daily standup meetings, I would have gone with something weekly instead. The meeting itself is held in the office, but is friendly to people working from home that can follow the presentation, present themselves or ask questions.
 
 Laptops are not allowed except one person monitoring the production. If someone has something critical to do that absolutely can't wait, I usually prefer that they stay at their desk to do it in good conditions instead of going to the presentation.
 
@@ -64,7 +65,7 @@ At this point you might have noted that I don't split the team by technology. Th
 
 The presentations are a great moment to showcase something interesting happening in the team, the company or the technology space.
 
-I think it's important to know what's happening day to day and make sure that everybody uses the best practices, so there's a lot of that. However it's also necessary to zoom out and look elsewhere for inspiration. For this reason, I try to mix topics that are really practical with some that are more long term and don't necessarily have a concrete application in the company. 
+I think it's important to know what's happening day to day and make sure that everybody uses the best practices, so there's a lot of that. However it's also necessary to zoom out and look elsewhere for inspiration. For this reason, I try to mix topics that are really practical with some that are more long term and don't necessarily have a concrete application in the company.
 
 #### Day To Day
 
@@ -74,7 +75,7 @@ Topics that can have an impact on the day to day:
 - Updates from other departments or a deep dive into an interesting project they completed. If possible it's nice to get a guest from this department to be able to answer followup questions.
 - Reminders of best practices around topics like security, data privacy or performance.
 - How to develop, test and debug on a specific platform, showcasing the tools available.
-- [Post mortem][1] presentation after a significant production issue, including the timeline and what happened, the impact and what we are going to do to avoid this moving forward. 
+- [Post mortem][1] presentation after a significant production issue, including the timeline and what happened, the impact and what we are going to do to avoid this moving forward.
 - How we integrated with a partner or a vendor, and the new capabilities it brings. It's good to also present the various tradeoffs made, limitations of the newly built integration.
 - An interesting refactoring, coding trick or development practice that the team could adopt.
 - Explanations of a new piece of software, tooling or infrastructure that can be used by the team. This usually goes hand in hand with a reference to a new piece of documentation or a followup email summing it up.

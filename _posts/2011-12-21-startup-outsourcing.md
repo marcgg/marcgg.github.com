@@ -7,6 +7,7 @@ to go smoothly with external developers."
 blog: true
 category: blog
 tag: Startup
+socialmediapreview: "Outsourcing in a Startup"
 ---
 
 So you're a startup and want to outsource graphic design, system administration or development? Don’t feel bad, this is very common. Often startups can’t afford to hire many people right away or do not have a team with every skill required to build the perfect product.
