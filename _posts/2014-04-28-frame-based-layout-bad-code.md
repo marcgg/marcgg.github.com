@@ -6,7 +6,7 @@ by only using FRAMES and other amazing tricks."
 blog: true
 category: blog
 tag: Dev
-socialmediapreview: "Frames from the Past
+socialmediapreview: "Frames from the Past"
 ---
 
 I've been writing code for a while. I started with QBasic when I was a kid and the two things I remember from
@@ -157,3 +157,4 @@ I really liked this answer, quite humbling and much better than bashing a cowork
 
 So keep improving your skills, don't feel too bad about past coding mistakes and don't hate on new developers
 still learning - you were making the same mistakes at some point !
+

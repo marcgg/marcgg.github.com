@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2020-04-10T14:43:58+02:00</updated>
+ <updated>2020-04-10T14:45:55+02:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -3887,6 +3887,210 @@ Switched to branch 'first'
   
  
   
+   <entry>
+     <title>Getting Started With Elixir Processes</title>
+     <link href="https://marcgg.com/blog/2015/06/04/getting-started-with-elixir-processes/"/>
+     <updated>2015-06-04T00:00:00+02:00</updated>
+     <id>https://marcgg.com/blog/2015/06/04/getting-started-with-elixir-processes</id>
+     <content type="html">
+       &lt;p&gt;In this article, there will be no fancy tricks or protips, just simple ideas and examples to get started. This is basically the result of my trial and error approach to understand Elixir Processes.&lt;/p&gt;
+
+&lt;p&gt;Hope it helps!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Disclaimer&lt;/strong&gt;: Please note that, even if I’ve been writing code for a while now, I’m in no way an Elixir expert as I’m mostly using Ruby and JavaScript. If you know more about Elixir and notice that I’ve made a mistake, please leave a comment and I’ll fix the article. If you’re just getting started, I recommend you read some of the official documentation before continuing, mainly about &lt;a href=&quot;http://elixir-lang.org/getting-started/basic-types.html&quot;&gt;basic types&lt;/a&gt; and &lt;a href=&quot;http://elixir-lang.org/getting-started/modules.html&quot;&gt;modules&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;processes-101&quot;&gt;Processes 101&lt;/h2&gt;
+
+&lt;p&gt;If you’re getting into &lt;a href=&quot;http://&quot;&gt;Elixir&lt;/a&gt;, knowing about processes is crucial. There’s no way around it, it’s a concept you have to know to get better and use the langage properly.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Processes are not only the basis for concurrency in Elixir, but they also provide the means for building distributed and fault-tolerant programs.”&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://elixir-lang.org/getting-started/processes.html&quot;&gt;Elixir Documentation&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Note that Elixir should not be confused with operating system processes. Again, quoting the documentation:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Processes in Elixir are extremely lightweight in terms of memory and CPU (unlike threads in many other programming languages). Because of this, it is not uncommon to have dozens of thousands of processes running simultaneously.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;start-a-process-watch-it-die&quot;&gt;Start A Process, Watch It Die&lt;/h3&gt;
+
+&lt;p&gt;Let’s start a process:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-elixir&quot; data-lang=&quot;elixir&quot;&gt;&lt;span class=&quot;n&quot;&gt;pid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;spawn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+ &lt;span class=&quot;k&quot;&gt;fn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;
+   &lt;span class=&quot;no&quot;&gt;IO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;sd&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Starting Process&quot;&lt;/span&gt;
+ &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;:timer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;IO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Process&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;alive?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;In this example I added a timer just to make sure that the IO has no chance to be run at the same time as the recently spawned process. This way we’ll get a consistent behaviour, wherever you execute this code.&lt;/p&gt;
+
+&lt;p&gt;If we run this piece of code, we get:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt; Starting Process
+ &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This is because the process dies once it has done its job. Pretty straightforward, right? Now let’s see how to ask it to wait for a message a bit.&lt;/p&gt;
+
+&lt;h3 id=&quot;heres-a-message&quot;&gt;Here’s A Message&lt;/h3&gt;
+
+&lt;p&gt;Now let’s add a way to receive a message. Here I’ll spawn the process in the same way, except I’ll store its PID. Note that this is an Elixir PID, and is unrelated to UNIX PIDs.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-elixir&quot; data-lang=&quot;elixir&quot;&gt;&lt;span class=&quot;n&quot;&gt;pid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;spawn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;fn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;no&quot;&gt;IO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;sd&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Starting Process&quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;receive&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;
+	 &lt;span class=&quot;sd&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Received first: &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;ss&quot;&gt;:timer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;send&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;sd&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Amazing first message!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Which gives us:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt; Starting Process
+ Received first: Amazing first message!&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h4 id=&quot;note-on-process-lifecycle&quot;&gt;Note On Process Lifecycle&lt;/h4&gt;
+
+&lt;p&gt;Zooming in a bit on the way we send the message, if I do this on my machine:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-elixir&quot; data-lang=&quot;elixir&quot;&gt;&lt;span class=&quot;ss&quot;&gt;:timer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;send&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;sd&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Amazing first message!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+ &lt;span class=&quot;no&quot;&gt;IO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Process&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;alive?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;:timer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+ &lt;span class=&quot;no&quot;&gt;IO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Process&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;alive?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;I get:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt; Starting Process
+ Received first: Amazing first message!
+ &lt;span class=&quot;nb&quot;&gt;true
+ false&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Notice how the process is still alive right after the call to send, but dies shortly after. This can be a bit surprising at first, but you can see how it makes sense as the spawned process needs some time to actually execute, and once it is done responding it just shuts down because it has done what it was supposed to do.&lt;/p&gt;
+
+&lt;h3 id=&quot;using-links&quot;&gt;Using Links&lt;/h3&gt;
+
+&lt;p&gt;I’ve been using “spawn” so far, but it’s actually best to use “spawn_link “ instead. Quoting from &lt;a href=&quot;http://elixir-lang.org/getting-started/processes.html#links&quot;&gt;the Elixir documentation&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“The most common form of spawning in Elixir is actually via spawn_link/1.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This is because it gives us better error handling, among other things.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-elixir&quot; data-lang=&quot;elixir&quot;&gt;&lt;span class=&quot;n&quot;&gt;spawn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;fn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;raise&lt;/span&gt; &lt;span class=&quot;sd&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Ouch&quot;&lt;/span&gt;
+    &lt;span class=&quot;no&quot;&gt;IO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;sd&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Starting Process&quot;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Running this outputs absolutely nothing. However, the version with “spawn_link” instead of “spawn” gives us:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt; 08:37:20.422 error Error &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;process &amp;lt;0.51.0&amp;gt; with &lt;span class=&quot;nb&quot;&gt;exit &lt;/span&gt;value: ...
+ &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;EXIT from &lt;span class=&quot;c&quot;&gt;#PID&amp;lt;0.48.0&amp;gt;) an exception was raised:&lt;/span&gt;
+ &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;RuntimeError&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; Ouch
+	main.exs:3: anonymous fn/0 &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; :elixircompiler0.FILE/1&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Note that, in this article, I will not use &lt;a href=&quot;http://elixir-lang.org/docs/v1.0/elixir/Task.html&quot;&gt;Elixir Tasks&lt;/a&gt; to avoid manipulating too many concepts, even if it would lead to even better error messages, as explained in the official &lt;a href=&quot;http://elixir-lang.org/getting-started/processes.html#tasks&quot;&gt;documentation&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;With spawn/1 and spawn_link/1 functions, the error messages are generated directly by the Virtual Machine and therefore compact and lacking in details. In practice, developers would rather use the functions in the Task module, more explicitly, Task.start/1 and Task.start_link/1&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;sending-multiple-messages&quot;&gt;Sending Multiple Messages&lt;/h2&gt;
+
+&lt;h3 id=&quot;dont-just-call-send-twice&quot;&gt;Don’t Just Call Send Twice&lt;/h3&gt;
+
+&lt;p&gt;When I first got my hands on Elixir I wanted to send multiple messages to a process, so I did this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-elixir&quot; data-lang=&quot;elixir&quot;&gt;&lt;span class=&quot;n&quot;&gt;pid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;spawn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;fn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;no&quot;&gt;IO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;sd&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Starting Process&quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;receive&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;
+	 &lt;span class=&quot;no&quot;&gt;IO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Enum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sd&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Received first: &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:second&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;
+	 &lt;span class=&quot;no&quot;&gt;IO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Enum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sd&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Received second: &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;send&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;sd&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Amazing first message!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;send&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:second&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;sd&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Disappointing second message.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;However, running this would only give me:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt; Starting Process
+ Received first: Amazing first message!&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This makes sense since the process shuts down once it received a message, as we saw before. To achieve this, we need to maintain some state.&lt;/p&gt;
+
+&lt;h3 id=&quot;keep-on-listening&quot;&gt;Keep On Listening&lt;/h3&gt;
+
+&lt;p&gt;This time we’ll have to define a &lt;a href=&quot;http://elixir-lang.org/getting-started/modules.html&quot;&gt;module&lt;/a&gt; to simplify everything. This module responds to a start method that will just spawn a process running its second method, “loop”. I made loop method &lt;a href=&quot;&quot;&gt;private&lt;/a&gt;, but it is not required for this to work.&lt;/p&gt;
+
+&lt;p&gt;The loop method is very similar to what our previous process would do, but this time it calls itself after receiving a message, maintaining state and keeping itself alive.&lt;/p&gt;
+
+&lt;p&gt;I left a few debugging messages so what happens is even clearer when looking at the output.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-elixir&quot; data-lang=&quot;elixir&quot;&gt;&lt;span class=&quot;k&quot;&gt;defmodule&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Receiver&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;no&quot;&gt;IO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;sd&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Starting Process&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;spawn_link&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;fn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;loop&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;defp&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;loop&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;no&quot;&gt;IO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;sd&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Looping&quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;receive&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;
+	 &lt;span class=&quot;no&quot;&gt;IO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;sd&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Received first: &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;
+	 &lt;span class=&quot;k&quot;&gt;loop&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:second&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;
+	 &lt;span class=&quot;no&quot;&gt;IO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;sd&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Received second: &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;
+	 &lt;span class=&quot;k&quot;&gt;loop&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;pid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Receiver&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;send&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;sd&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Amazing first message!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;send&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:second&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;sd&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Disappointing second message.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;send&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;sd&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Amazing first message again!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Running the code above gives us:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt; Starting Process
+ Looping
+ Received first: Amazing first message!
+ Looping
+ Received second: Disapointing second message.
+ Looping
+ Received first: Amazing first message again!
+ Looping&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This gives us a lot of possibilities. For instane we could have some kind of argument passed to loop and incremented so we can store the number of time it was called.&lt;/p&gt;
+
+&lt;h3 id=&quot;using-agents&quot;&gt;Using Agents&lt;/h3&gt;
+
+&lt;p&gt;State is nice, but it feels very manual. In this case we could use &lt;a href=&quot;http://elixir-lang.org/docs/stable/elixir/#!Agent.html&quot;&gt;Agents&lt;/a&gt; as a nice abstraction layer to get a similar behaviour.&lt;/p&gt;
+
+&lt;p&gt;I won’t get into details regarding Agents for now, but if you want to go further, I recommend &lt;a href=&quot;http://elixir-lang.org/getting-started/mix-otp/agent.html&quot;&gt;the official documentation&lt;/a&gt; as a starting point.&lt;/p&gt;
+
+
+       
+     </content>
+   </entry>
+  
  
   
    <entry>
@@ -4791,6 +4995,152 @@ They also have an offer for those working with &lt;a href=&quot;https://enterpri
    </entry>
   
  
+  
+   <entry>
+     <title>Tips on Creating a Website From When I Was 12</title>
+     <link href="https://marcgg.com/blog/2014/04/28/frame-based-layout-bad-code/"/>
+     <updated>2014-04-28T00:00:00+02:00</updated>
+     <id>https://marcgg.com/blog/2014/04/28/frame-based-layout-bad-code</id>
+     <content type="html">
+       &lt;p&gt;I’ve been writing code for a while. I started with QBasic when I was a kid and the two things I remember from
+that time was using PRINT and the fact I was dead confused by the editor I had to use.&lt;/p&gt;
+
+&lt;p&gt;I might also have written something calculating my age based on my birthday…&lt;/p&gt;
+
+&lt;p&gt;Computer science!&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/qbasic.png&quot; /&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;the-internet&quot;&gt;The Internet&lt;/h2&gt;
+
+&lt;p&gt;A few years later, I’m around 12 years old and the internet is a brand new thing. I use my AOL browser and my 56k modem
+to browse &lt;em&gt;the web&lt;/em&gt; and it’s amazing.&lt;/p&gt;
+
+&lt;p&gt;Seeing all these websites makes me want to create my own. Something great. Something about pokemons, AOL chatroom bots
+or whatever I was interested in at the time !&lt;/p&gt;
+
+&lt;p&gt;The thing is that back then there was very little information available… or at least I didn’t know where to find it.
+After time spent on forums whinning for help, I only found that I had to download SiteAid.&lt;/p&gt;
+
+&lt;p&gt;For reference, here is what it looked like in all its glory:&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/siteaid.png&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;Since I wanted a menu on the left and content on the right, I somehow understood that I could use frames to do that.
+After some fiddling around with the UI, I got it to work.&lt;/p&gt;
+
+&lt;p&gt;The problem is that I stopped trying to figure out things here and started building my website.&lt;/p&gt;
+
+&lt;h2 id=&quot;tutorial-aka-the-abomination&quot;&gt;Tutorial (aka The Abomination)&lt;/h2&gt;
+
+&lt;p&gt;So first you want to create your main page:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;HTML&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;HEAD&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;TITLE&amp;gt;&lt;/span&gt;INTERNET!&lt;span class=&quot;nt&quot;&gt;&amp;lt;/TITLE&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/HEAD&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;FRAMESET&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;cols=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;20%, 80%&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;FRAME&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;f1.html&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;FRAME&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;f2.html&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/FRAMESET&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/HTML&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Let’s add some sweet design in each frame file:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;BODY&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;bgcolor=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;orange&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Content!&lt;span class=&quot;nt&quot;&gt;&amp;lt;/BODY&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Right away it starts looking good:&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/frames/page1.png&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;That’s nice, but I want to have more than 1 element in my left menu, so how can I do that ?
+You could very much do this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;BODY&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;bgcolor=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;orange&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Menu 1&lt;span class=&quot;nt&quot;&gt;&amp;lt;BR&amp;gt;&amp;lt;BR&amp;gt;&amp;lt;BR&amp;gt;&lt;/span&gt;Menu 2&lt;span class=&quot;nt&quot;&gt;&amp;lt;BR&amp;gt;&amp;lt;BR&amp;gt;&amp;lt;BR&amp;gt;&lt;/span&gt;Menu 3&lt;span class=&quot;nt&quot;&gt;&amp;lt;/BODY&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The problem is that then you won’t have colors on your menu items ! That’s when my very clever trick
+comes in. You just need… more frames !&lt;/p&gt;
+
+&lt;p&gt;Change f1.html to look like this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;HTML&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;HEAD&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;TITLE&amp;gt;&lt;/span&gt;INTERNET!&lt;span class=&quot;nt&quot;&gt;&amp;lt;/TITLE&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/HEAD&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;FRAMESET&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rows=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;25%, 25%, 25%, 25%&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;FRAME&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;menu1.html&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;FRAME&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;menu2.html&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;FRAME&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;menu3.html&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;FRAME&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;menu4.html&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/FRAMESET&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/HTML&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Wow. Such color. Much design.&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/frames/page2.png&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;You can even create some impressive gradients with only a few more lines of code and
+knowledge of &lt;em&gt;advanced colors in HTML&lt;/em&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;BODY&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;bgcolor=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;black&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;text=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;white&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Menu 1&lt;span class=&quot;nt&quot;&gt;&amp;lt;/BODY&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/frames/page3.png&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;Finally let’s say I want to add an image next to a menu item. Seems complicated, right?&lt;/p&gt;
+
+&lt;p&gt;No. It’s easy when you use frames!&lt;/p&gt;
+
+&lt;p&gt;You only need to change menu.html like this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;HTML&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;HEAD&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;TITLE&amp;gt;&lt;/span&gt;INTERNET!&lt;span class=&quot;nt&quot;&gt;&amp;lt;/TITLE&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/HEAD&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;FRAMESET&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;cols=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;20%, 80%&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;FRAME&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;new.gif&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;FRAME&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;menu1_text.html&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/FRAMESET&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/HTML&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/frames/page4.png&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;Perfect.&lt;/p&gt;
+
+&lt;p&gt;Now for the protip. If you want your website to look perfect, you want to hide the construction
+lines that are the frame borders. To do this, add a frameborder set to 0.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;HTML&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;HEAD&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;TITLE&amp;gt;&lt;/span&gt;INTERNET!&lt;span class=&quot;nt&quot;&gt;&amp;lt;/TITLE&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/HEAD&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;FRAMESET&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;cols=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;20%, 80%&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;frameborder=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;FRAME&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;f1.html&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;FRAME&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;f2.html&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/FRAMESET&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/HTML&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now you have a professional looking website.&lt;/p&gt;
+
+&lt;p&gt;You’re welcome.&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/frames/page5.png&quot; /&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;the-worst-code&quot;&gt;The Worst Code&lt;/h2&gt;
+
+&lt;p&gt;My take on this is that the code you wrote yesterday will always be crap compared to what you can
+write today. Don’t be depressed about it, that’s a good thing ! It means you’re getting better!&lt;/p&gt;
+
+&lt;p&gt;On some forum a few years back, someone asked “what’s the worst code you ever saw ?”.
+Someone responded something along the line of “every single piece of code I’ve written a long enough time ago”.
+I really liked this answer, quite humbling and much better than bashing a coworker or a random funny story.&lt;/p&gt;
+
+&lt;p&gt;So keep improving your skills, don’t feel too bad about past coding mistakes and don’t hate on new developers
+still learning - you were making the same mistakes at some point !&lt;/p&gt;
+
+
+       
+     </content>
+   </entry>
   
  
   
