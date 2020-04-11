@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2020-04-11T10:45:37+02:00</updated>
+ <updated>2020-04-11T18:53:34+02:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -21,11 +21,11 @@
      <updated>2020-04-11T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2020/04/11/add-text-image-rmagick-imagemagick</id>
      <content type="html">
-       &lt;p&gt;If you want to programatically add a text to an image with Ruby, using &lt;a href=&quot;https://github.com/rmagick/rmagick&quot;&gt;RMagick&lt;/a&gt; is a simple and quick way to get it done. There are a few articles explaining how to do it, but I found myself still having some minor issues with the code shared, so I figured I’d write one myself!&lt;/p&gt;
+       &lt;p&gt;If you want to programatically add a text to an image with Ruby, using &lt;a href=&quot;https://github.com/rmagick/rmagick&quot;&gt;RMagick&lt;/a&gt; is a simple and quick way to get it done. There is nothing new here, and there are a few articles explaining how to do it already. However when I had to get it to work it for a side project, I ran into some minor issues with the code already published, so I figured I’d share what I did myself!&lt;/p&gt;
 
 &lt;h2 id=&quot;installing-rmagick-and-imagemagick&quot;&gt;Installing RMagick and ImageMagick&lt;/h2&gt;
 
-&lt;p&gt;RMagick uses &lt;a href=&quot;https://imagemagick.org/index.php&quot;&gt;ImageMagick&lt;/a&gt; behind the scene, so you’ll need to install it.  When I did it I had some issues with the installation steps provided, especially when it came to generating jpg. Using this command instead fixed the problems:&lt;/p&gt;
+&lt;p&gt;RMagick uses &lt;a href=&quot;https://imagemagick.org/index.php&quot;&gt;ImageMagick&lt;/a&gt; behind the scene, so you’ll need to install it.  When I did it I had some issues with the installation steps provided, especially when it came to generating jpg on MacOS. Using this command instead fixed the problems:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew install imagemagick --build-from-source
 &lt;/code&gt;&lt;/pre&gt;
@@ -36,14 +36,14 @@
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'https://rubygems.org'&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'rmagick'&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Now run:&lt;/p&gt;
+&lt;p&gt;One the file is created, you can run:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem install bundler
 bundle install`
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;…and you should be set.&lt;/p&gt;
+&lt;p&gt;…and you should be all set.&lt;/p&gt;
 
 &lt;h2 id=&quot;coding&quot;&gt;Coding&lt;/h2&gt;
 
@@ -53,14 +53,14 @@ bundle install`
 
 &lt;span class=&quot;n&quot;&gt;img&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Magick&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;ImageList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;background.jpg&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
-&lt;span class=&quot;n&quot;&gt;txt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Magick&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Draw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Magick&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Draw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hello World&quot;&lt;/span&gt;
 
 &lt;span class=&quot;n&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;annotate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;txt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;txt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;gravity&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Magick&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;CenterGravity&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Text positioning&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;txt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;pointsize&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Font size&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;txt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;fill&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;#1c1c1c&quot;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Font color&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;txt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;font&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;/absolutepath/Font.ttf&quot;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Font file; needs to be absolute&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;gravity&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Magick&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;CenterGravity&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Text positioning&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;pointsize&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Font size&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;fill&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;#1c1c1c&quot;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Font color&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;font&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;/absolutepath/Font.ttf&quot;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Font file; needs to be absolute&lt;/span&gt;
   &lt;span class=&quot;n&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;format&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;jpeg&quot;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 
@@ -74,7 +74,9 @@ bundle install`
 
 &lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/gravity.gif&quot; alt=&quot;Gravity with ImageMagick&quot; style=&quot;padding: 5px;&quot; /&gt;&lt;/div&gt;
 
-&lt;p&gt;I tried to keep the example simple, but if you want to change the text formatting, there are a lot of options available. Just know that in a lot of cases, if you make a mistake, your changes won’t be applied but &lt;strong&gt;you will not get any error message&lt;/strong&gt;. You can find the different possibilities &lt;a href=&quot;https://rmagick.github.io/draw.html&quot;&gt;in the documentation&lt;/a&gt; and play around to get something that looks the way you want.&lt;/p&gt;
+&lt;p&gt;I tried to keep the example really simple and copy/pastable. If you want to change the text formatting, there are a lot of options available. Just know that in a lot of cases, if you make a mistake, the changes won’t be applied but &lt;strong&gt;you will not get any error message&lt;/strong&gt;. This is especially confusing when you are trying to do some really minor alterations.&lt;/p&gt;
+
+&lt;p&gt;You can find the different possibilities &lt;a href=&quot;https://rmagick.github.io/draw.html&quot;&gt;in the documentation&lt;/a&gt; and play around to get something that looks the way you want.&lt;/p&gt;
 
 
        
