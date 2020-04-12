@@ -9,6 +9,3 @@ gem "kramdown"
 gem "rouge"
 
 gem 'rmagick'
-
-# Requires Pygments
-# sudo easy_install Pygments

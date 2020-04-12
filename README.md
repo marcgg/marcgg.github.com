@@ -18,7 +18,10 @@ Accept rvmrc prompt
 
 ```
 bundle install
-brew install pkg-config imagemagick gs
+brew install pkg-config
+brew install imagemagick --build-from-source
+brew install gs
+sudo easy_install Pygments
 bundle exec jekyll serve --watch
 ```
 

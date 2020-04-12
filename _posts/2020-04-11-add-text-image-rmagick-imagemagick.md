@@ -26,7 +26,7 @@ gem 'rmagick'
 One the file is created, you can run:
 
 	gem install bundler
-	bundle install`
+	bundle install
 
 ...and you should be all set.
 
