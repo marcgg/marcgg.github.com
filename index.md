@@ -11,18 +11,7 @@ My main focus is on my job of VP of Engineering Europe, leading the technical te
 
 I've been blogging for the past 10 years. If you'd like to get a feel of what I've had on my mind, you can take a look at a few of my most successful articles:
 
-<ul>
-{% for post in site.posts %}
-  {% if post.featured %}
-      <li>
-        <a href="{{ BASE_PATH }}{{ post.url }}">{{post.title}}</a>
-        {%capture tag%}{% if post.publictag %}{{post.publictag}}{% else %}{{ post.tag }}{% endif %}{%endcapture%}
-        <span class="home-tag tag-{{tag | downcase | remove: " "}}">{{tag}}</span>
-        <span class="home-tag tag-date">{{ post.date | date: "%Y" }}</span>
-      </li>
-  {% endif %}
-{% endfor %}
-</ul>
+{% include featured_posts.html %}
 
 You can reach me via [Twitter][2], [Linkedin][3] or using email "marcg.gauthier-at-gmail-dot-com". If you want to hire me, please check out [this page][4] before contacting me.
 
