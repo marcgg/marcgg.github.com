@@ -6,6 +6,7 @@ the problems linked to creating a multiplayer game I decided to create a
 prototype with NodeJS, Websockets and HTML5."
 blog: true
 category: blog
+publictag: Programming
 tag: Projects
 redirect_from:
 - /2013/01/14/html5-nodejs-websockets-games-learning/

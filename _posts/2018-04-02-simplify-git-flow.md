@@ -4,9 +4,7 @@ title: "Simplify Your Git Flow"
 description: "Using git is often made too complicated. Small teams that could do just fine with a very simple flow end up re-using solutions that end up slowing them down. Here is a simpler alternative."
 blog: true
 category: blog
-featured: true
 tag: Git
-publictag: Programming
 socialmediapreview: "Simple Git Flow"
 ---
 

@@ -38,7 +38,7 @@ body{
 #content{
   width: 760px;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 40px;
   padding-bottom: 60px;
   padding-top: 40px;
 }
@@ -413,7 +413,6 @@ ol{
 /* BLOG SHOW */
 
 .post{
-  padding-top: 20px;
 }
 p code, li code{
   background-color: #efefef;

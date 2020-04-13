@@ -5,6 +5,7 @@ description: "Depending on how you start the conversation, you will influence wh
 blog: true
 category: blog
 tag: Management
+featured: true
 socialmediapreview: "One on One Openners"
 ---
 

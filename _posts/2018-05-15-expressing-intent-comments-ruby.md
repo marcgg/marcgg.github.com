@@ -5,6 +5,8 @@ description: "There's an endless discussion going on between programmers about t
 blog: true
 category: blog
 tag: Ruby
+publictag: Programming
+featured: true
 socialmediapreview: "Expressing Intent in Ruby"
 ---
 

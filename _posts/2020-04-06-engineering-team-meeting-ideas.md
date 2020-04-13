@@ -5,6 +5,7 @@ description: "How to organise a department meeting for software engineers, inclu
 blog: true
 category: blog
 tag: Management
+featured: true
 socialmediapreview: "Engineering Team Meeting"
 ---
 
