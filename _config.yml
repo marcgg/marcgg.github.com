@@ -1,6 +1,6 @@
 permalink: /:categories/:year/:month/:day/:title/
 
-exclude: [".rvmrc", "README.md", "Rakefile"]
+exclude: [".rvmrc", "README.md", "Rakefile", "/bin"]
 
 markdown: kramdown
 kramdown:
