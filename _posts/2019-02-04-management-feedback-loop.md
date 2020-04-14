@@ -5,8 +5,6 @@ description: "Developers turned engineering managers often feel like they are no
 blog: true
 category: blog
 tag: Management
-featured: true
-publictag: Management
 socialmediapreview: "Manager Feedback Loop"
 ---
 
