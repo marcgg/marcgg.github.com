@@ -18,7 +18,7 @@ _Note to future teammates and employers: This is obviously catered to the way my
 
 The way I see it, my job is to find the right spot between what the company wants to be accomplished and what the person wants to do, with a focus on medium to long term.
 
-<div class="image-wrapper" style="text-align: center"><img src="/assets/manager-readme/focus.jpg" alt="Finding the right spot" style="padding: 5px; width: 100%"/></div>
+<div class="image-wrapper" style="text-align: center"><img src="/assets/manager-readme/focus.jpg" alt="Finding the right spot" style="padding: 5px; width: 80%"/></div>
 
 We'll never have a perfect overlap, so there are tradeoffs to be made. To caricature, the easy and first tradeoff to agree on is that the company should pay the employee (it would have been easier to pay nothing), and the employee should work on projects helping the company (it would have been easier to stay at home and chill).
 
