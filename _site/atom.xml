@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2020-04-14T14:31:06+02:00</updated>
+ <updated>2020-04-14T17:18:15+02:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -2810,7 +2810,7 @@ fatal: Could not read from remote repository.
  
   
    <entry>
-     <title>My Tech Advisor Role At Birdly (YCombinator W16)</title>
+     <title>My Tech Advisor Role At Birdly (Y Combinator W16)</title>
      <link href="https://marcgg.com/blog/2016/03/14/birdly-ycombinator/"/>
      <updated>2016-03-14T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2016/03/14/birdly-ycombinator</id>
