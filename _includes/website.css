@@ -122,10 +122,6 @@ h1, h2, h3, h4, h5{
   color: #1c1c1c;
 }
 
-h2, h3, h4, h5{
-  text-transform: capitalize;
-}
-
 a:hover{
   color: #ed5252;
   transition-duration:0.2s;
