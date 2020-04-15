@@ -1,9 +1,6 @@
 ---
-layout: post
 title: "Automatically Run RSpec on Multiple Projects"
 description: "Running RSpec on more than one project is already tricky when it's just Ruby... but try to do it for dozens of different Rails project and it becomes a real headache. Here's a relatively simple solution to this using shell scripts and Ruby."
-blog: true
-category: blog
 tag: Ruby
 socialmediapreview: "RSpec on Multiple Projects"
 ---

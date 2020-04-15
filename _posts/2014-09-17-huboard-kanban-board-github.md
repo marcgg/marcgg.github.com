@@ -1,9 +1,6 @@
 ---
-layout: post
 title: Managing Your Project With Github Issues And HuBoard
 description: You all know Github issues. HuBoard is a tool giving more features to manage them, including a very helpful Kanban board. Here is how I’ve been using it.
-blog: true
-category: blog
 tag: ProjectManagement
 socialmediapreview: "Github Kanban Board"
 ---

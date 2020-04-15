@@ -18,3 +18,13 @@ collections:
 
 gems:
   - jekyll-redirect-from
+
+defaults:
+  -
+    scope:
+      path: "_posts"
+    values:
+      blog: true
+      category: blog
+      featured: false
+      layout: post

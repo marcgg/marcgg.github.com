@@ -1,11 +1,7 @@
 ---
-layout: post
 title: "Writing my Manager README"
 description: "I wrote document to explain to my team how I operate at work. It includes what I value, my personality quirks or even the best way to reach me depending on the context."
-blog: true
-category: blog
 tag: Management
-featured: false
 socialmediapreview: "My Manager README"
 ---
 

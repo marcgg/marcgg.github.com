@@ -1,10 +1,7 @@
 ---
-layout: post
 title: "Building A Multiplayer 8 Bits Sequencer"
 titlehtml: Building A Multiplayer 8 Bits Sequencer <br /><em>Web Audio API, Websockets, Rails 5, Javascript & ActionCable fun</em>
 description: "During a hackathon I build a way to play chiptune music with people online. It uses websockets, the Web Audio API and the latest Rails 5 features."
-blog: true
-category: blog
 tag: Dev
 socialmediapreview: "Multiplayer 8 Bits Sequencer"
 ---

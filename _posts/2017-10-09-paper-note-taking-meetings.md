@@ -1,9 +1,6 @@
 ---
-layout: post
 title: "Note Taking During One on Ones"
 description: "Here is my strategy to be effective when taking notes while avoiding laptops during 1:1 meetings. This includes everything, even the type of notebook I use, my color code and indexing system."
-blog: true
-category: blog
 tag: Management
 socialmediapreview: "Note Taking During 1:1s"
 ---

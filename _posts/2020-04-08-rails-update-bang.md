@@ -1,8 +1,6 @@
 ---
-layout: post
 title: "Misuse of update/update! in Ruby on Rails"
 description: "Ruby on Rails gives you update and update! ('update bang') to modify your records. However there is a situation where you shouldn't use one."
-blog: true
 category: blog
 tag: Ruby
 socialmediapreview: "update vs update!"

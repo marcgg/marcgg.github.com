@@ -1,9 +1,6 @@
 ---
-layout: post
 title: "Recruitment Process"
 description: "Recruiting is hard, and defining a good process is very important. You don't want it to be too light or you might hire someone not fit for the job, but not too heavy or you'll waste time or discourage valid applicants. Here is the way we do it at my current company."
-blog: true
-category: blog
 tag: Recruitment
 socialmediapreview: "Recruitment Process"
 ---

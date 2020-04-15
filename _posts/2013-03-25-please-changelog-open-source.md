@@ -1,10 +1,7 @@
 ---
-layout: post
 title: "Please Keep a Changelog For Your Open Source Lib"
 description: "Keeping an up to date list of changes in your open source
 project is a must have. Here's why."
-blog: true
-category: blog
 tag: Dev
 socialmediapreview: "Please Keep a Changelog"
 ---

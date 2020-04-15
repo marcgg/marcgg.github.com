@@ -1,9 +1,6 @@
 ---
-layout: post
 title: "Add Text Over an Image with Ruby"
 description: "Dead simple example of adding a centered text to a jpg image using Ruby, RMagick and ImageMagick. I've also added reference to the documentation to go further."
-blog: true
-category: blog
 tag: Ruby
 socialmediapreview: "Simple Image Generation"
 ---

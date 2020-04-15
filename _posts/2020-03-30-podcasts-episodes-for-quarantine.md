@@ -1,9 +1,6 @@
 ---
-layout: post
 title: "Podcast Episodes to Listen to During Lockdown"
 description: "List of podcast episodes on science, design, history, culture, entrepreneurship or even management."
-blog: true
-category: blog
 tag: Philosophy
 socialmediapreview: "Podcast Episodes"
 ---

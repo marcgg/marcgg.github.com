@@ -1,12 +1,9 @@
 ---
-layout: post
 title: "J'ai Passé Un Deuxième Bac. Pour Voir."
 description: "Alors que j'ai déjà un Baccalauréat scientifique et que je
 ne compte pas me réorienter, j'ai décidé de passer un autre bac. Juste
 pour voir."
-blog: true
 lang: "fr"
-category: blog
 tag: Philosophy
 socialmediapreview: "Passer un Deuxième Bac"
 ---

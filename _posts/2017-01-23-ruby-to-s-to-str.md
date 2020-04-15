@@ -1,9 +1,6 @@
 ---
-layout: post
 title: "The Difference Between to&#95;s & to&#95;str In Ruby"
 description: "A lot of people assume that to_s and `to_str` are the same methods, but the difference between them is actually quite major."
-blog: true
-category: blog
 tag: Ruby
 socialmediapreview: "to_s vs to_str"
 ---

@@ -1,9 +1,6 @@
 ---
-layout: post
 title: "Continous Integration at Drivy"
 description: "In this article I try to give concrete examples on how Drivy went from nothing to shipping to production multiples times a day while maintaining a low level of defects. "
-blog: true
-category: blog
 tag: Engineering
 socialmediapreview: "Continuous Integration"
 ---

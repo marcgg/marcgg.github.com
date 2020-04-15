@@ -1,10 +1,7 @@
 ---
-layout: post
 title: "Tips on Creating a Website From When I Was 12"
 description: "Witness pure folly and learn how to create professional yet beautiful websites
 by only using FRAMES and other amazing tricks."
-blog: true
-category: blog
 tag: Dev
 socialmediapreview: "Frames from the Past"
 ---

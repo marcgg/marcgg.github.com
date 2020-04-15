@@ -1,9 +1,6 @@
 ---
-layout: post
 title: "Pushing To Both Bitbucket And Github"
 description: "Here's some interesting features of Git I tried out while messing around with the idea of using Bitbucket as a failover for Github."
-blog: true
-category: blog
 tag: Git
 socialmediapreview: "Multiple Git Remotes"
 ---

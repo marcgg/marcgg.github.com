@@ -1,9 +1,6 @@
 ---
-layout: post
 title: Real Life A/B Testing With Universal Analytics
 description: Split testing... everyone is talking about it, but how do you actually run experiments on an actual website and not just a landing page? Here is a realistic approach to A/B testing based on real life experiences.
-blog: true
-category: blog
 tag: Monitoring
 socialmediapreview: "Split Testing"
 ---

@@ -1,9 +1,6 @@
 ---
-layout: post
 title: "Don't Simply Be The Manager You'd Love To Have"
 description: "Defining your style of management is hard and sometimes you need to look beyond the 'if it worked for me it'll work for them' mentality."
-blog: true
-category: blog
 featured: true
 tag: Management
 socialmediapreview: "Management Style"

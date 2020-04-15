@@ -1,9 +1,6 @@
 ---
-layout: post
 title: "Process For Recruiting Software Engineers"
 description: "A list of best practices learned through years of hiring software engineers, from creating a good process to onboarding interviewers or measuring success."
-blog: true
-category: blog
 tag: Recruitment
 cssscope: conversation
 socialmediapreview: "Recruitment Process"

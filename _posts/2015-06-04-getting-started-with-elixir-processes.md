@@ -1,9 +1,6 @@
 ---
-layout: post
 title: Getting Started With Elixir Processes
 description: Here are some very simple examples to better understand how to spawn and manipulate processes using Elixir.
-blog: true
-category: blog
 tag: Elixir
 socialmediapreview: "Elixir Processes 101"
 ---

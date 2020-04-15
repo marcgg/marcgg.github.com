@@ -1,9 +1,6 @@
 ---
-layout: post
 title: "Building a Custom Monitor Stand"
 description: "Here are the various steps I took to build my custom monitor stand for very cheap."
-blog: true
-category: blog
 tag: Design
 socialmediapreview: "Custom Monitor Stand"
 ---

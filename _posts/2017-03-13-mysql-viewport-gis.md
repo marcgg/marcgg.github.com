@@ -1,9 +1,6 @@
 ---
-layout: post
 title: "How To Find Points Contained in a Polygon Using MySQL"
 description: "MySQL 5.7 brought a lot of new interesting geospatial features. It's now easier to find elements contained within a polygon and compute distances using latitude and logitude. In this article I'll explain how to do a viewport search using MySQL."
-blog: true
-category: blog
 tag: MySQL
 socialmediapreview: "MySQL 5.7"
 ---

@@ -1,9 +1,6 @@
 ---
-layout: post
 title: Don't Automate Tasks Only Based On Time Spent
 description: Stop looking only as time as a metric to know when to automate. There are other factors such as focus, energy, growth and frustration to take into account.
-blog: true
-category: blog
 tag: ProjectManagement
 socialmediapreview: "Task Automation"
 ---

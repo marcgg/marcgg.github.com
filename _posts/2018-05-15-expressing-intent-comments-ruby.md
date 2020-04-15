@@ -1,9 +1,6 @@
 ---
-layout: post
 title: "Expressing Intent Without Comments In Ruby"
 description: "There's an endless discussion going on between programmers about the utility of comments and how to express intent in code.  Let's push it a bit further with an exemple, and see a few different ways of how to clearly define that a variable is an ordered array of names."
-blog: true
-category: blog
 tag: Ruby
 publictag: Programming
 featured: true

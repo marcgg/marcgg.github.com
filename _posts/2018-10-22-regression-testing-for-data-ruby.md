@@ -1,9 +1,6 @@
 ---
-layout: post
 title: "Regression Testing For Data"
 description: "This non-instrusive Ruby gem allows you to be notified when your data misbehaves, allowing you to quickly react and fix the problem."
-blog: true
-category: blog
 tag: Ruby
 socialmediapreview: "Regression Testing For Data"
 ---

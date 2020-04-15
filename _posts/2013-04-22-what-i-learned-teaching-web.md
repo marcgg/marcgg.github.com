@@ -1,11 +1,8 @@
 ---
-layout: post
 title: "What I Learned While Teaching"
 description: "I tried to give a few lectures about the web to a group of
 young entrepreneurs and students from a non technical background. Here's
 what this taught me."
-blog: true
-category: blog
 tag: Teaching
 socialmediapreview: "Learned While Teaching"
 ---

@@ -1,9 +1,6 @@
 ---
-layout: post
 title: Git Log's --first-parent Option
 description: The first parent options allows you to ignore commits that are not the first parent. This can be very useful to figure out the series of changes a given file went through on a branch.
-blog: true
-category: blog
 tag: Git
 socialmediapreview: "git --first-parent"
 ---

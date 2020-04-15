@@ -1,9 +1,6 @@
 ---
-layout: post
 title: "Asking The Same Questions As An Interviewer"
 description: "Asking the same questions to all the job applicants you interview is useful and makes for an easier analysis afterwards if done right."
-blog: true
-category: blog
 tag: Recruitment
 socialmediapreview: "Recruitment Tip"
 ---

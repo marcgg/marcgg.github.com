@@ -1,11 +1,8 @@
 ---
-layout: post
 title: "Tips & Tricks Learned Releasing an Hybrid App Using&nbsp;Steroids.js"
 description: "300ms delay, overscroll, text rendering, 1px borders,
 local storage, performances, i18n ... After lot of work and an app released, I'm sharing
 a long list of solutions to problems I ran into while developing an hybrid app."
-blog: true
-category: blog
 featured: true
 tag: iphone
 publictag: Programming

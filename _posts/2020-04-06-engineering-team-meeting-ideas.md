@@ -1,9 +1,6 @@
 ---
-layout: post
 title: "Engineering Team Meeting: Format & Topic Ideas"
 description: "How to organise a department meeting for software engineers, including format and content ideas."
-blog: true
-category: blog
 tag: Management
 featured: true
 socialmediapreview: "Engineering Team Meeting"

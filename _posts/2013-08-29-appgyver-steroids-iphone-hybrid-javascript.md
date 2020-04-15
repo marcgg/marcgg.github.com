@@ -1,10 +1,7 @@
 ---
-layout: post
 title: "My First Impressions of AppGyver's Steroids.js"
 description: "SteroidsJS promises a way to use Javascript to build PhoneGap-based
 applications with a native feel on both iPhone and Android. It seemed great so I decided to try it out."
-blog: true
-category: blog
 tag: iphone
 socialmediapreview: "Steroids.js First Impressions"
 ---

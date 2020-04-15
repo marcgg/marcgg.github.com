@@ -1,9 +1,6 @@
 ---
-layout: post
 title: "Where To Focus Software Quality Efforts"
 description: "When building software it's often hard to know if time is spent on the right thing, if this refactoring is worth the time or where to add even more tests. Here is a simple way to think about this."
-blog: true
-category: blog
 tag: Engineering
 socialmediapreview: "Software Quality"
 ---

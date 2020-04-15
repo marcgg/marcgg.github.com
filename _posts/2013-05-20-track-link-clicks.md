@@ -1,10 +1,7 @@
 ---
-layout: post
 title: "Information About Bots & People Clicking a Link"
 description: "In this article I explain why I built a very basic app that lets you know who is
 clicking a link and I'm debating wether or not to keep on working on it."
-blog: true
-category: blog
 tag: Projects
 socialmediapreview: "Track Clicks"
 ---

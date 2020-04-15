@@ -1,9 +1,6 @@
 ---
-layout: post
 title: "Understanding Rails' Forgery Protection Strategies"
 description: "Rails protects you against CSRF attacks, but it gives you a lot of customisation on how you want to react to them. It can be a great thing as you can have your own strategies, but it can also lead to security issues."
-blog: true
-category: blog
 tag: Ruby
 socialmediapreview: "CSRF in Rails"
 ---

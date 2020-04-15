@@ -1,10 +1,7 @@
 ---
-layout: post
 title: "Why I'm Not Proud To Be French"
 description: "My take on pride and the feelings linked to
 nationality."
-blog: true
-category: blog
 tag: Philosophy
 socialmediapreview: "Pride in Nationnality"
 ---

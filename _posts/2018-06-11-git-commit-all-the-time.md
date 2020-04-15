@@ -1,9 +1,6 @@
 ---
-layout: post
 title: "Committing All The Time"
 description: "How often should you commit with Git? This one is specific to every developer, personally I do it very often. Here's why and how to do the same without ending up with an unreadable git history."
-blog: true
-category: blog
 tag: Git
 socialmediapreview: "Committing All The Time"
 ---

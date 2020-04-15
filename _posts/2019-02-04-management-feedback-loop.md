@@ -1,9 +1,6 @@
 ---
-layout: post
 title: "The Developer / Manager Feedback Loop Difference "
 description: "Developers turned engineering managers often feel like they are not being productive or they are not accomplishing anything. This is usually related to the vastly different feedback loop between the two positions."
-blog: true
-category: blog
 tag: Management
 socialmediapreview: "Manager Feedback Loop"
 ---

@@ -1,9 +1,6 @@
 ---
-layout: post
 title: "First Impressions: Rails 5 on Google App Engine"
 description: "In this post I've been playing around with Google App Engine, trying to release a simple Rails 5 app, reading logs or setting environment variables. I also attempted a very non-scientific performance benchmark to compare Heroku with the App Engine."
-blog: true
-category: blog
 tag: Ruby
 socialmediapreview: "App Engine"
 ---

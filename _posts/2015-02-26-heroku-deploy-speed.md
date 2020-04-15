@@ -1,9 +1,6 @@
 ---
-layout: post
 title: Benchmarking Deployment Speed on Heroku
 description: If you are having trouble finding the part your deployment to Heroku that’s actually slow, be it bundler, the asset pipeline or the slug compilation, here is a very simple script that could help.
-blog: true
-category: blog
 tag: Performance
 socialmediapreview: "Deploy Speed on Heroku"
 ---

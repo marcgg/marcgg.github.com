@@ -1,10 +1,7 @@
 ---
-layout: post
 title: "Enough With The Trolls"
 description: "Every week I see people arguing over languages, frameworks, hosting
 solutions, design patterns... and every week it's pointless."
-blog: true
-category: blog
 tag: Dev
 socialmediapreview: "Programming Language Dogma"
 ---

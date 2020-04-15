@@ -1,11 +1,8 @@
 ---
-layout: post
 title: "How I Avoid Thumb Pain From Too Much Coding"
 description: "As a developer I repeat the same movements over and over
 again. This can be bad for some hand muscles. Here's one of the
 tricks I use every day to avoid any unecessary pain."
-blog: true
-category: blog
 tag: Health
 socialmediapreview: "Avoid Thumb Pain"
 ---

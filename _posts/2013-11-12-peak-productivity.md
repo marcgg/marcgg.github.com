@@ -1,10 +1,7 @@
 ---
-layout: post
 title: "The Problem With Peak"
 description: "Productivity is a hard thing to measure, but counting the
 number of emails sent is not the way to go."
-blog: true
-category: blog
 tag: ProjectManagement
 socialmediapreview: "Measuring Productivity"
 ---

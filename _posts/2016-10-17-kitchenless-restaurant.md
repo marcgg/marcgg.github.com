@@ -1,9 +1,6 @@
 ---
-layout: post
 title: "Kitchenless Restaurants"
 description: "With all the changes in food delivery, could we see a rise in quality restaurants that don't prepare any food at all, and how would it look like?"
-blog: true
-category: blog
 tag: Philosophy
 socialmediapreview: "Kitchenless Restaurants"
 ---

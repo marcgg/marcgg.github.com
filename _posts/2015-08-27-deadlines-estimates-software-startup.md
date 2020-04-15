@@ -1,9 +1,6 @@
 ---
-layout: post
 title: Deadlines And Estimates In Startups
 description: Using deadlines and estimates in a software project  gets a bad reputation. However, when done well, it can make a lot of sense to embrace them.
-blog: true
-category: blog
 featured: true
 cssscope: conversation
 tag: ProjectManagement

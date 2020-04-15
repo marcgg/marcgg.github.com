@@ -1,9 +1,6 @@
 ---
-layout: post
 title: How To Checkout The Previous Branch In Git
 description: Presentation of a simple Git shortcut to move back to the branch you were previously on.
-blog: true
-category: blog
 tag: Git
 socialmediapreview: "git checkout -"
 ---

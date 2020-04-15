@@ -1,10 +1,7 @@
 ---
-layout: post
 title: "Mixing Languages"
 description: "Speaking both French and English can get a bit messy, but
 it can also be a lot of fun."
-blog: true
-category: blog
 tag: Philosophy
 socialmediapreview: "Mixing Languages"
 ---

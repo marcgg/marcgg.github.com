@@ -1,9 +1,6 @@
 ---
-layout: post
 title: "Blogging About Management"
 description: "In this article I try to explain why I've not written much about management even if it has been my focus for a year now, and how I plan on changing this :)"
-blog: true
-category: blog
 tag: Perso
 socialmediapreview: "Blogging About Management"
 ---

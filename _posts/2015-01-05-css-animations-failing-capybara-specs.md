@@ -1,9 +1,6 @@
 ---
-layout: post
 title: How CSS Animations Can Break Your Tests
 description: It is possible that random tests in your suite are failing because of CSS or JavaScript animations. I’ve seen it with Capybara + Poltergeist. Thankfully it’s quite easy to fix.
-blog: true
-category: blog
 tag: Dev
 socialmediapreview: "CSS Breaking Specs"
 ---

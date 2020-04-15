@@ -1,10 +1,7 @@
 ---
-layout: post
 title: "Why Resumes Are Actually Helpful"
 description: "There are still developers thinking resumes are not useful, when really they can help simplifying the recruitment process and be generally very helpful for all parties involved."
-blog: true
 cssscope: deadlines
-category: blog
 tag: Recruitment
 socialmediapreview: "Resume are Helpful"
 ---

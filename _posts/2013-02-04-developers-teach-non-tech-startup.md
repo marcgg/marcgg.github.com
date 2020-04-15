@@ -1,12 +1,9 @@
 ---
-layout: post
 title: "Developers, Share Your Technical Knowledge"
 description: "When working with non-technical people, taking the time to
 teach them a bit about how your software works can be a good idea with
 joy for all."
 blog: true
-category: blog
-featured: true
 tag: Teaching
 publictag: Coaching
 socialmediapreview: "Sharing Knowledge"

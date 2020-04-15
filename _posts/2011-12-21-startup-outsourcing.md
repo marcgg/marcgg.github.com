@@ -1,11 +1,8 @@
 ---
-layout: post
 title: "Outsourcing In A Startup"
 description: "Sometimes you have no choice and need to outsource some of your workload.
 However it can be hard and there are some guidelines to follow if you want everything
 to go smoothly with external developers."
-blog: true
-category: blog
 tag: Startup
 socialmediapreview: "Outsourcing in a Startup"
 ---

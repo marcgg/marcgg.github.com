@@ -1,9 +1,6 @@
 ---
-layout: post
 title: "The Best Time To Arrive At A Startup Job Interview"
 description: "We all know that arriving late is bad, but there is such a thing as too early, especially in smaller companies like startups. Also did I mention that arriving right on time is pretty much like arriving late?"
-blog: true
-category: blog
 tag: Recruitment
 socialmediapreview: "Job Interview Tip"
 ---

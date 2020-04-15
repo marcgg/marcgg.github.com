@@ -1,11 +1,8 @@
 ---
-layout: post
 title: "I Left Tigerlily"
 description: "After 3 years I decided to change job and join
 Drivy where I'll work on a product based on the concept of collaborative
 consumption."
-blog: true
-category: blog
 tag: Perso
 socialmediapreview: "I Left Tigerlily"
 ---
