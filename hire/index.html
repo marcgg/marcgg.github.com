@@ -51,66 +51,15 @@ description: "You're looking for a startup advisor in Paris? Hire me for coachin
         </li>
       </ul>
 
-      <div id="first-reviews" class="cf">
+      <div class="cf reviews">
+      {% for review in site.data.reviews %}
         <div class="review">
-          <div class="reviewer"><img src="/assets/misc/gilles.jpg"></div>
-          <div class="person">Gilles Bertaux</div>
-          <div class="position">Cofounder & CEO of <a href="https://livestorm.co/">Livestorm</a>, Paris</div>
-          <p class="review-body">
-            "As first-time founders, there was a 'before' and an 'after' Marc.
-            He helped us accelerate on different aspects of building a tech product:
-            getting the right process in place not only on the technical side
-            but also from a management standpoint."
-          </p>
+          <div class="reviewer"><img src="/assets/misc/{{ review.image }}.jpg"></div>
+          <div class="person">{{ review.name }}</div>
+          <div class="position">{{ review.position }} of <a href="{{ review.url }}">{{ review.company }}</a></div>
+          <p class="review-body">{{ review.content }}</p>
         </div>
-
-        <div class="review">
-          <div class="reviewer"><img src="/assets/misc/antoine.jpg"></div>
-          <div class="person">Antoine Amiel</div>
-          <div class="position">Cofounder of <a href="http://www.learnassembly.com/">LearnAssembly</a>, Paris</div>
-          <p class="review-body">
-            "His training sessions have always been recommended by our community of entrepreneurs.
-            The care Marc puts into the preparation of his classes is a testament to
-            his involvement & discipline."
-          </p>
-        </div>
-
-     </div>
-
-     <div class="cf reviews">
-        <div class="review">
-          <div class="reviewer"><img src="/assets/misc/william.jpg"></div>
-          <div class="person">William Pollet</div>
-          <div class="position">Technical Cofounder of <a href="https://www.platohq.com/">Plato</a>, San Francisco</div>
-          <p class="review-body">
-            "Marc has been an excellent technical mentor since the very beginning of Plato.
-            It is thanks to him that our stack is coherent and robust today."
-          </p>
-        </div>
-        <div class="review">
-          <div class="reviewer"><img src="/assets/misc/jeremy.jpg"></div>
-          <div class="person">Jeremy Berecz </div>
-          <div class="position">CTO of <a href="https://www.plezi.co">Plezi</a>, Paris</div>
-          <p class="review-body">
-            Insight, experience and goodwill are the qualities that makes Marc a
-            major asset when he worked with us on improve our organisation and
-            software development processes. This allowed us
-            to focus on the major challenges of our startup's growth.
-          </p>
-        </div>
-     </div>
-
-     <div class="cf reviews">
-        <div class="review">
-          <div class="reviewer"><img src="/assets/misc/guillaume.jpg"></div>
-          <div class="person">Guillaume Simon</div>
-          <div class="position">CPO of <a href="https://stuart.com/">Stuart</a>, Paris</div>
-          <p class="review-body">
-            "Marc is THE person you need in your team if you want to be
-            sure to build a strong, powerful and user-friendly product."
-          </p>
-        </div>
-
+      {% endfor %}
       </div>
 
       <h2>Some Projects</h2>
