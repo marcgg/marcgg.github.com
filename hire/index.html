@@ -54,10 +54,10 @@ description: "You're looking for a startup advisor in Paris? Hire me for coachin
       <div class="cf reviews">
       {% for review in site.data.reviews %}
         <div class="review">
-          <div class="reviewer"><img src="/assets/misc/{{ review.image }}.jpg"></div>
-          <div class="person">{{ review.name }}</div>
-          <div class="position">{{ review.position }} of <a href="{{ review.url }}">{{ review.company }}</a></div>
-          <p class="review-body">{{ review.content }}</p>
+          <div class="reviewer"><img src="/assets/misc/{{review.image}}.jpg"></div>
+          <div class="person">{{review.name}}</div>
+          <div class="position">{{review.position}} of <a href="{{review.url}}">{{review.company}}</a></div>
+          <p class="review-body">{{review.content}}</p>
         </div>
       {% endfor %}
       </div>
@@ -170,4 +170,3 @@ description: "You're looking for a startup advisor in Paris? Hire me for coachin
 </div>
 
 <link href="/assets/css/hire.css?body=1" rel="stylesheet" type="text/css" media="all">
-
