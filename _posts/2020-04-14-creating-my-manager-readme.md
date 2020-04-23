@@ -31,6 +31,16 @@ On top of this, once the document is shared, it **makes you accountable** to wha
 
 Finally, I think that publicising this document should **help future people working in my team, or future employers, know what kind of a manager I am**. This way, if there is any disagreement on some fundamental matter, all parties involved can avoid painful months that usually conclude by someone terminating the working relationship.
 
+## Limitations
+
+Personally I consider my Manager README as an additional tool I can use to lead my team. It's just like one on ones, performance reviews, staff meetings and so on. Like any tool, it can't do everything, has its limitations and can produce more harm than good when used poorly. For instance 1:1s are often considered a must have, but if you only use them to get a status report, you are not really building relationships.
+
+First, writting this document is not an alternative to actually talking and listening to your people. It can speed up some things, but it shouldn't replace being there for each individual in your team and act in an reliable manner day after day. Writing "I am available for the team" is a good start, but actually being available is what you need to do.
+
+Another issue is that being vocal your issues is not an excuse to avoid working on self improvement, and does not absolve you of any bad behavior. Just because you let people know you would misbehave doesn't make it ok. It's also worth noting that as a manager, you must assume that the power dynamic will make it that people will have trouble calling you out when you do it.
+
+On the content side, I think it's a given no one really know themselves perfectly, me included. Because of this fact, the README will have flaws and points that are just not true. While this is acurrate, the document has to only one piece of the working relationship between the manager and their reports. As trust builds during the years spent working together, the people in the team should be able to challenge the manager more and bring the document closer and closer to reality. This, of course, requires the manager to be open to criticism and have a willingness to improve themselves.
+
 ## How I Wrote Mine
 
 To start, I decided to make something that is greatly applicable to my current job, but which can still be read and and make sense to someone outside of my company. Some parts, including the work-from-home policy and certain tools, are specific to my company, but I think the README still gives the general intent.
