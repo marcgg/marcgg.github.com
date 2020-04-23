@@ -70,8 +70,6 @@ My goal will be to give you what you need to be successful in this company. Ther
 
 - I tend to repeat myself. There might be a lot of people in the team, and I might forget I already told you about something. I might also think that it's a point important enough to be constantly repeated. If it becomes annoying, don't hesitate to let me know and I'll stop for this particular topic :)
 
-- I can have strong opinions, and I don't shy away from heated debates. I actually can quickly get carried away talking about an interesting topic. When discussing I'm always "attacking" ideas, not people. However some can feel like it becomes a criticism of themselves. That's never my intention, but I get that it can be perceived this way, so don't hesitate to tell me if I'm too intense.
-
 - I'm quite pessimistic by nature about the future. This doesn't mean that I don't believe in what we are trying to do, I simply tend to mostly see the flaws and improvements rather than the good side of things. This helps in anticipating issues, but can give a bad vibe to some.
 
 - I often ask open-ended questions about a number of topics. It's always a conversation, not a test. There is no "right" answer, even if I have an opinion about what we should be doing.
@@ -100,7 +98,7 @@ My goal will be to give you what you need to be successful in this company. Ther
 
 - To save time, I might invite you to some meetings without talking to you first. If the moment is not convenient or if you want more information about the agenda, don't hesitate to ask me and I can often move it.
 
-- I tend to have high expectations and will challenge you on what you are doing. This doesn't necessarily mean that you are doing a poor job. It can mean that I believe you can progress even more.
+- I tend to have high expectations and will challenge you on what you are doing. This doesn't necessarily mean that you are doing a poor job. It often means that I believe you can progress even more.
 
 ### Personality Tests
 
