@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2020-05-06T11:14:31+02:00</updated>
+ <updated>2020-05-06T14:57:48+02:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -19,9 +19,9 @@
      <updated>2020-05-06T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2020/05/06/circular-progressbar-clock-swiftui</id>
      <content type="html">
-       &lt;p&gt;For a while I’ve tried to find a better way to do mobile app development. In 2012 I gave &lt;a href=&quot;/blog/2012/10/22/custom-slider-ios-rubymotion/&quot;&gt;RubyMotion&lt;/a&gt; a go. A year later, I used &lt;a href=&quot;/blog/2013/08/29/appgyver-steroids-iphone-hybrid-javascript/&quot;&gt;Steroids.js&lt;/a&gt; and &lt;a href=&quot;/blog/2014/04/09/phonegap-steroids-hybrid-native-app-tips/&quot;&gt;PhoneGap&lt;/a&gt; to &lt;a href=&quot;/blog/2014/05/06/quantified-self-iphone-app-track-mood-day/&quot;&gt;release my first iOS app&lt;/a&gt;… but I was never really happy about these technologies. Lately I’ve been getting into SwiftUI, and I have to say that it’s everything I wanted! Of course it’s not cross platform, but it’s a massive improvement over what was there before.&lt;/p&gt;
+       &lt;p&gt;I’ve tried a few times to find a better way to do mobile development. In 2010 I started using &lt;a href=&quot;https://www.appcelerator.com/Titanium/&quot;&gt;Titanium&lt;/a&gt; to auto generate simple mobile apps. Later, in 2012, I gave &lt;a href=&quot;/blog/2012/10/22/custom-slider-ios-rubymotion/&quot;&gt;RubyMotion&lt;/a&gt; a go. A year later, I used &lt;a href=&quot;/blog/2013/08/29/appgyver-steroids-iphone-hybrid-javascript/&quot;&gt;Steroids.js&lt;/a&gt; and &lt;a href=&quot;/blog/2014/04/09/phonegap-steroids-hybrid-native-app-tips/&quot;&gt;PhoneGap&lt;/a&gt; to &lt;a href=&quot;/blog/2014/05/06/quantified-self-iphone-app-track-mood-day/&quot;&gt;release my first iOS app&lt;/a&gt;… but I was never really happy about these technologies. After seeing SwiftUI it felt like a massive improvement over the current state of iOS development, so I decided to try it out. I have to say that it’s almost everything I wanted, only missing the cross platform aspect.&lt;/p&gt;
 
-&lt;p&gt;I’m currently working on a boxing workout application, and I though I would share how to build a small component I had to code for it.&lt;/p&gt;
+&lt;p&gt;To learn the framework, I’m currently working on an app to coach you during &lt;a href=&quot;https://en.wikipedia.org/wiki/Shadowboxing&quot;&gt;shadow boxing&lt;/a&gt; sessions, and I though I would share how to build a small component I had to build.&lt;/p&gt;
 
 &lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/blog/first_seconds_h.gif&quot; alt=&quot;Circular progressbar with SwiftUI&quot; style=&quot;padding: 5px; width: 600px;&quot; /&gt;&lt;/div&gt;
 
@@ -29,19 +29,17 @@
 
 &lt;h2 id=&quot;just-give-me-the-code&quot;&gt;Just Give Me The Code&lt;/h2&gt;
 
-&lt;p&gt;Keep in mind that, since I’m still new to the technology,the code organisation could probably be improved and there can be some refactoring to be made. For instance you probably don’t want to handle your state like this in a full fledge application.&lt;/p&gt;
-
-&lt;p&gt;Don’t hesitate to leave a comment with your suggestions.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Disclaimer&lt;/strong&gt;: Keep in mind that I’m still new to the technology. The code organisation can be improved and there are some refactoring to be made. For instance you probably don’t want to handle your state like this in a full fledge application, and the timer just floats in the middle of the file :) Don’t hesitate to leave a comment with your improvement suggestions.&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/marcgg/3a86f635586a1eaf5fc2edccebd3758b.js&quot;&gt;&lt;/script&gt;
 
 &lt;h2 id=&quot;timer-logic&quot;&gt;Timer Logic&lt;/h2&gt;
 
-&lt;p&gt;First let’s setup a timer that will tigger an event every second.&lt;/p&gt;
+&lt;p&gt;There is a timer that will tigger an event every second to show progress. We could also have plugged it into a task progress or a simple button incrementing a variable.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;timer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Timer&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;publish&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;every&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;common&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;autoconnect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;	&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;timer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Timer&lt;/span&gt;
+	 &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;publish&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;every&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;common&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	 &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;autoconnect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Then we can add an &lt;code class=&quot;highlighter-rouge&quot;&gt;onReceive&lt;/code&gt; that will increment a &lt;code class=&quot;highlighter-rouge&quot;&gt;counter&lt;/code&gt; until we get to a certain point we’ll call &lt;code class=&quot;highlighter-rouge&quot;&gt;countTo&lt;/code&gt;.&lt;/p&gt;
 

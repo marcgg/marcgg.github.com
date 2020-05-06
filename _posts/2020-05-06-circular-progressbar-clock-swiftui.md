@@ -1,13 +1,13 @@
 ---
 title: "Circular Progress Bar & Timer with SwiftUI"
-description: ""
+description: "Simple example of how to build an iOS circular clock-like progress bar with a minute/seconds counter using SwiftUI."
 tag: iphone
 socialmediapreview: "Visual Timer with SwiftUI"
 ---
 
-For a while I've tried to find a better way to do mobile app development. In 2012 I gave [RubyMotion][1] a go. A year later, I used [Steroids.js][2] and [PhoneGap][3] to [release my first iOS app][4]... but I was never really happy about these technologies. Lately I've been getting into SwiftUI, and I have to say that it's everything I wanted! Of course it's not cross platform, but it's a massive improvement over what was there before.
+I've tried a few times to find a better way to do mobile development. In 2010 I started using [Titanium][1] to auto generate simple mobile apps. Later, in 2012, I gave [RubyMotion][2] a go. A year later, I used [Steroids.js][3] and [PhoneGap][4] to [release my first iOS app][5]... but I was never really happy about these technologies. After seeing SwiftUI it felt like a massive improvement over the current state of iOS development, so I decided to try it out. I have to say that it's almost everything I wanted, only missing the cross platform aspect.
 
-I'm currently working on a boxing workout application, and I though I would share how to build a small component I had to code for it.
+To learn the framework, I'm currently working on an app to coach you during [shadow boxing][6] sessions, and I though I would share how to build a small component I had to build.
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/first_seconds_h.gif" alt="Circular progressbar with SwiftUI" style="padding: 5px; width: 600px;"/></div>
 
@@ -15,20 +15,18 @@ I'll first share the entire Swift file and then give some details about parts of
 
 ## Just Give Me The Code
 
-Keep in mind that, since I'm still new to the technology,the code organisation could probably be improved and there can be some refactoring to be made. For instance you probably don't want to handle your state like this in a full fledge application.
-
-Don't hesitate to leave a comment with your suggestions.
+**Disclaimer**: Keep in mind that I'm still new to the technology. The code organisation can be improved and there are some refactoring to be made. For instance you probably don't want to handle your state like this in a full fledge application, and the timer just floats in the middle of the file :) Don't hesitate to leave a comment with your improvement suggestions.
 
 <script src="https://gist.github.com/marcgg/3a86f635586a1eaf5fc2edccebd3758b.js"></script>
 
 ## Timer Logic
 
-First let's setup a timer that will tigger an event every second.
+There is a timer that will tigger an event every second to show progress. We could also have plugged it into a task progress or a simple button incrementing a variable.
 
 {% highlight swift %}
-let timer = Timer
-  .publish(every: 1, on: .main, in: .common)
-  .autoconnect()
+	let timer = Timer
+	 .publish(every: 1, on: .main, in: .common)
+	 .autoconnect()
 {% endhighlight %}
 
 Then we can add an `onReceive` that will increment a `counter` until we get to a certain point we'll call `countTo`.
@@ -47,7 +45,7 @@ We can create a new `Clock: View` that will display the counter. With some minor
 
 ### ProgressTrack View
 
-This view is the "track" of the progress bar, meaning what is displayed when the progress bar is not filled. We're using the fact that [we need an overlay to have a stroke effect on a shape][5].
+This view is the "track" of the progress bar, meaning what is displayed when the progress bar is not filled. We're using the fact that [we need an overlay to have a stroke effect on a shape][7].
 
 ### ProgressBar View
 
@@ -63,8 +61,10 @@ We also use a custom `StrokeStyle` to have a rounded tip on the progress bar.
 
 
 
-[1]:	/blog/2012/10/22/custom-slider-ios-rubymotion/
-[2]:	/blog/2013/08/29/appgyver-steroids-iphone-hybrid-javascript/
-[3]:	/blog/2014/04/09/phonegap-steroids-hybrid-native-app-tips/
-[4]:	/blog/2014/05/06/quantified-self-iphone-app-track-mood-day/
-[5]:	https://stackoverflow.com/a/56787080/90691
+[1]:	https://www.appcelerator.com/Titanium/
+[2]:	/blog/2012/10/22/custom-slider-ios-rubymotion/
+[3]:	/blog/2013/08/29/appgyver-steroids-iphone-hybrid-javascript/
+[4]:	/blog/2014/04/09/phonegap-steroids-hybrid-native-app-tips/
+[5]:	/blog/2014/05/06/quantified-self-iphone-app-track-mood-day/
+[6]:	https://en.wikipedia.org/wiki/Shadowboxing
+[7]:	https://stackoverflow.com/a/56787080/90691
