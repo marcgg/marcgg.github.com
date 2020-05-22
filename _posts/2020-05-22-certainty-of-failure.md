@@ -1,7 +1,7 @@
 ---
 title: "The Certainty of Failure"
 description: "It's a given that mistakes are bound to happen. The interesting question is how to react when an error is made and how to improve."
-tag: management
+tag: Management
 socialmediapreview: "The Certainty of Failure"
 ---
 
