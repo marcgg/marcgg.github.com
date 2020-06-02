@@ -340,6 +340,14 @@ ol{
   padding: 2px 5px;
 }
 
+.post table {
+  margin: 0px auto 20px auto;
+  border: 1px solid #dedede;
+}
+
+.post td {
+  padding: 5px 10px;
+}
 
 /* BOOKS */
 .book-cover-entry{
