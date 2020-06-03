@@ -3,6 +3,7 @@ layout: simple
 title: "Free Consulting!"
 description: "As part of an experiment I've decided to make myself available for free to startups tackling topics that will positively impact society"
 category: hire
+ogimage: "preview-hire-free.jpeg"
 subtitle: "... for companies doing good in this world :)"
 ---
 
