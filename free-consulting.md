@@ -10,14 +10,15 @@ Hello,
 
 I'm [Marc][1], the VP of Engineering Europe at Getaround, the leading car sharing company. You might also know us as Drivy, as Getaround acquired the project last year. I've also been doing some technical and organisational consulting work for the past 7 years, helping startups and more established companies getting over roadblocks.
 
-As part of an experiment I've decided to make myself available **for free** to startups tackling topics positively impacting society, including but not limited to:
+As part of an experiment I've decided to make myself available **for free to startups positively impacting society ** by tackling big topics **as their core mission**, including but not limited to:
 
 - Climate change
 - Healthcare access
-- Homelessness
 - Human rights
 - Access to water
-- Access to education for underprivileged
+- Homelessness
+- Access to education for underprivileged youth
+
 
 ## What I can do for you
 
