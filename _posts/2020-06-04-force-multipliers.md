@@ -5,7 +5,7 @@ tag: Management
 socialmediapreview: "Force Multipliers"
 ---
 
-A team of 10 engineers was performing well, but inside of it was someone, Adam, who underperformed according to most project metrics. He was often a bit late in shipping features and had more trouble than others tackling very complex technical issues.  Adam was well liked by the team, but after a some pressure was put on his manager, she decided to let Adam go.
+A team of 10 engineers was performing well, but inside of it was someone, Adam, who underperformed according to most project metrics. He was often a bit late in shipping features and had more trouble than others tackling very complex technical issues.  Adam was well liked by the team, but after some pressure was put on his manager, she decided to let Adam go.
 
 Suddenly the team's output dropped drastically to a fraction of what it used to be with Adam on board!
 
@@ -52,7 +52,7 @@ Anyone with in depth knowledge of a technical field can improve everybody's life
 
 Someone with great communication skills can also help drive the productivity of the entire team up by:
 
-- Improving team morale, creating a more pleasant environment to be in, meaning that less people will leave. A good atmosphere is also important to attract qualified people. It's also way better for everybody's mental health to have a positive and friendly work culture.
+- Improving team morale, creating a more pleasant environment to be in, meaning that fewer people will leave. A good atmosphere is also important to attract qualified people. It's also way better for everybody's mental health to have a positive and friendly work culture.
 - Facilitating discussions and generally preventing conflicts.
 - Helping people to get in contact across groups, acting as a networker of sorts. This can help breaking knowledge silos and get a good company-wide dynamic going.
 - Being involved in building the team and/or company culture, which is very important for long term success. This can mean starting small workgroups, have lunches with people from various departments or start a company blog and convince people persuade.
@@ -61,7 +61,7 @@ Someone with great communication skills can also help drive the productivity of 
 
 Some people really can optimise things by defining procedures or best practices. They can too improve the team's output by:
 
-- Helping technical and communication experts formalise their knowledge into an actionable procedures.
+- Helping technical and communication experts formalise their knowledge into actionable procedures.
 - Automatize actions that can be, and help with the adoption of new tools.
 - Talking to people in other companies to see how they organise, and bring this in-house.
 - Advocate from internal promotion of already in place best practices. For instance, if a team has success with a daily standup meeting, maybe the other teams could benefit from at least trying it!
@@ -69,7 +69,7 @@ Some people really can optimise things by defining procedures or best practices.
 
 ## Team Composition
 
-It's interesting to see how, depending on the team and context, you will need more or less of these two kind of people. By keeping in mind the different ways people will bring value, you can really improve your team composition and output.
+It's interesting to see how, depending on the team and context, you will need more or less of these two kinds of people. By keeping in mind the different ways people will bring value, you can really improve your team composition and output.
 
 To illustrate, I'll use an arbitrary and simplistic number to represent the direct output of a person. It doesn't mean anything, but you can imagine it be story points, milestones reached or whatever you use to monitor the advancement of a project.
 
