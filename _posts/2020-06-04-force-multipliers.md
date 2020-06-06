@@ -13,7 +13,7 @@ What happened?
 
 As it turned out, Adam worked as a product manager in a previous company. This meant he was a bit slower than classically trained software engineers, but he knew how to work well with the product department. As it turned out, he was facilitating discussions between PMs and engineers, often preventing conflicts from appearing. He was also friend with most people in the team, which helped tremendously in squashing small issues quickly and improve team morale. This wasn't his role, and Adam didn't even pay much attention to it as it felt like the normal thing to do.
 
-Once was gone, the engineering team fell back to a more defensive approach in its relationship with the product team, which created tensions. This in turn red theuced velocity for the entire team.
+Once was gone, the engineering team fell back to a more defensive approach in its relationship with the product team, which created tensions. This in turn reduced the velocity for the entire team.
 
 Letting Adam go was a mistake from the engineering manager who should have identified that Adam's value to the team went far beyond "just" shipping features. It was also a failure of the organisation who set up metrics only focused on delivery and not looking at the bigger picture.
 
