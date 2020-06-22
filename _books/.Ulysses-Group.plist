@@ -310,6 +310,18 @@
 					<integer>112</integer>
 				</dict>
 			</dict>
+			<key>radical-candor.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>614525607.94814897</real>
+				<key>version</key>
+				<dict>
+					<key>22b37cbde41d031e41bbecbb31feac74cbe4c52f970ca6de54f65b5a987618fe</key>
+					<integer>11</integer>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>190</integer>
+				</dict>
+			</dict>
 			<key>rework.md</key>
 			<dict>
 				<key>lastModification</key>
@@ -560,6 +572,9 @@
 		<array>
 			<string>five-disfunctions.md</string>
 		</array>
+		<array>
+			<string>radical-candor.md</string>
+		</array>
 	</array>
 	<key>storeFormatVersion</key>
 	<integer>1</integer>
@@ -568,7 +583,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>22b37cbde41d031e41bbecbb31feac74cbe4c52f970ca6de54f65b5a987618fe</key>
-			<integer>8</integer>
+			<integer>12</integer>
 			<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
 			<integer>190</integer>
 		</dict>
