@@ -86,6 +86,18 @@
 					<integer>181</integer>
 				</dict>
 			</dict>
+			<key>dgaf.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>614524589.71938097</real>
+				<key>version</key>
+				<dict>
+					<key>22b37cbde41d031e41bbecbb31feac74cbe4c52f970ca6de54f65b5a987618fe</key>
+					<integer>3</integer>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>190</integer>
+				</dict>
+			</dict>
 			<key>effective-manager.md</key>
 			<dict>
 				<key>lastModification</key>
@@ -114,6 +126,18 @@
 				<dict>
 					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
 					<integer>80</integer>
+				</dict>
+			</dict>
+			<key>five-disfunctions.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>614525080.50376701</real>
+				<key>version</key>
+				<dict>
+					<key>22b37cbde41d031e41bbecbb31feac74cbe4c52f970ca6de54f65b5a987618fe</key>
+					<integer>7</integer>
+					<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
+					<integer>190</integer>
 				</dict>
 			</dict>
 			<key>herding.md</key>
@@ -530,6 +554,12 @@
 		<array>
 			<string>one-thing.md</string>
 		</array>
+		<array>
+			<string>dgaf.md</string>
+		</array>
+		<array>
+			<string>five-disfunctions.md</string>
+		</array>
 	</array>
 	<key>storeFormatVersion</key>
 	<integer>1</integer>
@@ -537,6 +567,8 @@
 	<dict>
 		<key>sheetClusters</key>
 		<dict>
+			<key>22b37cbde41d031e41bbecbb31feac74cbe4c52f970ca6de54f65b5a987618fe</key>
+			<integer>8</integer>
 			<key>27ba8c6f8149b1305223cdd6b8524ffbfa34717052ef61e75fa17952e587478e</key>
 			<integer>190</integer>
 		</dict>
