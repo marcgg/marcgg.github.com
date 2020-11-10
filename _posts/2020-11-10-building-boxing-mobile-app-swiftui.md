@@ -212,13 +212,13 @@ The one thing that made me really happy was that after a few hours on the store,
 
 After a bit I started to see some traction and people actually using the app, so I doubled down and started working full time on the app, adding more features and improving everything I could. The great thing with being a user myself was that I could test out new workouts on myself and have a lot of fun in the process !
 
-#### New Exercises & Workouts
+### New Exercises & Workouts
 
 I've added many new type of exercises. For instance the app can call out specific techniques, but also accompany you when you do jump rope, push-ups or squats. When you train for boxing, you can now focus on defense, dodging, repetition and so on. I've also added execises that works best with a punching bag, for instance throwing quick light punches for 20 seconds, then heavy punches for 20 seconds and rest 10 seconds. I then took all these exercises and combined them to create coherent workouts, while always allowing people to do it themselves.
 
 This is really what took me most of my time, as figuring out the right exercise and balance it correctly is pretty hard.
 
-#### Better Onboarding
+### Better Onboarding
 
 The first version of my onboarding missed the point. I did the same as a lot of apps with just a few slides explaning the benefits of the app. After a while my opinion became that it was just repeating the content of the product page and that I should use this opportunity to improve the user's first experience.
 
@@ -230,7 +230,7 @@ The new version is way more simple with a single screen. It also focuses on how 
 
 I've also built a tutorial to help people learn how the app works and a serie of exercises specificaly made to progressively get used to the app's system.
 
-#### Easier Way To Build a Workout
+### Easier Way To Build a Workout
 
 Personnally I love to be able to specify every single detail of a training session. For instance are rounds 45 seconds or 1 minute? How much rest time? From the look of my tracking, some users are like me, but not all of them.
 
@@ -238,7 +238,7 @@ To help the people who don't want to mess with a massive customization form, I'v
 
  <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/swift/create_workout.png" alt="Onboarding slides iOS app" style="padding: 5px; width: 90%;"/><center><em><a href="/assets/blog/swift/create_workout.png">Large version here</a></em></center></div>
 
-#### Simplification & Coherence of Design
+### Simplification & Coherence of Design
 
 Here is an example of how the app would look when you picked a workout.
 
@@ -274,11 +274,27 @@ Since all of my photos, UI elements and marketing assets are all in one spot, it
 
 It's not very complex, but it's incredibly useful and saved me so much time!
 
-#### Subscription
+### Improving Subscriptions
 
 I also improved a bit how I managed subscriptions. For instance I added the fact that if someone churned and stopped paying, they would stop getting access to premium features. I actually waited a few months to build this since no users decided to stop paying at first!
 
 One advice I can give is to always activate the [grace period](https://developer.apple.com/news/?id=09122019c). If a user can't pay at the time of renewal for a reason or another, it will give them a few days to fix their billing issue while Apple help them. This prevents churn that could have been easily avoided, and I had a few premium users "saved" this way.
+
+### Completely Free Feature: Round Timer
+
+I added a round timer to the app that is simple but works really well. I've mostly built it because all the round timers are either plagued with ads or expensive with tons of useless features. I've had the experience sparring with a group of people where preroll videos would run before any round... that's just ridiculous!
+
+So I really wanted a timer I could tell everyone at my gym to use when we do sparring. It doesn't need much, basically:
+
+- A few premade settings to start it quickly and not have to go back and fiddle with it with gloves on
+- A larger display so you can see it from afar, with color coded fight/rest modes, even when you're tired
+- A loud sound when something happens
+
+... and that's it! You can of course make it compatible with the [Tabata method](https://en.wikipedia.org/wiki/High-intensity_interval_training#Tabata_regimen), customize the kind of sound it makes and so on, but most people don't need that. 
+
+The cool thing is that it was fairly easy for me to leverage the existing product and basically build a simplified version of the custom workout form. I added a new timer "exercise", a couple of UI shortcuts and voila, a free boxing round timer!
+
+<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/swift/free_boxing_timer.png" alt="Free boxing round timer on iOS" style="padding: 5px; width: 300px;"/><center><em><a href="https://shadowboxingapp.com/">Free boxing round timer</a></em></center></div>
 
 ## Improving Online Presence
 
@@ -286,7 +302,7 @@ One advice I can give is to always activate the [grace period](https://developer
 
 I've tried to work with influencers to get the word out about the app with mixed results. It was great to see some people naturally using the app on Instagram, but it was also a lot of back and forth for a low return on investment.
 
-<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/swift/influencer.png" alt="Boxing social media influencer" style="padding: 5px; width: 300px;"/><center><em>"If you do it seriously, it's really efficient!"</em></center></div>
+<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/swift/influencer.png" alt="Boxing social media influencer" style="padding: 5px; width: 300px;"/><center><em>"If you do it seriously, it's really efficient 🥊"</em></center></div>
 
 ### Make the App More Shareable
 
