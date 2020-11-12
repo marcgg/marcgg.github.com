@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2020-11-12T10:20:26+01:00</updated>
+ <updated>2020-11-12T10:36:20+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -74,7 +74,7 @@
 &lt;ul&gt;
   &lt;li&gt;A basic UI to set the various parameters of the algorithm&lt;/li&gt;
   &lt;li&gt;A simple display with large fonts and clear colors to see the round timer &amp;amp; punches to throw&lt;/li&gt;
-  &lt;li&gt;A way to give audio cues, ideally a syntetized voice so I don’t have to constantly look at my phone&lt;/li&gt;
+  &lt;li&gt;A way to give audio cues, ideally a synthesized voice so I don’t have to constantly look at my phone&lt;/li&gt;
   &lt;li&gt;Needs to work for me, meaning running on iOS since I have an iPhone&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -98,7 +98,7 @@
   &lt;p&gt;&lt;a href=&quot;https://twitter.com/twostraws&quot;&gt;@twostraws&lt;/a&gt; on &lt;a href=&quot;https://www.hackingwithswift.com/quick-start/swiftui/what-is-swiftui&quot;&gt;Hacking with Swift&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;I had my eyes on this technology ever since it came out because I always was alergic to UIKit’s way of building app and this declarative approach felt like what iOS needed. It was also an easy to grab paradigm for me thanks to my experience with ReactJS.&lt;/p&gt;
+&lt;p&gt;I had my eyes on this technology ever since it came out because I always was allergic to UIKit’s way of building app and this declarative approach felt like what iOS needed. It was also an easy to grab paradigm for me thanks to my experience with ReactJS.&lt;/p&gt;
 
 &lt;p&gt;Since I was lucky to work on a greenfield project, and therefore didn’t have to keep previous users in mind, I could pick this framework even if it was only compatible with iOS 13 and up.&lt;/p&gt;
 

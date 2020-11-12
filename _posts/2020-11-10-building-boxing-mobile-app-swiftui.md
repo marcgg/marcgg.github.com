@@ -55,7 +55,7 @@ I quickly figured that building an algorithm alone and print out exercises would
 
 - A basic UI to set the various parameters of the algorithm
 - A simple display with large fonts and clear colors to see the round timer & punches to throw
-- A way to give audio cues, ideally a syntetized voice so I don't have to constantly look at my phone
+- A way to give audio cues, ideally a synthesized voice so I don't have to constantly look at my phone
 - Needs to work for me, meaning running on iOS since I have an iPhone
 
 ### Building with SwiftUI
@@ -76,7 +76,7 @@ The annoying part was that I tried working with UIKit in the past and really did
 >
 > [@twostraws](https://twitter.com/twostraws) on [Hacking with Swift](https://www.hackingwithswift.com/quick-start/swiftui/what-is-swiftui)
 
-I had my eyes on this technology ever since it came out because I always was alergic to UIKit's way of building app and this declarative approach felt like what iOS needed. It was also an easy to grab paradigm for me thanks to my experience with ReactJS.
+I had my eyes on this technology ever since it came out because I always was allergic to UIKit's way of building app and this declarative approach felt like what iOS needed. It was also an easy to grab paradigm for me thanks to my experience with ReactJS.
 
 Since I was lucky to work on a greenfield project, and therefore didn't have to keep previous users in mind, I could pick this framework even if it was only compatible with iOS 13 and up.
 
