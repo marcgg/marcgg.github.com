@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2020-11-12T10:36:20+01:00</updated>
+ <updated>2020-11-12T10:37:04+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -15,9 +15,9 @@
   
    <entry>
      <title>Building, Releasing and Marketing an iOS Fitness App</title>
-     <link href="https://marcgg.com/blog/2020/11/10/building-boxing-mobile-app-swiftui/"/>
-     <updated>2020-11-10T00:00:00+01:00</updated>
-     <id>https://marcgg.com/blog/2020/11/10/building-boxing-mobile-app-swiftui</id>
+     <link href="https://marcgg.com/blog/2020/11/12/building-boxing-mobile-app-swiftui/"/>
+     <updated>2020-11-12T00:00:00+01:00</updated>
+     <id>https://marcgg.com/blog/2020/11/12/building-boxing-mobile-app-swiftui</id>
      <content type="html">
        &lt;p&gt;I practice boxing as a hobby, so when the first lockdown in France happened I decided to keep training at home. However I quickly found out that it was tough to stay focused on my own. I tried various solutions, like boxing along Youtube videos, but it got repetitive and a lot of videos didn’t fit the way I wanted to work out… I tried fitness apps, but they were focused on &lt;a href=&quot;https://en.wikipedia.org/wiki/Calisthenics&quot;&gt;calisthenics&lt;/a&gt;, not boxing.&lt;/p&gt;
 
