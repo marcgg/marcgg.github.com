@@ -167,7 +167,7 @@ Mix this with the ramp down timings and different signals, and you start to be a
 [4]:	https://en.wikipedia.org/wiki/Sine_wave
 [5]:	https://developer.mozilla.org/en-US/docs/Web/API/AudioContext
 [6]:	https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode
-[7]:	http://alemangui.github.io/blog//2015/12/26/ramp-to-value.html
+[7]:	https://alemangui.github.io/ramp-to-value
 [8]:	https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/exponentialRampToValueAtTime
 [9]:	https://developer.mozilla.org/en-US/docs/Web/API/GainNode
 [10]:	https://gist.github.com/marcgg/94e97def0e8694f906443ed5262e9cbb
