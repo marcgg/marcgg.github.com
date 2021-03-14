@@ -4,10 +4,12 @@ title: "Hello!"
 seotitle: "Marc G Gauthier - Engineering Lead & Tech Advisor"
 subtitle: "I build useful software, structure successful teams and help others do the same"
 category: about
-description: "I'm a Ruby developer turned VP Engineering and startup technical advisor. I blog about software engineering, management and more."
+description: "I'm a Ruby developer turned team leader and startup advisor. I blog about software engineering, management and more."
 ---
 
-My main focus is my job as VP of Engineering Europe at [Getaround][1], the leading car sharing company. Alongside this, I provide dedicated coaching for various companies to help them get over roadblocks.
+I worked for 8 years as VP of Engineering Europe at [Getaround][1], the leading car sharing company working on building a viable alternative to car ownership. Now my main focus is my Head of Engineering position at [Back Market][5], attempting to reduce e-waste through its marketplace for refurbished electronics.
+
+Alongside this, I provide dedicated coaching for various companies to help them get over roadblocks.
 
 I've been blogging for the past 10 years. If you'd like to get a feel of what I've had on my mind, you can take a look at a few of my most successful articles:
 
@@ -21,3 +23,5 @@ _Marc-_
 [2]:	https://twitter.com/marcgg
 [3]:	https://www.linkedin.com/in/marcggauthier
 [4]:	/hire
+[5]:  https://www.backmarket.com/
+
