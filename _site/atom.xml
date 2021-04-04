@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2021-03-27T14:20:44+01:00</updated>
+ <updated>2021-04-04T14:49:18+02:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -14,18 +14,50 @@
  
   
    <entry>
+     <title>Devlogs</title>
+     <link href="https://marcgg.com/blog/2021/04/01/devlogs/"/>
+     <updated>2021-04-01T00:00:00+02:00</updated>
+     <id>https://marcgg.com/blog/2021/04/01/devlogs</id>
+     <content type="html">
+       &lt;p&gt;dophin https://www.youtube.com/watch?v=rn0sb2zkPzA&lt;/p&gt;
+
+&lt;p&gt;vimlark https://www.youtube.com/channel/UClqFSFR_H1yJJ7NRs8xxGCQ&lt;/p&gt;
+
+&lt;p&gt;fairlu https://www.youtube.com/channel/UCF8hefMp-gYUyYd9mC1_IGg&lt;/p&gt;
+
+&lt;p&gt;sovereign https://www.youtube.com/channel/UCU7OLO4-Vzxo1aW7mAuI3lg&lt;/p&gt;
+
+&lt;p&gt;magic n stuff https://www.youtube.com/channel/UCqRbKsCslbkBawq_I1OrFbA&lt;/p&gt;
+
+&lt;p&gt;talk game dev https://www.youtube.com/channel/UCtZMWqGbT2UDdw1gGqVEpRg&lt;/p&gt;
+
+&lt;p&gt;equilinox / city builder https://www.youtube.com/channel/UCUkRj4qoT1bsWpE_C8lZYoQ&lt;/p&gt;
+
+&lt;p&gt;lumbermill https://www.youtube.com/channel/UCYU6BO_VdYnzeQEOS_kSBWA&lt;/p&gt;
+
+&lt;p&gt;parkour cat girl https://www.youtube.com/channel/UCRexPboeVnvnuK0aXtHqu_Q&lt;/p&gt;
+
+&lt;p&gt;remaking first game ball shoot https://www.youtube.com/watch?v=OU3B3D-52us&lt;/p&gt;
+
+       
+     </content>
+   </entry>
+  
+ 
+  
+   <entry>
      <title>One on One Meeting Format</title>
      <link href="https://marcgg.com/blog/2021/03/27/one-on-one-format/"/>
      <updated>2021-03-27T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2021/03/27/one-on-one-format</id>
      <content type="html">
-       &lt;p&gt;As a manager, the one on one meeting with your direct reports is your most important tool. I’ve talked a bit before about &lt;a href=&quot;/blog/2019/11/30/one-on-one-openers/&quot;&gt;opening lines&lt;/a&gt;, but I figured it’d be interesting to dig into what I use every day with my teams. I think it’s important to have a clear format shared to direct reports. This frames the conversation and helps the manager fullfil the objective, while giving some insights to the direct report regarding what this is all about.&lt;/p&gt;
+       &lt;p&gt;As a manager, doing one on one meetings with your direct reports is your most important tool. I’ve talked a bit before about &lt;a href=&quot;/blog/2019/11/30/one-on-one-openers/&quot;&gt;opening lines&lt;/a&gt;, but I figured it could be interesting to dig into how I handle this every week with my teams. I think it’s important to have a clear format shared to direct reports. This frames the conversation and helps the manager fullfil the objective, while giving some insights to the direct report regarding what this is all about.&lt;/p&gt;
 
 &lt;p&gt;Of course, just like my article about &lt;a href=&quot;/blog/2020/04/06/engineering-team-meeting-ideas/&quot;&gt;engineering team meetings&lt;/a&gt;, it doesn’t necessarly applies directly to you or your company, but hopefully it’ll be interesting and will give you some ideas.&lt;/p&gt;
 
 &lt;h2 id=&quot;objective&quot;&gt;Objective&lt;/h2&gt;
 
-&lt;p&gt;I’ve seen a lot of people using 1:1s only to clear roadblocks and help with delivery. The meeting ressemble a mix of reporting and brainstorming session, and don’t have a clear objective. While talking about day to day work is an important part of it, to me this is not the main objective.&lt;/p&gt;
+&lt;p&gt;I’ve seen a lot of people using 1:1s only to clear roadblocks and help with delivery. The meeting then ressembles a mix of reporting and brainstorming session, and don’t have any defined objective. While talking about day to day work is a very important part of it, to me it is not the main objective.&lt;/p&gt;
 
 &lt;p&gt;The way I see it, &lt;strong&gt;the main objective  of a one on one meeting is to build a good work relationship with my direct reports&lt;/strong&gt;. On this part I’m heavily inspired by inspired by &lt;a href=&quot;https://www.manager-tools.com/2005/07/the-single-most-effective-management-tool-part-1&quot;&gt;Manager Tools&lt;/a&gt; and &lt;a href=&quot;https://amzn.to/2Y6WW8M&quot;&gt;The Effective Manager&lt;/a&gt; book, so I encourage you to check this out if you want an extensive explanation.&lt;/p&gt;
 
@@ -37,15 +69,15 @@
 
 &lt;h3 id=&quot;minutes-weekly&quot;&gt;30 Minutes, Weekly&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;All my one on ones are weekly and last for 30 minutes exactly&lt;/strong&gt;, regardless of the person, seniority level or role.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;All my one on ones are weekly and last for 30 minutes exactly&lt;/strong&gt;, regardless of the person, seniority or role.&lt;/p&gt;
 
-&lt;p&gt;I’ve experimented with other schedules, for instance 1 hours every 2 weeks, but I feel like weekly is a must. If you wait longer, you will lose a lot of information and only what feels “important” will surface, leaving all other weaker signals lost. The weekly pace also helps to keep the discussion a bit lighter, sometimes we won’t have critical things to discuss allowing us to tackle other, less pressing topics.&lt;/p&gt;
+&lt;p&gt;I’ve experimented with other schedules, for instance 1 hours every 2 weeks, but I feel like weekly is a must. If you wait longer, you will lose a lot of information and only what feels “important” will surface and you’ll lose weaker signals. The weekly pace also helps keeping the discussion a bit lighter, sometimes we won’t have critical things to discuss allowing us to tackle other, less pressing topics.&lt;/p&gt;
 
-&lt;p&gt;There’s also a significant benefit in seing people regularly, especially if you manage a team with people working remotely… and no, seeing people at standups doesn’t count! The conversation you can have in a one on one are very different than the ones in a large group.&lt;/p&gt;
+&lt;p&gt;There’s also a significant benefit in seeing people regularly, especially if you manage a team with people working remotely… and no, seeing people at standups doesn’t count! The conversation you can have in a one on one are very different than the ones in a larger group.&lt;/p&gt;
 
 &lt;h3 id=&quot;a-meeting-you-can-count-on&quot;&gt;A Meeting You Can Count On&lt;/h3&gt;
 
-&lt;p&gt;I do my best to not move or cancel a 1:1. This seems like a small thing, but it’s very important to me that anyone I manage directly can be certain that, no matter how busy my schedule gets, they’ll always have at the vert least 30 minutes of my time each week.&lt;/p&gt;
+&lt;p&gt;I do my best to not move nor cancel a 1:1. This seems like a small thing, but it’s very important to me that anyone I manage directly can be certain that, no matter how busy my schedule gets, they’ll always have at the very least 30 minutes of my time each week.&lt;/p&gt;
 
 &lt;p&gt;My rule of thumb is that I will &lt;strong&gt;cancel&lt;/strong&gt; a 1:1s if:&lt;/p&gt;
 
@@ -59,13 +91,14 @@
 &lt;ul&gt;
   &lt;li&gt;I’m out of the office, but only for 1 day&lt;/li&gt;
   &lt;li&gt;I have to setup a meeting with people with very busy agenda and the only reasonable slot where everyone is available is the 1:1. I’ll of course check with the person and usually move the meeting by a couple of hours. This happens maybe &amp;lt;5% of the times.&lt;/li&gt;
+  &lt;li&gt;Something really messes up my calendar, like an multiple day offsite meeting&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;I’m also asking my direct report to do the same, trying to avoid postponing or cancel our 1:1.&lt;/p&gt;
 
 &lt;h3 id=&quot;not-the-only-meeting&quot;&gt;Not The Only Meeting&lt;/h3&gt;
 
-&lt;p&gt;Of course this doesn’t mean that it’ll be the only recurring meeting I’ll have with the person. Depending on the situation I may have multiple additional discussions throughout the week.&lt;/p&gt;
+&lt;p&gt;Of course all of this doesn’t mean that it’ll be the only recurring meeting I’ll have with people reporting to me. Depending on the situation, I may have multiple additional discussions throughout the week.&lt;/p&gt;
 
 &lt;p&gt;For instance if I manage a junior engineering manager directly, we will probably have an extra hour for me to coach them. Same thing if there is a significant technical topic ongoing and I’m managing a senior engineer working on it.&lt;/p&gt;
 
@@ -73,9 +106,11 @@
 
 &lt;h3 id=&quot;its-an-investment&quot;&gt;It’s an Investment&lt;/h3&gt;
 
-&lt;p&gt;When I recommend commiting to a weekly 1:1, a lot of managers say that they simply don’t have the time. I strongly disagree, as I saw time and time again that a 30 minutes meeting weekly will prevent massive problems down the line. Basically, do you prefer spending weeks firefighting something gone terribly wrong, or take a few hours every week to talk to your team?&lt;/p&gt;
+&lt;p&gt;When I recommend commiting to a weekly 1:1, a lot of managers tell me that they simply don’t have the time. I strongly disagree.&lt;/p&gt;
 
-&lt;p&gt;Also, how would you feel if you heard your manager say that they can’t even spare 30 minutes each week to talk to you?&lt;/p&gt;
+&lt;p&gt;I saw time and time again that a 30 minutes meeting weekly will prevent massive problems down the line. Basically, do you prefer spending weeks firefighting something gone terribly wrong, or take a few hours every week to talk to your team?&lt;/p&gt;
+
+&lt;p&gt;Finally, how would you feel if you heard your manager say that they can’t even spare 30 minutes each week to talk to you?&lt;/p&gt;
 
 &lt;h2 id=&quot;taking-and-sharing-notes&quot;&gt;Taking and Sharing Notes&lt;/h2&gt;
 
@@ -127,13 +162,13 @@
 
 &lt;h3 id=&quot;minutes-to-not-be-surprised-later&quot;&gt;10 Minutes To Not Be Surprised Later&lt;/h3&gt;
 
-&lt;p&gt;This one a bit less clear, but the way I like to explain it to my direct report is that we’ll use this time to prevent us from being surprised at their annual review. In more concrete terms, this means performance feedback, coaching, career path discussions and more.&lt;/p&gt;
+&lt;p&gt;This one a bit less clear than the first two. The way I like to explain it to my direct report is that we’ll use this time to prevent us from being surprised at their annual or quarterly review. In more concrete terms, this means performance feedback, coaching, career path discussions and more.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;If things are going well&lt;/strong&gt; they should know it and have a vision of how they can evolve in the company, taking more interesting projects, more responsabilities and, in turn, a better salary.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;If things are doing poorly&lt;/strong&gt;, they should be aware that either their pay raise or job is in danger. I should give them the opportunity to address the issues and improve.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;If things are doing poorly&lt;/strong&gt;, they should be aware that either their pay raise or job is in danger. I should also give them the opportunity to address the issue and improve.&lt;/p&gt;
 
-&lt;p&gt;Of course, feedback goes both ways, so I’m also expecting them to raise any issues they have with the company, the projects they are part of and myself, before it gets so bad it can’t be fixed. I’m also interested in knowing if things are going well so I can double down on successful actions.&lt;/p&gt;
+&lt;p&gt;Of course, feedback goes both ways. I’m also expecting them to raise any issues they have with the company, the projects they are part of and myself, before it gets so bad it can’t be fixed. I’m also interested in knowing if things are going well so I can double down on successful actions.&lt;/p&gt;
 
 &lt;p&gt;This is also the moment to discuss significant change in responsabilities or scope. For instance if someone planning to move from an individual contributor role to a manager one we’ll discuss it every week until it’s actually done.&lt;/p&gt;
 
@@ -141,7 +176,7 @@
 
 &lt;p&gt;In the past I felt like I knew my team. I talked to them often during standups, team meetings, brainstorms, pull requests… however I realized that only a regular meeting between me and my direct report will allow me to talk about most issues and guide the team better.&lt;/p&gt;
 
-&lt;p&gt;Over the years I’ve tried various 1:1 format, but I’ve been using this one for the most part of the last 4 years and I’m really happy about it. I think it works really well and adapts itself to a lot of different situation and people. It didn’t prevent every single issues, but it allowed me to see them coming and be in a better spot to handle them.&lt;/p&gt;
+&lt;p&gt;Over the years I’ve tried various 1:1 format. I’ve been using this one for the most part of the last 4 years and I’m really happy about it. I think it works really well and is adaptable to a lot of different situation and people. It didn’t prevent every single issues, but it allowed me to see them coming and be in a better spot to handle them.&lt;/p&gt;
 
 &lt;p&gt;Of course I don’t always follow the format strictly, for instance the last 10 minutes can get squeezed, but having this format allows me to:&lt;/p&gt;
 
@@ -152,6 +187,7 @@
 &lt;/ul&gt;
 
 &lt;p&gt;If you are &lt;a href=&quot;/blog/2017/08/22/starting-with-management/&quot;&gt;a new manager&lt;/a&gt; and don’t know where to start, I highly recommend you give this format a try for a few months and iterate from there.&lt;/p&gt;
+
 
        
      </content>
