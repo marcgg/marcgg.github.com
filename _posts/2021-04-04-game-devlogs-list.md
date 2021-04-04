@@ -1,8 +1,8 @@
 ---
 title: "13 Entertaining Game Devlog Youtube Channels"
-description: "To get inspired for my own projects or just to enjoy some entertaining content I fell deep into a game devlog rabbit hole. Here are some of the channels I've enjoyed the most so far."
+description: "To get inspired for my own projects or just to enjoy some entertaining content I fell deep into a game devlog rabbit hole, following people as they build their project. Here are some of the channels I've enjoyed the most so far."
 tag: Games
-ogimage: ""
+ogimage: "gamedev.png"
 blog: true
 
 

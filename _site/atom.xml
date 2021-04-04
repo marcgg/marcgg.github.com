@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2021-04-04T21:43:18+02:00</updated>
+ <updated>2021-04-04T21:47:33+02:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -15,9 +15,9 @@
   
    <entry>
      <title>13 Entertaining Game Devlog Youtube Channels</title>
-     <link href="https://marcgg.com/blog/2021/04/04/devlogs/"/>
+     <link href="https://marcgg.com/blog/2021/04/04/game-devlogs-list/"/>
      <updated>2021-04-04T00:00:00+02:00</updated>
-     <id>https://marcgg.com/blog/2021/04/04/devlogs</id>
+     <id>https://marcgg.com/blog/2021/04/04/game-devlogs-list</id>
      <content type="html">
        &lt;p&gt;While working on &lt;a href=&quot;/blog/2020/11/12/building-boxing-mobile-app-swiftui/&quot;&gt;my iOS boxing app&lt;/a&gt; I started getting into watching devlogs to keep myself motivated. While there were not a lot of content for apps, I found a lot of very interesting, insightful or just funny indie game creators sharing their journey on Youtube.&lt;/p&gt;
 
