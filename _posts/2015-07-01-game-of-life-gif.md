@@ -1,7 +1,7 @@
 ---
 title: Game of Life Visualisations
 description: I was stuck in a plane so I started fiddling with my alternative version of Conway's Game of Life. I kind of liked the way the board looked after a while, so I decided to share.
-tag: Projects
+tag: Games
 socialmediapreview: "Game of Life"
 ---
 

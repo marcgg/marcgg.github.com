@@ -1,6 +1,6 @@
 ---
 title: "One on One Meeting Format Ideas"
-description: "Here is the way I conduct 1:1 meetings with people in my startup engineering team. I'll go over the objective, schedule but also the content and give some feedback about using this particular format for the past few years."
+description: "Here is the way I conduct 1:1 meetings with people in my engineering team. I'll go over the objective, schedule but also the content and give some feedback about using this particular format for the past few years."
 tag: Management
 ogimage: "oneonemeeting.png"
 blog: true

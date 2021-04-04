@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2021-04-04T14:51:18+02:00</updated>
+ <updated>2021-04-04T21:43:18+02:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -12,6 +12,116 @@
  </author>
 
  
+  
+   <entry>
+     <title>13 Entertaining Game Devlog Youtube Channels</title>
+     <link href="https://marcgg.com/blog/2021/04/04/devlogs/"/>
+     <updated>2021-04-04T00:00:00+02:00</updated>
+     <id>https://marcgg.com/blog/2021/04/04/devlogs</id>
+     <content type="html">
+       &lt;p&gt;While working on &lt;a href=&quot;/blog/2020/11/12/building-boxing-mobile-app-swiftui/&quot;&gt;my iOS boxing app&lt;/a&gt; I started getting into watching devlogs to keep myself motivated. While there were not a lot of content for apps, I found a lot of very interesting, insightful or just funny indie game creators sharing their journey on Youtube.&lt;/p&gt;
+
+&lt;p&gt;Some are seasoned industry veterans, some are students just getting started, some are great designers struggling with coding, some are software engineers getting their hand into game design… and they all shared their work, their struggles and successes. Entertaining stuff!&lt;/p&gt;
+
+&lt;p&gt;This is a bit different from my usual content, but I figured I would highlight my favorite ones in this article and give you a quick reason to give this “genre” a try.&lt;/p&gt;
+
+&lt;h2 id=&quot;patch-quest&quot;&gt;Patch Quest&lt;/h2&gt;
+
+&lt;p&gt;The one video that really pulled me in this was “&lt;a href=&quot;https://www.youtube.com/watch?v=NnI_1DOYt2A&quot;&gt;How to NOT make an indie game&lt;/a&gt;” by &lt;a href=&quot;https://www.youtube.com/channel/UCxdyC7_ZoTzeJqIZHsmAy9Q&quot;&gt;Patch Quest&lt;/a&gt;, so if you only watch one I suggest that it’d be this one. The author highlights how he transitioned from an idea to another… and then you have two years worth of video to see his progress!&lt;/p&gt;
+
+&lt;p&gt;The game itself looks cool, but what’s the most interesting is to see the developer’s process in figuring out how to make it a truly unique and enjoyable experience.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCxdyC7_ZoTzeJqIZHsmAy9Q&quot;&gt;&lt;img src=&quot;/assets/blog/gamedev/patch-min.jpg&quot; alt=&quot;Game dev channel&quot; style=&quot;padding: 5px; width: 700px;&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;devduck&quot;&gt;DevDuck&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCKCTmact-90hXpV2ns8GSsA&quot;&gt;DevDuck&lt;/a&gt;, and particulary his series on creating &lt;a href=&quot;https://www.youtube.com/watch?v=rn0sb2zkPzA&quot;&gt;Dophin&lt;/a&gt; with Godot is a great watch. Ben, a software engineer by day, walks us through his process to build indie games on his spare time. The tone is very chill and he gives a lot of details about the technical side which I enjoy.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCKCTmact-90hXpV2ns8GSsA&quot;&gt;&lt;img src=&quot;/assets/blog/gamedev/dophin-min.jpg&quot; alt=&quot;Game dev channel&quot; style=&quot;padding: 5px; width: 700px;&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;lets-talk-game-design&quot;&gt;Let’s Talk Game Design&lt;/h2&gt;
+
+&lt;p&gt;Zayne is an experienced game designer building his own 2D platformer. On &lt;a href=&quot;https://www.youtube.com/c/LetsTalkGameDesign&quot;&gt;his channel&lt;/a&gt; he will explain the design decisions made from the most philosophical to the more trivial ones. The videos are often quite funny and more educational than others, but my guess is that the tone won’t be for everybody. Check out &lt;a href=&quot;Making and Releasing My First Steam Game&quot;&gt;his first devlog&lt;/a&gt; and decide for yourself!&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;a href=&quot;https://www.youtube.com/c/LetsTalkGameDesign&quot;&gt;&lt;img src=&quot;/assets/blog/gamedev/letstalk-min.jpg&quot; alt=&quot;Devlog youtube channel&quot; style=&quot;padding: 5px; width: 700px;&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;thin-matrix&quot;&gt;Thin Matrix&lt;/h2&gt;
+
+&lt;p&gt;There are two great devlog series on &lt;a href=&quot;https://www.youtube.com/channel/UCUkRj4qoT1bsWpE_C8lZYoQ&quot;&gt;Karl’s channel&lt;/a&gt;. The first one is about his already available game, &lt;a href=&quot;https://store.steampowered.com/app/853550/Equilinox/&quot;&gt;Equilinox&lt;/a&gt;, but my favorite is the second one about &lt;a href=&quot;https://www.youtube.com/watch?v=pib4IWX_9RM&quot;&gt;a city builder game he his building from basically nothing&lt;/a&gt;. Compared to others who are often using an existing engine like Unity or Godot, he decided to build his own. This means that the problems he’s facing in his devlogs are quite different and speaks a lot to my software engineer brain!&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCUkRj4qoT1bsWpE_C8lZYoQ&quot;&gt;&lt;img src=&quot;/assets/blog/gamedev/thinmatrix-min.jpg&quot; alt=&quot;Game dev channel&quot; style=&quot;padding: 5px; width: 700px;&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;mythic-legion&quot;&gt;Mythic Legion&lt;/h2&gt;
+
+&lt;p&gt;So far this one is more &lt;a href=&quot;https://www.youtube.com/watch?v=OU3B3D-52us&quot;&gt;a single video than an actual channel&lt;/a&gt;. In it, the author rebuilds his first game… and while the whole thing is hard to describe, it is very entertaining! I recommend that you give it a watch.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=OU3B3D-52us&quot;&gt;&lt;img src=&quot;/assets/blog/gamedev/mythiclegion-min.jpg&quot; alt=&quot;Game dev channel&quot; style=&quot;padding: 5px; width: 700px;&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;bw-dev&quot;&gt;BW Dev&lt;/h2&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://www.youtube.com/c/BWDev/featured&quot;&gt;BW Dev channel&lt;/a&gt; is featuring a long running devlog about what I can only describe as a chill version factorio in the woods. I generally love the pace of the videos, the simple artstyle and the fact that you can see the author create and rework some elements multiple times over the months. You can either start with his first video, or catch up quickly with his &lt;a href=&quot;https://www.youtube.com/watch?v=zW8uvrxfw_A&quot;&gt;“What 2 YEARS of Unity Indie Game Development looks like”&lt;/a&gt; video.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;a href=&quot;https://www.youtube.com/c/BWDev/featured&quot;&gt;&lt;img src=&quot;/assets/blog/gamedev/bwdev-min.jpg&quot; alt=&quot;Game dev channel&quot; style=&quot;padding: 5px; width: 700px;&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;raymond-cripps&quot;&gt;Raymond Cripps&lt;/h2&gt;
+
+&lt;p&gt;Raymond Cripps is building a game called &lt;a href=&quot;https://www.projectfeline.com&quot;&gt;Project Feline&lt;/a&gt;, an anime-style parkour game. I like &lt;a href=&quot;https://www.youtube.com/c/RaymondCripps/featured&quot;&gt;this channel&lt;/a&gt; because the game looks ambitious and the author gives a lot of insights about how to tackle such a project. He also has a background in character animation, which is a domain I knew nothing about.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;a href=&quot;https://www.youtube.com/c/RaymondCripps/featured&quot;&gt;&lt;img src=&quot;/assets/blog/gamedev/feline-min.jpg&quot; alt=&quot;Game dev channel&quot; style=&quot;padding: 5px; width: 700px;&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;idoz&quot;&gt;IDoZ&lt;/h2&gt;
+
+&lt;p&gt;I really love the &lt;a href=&quot;https://www.youtube.com/watch?v=MghjiAIgOqI&quot;&gt;Archdale devlogs&lt;/a&gt; featured on &lt;a href=&quot;https://www.youtube.com/c/IDoZYT/videos&quot;&gt;this channel&lt;/a&gt;. The attention to detail of the developers is very impressive, and they get into how they got to such a polished looking game. On top of this, the voice over pacing is very calming and makes for a pleasant viewing experience.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;a href=&quot;https://www.youtube.com/c/IDoZYT/videos&quot;&gt;&lt;img src=&quot;/assets/blog/gamedev/archvale-min.jpg&quot; alt=&quot;Game dev channel&quot; style=&quot;padding: 5px; width: 700px;&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;michael-kocha&quot;&gt;Michael Kocha&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/c/MichaelKocha/videos&quot;&gt;This channel&lt;/a&gt;, and especially the &lt;a href=&quot;https://www.youtube.com/watch?v=tnVK_LJvHXs&quot;&gt;Swords ‘n Magic and Stuff&lt;/a&gt; devlogs are very interesting. It’s very interesting to see the progress of the author. He started alone, then &lt;a href=&quot;https://www.youtube.com/watch?v=oVdsfhsILe4&quot;&gt;brought some people along&lt;/a&gt; to build the more complex parts of the game. It’s then even more impressive to see him &lt;a href=&quot;https://www.youtube.com/watch?v=M0AjsNO3X4Q&quot;&gt;finally release a profesionnal looking trailer&lt;/a&gt; for the game and &lt;a href=&quot;https://store.steampowered.com/app/810040/Swords_n_Magic_and_Stuff/&quot;&gt;make it available on Steam&lt;/a&gt;!&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;a href=&quot;https://www.youtube.com/c/MichaelKocha/videos&quot;&gt;&lt;img src=&quot;/assets/blog/gamedev/sword-min.jpg&quot; alt=&quot;Game dev youtube channel&quot; style=&quot;padding: 5px; width: 700px;&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;sovereign&quot;&gt;Sovereign&lt;/h2&gt;
+
+&lt;p&gt;This &lt;a href=&quot;https://www.youtube.com/channel/UCU7OLO4-Vzxo1aW7mAuI3lg&quot;&gt;develog channel&lt;/a&gt; doesn’t have much content nor attention compared to others, but it makes it even more interesting. Some videos are less polished. It’s also great to see a game fairly early in development, with the author spending time on its core mechanics.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCU7OLO4-Vzxo1aW7mAuI3lg&quot;&gt;&lt;img src=&quot;/assets/blog/gamedev/sovereign-min.jpg&quot; alt=&quot;Game dev channel&quot; style=&quot;padding: 5px; width: 700px;&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;vimlark&quot;&gt;Vimlark&lt;/h2&gt;
+
+&lt;p&gt;Nick doesn’t exactly produces devlogs like the other people mentionned here and instead shares a lot about his game jam experiences &lt;a href=&quot;https://www.youtube.com/channel/UClqFSFR_H1yJJ7NRs8xxGCQ&quot;&gt;on his channel&lt;/a&gt;. My favorite is the youtuber game jam competition spanning accross multiple rounds, the &lt;a href=&quot;https://www.youtube.com/watch?v=eAChxPDx1x4&quot;&gt;Ultimate Game Jam&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;a href=&quot;https://www.youtube.com/channel/UClqFSFR_H1yJJ7NRs8xxGCQ&quot;&gt;&lt;img src=&quot;/assets/blog/gamedev/vimlark-min.jpg&quot; alt=&quot;Game dev channel with Godot&quot; style=&quot;padding: 5px; width: 700px;&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;jonas-tyroller&quot;&gt;Jonas Tyroller&lt;/h2&gt;
+
+&lt;p&gt;This is &lt;a href=&quot;https://www.youtube.com/channel/UC_p_9arduPuxM8DHTGIuSOg&quot;&gt;one of the bigger channels on this list&lt;/a&gt;, with a lot more “live action” segments than others. The tone might not please everyone, I’d either you’ll like Jonas or you won’t, but personnaly I enjoyed following the progress on his 2d platformer &lt;a href=&quot;https://www.youtube.com/watch?v=PjD6NquXyLw&quot;&gt;Will You Snail&lt;/a&gt;. He also creates videos to explain game design concepts, like this about: &lt;a href=&quot;https://www.youtube.com/watch?v=7L1B5YaxxoA&quot;&gt;Can We Make This Button Fun To Press?&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;a href=&quot;https://www.youtube.com/channel/UC_p_9arduPuxM8DHTGIuSOg&quot;&gt;&lt;img src=&quot;/assets/blog/gamedev/jonas-min.jpg&quot; alt=&quot;Game dev channel&quot; style=&quot;padding: 5px; width: 700px;&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;fairlii&quot;&gt;Fairlii&lt;/h2&gt;
+
+&lt;p&gt;What I find interesting with &lt;a href=&quot;https://www.youtube.com/channel/UCF8hefMp-gYUyYd9mC1_IGg&quot;&gt;this channel&lt;/a&gt; is that the first videos showcase a game that is… let’s say that it doesn’t look great. However the author feels pasionnated about building it, and you get to see his progress accross the many videos shared. I have to admit that I’m more interested in his latest series about &lt;a href=&quot;https://www.youtube.com/watch?v=bwkp_YVYCW0&quot;&gt;Gelli World&lt;/a&gt;, a ranching sim, than his original main series Lunal Lane.&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCF8hefMp-gYUyYd9mC1_IGg&quot;&gt;&lt;img src=&quot;/assets/blog/gamedev/fairli-min.jpg&quot; alt=&quot;Game dev channel&quot; style=&quot;padding: 5px; width: 700px;&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;but-also&quot;&gt;But Also…&lt;/h2&gt;
+
+&lt;p&gt;There are a lot of really cool channel out there that I haven’t mentionned in this list, so here are some more:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/c/GameEndeavor/featured&quot;&gt;Game Endeavour&lt;/a&gt; released some interesting videos about enemy behaviour.&lt;/li&gt;
+  &lt;li&gt;Goodgis shared a pretty &lt;a href=&quot;https://www.youtube.com/watch?v=flsPNcVH2D0&quot;&gt;complete retrospective of how he learned to build games&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Isto Inc. published &lt;a href=&quot;https://www.youtube.com/watch?v=dbAOlerw_qY&quot;&gt;a video about the past 2 years of dev&lt;/a&gt; on their very cool looking survival game.&lt;/li&gt;
+  &lt;li&gt;Pontypants talked about &lt;a href=&quot;https://www.youtube.com/watch?v=kzucp3ENhSw&quot;&gt;converting his game from Unreal Engine to Unity&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;BenBonk has &lt;a href=&quot;https://www.youtube.com/watch?v=2BvvVdq7NOo&quot;&gt;very green looking devlogs about slimes&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Kalechipps made some &lt;a href=&quot;https://www.youtube.com/watch?v=RbwFaoIavCY&quot;&gt;promising devlogs&lt;/a&gt;, but it seems like there isn’t any updates nowadays.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+       
+     </content>
+   </entry>
   
  
   
