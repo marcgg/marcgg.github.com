@@ -1,5 +1,3 @@
 Sitemap: https://marcgg.com/sitemap.xml
 
 User-agent: *
-Disallow: /photos/
-Disallow: /classes/
