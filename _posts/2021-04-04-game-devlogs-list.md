@@ -8,11 +8,11 @@ blog: true
 
 ---
 
-While working on [my iOS boxing app](/blog/2020/11/12/building-boxing-mobile-app-swiftui/) I started getting into watching devlogs to keep myself motivated. While there were not a lot of content for apps, I found a lot of very interesting, insightful or just funny indie game creators sharing their journey on Youtube.
+While working on [my iOS boxing app](/blog/2020/11/12/building-boxing-mobile-app-swiftui/) I started getting into watching devlogs to keep myself motivated. While there were not a lot of content for mobile apps, I found a lot of very interesting, insightful or just plain funny indie game creators sharing their journey on Youtube.
 
-Some are seasoned industry veterans, some are students just getting started, some are great designers struggling with coding, some are software engineers getting their hand into game design... and they all shared their work, their struggles and successes. Entertaining stuff!
+Some are seasoned industry veterans, some are students just getting started, some are great designers struggling with coding, some are software engineers getting their hand into game design... and they are all sharing their work, their struggles and successes. Entertaining stuff!
 
-This is a bit different from my usual content, but I figured I would highlight my favorite ones in this article and give you a quick reason to give this "genre" a try.
+This article is a bit different from my usual content, but I figured I would highlight my favorite ones in this article and give you a quick reason to give this "genre" a try.
 
 ## Patch Quest
 
@@ -30,7 +30,7 @@ The game itself looks cool, but what's the most interesting is to see the develo
 
 ## Let's Talk Game Design  
 
-Zayne is an experienced game designer building his own 2D platformer. On [his channel](https://www.youtube.com/c/LetsTalkGameDesign) he will explain the design decisions made from the most philosophical to the more trivial ones. The videos are often quite funny and more educational than others, but my guess is that the tone won't be for everybody. Check out [his first devlog](Making and Releasing My First Steam Game) and decide for yourself!
+Zayne is an experienced game designer building his own 2D platformer. On [his channel](https://www.youtube.com/c/LetsTalkGameDesign) he explains the design decisions he's making, ranging from philosophical to trivial. The videos are often quite funny and more educational than others, but my guess is that the tone won't be for everybody. Check out [his first devlog](Making and Releasing My First Steam Game) and decide for yourself!
 
 <div class="image-wrapper" style="text-align: center"><a href="https://www.youtube.com/c/LetsTalkGameDesign"><img src="/assets/blog/gamedev/letstalk-min.jpg" alt="Devlog youtube channel" style="padding: 5px; width: 700px;"/></a></div>
 
@@ -48,13 +48,13 @@ So far this one is more [a single video than an actual channel](https://www.yout
 
 ## BW Dev
 
-The [BW Dev channel](https://www.youtube.com/c/BWDev/featured) is featuring a long running devlog about what I can only describe as a chill version factorio in the woods. I generally love the pace of the videos, the simple artstyle and the fact that you can see the author create and rework some elements multiple times over the months. You can either start with his first video, or catch up quickly with his ["What 2 YEARS of Unity Indie Game Development looks like"](https://www.youtube.com/watch?v=zW8uvrxfw_A) video.
+The [BW Dev channel](https://www.youtube.com/c/BWDev/featured) is featuring a long running devlog about what I can only describe as a chill version of factorio happening the woods. I love the pace of the videos, the simple art style and the fact that you can see the author create and rework some elements multiple times over the months. You can either start with his first video, or catch up quickly with his ["What 2 YEARS of Unity Indie Game Development looks like"](https://www.youtube.com/watch?v=zW8uvrxfw_A) video.
 
 <div class="image-wrapper" style="text-align: center"><a href="https://www.youtube.com/c/BWDev/featured"><img src="/assets/blog/gamedev/bwdev-min.jpg" alt="Game dev channel" style="padding: 5px; width: 700px;"/></a></div>
 
 ## Raymond Cripps  
 
-Raymond Cripps is building a game called [Project Feline](https://www.projectfeline.com), an anime-style parkour game. I like [this channel](https://www.youtube.com/c/RaymondCripps/featured) because the game looks ambitious and the author gives a lot of insights about how to tackle such a project. He also has a background in character animation, which is a domain I knew nothing about.
+Raymond Cripps is building a game called [Project Feline](https://www.projectfeline.com), an anime-style parkour game. I like [this channel](https://www.youtube.com/c/RaymondCripps/featured) because the game looks ambitious and the author gives a lot of insights about how to tackle such a large project. He also has a background in character animation, which is a domain I knew nothing about.
 
 <div class="image-wrapper" style="text-align: center"><a href="https://www.youtube.com/c/RaymondCripps/featured"><img src="/assets/blog/gamedev/feline-min.jpg" alt="Game dev channel" style="padding: 5px; width: 700px;"/></a></div>
 
@@ -72,7 +72,7 @@ I really love the [Archdale devlogs](https://www.youtube.com/watch?v=MghjiAIgOqI
 
 ## Sovereign
 
-This [develog channel](https://www.youtube.com/channel/UCU7OLO4-Vzxo1aW7mAuI3lg) doesn't have much content nor attention compared to others, but it makes it even more interesting. Some videos are less polished. It's also great to see a game fairly early in development, with the author spending time on its core mechanics.
+This [develog channel](https://www.youtube.com/channel/UCU7OLO4-Vzxo1aW7mAuI3lg) doesn't have much content nor viewership compared to others, but it makes it even more interesting to me. Some videos are less polished, but it's also great to see a game fairly early in development, with the author spending time on its core mechanics.
 
 <div class="image-wrapper" style="text-align: center"><a href="https://www.youtube.com/channel/UCU7OLO4-Vzxo1aW7mAuI3lg"><img src="/assets/blog/gamedev/sovereign-min.jpg" alt="Game dev channel" style="padding: 5px; width: 700px;"/></a></div>
 
@@ -84,7 +84,7 @@ Nick doesn't exactly produces devlogs like the other people mentionned here and 
 
 ## Jonas Tyroller
 
-This is [one of the bigger channels on this list](https://www.youtube.com/channel/UC_p_9arduPuxM8DHTGIuSOg), with a lot more "live action" segments than others. The tone might not please everyone, I'd either you'll like Jonas or you won't, but personnaly I enjoyed following the progress on his 2d platformer [Will You Snail](https://www.youtube.com/watch?v=PjD6NquXyLw). He also creates videos to explain game design concepts, like this about: [Can We Make This Button Fun To Press?](https://www.youtube.com/watch?v=7L1B5YaxxoA).
+This is [one of the bigger channels on this list](https://www.youtube.com/channel/UC_p_9arduPuxM8DHTGIuSOg), with a lot more "live action" segments than others. The tone might not please everyone: either you'll like Jonas or you won't. Personnaly I enjoyed following the progress on his 2d platformer [Will You Snail](https://www.youtube.com/watch?v=PjD6NquXyLw). He also creates videos to explain game design concepts, like this one: [Can We Make This Button Fun To Press?](https://www.youtube.com/watch?v=7L1B5YaxxoA).
 
 <div class="image-wrapper" style="text-align: center"><a href="https://www.youtube.com/channel/UC_p_9arduPuxM8DHTGIuSOg"><img src="/assets/blog/gamedev/jonas-min.jpg" alt="Game dev channel" style="padding: 5px; width: 700px;"/></a></div>
 

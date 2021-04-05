@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2021-04-04T21:47:33+02:00</updated>
+ <updated>2021-04-05T14:31:11+02:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -19,11 +19,11 @@
      <updated>2021-04-04T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2021/04/04/game-devlogs-list</id>
      <content type="html">
-       &lt;p&gt;While working on &lt;a href=&quot;/blog/2020/11/12/building-boxing-mobile-app-swiftui/&quot;&gt;my iOS boxing app&lt;/a&gt; I started getting into watching devlogs to keep myself motivated. While there were not a lot of content for apps, I found a lot of very interesting, insightful or just funny indie game creators sharing their journey on Youtube.&lt;/p&gt;
+       &lt;p&gt;While working on &lt;a href=&quot;/blog/2020/11/12/building-boxing-mobile-app-swiftui/&quot;&gt;my iOS boxing app&lt;/a&gt; I started getting into watching devlogs to keep myself motivated. While there were not a lot of content for mobile apps, I found a lot of very interesting, insightful or just plain funny indie game creators sharing their journey on Youtube.&lt;/p&gt;
 
-&lt;p&gt;Some are seasoned industry veterans, some are students just getting started, some are great designers struggling with coding, some are software engineers getting their hand into game design… and they all shared their work, their struggles and successes. Entertaining stuff!&lt;/p&gt;
+&lt;p&gt;Some are seasoned industry veterans, some are students just getting started, some are great designers struggling with coding, some are software engineers getting their hand into game design… and they are all sharing their work, their struggles and successes. Entertaining stuff!&lt;/p&gt;
 
-&lt;p&gt;This is a bit different from my usual content, but I figured I would highlight my favorite ones in this article and give you a quick reason to give this “genre” a try.&lt;/p&gt;
+&lt;p&gt;This article is a bit different from my usual content, but I figured I would highlight my favorite ones in this article and give you a quick reason to give this “genre” a try.&lt;/p&gt;
 
 &lt;h2 id=&quot;patch-quest&quot;&gt;Patch Quest&lt;/h2&gt;
 
@@ -41,7 +41,7 @@
 
 &lt;h2 id=&quot;lets-talk-game-design&quot;&gt;Let’s Talk Game Design&lt;/h2&gt;
 
-&lt;p&gt;Zayne is an experienced game designer building his own 2D platformer. On &lt;a href=&quot;https://www.youtube.com/c/LetsTalkGameDesign&quot;&gt;his channel&lt;/a&gt; he will explain the design decisions made from the most philosophical to the more trivial ones. The videos are often quite funny and more educational than others, but my guess is that the tone won’t be for everybody. Check out &lt;a href=&quot;Making and Releasing My First Steam Game&quot;&gt;his first devlog&lt;/a&gt; and decide for yourself!&lt;/p&gt;
+&lt;p&gt;Zayne is an experienced game designer building his own 2D platformer. On &lt;a href=&quot;https://www.youtube.com/c/LetsTalkGameDesign&quot;&gt;his channel&lt;/a&gt; he explains the design decisions he’s making, ranging from philosophical to trivial. The videos are often quite funny and more educational than others, but my guess is that the tone won’t be for everybody. Check out &lt;a href=&quot;Making and Releasing My First Steam Game&quot;&gt;his first devlog&lt;/a&gt; and decide for yourself!&lt;/p&gt;
 
 &lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;a href=&quot;https://www.youtube.com/c/LetsTalkGameDesign&quot;&gt;&lt;img src=&quot;/assets/blog/gamedev/letstalk-min.jpg&quot; alt=&quot;Devlog youtube channel&quot; style=&quot;padding: 5px; width: 700px;&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
 
@@ -59,13 +59,13 @@
 
 &lt;h2 id=&quot;bw-dev&quot;&gt;BW Dev&lt;/h2&gt;
 
-&lt;p&gt;The &lt;a href=&quot;https://www.youtube.com/c/BWDev/featured&quot;&gt;BW Dev channel&lt;/a&gt; is featuring a long running devlog about what I can only describe as a chill version factorio in the woods. I generally love the pace of the videos, the simple artstyle and the fact that you can see the author create and rework some elements multiple times over the months. You can either start with his first video, or catch up quickly with his &lt;a href=&quot;https://www.youtube.com/watch?v=zW8uvrxfw_A&quot;&gt;“What 2 YEARS of Unity Indie Game Development looks like”&lt;/a&gt; video.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&quot;https://www.youtube.com/c/BWDev/featured&quot;&gt;BW Dev channel&lt;/a&gt; is featuring a long running devlog about what I can only describe as a chill version of factorio happening the woods. I love the pace of the videos, the simple art style and the fact that you can see the author create and rework some elements multiple times over the months. You can either start with his first video, or catch up quickly with his &lt;a href=&quot;https://www.youtube.com/watch?v=zW8uvrxfw_A&quot;&gt;“What 2 YEARS of Unity Indie Game Development looks like”&lt;/a&gt; video.&lt;/p&gt;
 
 &lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;a href=&quot;https://www.youtube.com/c/BWDev/featured&quot;&gt;&lt;img src=&quot;/assets/blog/gamedev/bwdev-min.jpg&quot; alt=&quot;Game dev channel&quot; style=&quot;padding: 5px; width: 700px;&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;raymond-cripps&quot;&gt;Raymond Cripps&lt;/h2&gt;
 
-&lt;p&gt;Raymond Cripps is building a game called &lt;a href=&quot;https://www.projectfeline.com&quot;&gt;Project Feline&lt;/a&gt;, an anime-style parkour game. I like &lt;a href=&quot;https://www.youtube.com/c/RaymondCripps/featured&quot;&gt;this channel&lt;/a&gt; because the game looks ambitious and the author gives a lot of insights about how to tackle such a project. He also has a background in character animation, which is a domain I knew nothing about.&lt;/p&gt;
+&lt;p&gt;Raymond Cripps is building a game called &lt;a href=&quot;https://www.projectfeline.com&quot;&gt;Project Feline&lt;/a&gt;, an anime-style parkour game. I like &lt;a href=&quot;https://www.youtube.com/c/RaymondCripps/featured&quot;&gt;this channel&lt;/a&gt; because the game looks ambitious and the author gives a lot of insights about how to tackle such a large project. He also has a background in character animation, which is a domain I knew nothing about.&lt;/p&gt;
 
 &lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;a href=&quot;https://www.youtube.com/c/RaymondCripps/featured&quot;&gt;&lt;img src=&quot;/assets/blog/gamedev/feline-min.jpg&quot; alt=&quot;Game dev channel&quot; style=&quot;padding: 5px; width: 700px;&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
 
@@ -83,7 +83,7 @@
 
 &lt;h2 id=&quot;sovereign&quot;&gt;Sovereign&lt;/h2&gt;
 
-&lt;p&gt;This &lt;a href=&quot;https://www.youtube.com/channel/UCU7OLO4-Vzxo1aW7mAuI3lg&quot;&gt;develog channel&lt;/a&gt; doesn’t have much content nor attention compared to others, but it makes it even more interesting. Some videos are less polished. It’s also great to see a game fairly early in development, with the author spending time on its core mechanics.&lt;/p&gt;
+&lt;p&gt;This &lt;a href=&quot;https://www.youtube.com/channel/UCU7OLO4-Vzxo1aW7mAuI3lg&quot;&gt;develog channel&lt;/a&gt; doesn’t have much content nor viewership compared to others, but it makes it even more interesting to me. Some videos are less polished, but it’s also great to see a game fairly early in development, with the author spending time on its core mechanics.&lt;/p&gt;
 
 &lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCU7OLO4-Vzxo1aW7mAuI3lg&quot;&gt;&lt;img src=&quot;/assets/blog/gamedev/sovereign-min.jpg&quot; alt=&quot;Game dev channel&quot; style=&quot;padding: 5px; width: 700px;&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
 
@@ -95,7 +95,7 @@
 
 &lt;h2 id=&quot;jonas-tyroller&quot;&gt;Jonas Tyroller&lt;/h2&gt;
 
-&lt;p&gt;This is &lt;a href=&quot;https://www.youtube.com/channel/UC_p_9arduPuxM8DHTGIuSOg&quot;&gt;one of the bigger channels on this list&lt;/a&gt;, with a lot more “live action” segments than others. The tone might not please everyone, I’d either you’ll like Jonas or you won’t, but personnaly I enjoyed following the progress on his 2d platformer &lt;a href=&quot;https://www.youtube.com/watch?v=PjD6NquXyLw&quot;&gt;Will You Snail&lt;/a&gt;. He also creates videos to explain game design concepts, like this about: &lt;a href=&quot;https://www.youtube.com/watch?v=7L1B5YaxxoA&quot;&gt;Can We Make This Button Fun To Press?&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This is &lt;a href=&quot;https://www.youtube.com/channel/UC_p_9arduPuxM8DHTGIuSOg&quot;&gt;one of the bigger channels on this list&lt;/a&gt;, with a lot more “live action” segments than others. The tone might not please everyone: either you’ll like Jonas or you won’t. Personnaly I enjoyed following the progress on his 2d platformer &lt;a href=&quot;https://www.youtube.com/watch?v=PjD6NquXyLw&quot;&gt;Will You Snail&lt;/a&gt;. He also creates videos to explain game design concepts, like this one: &lt;a href=&quot;https://www.youtube.com/watch?v=7L1B5YaxxoA&quot;&gt;Can We Make This Button Fun To Press?&lt;/a&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;image-wrapper&quot; style=&quot;text-align: center&quot;&gt;&lt;a href=&quot;https://www.youtube.com/channel/UC_p_9arduPuxM8DHTGIuSOg&quot;&gt;&lt;img src=&quot;/assets/blog/gamedev/jonas-min.jpg&quot; alt=&quot;Game dev channel&quot; style=&quot;padding: 5px; width: 700px;&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
 
