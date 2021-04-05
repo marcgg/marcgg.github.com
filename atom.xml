@@ -23,13 +23,7 @@ title : Atom Feed
      <updated>{{ post.date | date_to_xmlschema }}</updated>
      <id>{{ site.production_url }}{{ post.id }}</id>
      <content type="html">
-       {{ post.content | xml_escape }}
-       {% if post.tag == "book" %}
-         &lt;p&gt;
-           If you would like to get the book, you can find it here:
-           &lt;a href="{{post.booklink | xml_escape}}" &gt; {{post.title | xml_escape}} &lt;/a&gt;
-         &lt;/p&gt;
-       {% endif %}
+       {{ post.description | xml_escape }}
      </content>
    </entry>
   {% endif %}
