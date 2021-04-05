@@ -4,8 +4,6 @@ description: "This is the one reason that got me to switch to vim after
 experimenting for years with a lot of different editors. Promised, it
 won't be about emacs vs vim."
 tag: Dev
-redirect_from:
-- /2012/09/04/one-reason-to-switch-to-vim-editor/
 socialmediapreview: "Switching to Vim"
 ---
 

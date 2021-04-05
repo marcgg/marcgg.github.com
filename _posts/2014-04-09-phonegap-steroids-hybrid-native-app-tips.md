@@ -42,7 +42,7 @@ for a webview trying to pass for a native view, it's not enough.
 ### 300ms Tap Delay
 
 Mobile browsers implement a delay on tap to check if you tried to double
-tap or not. Overall it goes: touchstart -\> touchend -\> wait 300ms -\>
+tap or not. Overall it goes: touchstart -> touchend -> wait 300ms ->
 send click. This results in a terrible experience when navigating your
 app as it feels slow and/or broken.
 
@@ -85,7 +85,7 @@ Just in case this answer disapears, here's what it looks like:
 // Triple-licensed: Public Domain, MIT and WTFPL license - share and enjoy!
 
 (function($) {
-  var IS\_IOS = /iphone|ipad/i.test(navigator.userAgent);
+  var IS_IOS = /iphone|ipad/i.test(navigator.userAgent);
   $.fn.nodoubletapzoom = function() {
 	if (IS_IOS)
 	  $(this).bind('touchstart', function preventZoom(e) {
@@ -171,7 +171,7 @@ Easy!
 
 {% highlight css %}
 -webkit-appearance: carret;
--webkit-appearance: none; /\* alernatively \*/
+-webkit-appearance: none; /* alernatively */
 {% endhighlight %}
 
 You can read more about this [here][15].
@@ -190,8 +190,8 @@ doesn't look very "native" once embeded in a Steroids JS webview. This is especi
 for images. Change this using:
 
 {% highlight css %}
--webkit-tap-highlight-color: #123456; /\* To change it \*/
--webkit-tap-highlight-color: transparent; /\* To remove it \*/
+-webkit-tap-highlight-color: #123456; /* To change it */
+-webkit-tap-highlight-color: transparent; /* To remove it */
 {% endhighlight %}
 
 I found that changing the color feels better than removing it.
@@ -230,11 +230,11 @@ it's a pain.
 > [wikipedia][19]
 
 The short version of how to deal with it is pretty straightforward: create images twice as big, call them
-my\_image@2x.jpg and resize them in CSS.
+my_image@2x.jpg and resize them in CSS.
 
 {% highlight css %}
-background: url(my\_image.jpg);
-background-size: 100px 100px; /\* with my\_image.jpg being 200x200 px \*/
+background: url(my_image.jpg);
+background-size: 100px 100px; /* with my_image.jpg being 200x200 px */
 {% endhighlight %}
 
 ### Don't Bother With Normal Size
@@ -263,7 +263,7 @@ simpler, and I ended adding a DOM element and styling it like this:
 {% endhighlight %}
 
 {% highlight css %}
-.physical\_1px{
+.physical_1px{
   background-image: linear-gradient(0deg, #DFDFDF, #DFDFDF 50%, transparent 50%);
   background-size: 100% 1px;
   background-repeat: no-repeat;
@@ -323,8 +323,8 @@ This happened when I tried to apply an animation to a div with a linear-gradient
 > and drawing tools can be a hassle. However, using CSS for those tasks moves that
 > hassle from the designer's computer to the target's CPU. Gradients, shadows,
 > and other decorations in CSS should be used only when necessary
-> (e.g. when the shape is dynamic based on the content) - \*\*otherwise, static images
-> are always faster\*\*. On very low-end platforms, it's even advised to use static images
+> (e.g. when the shape is dynamic based on the content) - **otherwise, static images
+> are always faster**. On very low-end platforms, it's even advised to use static images
 > for some of the text if possible.
 >
 > [webkit.org][27]
@@ -376,9 +376,9 @@ what I tried to achieve. I also didn't like the MVC solution proposed by
 basic steroids scaffolding. In the end what worked for me was quite
 view-centric approach that looked like this:
 
-- /app/views/my\_scope/action.html (a view in a separate webview)
-- /app/controllers/my\_scope/action.js (all the JS related to a view)
-- /app/models/data\_persistence.js (everything that is transversal and
+- /app/views/my_scope/action.html (a view in a separate webview)
+- /app/controllers/my_scope/action.js (all the JS related to a view)
+- /app/models/data_persistence.js (everything that is transversal and
   relates to data)
 - /www/javascripts/application.js (shared code between all views)
 
@@ -434,7 +434,7 @@ look like this:
 {% endhighlight %}
 
 The loader overlay is to prevent any clicking to happened while the
-loader is present on the screen. The retry\_load and text\_load are the
+loader is present on the screen. The retry_load and text_load are the
 elements displayed when it succeeds or fails.
 
 {% highlight css %}
@@ -451,15 +451,15 @@ elements displayed when it succeeds or fails.
   color: #fff;
   text-align: center;
 }
-# retry\_load{
+# retry_load{
   display: none;
 }
-.loader\_content{
+.loader_content{
   display: block;
   padding: 70px 0px;
 }
 
-# loader\_overlay{
+# loader_overlay{
   position: absolute;
   top: 0px;
   height: 620px;
@@ -545,7 +545,7 @@ document.addEventListener("deviceready", function(){
 
 function localize(language){
   $("body").attr("id", language)
-  $("\*[data-t]").each(function(){
+  $("*[data-t]").each(function(){
 	$(this).html(I18n[language][$this.data("t")])
   })
 }
@@ -566,8 +566,8 @@ As explained above, I internationalized my whole app. Because of this I'd have a
 Preloading views fixed this.
 
 {% highlight javascript %}
-var someView = new steroids.views.WebView("/views/settings/some\_view.html");
-var anotherView = new steroids.views.WebView("/views/settings/another\_view.html");
+var someView = new steroids.views.WebView("/views/settings/some_view.html");
+var anotherView = new steroids.views.WebView("/views/settings/another_view.html");
 
 function preload(){
   someView.preload()
@@ -585,10 +585,10 @@ setTimeout(preload, 3000)
 
 Learn more about it on [AppGyver's website][41].
 
-\_Note that this not fully functional in production on my app because of
+_Note that this not fully functional in production on my app because of
 an issue in Steroids JS where loading the navigation bar in a certain
 way disrupts preloading. Because of this you will see some minor
-blinking in some internal setting screens. It will be fixed soon :)\_
+blinking in some internal setting screens. It will be fixed soon :)_
 
 
 ### Getting Out Of The Background
@@ -609,18 +609,18 @@ Using [the postMessage API][42]
 to communicate between views is the way to go.
 
 {% highlight javascript %}
-/\* In the first view \*/
-window.postMessage({ type: "something\_happened" }, "\*")
+/* In the first view */
+window.postMessage({ type: "something_happened" }, "*")
 
-/\* In the second view \*/
+/* In the second view */
 window.addEventListener("message", function(msg) {
-  if(msg.data.type == "something\_happened"){
+  if(msg.data.type == "something_happened"){
   }
 })
 {% endhighlight %}
 
-\_Right now there is an open issue when adding alerts in the event listener
-as discussed [on the forum)[http://forums.appgyver.com/#!/steroids:sometimes-alerts-block-th)\_.
+_Right now there is an open issue when adding alerts in the event listener
+as discussed [on the forum)[http://forums.appgyver.com/#!/steroids:sometimes-alerts-block-th)_.
 
 
 

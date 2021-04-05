@@ -4,8 +4,6 @@ description: "RubyMotion allows you to write native iOS applications
 using Ruby. Here I'll try to explain how to customize the UISlider
 element's look."
 tag: iphone
-redirect_from:
-- /2012/10/22/custom-slider-ios-rubymotion/
 socialmediapreview: "RubyMotion Custom Slider"
 ---
 

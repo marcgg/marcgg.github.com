@@ -2,8 +2,6 @@
 title: Thoughts On Company Procedures
 description: In a team, you’re bound to create some structuring processes. But when does it becomes too much? Is there some golden hammer out there to fix all our organizational needs? …… no, there isn’t (but you should still give this article a read anyways).
 tag: Startup
-redirect_from:
-- /2014/07/28/company-process-red-tape/
 socialmediapreview: "Regarding Red Tape"
 ---
 

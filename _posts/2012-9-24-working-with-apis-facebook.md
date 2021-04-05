@@ -3,8 +3,6 @@ title: "The Risks of Working With Another Company's API"
 description: "A point of view and advices to people wanting to build on top of an existing platform such as Facebook or Twitter."
 tag: Product
 publictag: Programming
-redirect\_from:
-- /2012/09/24/working-with-apis-facebook/
 socialmediapreview: "Working with APIs"
 ---
 

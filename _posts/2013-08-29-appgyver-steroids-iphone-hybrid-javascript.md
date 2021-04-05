@@ -12,7 +12,6 @@ wrote another article with [tips & tricks to know when building a
 Steroids.js app](/blog/2014/04/09/phonegap-steroids-hybrid-native-app-tips/) (or any hybrid app really).
 300ms delay, overscroll, text rendering, 1px borders, local storage, performances, i18n ... it's all there!\*
 
-
 As I wrote before, I like the idea of developing mobile applications. I
 don't plan to focus exclusively on it, but having an iPhone app as a pet
 project seems pretty cool and creating something for Android could be
@@ -164,7 +163,7 @@ steroids.config.tabBar.tabs = [
  {
    title: "Fun"
    icon: "icons/myicon@2x.png"
-   location: "http://localhost/views/fun/have\_it.html"
+   location: "http://localhost/views/fun/have_it.html"
  },
  {
    title: "Excitement"
@@ -180,7 +179,7 @@ and... tadaaaa:
 
 <div style="text-align: center"><img src="/assets/blog/app_steroids.jpg" /></div>
 
-The text displayed is contained in the have\_it.html file placed in the
+The text displayed is contained in the have_it.html file placed in the
 project.
 
 It is really simple and, even if this was written with javascript, it
