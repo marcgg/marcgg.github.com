@@ -2,7 +2,7 @@
 layout: page
 title: "Four Rules of Simple Design"
 author: "Corey Haines"
-link: "https://leanpub.com/4rulesofsimpledesign"
+linkus: "https://leanpub.com/4rulesofsimpledesign"
 img: "rules-cover.jpg"
 score: 13
 read: true

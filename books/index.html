@@ -2,26 +2,9 @@
 layout: page
 title : Book Reviews (Leadership, Technology, Startups...)
 category: books
-description: "Very short book reviews on the topics of leadership, technology, startups, management or self improvement."
+description: "Short and to the point book reviews on the topics of leadership, technology, startups, management or self improvement."
 ogimage: books.jpg
 ---
-
-<div style="display: none;">
-  <div id="buy-popin">
-    <h3 id="buy-title"></h3>
-    <p>
-      <a id="store-us" target="_blank" class="store" href="#">→ 🇺🇸  Get it from Amazon US</a>
-      <a id="store-fr" target="_blank" class="store" href="#">→ 🇫🇷  L'obtenir depuis Amazon France</a>
-      <a id="store-other" target="_blank" class="store" href="#">→ This book is not available on Amazon. Get it now from this external website.</a>
-    <p>
-    <h4>Audiobook</h4>
-    <p>
-      If you prefer, you can also find it as an audiobook available on Audible
-      <a id="store-us" target="_blank" class="store" href="https://amzn.to/2R5h6yJ">→ 🇺🇸  Get it from Audible US</a>
-      <a id="store-fr" target="_blank" class="store" href="https://amzn.to/35RPjpu">→ 🇫🇷  L'obtenir depuis Audible France</a>
-    </p>
-  </div>
-</div>
 
 <div id="all-posts">
   <div id="book-review" style="margin-top: 20px;">
@@ -42,12 +25,12 @@ ogimage: books.jpg
   {% for book in sorted %}
     <div class="single-post master-book-data" data-author="{{book.author}}" data-title="{{ book.title }}" data-link="{{book.link}}" data-linkfr="{{book.linkfr}}" data-linkus="{{book.linkus}}">
       <div class="title">
-        <a href="#" class="buy-popin">{{book.title}}</a>
+        <a href="{{book.linkus}}">{{book.title}}</a>
         <div class="author">by {{book.author}}</div>
       </div>
 
       <p class="description">
-        <a href="#" class="book-cover-entry buy-popin">
+        <a href="{{book.linkus}}" class="book-cover-entry">
           <img src="/assets/books/{{book.img}}" alt="{{book.title}} book cover" />
           <br>
           &rarr; <span class="buy-book">Buy this book</span>
@@ -75,7 +58,3 @@ ogimage: books.jpg
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="/assets/js/featherlight.js" type="text/javascript" charset="utf-8"></script>
-<script src="/assets/js/books.js"></script>
-<link href="/assets/css/featherlight.css?body=1" rel="stylesheet" type="text/css" media="all">
-

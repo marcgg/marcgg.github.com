@@ -2,7 +2,7 @@
 layout: page
 title: "why's (poignant) Guide to Ruby"
 author: "why the lucky stiff"
-link: "http://www.rubyinside.com/media/poignant-guide.pdf"
+linkus: "http://www.rubyinside.com/media/poignant-guide.pdf"
 img: "poignant-cover.jpg"
 score: 14
 read: true
