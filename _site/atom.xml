@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2021-11-21T11:17:07+01:00</updated>
+ <updated>2022-01-17T21:52:07+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -18,7 +18,7 @@
      <updated>2021-04-04T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2021/04/04/game-devlogs-list</id>
      <content type="html">
-       To get inspired for my own projects or just to enjoy some entertaining content I fell deep into a game devlog rabbit hole, following people as they build their project. Here are some of the channels I've enjoyed the most so far.
+       To get inspired for my own projects or just to enjoy some entertaining content I fell deep into a game devlog rabbit hole, following people as they build their project. Here are some of the channels I&apos;ve enjoyed the most so far.
      </content>
    </entry>
   
@@ -30,7 +30,7 @@
      <updated>2021-03-27T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2021/03/27/one-on-one-format</id>
      <content type="html">
-       Here is the way I conduct 1:1 meetings with people in my engineering team. I'll go over the objective, schedule but also the content and give some feedback about using this particular format for the past few years.
+       Here is the way I conduct 1:1 meetings with people in my engineering team. I&apos;ll go over the objective, schedule but also the content and give some feedback about using this particular format for the past few years.
      </content>
    </entry>
   
@@ -42,7 +42,7 @@
      <updated>2020-11-12T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2020/11/12/building-boxing-mobile-app-swiftui</id>
      <content type="html">
-       I've spend the last few months building a boxing app to train at home with SwiftUI. In this article I'll share a lot of the things I've learned. This includes ASO, app design with Figma, keyword optimisation, boxing algorithms, monetization, SEO, social media marketing, localisation and more... It's a big one, so get ready!
+       I&apos;ve spend the last few months building a boxing app to train at home with SwiftUI. In this article I&apos;ll share a lot of the things I&apos;ve learned. This includes ASO, app design with Figma, keyword optimisation, boxing algorithms, monetization, SEO, social media marketing, localisation and more... It&apos;s a big one, so get ready!
      </content>
    </entry>
   
@@ -66,7 +66,7 @@
      <updated>2020-05-25T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2020/05/25/remote-distributed-synchronous-asynchronous</id>
      <content type="html">
-       A lot of people tend to mix people working remotely and people working asynchronously. While it's often the case that people not co-located in a single office will prefer asynchronous communication, that's not a given.
+       A lot of people tend to mix people working remotely and people working asynchronously. While it&apos;s often the case that people not co-located in a single office will prefer asynchronous communication, that&apos;s not a given.
      </content>
    </entry>
   
@@ -78,7 +78,7 @@
      <updated>2020-05-22T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2020/05/22/certainty-of-failure</id>
      <content type="html">
-       It's a given that mistakes are bound to happen. The interesting question is how to react when an error is made and how to improve.
+       It&apos;s a given that mistakes are bound to happen. The interesting question is how to react when an error is made and how to improve.
      </content>
    </entry>
   
@@ -102,7 +102,7 @@
      <updated>2020-04-22T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2020/04/22/automatic-image-preview</id>
      <content type="html">
-       I wanted to have nice looking social media link previews for Linkedin, Twitter and Facebook... but I also didn't want to create them manually for each articles. Here's how I did it programatically with stock photos, Ruby scripts, the Jekyll static site generator and a Duotone tool!
+       I wanted to have nice looking social media link previews for Linkedin, Twitter and Facebook... but I also didn&apos;t want to create them manually for each articles. Here&apos;s how I did it programatically with stock photos, Ruby scripts, the Jekyll static site generator and a Duotone tool!
      </content>
    </entry>
   
@@ -126,7 +126,7 @@
      <updated>2020-04-11T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2020/04/11/add-text-image-rmagick-imagemagick</id>
      <content type="html">
-       Dead simple example of adding a centered text to a jpg image using Ruby, RMagick and ImageMagick. I've also added reference to the documentation to go further.
+       Dead simple example of adding a centered text to a jpg image using Ruby, RMagick and ImageMagick. I&apos;ve also added reference to the documentation to go further.
      </content>
    </entry>
   
@@ -138,7 +138,7 @@
      <updated>2020-04-08T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2020/04/08/rails-update-bang</id>
      <content type="html">
-       Ruby on Rails gives you update and update! ('update bang') to modify your records. However there is a situation where you shouldn't use one.
+       Ruby on Rails gives you update and update! (&apos;update bang&apos;) to modify your records. However there is a situation where you shouldn&apos;t use one.
      </content>
    </entry>
   
@@ -222,7 +222,7 @@
      <updated>2018-06-11T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2018/06/11/git-commit-all-the-time</id>
      <content type="html">
-       How often should you commit with Git? This one is specific to every developer, personally I do it very often. Here's why and how to do the same without ending up with an unreadable git history.
+       How often should you commit with Git? This one is specific to every developer, personally I do it very often. Here&apos;s why and how to do the same without ending up with an unreadable git history.
      </content>
    </entry>
   
@@ -234,7 +234,7 @@
      <updated>2018-05-15T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2018/05/15/expressing-intent-comments-ruby</id>
      <content type="html">
-       There's an endless discussion going on between programmers about the utility of comments and how to express intent in code.  Let's push it a bit further with an exemple, and see a few different ways of how to clearly define that a variable is an ordered array of names.
+       There&apos;s an endless discussion going on between programmers about the utility of comments and how to express intent in code.  Let&apos;s push it a bit further with an exemple, and see a few different ways of how to clearly define that a variable is an ordered array of names.
      </content>
    </entry>
   
@@ -270,7 +270,7 @@
      <updated>2018-03-20T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2018/03/20/splitting-releases</id>
      <content type="html">
-       Reducing the size of your releases is a great thing you can do to improve the health of app. However it's not always easy to get into this mindset...
+       Reducing the size of your releases is a great thing you can do to improve the health of app. However it&apos;s not always easy to get into this mindset...
      </content>
    </entry>
   
@@ -282,7 +282,7 @@
      <updated>2018-03-18T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2018/03/18/software-quality-focus</id>
      <content type="html">
-       When building software it's often hard to know if time is spent on the right thing, if this refactoring is worth the time or where to add even more tests. Here is a simple way to think about this.
+       When building software it&apos;s often hard to know if time is spent on the right thing, if this refactoring is worth the time or where to add even more tests. Here is a simple way to think about this.
      </content>
    </entry>
   
@@ -294,7 +294,7 @@
      <updated>2018-02-18T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2018/02/18/todo-list-notebook-system</id>
      <content type="html">
-       Here's how I've been using notebooks and a 4-colors pen to handle any small tasks coming my way.
+       Here&apos;s how I&apos;ve been using notebooks and a 4-colors pen to handle any small tasks coming my way.
      </content>
    </entry>
   
@@ -325,12 +325,12 @@
  
   
    <entry>
-     <title>Don't Simply Be The Manager You'd Love To Have</title>
+     <title>Don&apos;t Simply Be The Manager You&apos;d Love To Have</title>
      <link href="https://marcgg.com/blog/2017/09/04/manager-you-want/"/>
      <updated>2017-09-04T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2017/09/04/manager-you-want</id>
      <content type="html">
-       Defining your style of management is hard and sometimes you need to look beyond the 'if it worked for me it'll work for them' mentality.
+       Defining your style of management is hard and sometimes you need to look beyond the &apos;if it worked for me it&apos;ll work for them&apos; mentality.
      </content>
    </entry>
   
@@ -342,7 +342,7 @@
      <updated>2017-08-22T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2017/08/22/starting-with-management</id>
      <content type="html">
-       I've changed a year ago from being a software developer to actually leading the technical team as director of engineering. This wasn't always easy, but having the right mindset clearly helped.
+       I&apos;ve changed a year ago from being a software developer to actually leading the technical team as director of engineering. This wasn&apos;t always easy, but having the right mindset clearly helped.
      </content>
    </entry>
   
@@ -354,7 +354,7 @@
      <updated>2017-08-20T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2017/08/20/blogging-about-management</id>
      <content type="html">
-       In this article I try to explain why I've not written much about management even if it has been my focus for a year now, and how I plan on changing this :)
+       In this article I try to explain why I&apos;ve not written much about management even if it has been my focus for a year now, and how I plan on changing this :)
      </content>
    </entry>
   
@@ -366,7 +366,7 @@
      <updated>2017-06-30T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2017/06/30/recruitment-process</id>
      <content type="html">
-       Recruiting is hard, and defining a good process is very important. You don't want it to be too light or you might hire someone not fit for the job, but not too heavy or you'll waste time or discourage valid applicants. Here is the way we do it at my current company.
+       Recruiting is hard, and defining a good process is very important. You don&apos;t want it to be too light or you might hire someone not fit for the job, but not too heavy or you&apos;ll waste time or discourage valid applicants. Here is the way we do it at my current company.
      </content>
    </entry>
   
@@ -378,7 +378,7 @@
      <updated>2017-03-13T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2017/03/13/mysql-viewport-gis</id>
      <content type="html">
-       MySQL 5.7 brought a lot of new interesting geospatial features. It's now easier to find elements contained within a polygon and compute distances using latitude and logitude. In this article I'll explain how to do a viewport search using MySQL.
+       MySQL 5.7 brought a lot of new interesting geospatial features. It&apos;s now easier to find elements contained within a polygon and compute distances using latitude and logitude. In this article I&apos;ll explain how to do a viewport search using MySQL.
      </content>
    </entry>
   
@@ -426,7 +426,7 @@
      <updated>2016-11-01T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2016/11/01/javascript-audio</id>
      <content type="html">
-       The Web Audio API is a great option to create notes and music using pure javascript. In this simple tutorial article I'll explain how to get a clearer sound and add some very simple  audio effects to a note.
+       The Web Audio API is a great option to create notes and music using pure javascript. In this simple tutorial article I&apos;ll explain how to get a clearer sound and add some very simple  audio effects to a note.
      </content>
    </entry>
   
@@ -438,7 +438,7 @@
      <updated>2016-10-17T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2016/10/17/kitchenless-restaurant</id>
      <content type="html">
-       With all the changes in food delivery, could we see a rise in quality restaurants that don't prepare any food at all, and how would it look like?
+       With all the changes in food delivery, could we see a rise in quality restaurants that don&apos;t prepare any food at all, and how would it look like?
      </content>
    </entry>
   
@@ -457,7 +457,7 @@
  
   
    <entry>
-     <title>Understanding Rails' Forgery Protection Strategies</title>
+     <title>Understanding Rails&apos; Forgery Protection Strategies</title>
      <link href="https://marcgg.com/blog/2016/08/22/csrf-rails/"/>
      <updated>2016-08-22T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2016/08/22/csrf-rails</id>
@@ -486,7 +486,7 @@
      <updated>2016-07-04T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2016/07/04/monitoring-bugs</id>
      <content type="html">
-       Identifying and monitoring production issues is hard. Here's what's been successful at my company: the general workflow and tools like Bugsnag, re:dash, Universal Analytics, New Relic, PagerDuty, Grafana, Logmatic, Slack and more.
+       Identifying and monitoring production issues is hard. Here&apos;s what&apos;s been successful at my company: the general workflow and tools like Bugsnag, re:dash, Universal Analytics, New Relic, PagerDuty, Grafana, Logmatic, Slack and more.
      </content>
    </entry>
   
@@ -498,7 +498,7 @@
      <updated>2016-05-09T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2016/05/09/rails-app-engine</id>
      <content type="html">
-       In this post I've been playing around with Google App Engine, trying to release a simple Rails 5 app, reading logs or setting environment variables. I also attempted a very non-scientific performance benchmark to compare Heroku with the App Engine.
+       In this post I&apos;ve been playing around with Google App Engine, trying to release a simple Rails 5 app, reading logs or setting environment variables. I also attempted a very non-scientific performance benchmark to compare Heroku with the App Engine.
      </content>
    </entry>
   
@@ -510,7 +510,7 @@
      <updated>2016-04-25T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2016/04/25/git-multiple-remotes</id>
      <content type="html">
-       Here's some interesting features of Git I tried out while messing around with the idea of using Bitbucket as a failover for Github.
+       Here&apos;s some interesting features of Git I tried out while messing around with the idea of using Bitbucket as a failover for Github.
      </content>
    </entry>
   
@@ -522,7 +522,7 @@
      <updated>2016-03-14T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2016/03/14/github-pages-jekyll</id>
      <content type="html">
-       Github Pages' change from Jekyll 2 to 3 broke my website and many others because of a change in trailing slashes behaviour.
+       Github Pages&apos; change from Jekyll 2 to 3 broke my website and many others because of a change in trailing slashes behaviour.
      </content>
    </entry>
   
@@ -534,7 +534,7 @@
      <updated>2016-03-14T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2016/03/14/birdly-ycombinator</id>
      <content type="html">
-       I've been helping a team of young entrepreneurs for a couple of years and they made it to San Francisco where they're currently taking part of YC's Winter 2016 batch.
+       I&apos;ve been helping a team of young entrepreneurs for a couple of years and they made it to San Francisco where they&apos;re currently taking part of YC&apos;s Winter 2016 batch.
      </content>
    </entry>
   
@@ -546,7 +546,7 @@
      <updated>2016-03-01T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2016/03/01/vimrc-example</id>
      <content type="html">
-       Complete example to configure Vim. We'll use pathogen and git to manage plugins, add a theme... but also set up fuzzy search, auto complete, smart indentation, multi-cursors support (like Sublime) and much more thanks to a long list of curated plugins.
+       Complete example to configure Vim. We&apos;ll use pathogen and git to manage plugins, add a theme... but also set up fuzzy search, auto complete, smart indentation, multi-cursors support (like Sublime) and much more thanks to a long list of curated plugins.
      </content>
    </entry>
   
@@ -570,7 +570,7 @@
      <updated>2016-02-15T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2016/02/15/rspec-on-multiple-rails-projects</id>
      <content type="html">
-       Running RSpec on more than one project is already tricky when it's just Ruby... but try to do it for dozens of different Rails project and it becomes a real headache. Here's a relatively simple solution to this using shell scripts and Ruby.
+       Running RSpec on more than one project is already tricky when it&apos;s just Ruby... but try to do it for dozens of different Rails project and it becomes a real headache. Here&apos;s a relatively simple solution to this using shell scripts and Ruby.
      </content>
    </entry>
   
@@ -601,7 +601,7 @@
  
   
    <entry>
-     <title>Don't Automate Tasks Only Based On Time Spent</title>
+     <title>Don&apos;t Automate Tasks Only Based On Time Spent</title>
      <link href="https://marcgg.com/blog/2015/09/30/automate-repetitive-tasks/"/>
      <updated>2015-09-30T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2015/09/30/automate-repetitive-tasks</id>
@@ -625,7 +625,7 @@
  
   
    <entry>
-     <title>Git Log's --first-parent Option</title>
+     <title>Git Log&apos;s --first-parent Option</title>
      <link href="https://marcgg.com/blog/2015/08/04/git-first-parent-log/"/>
      <updated>2015-08-04T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2015/08/04/git-first-parent-log</id>
@@ -642,7 +642,7 @@
      <updated>2015-07-01T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2015/07/01/game-of-life-gif</id>
      <content type="html">
-       I was stuck in a plane so I started fiddling with my alternative version of Conway's Game of Life. I kind of liked the way the board looked after a while, so I decided to share.
+       I was stuck in a plane so I started fiddling with my alternative version of Conway&apos;s Game of Life. I kind of liked the way the board looked after a while, so I decided to share.
      </content>
    </entry>
   
@@ -786,7 +786,7 @@
      <updated>2014-05-06T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2014/05/06/quantified-self-iphone-app-track-mood-day</id>
      <content type="html">
-       A lot of iOS and Android applications have been created to track one's day, but none really matched what I wanted so I created my own. Something with a clean design and focused goal.
+       A lot of iOS and Android applications have been created to track one&apos;s day, but none really matched what I wanted so I created my own. Something with a clean design and focused goal.
      </content>
    </entry>
   
@@ -810,7 +810,7 @@
      <updated>2014-04-09T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2014/04/09/phonegap-steroids-hybrid-native-app-tips</id>
      <content type="html">
-       300ms delay, overscroll, text rendering, 1px borders, local storage, performances, i18n ... After lot of work and an app released, I'm sharing a long list of solutions to problems I ran into while developing an hybrid app.
+       300ms delay, overscroll, text rendering, 1px borders, local storage, performances, i18n ... After lot of work and an app released, I&apos;m sharing a long list of solutions to problems I ran into while developing an hybrid app.
      </content>
    </entry>
   
@@ -834,7 +834,7 @@
      <updated>2013-11-05T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2013/11/05/enough-with-the-language-trolls</id>
      <content type="html">
-       Every week I see people arguing over languages, frameworks, hosting solutions, design patterns... and every week it's pointless.
+       Every week I see people arguing over languages, frameworks, hosting solutions, design patterns... and every week it&apos;s pointless.
      </content>
    </entry>
   
@@ -853,7 +853,7 @@
  
   
    <entry>
-     <title>My First Impressions of AppGyver's Steroids.js</title>
+     <title>My First Impressions of AppGyver&apos;s Steroids.js</title>
      <link href="https://marcgg.com/blog/2013/08/29/appgyver-steroids-iphone-hybrid-javascript/"/>
      <updated>2013-08-29T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2013/08/29/appgyver-steroids-iphone-hybrid-javascript</id>
@@ -865,19 +865,19 @@
  
   
    <entry>
-     <title>J'ai Passé Un Deuxième Bac. Pour Voir.</title>
+     <title>J&apos;ai Passé Un Deuxième Bac. Pour Voir.</title>
      <link href="https://marcgg.com/blog/2013/07/09/passer-deuxieme-bac/"/>
      <updated>2013-07-09T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2013/07/09/passer-deuxieme-bac</id>
      <content type="html">
-       Alors que j'ai déjà un Baccalauréat scientifique et que jene compte pas me réorienter, j'ai décidé de passer un autre bac. Juste pour voir.
+       Alors que j&apos;ai déjà un Baccalauréat scientifique et que jene compte pas me réorienter, j&apos;ai décidé de passer un autre bac. Juste pour voir.
      </content>
    </entry>
   
  
   
    <entry>
-     <title>Why I'm Not Proud To Be French</title>
+     <title>Why I&apos;m Not Proud To Be French</title>
      <link href="https://marcgg.com/blog/2013/06/24/not-proud-to-be-french/"/>
      <updated>2013-06-24T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2013/06/24/not-proud-to-be-french</id>
@@ -894,7 +894,7 @@
      <updated>2013-05-20T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2013/05/20/track-link-clicks</id>
      <content type="html">
-       In this article I explain why I built a very basic app that lets you know who is clicking a link and I'm debating wether or not to keep on working on it.
+       In this article I explain why I built a very basic app that lets you know who is clicking a link and I&apos;m debating wether or not to keep on working on it.
      </content>
    </entry>
   
@@ -906,7 +906,7 @@
      <updated>2013-04-22T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2013/04/22/what-i-learned-teaching-web</id>
      <content type="html">
-       I tried to give a few lectures about the web to a group of young entrepreneurs and students from a non technical background. Here's what this taught me.
+       I tried to give a few lectures about the web to a group of young entrepreneurs and students from a non technical background. Here&apos;s what this taught me.
      </content>
    </entry>
   
@@ -918,7 +918,7 @@
      <updated>2013-03-25T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2013/03/25/please-changelog-open-source</id>
      <content type="html">
-       Keeping an up to date list of changes in your open source project is a must have. Here's why.
+       Keeping an up to date list of changes in your open source project is a must have. Here&apos;s why.
      </content>
    </entry>
   
@@ -942,7 +942,7 @@
      <updated>2013-01-14T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2013/01/14/html5-nodejs-websockets-games-learning</id>
      <content type="html">
-       I'm not a game developer at all, so in order to see the problems linked to creating a multiplayer game I decided to create a prototype with NodeJS, Websockets and HTML5.
+       I&apos;m not a game developer at all, so in order to see the problems linked to creating a multiplayer game I decided to create a prototype with NodeJS, Websockets and HTML5.
      </content>
    </entry>
   
@@ -954,7 +954,7 @@
      <updated>2013-01-06T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2013/01/06/left-tigerlily-job</id>
      <content type="html">
-       After 3 years I decided to change job and join Drivy where I'll work on a product based on the concept of collaborative consumption.
+       After 3 years I decided to change job and join Drivy where I&apos;ll work on a product based on the concept of collaborative consumption.
      </content>
    </entry>
   
@@ -966,7 +966,7 @@
      <updated>2012-12-10T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2012/12/10/angelhack-third-place-paris-hackathon</id>
      <content type="html">
-       I participated in a hackathon with 4 other persons where we built a project to give away objects and track their lives. Here's how it went.
+       I participated in a hackathon with 4 other persons where we built a project to give away objects and track their lives. Here&apos;s how it went.
      </content>
    </entry>
   
@@ -978,7 +978,7 @@
      <updated>2012-11-12T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2012/11/12/webviews-javascript-ios-rubymotion</id>
      <content type="html">
-       In this article I'll explain how to use UIWebViews using RubyMotion. This includes loading URLs, local files and communicating with them via Javascript.
+       In this article I&apos;ll explain how to use UIWebViews using RubyMotion. This includes loading URLs, local files and communicating with them via Javascript.
      </content>
    </entry>
   
@@ -990,7 +990,7 @@
      <updated>2012-10-22T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2012/10/22/custom-slider-ios-rubymotion</id>
      <content type="html">
-       RubyMotion allows you to write native iOS applications using Ruby. Here I'll try to explain how to customize the UISlider element's look.
+       RubyMotion allows you to write native iOS applications using Ruby. Here I&apos;ll try to explain how to customize the UISlider element&apos;s look.
      </content>
    </entry>
   
@@ -1002,7 +1002,7 @@
      <updated>2012-10-15T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2012/10/15/dont-accept-brokeness-deal-with-annoyances</id>
      <content type="html">
-       For years I've been having a health problem that got fixed in seconds. This got me wondering about how this could apply to other areas of one's life.
+       For years I&apos;ve been having a health problem that got fixed in seconds. This got me wondering about how this could apply to other areas of one&apos;s life.
      </content>
    </entry>
   
@@ -1014,14 +1014,14 @@
      <updated>2012-10-01T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2012/10/01/thumb-pain-developer-keyboard</id>
      <content type="html">
-       As a developer I repeat the same movements over and over again. This can be bad for some hand muscles. Here's one of the tricks I use every day to avoid any unecessary pain.
+       As a developer I repeat the same movements over and over again. This can be bad for some hand muscles. Here&apos;s one of the tricks I use every day to avoid any unecessary pain.
      </content>
    </entry>
   
  
   
    <entry>
-     <title>The Risks of Working With Another Company's API</title>
+     <title>The Risks of Working With Another Company&apos;s API</title>
      <link href="https://marcgg.com/blog/2012/09/24/working-with-apis-facebook/"/>
      <updated>2012-09-24T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2012/09/24/working-with-apis-facebook</id>
@@ -1038,7 +1038,7 @@
      <updated>2012-09-04T00:00:00+02:00</updated>
      <id>https://marcgg.com/blog/2012/09/04/one-reason-to-switch-to-vim-editor</id>
      <content type="html">
-       This is the one reason that got me to switch to vim after experimenting for years with a lot of different editors. Promised, it won't be about emacs vs vim.
+       This is the one reason that got me to switch to vim after experimenting for years with a lot of different editors. Promised, it won&apos;t be about emacs vs vim.
      </content>
    </entry>
   
@@ -1074,7 +1074,7 @@
      <updated>2011-12-12T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2011/12/12/developer-from-ssii-to-startup</id>
      <content type="html">
-       How can one move away from a outdated consulting firm and join an interesting startup? It won't be easy, but it can be a great career move.
+       How can one move away from a outdated consulting firm and join an interesting startup? It won&apos;t be easy, but it can be a great career move.
      </content>
    </entry>
   
