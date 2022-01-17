@@ -7,7 +7,7 @@ category: about
 description: "I'm a Ruby developer turned team leader and startup advisor. I blog about software engineering, management and more."
 ---
 
-I worked for 8 years as VP of Engineering Europe at [Getaround][1], the leading car sharing company working on building a viable alternative to car ownership. Now my main focus is my Head of Engineering position at [Back Market][5], attempting to reduce e-waste through its marketplace for refurbished electronics.
+I worked for 8 years as VP of Engineering Europe at [Getaround][1], the leading car sharing company working on building a viable alternative to car ownership. Now my main focus is my Director of Engineering position at [Back Market][5], attempting to reduce e-waste through its marketplace for refurbished electronics.
 
 Alongside this, I provide dedicated coaching for various companies to help them get over roadblocks.
 
@@ -19,7 +19,7 @@ You can reach me via [Twitter][2], [Linkedin][3] or using email "marcg.gauthier-
 
 _Marc-_
 
-[1]:	https://www.getaround.com/
+[1]:	https://uk.getaround.com/
 [2]:	https://twitter.com/marcgg
 [3]:	https://www.linkedin.com/in/marcggauthier
 [4]:	/hire
