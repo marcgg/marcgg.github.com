@@ -3,8 +3,6 @@
   {% if post.featured %}
       <li>
         <a href="{{ BASE_PATH }}{{ post.url }}">{{post.title}}</a>
-        {%capture tag%}{% if post.publictag %}{{post.publictag}}{% else %}{{ post.tag }}{% endif %}{%endcapture%}
-        <span class="home-tag tag-{{tag | downcase | remove: " "}}">{{tag}}</span>
         <span class="home-tag tag-date">{{ post.date | date: "%Y" }}</span>
       </li>
   {% endif %}

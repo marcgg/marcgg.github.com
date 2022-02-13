@@ -2,7 +2,6 @@
 title: "One on One Meeting Opening Lines"
 description: "Depending on how you start the conversation, you will influence what will be discussed in your 1:1. Here are my learnings and the way I do it nowadays."
 tag: Management
-featured: true
 socialmediapreview: "One on One Openners"
 ---
 
