@@ -13,3 +13,4 @@ I discovered this ebook after listening to [an episode of The Ruby Rogues][1], a
 [1]:	https://devchat.tv/ruby-rogues/186-rr-the-4-rules-of-simple-design-with-corey-haines
 [2]:	http://martinfowler.com/bliki/BeckDesignRules.html
 [3]:	https://en.wikipedia.org/wiki/Kent_Beck
+
