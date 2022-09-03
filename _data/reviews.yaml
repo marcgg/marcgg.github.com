@@ -3,7 +3,21 @@
   position: "Cofounder & CEO"
   company: "Livestorm"
   url: "https://livestorm.co/"
-  content: "As first-time founders, there was a 'before' and an 'after' Marc. He helped us accelerate on different aspects of building a tech product: getting the right process in place not only on the technical side but also from a management standpoint."
+  content: "As first-time founders, there was a \"before\" and an \"after\" Marc. He helped us accelerate on different aspects of building a tech product: getting the right process in place not only on the technical side (deployment, tools, security...) but also from a management standpoint: 1:1s, hiring, managing teams, etc."
+
+- name: "Thomas Cottin"
+  image: "thomas"
+  position: "Co-founder & CPO"
+  company: "Kactus x Bird Office"
+  url: "https://www.kactus.com/"
+  content: "Marc is a fantastic tech mentor who helped me understand and solve management, leadership or technical issues related to scaling a tech & product organisation. His feedback, advice and lessons learned building some of the best tech products are real gold for anyone seeking to build a great product with an impact-driven and pragmatic mindset."
+
+- name: "Jeremy Berecz"
+  image: "jeremy"
+  position: "CTO"
+  company: "Plezi"
+  url: "https://www.plezi.co"
+  content: "Insight, experience and goodwill are the qualities that makes Marc a major asset when he worked with us on improve our organisation and software development processes. This allowed us to focus on the major challenges of our startup's growth."
 
 - name: "Antoine Amiel"
   image: "antoine"
@@ -26,10 +40,4 @@
   url: "https://stuart.com/"
   content: "Marc is THE person you need in your team if you want to be sure to build a strong, powerful and user-friendly product. His intransigence is a guarantee of reliability and quality."
 
-- name: "Jeremy Berecz"
-  image: "jeremy"
-  position: "CTO"
-  company: "Plezi"
-  url: "https://www.plezi.co"
-  content: "Insight, experience and goodwill are the qualities that makes Marc a major asset when he worked with us on improve our organisation and software development processes. This allowed us to focus on the major challenges of our startup's growth."
 
