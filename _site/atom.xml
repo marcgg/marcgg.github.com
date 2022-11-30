@@ -4,12 +4,24 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2022-09-03T14:15:57+02:00</updated>
+ <updated>2022-11-30T14:47:47+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
  </author>
 
+ 
+  
+   <entry>
+     <title>Simple Localisation Process for XCode with Google Sheets</title>
+     <link href="https://marcgg.com/blog/2022/11/30/i18n-localisation-xcode-google-sheet/"/>
+     <updated>2022-11-30T00:00:00+01:00</updated>
+     <id>https://marcgg.com/blog/2022/11/30/i18n-localisation-xcode-google-sheet</id>
+     <content type="html">
+       Here is a very simple script to handle translations that saved me a lot of time when building my iOS app.
+     </content>
+   </entry>
+  
  
   
    <entry>
