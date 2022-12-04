@@ -1,0 +1,99 @@
+/************* COMMENTS **********/
+.comments {
+  margin-top: 20px;
+}
+
+.comments_title {
+  font-size: 22px;
+  font-family: 'Open Sans', sans-serif;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #eee;
+}
+
+.new_comment_title {
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  padding-bottom: 5px;
+  margin-top: 20px;
+}
+
+.comment {
+  margin-top: 30px;
+  border-bottom: 1px dashed #eee;
+  padding-bottom: 30px;
+}
+
+.comment .name {
+  font-weight: bold;
+}
+.comment a {
+  color: #000;
+}
+
+.comment .date {
+  color: #ccc;
+  font-size: 12px;
+}
+
+.comment .content {
+  padding: 5px 0px;
+}
+
+#comment_form_wrapper {
+  margin: 30px auto;
+}
+
+.new_comment {
+  background-color: #fcf5dc;
+  padding: 10px;
+}
+
+#comment_form {
+  margin-top: 10px;
+}
+input, textarea {
+  display: block;
+  font-size: 14px;
+}
+
+input[type=email], input[type=text] {
+  width: 100%;
+  font-family: 'Droid Serif', serif;
+  padding: 8px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit], #submit_loading {
+  width: 200px;
+  padding: 8px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #eee;
+  font-size: 14px;
+  text-align: center;
+}
+input[type=submit]:hover {
+  border: 1px solid #bbb;
+  background-color: #ddd;
+}
+
+textarea {
+  width: 100%;
+  height: 120px;
+  padding: 8px 20px;
+  font-family: 'Droid Serif', serif;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
