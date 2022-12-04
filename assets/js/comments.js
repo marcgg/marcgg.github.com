@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var baseUrl = "http://localhost:3000/" //"https://workwithswiftui.com/"
+  var baseUrl = "https://workwithswiftui.com/"
 
   if($("#comment_form_wrapper").length > 0) {
     $.ajax({
