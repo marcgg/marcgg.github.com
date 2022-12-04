@@ -52,36 +52,31 @@ layout: default
           </p>
           {% endif %}
         </div>
-        <a href="https://twitter.com/marcgg" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @marcgg</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
-        <a href="https://twitter.com/share" class="twitter-share-button" data-via="marcgg" data-size="large">Tweet</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        <div class="container comments" id="comments">
+          Loading comments...
+        </div>
 
-      </div>
-
-      <div class="container comments" id="comments">
-        Loading comments...
-      </div>
-
-      <div id="comment_form_wrapper" class="container">
-        <form id="comment_form">
-          <textarea name="content" required id="comment_content" placeholder="Leave a comment"/></textarea />
-          <div id="comment_additional" class="row" style="display: none;">
-            <div class="col-sm-4">
-              <input type="text" id="comment_name" required placeholder="Your name*" />
+        <div id="comment_form_wrapper" class="container">
+          <form id="comment_form">
+            <textarea name="content" required id="comment_content" placeholder="Leave a comment"/></textarea />
+            <div id="comment_additional" class="row" style="display: none;">
+              <div class="col-sm-4">
+                <input type="text" id="comment_name" required placeholder="Your name*" />
+              </div>
+              <div class="col-sm-4">
+                <input type="text" id="comment_website" placeholder="Your site" />
+              </div>
+              <div class="col-sm-4">
+                <input type="email" id="comment_email" required placeholder="Your email* (won't be displayed)" />
+              </div>
             </div>
-            <div class="col-sm-4">
-              <input type="text" id="comment_website" placeholder="Your site" />
-            </div>
-            <div class="col-sm-4">
-              <input type="email" id="comment_email" required placeholder="Your email* (won't be displayed)" />
-            </div>
-          </div>
-          <br />
-          <input type="submit" id="submit_comment" value="Send"/>
-          <div id="submit_loading" style="display: none;">...</div>
-        </form>
+            <br />
+            <input type="submit" id="submit_comment" value="Send"/>
+            <div id="submit_loading" style="display: none;">...</div>
+          </form>
+        </div>
+
       </div>
 
     </div>
