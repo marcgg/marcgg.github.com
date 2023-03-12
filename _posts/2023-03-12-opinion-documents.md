@@ -2,7 +2,7 @@
 title: "Sharing My Take"
 description: "For the past few years I've taken the habbit of sharing short documents to explain my opinions and make discussions move faster. So far they've been mostly helpful in furthering debates, so let me share the format and reasons I'm doing this."
 tag: management
-ogimage: "xxx.png"
+ogimage: "preview_share_take.png"
 blog: true
 
 
