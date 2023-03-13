@@ -1,6 +1,6 @@
 ---
-title: "Sharing My Take"
-description: "For the past few years I've taken the habbit of sharing short documents to explain my opinions and make discussions move faster. So far they've been mostly helpful in furthering debates, so let me share the format and reasons I'm doing this."
+title: "Sharing My Take Asynchronously"
+description: "For the past few years I've taken the habit of sharing short documents to explain my opinions and make discussions move faster. So far they've been mostly helpful in furthering debates, so let me share the format and reasons I'm doing this."
 tag: management
 ogimage: "preview_share_take.png"
 blog: true
@@ -8,11 +8,9 @@ blog: true
 
 ---
 
-When working with multiple people, it can be challenging to debate and share one's opinion efficiently. This is made even harder with remote work and multi-cultural teams.
+Having distributed multi-cultural teams brings a lot of advantages, but it can make debating and sharing one's opinion efficiently challenging. You might have already felt the pain of joining a Slack channel with a few days worth of exchanges between a few people and then tried to figure out everyone's point of view as well as struggling to know how to add your own opinion.
 
-You might have already felt the pain of joining a channel with a few days worth of exchanges between a few people and then tried to figure out everyone's point of view as well as struggling to know how to add your own opinion.
-
-You can of course call for a meeting, but you often end up with scheduling problems, and do you really need another meeting?  ... and even then you still need an efficient way to convey your points.
+You can of course call for a meeting, but you often end up with scheduling problems, especially with time zone differences, and do you really need another meeting?
 
 ## "Marc's Take on X" Documents
 
@@ -45,6 +43,6 @@ If this doesn't happen, I'll just make the document public and share it with eve
 
 ## Closing
 
-Of course this is not the only way I share my opinions, this is just one tool amongts many that I'll use when I see a debate go on for too long, or when too many people are involved in a decision.
+Of course this is not the only way I share my opinions, and I would advise against going with this approach every signle time. This is just one tool amongst many that I'll use when I see a debate go on for too long, or when too many people are involved in a decision.
 
 If this seems interesting to you, it's really easy to try. Next time you see a debate going on for a bit too long, create a quick document and see how it goes!

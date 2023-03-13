@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2023-03-12T22:38:57+01:00</updated>
+ <updated>2023-03-13T09:22:11+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -13,12 +13,12 @@
  
   
    <entry>
-     <title>Sharing My Take</title>
+     <title>Sharing My Take Asynchronously</title>
      <link href="https://marcgg.com/blog/2023/03/12/opinion-documents/"/>
      <updated>2023-03-12T00:00:00+01:00</updated>
      <id>https://marcgg.com/blog/2023/03/12/opinion-documents</id>
      <content type="html">
-       For the past few years I&apos;ve taken the habbit of sharing short documents to explain my opinions and make discussions move faster. So far they&apos;ve been mostly helpful in furthering debates, so let me share the format and reasons I&apos;m doing this.
+       For the past few years I&apos;ve taken the habit of sharing short documents to explain my opinions and make discussions move faster. So far they&apos;ve been mostly helpful in furthering debates, so let me share the format and reasons I&apos;m doing this.
      </content>
    </entry>
   
