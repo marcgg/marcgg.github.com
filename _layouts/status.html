@@ -9,9 +9,12 @@ layout: default
         {{ content }}
       </div>
 
-      <div class="status_images">
-        <img src="{{ page.media }}" />
-      </div>
+      {% if status.media %}
+        <div class="status_images">
+          <img src="{{ page.media }}" />
+        </div>
+      {% endif %}
+
       <div class="status_date">
         <a href="{{ page.url }}">
           {{ page.date | date: "%H:%M · %-d %B %Y" }}

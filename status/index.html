@@ -12,7 +12,10 @@ category: status
       like <strike>Twitter</strike> X.
     </div>
 
-    {% for status in site.status %}
+    {% assign allStatus = site.status | sort: 'date' | reverse %}
+
+    {% for status in allStatus %}
+      {% unless status.isReply %}
       <div class="status">
         <div class="status_text_content">
           {{ status.content }}
@@ -23,12 +26,14 @@ category: status
             <img src="{{ status.media }}" alt='Image for this status' />
           </div>
         {% endif %}
+
         <div class="status_date">
           <a href="{{ status.url }}">
             {{ status.date | date: "%H:%M · %-d %B %Y" }}
           </a>
         </div>
       </div>
+      {% endunless %}
     {% endfor %}
   </div>
 </div>

@@ -28,6 +28,7 @@ data_hash.each_with_index do |tweet, i|
   text = tweet["tweet"]["full_text"]
   date = Time.parse(tweet["tweet"]["created_at"])
   original_url = "https://twitter.com/marcgg/status/#{tweet["tweet"]["id_str"]}"
+  is_reply = (text[0] == "@")
 
   entities = tweet["tweet"]["entities"]
   media = []
@@ -43,6 +44,7 @@ data_hash.each_with_index do |tweet, i|
   content =  "---\n"
   content += "layout: status\n"
   content += "originalUrl: '#{original_url}'\n"
+  content += "isReply: #{is_reply}\n"
   content += "date: #{date.strftime("%Y-%m-%d %H:%M:%S")}\n"
   if media.any?
     content += "media: '#{media.first}'\n"
