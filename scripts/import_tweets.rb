@@ -33,10 +33,20 @@ data_hash.each_with_index do |tweet, i|
   entities = tweet["tweet"]["entities"]
   media = []
   if entities.any?
+
+    # MEDIA
     if entities["media"]
       entities["media"].each do |medium|
         puts "===> #{medium["media_url_https"]}"
         media << medium["media_url_https"]
+        text.gsub!(medium["url"], "")
+      end
+    end
+
+    # URLS
+    if entities["urls"]
+      entities["urls"].each do |url|
+        text.gsub!(url["url"], "[#{url["display_url"]}](#{url["expanded_url"]})")
       end
     end
   end
@@ -54,8 +64,8 @@ data_hash.each_with_index do |tweet, i|
 
   puts content
 
-  if tweet["tweet"]["id_str"] == "1590801539488440321"
-   #binding.pry
+  if tweet["tweet"]["id_str"] == "1595875928382799872"
+    #binding.pry
   end
 
   File.write("#{status_path}/#{date.strftime("%Y-%m-%d-%H-%M-%S")}.md", content)
