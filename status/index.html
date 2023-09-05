@@ -13,10 +13,22 @@ category: status
     </div>
 
     {% for status in site.status %}
-      <p>
-        {{ status.content }}
-        <a href="{{ status.url }}">permalink</a>
-      </p>
+      <div class="status">
+        <div class="status_text_content">
+          {{ status.content }}
+        </div>
+
+        {% if status.media %}
+          <div class="status_images">
+            <img src="{{ status.media }}" alt='Image for this status' />
+          </div>
+        {% endif %}
+        <div class="status_date">
+          <a href="{{ status.url }}">
+            {{ status.date | date: "%H:%M · %-d %B %Y" }}
+          </a>
+        </div>
+      </div>
     {% endfor %}
   </div>
 </div>

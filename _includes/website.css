@@ -673,6 +673,7 @@ p code, li code{
   padding: 40px;
   border: 1px solid #dba9a9;
   border-radius: 5px;
+  margin: 40px 0px;
 }
 
 .status_text_content {
@@ -693,7 +694,14 @@ p code, li code{
   text-decoration: none;
 }
 
+.status_images {
+  margin: 20px auto;
+  text-align: center;
+}
 
+.status_images img {
+  max-width: 85%;
+  max-height: 500px;
 
 
 
