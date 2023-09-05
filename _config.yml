@@ -14,9 +14,18 @@ author :
 production_url : https://marcgg.com
 
 collections:
-  - books
+  books:
+  status:
+    permalink: /:collection/:year:month:day:hour:minute:second
+    output: true
 
 defaults:
+  -
+    scope:
+      path: "_status"
+    values:
+      category: status
+      layout: status
   -
     scope:
       path: "_posts"

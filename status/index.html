@@ -1,0 +1,22 @@
+---
+layout: page
+title: "@marcgg - Status / Microblogging"
+category: status
+---
+
+<div id="container">
+  <div id="content">
+    <div id="book-review" style="margin-top: 20px;">
+      I've decided to move all my microblogging content to my own site, mainly to
+      have a better control over how it's displayed and not depend on an external platform
+      like <strike>Twitter</strike> X.
+    </div>
+
+    {% for status in site.status %}
+      <p>
+        {{ status.content }}
+        <a href="{{ status.url }}">permalink</a>
+      </p>
+    {% endfor %}
+  </div>
+</div>

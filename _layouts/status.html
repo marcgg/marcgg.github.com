@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<div id="container">
+  <div id="content">
+
+    <div class="status">
+      <div class="status_text_content">
+        {{ content }}
+      </div>
+
+      <div class="status_date">
+        <a href="{{ status.url }}">
+          {{ page.date | date: "%H:%M · %-d %B %Y" }}
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
