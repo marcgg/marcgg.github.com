@@ -5,7 +5,7 @@ gem "jekyll", "=4.2.1"
 gem "kramdown"
 gem "rouge"
 
-gem "jekyll-paginate"
+gem "jekyll-paginate-v2"
 
 gem 'rmagick'
 gem 'webrick'
