@@ -40,9 +40,9 @@ pagination:
   enabled: true
   debug: false
   collection: 'status'
-  per_page: 2
+  per_page: 20
   permalink: '/page-:num/' # Pages are index.html inside this folder (default)
-  title: ':title - page :num'
+  title: ':title (page :num)'
   limit: 0
   sort_field: 'date'
   sort_reverse: true

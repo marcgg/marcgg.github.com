@@ -703,7 +703,21 @@ p code, li code{
 .status_images img {
   max-width: 85%;
   max-height: 500px;
+}
 
 
+/* PAGINATION */
 
+.pagination {
+  text-align: center;
+  margin-bottom: 40px;
+}
 
+.pagination a {
+  color: #353535;
+}
+
+.page_number {
+  display: inline-block;
+  width: 130px;
+}
