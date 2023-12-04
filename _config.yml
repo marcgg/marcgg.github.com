@@ -1,5 +1,8 @@
 permalink: /:categories/:year/:month/:day/:title/
 
+paginate: 40
+paginate_path: "/blog/page-:num/"
+
 exclude: [".rvmrc", "README.md", "Rakefile", "/bin"]
 
 markdown: kramdown
@@ -34,3 +37,6 @@ defaults:
       category: blog
       featured: false
       layout: post
+
+plugins:
+  - jekyll-paginate

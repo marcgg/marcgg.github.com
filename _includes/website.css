@@ -469,13 +469,14 @@ p code, li code{
   max-width: 420px !important;
 }
 
-#book-review{
+#intro_blurb{
   border: 1px dashed #dedede;
   padding: 20px;
-  margin-bottom: 20px;
+  margin: 20px 0px;
   opacity: 0.7;
 }
-#book-review a{
+
+#intro_blurb a{
   color: #763232;
 }
 
