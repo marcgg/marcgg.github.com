@@ -19,8 +19,10 @@ layout: default
         <a href="{{ page.url }}">
           {{ page.date | date: "%H:%M · %-d %B %Y" }}
         </a>
+        {% if page.originalUrl %}
         ·
         <a href='{{ page.originalUrl }}'>on Twitter</a>
+        {% endif %}
       </div>
     </div>
 

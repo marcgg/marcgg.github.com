@@ -9,7 +9,12 @@ layout: compress
       {% if page.seotitle %}
         {{ page.seotitle }}
       {% else %}
-        {{ page.title }}
+        {% if page.category == 'status'%}
+          @marcgg - Status / Microblogging
+        {% else %}
+          {{ page.title }}
+        {% endif %}
+
       {% endif %}
     </title>
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}

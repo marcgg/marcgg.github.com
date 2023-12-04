@@ -69,7 +69,7 @@ data_hash.each_with_index do |tweet, i|
   end
 
   File.write("#{status_path}/#{date.strftime("%Y-%m-%d-%H-%M-%S")}.md", content)
-  raise if i == 200
+  #raise if i == 200
 end
 
 
