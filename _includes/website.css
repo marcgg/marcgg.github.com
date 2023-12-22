@@ -678,8 +678,8 @@ p code, li code{
 }
 
 .status_text_content {
-  font-size: 22px;
-  line-height: 32px;
+  font-size: 18px;
+  line-height: 24px;
 }
 
 .status_text_content p {
@@ -705,19 +705,12 @@ p code, li code{
   max-height: 500px;
 }
 
-
-/* PAGINATION */
-
-.pagination {
+.side_note {
+  color: #aaa;
+  margin-bottom: 42px;
   text-align: center;
-  margin-bottom: 40px;
 }
 
-.pagination a {
-  color: #353535;
-}
-
-.page_number {
-  display: inline-block;
-  width: 130px;
+.side_note a{
+  color: #aaa;
 }

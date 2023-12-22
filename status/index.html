@@ -13,9 +13,9 @@ pagination:
     have a better control over how it's displayed and not depend on an external platforms.
   </div>
 
-  {% assign allStatus = paginator.posts | sort: 'date' | reverse %}
+  {% assign allStatus = site.status | sort: 'date' | reverse %}
 
-  {% for status in allStatus %}
+  {% for status in allStatus limit:20 %}
     {% unless status.isReply %}
     <div class="status">
       <div class="status_text_content">
@@ -37,17 +37,7 @@ pagination:
     {% endunless %}
   {% endfor %}
 
-  <div class="pagination">
-    {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path }}" class="previous">
-        Previous
-      </a>
-    {% endif %}
-    <span class="page_number ">
-      {{ paginator.page }} / {{ paginator.total_pages }}
-    </span>
-    {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path }}" class="next">Next</a>
-    {% endif %}
+  <div class="side_note">
+    Older updates are available <a href='https://github.com/marcgg/marcgg.github.com/tree/master/legacy_status'>on Github</a>.
   </div>
 </div>
