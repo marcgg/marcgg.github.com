@@ -2,9 +2,9 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>marcgg#blog</title>
- <link href="https://marcgg.com/atom.xml" rel="self"/>
+ <link href="https://marcgg.com/atom/blog.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2023-12-22T21:14:37+01:00</updated>
+ <updated>2023-12-22T21:24:41+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>

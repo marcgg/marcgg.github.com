@@ -6,7 +6,7 @@ title : Atom Feed
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>{{ site.title }}</title>
- <link href="{{ site.production_url }}/atom.xml" rel="self"/>
+ <link href="{{ site.production_url }}/atom/status.xml" rel="self"/>
  <link href="{{ site.production_url }}"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
  <id>{{ site.production_url }}</id>
@@ -14,18 +14,16 @@ title : Atom Feed
    <name>{{ site.author.name }}</name>
  </author>
 
- {% for post in site.posts %}
-  {% if post.blog == true %}
+ {% for status in site.status %}
    <entry>
-     <title>{{ post.title | xml_escape  }}</title>
-     <link href="{{ site.production_url }}{{ post.url }}"/>
-     <updated>{{ post.date | date_to_xmlschema }}</updated>
-     <id>{{ site.production_url }}{{ post.id }}</id>
+     <title>New status update from @marcgg</title>
+     <link href="{{ site.production_url }}{{ status.url }}"/>
+     <updated>{{ status.date | date_to_xmlschema }}</updated>
+     <id>{{ status.production_url }}{{ status.id }}</id>
      <content type="html">
-       {{ post.description | xml_escape }}
+       {{ status.content | xml_escape  }}
      </content>
    </entry>
-  {% endif %}
  {% endfor %}
 
 </feed>
