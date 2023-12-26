@@ -25,10 +25,20 @@ layout: compress
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@marcgg">
     <meta name="twitter:creator" content="@marcgg">
-    <meta name="twitter:title" content="{{ page.title }}">
-    {% if page.description %}
-      <meta name="twitter:description" content="{{ page.description }}">
+
+    {% if page.category == 'status'%}
+      <meta name="twitter:title" content="@marcgg - Status / Microblogging">
+      <meta name="twitter:description" content="{{ page.content | markdownify | strip_html }}">
+
+    {% else %}
+      {{ page.title }}
+      <meta name="twitter:title" content="{{ page.title }}">
+      {% if page.description %}
+        <meta name="twitter:description" content="{{ page.description }}">
+      {% endif %}
     {% endif %}
+
+
 
     {% if page.ogimage %}
       <meta name="twitter:image" content="https://marcgg.com/assets/misc/{{page.ogimage}}" />
@@ -38,6 +48,11 @@ layout: compress
         {% capture twitter_image %}{{ page.path | replace: ".md", ".jpg" | replace: "_posts/", "" }}{% endcapture %}
         <meta name="twitter:image" content="https://marcgg.com/assets/previews/{{twitter_image}}" />
         <meta name="image" property="og:image" content="https://marcgg.com/assets/previews/{{twitter_image}}" />
+      {% endif %}
+
+      {% if page.collection == "status" %}
+        <meta name="twitter:image" content="https://marcgg.com/assets/status/social.jpg" />
+        <meta name="image" property="og:image" content="https://marcgg.com/assets/status/social.jpg" />
       {% endif %}
     {% endif %}
 
