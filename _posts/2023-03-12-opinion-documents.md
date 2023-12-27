@@ -3,9 +3,6 @@ title: "Sharing My Take Asynchronously"
 description: "For the past few years I've taken the habit of sharing short documents to explain my opinions and make discussions move faster. So far they've been mostly helpful in furthering debates, so let me share the format and reasons I'm doing this."
 tag: management
 ogimage: "preview_share_take.png"
-blog: true
-
-
 ---
 
 Having distributed multi-cultural teams brings a lot of advantages, but it can make debating and sharing one's opinion efficiently challenging. You might have already felt the pain of joining a Slack channel with a few days worth of exchanges between a many people and then tried to figure out everyone's point of view as well as struggling to know how to add your own opinion to the exchange.

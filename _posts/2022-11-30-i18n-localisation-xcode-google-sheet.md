@@ -3,8 +3,6 @@ title: "Simple Localisation Process for XCode with Google Sheets"
 description: "Here is a very simple script to handle translations that saved me a lot of time when building my iOS app."
 tag: iphone
 ogimage: "preview_i18n.png"
-blog: true
-
 ---
 
 When [building](/blog/2020/11/12/building-boxing-mobile-app-swiftui/) my [iOS boxing app](https://shadowboxingapp.com/) with SwiftUI, I quickly decided to launch in 2 languages, english & French, and after a few months I then added Spanish. Because of that I wasted a bunch of time managing translations and [being infuriated at home XCode deals with them](https://twitter.com/marcgg/status/1322104441428938752).

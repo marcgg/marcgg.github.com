@@ -3,8 +3,6 @@ title: "One on One Meeting Format Ideas"
 description: "Here is the way I conduct 1:1 meetings with people in my engineering team. I'll go over the objective, schedule but also the content and give some feedback about using this particular format for the past few years."
 tag: Management
 ogimage: "oneonemeeting.png"
-blog: true
-
 ---
 
 As a manager, doing one on one meetings with your direct reports is your most important tool. I've talked a bit before about [opening lines](/blog/2019/11/30/one-on-one-openers/), but I figured it could be interesting to dig into how I handle this every week with my teams. I think it's important to have a clear format shared to direct reports. This frames the conversation and helps the manager fullfil the objective, while giving some insights to the direct report regarding what this is all about.

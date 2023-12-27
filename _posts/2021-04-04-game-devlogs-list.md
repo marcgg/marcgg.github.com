@@ -3,9 +3,6 @@ title: "13 Entertaining Game Devlog Youtube Channels"
 description: "To get inspired for my own projects or just to enjoy some entertaining content I fell deep into a game devlog rabbit hole, following people as they build their project. Here are some of the channels I've enjoyed the most so far."
 tag: Games
 ogimage: "gamedev.png"
-blog: true
-
-
 ---
 
 While working on [my iOS boxing app](/blog/2020/11/12/building-boxing-mobile-app-swiftui/) I started getting into watching devlogs to keep myself motivated. While there were not a lot of content for mobile apps, I found a lot of very interesting, insightful or just plain funny indie game creators sharing their journey on Youtube.

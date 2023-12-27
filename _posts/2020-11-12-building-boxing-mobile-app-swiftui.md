@@ -4,8 +4,6 @@ description: "I've spend the last few months building a boxing app to train at h
 tag: Product
 ogimage: "building_app.png"
 featured: true
-blog: true
-
 ---
 
 I practice boxing as a hobby, so when the first lockdown in France happened I decided to keep training at home. However I quickly found out that it was tough to stay focused on my own. I tried various solutions, like boxing along Youtube videos, but it got repetitive and a lot of videos didn't fit the way I wanted to work out... I tried fitness apps, but they were focused on [calisthenics](https://en.wikipedia.org/wiki/Calisthenics), not boxing.
