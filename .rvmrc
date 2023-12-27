@@ -1,1 +1,1 @@
-rvm use ruby-3.0.3@marcgg --create
+rvm use ruby-3.2.2@marcgg --create
