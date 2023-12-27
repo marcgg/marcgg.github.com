@@ -4,6 +4,7 @@ gem "jekyll", "=4.2.1"
 
 gem "kramdown"
 gem "rouge"
+gem "webrick"
 
 group :jekyll_plugins do
 end
