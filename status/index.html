@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "@marcgg - Status / Microblogging"
-category: status
+category: statusIndex
 description: "Small updates or links about what I'm working on, reading and learning."
 pagination:
   enabled: true
@@ -14,20 +14,20 @@ pagination:
     You can follow me via <a href="/atom/status.xml">RSS</a> like in the olden days.
   </div>
 
-  {% assign allStatus = site.status | sort: 'date' | reverse %}
+  {% assign allStatus = site.status | sort: 'date' | reverse -%}
 
-  {% for status in allStatus limit:20 %}
+  {% for status in allStatus limit:20 -%}
     {% unless status.isReply %}
     <div class="status">
       <div class="status_text_content">
         {{ status.content }}
       </div>
 
-      {% if status.media %}
+      {% if status.media -%}
         <div class="status_images">
           <img src="{{ status.media }}" alt='Image for this status' />
         </div>
-      {% endif %}
+      {% endif -%}
 
       <div class="status_date">
         <a href="{{ status.url }}">
@@ -35,8 +35,8 @@ pagination:
         </a>
       </div>
     </div>
-    {% endunless %}
-  {% endfor %}
+    {% endunless -%}
+  {% endfor -%}
 
   <div class="side_note">
     Older updates are available <a href='https://github.com/marcgg/marcgg.github.com/tree/master/legacy_status'>on Github</a>.

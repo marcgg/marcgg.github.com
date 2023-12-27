@@ -1,21 +1,17 @@
----
-layout: compress
----
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <title>
-      {% if page.seotitle %}
+      {% if page.seotitle -%}
         {{ page.seotitle }}
-      {% else %}
-        {% if page.category == 'status'%}
+      {% else -%}
+        {% if page.category == 'status' -%}
           @marcgg - Status / Microblogging
-        {% else %}
+        {% else -%}
           {{ page.title }}
-        {% endif %}
-
-      {% endif %}
+        {% endif -%}
+      {% endif -%}
     </title>
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
     <meta name="author" content="{{ site.author.name }}">
@@ -26,34 +22,31 @@ layout: compress
     <meta name="twitter:site" content="@marcgg">
     <meta name="twitter:creator" content="@marcgg">
 
-    {% if page.category == 'status'%}
+    {% if page.category == 'status' -%}
       <meta name="twitter:title" content="@marcgg - Status / Microblogging">
-      <meta name="twitter:description" content="{{ page.content | markdownify | strip_html }}">
-
-    {% else %}
+      <meta name="twitter:description" content="{{ page.content | markdownify | strip_html | strip_newlines }}">
+    {% else -%}
       <meta name="twitter:title" content="{{ page.title }}">
-      {% if page.description %}
+      {% if page.description -%}
         <meta name="twitter:description" content="{{ page.description }}">
-      {% endif %}
-    {% endif %}
+      {% endif -%}
+    {% endif -%}
 
-
-
-    {% if page.ogimage %}
+    {% if page.ogimage -%}
       <meta name="twitter:image" content="https://marcgg.com/assets/misc/{{page.ogimage}}" />
       <meta name="image" property="og:image" content="https://marcgg.com/assets/misc/{{page.ogimage}}" />
-    {% else %}
-      {% if page.collection == "posts" %}
+    {% else -%}
+      {% if page.collection == "posts" -%}
         {% capture twitter_image %}{{ page.path | replace: ".md", ".jpg" | replace: "_posts/", "" }}{% endcapture %}
         <meta name="twitter:image" content="https://marcgg.com/assets/previews/{{twitter_image}}" />
         <meta name="image" property="og:image" content="https://marcgg.com/assets/previews/{{twitter_image}}" />
-      {% endif %}
+      {% endif -%}
 
-      {% if page.collection == "status" %}
+      {% if page.collection == "status" -%}
         <meta name="twitter:image" content="https://marcgg.com/assets/status/social.jpg" />
         <meta name="image" property="og:image" content="https://marcgg.com/assets/status/social.jpg" />
-      {% endif %}
-    {% endif %}
+      {% endif -%}
+    {% endif -%}
 
     <link href='//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|Open+Sans:300italic,700italic,400,700,300' rel='stylesheet' type='text/css'>
     <link href="/atom/blog.xml" rel="alternate" type="application/atom+xml" title="marcgg#blog">
@@ -79,7 +72,7 @@ layout: compress
       </div>
       <div id="more-nav">
         &rarr; <a href="/blog/" class="{% if page.category == 'blog'%}selected{% endif %}">blog</a>
-        &rarr; <a href="/status/" class="{% if page.category == 'status'%}selected{% endif %}">status</a>
+        &rarr; <a href="/status/" class="{% if page.category == 'status' or page.category == 'statusIndex' %}selected{% endif %}">status</a>
         &rarr; <a href="/books/" class="{% if page.category == 'books'%}selected{% endif %}">books</a>
         &rarr; <a href="/hire/" class="{% if page.category == 'hire'%}selected{% endif %}">hire me</a>
       </div>

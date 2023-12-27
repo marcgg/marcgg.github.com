@@ -1,10 +1,10 @@
 <ul>
-{% for post in site.posts %}
-  {% if post.featured %}
+{% for post in site.posts -%}
+  {% if post.featured -%}
       <li>
         <a href="{{ BASE_PATH }}{{ post.url }}">{{post.title}}</a>
         <span class="home-tag tag-date">{{ post.date | date: "%Y" }}</span>
       </li>
-  {% endif %}
-{% endfor %}
+  {% endif -%}
+{% endfor -%}
 </ul>

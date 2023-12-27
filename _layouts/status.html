@@ -9,20 +9,20 @@ layout: default
         {{ content }}
       </div>
 
-      {% if status.media %}
+      {% if status.media -%}
         <div class="status_images">
           <img src="{{ page.media }}" />
         </div>
-      {% endif %}
+      {% endif -%}
 
       <div class="status_date">
         <a href="{{ page.url }}">
           {{ page.date | date: "%H:%M · %-d %B %Y" }}
         </a>
-        {% if page.originalUrl %}
-        ·
-        <a href='{{ page.originalUrl }}'>on Twitter</a>
-        {% endif %}
+        {% if page.originalUrl -%}
+          ·
+          <a href='{{ page.originalUrl }}'>on Twitter</a>
+        {% endif -%}
       </div>
     </div>
 
