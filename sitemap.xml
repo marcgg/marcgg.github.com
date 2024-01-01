@@ -1,5 +1,4 @@
 ---
-# Remember to set production_url in your _config.yml file!
 title : Sitemap
 ---
 <?xml version="1.0" encoding="UTF-8"?>
@@ -15,6 +14,10 @@ title : Sitemap
 
   <url>
     <loc>{{site.production_url}}/hire/</loc>
+  </url>
+
+  <url>
+    <loc>{{site.production_url}}/status/</loc>
   </url>
 
   {% for post in site.posts %}
