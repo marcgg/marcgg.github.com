@@ -11,16 +11,15 @@ After some time as a fullstack engineer, I worked for 8 years as VP of Engineeri
 
 Alongside this, I provide [dedicated coaching](/hire/) for various companies to help them get over roadblocks.
 
-I've been blogging for the past 10 years. If you'd like to get a feel of what I've had on my mind, you can take a look at a few of my most successful articles:
+I've been blogging for the past 15 years. If you'd like to get a feel of what I've had on my mind, you can take a look at a few of my most successful articles:
 
 {% include featured_posts.html %}
 
-You can reach me via [Twitter][2], [Linkedin][3] or using email "marcg.gauthier-at-gmail-dot-com". If you want to hire me, please check out [this page][4] before contacting me.
+You can reach me via [Linkedin][3] or using email "marcg.gauthier-at-gmail-dot-com". If you want to hire me, please check out [this page][4] before contacting me.
 
 _Marc-_
 
 [1]:	https://uk.getaround.com/
-[2]:	https://twitter.com/marcgg
 [3]:	https://www.linkedin.com/in/marcggauthier
 [4]:	/hire/
 [5]:  https://www.backmarket.com/
