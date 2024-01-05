@@ -4,7 +4,7 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom/status.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2024-01-01T21:08:48+01:00</updated>
+ <updated>2024-01-05T17:08:42+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
@@ -318,7 +318,7 @@
      <updated>2023-12-22T21:00:01+01:00</updated>
      <id>/status/21-00-01</id>
      <content type="html">
-       &lt;p&gt;I’m still experimenting with this new way to share my status on my site. The main limitations are obviously interactions and reach. To fix this I’ll probably figure out a good cross posting strategy and/or implement RSS.&lt;/p&gt;
+       &lt;p&gt;I’m still experimenting with this new way to share my status on my site.&lt;/p&gt;
 
      </content>
    </entry>

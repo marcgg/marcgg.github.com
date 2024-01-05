@@ -3,7 +3,7 @@ title: "The One Thing That Made Me Switch To Vim"
 description: "This is the one reason that got me to switch to vim after
 experimenting for years with a lot of different editors. Promised, it
 won't be about emacs vs vim."
-tag: Dev
+tag: Vim
 socialmediapreview: "Switching to Vim"
 ---
 

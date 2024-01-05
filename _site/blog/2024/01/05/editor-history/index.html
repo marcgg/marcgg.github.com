@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      30 Years of Trying Code Editors
+        </title>
+    <meta name="description" content="To start this new year, I figured it could be fun to look back and share all the different code editor I've used so far professionally, as a student or just for fun.">
+    <meta name="author" content="Marc G Gauthier">
+    <meta content='user-scalable=no, width=device-width, initial-scale=1.0' name='viewport'>
+    <meta name="google-site-verification" content="x2EpQdOMz-k9fP8hak9I3COaXhnQ4jNLp2GU4GYQ8jM" />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@marcgg">
+    <meta name="twitter:creator" content="@marcgg">
+
+    <meta name="twitter:title" content="30 Years of Trying Code Editors">
+      <meta name="twitter:description" content="To start this new year, I figured it could be fun to look back and share all the different code editor I've used so far professionally, as a student or just for fun.">
+      <meta name="twitter:image" content="https://marcgg.com/assets/misc/preview_editors.png" />
+      <meta name="image" property="og:image" content="https://marcgg.com/assets/misc/preview_editors.png" />
+    <link href='//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|Open+Sans:300italic,700italic,400,700,300' rel='stylesheet' type='text/css'>
+    <link href="/atom/blog.xml" rel="alternate" type="application/atom+xml" title="marcgg#blog">
+    <link href="/atom/status.xml" rel="alternate" type="application/atom+xml" title="marcgg#status">
+    <link rel="shortcut icon" href="/assets/favicon.png">
+    <style type="text/css">
+      /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
+
+      @font-face {
+    font-family: 'anonymousregular';
+    src: url('/assets/fonts/Anonymous-webfont.eot');
+    src: url('/assets/fonts/Anonymous-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/Anonymous-webfont.woff') format('woff'),
+         url('/assets/fonts/Anonymous-webfont.ttf') format('truetype'),
+         url('/assets/fonts/Anonymous-webfont.svg#anonymousregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body{
+  font-size: 15px;
+  font-family: 'Droid Serif', serif;
+  color: #353535;
+  line-height: 25px;
+}
+
+#gradient{
+  height: 5px;
+  background: rgba(237,82,82,0.64);
+  background: -moz-linear-gradient(left, rgba(237,82,82,0.64) 0%, rgba(250,21,0,0.65) 20%, rgba(237,82,82,0.66) 52%, rgba(255,21,0,0.66) 80%, rgba(237,82,82,0.67) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(237,82,82,0.64)), color-stop(20%, rgba(250,21,0,0.65)), color-stop(52%, rgba(237,82,82,0.66)), color-stop(80%, rgba(255,21,0,0.66)), color-stop(100%, rgba(237,82,82,0.67)));
+  background: -webkit-linear-gradient(left, rgba(237,82,82,0.64) 0%, rgba(250,21,0,0.65) 20%, rgba(237,82,82,0.66) 52%, rgba(255,21,0,0.66) 80%, rgba(237,82,82,0.67) 100%);
+  background: -o-linear-gradient(left, rgba(237,82,82,0.64) 0%, rgba(250,21,0,0.65) 20%, rgba(237,82,82,0.66) 52%, rgba(255,21,0,0.66) 80%, rgba(237,82,82,0.67) 100%);
+  background: -ms-linear-gradient(left, rgba(237,82,82,0.64) 0%, rgba(250,21,0,0.65) 20%, rgba(237,82,82,0.66) 52%, rgba(255,21,0,0.66) 80%, rgba(237,82,82,0.67) 100%);
+  background: linear-gradient(to right, rgba(237,82,82,0.64) 0%, rgba(250,21,0,0.65) 20%, rgba(237,82,82,0.66) 52%, rgba(255,21,0,0.66) 80%, rgba(237,82,82,0.67) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed5252', endColorstr='#ed5252', GradientType=1 );
+}
+
+/* STRUCTURE */
+
+#container{
+  background-color: #fafafa;
+}
+
+#content{
+  width: 760px;
+  margin: auto;
+  margin-top: 40px;
+  padding-bottom: 60px;
+  padding-top: 40px;
+}
+
+/* FOOTER */
+footer{
+  padding: 40px 0px;
+  text-align: center;
+  border-top: 1px solid #e6e6e6;
+  font-size: 0.8em;
+  color: #9a9a9a;
+  background-color: #fafafa;
+}
+footer a{
+  color: #9a9a9a;
+}
+
+/* HEADER */
+
+header{
+  width: 760px;
+  margin: auto;
+  height: 50px;
+  border-bottom: 1px solid #f1f1f1;
+  position: relative;
+}
+#more-nav{
+  font-size: 0.75em;
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  font-family: "anonymousregular";
+  padding-top: 5px;
+  right: 0px;
+}
+#more-nav a{
+  padding: 0px 2px;
+  text-decoration: none;
+  color: #353535;
+}
+#more-nav a:hover{
+  transition: 0s;
+  background-image: linear-gradient(to bottom, #fff 30%, rgba(200, 200, 200, 0.4) 50%);
+  background-repeat: repeat-x;
+  background-size: 2px 2px;
+  background-position: 0px 100%;
+}
+
+#more-nav .selected{
+  color: #ed5252;
+  font-weight: bold;
+}
+
+#logo{
+  font-size: 1.2em;
+  font-family: "anonymousregular";
+  margin-top: 20px;
+}
+#logo *{
+  text-decoration: none;
+}
+#logo1{
+  color: #999;
+}
+#logo2{
+  font-size: 0.8em;
+  color: #ed5252;
+}
+#logo3{
+  color: #353535;
+}
+#logo a:hover{
+  color: #ed5252;
+  transition-duration: 1s;
+}
+
+/* TEXT STRUCTURE */
+
+h1, h2, h3, h4, h5{
+  font-family: 'Open Sans', sans-serif;
+  color: #1c1c1c;
+}
+
+a:hover{
+  color: #ed5252;
+  transition-duration:0.2s;
+}
+
+p a, ul a, .review a{
+  color: #763232;
+  text-decoration: none;
+  background-image: linear-gradient(to bottom, #fff 30%, rgba(200, 200, 200, 0.4) 50%);
+  background-repeat: repeat-x;
+  background-size: 2px 2px;
+  background-position: 0px 100%;
+}
+
+.homepage a{
+  color: #353535;
+}
+
+p{
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.excerpt p{
+  margin-bottom: 0px;
+}
+
+.footnote, .sidenote{
+  margin: 40px 0px;
+  color: #858585;
+  text-align: right;
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+.image_notes{
+  text-align: center;
+  color: #858585;
+  font-size: 0.9em;
+  margin: -5px 0px 15px 0px;
+}
+
+h1{
+  font-size: 2.45em;
+  text-align: center;
+  margin: 70px 0px 20px 0px;
+  line-height : 1.5em;
+}
+
+h1 em{
+  color: #888;
+  font-weight: normal;
+  font-size: 0.8em;
+}
+
+h2{
+  font-size: 1.75em;
+  margin: 50px 0px 50px 0px;
+  line-height: 1.75em;
+}
+h2::before{
+  content: "#";
+  color: #ed5252;
+  font-family: "anonymousregular";
+  display: inline-block;
+  float: left;
+  padding: 3px 10px 0px 0px;
+  font-size: 0.7em;
+}
+
+h3{
+  font-size: 1.35em;
+  margin-bottom: 20px;
+}
+h4{
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+h5{
+  font-size: 1.3em;
+  margin-bottom: 20px;
+}
+
+h5 *{
+  color: #353535;
+}
+
+em{
+  font-style: italic;
+}
+strong{
+  font-weight: bold;
+}
+
+blockquote{
+  border-left: 3px solid #ddd;
+  color: #888;
+  margin: 0px 0px 20px 40px;
+  font-style: italic;
+}
+
+blockquote p{
+  margin: 5px 20px !important;
+}
+
+
+ul{
+  padding-left: 40px;
+  line-height: 25px;
+  list-style: square;
+  margin-bottom: 20px;
+}
+li{
+  display: list-item;
+}
+
+ol{
+  padding-left: 40px;
+  line-height: 25px;
+  margin-bottom: 20px;
+  list-style-type: decimal;
+}
+/* TAGS */
+
+.home-tag {
+  font-size: 10px;
+  display: inline-block;
+  border: 1px solid #dedede;
+  padding: 2px 2px 1px 2px;
+  border-radius: 2px;
+  line-height: 10px;
+  margin-left: 1px;
+}
+
+.tag-date{ color: #aaa; }
+
+.tag-management         { border-color: #929aff; color: #929aff; }
+.tag-programming        { border-color: #ff9292; color: #ff9292; }
+.tag-coaching           { border-color: #4ec698; color: #4ec698; }
+.tag-projectmanagement  { border-color: #929aff; color: #929aff; }
+
+/* BLOG INDEX */
+#all-posts{
+  margin: 0px auto 10px auto;
+  width: 760px;
+}
+
+.single-post{
+  border-top: 1px solid #f1f1f1;
+  padding: 40px 0px;
+  float: clear;
+}
+.single-post:first-child{
+  border-top: none !important;
+}
+
+.single-post .date{
+  color: #cdcdcd;
+  margin-top: 10px;
+  float: right;
+}
+
+.single-post .author{
+  color: #cdcdcd;
+  float: right;
+  font-size: 0.7em;
+}
+
+.single-post .title{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6em;
+  margin-bottom: 20px;
+  line-height: 1.6em;
+  position: relative;
+}
+.single-post .title a{
+  color: #353535;
+  text-decoration: none;
+}
+
+.single-post .title a::before{
+  content: "→";
+  opacity: 0;
+  font-family: "anonymousregular";
+  font-size: 0.7em;
+  position: absolute;
+  left: -30px;
+  transition: all .4s ease-in-out;
+}
+
+.single-post .title a:hover::before{
+  opacity: 1;
+  transition: all .4s ease-in-out;
+  color: #ed5252;
+}
+
+.single-post .title em{
+  display: none;
+}
+
+.data_table{
+  border: 1px solid #efefef;
+  font-family: "anonymousregular";
+  font-size: 12px;
+  margin: auto auto 20px auto;
+}
+.data_table tr{
+  border: 1px solid #efefef;
+}
+.data_table th{
+  background-color: #efefef;
+}
+.data_table th, .data_table td{
+  padding: 2px 5px;
+}
+
+.post table {
+  margin: 0px auto 20px auto;
+  border: 1px solid #dedede;
+}
+
+.post td {
+  padding: 5px 10px;
+}
+
+/* BOOKS */
+.book-cover-entry{
+  width: 120px;
+  margin-right: 20px;
+  float: left;
+  font-size: 12px;
+  text-decoration: none !important;
+}
+.buy-book{
+  text-decoration: underline;
+}
+.book-cover-entry img{
+  width: 120px;
+}
+.book-cover-entry {
+  background-image: none;
+}
+
+.book-rating .icon {
+  display: inline-block;
+  padding-right: 5px;
+}
+.book-rating .top .icon{ color: #1CED00; }
+.book-rating .good .icon{ color: #82ED00; }
+.book-rating .medium .icon{ color: #EDD100; }
+.book-rating .low .icon{ color: #EDAE00; }
+.book-rating .poor .icon{ color: #ED3B00; }
+
+#buy-title{
+  padding: 0px 0px 25px 0px;
+}
+#buy-title span{
+  font-size: 0.8em !important;
+  color: #cdcdcd;
+}
+#buy-popin{
+  padding: 30px 15px;
+}
+
+.store{
+  display: block;
+  padding: 15px 5px;
+  text-decoration: none;
+}
+
+.store:hover{
+  color: #ed5252;
+}
+
+#upcoming-books{
+  padding-top: 20px;
+}
+#upcoming-books img{
+  height: 90px;
+  margin-right: 10px;
+  border: 1px solid #fff;
+}
+
+#upcoming-books a{
+  text-decoration: none;
+}
+#upcoming-books img:hover{
+  border: 1px solid #ed5252;
+}
+
+/* BLOG SHOW */
+
+.post{
+}
+p code, li code{
+  background-color: #efefef;
+  font-family: "Lucida Console", "Courier New", Courier, monospace;
+  padding: 1px 2px;
+  font-size: 13px;
+}
+.post img{
+  border: 1px solid #e6e6e6;
+  padding: 5px;
+  margin: 0px 0px 20px 20px;
+}
+
+.published span{
+  border-top: 1px solid #e6e6e6;
+  display: inline-block;
+  color: #858585;
+  padding-top: 5px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9em;
+  padding: 5px 20px 0px 20px;
+}
+.published{
+  text-align: center;
+  margin-bottom: 65px;
+}
+
+#more{
+  border-top: 1px solid #e6e6e6;
+  margin-top: 40px;
+  padding: 40px 0px;
+}
+
+#more-articles{
+  margin-bottom: 40px;
+}
+
+.image-wrapper em{
+  display: block;
+  font-size: 0.8em;
+  margin: -20px 0px 20px 0px;
+  color: #aaa;
+}
+.image-wrapper em a{
+  color: #aaa;
+}
+
+.twitter-tweet{
+  margin: auto;
+  max-width: 420px !important;
+}
+
+#intro_blurb{
+  border: 1px dashed #dedede;
+  padding: 20px;
+  margin: 20px 0px;
+  opacity: 0.7;
+}
+
+#intro_blurb a{
+  color: #763232;
+}
+
+
+/* Music */
+
+.js_play_sound, .js_stop_sound{
+  display: inline-block;
+  padding: 4px 10px 2px 10px;
+  border: 1px solid #efefef;
+  background-color: #efefef;
+  margin-right: 10px;
+  text-decoration: none;
+  border-radius: 3px;
+  font-family: 'anonymousregular';
+  font-size: 12px;
+}
+
+.js_play_sound:hover, .js_stop_sound:hover{
+  background-color: #dedede;
+}
+
+/* Comments */
+
+#comments{
+  padding-top: 20px;
+}
+
+#show-disqus-arrow{
+  color: #ed5252;
+}
+
+/* CLEARFIX */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+
+/************************ MOBILE LAYOUT *********************/
+@media all and (max-width: 800px) {
+
+  .home-tag {
+    display: none;
+  }
+
+  .author{
+    float: none !important;
+    display: inline;
+  }
+
+  header{
+    width: 92%;
+    padding: 4%;
+    height: 75px;
+    position: relative;
+    text-align: center;
+    background-color: #fafafa;
+  }
+  #more-nav{
+    left: 0px;
+    top: 50px;
+  }
+  #logo{
+    margin-top: 10px;
+  }
+
+  #content, #all-posts{
+    width: 92%;
+    padding: 4%;
+  }
+  .image-wrapper{
+    width: 100%;
+  }
+  .image-wrapper img, .post div img, .post p img{
+    max-width: 100% !important;
+    padding: 15px 0px !important;
+    margin: 20px 0px 20px 0px !important;
+    border-right: 0px;
+    border-left: 0px;
+  }
+
+  .single-post .title{
+    font-size: 1.4em;
+  }
+
+  .date{
+    display: none;
+  }
+  h1{
+    font-size: 1.7em;
+    width: 94%;
+    padding: 3%;
+  }
+  h2{
+    font-size: 1.50em;
+    margin: 30px 0px 30px 0px;
+    line-height: 1.75em;
+  }
+
+  h3{
+    font-size: 1.30em;
+  }
+  blockquote{
+    margin: 0px 0px 20px 0px !important;
+  }
+  pre{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    width: 90%;
+    overflow-x: scroll;
+  }
+  code{
+    width: 100%;
+    font-size: 13px !important;
+  }
+  footer div{
+    display: inline;
+  }
+
+  /* Hire me responsive */
+  #hire ul{
+    padding-left: 15px;
+  }
+  #talking-img{
+    width: 100%;
+  }
+  #talking-img img{
+    width: 100% !important;
+  }
+  #reviews{
+    border-top: 1px dashed #e6e6e6;
+    padding: 15px 0px 15px 0px;
+  }
+
+  #references_logo{
+    padding: 0px 0px 15px 0px;
+  }
+
+  .review{
+    width: 100%;
+    margin: 0px 0px 15px 0px;
+    padding: 0px;
+    border-bottom: 1px dashed #e6e6e6;
+  }
+  #references_logo img, #references_logo .minor{
+    width: 22%;
+    float: left;
+    margin: 15px 2% 15px 0px;
+  }
+
+  .data_table th, .data_table td{
+    font-size: 8px;
+    padding: 0px;
+    border: 1px solid #efefef;
+  }
+}
+
+
+/* CONVERSATION */
+
+#post-conversation blockquote{
+  color: rgb(84, 84, 84);
+  font-style: normal;
+  margin: 20px 40px;
+}
+#post-conversation blockquote p{
+  margin: 10px 20px !important;
+}
+#post-conversation blockquote .dpm{
+  color: #3B9E2E !important;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+}
+#post-conversation blockquote .ddev{
+  color: #AD34CF !important;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+}
+#post-conversation blockquote .dcto{
+  color: #9E2E2E !important;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+}
+
+/* STATUS */
+
+.status {
+  background-color: #fff;
+  padding: 40px;
+  border: 1px solid #dba9a9;
+  border-radius: 5px;
+  margin: 40px 0px;
+}
+
+.status_text_content {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.status_text_content p {
+  text-align: start !important;
+}
+
+.status_date {
+
+}
+
+.status_date a {
+  color: #858585;
+  text-decoration: none;
+}
+
+.status_images {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.status_images img {
+  max-width: 85%;
+  max-height: 500px;
+}
+
+.side_note {
+  color: #aaa;
+  margin-bottom: 42px;
+  text-align: center;
+}
+
+.side_note a{
+  color: #aaa;
+}
+
+.image_300 {
+  width: 300px;
+}
+
+    </style>
+  </head>
+
+  <body>
+
+    <div id="gradient"></div>
+    <header>
+
+      <div id="logo">
+        <a id='logo1' href="/">marcgg</a>
+        <span id='logo2'>#</span>
+        <a id='logo3' href="/blog/">
+          blog
+        </a>
+      </div>
+      <div id="more-nav">
+        &rarr; <a href="/blog/" class="selected">blog</a>
+        &rarr; <a href="/status/" class="">status</a>
+        &rarr; <a href="/books/" class="">books</a>
+        &rarr; <a href="/hire/" class="">hire me</a>
+      </div>
+    </header>
+
+    <h1>
+  <span>
+    
+      30 Years of Trying Code Editors
+    
+    
+  </span>
+</h1>
+
+
+<div class="published">
+  <span>05 January 2024</span>
+</div>
+
+<div id="container">
+  <div id="content">
+    <div class="post" id="post-">
+
+      <p>To start the new year, I figured it could be fun to look back and share all the different code editors I’ve used so far professionally, as a student or just for fun. Note that I didn’t have many screenshots from back then, so I did my best to find ones that illustrated the state of the tool when I was using it.</p>
+
+<h2 id="as-a-kid">As a Kid</h2>
+
+<p>I started coding quite young. Back then my process was to randomly stumble into different languages and tools with no real direction beyond just trying to build stuff.</p>
+
+<h3 id="qbasic">QBasic</h3>
+
+<p>I learned the basis of programming using QBasic running on DOS. No syntax highlighting. White on blue. The struggle was real. I also remember clearly how confusing it was to me that <code class="language-plaintext highlighter-rouge">PRINT</code> was not actually sending something to the printer.</p>
+
+<p><img src="/assets/blog/editors/qbasic.png" alt="QBasic editor" /></p>
+
+<h3 id="vb-5">VB 5</h3>
+
+<p>Later on I was gifted a book on VB and gave it a go. It was a very different experience from QBasic, and it was quite exciting to create UIs by dragging components around. I built many toy projects with this and learned to stop using <code class="language-plaintext highlighter-rouge">GOTO</code>.</p>
+
+<p><img src="/assets/blog/editors/vb.png" alt="VB" /></p>
+
+<h3 id="dreamweaver-3">Dreamweaver 3</h3>
+
+<p>At that point in time, the internet started to be a more mainstream topic, and I really wanted to be building websites. So I picked up Macromedia Dreamweaver and WYSIWYG’d my way to my first site.</p>
+
+<p><img src="/assets/blog/editors/dreamweaver.png" alt="Dreamweaver" /></p>
+
+<h3 id="frontpage">Frontpage</h3>
+
+<p>At that point I was part of a few programming AOL chatrooms and heard that Frontpage could interesting, so I picked it up. I remember thinking that it was just like Dreamweaver except worst and giving up on it after a few weeks.</p>
+
+<p><img src="/assets/blog/editors/frontpage.png" alt="Frontpage" /></p>
+
+<h3 id="siteaid">SiteAid</h3>
+
+<p>After some time building small sites, I got the impression that Real Programmers™ used HTML and not WYSIWYG tools, so I picked up an editor to change actual code and not just drag and drop components. It was very different for sure and <a href="https://marcgg.com/blog/2014/04/28/frame-based-layout-bad-code/">I built monstruosities with it</a>, but I really liked it and I managed to ship quite a lot of sites!</p>
+
+<p><img src="/assets/blog/editors/siteaid.png" alt="SiteAid" /></p>
+
+<h3 id="ti-83">TI-83</h3>
+
+<p>I’m counting this one as a code editor!</p>
+
+<p>I wrote quite a lot of code directly on my Casio TI-83 during classes where I should have probably paid more attention. Note that the screenshot is non actual, I couldn’t afford the much conveited silver edition.</p>
+
+<p><img src="/assets/blog/editors/ti83.png" alt="TI 83" /></p>
+
+<h3 id="flash-actionscript">Flash (ActionScript)</h3>
+
+<p>I used to create some Flash animations for fun. The next step for me at the time was to learn ActionScript in order to make games. I never got really good at it, but I had fun with it even if I never shipped a completed game.</p>
+
+<p><img src="/assets/blog/editors/as.jpg" alt="AS" /></p>
+
+<h2 id="as-a-computer-science-student">As a Computer Science Student</h2>
+
+<p>When I was a bit older I got into a 5 year computer science / software engineering school.</p>
+
+<h3 id="emacs">Emacs</h3>
+
+<p>Emacs was the editor installed on some of my engineering school’s machines, so I picked it up and survived to tell the tale. I’m pretty sure I only used 5% of its capabilities, so I’m not really able to judge, but it did the job and made me feel like a <a href="https://www.youtube.com/watch?v=V4MF2s6MLxY">hacker</a>.</p>
+
+<p><img src="/assets/blog/editors/emacs.png" alt="Emacs" /></p>
+
+<h3 id="paper">Paper</h3>
+
+<p>I spent quite a while writing code on paper at school. We even had exams where you would fail if your C code on paper would not compile. Good times.</p>
+
+<p>Overall I think that it was a good way to force yourself to think before writing code and I would recommend anyone to try… but maybe only with pseudo code.</p>
+
+<p><img src="/assets/blog/editors/paper.png" alt="Hello world on paper" /></p>
+
+<h3 id="textmate">TextMate</h3>
+
+<p>I bought my first MacBook and started using TextMate because many of my schoolmates were doing the same. I think this is one of the editor that really holds a special place for me. The UI was smooth &amp; clean, it could do a lot but wasn’t overwhelming. I also spent a lot of time watching <a href="http://railscasts.com/">Ryan Bate’s Railscasts</a> where he used Textmate to explain how to use Ruby and Ruby on Rails.</p>
+
+<p>This one was my main go to editor for quite a long time and only gave it up after giving up on seeing TextMate 2 get released.</p>
+
+<p><img src="/assets/blog/editors/textmate.png" alt="Textmate" /></p>
+
+<h3 id="kate">Kate</h3>
+
+<p>When working with KDE, I used whatever was available and it happened to be Kate! I have to admit that I don’t remember much from this one aside from the fact that it was there and had syntax highlighting.</p>
+
+<p><img src="/assets/blog/editors/kate.png" alt="Kate" /></p>
+
+<h3 id="eclipse">Eclipse</h3>
+
+<p>I did quite a lot of Java at school and during my first internships, so it came along with using Eclipse. After a bit of time in TextMate and Emacs, this felt like a bit much, but I got used to it and used it for years when working on Java projects. I never got used to the amount of ressources it was using though.</p>
+
+<p><img src="/assets/blog/editors/eclipse.png" alt="Eclipse" /></p>
+
+<h3 id="scite">SciTE</h3>
+
+<p>At one point I worked at a company where I couldn’t install anything on my machine without a very very long and complex process to follow… and I wasn’t going to code with NotePad! To solve this, I ended up finding an editor that wasn’t blocked because it was so lightweight. I don’t think I met many people who used this one, but to this day I still have very fond memories of my time using it.</p>
+
+<p><img src="/assets/blog/editors/scite.png" alt="scite" /></p>
+
+<h3 id="netbeans">NetBeans</h3>
+
+<p>After some time working with Java, I decided to give Netbeans a try to see how it would fare versus Eclipse regarding ressource consumption. It was slightly better, but had other tradeoffs so I ended up using Eclipse the most.</p>
+
+<p><img src="/assets/blog/editors/netbeans.avif" alt="Netbeans" /></p>
+
+<h3 id="unity">Unity</h3>
+
+<p>I briefly gave game development a try using Unity. It was quite interesting, but at that point I decided to try to make a career in the web and not video games, so I didn’t pursue for this for very long.</p>
+
+<p><img src="/assets/blog/editors/unity.png" alt="Unity" /></p>
+
+<h2 id="as-a-professional-software-engineer">As a Professional Software Engineer</h2>
+
+<p>Moving into my career as a software engineer, I kept using Eclipse &amp; TextMate. I also tried a lot more than I shared here, including PhpStorm or Aptana, but I don’t think I spent enough time with them to even mention.</p>
+
+<h3 id="notepad">NotePad++</h3>
+
+<p>Since I’ve heard a lot about it, I gave NotePad++ a try for an ASP project, but I wasn’t a big fan and dropped it in favor of Visual Studio fairly quickly.</p>
+
+<p><img src="/assets/blog/editors/notepad.png" alt="Notepad++" /></p>
+
+<h3 id="visual-studio">Visual Studio</h3>
+
+<p>I worked in the Microsoft ecosystem for a bit (C#, .NET), so I used Visual Studio with ReSharper and really liked it. The tooling by Jetbrains made a huge difference in developer experience, and despite how much I disliked .NET, it made the whole thing enjoyable.</p>
+
+<p><img src="/assets/blog/editors/visualstudio.jpg" alt="Visual Studio" /></p>
+
+<h3 id="visual-studio-express">Visual Studio Express</h3>
+
+<p>I had a nice experience with Visual Studio, but I didn’t necesserally wanted to pay for it. I also thought I would be fine with only a subset of its features, so I used Visual Studio Express for a while. It was an alright tool, but when working outside of the Microsoft ecosystem I felt like it wasn’t as good as the other options available.</p>
+
+<p><img src="/assets/blog/editors/visualexpress.png" alt="Visual Studio Express" /></p>
+
+<h3 id="nano">Nano</h3>
+
+<p>This never was my main editor and I mostly used it on servers without any UI before I started getting into Vim.</p>
+
+<p><img src="/assets/blog/editors/nano.png" alt="Nano" /></p>
+
+<h3 id="sublime">Sublime</h3>
+
+<p>I started using Sublime around 2010, mainly because the “search &amp; replace in project” feature of TextMate was so clunky. It was pretty good and I did use it for a while, alternating with TextMate. However I never really got into it and I ended up abandonning it for Vim.</p>
+
+<p><img src="/assets/blog/editors/sublime.png" alt="Sublime" /></p>
+
+<h3 id="rubymine">RubyMine</h3>
+
+<p>Since I was using Ruby quite a lot, I figured I would give this IDE a go. It was pretty interesting to see everything possible, but it felt like a bit much and took away from the simplicity that drove me to Ruby after a few years using Java… so I stopped using it and went back to TextMate or Sublime when coding in Ruby. I also like the idea of a “general” code editor much more than one made for a specific language.</p>
+
+<p><img src="/assets/blog/editors/rubymine.png" alt="Ruby Mine" /></p>
+
+<h2 id="present">Present</h2>
+
+<p>For the past ~10 years I’ve stuck to mostly the same tools. I did try Atom and VSCode, but by the time they were available I was already too deep into Vim. It was doing everything I wanted it to do, so I never felt the need to switch.</p>
+
+<h3 id="vim">Vim</h3>
+
+<p>In 2012 I had been coding for a while and got a bit tired of constantly learning new code editors &amp; IDEs. To address that, <a href="https://marcgg.com/blog/2012/09/04/one-reason-to-switch-to-vim-editor/">I picked up Vim</a> hoping it will be a good tool for a very long time. So far I’m still very happy about it and I managed to get it to do everything I wanted except iOS development. I will sometimes try a new editor but I always ended up coming back to Vim and maybe adding a few plugins to get the new features I found interesting in said new editor.</p>
+
+<p>For the record I’m not a complete purist and actually use MacVim. Back then it was an easier transition out of TextMate and I got used to it so I never saw the upside of switching to.</p>
+
+<p><img src="/assets/blog/editors/vim.png" alt="Vim" /></p>
+
+<h3 id="xcode">XCode</h3>
+
+<p>I’m building iOS apps, and despite my best effort using Vim, XCode clearly remains the best developer experience for this task. Because of this, I learned how to use it and now I find it pretty good, especially when working with SwiftUI previews. It might be stockholm syndrome, I’m not sure.</p>
+
+<p><img src="/assets/blog/editors/xcode.png" alt="XCode" /></p>
+
+<h2 id="future">Future</h2>
+
+<p>For iOS development, I don’t think I’ll be able to get away from <strong>XCode</strong> so this one is here to stay.</p>
+
+<p>For everything else, I’m looking more and more at <strong>Neovim</strong>. I would still get to leverage my knowledge of Vim and its ecosystem, but also get to enjoy more advanced customisation with Lua among other things.</p>
+
+<p><img src="/assets/blog/editors/neovim.png" alt="Neovim" /></p>
+
+
+      <div id="more">
+        
+        
+
+        <div id="more-articles">
+          <p>Since you scrolled this far, you might be interested in some other things I wrote:</p>
+            <ul>
+              
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              <li><a href="/blog/2016/03/01/vimrc-example/">Vim Configuration From Scratch in 2016</a></li>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              <li><a href="/blog/2012/09/04/one-reason-to-switch-to-vim-editor/">The One Thing That Made Me Switch To Vim</a></li>
+            
+          
+            
+          
+            
+          
+            
+          
+        
+              <li><a href="/books/">Startup & Tech Book Reviews</a>
+            </ul>
+          </div>
+
+        <div class="container comments" id="comments">
+          Loading comments...
+        </div>
+
+        <div id="comment_form_wrapper" class="container">
+          <form id="comment_form">
+            <textarea name="content" required id="comment_content" placeholder="Leave a comment"/></textarea />
+            <div id="comment_additional" class="row" style="display: none;">
+              <div class="col-sm-4">
+                <input type="text" id="comment_name" required placeholder="Your name*" />
+              </div>
+              <div class="col-sm-4">
+                <input type="text" id="comment_website" placeholder="Your site" />
+              </div>
+              <div class="col-sm-4">
+                <input type="email" id="comment_email" required placeholder="Your email* (won't be displayed)" />
+              </div>
+            </div>
+            <br />
+            <input type="submit" id="submit_comment" value="Send"/>
+            <div id="submit_loading" style="display: none;">...</div>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="/assets/js/comments.js"></script>
+
+<link rel="preload" href="/assets/css/code.css" as="style" onload="this.rel='stylesheet'">
+<link href="/assets/css/comments.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+<script>
+/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+!function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
+/*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+!function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
+</script>
+
+
+    <footer>
+      <div>Website powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a>, hosted on
+      <a href="https://github.com/marcgg/marcgg.github.com">Github</a>.
+      <br>
+      All of the <a href="/blog">blog's articles</a>,
+        <a href="/status">status</a>
+        and site content in general is under
+      Copyright &copy;.
+      <br>
+      If you want to use this content, please contact me.</div>
+    </footer>
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-31071519-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </body>
+</html>
