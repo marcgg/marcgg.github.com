@@ -1,6 +1,6 @@
 ---
-title: "Don't Forget to Iterate & Improve your MVP!"
-description: "My experience leaving a minimum viable feature in production for too long, and why it was a bad idea for projects and team dynamics."
+title: "Don't Forget to Improve your MVP"
+description: "My experience leaving a minimum viable feature in production for too long without iterations, and why it was a bad idea for both projects and team dynamics."
 tag: SBW
 ogimage: "preview_iterating.png"
 
