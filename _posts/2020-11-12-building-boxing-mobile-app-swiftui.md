@@ -1,7 +1,7 @@
 ---
 title: "Building, Releasing and Marketing an iOS Fitness App"
 description: "I've spend the last few months building a boxing app to train at home with SwiftUI. In this article I'll share a lot of the things I've learned. This includes ASO, app design with Figma, keyword optimisation, boxing algorithms, monetization, SEO, social media marketing, localisation and more... It's a big one, so get ready!"
-tag: Product
+tag: SBW
 ogimage: "building_app.png"
 featured: true
 ---

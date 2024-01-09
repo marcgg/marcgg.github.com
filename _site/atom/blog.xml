@@ -4,12 +4,24 @@
  <title>marcgg#blog</title>
  <link href="https://marcgg.com/atom/blog.xml" rel="self"/>
  <link href="https://marcgg.com"/>
- <updated>2024-01-08T11:48:43+01:00</updated>
+ <updated>2024-01-09T13:22:00+01:00</updated>
  <id>https://marcgg.com</id>
  <author>
    <name>Marc G Gauthier</name>
  </author>
 
+ 
+  
+   <entry>
+     <title>Don&apos;t Forget to Iterate &amp; Improve your MVP!</title>
+     <link href="https://marcgg.com/blog/2024/01/09/combo-creator/"/>
+     <updated>2024-01-09T00:00:00+01:00</updated>
+     <id>https://marcgg.com/blog/2024/01/09/combo-creator</id>
+     <content type="html">
+       My experience leaving a minimum viable feature in production for too long, and why it was a bad idea for projects and team dynamics.
+     </content>
+   </entry>
+  
  
   
    <entry>
