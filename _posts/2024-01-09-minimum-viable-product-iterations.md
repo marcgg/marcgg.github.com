@@ -12,8 +12,9 @@ Interestingly, it sometimes happens that this minimum viable feature stays in pr
 
 Regardless of the reasons, **do this enough times and you end up with a half baked product made of many "minimum viable features". The whole thing kind of does what it should do, but really lacks polish and soul.**
 
-<div class="image-wrapper" style="text-align: center"><img src="/assets/blog/preview_iterating.png" alt="MVP done wrong" style="padding: 5px; width: 90%;"/><br /><em>Obligatory <a href='https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp'>Henrik Kniberg reference </a>
+<div class="image-wrapper" style="text-align: center"><img src="/assets/misc/preview_iterating.png" alt="MVP done wrong" style="padding: 5px; width: 90%;"/><br /><em>Obligatory <a href='https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp'>Henrik Kniberg reference </a>
   </em></div>
+
 
 This of course happens to me as well. Today I'll talk about the time I left a feature like this in my mobile app for almost 2 years before realising that people were actively using it and it really needed some love.
 
