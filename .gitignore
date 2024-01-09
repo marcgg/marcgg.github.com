@@ -10,3 +10,4 @@ _site/Gemfile.lock
 *.swo
 *.Ulysses-*
 .jekyll-cache/
+_site/
