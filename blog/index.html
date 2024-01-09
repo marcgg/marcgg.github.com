@@ -12,20 +12,19 @@ description: "Blog with articles about ruby, management, startups, teaching, jav
     the older articles might not represent my opinion anymore or might be technically outdated.
   </div>
 
-  {% for post in site.posts %}
-    {% if post.blog == true %}
-      {% capture year_of_current_post %}
+  {% for post in site.posts -%}
+    {% if post.blog == true -%}
+      {% capture year_of_current_post -%}
         {{ post.date | date: "%Y" }}
-      {% endcapture %}
-
-      {% capture year_of_previous_post %}
+      {% endcapture -%}
+      {% capture year_of_previous_post -%}
         {{ post.previous.date | date: "%Y" }}
-      {% endcapture %}
+      {% endcapture -%}
 
-      {% if forloop.first %}
+      {% if forloop.first -%}
         <h3>{{ year_of_current_post }}</h3>
         <ul>
-      {% endif %}
+      {% endif -%}
 
       <li>
           <a href="{{ BASE_PATH }}{{ post.url }}">
@@ -33,15 +32,15 @@ description: "Blog with articles about ruby, management, startups, teaching, jav
           </a>
       </li>
 
-      {% if forloop.last %}
+      {% if forloop.last -%}
         </ul>
-      {% else %}
-        {% if year_of_current_post != year_of_previous_post %}
+      {% else -%}
+        {% if year_of_current_post != year_of_previous_post -%}
           </ul>
           <h3>{{ year_of_previous_post }}</h3>
           <ul>
-        {% endif %}
-      {% endif %}
-    {% endif %}
-  {% endfor %}
+        {% endif -%}
+      {% endif -%}
+    {% endif -%}
+  {% endfor -%}
 </div>
