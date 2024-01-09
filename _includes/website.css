@@ -271,59 +271,6 @@ ol{
   width: 760px;
 }
 
-.single-post{
-  border-top: 1px solid #f1f1f1;
-  padding: 40px 0px;
-  float: clear;
-}
-.single-post:first-child{
-  border-top: none !important;
-}
-
-.single-post .date{
-  color: #cdcdcd;
-  margin-top: 10px;
-  float: right;
-}
-
-.single-post .author{
-  color: #cdcdcd;
-  float: right;
-  font-size: 0.7em;
-}
-
-.single-post .title{
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.6em;
-  margin-bottom: 20px;
-  line-height: 1.6em;
-  position: relative;
-}
-.single-post .title a{
-  color: #353535;
-  text-decoration: none;
-}
-
-.single-post .title a::before{
-  content: "→";
-  opacity: 0;
-  font-family: "anonymousregular";
-  font-size: 0.7em;
-  position: absolute;
-  left: -30px;
-  transition: all .4s ease-in-out;
-}
-
-.single-post .title a:hover::before{
-  opacity: 1;
-  transition: all .4s ease-in-out;
-  color: #ed5252;
-}
-
-.single-post .title em{
-  display: none;
-}
-
 .data_table{
   border: 1px solid #efefef;
   font-family: "anonymousregular";
@@ -562,10 +509,6 @@ p code, li code{
     margin: 20px 0px 20px 0px !important;
     border-right: 0px;
     border-left: 0px;
-  }
-
-  .single-post .title{
-    font-size: 1.4em;
   }
 
   .date{

@@ -6,26 +6,42 @@ description: "Blog with articles about ruby, management, startups, teaching, jav
 ---
 
 <div id="all-posts">
+  <div id="intro_blurb" style="margin-top: 20px;">
+    Here is my blog, hope you find something interesting there!
+    While browsing, keep in mind that I've been doing this for a while and some of
+    the older articles might not represent my opinion anymore or might be technically outdated.
+  </div>
+
   {% for post in site.posts %}
     {% if post.blog == true %}
-      <div id="index-post-{% increment i %}" class="single-post">
-        <div class="excerpt">
-          <div class="date">{{ post.date | date: "%B %Y" }}</div>
-          <div class="title">
-            <a href="{{ BASE_PATH }}{{ post.url }}">
-              {% if post.titlehtml %}
-                {{ post.titlehtml }}
-              {% else %}
-                {{ post.title }}
-              {% endif %}
-            </a>
-          </div>
+      {% capture year_of_current_post %}
+        {{ post.date | date: "%Y" }}
+      {% endcapture %}
 
-          <p class="description">
-            {{post.description}}
-          </p>
-        </div>
-      </div>
+      {% capture year_of_previous_post %}
+        {{ post.previous.date | date: "%Y" }}
+      {% endcapture %}
+
+      {% if forloop.first %}
+        <h3>{{ year_of_current_post }}</h3>
+        <ul>
+      {% endif %}
+
+      <li>
+          <a href="{{ BASE_PATH }}{{ post.url }}">
+            {{ post.title }}
+          </a>
+      </li>
+
+      {% if forloop.last %}
+        </ul>
+      {% else %}
+        {% if year_of_current_post != year_of_previous_post %}
+          </ul>
+          <h3>{{ year_of_previous_post }}</h3>
+          <ul>
+        {% endif %}
+      {% endif %}
     {% endif %}
   {% endfor %}
 </div>
