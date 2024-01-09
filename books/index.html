@@ -19,10 +19,9 @@ ogimage: books.jpg
 
   </div>
 
+  {% assign sorted = site.books | sort:"score" | reverse | where:"read", true -%}
 
-  {% assign sorted = site.books | sort:"score" | reverse | where:"read", true %}
-
-  {% for book in sorted %}
+  {% for book in sorted -%}
     <div class="single-post master-book-data" data-author="{{book.author}}" data-title="{{ book.title }}" data-link="{{book.link}}" data-linkfr="{{book.linkfr}}" data-linkus="{{book.linkus}}">
       <div class="title">
         <a href="{{book.linkus}}">{{book.title}}</a>
@@ -35,26 +34,23 @@ ogimage: books.jpg
           <br>
           &rarr; <span class="buy-book">Buy this book</span>
         </a>
-        {{book.content}}
+        {{ book.content }}
         <div class="book-rating">
-          {% if book.score >= 18 %}
+          {% if book.score >= 18 -%}
             <span class="top"><span class="icon">✓✓✓</span>Amazing book, everybody should read it</span>
-          {% elsif book.score >= 16 %}
+          {% elsif book.score >= 16 -%}
             <span class="top"><span class="icon">✓✓</span>A must read</span>
-          {% elsif book.score >= 13 %}
+          {% elsif book.score >= 13 -%}
             <span class="good"><span class="icon">✓</span>Good read if you enjoy the subject</span>
-          {% elsif book.score >= 10 %}
+          {% elsif book.score >= 10 -%}
             <span class="medium"><span class="icon">~</span>Interesting book, but don't go out of your way to read it</span>
-          {% elsif book.score >= 8 %}
+          {% elsif book.score >= 8 -%}
             <span class="low"><span class="icon">×</span>Don't pick it up unless you really like the topic</span>
-          {% else %}
+          {% else -%}
             <span class="poor"><span class="icon">××</span>Not really worth checking</span>
-          {% endif %}
-
+          {% endif -%}
         </div>
       </p>
     </div>
-  {% endfor %}
+  {% endfor -%}
 </div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
