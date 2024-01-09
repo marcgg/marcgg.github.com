@@ -26,20 +26,12 @@ I won’t get into the details on how to set up a project and will assume you ha
 If you never created something with RubyMotion, please take a look at [this tutorial][5]
  before reading the rest of this article.
 
-RubyMotion uses [Ruby][6]. If you are not familiar with it, there
-are tons of tutorials and books on how to code with this language. I
-recommend [Learn Ruby The Hard
-Way](http://ruby.learncodethehardway.org/) by [Zed A. Shaw][7].
+RubyMotion uses [Ruby][6]. If you are not familiar with it, there are tons of tutorials and books on how to code with this language. I recommend [Learn Ruby The Hard Way](http://ruby.learncodethehardway.org/) by [Zed A. Shaw][7].
 
 
 ## Our Objective
 
-I’ll try to explain how to customize a
-[UISlider][8]
- to get the look and feel matching the design of your application.
-Here’s what’s the demo code will give you:
-
-<iframe src="http://www.screenr.com/embed/v0y8" width="100%" height="396" frameborder="0">Loading</iframe>
+I’ll try to explain how to customize a [UISlider][8]  to get the look and feel matching the design of your application.
 
 ## Setting up the AppDelegate
 
@@ -54,7 +46,7 @@ class AppDelegate
 
 	main_controller = MainController.alloc.init
 	@window.rootViewController = main_controller
-
+	
 	@window.rootViewController.wantsFullScreenLayout = true
 	@window.makeKeyAndVisible
 	true
