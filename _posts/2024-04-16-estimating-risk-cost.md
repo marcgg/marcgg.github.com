@@ -1,8 +1,8 @@
 ---
 title: "Estimates as a Communication Tool"
-description: ""
+description: "Estimating the time a project will take often creates problem. It's predicting the future and therefore often fails. However, when done right, it can be an efficient communication tool."
 tag: ProjectManagement
-ogimage: ".ext"
+ogimage: "preview_estimates.png"
 ---
 
 A while ago I wrote about [deadlines & estimates](/blog/2015/08/27/deadlines-estimates-software-startup/) and I've been referencing this article quite a bit since then. Basically, my point was that **estimates are a tool used to communicate**, and deadlines are real life constraints even if some people will use "fake" deadlines to artificially increase urgency.
