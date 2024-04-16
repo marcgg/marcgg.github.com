@@ -16,10 +16,6 @@ title : Sitemap
     <loc>{{site.production_url}}/hire/</loc>
   </url>
 
-  <url>
-    <loc>{{site.production_url}}/status/</loc>
-  </url>
-
   {% for post in site.posts %}
     {% if post.blog == true %}
       <url>
