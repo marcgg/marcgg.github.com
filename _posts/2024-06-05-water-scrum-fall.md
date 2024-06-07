@@ -31,9 +31,11 @@ If you are a small company building a SaaS or some web solution that you can shi
 - The team building the software could grow frustrated as they won't really have any significant impact on what is released to customers. After a while, they might even disengage from looking at business outcomes and focus only on their craft instead.
 - Once the project is shipped, the team is on to the next one and won't have much time to iterate based on the learnings, data and feedback they got. This can lead to product turning into a collection of [MVP features and half baked ideas](/blog/2024/01/09/minimum-viable-product-iterations/).
 
-Do this enough times and, while you might create an organisation able to ship predictably large projects, these projects might not be the ones your customers want and you will be slow to react to feedback. The business and technical teams will grow further apart and you will lose the benefits of doing software development in house. Down the line, it will limit your ability to react to change and innovate. You will wonder why everything takes forever to plan and execute when some competitors can do more in a fraction of the time.
+Do this enough times and you might create an organisation able to ship predictably large projects. However there's a decent chance that these projects won't be the ones your customers want and you will be slow to react to feedback. It's essentially focusing on output instead of outcome, favouring finishing arbitrary projects instead of accomplishing business goals.
 
-If you have the ability to approach this differently, with very frequent releases and an understanding across the company that predictability will be lower, you will be able to accomplish much more.
+This situation could lead to the business and technical teams to grow further apart and you will lose the benefits of doing software development in house. Down the line, it will limit your ability to react to change and innovate. You will wonder why everything takes forever to plan and execute when some competitors can do more in a fraction of the time and/or cost.
+
+If you have the ability to approach building software differently, with very frequent releases and an understanding across the company that predictability will be lower, you should be able to accomplish much more.
 
 This is not easy to achieve as it requires:
 
