@@ -58,7 +58,7 @@ My goal will be to give you what you need to be successful. There are multiple t
 
 - Help sort out priorities if you feel overwhelmed by the amount of work to do.
 
-- My strong suits are backend development, organisation, software architecture & management. I'll be particularly relevant there, if you want to sit down and have a brainstorm about a particular topic. However I can give insights and advice in all product & engineering related topics.
+- My strong suits are backend development, organisation, software architecture & management. I'll be particularly relevant there. However I have experience and can share insights in most product & engineering related topics.
 
 - Provide guidance and opportunities for career development. What you are doing right now might not be what you want to be doing in three years, so let's discuss this freely.
 
@@ -76,29 +76,31 @@ My goal will be to give you what you need to be successful. There are multiple t
 
 - If you're explaining a production issue to me, I want to hear the impact on users & if it's fixed before getting into any other details. If you don't start with the impact I'll be stressed out the whole time you are talking to me.
 
-- The company might need me to not share a particular piece of information with you, and I will not do it. However I will never lie to you, the worst I can do is remain vague.
+- The company might need me to not share a particular piece of information with you, and I will not do it. However I will never lie to you, the worst I can do is remain vague. I might also tell you directly that this is not an information I can share.
 
 - By default I prefer to be direct and push people to do better. It's truly very frustrating to me to see someone not reaching their potential. While it is appreciated by some, I know that it can be a bit too much for some people. If this a problem, please let me know and I'll adapt.
 
-- Following up is very important to me. I assume that you will make a note of any action required and let me know when it's done / if it's delayed / if you need help. Once I consider that it is in your scope, I will stop worrying about it and trust you to deliver. What I dislike is people forgetting tasks or dropping topics without telling me.
+- Following up is very important to me. I assume that you will make a note of any action required and let me know when it's done / if it's delayed / if you need help. Once I consider that it is in your scope, I will stop worrying about it and trust you to deliver. I really dislike people forgetting tasks or dropping topics without telling me.
 
-- Sometimes I can speak too much, especially when it's a topic I enjoy. Feel free to interrupt me if you feel like this is not relevant and I'm wasting time.
+- Sometimes I can speak too much, especially when it's a topic I enjoy. I'm completely OK being interrupted  if you feel like this is not relevant and I'm wasting time.
 
 ### Work
 
 - I have a very high esteem for what has been accomplished in the past, such as [legacy code][4] or previous product decisions. Yes sometimes it can be clunky, but the people who did it tried their best with the information and skills they had at the time.
 
-- I hate meetings that start or end late. It feels like a complete waste of time. If you are significantly late for a meeting, there's a good chance I'll cancel or start without you if it's not a one on one. Because of this, I also try my best to be on time to every meeting and you can expect my meetings to start on time. As a rule of thumb I'd say a few minutes late are acceptable, but above 5 minutes I will tend to expect a small excuse. At least that's the way I'll act with you if I'm late :)
+- I hate meetings that start or end late. It feels like a complete waste of time and generally disrespectful. If you are significantly late for a meeting, there's a good chance I'll cancel or start without you. Because of this, I also try my best to be on time to every meeting and you can expect my meetings to start on time. As a rule of thumb I'd say a few minutes late are acceptable, but above 5 minutes I will tend to expect a small excuse. At least that's the way I'll act with you if I'm late :)
 
-- There are cases where I'll work overtime. I don't expect you to do the same unless explicitly specified. If I message you and you're done with your day, I don't expect a response right away. In most cases it can wait the next day. When unsure, ask me.
+- There are cases where I'll work overtime, or very late... or very early. I don't expect you to do the same unless explicitly specified. If I message you and you're done with your day, I don't expect a response right away. In most cases it can wait the next day. When unsure, ask me.
 
-- I take vacations and you should too. When I'm off, I usually do not to check my emails nor slacks, but I'm always available via SMS for anything that can't wait for my return. Don't hesitate to use it if relevant, as I will feel way more at ease knowing that people will contact me in case of major trouble.
+- I take vacations, and you should too. When I'm off, I usually do not to check my emails nor slacks, but I'm always available via SMS for anything that can't wait for my return. Don't hesitate to use it if relevant, as I will feel way more at ease knowing that people will contact me in case of major trouble.
 
 - I have a bias for doing something instead of planning. I much prefer trying out an idea after a couple of discussions rather than having long meetings or studies. I also like to have a lot of quickly drafted alternative plans, so while I'll try out plan A, I keep plans B, C, D & E in mind.
 
 - To save time, I might invite you to some meetings without talking to you first. If the moment is not convenient or if you want more information about the agenda, don't hesitate to ask me and I can often move it.
 
 - I tend to have high expectations and will challenge you on what you are doing. This doesn't necessarily mean that you are doing a poor job. It often means that I believe you can progress even more.
+
+- I value time with my kid, so there might be time where they'll take priority over work. 
 
 ### Personality Tests
 
@@ -113,7 +115,7 @@ I generally agree with the results and can't deny that I do have traits from the
 
 ### I'm Available For You
 
-I always make myself available during our 1:1s. We might also have some ad-hoc meetings about ongoing projects. I understand that this might be too little for you, hindering your chances of success. If that's the case, don't hesitate to ask me questions,, as **I will always have 5 minutes to spare for you**. Even if my calendar is completely full. Even if I look busy. Keep in mind that 5 minutes will never be too much for me, and can sometimes save you a lot of time or headaches.
+I always make myself available during our 1:1s. We might also have some ad-hoc meetings about ongoing projects. I understand that this might be too little for you, hindering your chances of success. If that's the case, don't hesitate to ask me questions,, as [**I will always have 5 minutes to spare for you**](/blog/2024/06/28/having-five-minutes/). Even if my calendar is completely full. Even if I look busy. Keep in mind that 5 minutes will never be too much for me, and can sometimes save you a lot of time or headaches.
 
 A small note however: please always give me some context when asking for my time. I really don't like "do you have 5 minutes?" messages on Slack. Prefer "do you have 5 minutes to talk about X?", I will appreciate it greatly.
 
@@ -125,16 +127,7 @@ If you have constraints, like practicing a sport or picking your kids from schoo
 
 ### Work From Home
 
-I strongly believe that my team should operate correctly even if everyone is remote, and I generally have a bias in favour of remote work.
-
-Before going remote, you usually have to send me a work from home request. If you do it a few days a month I will always validate them. If you want to work remotely more regularly, let's talk about it. If you want to be fully working from home, that's another discussion that might require a contract renegotiation.
-
-I will assume the following and if you respect them, remote work won't be a topic of discussion between us:
-
-- You talked to your team and other people that might need you
-- You made sure to be reachable & have a sufficient internet connection
-- You will be present in all meetings you were supposed to be in
-- You will actually work :)
+I strongly believe that my team should operate correctly even if everyone is remote, and I generally have a bias in favour of remote work. There are probably already rules in place regarding this, so I expect you to respect those rules. If you disagree with said rules, let's discuss it.
 
 ### Holidays
 
@@ -142,7 +135,7 @@ I very rarely refuse holiday requests. Use your best judgment and understand the
 
 ### 1:1s
 
-If you are my direct report, we will have a recurring meeting. Here is what you can expect from it:
+If you are my direct report, we will have a recurring one on one meeting. Here is what you can expect from it:
 
 - I will do my best to never cancel or reschedule it
 - It will be 30 minutes, every week
@@ -150,17 +143,19 @@ If you are my direct report, we will have a recurring meeting. Here is what you 
 - We will discuss day to day but also more long term topics
 - We will use this moment to work on avoiding surprises at the yearly performance review
 
+I even wrote an article about this [you can find here](/blog/2021/03/27/one-on-one-format/).
+
 ### Yearly Performance Review
 
-Every year we'll have a meeting of a few hours about your performances. Ideally we will have discussed everything during the year and will use this moment to wrap the year up. I will also give you some vision over what's going to happen in the coming years, the different career paths available to you , etc.
+Every year we'll have a meeting of a few hours about your performances and career trajectory. Ideally we will have discussed everything during the year and will use this moment to wrap the year up. I will also give you some vision over what's going to happen in the coming years, the different career paths available to you , etc.
 
-This will also be the best moment to discuss salary changes.
+Depending on the company, this can be the best moment to discuss salary changes.
 
 ### Reading my Calendar
 
-My schedule can get pretty complicated. I have one kid, and I have to pick her up from the daycare in some evenings and/or mornings. I also have a lot of meetings, interviews, 1:1s…
+My schedule can get pretty complicated. I have two kids,  a lot of meetings, interviews, 1:1s…
 
-However, my calendar I almost always up to date and public, so please check it before booking a meeting with me. If you can't find a spot, ask me if I can find one.
+However, my calendar I almost always up to date and public, so please check it before booking a meeting with me. If you can't find a spot, ask me if I can find one and don't double book.
 
 ### Contacting Me
 
@@ -178,25 +173,27 @@ If you are waiting on me for something and I'm not doing anything, maybe I forgo
 
 ### My First Expectations
 
-We hired you because of your experience and skills, so my role is not to tell you how to do your job. Because of this assumption, I'm expecting that you are able to operate as a professional, making smart decisions moving your projects forward and while communicating along the way.
+You've been hired because of your experience and skills, so my role is not to tell you how to do your job. Because of this assumption, I'm expecting that you are able to operate as a professional, making smart decisions moving your projects forward and while communicating along the way.
 
-This doesn't mean that I think you'll do everything on your own.  I am here to provide you guidance, mentorship (either through me, or by finding the people you should be getting it from) and assistance. When you need help, I expect you to not hesitate and ask for it. If you feel you made a mistake, you should share it openly with me so that we can figure out how to improve.
+This doesn't mean that I think you'll do everything on your own.  I am here to provide you with guidance, mentorship (either through me, or by finding the people you should be getting it from) and assistance. When you need help, I expect you to not hesitate and ask for it. If you feel you made a mistake, you should share it openly with me so that we can figure out how to improve.
 
 ### Expressing Other Expectations
 
-I try to make my expectations as clear as possible, I just find it to be a simpler way to work and communicate. If you don't know what I'm expecting of you, please ask for clarifications — let's not wait until we misunderstand each other! If you disagree with my expectations, please let me know, I can adjust or explain my position.
+I try to make my expectations as clear as possible, but of course I don't always succeed.
+
+If you don't know what I'm expecting of you, please ask for clarifications. If you disagree with my expectations, please let me know, I can adjust or explain my position.
 
 If you have expectations for me, please let me know and try to be clear as well.
 
 ### Disappointed \> Surprised
 
-If you mess up in some way, please let me know. If I hear it from you, I'll be disappointed but at least I can help and we can figure out a way together to deal with it. 
+If you mess up in some way, please let me know as soon as possible. If I hear it from you, I'll be disappointed but at least I can help and we can figure out a way together to deal with it. 
 
-Learning about the problem from someone else outside of my team would be a significant issue for me.
+Learning about a problem you caused from someone else would be a significant issue for me.
 
 ### I'll Make Mistakes
 
-I'll do my best, but I'm bound to make mistakes. When it happens, please assume that I have good intentions. Then  don't hesitate to let me know if you think that I'm making a poor decision or acting in a way that doesn't make sense to you.
+I'll do my best, but I'm bound to make mistakes. When it happens, please assume that I have good intentions. Don't hesitate to let me know if you think that I'm making a poor decision or acting in a way that doesn't make sense to you.
 
 I'll be happy to give you more context to explain my actions or try to fix whatever is wrong. I'll also do my best to react in a productive fashion to any negative feedback.
 
