@@ -6,9 +6,9 @@ category: README
 subtitle: "A comprehensive documentation of how I work"
 ---
 
-This document is an effort to explain my role, my values, my expectations and my quirks as a manager. It might seem a bit weird, but I see it as a way to gain time when starting to work together. Of course this does not replace actually learning to know each other! If you want more context regarding why I wrote this, please read [this blog article][1].
+This document is an effort to explain my role, my values, my expectations and my quirks as a manager. It might seem a bit weird, but it can be a way to speed things up when starting to work together. Of course this does not replace actually learning to know each other! If you want more context regarding why I wrote this, please read [this blog article][1].
 
-It's important to keep in mind that this is a living document and, as such, it will change over time. Remember as well that I'm here to help you succeed and will do my best to adapt my management style to you, so please don't see anything here as set in stone and feel free to come and discuss specific points with me.
+It's important to keep in mind that this is a living document and, as such, it will change over time. Remember as well that if you are reporting to me I'm here to help you succeed and will do my best to adapt my management style to you. Please don't see anything here as set in stone and feel free to come and discuss specific points with me.
 
 Finally, **if you see a discrepancy between this document and my behaviour, please tell me.**
 
@@ -20,9 +20,9 @@ The way I see it, my job is to find the right spot between what the company want
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/manager-readme/focus.jpg" alt="Finding the right spot" style="padding: 5px; width: 80%"/></div>
 
-We'll never have a perfect overlap, so there are tradeoffs to be made. To caricature, the easy and first tradeoff to agree on is that the company should pay the employee (it would have been easier to pay nothing), and the employee should work on projects helping the company (it would have been easier to stay at home and chill).
+We'll never have a perfect overlap, so there are tradeoffs to be made, but it's good to try to achieve as good as a match as possible.
 
-To get to a good spot I need to have a good understanding of both parties and figure out the best solution to move forward, and then translate this into actions. The actual things to do are massively depending on the context, so my day to day varies a lot. I might work on budgets, review pull requests, prepare performance reviews, meet job candidates, write some code to fix a flaky test...
+To get to a good spot I need to have a good understanding of both parties and figure out the best solution to move forward, and then translate this into actions. The actual things to do are obviously depending on the context, so my day to day varies a lot. I might work on budgets, review pull requests, prepare performance reviews, meet job candidates, write some code to fix a flaky test...
 
 If I do my job correctly, it will lead to great people wanting to join and stay while delivering value for the company, ultimately helping everyone succeed.
 
@@ -30,7 +30,7 @@ If I do my job correctly, it will lead to great people wanting to join and stay 
 
 I love when things fit together well and deliver value.
 
-It can be a group of people working well together, a piece of code shipped without bugs, a well crafted design, a great piece of software architecture, an elegant solution to a user's problem… if it works well and serves a purpose, then I most likely enjoy and be proud to be associated with it!
+It can be a group of people working well together, a piece of code shipped without bugs, a well crafted design, a great piece of software architecture, an elegant solution to a user's problem… if it works well and serves a purpose, then I'll be proud to be associated with it!
 
 Because of this I like optimising things — no matter the thing. Meetings need to be focused and interesting, code without bugs, processes simple and clear. In my spare time I even play games like [Factorio][2] or [Oxygen Not Included][3] - games about automatisation and optimisation!
 
@@ -50,7 +50,7 @@ In a work environment, I value...
 
 ## What I Can Help You With
 
-My goal will be to give you what you need to be successful in this company. There are multiple topics I can help with, and most of them we'll figure out together, but here is a list of the things I usually do:
+My goal will be to give you what you need to be successful. There are multiple topics I can help with and we'll discuss this together. To give you an idea of what it could look like, here is a list of the things I usually do:
 
 - Provide context and perspective about the business, other teams, the ecosystem...
 
