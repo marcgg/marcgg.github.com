@@ -1,7 +1,7 @@
 ---
 title: "The Beginner Mindset & Moving To Management"
 description: "I've changed a year ago from being a software developer to actually leading the technical team as director of engineering. This wasn't always easy, but having the right mindset clearly helped."
-tag: Management
+tag: Leadership
 socialmediapreview: "The Beginner Mindset"
 ---
 
