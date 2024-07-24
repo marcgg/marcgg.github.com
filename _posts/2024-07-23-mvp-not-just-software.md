@@ -1,6 +1,6 @@
 ---
 title: "Minimum Viable Content"
-description: ""
+description: "When you are building an app on your own, it's critical to not waste time, listen to user feedback and continuously ship value. Here's how I improved my tutorial content over the years."
 tag: SBW
 ogimage: "preview_minimum_viable_content.png"
 
@@ -16,7 +16,7 @@ Here are the iterations I went through, starting with what was the fastest optio
 
 <div class="image-wrapper" style="text-align: center"><img src="/assets/blog/video_evolution.png" alt="MVP evolution" style="padding: 5px; width: 90%;"/></div>
 
-- **Nothing**. At the very beginning I would tell users to throw a "jab" or a "cross". Either they knew what it was or they didn't. Obviously not great, but many people downloading my app were already boxing so it was somewhat acceptable as the first step.
+- **Nothing**. At the very beginning, more than 3 years ago, I would tell users to throw a "jab" or a "cross". Either they knew what it was or they didn't. Obviously not great, but many people downloading my app were already boxing so it was somewhat acceptable as the first step.
 - **A sentence.** I figured it would be better to have some information about the techniques, so I provided a one liner description for each punch and defensive movement.
 - **More detailed text**. Users could click on the technique name and see a few paragraphs explaining how to do it. It was better as someone could actually learn how to do the technique... but it's very hard to properly convey the details of boxing in a block of text.  Some users managed to clarify some details of the technique this way, but learning from scratch was a struggle.
 - **Text & links to Youtube videos**. Writing text was quick and cheap, but I had too many feedback that users had trouble understanding the more advanced techniques. To address this, I started linking to external Youtube videos. This was very helpful, but it took people entirely out of the app, which was not great. 
