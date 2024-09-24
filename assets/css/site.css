@@ -565,16 +565,6 @@ p code, li code{
   background-color: #dedede;
 }
 
-/* Comments */
-
-#comments{
-  padding-top: 20px;
-}
-
-#show-disqus-arrow{
-  color: #ed5252;
-}
-
 /* CLEARFIX */
 .cf:before,
 .cf:after {

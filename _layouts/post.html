@@ -53,30 +53,6 @@ layout: default
           {% endif -%}
         </div>
 
-        <div class="container comments" id="comments">
-          Loading comments...
-        </div>
-
-        <div id="comment_form_wrapper" class="container">
-          <form id="comment_form">
-            <textarea name="content" required id="comment_content" placeholder="Leave a comment"/></textarea />
-            <div id="comment_additional" class="row" style="display: none;">
-              <div class="col-sm-4">
-                <input type="text" id="comment_name" required placeholder="Your name*" />
-              </div>
-              <div class="col-sm-4">
-                <input type="text" id="comment_website" placeholder="Your site" />
-              </div>
-              <div class="col-sm-4">
-                <input type="email" id="comment_email" required placeholder="Your email* (won't be displayed)" />
-              </div>
-            </div>
-            <br />
-            <input type="submit" id="submit_comment" value="Send"/>
-            <div id="submit_loading" style="display: none;">...</div>
-          </form>
-        </div>
-
       </div>
 
     </div>
@@ -84,11 +60,7 @@ layout: default
   </div>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="/assets/js/comments.js"></script>
-
 <link rel="preload" href="/assets/css/code.css" as="style" onload="this.rel='stylesheet'">
-<link href="/assets/css/comments.css?body=1" rel="stylesheet" type="text/css" media="all">
 
 <script>
 /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
