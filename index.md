@@ -7,15 +7,15 @@ category: about
 description: "I'm a software engineer, technical leader and startup advisor. I blog about writting software, side projects, entrepreneurship, management and more."
 ---
 
-I've been building software for more than 15 years. I started as a fullstack engineer for various startups. I then worked for 8 years as VP of Engineering at Drivy, then acquired by [Getaround][1], the leading car sharing company working on building a viable alternative to car ownership. After this, I worked as Director of Engineering for [Back Market][5] during 3 years, contributing to reduce e-waste through its marketplace for refurbished electronics.
+A bit about me, it's my site after all!
 
-Today, I'm bootstrapping a [boxing fitness app](https://apps.apple.com/us/app/shadow-boxing-workout-app/id1510911574) as well as providing [dedicated coaching](/hire/) for various companies to help them get over roadblocks.
+I've been building software for more than 15 years. I first started as a fullstack engineer for various startups in France and the US. I then worked as a technical lead and then evolved into a VP of Engineering at Drivy. The company was then acquired by [Getaround][1], the leading car sharing company working on building a viable alternative to car ownership. After this, I worked as Director of Engineering for [Back Market][5] during 3 years, contributing to reduce e-waste through its marketplace for refurbished electronics.
 
-I've been blogging for quite a while. If you'd like to get a feel of what I've had on my mind, you can take a look at a few of my most successful articles:
+I've also taught many people how to build software in various ways, ranging from evening classes aimed at professionals, 1 on 1 executive coaching or even workshops for teens. I've worked with large schools like HEC or HETIC, but also collaborated with many entrepreneurs to help them improve how they worked.
 
-{% include featured_posts.html %}
+Today, I'm building my own products as well as providing [dedicated coaching](/hire/) for various companies and executives to help them get over roadblocks. If you want to hire me, please check out [this page][4] that gets into more details.
 
-You can reach me via [Linkedin][3] or using email "marcg.gauthier-at-gmail-dot-com". If you want to hire me, please check out [this page][4].
+If needed, you can reach me via [Linkedin][3] or using email "marcg.gauthier-at-gmail-dot-com". 
 
 _Marc-_
 
