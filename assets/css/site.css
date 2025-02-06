@@ -244,6 +244,10 @@ h1 em{
   font-size: 0.8em;
 }
 
+.simpleh1 {
+  padding-bottom: 32px;
+}
+
 h2{
   font-size: 1.75em;
   margin: 50px 0px 50px 0px;
