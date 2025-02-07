@@ -1,0 +1,44 @@
+- client: HEC
+  description: I gave classes and lead different workshops for HEC students in the "master entrepreneur" class.
+  type: Classes
+  logo: hec
+
+- client: Back Market
+  description: During my 3 years as Director of Engineering I lead up to 60 people and helped the company handled its skyrocketing growth.
+  type: Director of Engineering
+  logo: backmarket
+
+- client: Livestorm
+  description: During the first years of the company I worked with the CTO and CEO to scale their tech and organisation.
+  type: Executive coaching
+  logo: livestorm
+
+- client: Plato
+  description: I worked with the founding team from the initial MVP to their acceptance into YCombinator.
+  type: Long term coaching
+  logo: Plato
+
+- client: Drivy
+  description: I reported to the CEO and lead the entire Drivy engineering team, scaling it from a few engineers to ~40 people until it was acquired by Getaround.
+  type: VP Enginering
+  logo: drivy
+
+- client: Plezi
+  description: I helped Plezi's team regularly for a year while they were redesigning their main product and improving their ways of working.
+  type: Team coaching
+  logo: plezi
+
+- client: Open Classrooms
+  description: I created multiple MOOCs that were online for multiple years and followed by tens of thousands of students.
+  type: Online classes
+  logo: oc
+
+- client: Getaround
+  description: After Drivy's acquisition I remained as VP Engineering Europe and lead the team through the post-acquisition integration process.
+  type: VP Engineering Europe
+  logo: getaround
+
+- client: Ejara
+  description: I conducted an audit of the company's tech organisation and ways of working for their investment products in Africa.
+  type: Audit
+  logo: ejara

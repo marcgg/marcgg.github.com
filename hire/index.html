@@ -12,20 +12,27 @@ description: "You're looking for a startup advisor in Paris or remotely? Hire me
 
 <div id="container">
   <div id="content">
-
     <div id="hire">
       <p>
         I've been building software for more than 15 years in startups & scale ups,
-        including Back Market or Drivy / Getaround. I've been through the early phases
-        many times, hired many engineers, designed organisation, built strategies and more.
+        including Back Market, Drivy and Getaround. I've been through the early phases
+        many times, hired many engineers, designed organisation, managed through acquisitions,
+        built strategies and more.
       </p>
       <p>
-        If you feel like your project is not moving fast enough,
-        if you are encountering a new complex topic, if you're not sure
-        what should be your next move regarding product or engineering,
-        I can help you by ...
+        If you feel like:
       </p>
+      <ul>
+        <li>your project is slowing down or not moving fast enough</li>
+        <li>your team organisation is not fitting your scale</li>
+        <li>your managers are struggling with their new role</li>
+        <li>you lack visibility over what is going on in your engineering team</li>
+        <li>you struggle with your role as technical leader</li>
+      </ul>
 
+      <p>
+        Then I can help you by:
+      </p>
       <ul>
         <li>
           <strong>Coaching you or your team to create or scale a product.</strong>
@@ -34,28 +41,27 @@ description: "You're looking for a startup advisor in Paris or remotely? Hire me
           technical, it can slow down your delivery. I can help you get over
           some roadblocks and move faster.
         </li>
+
         <li>
-          <strong>Audit or help you build your software engineering processes.</strong>
+          <strong>Audit and help you build your software engineering processes.</strong>
           Once you've built your MVP, it's important to you keep moving fast, deliver on time
           and don't introduce bugs. A strong engineering culture alongside simple
           yet effective processes can go a long way.
         </li>
+
         <li>
           <strong>Helping you recruit developers or find your CTO.</strong>
           I'll be able to give you an external and technical
           point of view on any candidate you might want to hire.
         </li>
+
         <li>
-          <strong>Sharing insights on how to organise or scale your team.</strong>
+          <strong>Work with you on how reorganising or scaling your team.</strong>
           It's hard to figure out what is the best setup for a given team.
           You probably heard of squads, tribes, agile team, impact teams... I can
           help you gain more clarity over what would work in your organisation.
         </li>
-        <li>
-          <strong>Bouncing ideas with you or your team.</strong>
-          Experience has shown me that having a mostly unbiased third party to discuss
-          tricky topic can help reach a decision quicker.
-        </li>
+
         <li>
           <strong>Facilitate a workshop.</strong>
           You want to brainstorm a new concept, raly your team behind an idea or maybe build a long
@@ -67,121 +73,46 @@ description: "You're looking for a startup advisor in Paris or remotely? Hire me
 
       {% include reviews.html %}
 
-      <h2>Some Relevant Projects</h2>
+      <h2>Highlighted Projects</h2>
 
-      <div class="project">
-        <h3>Engineering Leadership: Drivy & Getaround</h3>
-        <img src="/assets/misc/drivy-header.jpg" style="width: 100%;" />
-        <p class="example-desc">
-          I lead the entire Drivy engineering team, scaling it from a few engineers to ~40 people
-          until it was
-          <a href='https://www.ft.com/content/4fe95aac-6682-11e9-9adc-98bf1d35a056'>acquired by Getaround.</a>
+      {% for mission in site.data.missions %}
+        <div class="mission">
+          <img src="/assets/logos/{{mission.logo}}.jpg" alt="Mission with {{mission.client}}"/>
+          <p>
+            <strong>{{mission.type}} for {{ mission.client }}</strong>
+            <br />
+            {{ mission.description }}
+          </p>
+        </div>
+      {% endfor %}
 
-          There I also worked on most of the company's technical components
-          such as the search algorithm, mobile API, fraud detection
-          algorithms, pricing structure, internal workflow tools,
-          driver/car matching algorithm, payment infrastructure...
-        </p>
-      </div>
-
-      <div class="project">
-        <h3>In Person Classes: HEC</h3>
-        <img src="/assets/misc/hec-header.jpg" style="width: 100%;" />
-        <p class="example-desc">
-          I gave classes and lead workshops for HEC
-          (large French business school) students wanting
-          to create their own startup. As far as I know, it was the first time people
-          were writting JavaScript in this business school.
-        </p>
-      </div>
-
-      <div class="project">
-        <h3>Engineering Leadership: Back Market</h3>
-        <img src="/assets/misc/backmarket-header.jpg" style="width: 100%;" />
-        <p class="example-desc">
-          As a Director of Engineering I took the lead of the customer facing side of
-          the engineering team. This meant multiple teams working on everything from
-          onboarding (SEO, content, trust...) to search, recommendation and then actual purchase
-          funnel on the apps and the web.  I also lead the side of the product that handled recycling and
-          purchasing of used devices.
-          One of the many significant challenges was to scale the team
-          and processes to fit the <a href='https://techcrunch.com/2022/01/11/back-market-reaches-5-7b-valuation-for-its-refurbished-device-marketplace/'>quick growth of the company</a>
-          (went from a dozen people in my team up to approximativaly sixty).
-        </p>
-      </div>
-
-      <div class="project">
-        <h3>Mentoring & Coaching: Plato</h3>
-        <img src="/assets/misc/birdly-yc.jpg" style="width: 100%;" />
-        <p class="example-desc">
-          Helped a young team of entrepreneurs with no development background
-          <a href="/blog/2014/12/16/coaching-startup-birdly-le-camping/">
-            get accepted into the Numa Accelerator
-          </a>, and then
-          <a href="/blog/2016/03/14/birdly-ycombinator/">get accepted into YCombinator</a>.
-          As tech advisor I contributed to
-          technical decisions and figuring out how to handle the software side
-          of their company while undergoing multiple pivots.
-        </p>
-      </div>
-
-      <div class="project">
-        <h3>Online MOOC: Open Classrooms</h3>
-        <img src="/assets/misc/mooc-example.jpg" style="width: 100%;" />
-        <p class="example-desc">
-          I created and presented, in collaboration with OpenClassrooms, two MOOCs about Ruby and Git.
-          They were online for multiple years and followed by tens of thousands of students.
-        </p>
-      </div>
-
-      <div class="project">
-        <h3>Workshops: WiFilles</h3>
-        <img src="/assets/misc/wifilles-complete.jpg" style="width: 100%;" />
-        <p class="example-desc">
-          I was in charge of the coding workshops during the first promotion of WiFilles,
-          a never seen before program to introduce girls to computer
-          sciences. It was a success and WiFilles is gaining more and more traction.
-        </p>
-      </div>
-
-      <div class="project">
-        <h3>Entrepreneurship: Shadow Boxing App</h3>
-        <img src="/assets/misc/shadowboxing-header.jpg" style="width: 100%;" />
-        <p class="example-desc">
-          I built a boxing training app <a href="https://marcgg.com/blog/2020/11/12/building-boxing-mobile-app-swiftui/">from the ground up</a> with the objective to give people a way to train from anywhere while keeping it engaging & fun. The app is used regularly by thousands of people and currently sits with a rating of 4.9/5 out of 5k+ reviews and was featured by Apple in 7+ countries.
-        </p>
-      </div>
-
-      <h2>Teaching, Talking, Mentoring</h2>
       <p>
-        Here's a quick overview of the people and organizations I worked with or I'm currently
-        working with on this matter.
+        Here's a quick overview of other organizations I worked with.
       </p>
 
       <div id="references_logo" class="clearfix">
-        <img src="/assets/logos/hec.jpg" />
-        <img src="/assets/logos/plato.jpg" />
-        <img src="/assets/logos/livestorm.jpg" />
-        <img src="/assets/logos/hetic.jpg" />
-        <img src="/assets/logos/oc.jpg" />
-        <img src="/assets/logos/yespark.jpg"/>
-        <img src="/assets/logos/kactus.jpg"/>
-        <img src="/assets/logos/elevo.jpg" />
-        <img src="/assets/logos/face.jpg" />
-        <img src="/assets/logos/shippeo.jpg"/>
+        <img src="/assets/logos/yespark.jpg" class="minor"/>
+        <img src="/assets/logos/kactus.jpg" class="minor"/>
+        <img src="/assets/logos/elevo.jpg"  class="minor"/>
+        <img src="/assets/logos/shippeo.jpg" class="minor"/>
+
+        <img src="/assets/logos/vizcab.jpg" class="minor"/>
+        <img src="/assets/logos/bsport.jpg"  class="minor"/>
+        <img src="/assets/logos/linxea.jpg"  class="minor"/>
+        <img src="/assets/logos/assoconnect.jpg" class="minor"/>
+        <img src="/assets/logos/plezi.jpg" class="minor"/>
+
         <img src="/assets/logos/learn.jpg" class="minor"/>
         <img src="/assets/logos/birdly.jpg"  class="minor"/>
         <img src="/assets/logos/wifilles.jpg" class="minor"/>
-        <img src="/assets/logos/linxea.jpg" class="minor"/>
-        <img src="/assets/logos/assoconnect.jpg" class="minor"/>
         <img src="/assets/logos/wagon.jpg" class="minor"/>
-        <img src="/assets/logos/plezi.jpg" class="minor"/>
         <img src="/assets/logos/musicae.jpg"  class="minor"/>
         <img src="/assets/logos/roomie.jpg" class="minor"/>
         <img src="/assets/logos/railsgirls.jpg" class="minor"/>
         <img src="/assets/logos/ecov.jpg" class="minor"  />
         <img src="/assets/logos/tempso.jpg" class="minor" />
         <img src="/assets/logos/parisrb.jpg" class="minor"/>
+        <img src="/assets/logos/face.jpg"  class="minor"/>
       </div>
 
       <h2>Working Together</h2>

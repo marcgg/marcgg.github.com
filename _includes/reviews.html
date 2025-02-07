@@ -1,7 +1,10 @@
 <div class="cf reviews">
 {% for review in site.data.reviews %}
   <div class="review">
-    <div class="reviewer"><img src="/assets/misc/{{review.image}}.jpg"></div>
+    <div class="reviewer">
+      <img src="/assets/misc/{{review.image}}.jpg">
+      <img src="/assets/logos/{{review.logo}}.jpg">
+    </div>
     <div class="person">{{review.name}}</div>
     <div class="position">{{review.position}} of <a href="{{review.url}}">{{review.company}}</a></div>
     <p class="review-body">{{review.content}}</p>

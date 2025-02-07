@@ -21,10 +21,12 @@
 
 .reviewer{
   text-align: center;
+  padding-bottom: 12px;
 }
 .review img{
   width: 80px;
   border-radius: 80px;
+  margin: 0px 20px;
 }
 
 #first-reviews {
@@ -75,4 +77,23 @@
   border-radius: 5px;
 }
 
+.mission {
+  clear: both;
+  padding-bottom: 32px;
+}
 
+.mission img {
+  width: 80px;
+  float: left;
+  margin-right: 32px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.profile {
+  width: 80px;
+  margin: 0px 0px 32px 32px;
+  float: right;
+  border-radius: 80px;
+
+}
