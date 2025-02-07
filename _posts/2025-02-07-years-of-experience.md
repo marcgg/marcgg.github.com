@@ -1,8 +1,8 @@
 ---
-title: "The Risk of Having 5 Times 1 Year of Experience"
-description: ""
+title: "5 Years of Experience OR 5 Times 1 Year of Experience?"
+description: "Discussing the comfort zone, jobs' skill ceilings and the importance of growth."
 tag: Teaching
-ogimage: "preview_wait.png"
+ogimage: "preview_experience.png"
 ---
 
 I remember someone telling me after an interview that a candidate did not have 5 years of experience, but 5 times 1 year of experience instead.
