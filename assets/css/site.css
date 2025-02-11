@@ -619,6 +619,7 @@ p code, li code{
   }
   .image-wrapper{
     width: 100%;
+    text-align: center;
   }
   .image-wrapper img, .post div img, .post p img{
     max-width: 100% !important;
