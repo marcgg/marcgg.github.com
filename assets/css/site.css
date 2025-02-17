@@ -705,3 +705,15 @@ p code, li code{
 /* BLOG IMAGES */
 
 .image-90 img { padding: 5px; width: 90% }
+
+/* BLOG DETAILS */
+table th {
+  background-color: #dedede;
+}
+
+table tr {
+  border-bottom: 1px solid #dedede;
+}
+table td, table th {
+  padding: 4px 2px;
+}
