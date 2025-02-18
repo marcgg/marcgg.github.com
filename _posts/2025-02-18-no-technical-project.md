@@ -4,7 +4,6 @@ description: "There are no technical projects: all tasks should be advancing bus
 tag: ProjectManagement
 ogimage: "preview_no_tech_projects.png"
 
-
 ---
 
 When building software, I have often been faced with the debates on "Technical" projects vs "Business" projects. 

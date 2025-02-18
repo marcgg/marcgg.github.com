@@ -194,7 +194,7 @@ a:hover{
   transition-duration:0.2s;
 }
 
-p a, ul a, .review a{
+p a, ul a, .review a, table a{
   color: #763232;
   text-decoration: none;
   background-image: linear-gradient(to bottom, #fff 30%, rgba(200, 200, 200, 0.4) 50%);
