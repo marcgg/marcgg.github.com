@@ -705,6 +705,7 @@ p code, li code{
 /* BLOG IMAGES */
 
 .image-90 img { padding: 5px; width: 90% }
+.image-80 img { padding: 5px; width: 80% }
 
 /* BLOG DETAILS */
 table th {
