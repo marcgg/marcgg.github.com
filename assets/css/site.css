@@ -718,3 +718,24 @@ table tr {
 table td, table th {
   padding: 4px 2px;
 }
+/* BLOG CHAT */
+
+.chat {
+  margin-left: 10px;
+  border-left: 4px solid #eee;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.chat_item {
+  padding: 10px 0px;
+}
+
+.chat .pm {
+  color: #194791;
+}
+
+.chat .dev {
+  color: #611991;
+}
+
