@@ -1,6 +1,6 @@
 ---
 title: "All Projects Are Business Projects"
-description: ""
+description: "There are no technical projects: all tasks should be advancing business goals in one way or another."
 tag: ProjectManagement
 ogimage: "preview_no_tech_projects.png"
 
@@ -13,6 +13,11 @@ When building software, I have often been faced with the debates on "Technical" 
 - **Technical projects** are driven by engineering and often are related to infra changes, refactoring, adding tests, improving architecture, updating dependencies, framework changes and so on. They are seen as a cost and are often deprioritised.
 
 I disagree with this approach for many reasons, so let's get into it!
+
+### tl;dr:
+
+- **All projects in a company have a business purpose**, even the one looking more technical. We should highlight this impact to get things prioritised. This requires effort but is worth doing for a more pleasant day to day and a more future-proof career.
+- **Not all tasks are up for debate**. Some things just need to happen in order to build a given piece of software, this is just the way it is. Engineers should explain the necessity of said tasks, but should also professionally push back against unreasonable asks.
 
 ## There are no technical projects
 
@@ -30,6 +35,8 @@ Here are some examples of topics I've often seen framed as "technical projects" 
 | **Open source a library** | Feel good about our work. Give back to the community. Share insights. | Improve employer branding, helping with hiring. Increase employee retention. Help position the company as a technical leader in its field. |
 | **Update documentation**  | Make sure everything is documented. Make different documents more consistent. | Help with onboarding, getting people up to speed faster. Help with cross team projects delivery speed (ideally with examples). |
 | **Improve performances**  | Follow best practices. Get from x milliseconds to y milliseconds. | Drive infrastructure costs down. Improve user experience and increase conversion. |
+
+The key here is for engineers to highlight the business impact. Everything is done for a reason, but non-technical people might not understand it and think this is a waste of time.
 
 ### The problem with technical stories
 
@@ -106,7 +113,12 @@ Here is how the discussion could go:
 
 </div>
 
-Obviously, not the best outcome for code quality. Here's a different approach:
+Obviously, not the best outcome. In this situation the dev:
+
+- Focused on fuzzy concepts like guidelines or technical debt that have no clear business impact.
+- Didn't take current objectives into account.
+
+Here's a different approach:
 
 <div class="chat">
 
@@ -135,10 +147,17 @@ Obviously, not the best outcome for code quality. Here's a different approach:
 In this situation the dev:
 
 - Took the time to highlight the business benefits.
+- Showcased the positive impact of the refactoring.
 - Anticipated the discussion so that there is room for planning and no need to disrupt ongoing projects.
 - Didn't allow for much debate around the extraction into a service. 
 - Agreed to take some additional communication and organisational tasks to get the change moving.
 
-Of course this second one is idealised and assumes a good work relationship between the dev and the PM. It also requires a good product/business sense from the dev, which means that they have time allocated to go beyond just writing code.
+Of course this second one is idealised and assumes a good work relationship between the dev and the PM. It also requires a good product/business sense from the dev, which means that they have time allocated to go beyond just writing code. The PM also needs to be open for discussion and acknowledge the complexity inherent in building software.
 
-Not all companies and teams are able to have this level of communication. However it's really worth thriving to get there as the benefits are just so significant. As an engineer, you'll get some push back, you'll have to invest time in improving your knowledge of the business and product. This is worth it, as going beyond writing code will be a great benefit for your career. It will also make your day to day more interesting as you'll get a better understanding of why you are writing code.
+That's not easy and not all companies and teams are able to have this level of communication. However it's really worth thriving to get there as the benefits are just so significant.
+
+As an engineer, you'll get some push back with partners that will discard good points by saying "we are doing this because I said so", or some variation of this. You'll have to [get out of your comfort zone](/blog/2025/02/07/years-of-experience/) invest time in improving your knowledge of the business and product. 
+
+More than 10 years ago I wrote "[Developers, Share Your Technical Knowledge](/blog/2013/02/04/developers-teach-non-tech-startup/)", and I still stand behind this. Sharing how things work, explaining the impact of code and architecture is key in having a more interesting professional experience and building trust.
+
+In my opinion, investing in these skills and spending the time doing it is really worth doing. Going beyond writing code will be a great benefit for your career and your day to day. This is especially true today, where AI is shuffling the card, giving even more power to those who can build software and understand the business or product side of things.
