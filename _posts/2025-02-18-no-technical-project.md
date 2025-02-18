@@ -132,13 +132,13 @@ Obviously, not the best outcome for code quality. Here's a different approach:
 
 </div>
 
-Of course this second one is idealised and assumes a good work relationship between the dev and the PM. It also requires a good product/business sense from the dev, which means that they have time allocated to go beyond just writing code.
-
-But in this situation the dev:
+In this situation the dev:
 
 - Took the time to highlight the business benefits.
 - Anticipated the discussion so that there is room for planning and no need to disrupt ongoing projects.
 - Didn't allow for much debate around the extraction into a service. 
 - Agreed to take some additional communication and organisational tasks to get the change moving.
 
-Not all companies and teams are able to have this level of communication, but it's worth thriving to get there as the benefits are just so significant.
+Of course this second one is idealised and assumes a good work relationship between the dev and the PM. It also requires a good product/business sense from the dev, which means that they have time allocated to go beyond just writing code.
+
+Not all companies and teams are able to have this level of communication. However it's really worth thriving to get there as the benefits are just so significant. As an engineer, you'll get some push back, you'll have to invest time in improving your knowledge of the business and product. This is worth it, as going beyond writing code will be a great benefit for your career. It will also make your day to day more interesting as you'll get a better understanding of why you are writing code.
