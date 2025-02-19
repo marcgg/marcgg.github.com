@@ -11,9 +11,27 @@ While I love the intent, this is easy to disprove. You can have your team very h
 
 That's obviously not what the company is expecting, and no one would seriously propose this plan. However I've seen more realistic issues, like performance of managers based surveys asking about team morale. While the logic seems to make some sense, there are a few problems with it.
 
+### tl;dr:
+
+- Morale is a flawed metric that is hard to measure and hard to act on. Using it as an objective leads to misguided actions (pizza party!), obfuscating the real underlying problems.
+- Morale is a byproduct of everything going on in the company. While improving it shouldn't be an objective in itself, there are many reasons to pay attention to it.
+
 ## A Flawed Metric
 
+### Hard to measure
+
 First, how do you even measure team morale? Surveys, audits... any option will be biased in some way.
+
+Non-anonymous gathering of data will mostly gather positive data, because people often are afraid to share their discending opinions. The only case where people feel safe sharing problems are:
+
+- When the team is healthy, and usually it means that you don't have a morale issue.
+- When everything is so bad that everyone know that there is an issue.
+
+Anonymous surveys won't work for small teams. If they are anonymous they might also bias toward negative feedback. Just like on yelp, people tend to leave reviews to complain.
+
+Using the manager's insights will lead to qualitative data. However they are of course biased, and they will miss or ignore problems linked to their management style.
+
+External auditors can interview the team and give an opinion. However, once again, people might not honestly share how they feel because of fear of consequences, because they feel like the exercise is useless... or just because they don't want to be negative with a person they don't know.
 
 ### Out of the company's control
 
