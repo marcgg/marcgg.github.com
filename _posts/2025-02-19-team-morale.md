@@ -13,10 +13,11 @@ That's obviously not what the company is expecting, and no one would seriously p
 
 ### tl;dr:
 
-- Morale is a flawed metric that is hard to measure and hard to act on. Using it as an objective leads to misguided actions (pizza party!), obfuscating the real underlying problems.
+- Morale is a flawed metric that is hard to measure and hard to act on. Using it as an objective leads to misguided actions (pizza party!), obfuscating the real underlying problems. 
 - Morale is a byproduct of everything going on in the company. While improving it shouldn't be an objective in itself, there are many reasons to pay attention to it.
+- Instead of focusing on mood or morale, gather qualitative feedback on specific topics. This is more actionable and precise, and should help you address actual issues and not the resulting low morale that is just a side effect.
 
-## A Flawed Metric
+## A Flawed "Metric"
 
 ### Hard to measure
 
@@ -72,4 +73,12 @@ So paying attention to team morale is key for various reasons:
 
 So stop looking at morale as an objective, but instead as a byproduct of company health. Identify what you have control over and improve that part. You can of course take actions specifically targeting morale, but the safest bet is to just make your work environment more pleasant, efficient and fair.
 
-Finally, you have to accept that this is something that will ebb and flow, and sometimes you won't be able to do anything besides accompany the team through tough times the best you can.
+### Alternative ways to gather insights
+
+While focusing on "mood" or "morale" directly is flawed, there is value in gathering feedback about how things are going.
+
+For this, I prefer surveys focused on a specific topic. For instance "do you have a reasonable workload" or  "do you agree with this week's company announcement". This feels more actionable, precise and helpful than "how are you doing". It can also be interesting to gather those feedback in the same format and at the same time across multiple teams, to see if there are any trends or outliers.
+
+You could also run brainstorm on retrospectives on a given topic to get insights on how the team feels about a particular topic. To address even management issues, some of those could be ran without them.
+
+It's worth noting that, if you gather insights like this, it's critical to have time set aside to address the main issues that will pop up. There is nothing more annoying than taking the time to surface problems for them to be ignored. If you ignore problems for long enough, people might just give up and stop mentioning the issues. Your metrics will improve, but the problem won't be solved, which is a pretty bad spot to be in.
