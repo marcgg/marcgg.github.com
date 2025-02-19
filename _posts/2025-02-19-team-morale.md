@@ -52,7 +52,7 @@ In the same vein, there are things that could lower the team morale short term, 
 
 ### Leads to misguided actions
 
-Finally, by focusing on morale, managers tend to reach for actions like team building events or things outside of the normal flow of work. That's how you get the cliché of the pizza party to raise spirits!
+Finally, by focusing on morale, managers tend to reach for actions like team building events or things outside of the normal flow of work. That's how you get the cliché of adding ping pong tables and having a pizza party to raise spirits!
 
 It might be slightly positive in the short term, but this won't really improve the situation long term. Even worst, it gives the illusion of action when really it's just a quick bandaid solution. The manager thinks they're helping, when really it's almost procrastination.
 
