@@ -9,7 +9,7 @@ I often hear new managers say that maintaining or improving team morale is their
 
 While I love the intent, this is easy to disprove. You can have your team very happy by tripling their salary and telling them that they don't even need to show up to work for the next six month. Objective fulfilled!
 
-That's obviously not what the company is expecting, and no one would seriously propose this plan. However I've seen more realistic issues, like performance of managers based surveys asking about team morale. While the logic seems to make some sense, there are a few problems with it.
+That's obviously not what the company is expecting, and no one would seriously propose this plan. However, I did see companies using team morale to evaluate managers' performance. While it comes with good intention, there are few problems with this approach.
 
 ### tl;dr:
 
