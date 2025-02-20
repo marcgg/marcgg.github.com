@@ -16,7 +16,7 @@ I disagree with this approach for many reasons, so let's get into it!
 ### tl;dr:
 
 - **All projects in a company have a business purpose**, even the one looking more technical. We should highlight this impact to get things prioritised. This requires effort but is worth doing for a more pleasant day to day and a more future-proof career.
-- **Not all tasks are up for debate**. Some things just need to happen in order to build a given piece of software, this is just the way it is. Engineers should explain the necessity of said tasks, but should also professionally push back against unreasonable asks.
+- **Not all tasks are up for debate**. Some things just need to happen in order to build a given piece of software, this is just the reality of building a software product. Engineers should explain the necessity of said tasks, but should also professionally push back against unreasonable asks.
 
 ## There are no technical projects
 
@@ -39,11 +39,13 @@ The key here is for engineers to highlight the business impact. Everything is do
 
 ### The problem with technical stories
 
-This is while having "technical stories" or "technical sprints" can help moving some topics forward, it often doesn't work properly for a few reasons.
+While having "technical stories" or "technical sprints" can help moving some topics forward, it often doesn't work properly for a few reasons.
 
 - Accepting that we have technical stories and business stories **enables shortcuts when building new features**. It leads to the mindset of "if it exists purely technical stories, we'll use them to fix our problems later", and then many technical topics that should be inherent to the creation of a feature become up for debate and maybe pushed back.
-- **We are comparing two widely different things**. If I'm a non-technical CEO and I have to chose between "Refactor this feature to align with best practices" and "Add social login to drive conversion up by 5%", I'm picking the second one every day. To make good decisions we need to look at options in a more effective way.
-- Finally, **engineers are often tasked creating technical stories, but often struggle to do a good job at it.** This can be for many reasons. For instance they could be swamped by work coming from "business" stories... so the preparation work and framing end up subpar, making it even harder to get prioritised. It could also be that they don't feel like preparing stories is part of their job and don't want to do it.
+- **It leads to comparing two widely different things**. If I'm a non-technical CEO and I have to chose between "Refactor this feature to align with best practices" and "Add social login to drive conversion up by 5%", I'm picking the second one every day. To make good decisions we need to look at options with their business impact in mind.
+- Finally, **engineers are often tasked creating technical stories, but often struggle to do a good job at it.** This can be for many reasons. They could be swamped by work coming from "business" stories... so the preparation work and framing ends up subpar, making it even harder to get prioritised. It could also be that they don't feel like preparing stories is part of their job and don't want to do it. It could also simply be a lack of experience doing it.
+
+Moving away from technical stories in different work streams allows for more interesting tradeoffs. 
 
 ### Painting walls
 
@@ -72,29 +74,27 @@ This clearly makes no sense, and obviously all steps are required, even if some 
 
 ### Explaining and having a business sense
 
-Following this example, it's worth saying that we could discuss the value of each step. 
+Following this example, it's worth saying that the painter and I could discuss the value of each step. 
 
 For instance the first layer of white paint could be skipped, but it would reduce the quality of the final result. However removing the wait between layers is nonsensical and would ruin everything. Explaining those tradeoffs and helping the customer make the decision might be required and is the painter's responsibility. The painter should be firm when steps are unavoidable, but also pragmatic if the value of a step is not bringing the expected value.
 
-This is the same thing with building software.
+This is the same thing with building software. Engineers need to be able to explain what is needed and give a sense of why. They should have a clear idea of what could be removed or added and the consequences of doing so, and express it to their business and product partners.
 
 ## Include all the work
 
-To address this issue, **any new feature work should include all the technical aspects required to its success**. 
+To address this issue, **all feature work should include all the technical aspects required to its success**. This means refactoring, tests and so on are just as part of the project as business-logic code. They are not something to be negotiated or a different project that we can do later: they are a needed action for completing the project. Of course each team should figure out what they consider to be the level of quality they want to aim for depending on their context - don't put the same level of security in banking software or in a marketing landing page.
 
-This means refactoring, tests and so on are just as part of the project as business-logic code. They are not something to be negotiated, they are just part of doing the project. It's important to remind ourselves that we are building software, so there is inherent complexity that needs to be managed. Skipping this part might you move faster right now, but this is not viable long or even mid term.
+It's important to remind ourselves that we are building software. We should not put technical work to the side because there is inherent complexity that needs to be managed. Skipping this part might you feel like you move faster right now, and even this could be debated, but this is not viable long or even mid term. 
 
-If some technical debt piled up so much that it is unmanageable, **there should be some one-off projects that are more driven by engineering**. However they need to make business sense and be showcased as such. For instance there is probably no need to refactor a feature that doesn't evolve, is stable and might even be removed in a few months... but adding more tests to the payment system is probably high priority.
+If some technical debt piled up so much that it is unmanageable, **there should be some one-off projects that are more driven by engineering**. However those projects need to make business sense and be showcased as such. For instance there is probably no need to refactor a feature that doesn't evolve, is stable and might even be removed in a few months... but adding more tests to the payment system is probably high priority.
 
-To be able to work like this require a lot of trust between engineering and the rest of the organisation, and this might take time to build... but this is worth it and pays off in the long run if you want quality software that is able to evolve quickly without stress.
-
-While not all organisations are ready to work like this, this is worth attempting.
+**To be able to work like this require a lot of trust** between engineering and the rest of the organisation, and this might take time to build... but this is worth it and pays off in the long run if you want quality software that is able to evolve quickly without stress.
 
 ## Example
 
-Let's say a developer want to refactor the authentication system. Right now it is in a monolith and built by interns 5 years ago and they hate everything about it with a passion. The company has decided to move to services a couple of years ago, and auth is still stuck. To get it done, they first need to get the product manager on board.
+Let's say a developer want to refactor the authentication system. Right now it is in a monolith and was built by interns 5 years ago. The developer hate everything about this piece of software with a passion. For context, the company has decided to move to services a couple of years ago, and auth is still stuck.
 
-Here is how the discussion could go:
+To get this refactoring done, they first need to get the product manager on board. Here is how the discussion could go:
 
 <div class="chat">
 
@@ -102,38 +102,43 @@ Here is how the discussion could go:
 
 <div class="chat_item"><span class="pm">Product Manager</span>: Why is that? We already have a lot to do. </div>
 
-<div class="chat_item"><span class="dev">D</span>: It's just terrible. First it's still in the monolith, then the quality is not matching our internal guidelines. </div>
+<div class="chat_item"><span class="dev">D</span>: It's just terrible. First it's still in the monolith, then the quality is not matching our internal guidelines... there is even a file that is over 1000 lines long! </div>
 
-<div class="chat_item"><span class="pm">PM</span>: I get that, but our current OKR is to improve conversion and migrating this code outside of the monolith doesn't fit this objective. I really want to get the new onboarding flow shipped asap.</div>
+<div class="chat_item"><span class="pm">PM</span>: I get that it's pretty bad, but our current OKR is to improve conversion and migrating this code outside of the monolith doesn't fit this objective. I really want to get the new onboarding flow shipped asap.</div>
 
 <div class="chat_item"><span class="dev">D</span>: But we need to increase quality of our product, we all agree on that! And reducing technical debt is a big part of that. </div>
 
-<div class="chat_item"><span class="pm">PM</span>: We need to focus on our users, and right now the auth system works just fine. They won't care that it's not in a service. </div>
+<div class="chat_item"><span class="pm">PM</span>: I thought that the auth was working well. I haven't seen any bug reports there for quite a while. Is there something I missed?</div>
+
+<div class="chat_item"><span class="dev">D</span>: There are no bugs, but the code quality is so bad that it's almost a bug in itself! </div>
+
+<div class="chat_item"><span class="pm">PM</span>: If it works fine today then it doesn't seem like a problem. Our end won't even know that it's not in a service, and if they're happy that all that matters. </div>
 
 </div>
 
 Obviously, not the best outcome. In this situation the dev:
 
 - Focused on fuzzy concepts like guidelines or technical debt that have no clear business impact.
-- Didn't take current objectives into account.
+- Didn't take the current company objectives into account.
+
+The PM was focusing on user impact and staying on target, which makes sense. If everything seems to be working fine, spending more time on a system can easily be seen as over-quality.
 
 Here's a different approach:
 
 <div class="chat">
+<div class="chat_item"><span class="dev">Developer</span>: We need to refactor the login system. Based on what I know from the current OKRs it will prevent us from reaching our goals. </div>
 
-<div class="chat_item"><span class="dev">Developer</span>: We need to refactor the login system, it will prevent us from reaching our goals. </div>
+<div class="chat_item"><span class="pm">Product Manager</span>: Why is that? We already have a lot to do I'm not sure we have time for a technical project. </div>
 
-<div class="chat_item"><span class="pm">Product Manager</span>: Why is that? We already have a lot to do. </div>
-
-<div class="chat_item"><span class="dev">D</span>: Right now it is not in a good technical state. This could be fine as it is fairly stable, however we want to increase conversion this year. I know we'll start working on social login soon, and we won't be able to do it in good conditions if we don't rework this part. From what I'm seeing, changing anything will be very slow and cause a lot of bugs... and we don't want issues in this part of the code as this is fairly early in our funnel.</div>
+<div class="chat_item"><span class="dev">D</span>: Right now it is not in a good technical state. This could be fine as it is fairly stable, however we want to increase conversion this year. I know we'll start working on social login soon. Given the state of the code, we won't be able to do it in good conditions if we don't do something. From what I'm seeing, changing anything will be very slow and cause a lot of bugs... and we don't want issues in this part of the code as this is fairly early in our funnel.</div>
 
 <div class="chat_item"><span class="pm">PM</span>: Good point. We do want to add social login in a couple of months, but right now the focus is the new onboarding so I can't really agree with this refactoring right now.</div>
 
-<div class="chat_item"><span class="dev">D</span>: Sure thing, let's not disrupt this project, I saw during last all hand how important it is. However let's plan to work on this right after. We don't want to start social login before getting this refactoring done.</div>
+<div class="chat_item"><span class="dev">D</span>: Sure thing, let's not disrupt this project, I saw during last all hand how important it is. However let's plan to work on this right after. We don't want to start social login before getting this refactoring done anyways.</div>
 
-<div class="chat_item"><span class="pm">PM</span>: I know that we are moving things out of the monolith right now. Will you do it for this feature? I'm sure we could get most of the benefit from this refactoring and save time if we didn't </div>
+<div class="chat_item"><span class="pm">PM</span>: I know that we are moving things out of the monolith right now. Will you do it for this feature? I'm sure we could get most of the benefits from this refactoring and save time if we didn't.</div>
 
-<div class="chat_item"><span class="dev">D</span>: The long term vision is to extract, so we will do it as part of the refactoring. It will be a bit more costly, but this will remain reasonable and we'll get all the benefits of the refactoring.</div>
+<div class="chat_item"><span class="dev">D</span>: The long term vision is to extract, so we will do it as part of the refactoring. It will be a bit more costly, but this will be reasonable and we'll get all the benefits of the refactoring.</div>
 
 <div class="chat_item"><span class="pm">PM</span>: It's true that I've heard how moving to services is key to what we are trying to do here. You're the expert, I trust you. Could you just make sure to create the proper tickets and put it in the planning for next month?</div>
 
@@ -153,7 +158,7 @@ In this situation the dev:
 
 Of course this second one is idealised and assumes a good work relationship between the dev and the PM. It also requires a good product/business sense from the dev, which means that they have time allocated to go beyond just writing code. The PM also needs to be open for discussion and acknowledge the complexity inherent in building software.
 
-That's not easy and not all companies and teams are able to have this level of communication. However it's really worth thriving to get there as the benefits are just so significant.
+That's not easy and not all companies, teams and individuals  are able to have this level of communication. However it's really worth thriving to get there as the benefits are just so significant.
 
 As an engineer, you'll get some push back with partners that will discard good points by saying "we are doing this because I said so", or some variation of this. You'll have to [get out of your comfort zone](/blog/2025/02/07/years-of-experience/) invest time in improving your knowledge of the business and product. 
 
