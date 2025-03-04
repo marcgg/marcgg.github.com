@@ -26,8 +26,10 @@ description: "You're looking for a startup advisor in Paris or remotely? Hire me
         <li>your project is slowing down or not moving fast enough</li>
         <li>your team organisation is not fitting your scale</li>
         <li>your managers are struggling with their new role</li>
+        <li>you encounter conflicts withing your leadership team</li>
         <li>you lack visibility over what is going on in your engineering team</li>
-        <li>you struggle with your role as technical leader</li>
+        <li>you struggle with your role as leader</li>
+        <li>you are not meeting objectives and deadlines</li>
       </ul>
 
       <p>
@@ -63,7 +65,7 @@ description: "You're looking for a startup advisor in Paris or remotely? Hire me
         </li>
 
         <li>
-          <strong>Facilitate a workshop.</strong>
+          <strong>Facilitate workshops or discussions.</strong>
           You want to brainstorm a new concept, raly your team behind an idea or maybe build a long
           term vision. I can help you by helping you setup a successful workshop with your team.
         </li>
@@ -91,28 +93,9 @@ description: "You're looking for a startup advisor in Paris or remotely? Hire me
       </p>
 
       <div id="references_logo" class="clearfix">
-        <img src="/assets/logos/yespark.jpg" class="minor"/>
-        <img src="/assets/logos/kactus.jpg" class="minor"/>
-        <img src="/assets/logos/elevo.jpg"  class="minor"/>
-        <img src="/assets/logos/shippeo.jpg" class="minor"/>
-
-        <img src="/assets/logos/vizcab.jpg" class="minor"/>
-        <img src="/assets/logos/bsport.jpg"  class="minor"/>
-        <img src="/assets/logos/linxea.jpg"  class="minor"/>
-        <img src="/assets/logos/assoconnect.jpg" class="minor"/>
-        <img src="/assets/logos/plezi.jpg" class="minor"/>
-
-        <img src="/assets/logos/learn.jpg" class="minor"/>
-        <img src="/assets/logos/birdly.jpg"  class="minor"/>
-        <img src="/assets/logos/wifilles.jpg" class="minor"/>
-        <img src="/assets/logos/wagon.jpg" class="minor"/>
-        <img src="/assets/logos/musicae.jpg"  class="minor"/>
-        <img src="/assets/logos/roomie.jpg" class="minor"/>
-        <img src="/assets/logos/railsgirls.jpg" class="minor"/>
-        <img src="/assets/logos/ecov.jpg" class="minor"  />
-        <img src="/assets/logos/tempso.jpg" class="minor" />
-        <img src="/assets/logos/parisrb.jpg" class="minor"/>
-        <img src="/assets/logos/face.jpg"  class="minor"/>
+        {% for logo in site.data.logos %}
+          <img src="/assets/logos/{{ logo.name }}.jpg" class="minor"/>
+        {% endfor %}
       </div>
 
       <h2>Working Together</h2>
@@ -120,7 +103,7 @@ description: "You're looking for a startup advisor in Paris or remotely? Hire me
         The process might differ depending on the situation, but in most cases here is what a collaboration would look like:
       </p>
       <ul>
-        <li>We have a <strong>first free initial call</strong> or we meet over coffee if you're in Paris. The goal will be for me to better understand your needs, and for you to get a sense of if I am be the right person for the job. At the end of this we decide to work together or not</li>
+        <li>We have a <strong>first free initial call</strong> or we meet over coffee if you're in Paris. The goal will be for me to better understand your needs, and for you to get a sense of if I am be the right person for the job. At the end of this we decide to work together or not.</li>
 
         <li>We plan <strong>a few meetings (remotely or in person) to work on a given topic</strong> defined during the initial meeting. It can be  anything from a few hours to a couple of days. I like to have dense meetings and time appart so that you can try out ideas, read materials or talk to your team.</li>
 
@@ -128,19 +111,22 @@ description: "You're looking for a startup advisor in Paris or remotely? Hire me
 
       </ul>
       <p>
-      I like to get into long term relationships with my clients, so it's not unusual to have coaching sessions for a few weeks, then nothing for a few months, and then get back in touch to work on a new topic that appeared. In a lot of cases we gain can just pick the conversation up where we left it.
+        I like to get into long term relationships with my clients, so it's not unusual to have coaching sessions for a few weeks, then nothing for a few months, and then get back in touch to work on a new topic that appeared. In a lot of cases we gain can just pick the conversation up where we left it.
       </p>
       <p>
-      My goal is always to solve your problem as fast as possible by giving you lots of ideas, references and advices so that you can move forward on your own. If at any point I feel I'm not relevant for your current problem I'll tell you so and we'll pause the coaching.
+        My goal is always to solve your problem as fast as possible by giving you lots of ideas, references and advices so that you can move forward on your own. If at any point I feel I'm not relevant for your current problem I'll tell you so and we'll pause the coaching.
       </p>
 
 
       <h2>Contacting Me</h2>
       <p>
         To contact me, you can send me an email with your project at
-        <strong>marcg.gauthier -at- gmail -dot- com</strong>. From there, we'll plan a first free call so that I
+        <strong>marcg.gauthier -at- gmail -dot- com</strong> or via <a href="https://www.linkedin.com/in/marcggauthier/">Linkedin</a>.
+      </p>
+      <p>
+        From there, we'll plan a first free call so that I
         better understand what I could help you with, and then we can decide to work together or not.
-        Finally, if you need to see me in person, I'm localized in Paris... so that's where I'll be!
+        Note I often work remotely, but if you prefer meeting in person, I'm localized in Paris... so that's where I'll be!
       </p>
 
     </div>
