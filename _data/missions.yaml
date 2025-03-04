@@ -1,10 +1,10 @@
 - client: HEC
-  description: I gave classes and lead different workshops for HEC students in the "master entrepreneur" class.
+  description: I gave classes and lead different workshops for HEC students in the "master entrepreneur" class. The objective was to help non-technical founders to be more effective in a startup environment.
   type: Classes
   logo: hec
 
 - client: Back Market
-  description: During my 3 years as Director of Engineering I lead up to 60 people and helped the company handled its skyrocketing growth.
+  description: During my 3 years as Director of Engineering I lead up to 60 people and helped the company handled its skyrocketing growth. It involved structuring teams, hiring people, setting up process, evolving the architecture and more.
   type: Director of Engineering
   logo: backmarket
 
@@ -19,12 +19,12 @@
   logo: plato
 
 - client: Drivy
-  description: I reported to the CEO and lead the entire Drivy engineering team, scaling it from a few engineers to ~40 people until it was acquired by Getaround.
+  description: I reported to the CEO and lead the entire Drivy engineering team, scaling it from a few engineers to ~40 people until it was acquired by Getaround for $300M.
   type: VP Enginering
   logo: drivy
 
 - client: Plezi
-  description: I helped Plezi's team regularly for a year while they were redesigning their main product and improving their ways of working.
+  description: I helped Plezi's team regularly for a year while they were redesigning their main product and improving their ways of working. Together we revamped ways of working, added tests and more.
   type: Team coaching
   logo: plezi
 
@@ -34,7 +34,7 @@
   logo: oc
 
 - client: Getaround
-  description: After Drivy's acquisition I remained as VP Engineering Europe and lead the team through the post-acquisition integration process.
+  description: After Drivy's acquisition I remained as VP Engineering Europe and lead the team through the post-acquisition integration process, between San Francisco and Paris.
   type: VP Engineering Europe
   logo: getaround
 

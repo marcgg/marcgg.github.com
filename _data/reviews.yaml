@@ -4,7 +4,10 @@
   company: "Livestorm"
   logo: "livestorm"
   url: "https://livestorm.co/"
-  content: "As first-time founders, there was a \"before\" and an \"after\" Marc. He helped us accelerate on different aspects of building a tech product: getting the right process in place not only on the technical side (deployment, tools, security...) but also from a management standpoint: 1:1s, hiring, managing teams, etc."
+  content: |
+    As first-time founders, there was a \"before\" and an \"after\" Marc.
+
+    He helped us accelerate on different aspects of building a tech product: getting the right process in place not only on the technical side (deployment, tools, security...) but also from a management standpoint: 1:1s, hiring, managing teams, etc."
 
 - name: "Thomas Cottin"
   image: "thomas"
@@ -12,7 +15,24 @@
   company: "Kactus x Bird Office"
   logo: "kactus"
   url: "https://www.kactus.com/"
-  content: "Marc is a fantastic tech mentor who helped me understand and solve management, leadership or technical issues related to scaling a tech & product organisation. His feedback, advice and lessons learned building some of the best tech products are real gold for anyone seeking to build a great product with an impact-driven and pragmatic mindset."
+  content: |
+    Marc is a fantastic tech mentor who helped me understand and solve management, leadership or technical issues related to scaling a tech & product organisation.
+
+    His feedback, advice and lessons learned building some of the best tech products are real gold for anyone seeking to build a great product with an impact-driven and pragmatic mindset."
+
+
+- name: "Marine Chavanne"
+  image: "marine"
+  position: "Chief of Staff"
+  company: "AssoConnect"
+  logo: "assoconnect"
+  url: "https://www.assoconnect.com/"
+  content: |
+    I met Marc during our years at Drivy. He did a tremendous job managing the tech team with strong organizational skills, thinking about employee development and performance from a technical and human point of view.
+
+    It was obvious for me to reach out to him when we faced similar issues within AssoConnect. As CTO's chief of staff, I suggested a few hours with Marc to have an external eye and gather relevant pieces of advice.
+
+    After his intervention, we made some changes with almost immediate results thanks to Marc!
 
 - name: "Jeremy Berecz"
   image: "jeremy"

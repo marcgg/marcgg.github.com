@@ -7,7 +7,7 @@
     </div>
     <div class="person">{{review.name}}</div>
     <div class="position">{{review.position}} of <a href="{{review.url}}">{{review.company}}</a></div>
-    <p class="review-body">{{review.content}}</p>
+    <p class="review-body">{{review.content | markdownify}}</p>
   </div>
 {% endfor %}
 </div>
