@@ -6,9 +6,9 @@ ogimage: "preview_no_tech_projects.png"
 
 ---
 
-When building software, I have often been faced with the debates on "Technical" projects vs "Business" projects, frame as follows: 
+When building software, I have often been faced with the debates on "Technical" projects vs "Business" projects, described as follows: 
 
-- **A business project** aim at increasing KPIs, grow revenue, improve user experience, offer new capabilities in the product. They are seen as bringing in value and very high priority.
+- **A business project** aims at increasing KPIs, grow revenue, improve user experience, offer new capabilities in the product. They are seen as bringing in value and are very high priority.
 - **A technical project** is driven by engineering and is often related to infrastructure changes, refactoring, adding tests, improving architecture, updating dependencies, framework changes and so on. They are seen as a cost and are often deprioritised.
 
 I disagree with this approach for many reasons, so let's get into it!
