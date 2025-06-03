@@ -13,7 +13,7 @@ One piece of very valid feedback I received was that pausing was inconvenient. I
 
 Taking this into consideration, I redesigned it and here's the result:
 
-<div class="image-wrapper image-90" style="text-align: center"><img src="/assets/blog/beforeAfterWorkout.jpg" alt="3 Types of Power"/></div>
+<div class="image-wrapper image-90" style="text-align: center"><img src="/assets/blog/beforeAfterWorkout.jpg" alt="Redesign workout app"/></div>
 
 It felt much better, and after [asking users for feedback](/blog/2025/02/03/ask-for-feedback/), it seemed like I had a winner.
 
