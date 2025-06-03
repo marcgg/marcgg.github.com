@@ -37,7 +37,7 @@ They would eventually learn and all power users were using the actual "pause" bu
 
 ## Details Can Be Everything
 
-As a solo developer, I need to make [hard tradeoffs](/blog/2024/07/23/mvp-not-just-software/) all the time... however **in this case details are everything**. When you are sweating during a workout and suddenly someone interrupts you, you don't want to struggle to pause with boxing gloves on. It should be exactly the way you expect it to be, no friction.
+As a solo developer, I need to make [hard tradeoffs](/blog/2024/07/23/mvp-not-just-software/) all the time... however **in this case details were everything**. When you are sweating during a workout and suddenly someone interrupts you, you don't want to struggle to pause with boxing gloves on. It should be exactly the way you expect it to be, no friction.
 
 Obviously hindsight is 20/20. It wasn't a detail, it was a big expectation from users, and of course I implemented a fix.
 
