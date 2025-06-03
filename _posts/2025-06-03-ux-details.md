@@ -17,7 +17,7 @@ Taking this into consideration, I redesigned it and here's the result:
 
 It felt much better, and after [asking users for feedback](/blog/2025/02/03/ask-for-feedback/), it seemed like I had a winner.
 
-<div class="image-wrapper image-90" style="text-align: center"><img src="/assets/blog/surveyLayout.jpg" alt="User feedback"/></div>
+<div class="image-wrapper image-90" style="text-align: center"><img src="/assets/blog/surveyLayout.png" alt="User feedback"/></div>
 
 The "pause" action is clearly more efficient than before. Instead of small icon up top, we now have a big one, very accessible at the bottom of the screen. Looking great so far!
 
