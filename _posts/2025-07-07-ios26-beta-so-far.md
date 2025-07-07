@@ -31,7 +31,11 @@ Like everyone, I had issues with the contrast and general readability... but I a
 
 So far I've been using iOS 26 on a secondary device since it was available. I have to say that "old" apps look more and more outdated to me. To be honest, the old tab bar just feels clunky now.
 
-I also enjoy the small animations and how buttons react to the touch. I don't think that's the most efficient, but it sure is delightful to interact with when it works well. Of course some things are very gimmicky, like the full glass icon layout which is just unusable (I tried), but I think this is more to show how far it can pushed and not a feature people will use.
+I also enjoy the small animations and how buttons react to the touch. I don't think that's the most efficient, but it sure is delightful to interact with when it works well.
+
+Of course I can recognise that some things are very gimmicky. For instance the full clear icon layout which is just unusable (I tried). In this case I even think this is more to show how far it can pushed and not a feature people will use.
+
+<div class="image-wrapper image-90" style="text-align: center; width: 230px; margin:auto;"><img src="/assets/blog/26clear.png" alt="Migrating to iOS26" style="margin: 10px;"/><br><em>Who is going to use this unironically?</em></div>
 
 So overall, I like the design proposed by Apple so far even! Of course, while I'm hopeful, I'm waiting for many problems to be fixed as I'm going to show later.
 
@@ -65,7 +69,7 @@ Note that I'm running iOS26 on an iPhone 12 mini, so I'm sure things are better 
 
 <div class="image-wrapper image-90" style="text-align: center; width: 80%; margin:auto;"><img src="/assets/blog/slowios26.png" alt="Migrating to iOS26"/></div>
 
-The battery life seems also problematic, and I saw things as bad as 1% battery drop per minute when running my apps from XCode on a test device. I understand that it is somewhat of an old device, but this is ridiculous and I know have it always plugged.
+The battery life seems also problematic, and I saw things as bad as 1% battery drop per minute when running my apps from XCode on a test device. I understand that it is somewhat of an old device, but this is ridiculous and I now have it always plugged.
 
 To sum it up so far:
 
