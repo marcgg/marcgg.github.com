@@ -13,23 +13,31 @@ Here's my experience so far updating my apps to iOS 26 and using [liquid glass](
 tl;dr:
 
 - I like Liquid Glass so far, it's an interesting and refreshing proposition making native apps more unique.
+- Like it or not, it's there and app developers can't ignore it.
 - The migration experience varies a lot depending on the app. The more custom UI you have, the more painful it'll be.
 - There are still many bugs and **significant** performance issues in ios26-beta2.
-- If you maintain apps, build them on iOS26 as soon as possible to see what you'll have to do.
 
-## Do I Even Like Liquid Glass?
+## Liquid Glass
 
-At first glance, liquid glass looked pretty cool to me. It felt different but familiar, giving native mobile apps a more distinct look leveraging how they can interact with hardware. This is an interesting departure from apps and web looking more and more the same.
+I won't get into in depth analysis of why Apple did this, the benefits of unifying the various systems, the relationship with VisionOS and so on... many people did it better than me, and I'm not a designer. So instead I'll share my personal opinion!
 
-Like everyone, I cringed at the contrast issues and accessibility problems... but I also remembered what people were saying when discovering iOS 7 for the first time, and how all those issues got addressed eventually. As a matter of fact, the beta-2 is actually much better with contrasts, so I'm hopeful that most accessibility problems will be solved at the time of release.
+### Do I even like it?
+
+at first glance, liquid glass looked pretty cool to me! It felt different but familiar, giving native mobile apps a more distinct look leveraging how they can interact with hardware. This is an interesting departure from apps and web looking more and more the same. 
+
+Like everyone, I had issues with the contrast and general readability... but I also remembered what people were saying when discovering iOS 7 for the first time, and how all those problems got addressed eventually. As a matter of fact, the beta-2 is already much better with contrasts, so I'm hopeful that most accessibility problems will be solved at the time of release.
 
 <div class="image-wrapper image-90" style="text-align: center; width: 60%; margin:auto;"><img src="/assets/blog/ios7contrast.jpg" alt="Migrating to iOS26"/><em>iOS 7 contrast</em></div>
 
 So far I've been using iOS 26 on a secondary device since it was available. I have to say that "old" apps look more and more outdated to me. To be honest, the old tab bar just feels clunky now.
 
-I also enjoy the small animations and how buttons react to the touch. I don't think that's the most efficient, but it sure is delightful to interact with when it works well.
+I also enjoy the small animations and how buttons react to the touch. I don't think that's the most efficient, but it sure is delightful to interact with when it works well. Of course some things are very gimmicky, like the full glass icon layout which is just unusable (I tried), but I think this is more to show how far it can pushed and not a feature people will use.
 
-So overall, I like the design proposed by Apple so far even if I'm waiting for many problems to be fixed as I'm going to show.
+So overall, I like the design proposed by Apple so far even! Of course, while I'm hopeful, I'm waiting for many problems to be fixed as I'm going to show later.
+
+### Does it matter?
+
+Regardless of whether I like it or not, Liquid Glass is shipping with iOS 26 and I'll have to deal with it. Firstly, I'll have to make my apps work correctly, and then I'll have to decide how much of the new design language I'll bring into my apps.
 
 ## The Current Problems (beta1 & beta2)
 
