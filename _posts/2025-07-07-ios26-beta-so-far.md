@@ -2,7 +2,7 @@
 title: "My Experience with Liquid Glass so Far"
 description: "A first-hand look at the challenges and surprises of updating my iOS apps to iOS 26 and adopting the new Liquid Glass system."
 tag: SBW
-ogimage: ""
+ogimage: "preview_liquidglass.png"
 
 ---
 
@@ -246,3 +246,5 @@ We're in July, so there's still a couple of months before the release. Still, I 
 - Start using iOS 26 to get used to it. I'd recommend NOT putting it on your primary device though.
 - Start removing components that are too customs, especially buttons.
 - Try building your apps on iOS 26 and see how they behave.
+
+As for adopting liquid glass, I don't think there is a rush to get it done by September this year. However, you will eventually be forced to migrate as other apps update and yours starts to look dated. This might not be an issue for some use cases, but for consumer apps like the ones I build it feels unavoidable.
