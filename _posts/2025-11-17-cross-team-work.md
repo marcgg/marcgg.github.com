@@ -131,6 +131,6 @@ This organisation works pretty well. The backend staff helps their old squad unt
 
 I could stop here, since I personally really like the staff+chapter setup... but it also has limitations. For instance it puts a lot of pressure on the staff engineers. It's also not an easy job and requires a great technical sense, good communication skills as well as a solid business understanding, meaning hiring them is also a big challenge.
 
-Then, what happens if you add or remove a few engineers? And we haven't even talked about management in this article!
+Then, what happens if you add or remove a few engineers? And we haven't even talked about [leadership and management](/blog/2024/07/17/startup-technical-leadership/) in this article!
 
 Hopefully this gave you ideas to experiment in your own team, and maybe you recognised your current organisation!
