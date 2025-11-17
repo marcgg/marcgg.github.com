@@ -6,9 +6,7 @@ ogimage: "preview_post_mortems.png"
 
 ---
 
-Many startups do not do post mortem after incidents, mainly because they see it as a costly process to setup and run.
-
-I'll argue that it is more costly to not do it. If you don't learn from your mistakes you are doomed to repeat them, and the negative consequences add up. Also there is nothing worst than feeling like this incident bringing production down is the exact same as last month...
+Many startups do not do post mortems after incidents, mainly because they see it as a costly process to setup and run. I'll argue that it is much more costly to not run post mortems. If you don't learn from your mistakes you are doomed to repeat them, and the negative consequences add up. Also there is nothing worst than feeling like this incident bringing production down is the exact same as last month...
 
 However I agree that post mortems can be a daunting process to setup for software teams. What metrics to track? How to run the various meetings? What should be the resulting documentation? How do you even track followup actions? There is a ton of literature out there and it's hard to know what is actually relevant.
 
