@@ -1,7 +1,7 @@
 ---
 title: "Force Multipliers"
 description: "In a given team we have people bringing clear direct value, and others increasing the global output of the team. No group is inherently better than the other and, in order to succeed, a company will need both."
-tag: Management
+tag: TeamOrg
 socialmediapreview: "Force Multipliers"
 ---
 

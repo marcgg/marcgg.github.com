@@ -1,7 +1,7 @@
 ---
 title: "Is Remote Work Necessarily Asynchronous?"
 description: "A lot of people tend to mix people working remotely and people working asynchronously. While it's often the case that people not co-located in a single office will prefer asynchronous communication, that's not a given."
-tag: Startup
+tag: TeamOrg
 socialmediapreview: "Synchronous vs Asynchronous Work"
 ---
 

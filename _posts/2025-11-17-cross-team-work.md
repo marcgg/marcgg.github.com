@@ -1,7 +1,7 @@
 ---
 title: "Startup Engineering Team Organisation"
 description: "Pros and cons of various team structures for startups."
-tag: Management
+tag: TeamOrg
 ogimage: "preview_teamOrg.png"
 
 ---

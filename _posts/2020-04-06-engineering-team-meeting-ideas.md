@@ -1,7 +1,7 @@
 ---
 title: "Engineering Team Meeting: Format & Topic Ideas"
 description: "How to organise a department meeting for software engineers, including format and content ideas."
-tag: Management
+tag: TeamOrg
 featured: true
 socialmediapreview: "Engineering Team Meeting"
 ---
